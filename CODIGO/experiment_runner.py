@@ -25,24 +25,24 @@ import requests
 # ─────────────────────────────────────────────
 
 MODELS = {
-    "llama-3.1-8b-groq": {
-        "provider": "groq",
-        "model_id": "llama-3.1-8b-instant",
-        "tier": "weak",
-        "description": "Llama 3.1 8B via Groq — modelo débil (14.400 req/día gratis)"
-    },
+    #"llama-3.1-8b-groq": {
+    #    "provider": "groq",
+    #    "model_id": "llama-3.1-8b-instant",
+    #    "tier": "weak",
+    #    "description": "Llama 3.1 8B via Groq — modelo débil (14.400 req/día gratis)"
+    #},
     "llama-3.3-70b-groq": {
         "provider": "groq",
         "model_id": "llama-3.3-70b-versatile",
         "tier": "medium",
         "description": "Llama 3.3 70B via Groq — modelo medio (1.000 req/día gratis)"
     },
-    "llama-3.3-70b-cerebras": {
-        "provider": "cerebras",
-        "model_id": "llama-3.3-70b",
-        "tier": "strong",
-        "description": "Llama 3.3 70B via Cerebras — modelo fuerte (14.400 req/día gratis)"
-    },
+    #"llama-3.3-70b-cerebras": {
+    #    "provider": "cerebras",
+    #    "model_id": "llama-3.3-70b",
+    #    "tier": "strong",
+    #    "description": "Llama 3.3 70B via Cerebras — modelo fuerte (14.400 req/día gratis)"
+    #},
 }
 
 PROVIDER_URLS = {
@@ -97,14 +97,14 @@ def compute_bleu(hypotheses: list, references: list) -> dict:
     sent_scores = [round(sb.sentence_bleu(h, [r]).score, 2) for h, r in zip(hyps, refs)]
 
     # chrF: más tolerante con morfología compleja (mejor para lenguas aglutinantes)
-    chrf_result = sb.corpus_chrf(hyps, [refs])
-    sent_chrf = [round(sb.sentence_chrf(h, [r]).score, 2) for h, r in zip(hyps, refs)]
+    chrf_result = sb.corpus_chrf(hyps, [refs], word_order=2)  # chrF++ (word_order=2)
+    sent_chrf = [round(sb.sentence_chrf(h, [r], word_order=2).score, 2) for h, r in zip(hyps, refs)]
 
     return {
         "corpus_bleu": round(corpus_result.score, 2),
         "sentence_bleu": sent_scores,
-        "corpus_chrf": round(chrf_result.score, 2),
-        "sentence_chrf": sent_chrf,
+        "corpus_chrfpp": round(chrf_result.score, 2),
+        "sentence_chrfpp": sent_chrf,
         "num_evaluated": min_len,
         "hypotheses": hyps,
         "references": refs
@@ -129,7 +129,7 @@ def extract_translations(response: str, num_expected: int) -> list:
             in_trans = True
             continue
         if in_trans and any(kw in u for kw in
-                ["DICTIONARY:", "GRAMMAR RULE", "GRAMMAR:", "NOTE:", "EXPLANATION:"]):
+                ["DICTIONARY:", "GRAMMAR RULE", "GRAMMAR:", "NOTE:", "EXPLANATION:", "ANALYSIS:"]):
             break
         if in_trans and line.strip():
             trans_lines.append(line.strip())
@@ -140,35 +140,63 @@ def extract_translations(response: str, num_expected: int) -> list:
             m = re.match(r"^\d+[.)\s]\s*(.+)$", line)
             cleaned.append(m.group(1).strip() if m else line)
         if cleaned:
-            return cleaned[:num_expected]
+            # Quitar justificaciones del nuevo formato: "traducción — [notas morfológicas]"
+            result = []
+            for line in cleaned:
+                # Descartar líneas explicativas entre paréntesis
+                if line.startswith("(") and line.endswith(")"):
+                    continue
+                if " — " in line:
+                    line = line.split(" — ")[0].strip()
+                elif " - " in line and len(line.split(" - ")[0].split()) < 8:
+                    line = line.split(" - ")[0].strip()
+                # Descartar si después del split sigue siendo una nota
+                if line.startswith("("):
+                    continue
+                # Quitar "source → " si el modelo repite la frase original
+                if " → " in line:
+                    line = line.split(" → ", 1)[1].strip()
+                result.append(line)
+            return result[:num_expected]
 
-    # Intento 2 (fallback): líneas numeradas que NO sean diccionario
+    # Intento 2 (fallback): líneas numeradas que NO sean diccionario ni notas
     numbered = []
     for line in lines:
         line = line.strip()
         m = re.match(r"^(\d+)[.)]\s+(.+)$", line)
         if m:
-            content = m.group(2).strip()
-            # Descartar entradas de diccionario ("word: meaning" o "word = meaning")
-            if re.match(r"^[\w\'\u00c0-\u024f]+\s*[:=]\s*\w", content):
+            text = m.group(2).strip()
+            # Descartar entradas de diccionario
+            if re.match(r"^[\w\'\u00c0-\u024f]+\s*[:=]\s*\w", text):
                 continue
-            numbered.append(content)
+            # Descartar notas entre paréntesis
+            if text.startswith("("):
+                continue
+            # Si el modelo escribe "source → translation", quedarse con translation
+            if " → " in text:
+                text = text.split(" → ", 1)[1].strip()
+            if " -> " in text:
+                text = text.split(" -> ", 1)[1].strip()
+            # Quitar justificaciones morfológicas al final
+            if " — " in text:
+                text = text.split(" — ")[0].strip()
+            if text.startswith("(") or not text:
+                continue
+            numbered.append(text)
     return numbered[:num_expected]
 
 # ─────────────────────────────────────────────
 # PROMPTS
 # ─────────────────────────────────────────────
 
-METALINGUISTIC_INSTRUCTION = """You are a linguistic analyst with strong meta-linguistic skills.
-You have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).
+METALINGUISTIC_INSTRUCTION = """You are an expert linguistic analyst performing inductive reasoning on an unknown language.
+You have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).
 
-Your approach:
-1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)
-2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)
-3. Use ONLY the examples provided — do not use prior knowledge of the language family
-4. Apply your dictionary and rules to translate the requested sentences
-
-Rely entirely on meta-linguistic reasoning and pattern detection."""
+Core principles:
+- Do NOT use any prior knowledge of this specific language or its family
+- Treat every hypothesis as provisional and subject to revision
+- Always show your reasoning explicitly before reaching any conclusion
+- A wrong rule confidently stated is worse than uncertainty acknowledged"""
 
 def build_baseline_prompt(train_pairs, test_items):
     examples = "\n".join(f"  {p['source']} → {p['target']}" for p in train_pairs)
@@ -196,41 +224,71 @@ TRANSLATIONS:
 """
 
 def build_incremental_prompt(combo_pairs, current_dict, current_rules, test_items, step, total_steps):
-    examples = "\n".join(f"  {p['source']} → {p['target']}" for p in combo_pairs)
+    examples = "\n".join(f"  {p['source']} -> {p['target']}" for p in combo_pairs)
     tests = "\n".join(f"  {i+1}. {item['source']}" for i, item in enumerate(test_items))
-    prev = ""
+
     if current_dict or current_rules:
         prev = f"""
---- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---
+--- YOUR CURRENT HYPOTHESIS (treat as provisional — review critically) ---
 DICTIONARY:
 {current_dict or '(empty)'}
 
 GRAMMAR RULES:
 {current_rules or '(empty)'}
+
+IMPORTANT: The new examples below may CONFIRM, REFINE or CONTRADICT entries above.
+You MUST delete entries proven wrong and correct entries that were imprecise.
 """
+    else:
+        prev = "\n(No prior knowledge — this is your first set of examples.)\n"
+
     return f"""{METALINGUISTIC_INSTRUCTION}
 
-STEP {step}/{total_steps} — New subset of examples:
+STEP {step}/{total_steps} — New subset of examples to analyze:
 {prev}
 --- NEW EXAMPLES ---
 {examples}
 
---- YOUR TASK ---
-1. Update DICTIONARY (add/correct entries based on new evidence)
-2. Update GRAMMAR RULES (refine or add rules)
-3. Translate the test sentences using your best current knowledge
+--- YOUR TASK: follow these steps IN ORDER ---
 
-Format:
+STEP A · ANALYSIS (reason before concluding):
+For each NEW EXAMPLE above, identify every morpheme or word you can isolate.
+Check explicitly: do any new examples CONTRADICT your current hypothesis?
+If yes, state what was wrong and why. Think aloud — show your reasoning.
+Do NOT translate the test sentences yet.
+
+STEP B · REVISED DICTIONARY:
+Write the updated dictionary. Format: one entry per line: morpheme = meaning (notes)
+- ADD new morpheme/word mappings discovered in this step
+- CORRECT entries that were imprecise or partially wrong
+- DELETE entries proven incorrect — write: [DELETED: old_entry — reason]
+
+STEP C · REVISED GRAMMAR RULES:
+Write the updated numbered rule set.
+- ADD new rules supported by evidence from this step
+- REFINE rules that were too broad or too narrow  
+- DELETE rules proven wrong — write: [DELETED: old_rule — reason]
+
+STEP D · TRANSLATIONS:
+Now translate ONLY these sentences into English (these are different from the training examples above):
+{tests}
+Write only the English translation on each line, nothing else before the dash.
+
+Format your entire response EXACTLY as:
+ANALYSIS:
+[your reasoning about the new examples]
+
 DICTIONARY:
-[word mappings]
+[entries, one per line]
 
 GRAMMAR RULES:
-[rules]
+[rules, one per line]
 
 TRANSLATIONS:
-1. [translation]
-2. [translation]
+1. [English translation only] — [brief morpheme breakdown]
+2. [English translation only] — [brief morpheme breakdown]
 """
+
 
 def build_stepbystep_prompt(stage, stage_pairs, current_dict, current_rules, test_items, step, total_steps):
     stage_focus = {
@@ -307,7 +365,7 @@ def run_strategy_0(puzzle, model_key, api_keys):
     refs = [p["target"] for p in test_items]
     hyps = extract_translations(response, len(test_items))
     bleu = compute_bleu(hyps, refs)
-    print(f"    BLEU: {bleu['corpus_bleu']:.2f} | chrF: {bleu.get('corpus_chrf',0):.2f} | latencia: {latency}s")
+    print(f"    BLEU: {bleu['corpus_bleu']:.2f} | chrF: {bleu.get('corpus_chrfpp',0):.2f} | latencia: {latency}s")
     return {
         "strategy": "baseline", "strategy_id": 0,
         "steps": [{"step": 1, "num_train_pairs": len(puzzle["train_pairs"]),
@@ -341,7 +399,7 @@ def run_strategy_1(puzzle, model_key, api_keys, combo_sizes=None):
         hyps = extract_translations(response, len(test_items))
         bleu = compute_bleu(hyps, refs)
         if bleu["corpus_bleu"] > best_bleu: best_bleu = bleu["corpus_bleu"]
-        print(f"    BLEU: {bleu['corpus_bleu']:.2f} | chrF: {bleu.get('corpus_chrf',0):.2f} | latencia: {latency}s")
+        print(f"    BLEU: {bleu['corpus_bleu']:.2f} | chrF: {bleu.get('corpus_chrfpp',0):.2f} | latencia: {latency}s")
         steps.append({"step": idx+1, "combo_size": k, "combo_indices": list(combo),
                       "prompt": prompt, "response": response, "latency_s": latency,
                       "accumulated_dict": current_dict, "accumulated_rules": current_rules,
@@ -385,7 +443,7 @@ def run_strategy_2(puzzle, model_key, api_keys):
         hyps = extract_translations(response, len(test_items))
         bleu = compute_bleu(hyps, refs)
         if bleu["corpus_bleu"] > best_bleu: best_bleu = bleu["corpus_bleu"]
-        print(f"    BLEU: {bleu['corpus_bleu']:.2f} | chrF: {bleu.get('corpus_chrf',0):.2f} | latencia: {latency}s")
+        print(f"    BLEU: {bleu['corpus_bleu']:.2f} | chrF: {bleu.get('corpus_chrfpp',0):.2f} | latencia: {latency}s")
         steps.append({"step": idx+1, "stage": stage, "num_stage_pairs": len(stage_pairs),
                       "prompt": prompt, "response": response, "latency_s": latency,
                       "accumulated_dict": current_dict, "accumulated_rules": current_rules,
@@ -452,7 +510,8 @@ def run_experiment(puzzle_path, model_key, api_keys, strategies=[0, 1, 2], outpu
         if "error" not in res:
             # Calcular mejor chrF entre todos los pasos
             best_chrf = max(
-                (s.get("bleu", {}).get("corpus_chrf", 0) for s in res.get("steps", [])),
+                (s.get("bleu", {}).get("corpus_chrfpp",
+                 s.get("bleu", {}).get("corpus_chrf", 0)) for s in res.get("steps", [])),
                 default=0
             )
             summary[name] = {"final_bleu": res.get("final_bleu", 0),
@@ -505,10 +564,10 @@ if __name__ == "__main__":
     # Cambia esta lista para seleccionar qué puzzles ejecutar
     PUZZLES = [
         #"puzzles/ayutla_mixe.json",                        # piloto (8 train)
-        "puzzles/linguini_012023020100.json",               # Apurinã — 16 train
+        #"puzzles/linguini_012023020100.json",               # Apurinã — 16 train
         "puzzles/linguini_012018020100.json",               # Hakhun — 10 train
-        "puzzles/linguini_012008040100.json",               # Copainalá Zoque — 20 train
-        "puzzles/linguini_012013010200.json",               # Yidiny — 23 train
+        #"puzzles/linguini_012008040100.json",               # Copainalá Zoque — 20 train
+        #"puzzles/linguini_012013010200.json",               # Yidiny — 23 train
     ]
 
     for puzzle_path in PUZZLES:
