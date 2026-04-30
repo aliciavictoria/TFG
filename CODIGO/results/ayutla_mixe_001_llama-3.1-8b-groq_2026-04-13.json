@@ -1,0 +1,467 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-13T07:11:45.568001",
+    "puzzle_id": "ayutla_mixe_001",
+    "language": "Ayutla Mixe",
+    "language_family": "Mixe-Zoque",
+    "source": "IOL / modeLing dataset (Chi et al., 2024)",
+    "model_key": "llama-3.1-8b-groq",
+    "model_info": {
+      "provider": "groq",
+      "model_id": "llama-3.1-8b-instant",
+      "tier": "weak",
+      "description": "Llama 3.1 8B via Groq — modelo débil (14.400 req/día gratis)"
+    },
+    "num_train_pairs": 8,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "ayutla_mixe_001",
+    "language": "Ayutla Mixe",
+    "language_family": "Mixe-Zoque",
+    "region": "Oaxaca, México",
+    "source": "IOL / modeLing dataset (Chi et al., 2024)",
+    "notes": "Lengua de baja densidad de recursos. Orden de palabras SOV. Morfología verbal compleja.",
+    "train_pairs": [
+      {
+        "source": "Ëjts nexp.",
+        "target": "I see."
+      },
+      {
+        "source": "Mejts mtunp.",
+        "target": "You work."
+      },
+      {
+        "source": "Juan yë'ë yexyejtpy.",
+        "target": "Juan watches him."
+      },
+      {
+        "source": "Yë'ë yë' uk yexpy.",
+        "target": "He sees the dog."
+      },
+      {
+        "source": "Ëjts yë' maxu'unk nexyejtpy.",
+        "target": "I watch the baby."
+      },
+      {
+        "source": "Yë' maxu'unk yexp.",
+        "target": "The baby sees."
+      },
+      {
+        "source": "Mejts mnexyejtpy.",
+        "target": "You watch me."
+      },
+      {
+        "source": "Ëjts tëjk nëxp.",
+        "target": "I see the house."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "The baby watches the dog.",
+        "target": "Yë' maxu'unk yë' uk yexyejtpy.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Yë' uk Juan yexyejtpy.",
+        "target": "The dog watches Juan.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "I work.",
+        "target": "Ëjts ntunp.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Mejts tëjk mëxp.",
+        "target": "You see the house.",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [
+      "SOV word order",
+      "verb agreement prefixes",
+      "object-verb complex"
+    ]
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 0,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 8,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\n--- TRAINING EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n  Yë'ë yë' uk yexpy. → He sees the dog.\n  Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n  Yë' maxu'unk yexp. → The baby sees.\n  Mejts mnexyejtpy. → You watch me.\n  Ëjts tëjk nëxp. → I see the house.\n\n--- YOUR TASK ---\nBased on ALL examples above, write your inferred DICTIONARY and GRAMMAR RULES,\nthen translate:\n  1. The baby watches the dog.\n  2. Yë' uk Juan yexyejtpy.\n  3. I work.\n  4. Mejts tëjk mëxp.\n\nFormat:\nDICTIONARY:\n[word mappings, one per line]\n\nGRAMMAR RULES:\n[rules, one per line]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY:**\n\n1. Ëjts → I\n2. Mejts → You\n3. Juan → Juan (proper noun)\n4. yë'ë → him (object pronoun)\n5. yë' → he (subject pronoun)\n6. uk → the (definite article)\n7. maxu'unk → baby (noun)\n8. nexyejtpy → watch (verb)\n9. yexyejtpy → watches (verb, third person singular)\n10. yexp → sees (verb)\n11. mnexyejtpy → watch (verb, second person singular)\n12. tëjk → the (definite article, used with nouns)\n13. nëxp → see (verb)\n14. mëxp → see (verb, second person singular)\n\n**GRAMMAR RULES:**\n\n1. Word order: Subject-Object-Verb (SOV)\n2. Pronouns:\n   - First person singular: Ëjts\n   - Second person singular: Mejts\n   - Third person singular: yë'\n   - Object pronoun: yë'ë (used with third person singular subject)\n3. Verb conjugation:\n   - First person singular: no suffix\n   - Second person singular: suffix -ëxp\n   - Third person singular: suffix -yejtpy\n4. Noun phrase structure:\n   - Definite article: uk (used with nouns)\n   - Possessive marker: yë'ë (used with nouns to indicate possession)\n5. Agreement:\n   - Verbs agree with the subject in person and number\n   - Nouns agree with the verb in number (singular or plural)\n\n**TRANSLATIONS:**\n\n1. The baby watches the dog.\n   - Dictionary mapping: maxu'unk → baby, uk → the, nexyejtpy → watch, yë'ë → him (object pronoun)\n   - Grammar rules: Subject-Object-Verb (SOV) word order, verb conjugation for third person singular subject\n   - Translation: yë'ë maxu'unk nexyejtpy\n\n2. Yë' uk Juan yexyejtpy.\n   - Dictionary mapping: yë' → he, uk → the, Juan → Juan (proper noun), yexyejtpy → watches (verb, third person singular)\n   - Grammar rules: Subject-Object-Verb (SOV) word order, verb conjugation for third person singular subject\n   - Translation: He watches Juan.\n\n3. I work.\n   - Dictionary mapping: Ëjts → I, mtunp → work (verb)\n   - Grammar rules: Subject-Verb word order, verb conjugation for first person singular subject\n   - Translation: Mejts mtunp (Note: Mejts is the second person singular pronoun, not the first person singular. Based on the provided examples, it seems that the first person singular pronoun is Ëjts, but the verb conjugation for work is not provided. Assuming the verb conjugation for work is similar to other verbs, the translation would be Ëjts mtunp.)\n\n4. Mejts tëjk mëxp.\n   - Dictionary mapping: Mejts → You, tëjk → the (definite article), mëxp → see (verb, second person singular)\n   - Grammar rules: Subject-Object-Verb (SOV) word order, verb conjugation for second person singular subject\n   - Translation: You see the house.",
+          "latency_s": 1.13,
+          "bleu": {
+            "corpus_bleu": 1.36,
+            "sentence_bleu": [
+              8.12,
+              0.0
+            ],
+            "corpus_chrf": 9.31,
+            "sentence_chrf": [
+              4.0,
+              13.67
+            ],
+            "num_evaluated": 2,
+            "hypotheses": [
+              "The baby watches the dog.",
+              "- Dictionary mapping: maxu'unk → baby, uk → the, nexyejtpy → watch, yë'ë → him (object pronoun)"
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan."
+            ]
+          }
+        }
+      ],
+      "final_bleu": 1.36,
+      "best_bleu": 1.36
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 1,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 1/7 — New subset of examples:\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "Based on the new examples, I will update the dictionary and grammar rules.\n\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n\nTRANSLATIONS:\n1. Ëjts nexp → I see.\n2. Mejts mtunp → You work.\n\nNote: The dictionary and grammar rules are based solely on the provided examples and do not rely on prior knowledge of the language family.",
+          "latency_s": 0.46,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)",
+          "bleu": {
+            "corpus_bleu": 4.83,
+            "sentence_bleu": [
+              8.12,
+              8.12
+            ],
+            "corpus_chrf": 7.22,
+            "sentence_chrf": [
+              7.12,
+              7.33
+            ],
+            "num_evaluated": 2,
+            "hypotheses": [
+              "Ëjts nexp → I see.",
+              "Mejts mtunp → You work."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan."
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 2/7 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- UPDATED ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n\n--- TASK COMPLETED ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- Juan: Juan (proper noun)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n\nTRANSLATIONS:\n1. Ëjts nexp. → I see.\n2. Mejts mtunp. → You work.\n3. Juan yë'ë yexyejtpy. → Juan watches him.",
+          "latency_s": 0.77,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- Juan: Juan (proper noun)",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n--- NEW EXAMPLES ---\nËjts nexp. → I see.\nMejts mtunp. → You work.\nJuan yë'ë yexyejtpy. → Juan watches him.\n--- TASK COMPLETED ---\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).",
+          "bleu": {
+            "corpus_bleu": 2.56,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              4.77
+            ],
+            "corpus_chrf": 8.24,
+            "sentence_chrf": [
+              7.06,
+              7.25,
+              11.34
+            ],
+            "num_evaluated": 3,
+            "hypotheses": [
+              "Ëjts nexp. → I see.",
+              "Mejts mtunp. → You work.",
+              "Juan yë'ë yexyejtpy. → Juan watches him."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan.",
+              "Ëjts ntunp."
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 3/7 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- Juan: Juan (proper noun)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n--- NEW EXAMPLES ---\nËjts nexp. → I see.\nMejts mtunp. → You work.\nJuan yë'ë yexyejtpy. → Juan watches him.\n--- TASK COMPLETED ---\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n  Yë'ë yë' uk yexpy. → He sees the dog.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- UPDATED KNOWLEDGE ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n- A new rule is introduced, which indicates that the prefix yë- is used for the possessor pronoun 'him', and the noun is followed by the word 'uk' (the dog).\n\n--- TRANSLATIONS ---\n1. Yë'ë yë' uk yexpy. → He sees the dog.\n2. (No new examples provided, so no new translations are needed.)\n\nHowever, I can provide translations for the original examples:\n1. Ëjts nexp. → I see.\n2. Mejts mtunp. → You work.\n3. Juan yë'ë yexyejtpy. → Juan watches him.\n4. Ëjts nexp. → I see.\n5. Mejts mtunp. → You work.\n6. Juan yë'ë yexyejtpy. → Juan watches him.",
+          "latency_s": 0.64,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n- A new rule is introduced, which indicates that the prefix yë- is used for the possessor pronoun 'him', and the noun is followed by the word 'uk' (the dog).",
+          "bleu": {
+            "corpus_bleu": 3.06,
+            "sentence_bleu": [
+              8.3,
+              2.84,
+              7.81,
+              7.81
+            ],
+            "corpus_chrf": 20.81,
+            "sentence_chrf": [
+              31.4,
+              10.11,
+              31.07,
+              12.79
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "Yë'ë yë' uk yexpy. → He sees the dog.",
+              "(No new examples provided, so no new translations are needed.)",
+              "Ëjts nexp. → I see.",
+              "Mejts mtunp. → You work."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan.",
+              "Ëjts ntunp.",
+              "You see the house."
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 4/7 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n- A new rule is introduced, which indicates that the prefix yë- is used for the possessor pronoun 'him', and the noun is followed by the word 'uk' (the dog).\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n  Yë'ë yë' uk yexpy. → He sees the dog.\n  Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- UPDATED KNOWLEDGE ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog).\n\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n- The possessor pronoun rule is refined, which indicates that the prefix yë- is used for the possessor pronoun 'him', and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n\n--- TRANSLATIONS ---\nTRANSLATIONS:\n1. Ëjts nexp. → I see.\n2. Mejts mtunp. → You work.\n3. Juan yë'ë yexyejtpy. → Juan watches him.\n4. Yë'ë yë' uk yexpy. → He sees the dog.\n5. Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n\nNote: The translation of the last sentence is based on the assumption that the verb 'nexyejtpy' is in the correct form for the subject 'I' (conjugated with the prefix Ë-).",
+          "latency_s": 0.94,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog).\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n- The possessor pronoun rule is refined, which indicates that the prefix yë- is used for the possessor pronoun 'him', and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.",
+          "bleu": {
+            "corpus_bleu": 1.91,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              4.77,
+              4.46
+            ],
+            "corpus_chrf": 10.39,
+            "sentence_chrf": [
+              7.06,
+              7.25,
+              11.34,
+              17.32
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "Ëjts nexp. → I see.",
+              "Mejts mtunp. → You work.",
+              "Juan yë'ë yexyejtpy. → Juan watches him.",
+              "Yë'ë yë' uk yexpy. → He sees the dog."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan.",
+              "Ëjts ntunp.",
+              "You see the house."
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 5/7 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog).\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog).\n--- NEW INSIGHTS ---\n- The verb conjugation rule seems to be consistent with the new examples.\n- The word order rule remains the same.\n- The object pronoun rule is introduced, which indicates that the prefix yë- is used for the object pronoun 'him'.\n- The possessor pronoun rule is refined, which indicates that the prefix yë- is used for the possessor pronoun 'him', and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n  Yë'ë yë' uk yexpy. → He sees the dog.\n  Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n  Yë' maxu'unk yexp. → The baby sees.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- UPDATED KNOWLEDGE ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- yë': him (possessor pronoun)\n- yë': him (object pronoun) (Note: This entry is updated to reflect the dual use of yë'ë as both object and possessor pronoun)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n\n--- TRANSLATIONS ---\nTRANSLATIONS:\n1. Ëjts nexp. → I see.\n2. Mejts mtunp. → You work.\n3. Juan yë'ë yexyejtpy. → Juan watches him.\n4. Yë'ë yë' uk yexpy. → He sees the dog.\n5. Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n6. Yë' maxu'unk yexp. → The baby sees.\n\nNote: The translations are based on the updated dictionary and grammar rules.",
+          "latency_s": 0.74,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- yë': him (possessor pronoun)\n- yë': him (object pronoun) (Note: This entry is updated to reflect the dual use of yë'ë as both object and possessor pronoun)",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.",
+          "bleu": {
+            "corpus_bleu": 1.91,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              4.77,
+              4.46
+            ],
+            "corpus_chrf": 10.39,
+            "sentence_chrf": [
+              7.06,
+              7.25,
+              11.34,
+              17.32
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "Ëjts nexp. → I see.",
+              "Mejts mtunp. → You work.",
+              "Juan yë'ë yexyejtpy. → Juan watches him.",
+              "Yë'ë yë' uk yexpy. → He sees the dog."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan.",
+              "Ëjts ntunp.",
+              "You see the house."
+            ]
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 6/7 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- yë': him (possessor pronoun)\n- yë': him (object pronoun) (Note: This entry is updated to reflect the dual use of yë'ë as both object and possessor pronoun)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n  Yë'ë yë' uk yexpy. → He sees the dog.\n  Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n  Yë' maxu'unk yexp. → The baby sees.\n  Mejts mnexyejtpy. → You watch me.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- UPDATED KNOWLEDGE ---\n\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yë': him (possessor pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog (note: this entry is updated to reflect the specific use of 'uk' with the noun 'dog')\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- mnexyejtpy: watch me (note: this entry is added based on the new evidence)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n- Reflexive pronoun: The reflexive pronoun is indicated by the prefix 'mn-' (note: this rule is added based on the new evidence)\n\n--- TRANSLATIONS ---\n\nTRANSLATIONS:\n1. Ëjts nexp. → I see.\n2. Mejts mtunp. → You work.\n3. Juan yë'ë yexyejtpy. → Juan watches him.\n4. Yë'ë yë' uk yexpy. → He sees the dog.\n5. Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n6. Yë' maxu'unk yexp. → The baby sees.\n7. Mejts mnexyejtpy. → You watch me.\n\nNote: Based on the new evidence, I added the reflexive pronoun rule and the entry 'mnexyejtpy' to the dictionary.",
+          "latency_s": 0.81,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yë': him (possessor pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog (note: this entry is updated to reflect the specific use of 'uk' with the noun 'dog')\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- mnexyejtpy: watch me (note: this entry is added based on the new evidence)",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n- Reflexive pronoun: The reflexive pronoun is indicated by the prefix 'mn-' (note: this rule is added based on the new evidence)",
+          "bleu": {
+            "corpus_bleu": 1.91,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              4.77,
+              4.46
+            ],
+            "corpus_chrf": 10.39,
+            "sentence_chrf": [
+              7.06,
+              7.25,
+              11.34,
+              17.32
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "Ëjts nexp. → I see.",
+              "Mejts mtunp. → You work.",
+              "Juan yë'ë yexyejtpy. → Juan watches him.",
+              "Yë'ë yë' uk yexpy. → He sees the dog."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan.",
+              "Ëjts ntunp.",
+              "You see the house."
+            ]
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 7/7 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yë': him (possessor pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog (note: this entry is updated to reflect the specific use of 'uk' with the noun 'dog')\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- mnexyejtpy: watch me (note: this entry is added based on the new evidence)\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n- Reflexive pronoun: The reflexive pronoun is indicated by the prefix 'mn-' (note: this rule is added based on the new evidence)\n\n--- NEW EXAMPLES ---\n  Ëjts nexp. → I see.\n  Mejts mtunp. → You work.\n  Juan yë'ë yexyejtpy. → Juan watches him.\n  Yë'ë yë' uk yexpy. → He sees the dog.\n  Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n  Yë' maxu'unk yexp. → The baby sees.\n  Mejts mnexyejtpy. → You watch me.\n  Ëjts tëjk nëxp. → I see the house.\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- UPDATED KNOWLEDGE ---\n\nDICTIONARY:\n- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yë': him (possessor pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog (note: this entry is updated to reflect the specific use of 'uk' with the noun 'dog')\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- mnexyejtpy: watch me\n- tëjk: the house\n- nexp: see (note: this entry is updated to reflect the specific use of 'nexp' with the verb 'see')\n- yë'ë uk: him (object pronoun with 'uk' suffix)\n- yë'ë yexpy: sees him\n- yë'ë yexyejtpy: watches him\n- yë'ë nexyejtpy: watch him\n- yë'ë mnexyejtpy: watch him me\n- yë'ë uk yexpy: sees the dog\n- yë'ë uk yexyejtpy: watches the dog\n- yë'ë uk nexyejtpy: watch the dog\n- yë'ë uk mnexyejtpy: watch the dog me\n- yë'ë maxu'unk nexyejtpy: watch the baby\n- yë'ë maxu'unk yexpy: sees the baby\n- yë'ë maxu'unk yexyejtpy: watches the baby\n- yë'ë maxu'unk nexyejtpy: watch the baby\n- yë'ë maxu'unk mnexyejtpy: watch the baby me\n- yë'ë tëjk nexpy: see the house\n- yë'ë tëjk nexyejtpy: watch the house\n- yë'ë tëjk mnexyejtpy: watch the house me\n- yë'ë tëjk yexpy: sees the house\n- yë'ë tëjk yexyejtpy: watches the house\n\nGRAMMAR RULES:\n- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n- Reflexive pronoun: The reflexive pronoun is indicated by the prefix 'mn-'.\n- Possessor pronouns with 'uk' suffix: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with 'uk' suffix and verb: The possessor pronoun is indicated by a prefix (yë- for him), and the verb is conjugated based on the subject.\n\nTRANSLATIONS:\n1. Ëjts nexp. → I see.\n2. Mejts mtunp. → You work.\n3. Juan yë'ë yexyejtpy. → Juan watches him.\n4. Yë'ë yë' uk yexpy. → He sees the dog.\n5. Ëjts yë' maxu'unk nexyejtpy. → I watch the baby.\n6. Yë' maxu'unk yexp. → The baby sees.\n7. Mejts mnexyejtpy. → You watch me.\n8. Ëjts tëjk nëxp. → I see the house.\n\nNote: The translations are based on the updated dictionary and grammar rules.",
+          "latency_s": 1.23,
+          "accumulated_dict": "- Ëjts: I\n- nexp: see\n- Mejts: You\n- mtunp: work\n- yë'ë: him (object pronoun)\n- yë': him (possessor pronoun)\n- yexyejtpy: watches\n- yexpy: sees\n- uk: the dog (note: this entry is updated to reflect the specific use of 'uk' with the noun 'dog')\n- Juan: Juan (proper noun)\n- maxu'unk: the baby\n- nexyejtpy: watch\n- mnexyejtpy: watch me\n- tëjk: the house\n- nexp: see (note: this entry is updated to reflect the specific use of 'nexp' with the verb 'see')\n- yë'ë uk: him (object pronoun with 'uk' suffix)\n- yë'ë yexpy: sees him\n- yë'ë yexyejtpy: watches him\n- yë'ë nexyejtpy: watch him\n- yë'ë mnexyejtpy: watch him me\n- yë'ë uk yexpy: sees the dog\n- yë'ë uk yexyejtpy: watches the dog\n- yë'ë uk nexyejtpy: watch the dog\n- yë'ë uk mnexyejtpy: watch the dog me\n- yë'ë maxu'unk nexyejtpy: watch the baby\n- yë'ë maxu'unk yexpy: sees the baby\n- yë'ë maxu'unk yexyejtpy: watches the baby\n- yë'ë maxu'unk nexyejtpy: watch the baby\n- yë'ë maxu'unk mnexyejtpy: watch the baby me\n- yë'ë tëjk nexpy: see the house\n- yë'ë tëjk nexyejtpy: watch the house\n- yë'ë tëjk mnexyejtpy: watch the house me\n- yë'ë tëjk yexpy: sees the house\n- yë'ë tëjk yexyejtpy: watches the house",
+          "accumulated_rules": "- Verb conjugation: The verb is conjugated based on the subject. The subject is indicated by a prefix (Ë- for I, Mej- for You).\n- Word order: Subject-Verb (SV)\n- Object pronouns: The object pronoun is indicated by a prefix (yë- for him).\n- Possessor pronouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog', but not followed by 'uk' when the noun is 'baby'.\n- Possessor pronouns with noun: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with other nouns: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is not followed by the word 'uk' (the dog) when the noun is 'baby'.\n- Reflexive pronoun: The reflexive pronoun is indicated by the prefix 'mn-'.\n- Possessor pronouns with 'uk' suffix: The possessor pronoun is indicated by a prefix (yë- for him), and the noun is followed by the word 'uk' (the dog) when the noun is 'dog'.\n- Possessor pronouns with 'uk' suffix and verb: The possessor pronoun is indicated by a prefix (yë- for him), and the verb is conjugated based on the subject.",
+          "bleu": {
+            "corpus_bleu": 1.91,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              4.77,
+              4.46
+            ],
+            "corpus_chrf": 10.39,
+            "sentence_chrf": [
+              7.06,
+              7.25,
+              11.34,
+              17.32
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "Ëjts nexp. → I see.",
+              "Mejts mtunp. → You work.",
+              "Juan yë'ë yexyejtpy. → Juan watches him.",
+              "Yë'ë yë' uk yexpy. → He sees the dog."
+            ],
+            "references": [
+              "Yë' maxu'unk yë' uk yexyejtpy.",
+              "The dog watches Juan.",
+              "Ëjts ntunp.",
+              "You see the house."
+            ]
+          }
+        }
+      ],
+      "final_bleu": 1.91,
+      "best_bleu": 4.83
+    },
+    "step_by_step": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  },
+  "summary": {
+    "baseline": {
+      "final_bleu": 1.36,
+      "best_bleu": 1.36,
+      "best_chrf": 9.31,
+      "num_steps": 1
+    },
+    "incremental_combinations": {
+      "final_bleu": 1.91,
+      "best_bleu": 4.83,
+      "best_chrf": 20.81,
+      "num_steps": 7
+    }
+  }
+}

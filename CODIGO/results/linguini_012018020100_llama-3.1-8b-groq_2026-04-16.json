@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-16T19:07:40.725182",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "model_key": "llama-3.1-8b-groq",
+    "model_info": {
+      "provider": "groq",
+      "model_id": "llama-3.1-8b-instant",
+      "tier": "weak",
+      "description": "Llama 3.1 8B via Groq — modelo débil (14.400 req/día gratis)"
+    },
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_code": "nst-hkn_Latn",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "task_type": "translation",
+    "original_context": "Here are some sentences in Hakhun and their English translations:\n\n1. ŋa ka kɤ ne | Do I go?\n2. nɤ ʒip tuʔ ne | Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne | Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne | Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne | Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne | Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne | Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne | Did you(sg) know him?\n9. tarum kəmə nirum lapkʰi ri ne | Do they see us?\n10. ati kəmə ŋa lapkʰi tʰɤ ne | Did he see me?",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\n1. nɤ ʒip ku ne\n2. ati kəmə nirum lapkʰi tʰi ne\n3. tarum kəmə nuʔrum cʰam ran ne\n4. nirum kəmə tarum lan ki ne\n5. nirum kəmə nɤ cʰam tiʔ ne\n6. nirum ka tiʔ ne"
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 0,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\n--- TRAINING EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n  tarum kəmə nirum lapkʰi ri ne → Do they see us?\n  ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me?\n\n--- YOUR TASK ---\nBased on ALL examples above, write your inferred DICTIONARY and GRAMMAR RULES,\nthen translate:\n  1. nɤ ʒip ku ne\n  2. ati kəmə nirum lapkʰi tʰi ne\n  3. tarum kəmə nuʔrum cʰam ran ne\n  4. nirum kəmə tarum lan ki ne\n  5. nirum kəmə nɤ cʰam tiʔ ne\n  6. nirum ka tiʔ ne\n\nFormat:\nDICTIONARY:\n[word mappings, one per line]\n\nGRAMMAR RULES:\n[rules, one per line]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY:**\n\n1. ŋa → I\n2. ka → go\n3. kɤ → do\n4. ne → ?\n5. nɤ → you(sg)\n6. ʒip → sleep\n7. tuʔ → ?\n8. ŋabə → I\n9. ati → he\n10. lapkʰi → see\n11. tɤʔ → ?\n12. nirum → we\n13. kəmə → know\n14. nuʔrum → you(pl)\n15. cʰam → ?\n16. ki → ?\n17. tarum → they\n18. rɤ → ?\n19. tʰu → ?\n20. kan → ?\n21. nɤbə → you(sg)\n22. cʰam → know\n23. tuʔ → ?\n24. tʰɤ → ?\n25. nuʔrum → you(pl)\n26. ri → ?\n27. ati → he\n28. kəmə → know\n29. tʰi → ?\n30. ran → ?\n31. nirum → we\n32. tʰi → ?\n33. ku → ?\n34. tiʔ → ?\n35. ran → ?\n\n**GRAMMAR RULES:**\n\n1. Word order: Subject-Object-Verb (SOV)\n2. Verb conjugation:\n   - ŋa (I) + kɤ (do) = ka (go)\n   - nɤ (you(sg)) + ʒip (sleep) + tuʔ (past) = nɤ ʒip tuʔ ne\n   - ŋabə (I) + ati (he) + lapkʰi (see) + tɤʔ (past) = ŋabə ati lapkʰi tɤʔ ne\n   - nirum (we) + kəmə (know) + nuʔrum (you(pl)) + cʰam (know) + ki (question) = nirum kəmə nuʔrum cʰam ki ne\n   - nɤbə (you(sg)) + ŋa (I) + lapkʰi (see) + rɤ (past) = nɤbə ŋa lapkʰi rɤ ne\n   - tarum (they) + kəmə (know) + nɤ (you(sg)) + lan (beat) + tʰu (past) = tarum kəmə nɤ lan tʰu ne\n   - nuʔrum (you(pl)) + kəmə (know) + ati (he) + lapkʰi (see) + kan (question) = nuʔrum kəmə ati lapkʰi kan ne\n   - nɤbə (you(sg)) + ati (he) + cʰam (know) + tuʔ (past) = nɤbə ati cʰam tuʔ ne\n   - tarum (they) + kəmə (know) + nirum (we) + lapkʰi (see) + ri (question) = tarum kəmə nirum lapkʰi ri ne\n   - ati (he) + kəmə (know) + ŋa (I) + lapkʰi (see) + tʰɤ (past) = ati kəmə ŋa lapkʰi tʰɤ ne\n3. Pronoun agreement:\n   - nirum (we) + kəmə (know) + nuʔrum (you(pl)) + cʰam (know) + ki (question) = nirum kəmə nuʔrum cʰam ki ne\n   - nirum (we) + kəmə (know) + nɤ (you(sg)) + cʰam (know) + tiʔ (past) = nirum kəmə nɤ cʰam tiʔ ne\n   - nirum (we) + ka (go) + tiʔ (past) = nirum ka tiʔ ne\n4. Question marker: ne\n\n**TRANSLATIONS:**\n\n1. nɤ ʒip ku ne → Did you sleep?\n2. ati kəmə nirum lapkʰi tʰi ne → Did he know us?\n3. tarum kəmə nuʔrum cʰam ran ne → Did they know you?\n4. nirum",
+          "latency_s": 1.74,
+          "bleu": {
+            "corpus_bleu": 8.03,
+            "sentence_bleu": [
+              10.55,
+              9.58,
+              13.55,
+              0.0
+            ],
+            "corpus_chrf": 29.5,
+            "sentence_chrf": [
+              31.42,
+              24.81,
+              43.82,
+              1.75
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "nɤ ʒip ku ne → Did you sleep?",
+              "ati kəmə nirum lapkʰi tʰi ne → Did he know us?",
+              "tarum kəmə nuʔrum cʰam ran ne → Did they know you?",
+              "nirum"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 8.03,
+      "best_bleu": 8.03
+    },
+    "incremental_combinations": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+    },
+    "step_by_step": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  },
+  "summary": {
+    "baseline": {
+      "final_bleu": 8.03,
+      "best_bleu": 8.03,
+      "best_chrf": 29.5,
+      "num_steps": 1
+    }
+  }
+}

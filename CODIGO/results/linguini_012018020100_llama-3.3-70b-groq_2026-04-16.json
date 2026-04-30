@@ -1,0 +1,785 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-16T19:09:37.558335",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "model_key": "llama-3.3-70b-groq",
+    "model_info": {
+      "provider": "groq",
+      "model_id": "llama-3.3-70b-versatile",
+      "tier": "medium",
+      "description": "Llama 3.3 70B via Groq — modelo medio (1.000 req/día gratis)"
+    },
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_code": "nst-hkn_Latn",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "task_type": "translation",
+    "original_context": "Here are some sentences in Hakhun and their English translations:\n\n1. ŋa ka kɤ ne | Do I go?\n2. nɤ ʒip tuʔ ne | Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne | Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne | Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne | Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne | Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne | Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne | Did you(sg) know him?\n9. tarum kəmə nirum lapkʰi ri ne | Do they see us?\n10. ati kəmə ŋa lapkʰi tʰɤ ne | Did he see me?",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\n1. nɤ ʒip ku ne\n2. ati kəmə nirum lapkʰi tʰi ne\n3. tarum kəmə nuʔrum cʰam ran ne\n4. nirum kəmə tarum lan ki ne\n5. nirum kəmə nɤ cʰam tiʔ ne\n6. nirum ka tiʔ ne"
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 0,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\n--- TRAINING EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n  tarum kəmə nirum lapkʰi ri ne → Do they see us?\n  ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me?\n\n--- YOUR TASK ---\nBased on ALL examples above, write your inferred DICTIONARY and GRAMMAR RULES,\nthen translate:\n  1. nɤ ʒip ku ne\n  2. ati kəmə nirum lapkʰi tʰi ne\n  3. tarum kəmə nuʔrum cʰam ran ne\n  4. nirum kəmə tarum lan ki ne\n  5. nirum kəmə nɤ cʰam tiʔ ne\n  6. nirum ka tiʔ ne\n\nFormat:\nDICTIONARY:\n[word mappings, one per line]\n\nGRAMMAR RULES:\n[rules, one per line]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\nŋa = I\nka = go\nkɤ = ?\nne = ?\nnɤ = you(sg)\nʒip = sleep\ntuʔ = sleep (past tense?)\nat = he\ni = him\nbə = me\nlapkʰi = see\ntɤʔ = see (past tense?)\nnirum = we\nkəmə = know\nnuʔrum = you(pl)\ncʰam = know (past tense?)\nki = you(pl)\ntarum = they\nlan = beat\ntʰu = beat (past tense?)\nri = us\ntʰɤ = see (past tense, he -> me)\nku = ?\nti = ?\ntiʔ = ?\nran = ?\n\nGRAMMAR RULES:\n1. The language has a subject-verb-object (SVO) word order.\n2. The verb is marked for tense using suffixes (e.g., tuʔ for past tense of 'sleep', tɤʔ for past tense of 'see').\n3. The language has a system of pronouns, including ŋa (I), nɤ (you(sg)), ati (he), nirum (we), nuʔrum (you(pl)), and tarum (they).\n4. The language uses a particle 'ne' to indicate a question.\n5. The verb 'lapkʰi' (see) takes different suffixes depending on the subject and object (e.g., tɤʔ for 'I see him', tʰɤ for 'he sees me').\n6. The language has a system of agreement, where the verb agrees with the subject in person and number.\n\nTRANSLATIONS:\n1. nɤ ʒip ku ne → Do you(sg) sleep (now)?\n   (Note: 'ku' is not in the dictionary, but based on the pattern, it might be a present tense marker for 'sleep'.)\n2. ati kəmə nirum lapkʰi tʰi ne → Did he know us?\n   (Note: 'tʰi' is not in the dictionary, but based on the pattern, it might be a past tense marker for 'know' with 'us' as the object.)\n3. tarum kəmə nuʔrum cʰam ran ne → Did they know you(pl) (before)?\n   (Note: 'ran' is not in the dictionary, but based on the pattern, it might be a past perfect tense marker.)\n4. nirum kəmə tarum lan ki ne → Do we beat them?\n   (Note: 'ki' is not in the dictionary as an object pronoun, but based on the pattern, it might be 'them'.)\n5. nirum kəmə nɤ cʰam tiʔ ne → Did we know you(sg)?\n   (Note: 'tiʔ' is not in the dictionary, but based on the pattern, it might be a past tense marker for 'know' with 'you(sg)' as the object.)\n6. nirum ka tiʔ ne → Do we go (now)?\n   (Note: 'tiʔ' is not in the dictionary, but based on the pattern, it might be a present tense marker for 'go'.)",
+          "latency_s": 2.65,
+          "bleu": {
+            "corpus_bleu": 33.65,
+            "sentence_bleu": [
+              33.65
+            ],
+            "corpus_chrf": 74.9,
+            "sentence_chrf": [
+              74.9
+            ],
+            "num_evaluated": 1,
+            "hypotheses": [
+              "nɤ ʒip ku ne → Do you(sg) sleep (now)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 33.65,
+      "best_bleu": 33.65
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 1,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 1/9 — New subset of examples:\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: (possibly a verb conjugation or question marker)\n- ne: (possibly a question marker or sentence final particle)\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: (possibly a past tense marker or verb conjugation)\n- ne: (possibly a question marker or sentence final particle, consistent with its use in the first example)\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ) followed by the verb or verb conjugation (ka, ʒip).\n2. The language may use a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ), with kɤ possibly indicating a present or future tense and tuʔ indicating a past tense.\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep? \n\nNote: The translations provided are based on the given examples and may not be comprehensive or entirely accurate without further evidence. The dictionary and grammar rules are also subject to refinement as more examples become available.",
+          "latency_s": 1.48,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: (possibly a verb conjugation or question marker)\n- ne: (possibly a question marker or sentence final particle)\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: (possibly a past tense marker or verb conjugation)\n- ne: (possibly a question marker or sentence final particle, consistent with its use in the first example)",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ) followed by the verb or verb conjugation (ka, ʒip).\n2. The language may use a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ), with kɤ possibly indicating a present or future tense and tuʔ indicating a past tense.",
+          "bleu": {
+            "corpus_bleu": 2.8,
+            "sentence_bleu": [
+              5.67,
+              4.03
+            ],
+            "corpus_chrf": 12.25,
+            "sentence_chrf": [
+              7.86,
+              16.9
+            ],
+            "num_evaluated": 2,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 2/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: (possibly a verb conjugation or question marker)\n- ne: (possibly a question marker or sentence final particle)\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: (possibly a past tense marker or verb conjugation)\n- ne: (possibly a question marker or sentence final particle, consistent with its use in the first example)\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ) followed by the verb or verb conjugation (ka, ʒip).\n2. The language may use a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ), with kɤ possibly indicating a present or future tense and tuʔ indicating a past tense.\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: (possibly a present or future tense marker or verb conjugation)\n- ne: (possibly a question marker or sentence final particle)\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: (possibly a past tense marker or verb conjugation)\n- ŋabə: I (possibly a different form of \"I\" used with certain verbs or in certain tenses)\n- ati: him\n- lapkʰi: see\n- tɤʔ: (possibly a past tense marker or verb conjugation for the verb \"see\")\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə) followed by the verb or verb conjugation (ka, ʒip, lapkʰi).\n2. The language may use a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or tense).\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+          "latency_s": 1.86,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: (possibly a present or future tense marker or verb conjugation)\n- ne: (possibly a question marker or sentence final particle)\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: (possibly a past tense marker or verb conjugation)\n- ŋabə: I (possibly a different form of \"I\" used with certain verbs or in certain tenses)\n- ati: him\n- lapkʰi: see\n- tɤʔ: (possibly a past tense marker or verb conjugation for the verb \"see\")",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə) followed by the verb or verb conjugation (ka, ʒip, lapkʰi).\n2. The language may use a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or tense).",
+          "bleu": {
+            "corpus_bleu": 2.18,
+            "sentence_bleu": [
+              5.67,
+              5.67,
+              3.75
+            ],
+            "corpus_chrf": 10.41,
+            "sentence_chrf": [
+              7.86,
+              18.04,
+              7.35
+            ],
+            "num_evaluated": 3,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 3/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: (possibly a present or future tense marker or verb conjugation)\n- ne: (possibly a question marker or sentence final particle)\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: (possibly a past tense marker or verb conjugation)\n- ŋabə: I (possibly a different form of \"I\" used with certain verbs or in certain tenses)\n- ati: him\n- lapkʰi: see\n- tɤʔ: (possibly a past tense marker or verb conjugation for the verb \"see\")\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə) followed by the verb or verb conjugation (ka, ʒip, lapkʰi).\n2. The language may use a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or tense).\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: past tense marker for certain verbs (e.g., \"sleep\")\n- ŋabə: I (possibly a form used with certain verbs or in certain tenses, or in sentences with objects)\n- ati: him\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural)\n- cʰam: (possibly an object marker or a particle indicating the direction of knowledge)\n- ki: (possibly a plural marker or a particle used with the verb \"know\")\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may use different forms for the second person pronoun, with nɤ for singular and nuʔrum for plural.\n6. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you (singular) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you (plural)?",
+          "latency_s": 2.18,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: past tense marker for certain verbs (e.g., \"sleep\")\n- ŋabə: I (possibly a form used with certain verbs or in certain tenses, or in sentences with objects)\n- ati: him\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural)\n- cʰam: (possibly an object marker or a particle indicating the direction of knowledge)\n- ki: (possibly a plural marker or a particle used with the verb \"know\")",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may use different forms for the second person pronoun, with nɤ for singular and nuʔrum for plural.\n6. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.",
+          "bleu": {
+            "corpus_bleu": 2.45,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82
+            ],
+            "corpus_chrf": 10.72,
+            "sentence_chrf": [
+              7.86,
+              15.55,
+              7.35,
+              12.67
+            ],
+            "num_evaluated": 4,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you (singular) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you (plural)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 4/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular)\n- ʒip: sleep\n- tuʔ: past tense marker for certain verbs (e.g., \"sleep\")\n- ŋabə: I (possibly a form used with certain verbs or in certain tenses, or in sentences with objects)\n- ati: him\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural)\n- cʰam: (possibly an object marker or a particle indicating the direction of knowledge)\n- ki: (possibly a plural marker or a particle used with the verb \"know\")\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may use different forms for the second person pronoun, with nɤ for singular and nuʔrum for plural.\n6. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I (possibly a basic or nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, possibly a basic or nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for certain verbs (e.g., \"sleep\")\n- ŋabə: I (possibly an accusative or ergative form, or used with certain verbs or in certain tenses)\n- ati: him (possibly an accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, possibly an accusative or ergative form)\n- rɤ: me (possibly an accusative form)\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?",
+          "latency_s": 2.07,
+          "accumulated_dict": "- ŋa: I (possibly a basic or nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, possibly a basic or nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for certain verbs (e.g., \"sleep\")\n- ŋabə: I (possibly an accusative or ergative form, or used with certain verbs or in certain tenses)\n- ati: him (possibly an accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, possibly an accusative or ergative form)\n- rɤ: me (possibly an accusative form)",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.",
+          "bleu": {
+            "corpus_bleu": 6.0,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82,
+              18.8
+            ],
+            "corpus_chrf": 15.64,
+            "sentence_chrf": [
+              7.86,
+              16.9,
+              7.35,
+              13.25,
+              30.85
+            ],
+            "num_evaluated": 5,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?"
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 5/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I (possibly a basic or nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, possibly a basic or nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for certain verbs (e.g., \"sleep\")\n- ŋabə: I (possibly an accusative or ergative form, or used with certain verbs or in certain tenses)\n- ati: him (possibly an accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, possibly an accusative or ergative form)\n- rɤ: me (possibly an accusative form)\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", and tɤʔ indicating a past tense for the verb \"see\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?",
+          "latency_s": 2.69,
+          "accumulated_dict": "- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.",
+          "bleu": {
+            "corpus_bleu": 4.96,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82,
+              18.8,
+              3.13
+            ],
+            "corpus_chrf": 15.18,
+            "sentence_chrf": [
+              7.86,
+              16.9,
+              7.35,
+              13.25,
+              30.85,
+              12.13
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?",
+              "tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 6/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: possibly a marker for the verb \"see\" in certain contexts\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts.\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?",
+          "latency_s": 2.33,
+          "accumulated_dict": "- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: possibly a marker for the verb \"see\" in certain contexts",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts.",
+          "bleu": {
+            "corpus_bleu": 4.96,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82,
+              18.8,
+              3.13
+            ],
+            "corpus_chrf": 15.18,
+            "sentence_chrf": [
+              7.86,
+              16.9,
+              7.35,
+              13.25,
+              30.85,
+              12.13
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?",
+              "tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 7/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: possibly a marker for the verb \"see\" in certain contexts\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts.\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: possibly a marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne → Did you(sg) know him?",
+          "latency_s": 2.12,
+          "accumulated_dict": "- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: possibly a marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).",
+          "bleu": {
+            "corpus_bleu": 4.96,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82,
+              18.8,
+              3.13
+            ],
+            "corpus_chrf": 15.18,
+            "sentence_chrf": [
+              7.86,
+              16.9,
+              7.35,
+              13.25,
+              30.85,
+              12.13
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?",
+              "tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 8/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: possibly a marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n  tarum kəmə nirum lapkʰi ri ne → Do they see us?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n- ri: us (accusative form)\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n12. The language may use the marker ri to indicate the object \"us\".\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n9. tarum kəmə nirum lapkʰi ri ne → Do they see us?",
+          "latency_s": 2.62,
+          "accumulated_dict": "- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n- ri: us (accusative form)",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n12. The language may use the marker ri to indicate the object \"us\".",
+          "bleu": {
+            "corpus_bleu": 4.96,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82,
+              18.8,
+              3.13
+            ],
+            "corpus_chrf": 15.18,
+            "sentence_chrf": [
+              7.86,
+              16.9,
+              7.35,
+              13.25,
+              30.85,
+              12.13
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?",
+              "tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 9/9 — New subset of examples:\n\n--- YOUR ACCUMULATED KNOWLEDGE (update if needed) ---\nDICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n- ri: us (accusative form)\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n12. The language may use the marker ri to indicate the object \"us\".\n\n--- NEW EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n  tarum kəmə nirum lapkʰi ri ne → Do they see us?\n  ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me?\n\n--- YOUR TASK ---\n1. Update DICTIONARY (add/correct entries based on new evidence)\n2. Update GRAMMAR RULES (refine or add rules)\n3. Translate the test sentences using your best current knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n- ri: us (accusative form)\n- tʰɤ: possibly a variant of the past tense marker for the verb \"see\" or an error in the data\n\nGRAMMAR RULES:\n1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n12. The language may use the marker ri to indicate the object \"us\".\n13. The verb \"see\" may use the past tense marker tɤʔ when the subject is the first person singular (ŋabə) and the object is a specific person or entity (ati).\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go?\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne →",
+          "latency_s": 2.33,
+          "accumulated_dict": "- ŋa: I (nominative form)\n- ka: go\n- kɤ: present or future tense marker\n- ne: question marker or sentence final particle\n- nɤ: you (singular, nominative form)\n- ʒip: sleep\n- tuʔ: past tense marker for the verb \"sleep\"\n- ŋabə: I (ergative or accusative form)\n- ati: him (accusative form)\n- lapkʰi: see\n- tɤʔ: past tense marker for the verb \"see\"\n- nirum: we\n- kəmə: know\n- nuʔrum: you (plural, nominative form)\n- cʰam: object marker or particle indicating the direction of knowledge\n- ki: plural marker or particle used with the verb \"know\"\n- nɤbə: you (singular, ergative or accusative form)\n- rɤ: me (accusative form)\n- tarum: they (nominative form)\n- lan: beat\n- tʰu: past tense marker for the verb \"beat\"\n- kan: marker for the verb \"see\" in certain contexts, possibly indicating a specific type of seeing or a specific object\n- ri: us (accusative form)\n- tʰɤ: possibly a variant of the past tense marker for the verb \"see\" or an error in the data",
+          "accumulated_rules": "1. The language appears to use a subject-verb word order, as both examples have the subject (ŋa, nɤ, ŋabə, nirum) followed by the verb or verb conjugation (ka, ʒip, lapkʰi, kəmə).\n2. The language uses a question marker or particle (ne) at the end of the sentence to indicate a question.\n3. Verb conjugation or tense may be marked by affixes or particles (kɤ, tuʔ, tɤʔ, tʰu), with kɤ possibly indicating a present or future tense, tuʔ indicating a past tense for the verb \"sleep\", tɤʔ indicating a past tense for the verb \"see\", and tʰu indicating a past tense for the verb \"beat\".\n4. The language may have different forms of the first person singular pronoun (\"I\"), with ŋa used in some contexts and ŋabə used in others (possibly depending on the verb or the presence of an object).\n5. The language may have different forms of the first person singular pronoun (\"me\"), with rɤ used as an accusative form.\n6. The language may have different forms of the second person singular pronoun (\"you\"), with nɤ used in some contexts and nɤbə used in others (possibly depending on the verb or the presence of an object).\n7. The verb \"know\" may require an object marker or a particle (cʰam) and possibly a plural marker (ki) when the object is plural.\n8. The language may use ergative-absolutive alignment, with ŋabə and nɤbə used as ergative forms of the first and second person singular pronouns, respectively.\n9. The verb \"beat\" may use the past tense marker tʰu.\n10. The verb \"see\" may use the past tense marker tɤʔ and possibly the marker kan in certain contexts, possibly indicating a specific type of seeing or a specific object.\n11. The verb \"see\" may use the marker kan when the object is a specific person or entity (ati).\n12. The language may use the marker ri to indicate the object \"us\".\n13. The verb \"see\" may use the past tense marker tɤʔ when the subject is the first person singular (ŋabə) and the object is a specific person or entity (ati).",
+          "bleu": {
+            "corpus_bleu": 4.96,
+            "sentence_bleu": [
+              5.67,
+              4.03,
+              3.75,
+              5.82,
+              18.8,
+              3.13
+            ],
+            "corpus_chrf": 15.18,
+            "sentence_chrf": [
+              7.86,
+              16.9,
+              7.35,
+              13.25,
+              30.85,
+              12.13
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go?",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep?",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him?",
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?",
+              "tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 4.96,
+      "best_bleu": 6.0
+    },
+    "step_by_step": {
+      "strategy": "step_by_step_linguistic",
+      "strategy_id": 2,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 1/4 — Stage: LEXICAL\nFocus on vocabulary and basic word order. Simple SVO/SOV sentences, no morphological variation.\n\n--- EXAMPLES FOR THIS STAGE ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: lexical\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: ?\n- ne: ?\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: ?\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: ?\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\" or \"kɤ\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n\nTRANSLATIONS:\n1. ŋa ka kɤ ne → Do I go? (The question particle \"ne\" and possibly \"kɤ\" indicate a question about the action of going, performed by the subject \"ŋa\", meaning I.)\n2. nɤ ʒip tuʔ ne → Did you(sg) sleep? (The subject \"nɤ\" means you(sg), the verb \"ʒip\" means sleep, and the particles \"tuʔ\" and \"ne\" may indicate past tense and question, respectively.)\n3. ŋabə ati lapkʰi tɤʔ ne → Did I see him? (The subject \"ŋabə\" is an alternative form of \"I\", the object \"ati\" means him, the verb \"lapkʰi\" means see, and the particles \"tɤʔ\" and \"ne\" may indicate past tense and question, respectively.)",
+          "latency_s": 1.49,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: ?\n- ne: ?\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: ?\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: ?",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\" or \"kɤ\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".",
+          "bleu": {
+            "corpus_bleu": 0.4,
+            "sentence_bleu": [
+              1.24,
+              0.83,
+              0.77
+            ],
+            "corpus_chrf": 7.38,
+            "sentence_chrf": [
+              7.97,
+              8.24,
+              6.34
+            ],
+            "num_evaluated": 3,
+            "hypotheses": [
+              "ŋa ka kɤ ne → Do I go? (The question particle \"ne\" and possibly \"kɤ\" indicate a question about the action of going, performed by the subject \"ŋa\", meaning I.)",
+              "nɤ ʒip tuʔ ne → Did you(sg) sleep? (The subject \"nɤ\" means you(sg), the verb \"ʒip\" means sleep, and the particles \"tuʔ\" and \"ne\" may indicate past tense and question, respectively.)",
+              "ŋabə ati lapkʰi tɤʔ ne → Did I see him? (The subject \"ŋabə\" is an alternative form of \"I\", the object \"ati\" means him, the verb \"lapkʰi\" means see, and the particles \"tɤʔ\" and \"ne\" may indicate past tense and question, respectively.)"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 2/4 — Stage: PHONOLOGY\nFocus on phonological patterns: vowel changes, consonant alternations, affixes, allomorphs.\n\n--- ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: ?\n- ne: ?\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: ?\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: ?\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\" or \"kɤ\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n\n--- EXAMPLES FOR THIS STAGE ---\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: phonology\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (possibly)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly)\n- nirum: we (exclusive, possibly)\n- kəmə: know (possibly)\n- nuʔrum: you(pl, possibly)\n- cʰam: ?\n- ki: ?\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form, possibly)\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\" or \"kɤ\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language may use suffixes or clitics to indicate grammatical case, such as the possible object form \"rɤ\" for \"me\".\n\nTRANSLATIONS:\n1. nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)? (The presence of \"ne\" at the end suggests a question, and \"nirum\" may be a subject pronoun for \"we\". \"kəmə\" could be a verb for \"know\", and \"nuʔrum\" may be an object pronoun for \"you(pl)\". \"cʰam\" and \"ki\" are unclear, but may be related to the verb or sentence structure.)\n2. nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me? (The use of \"nɤbə\" instead of \"nɤ\" may indicate a specific grammatical context, such as emphasis or focus. The word order and presence of \"ne\" suggest a question, and \"lapkʰi\" is likely the verb for \"see\". The object form \"rɤ\" is used to represent \"me\", and \"ŋa\" may be an emphatic or topicalized subject pronoun for \"I\".)",
+          "latency_s": 2.04,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (possibly)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly)\n- nirum: we (exclusive, possibly)\n- kəmə: know (possibly)\n- nuʔrum: you(pl, possibly)\n- cʰam: ?\n- ki: ?\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form, possibly)",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\" or \"kɤ\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language may use suffixes or clitics to indicate grammatical case, such as the possible object form \"rɤ\" for \"me\".",
+          "bleu": {
+            "corpus_bleu": 0.51,
+            "sentence_bleu": [
+              0.96,
+              0.44
+            ],
+            "corpus_chrf": 5.69,
+            "sentence_chrf": [
+              6.51,
+              4.92
+            ],
+            "num_evaluated": 2,
+            "hypotheses": [
+              "nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)? (The presence of \"ne\" at the end suggests a question, and \"nirum\" may be a subject pronoun for \"we\". \"kəmə\" could be a verb for \"know\", and \"nuʔrum\" may be an object pronoun for \"you(pl)\". \"cʰam\" and \"ki\" are unclear, but may be related to the verb or sentence structure.)",
+              "nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me? (The use of \"nɤbə\" instead of \"nɤ\" may indicate a specific grammatical context, such as emphasis or focus. The word order and presence of \"ne\" suggest a question, and \"lapkʰi\" is likely the verb for \"see\". The object form \"rɤ\" is used to represent \"me\", and \"ŋa\" may be an emphatic or topicalized subject pronoun for \"I\".)"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 3/4 — Stage: MORPHOSYNTAX\nFocus on agreement, tense, number, person, gender markings.\n\n--- ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (possibly)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly)\n- nirum: we (exclusive, possibly)\n- kəmə: know (possibly)\n- nuʔrum: you(pl, possibly)\n- cʰam: ?\n- ki: ?\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form, possibly)\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\" or \"kɤ\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language may use suffixes or clitics to indicate grammatical case, such as the possible object form \"rɤ\" for \"me\".\n\n--- EXAMPLES FOR THIS STAGE ---\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: morphosyntax\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (possibly)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly)\n- nirum: we (exclusive, possibly)\n- kəmə: know/beat (possibly)\n- nuʔrum: you(pl, possibly)\n- cʰam: know (possibly, alternative form of kəmə)\n- ki: ?\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form, possibly)\n- tarum: they (possibly)\n- lan: beat (possibly, related to kəmə)\n- tʰu: beat (possibly, related to kəmə)\n- kan: ?\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language may use suffixes or clitics to indicate grammatical case, such as the possible object form \"rɤ\" for \"me\".\n- The verb \"kəmə\" may have multiple meanings, including \"know\" and \"beat\", possibly with different suffixes or prefixes.\n- The word \"cʰam\" may be an alternative form of \"kəmə\", possibly with a different connotation or emphasis.\n- The word \"kan\" may be a suffix or clitic indicating a specific grammatical function, possibly related to the verb \"lapkʰi\".\n\nTRANSLATIONS:\n1. tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n   - Breakdown: tarum (they) kəmə (beat) nɤ (you(sg)) lan tʰu (possibly related to beating) ne (question particle)\n2. nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n   - Breakdown: nuʔrum (you(pl)) kəmə (know, possibly related to seeing) ati (him) lapkʰi (see) kan (possibly a suffix indicating a specific grammatical function) ne (question particle)\n3. nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n   - Breakdown: nɤbə (you(sg)) ati (him) cʰam (know, possibly an alternative form of kəmə) tuʔ (tense/aspect marker) ne (question particle)",
+          "latency_s": 2.26,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (possibly)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly)\n- nirum: we (exclusive, possibly)\n- kəmə: know/beat (possibly)\n- nuʔrum: you(pl, possibly)\n- cʰam: know (possibly, alternative form of kəmə)\n- ki: ?\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form, possibly)\n- tarum: they (possibly)\n- lan: beat (possibly, related to kəmə)\n- tʰu: beat (possibly, related to kəmə)\n- kan: ?",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language may use suffixes or clitics to indicate grammatical case, such as the possible object form \"rɤ\" for \"me\".\n- The verb \"kəmə\" may have multiple meanings, including \"know\" and \"beat\", possibly with different suffixes or prefixes.\n- The word \"cʰam\" may be an alternative form of \"kəmə\", possibly with a different connotation or emphasis.\n- The word \"kan\" may be a suffix or clitic indicating a specific grammatical function, possibly related to the verb \"lapkʰi\".",
+          "bleu": {
+            "corpus_bleu": 5.04,
+            "sentence_bleu": [
+              17.4,
+              0.0,
+              18.21,
+              0.0,
+              20.45,
+              0.0
+            ],
+            "corpus_chrf": 15.55,
+            "sentence_chrf": [
+              29.54,
+              6.64,
+              28.52,
+              5.61,
+              39.38,
+              3.36
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?",
+              "- Breakdown: tarum (they) kəmə (beat) nɤ (you(sg)) lan tʰu (possibly related to beating) ne (question particle)",
+              "nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?",
+              "- Breakdown: nuʔrum (you(pl)) kəmə (know, possibly related to seeing) ati (him) lapkʰi (see) kan (possibly a suffix indicating a specific grammatical function) ne (question particle)",
+              "nɤbə ati cʰam tuʔ ne → Did you(sg) know him?",
+              "- Breakdown: nɤbə (you(sg)) ati (him) cʰam (know, possibly an alternative form of kəmə) tuʔ (tense/aspect marker) ne (question particle)"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\nSTEP 4/4 — Stage: SYNTAX\nCombine all rules: negation, questions, complex clauses.\n\n--- ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (possibly)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly)\n- nirum: we (exclusive, possibly)\n- kəmə: know/beat (possibly)\n- nuʔrum: you(pl, possibly)\n- cʰam: know (possibly, alternative form of kəmə)\n- ki: ?\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form, possibly)\n- tarum: they (possibly)\n- lan: beat (possibly, related to kəmə)\n- tʰu: beat (possibly, related to kəmə)\n- kan: ?\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, possibly \"ne\", to indicate interrogative sentences.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, possibly \"tuʔ\" or \"tɤʔ\".\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language may use suffixes or clitics to indicate grammatical case, such as the possible object form \"rɤ\" for \"me\".\n- The verb \"kəmə\" may have multiple meanings, including \"know\" and \"beat\", possibly with different suffixes or prefixes.\n- The word \"cʰam\" may be an alternative form of \"kəmə\", possibly with a different connotation or emphasis.\n- The word \"kan\" may be a suffix or clitic indicating a specific grammatical function, possibly related to the verb \"lapkʰi\".\n\n--- EXAMPLES FOR THIS STAGE ---\n  tarum kəmə nirum lapkʰi ri ne → Do they see us?\n  ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me?\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: syntax\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "DICTIONARY:\n- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (indicating yes/no questions)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly, indicating completed action)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly, indicating past tense)\n- nirum: we (exclusive)\n- kəmə: know/beat (possibly, with \"kəmə\" as the base form for \"know\" and \"lan\" or \"tʰu\" as related forms for \"beat\")\n- nuʔrum: you(pl)\n- cʰam: know (alternative form of \"kəmə\", possibly with a different connotation or emphasis)\n- ki: (unknown, possibly a particle or interjection)\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form)\n- tarum: they\n- lan: beat (related to \"kəmə\", possibly as a suffix or prefix indicating a specific type of beating)\n- tʰu: beat (related to \"kəmə\", possibly as a suffix or prefix indicating a specific type of beating)\n- kan: (unknown, possibly a suffix or clitic indicating a specific grammatical function, such as a nominalizer or a marker for subordinate clauses)\n- ri: us (object form, possibly as a clitic or suffix)\n\nGRAMMAR RULES:\n- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, \"ne\", to indicate yes/no questions.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, such as \"tuʔ\" for completed action or \"tɤʔ\" for past tense.\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language uses suffixes or clitics to indicate grammatical case, such as the object form \"rɤ\" for \"me\" and \"ri\" for \"us\".\n- The verb \"kəmə\" may have multiple meanings, including \"know\" and \"beat\", possibly with different suffixes or prefixes.\n- The word \"cʰam\" may be an alternative form of \"kəmə\", possibly with a different connotation or emphasis.\n- The word \"kan\" may be a suffix or clitic indicating a specific grammatical function, possibly related to the verb \"lapkʰi\" or indicating a subordinate clause.\n- The language uses a specific word order for questions, with the question particle \"ne\" at the end of the sentence.\n\nTRANSLATIONS:\n1. tarum kəmə nirum lapkʰi ri ne → Do they see us? (The sentence follows the SVO word order, with \"tarum\" as the subject, \"kəmə\" as the verb, \"nirum\" as the object, \"lapkʰi\" as the verb, \"ri\" as the object form of \"us\", and \"ne\" as the question particle.)\n2. ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me? (The sentence follows the SVO word order, with \"ati\" as the subject, \"kəmə\" as the verb, \"ŋa\" as the object, \"lapkʰi\" as the verb, \"tʰɤ\" as the past tense marker, and \"ne\" as the question particle.)",
+          "latency_s": 2.51,
+          "accumulated_dict": "- ŋa: I\n- ka: go\n- kɤ: question particle (possibly)\n- ne: question particle (indicating yes/no questions)\n- nɤ: you(sg)\n- ʒip: sleep\n- tuʔ: tense/aspect marker (possibly, indicating completed action)\n- ŋabə: I (alternative form or emphasis)\n- ati: him\n- lapkʰi: see\n- tɤʔ: tense/aspect marker (possibly, indicating past tense)\n- nirum: we (exclusive)\n- kəmə: know/beat (possibly, with \"kəmə\" as the base form for \"know\" and \"lan\" or \"tʰu\" as related forms for \"beat\")\n- nuʔrum: you(pl)\n- cʰam: know (alternative form of \"kəmə\", possibly with a different connotation or emphasis)\n- ki: (unknown, possibly a particle or interjection)\n- nɤbə: you(sg) (alternative form or emphasis)\n- rɤ: me (object form)\n- tarum: they\n- lan: beat (related to \"kəmə\", possibly as a suffix or prefix indicating a specific type of beating)\n- tʰu: beat (related to \"kəmə\", possibly as a suffix or prefix indicating a specific type of beating)\n- kan: (unknown, possibly a suffix or clitic indicating a specific grammatical function, such as a nominalizer or a marker for subordinate clauses)\n- ri: us (object form, possibly as a clitic or suffix)",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order.\n- The language uses a question particle, \"ne\", to indicate yes/no questions.\n- The verb may be preceded by a particle or affix to indicate tense or aspect, such as \"tuʔ\" for completed action or \"tɤʔ\" for past tense.\n- The language may exhibit vowel harmony or assimilation, as seen in the variation between \"nɤ\" and \"nɤbə\".\n- The language uses suffixes or clitics to indicate grammatical case, such as the object form \"rɤ\" for \"me\" and \"ri\" for \"us\".\n- The verb \"kəmə\" may have multiple meanings, including \"know\" and \"beat\", possibly with different suffixes or prefixes.\n- The word \"cʰam\" may be an alternative form of \"kəmə\", possibly with a different connotation or emphasis.\n- The word \"kan\" may be a suffix or clitic indicating a specific grammatical function, possibly related to the verb \"lapkʰi\" or indicating a subordinate clause.\n- The language uses a specific word order for questions, with the question particle \"ne\" at the end of the sentence.",
+          "bleu": {
+            "corpus_bleu": 1.22,
+            "sentence_bleu": [
+              0.71,
+              2.1
+            ],
+            "corpus_chrf": 9.03,
+            "sentence_chrf": [
+              5.36,
+              13.12
+            ],
+            "num_evaluated": 2,
+            "hypotheses": [
+              "tarum kəmə nirum lapkʰi ri ne → Do they see us? (The sentence follows the SVO word order, with \"tarum\" as the subject, \"kəmə\" as the verb, \"nirum\" as the object, \"lapkʰi\" as the verb, \"ri\" as the object form of \"us\", and \"ne\" as the question particle.)",
+              "ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me? (The sentence follows the SVO word order, with \"ati\" as the subject, \"kəmə\" as the verb, \"ŋa\" as the object, \"lapkʰi\" as the verb, \"tʰɤ\" as the past tense marker, and \"ne\" as the question particle.)"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 1.22,
+      "best_bleu": 5.04
+    }
+  },
+  "summary": {
+    "baseline": {
+      "final_bleu": 33.65,
+      "best_bleu": 33.65,
+      "best_chrf": 74.9,
+      "num_steps": 1
+    },
+    "incremental_combinations": {
+      "final_bleu": 4.96,
+      "best_bleu": 6.0,
+      "best_chrf": 15.64,
+      "num_steps": 9
+    },
+    "step_by_step": {
+      "final_bleu": 1.22,
+      "best_bleu": 5.04,
+      "best_chrf": 15.55,
+      "num_steps": 4
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ayutla_mixe_001",
+  "language": "Ayutla Mixe",
+  "language_family": "Mixe-Zoque",
+  "region": "Oaxaca, México",
+  "source": "IOL / modeLing dataset (Chi et al., 2024)",
+  "notes": "Lengua de baja densidad de recursos. Orden de palabras SOV. Morfología verbal compleja.",
+  "train_pairs": [
+    {"source": "Ëjts nexp.", "target": "I see."},
+    {"source": "Mejts mtunp.", "target": "You work."},
+    {"source": "Juan yë'ë yexyejtpy.", "target": "Juan watches him."},
+    {"source": "Yë'ë yë' uk yexpy.", "target": "He sees the dog."},
+    {"source": "Ëjts yë' maxu'unk nexyejtpy.", "target": "I watch the baby."},
+    {"source": "Yë' maxu'unk yexp.", "target": "The baby sees."},
+    {"source": "Mejts mnexyejtpy.", "target": "You watch me."},
+    {"source": "Ëjts tëjk nëxp.", "target": "I see the house."}
+  ],
+  "test_pairs": [
+    {"source": "The baby watches the dog.", "target": "Yë' maxu'unk yë' uk yexyejtpy.", "direction": "en2lang"},
+    {"source": "Yë' uk Juan yexyejtpy.", "target": "The dog watches Juan.", "direction": "lang2en"},
+    {"source": "I work.", "target": "Ëjts ntunp.", "direction": "en2lang"},
+    {"source": "Mejts tëjk mëxp.", "target": "You see the house.", "direction": "lang2en"}
+  ],
+  "linguistic_features": ["SOV word order", "verb agreement prefixes", "object-verb complex"]
+}

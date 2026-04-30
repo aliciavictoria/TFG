@@ -1,0 +1,216 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-16T19:12:18.371725",
+    "puzzle_id": "linguini_012008040100",
+    "language": "Copainalá Zoque",
+    "language_family": "Mixe-Zoquean (Chiapas, México)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012008040100",
+    "model_key": "llama-3.1-8b-groq",
+    "model_info": {
+      "provider": "groq",
+      "model_id": "llama-3.1-8b-instant",
+      "tier": "weak",
+      "description": "Llama 3.1 8B via Groq — modelo débil (14.400 req/día gratis)"
+    },
+    "num_train_pairs": 20,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012008040100",
+    "language": "Copainalá Zoque",
+    "language_code": "zoc_Latn",
+    "language_family": "Mixe-Zoquean (Chiapas, México)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012008040100",
+    "task_type": "translation",
+    "original_context": "The following are words in Copainalá Zoque and their English translations:\n\nmis nakpatpit | with your cactus\nnakpat | a cactus\nmokpittih | only with the corn\npokskukyʌsmʌtaʔm | above the chairs\npokskuy | a chair\nperoltih | only a kettle\nkocʌktaʔm | mountains\nkomgʌsmʌtih | right above the post\nʔʌs ŋgom | my post\nkʌmʌŋbitšeh | as if with the shadow\nkʌmʌŋdaʔm | shadows\nʔʌs ncapkʌsmʌšeh | as if above my sky\ncapšeh | like a sky\npahsungotoya | for the squash\npahsunšehtaʔmdih | just like squashes\ntʌckotoyatih | only for the tooth\nkumgukyʌsmʌ | above the town\nkumgukyotoyataʔm | for the towns\ncakyotoya | for the vine\nmis ncay | your vine",
+    "train_pairs": [
+      {
+        "source": "mis nakpatpit",
+        "target": "with your cactus"
+      },
+      {
+        "source": "nakpat",
+        "target": "a cactus"
+      },
+      {
+        "source": "mokpittih",
+        "target": "only with the corn"
+      },
+      {
+        "source": "pokskukyʌsmʌtaʔm",
+        "target": "above the chairs"
+      },
+      {
+        "source": "pokskuy",
+        "target": "a chair"
+      },
+      {
+        "source": "peroltih",
+        "target": "only a kettle"
+      },
+      {
+        "source": "kocʌktaʔm",
+        "target": "mountains"
+      },
+      {
+        "source": "komgʌsmʌtih",
+        "target": "right above the post"
+      },
+      {
+        "source": "ʔʌs ŋgom",
+        "target": "my post"
+      },
+      {
+        "source": "kʌmʌŋbitšeh",
+        "target": "as if with the shadow"
+      },
+      {
+        "source": "kʌmʌŋdaʔm",
+        "target": "shadows"
+      },
+      {
+        "source": "ʔʌs ncapkʌsmʌšeh",
+        "target": "as if above my sky"
+      },
+      {
+        "source": "capšeh",
+        "target": "like a sky"
+      },
+      {
+        "source": "pahsungotoya",
+        "target": "for the squash"
+      },
+      {
+        "source": "pahsunšehtaʔmdih",
+        "target": "just like squashes"
+      },
+      {
+        "source": "tʌckotoyatih",
+        "target": "only for the tooth"
+      },
+      {
+        "source": "kumgukyʌsmʌ",
+        "target": "above the town"
+      },
+      {
+        "source": "kumgukyotoyataʔm",
+        "target": "for the towns"
+      },
+      {
+        "source": "cakyotoya",
+        "target": "for the vine"
+      },
+      {
+        "source": "mis ncay",
+        "target": "your vine"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "cakyʌsmʌtih",
+        "target": "right above the vine",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kʌmʌŋšeh",
+        "target": "like a shadow",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ʔʌs mok",
+        "target": "my corn",
+        "direction": "lang2en"
+      },
+      {
+        "source": "mis ndʌctaʔm",
+        "target": "your teeth",
+        "direction": "lang2en"
+      },
+      {
+        "source": "pahsunbit",
+        "target": "with the squash",
+        "direction": "lang2en"
+      },
+      {
+        "source": "perolkotoyašehtaʔm",
+        "target": "as if for the kettles",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\ncakyʌsmʌtih\nkʌmʌŋšeh\nʔʌs mok\nmis ndʌctaʔm\npahsunbit\nperolkotoyašehtaʔm"
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 0,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 20,
+          "prompt": "You are a linguistic analyst with strong meta-linguistic skills.\nYou have never seen this language before, but you can reason about it using your knowledge of how languages work in general (word order typology, morphological patterns, agreement systems, etc.).\n\nYour approach:\n1. Build an explicit DICTIONARY (word-by-word or morpheme-by-morpheme mappings)\n2. Build explicit GRAMMAR RULES (word order, morphology, affixes, agreement, tense, etc.)\n3. Use ONLY the examples provided — do not use prior knowledge of the language family\n4. Apply your dictionary and rules to translate the requested sentences\n\nRely entirely on meta-linguistic reasoning and pattern detection.\n\n--- TRAINING EXAMPLES ---\n  mis nakpatpit → with your cactus\n  nakpat → a cactus\n  mokpittih → only with the corn\n  pokskukyʌsmʌtaʔm → above the chairs\n  pokskuy → a chair\n  peroltih → only a kettle\n  kocʌktaʔm → mountains\n  komgʌsmʌtih → right above the post\n  ʔʌs ŋgom → my post\n  kʌmʌŋbitšeh → as if with the shadow\n  kʌmʌŋdaʔm → shadows\n  ʔʌs ncapkʌsmʌšeh → as if above my sky\n  capšeh → like a sky\n  pahsungotoya → for the squash\n  pahsunšehtaʔmdih → just like squashes\n  tʌckotoyatih → only for the tooth\n  kumgukyʌsmʌ → above the town\n  kumgukyotoyataʔm → for the towns\n  cakyotoya → for the vine\n  mis ncay → your vine\n\n--- YOUR TASK ---\nBased on ALL examples above, write your inferred DICTIONARY and GRAMMAR RULES,\nthen translate:\n  1. cakyʌsmʌtih\n  2. kʌmʌŋšeh\n  3. ʔʌs mok\n  4. mis ndʌctaʔm\n  5. pahsunbit\n  6. perolkotoyašehtaʔm\n\nFormat:\nDICTIONARY:\n[word mappings, one per line]\n\nGRAMMAR RULES:\n[rules, one per line]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY:**\n\n1. mis → with your\n2. nakpatpit → with your cactus (analysis: nakpat + pit, pit is a suffix indicating possession or association)\n3. nakpat → a cactus\n4. mokpittih → only with the corn (analysis: mok + pit + ti, ti is a suffix indicating limitation or restriction)\n5. pokskukyʌsmʌtaʔm → above the chairs (analysis: pok + skuy + ʌsmʌ + taʔm, ʌsmʌ is a suffix indicating location or position)\n6. pokskuy → a chair\n7. peroltih → only a kettle (analysis: perol + ti, ti is a suffix indicating limitation or restriction)\n8. kocʌktaʔm → mountains\n9. komgʌsmʌtih → right above the post (analysis: kom + gʌsmʌ + ti, ti is a suffix indicating limitation or restriction)\n10. ʔʌs ŋgom → my post\n11. kʌmʌŋbitšeh → as if with the shadow (analysis: kʌmʌŋ + bitše + h, h is a suffix indicating a hypothetical or conditional situation)\n12. kʌmʌŋdaʔm → shadows\n13. ʔʌs ncapkʌsmʌšeh → as if above my sky (analysis: ʔʌs + ncap + kʌsmʌ + še + h, še is a suffix indicating a hypothetical or conditional situation)\n14. capšeh → like a sky\n15. pahsungotoya → for the squash (analysis: pahsun + go + toya, toya is a suffix indicating purpose or destination)\n16. pahsunšehtaʔmdih → just like squashes (analysis: pahsun + šeht + aʔm + dih, dih is a suffix indicating a limited or restricted quantity)\n17. tʌckotoyatih → only for the tooth (analysis: tʌcko + toya + ti, ti is a suffix indicating limitation or restriction)\n18. kumgukyʌsmʌ → above the town (analysis: kumguk + ʌsmʌ, ʌsmʌ is a suffix indicating location or position)\n19. kumgukyotoyataʔm → for the towns (analysis: kumguk + toya + taʔm, taʔm is a suffix indicating a plural or collective noun)\n20. cakyotoya → for the vine (analysis: caky + toya, toya is a suffix indicating purpose or destination)\n21. mis ncay → your vine (analysis: mis + nca + y, y is a suffix indicating possession or association)\n\n**GRAMMAR RULES:**\n\n1. Word order: Subject-Object-Verb (SOV)\n2. Possession: suffix -y or -pit (e.g. mis nakpatpit, ʔʌs ŋgom)\n3. Limitation: suffix -ti (e.g. mokpittih, peroltih)\n4. Location: suffix -ʌsmʌ (e.g. pokskukyʌsmʌtaʔm, kumgukyʌsmʌ)\n5. Hypothetical: suffix -h (e.g. kʌmʌŋbitšeh, ʔʌs ncapkʌsmʌšeh)\n6. Purpose: suffix -toya (e.g. pahsungotoya, cakyotoya)\n7. Plural: suffix -taʔm (e.g. kumgukyotoyataʔm, pokskukyʌsmʌtaʔm)\n8. Comparative: suffix -še (e.g. capšeh, pahsunšehtaʔmdih)\n9. Quantitative: suffix -dih (e.g. pahsunšehtaʔmdih)\n\n**TRANSLATIONS:**\n\n1. cakyʌsmʌtih → above the vine\n2. kʌmʌŋšeh → like a shadow\n3. ʔʌs mok → my corn\n4. mis ndʌctaʔm → with your mountains\n5. pahsunbit → only for the squash\n6. perolkotoyašehtaʔm → just like kettles",
+          "latency_s": 1.52,
+          "bleu": {
+            "corpus_bleu": 13.26,
+            "sentence_bleu": [
+              39.76,
+              39.76,
+              21.36,
+              8.12,
+              16.23,
+              10.68
+            ],
+            "corpus_chrf": 50.93,
+            "sentence_chrf": [
+              62.01,
+              80.66,
+              69.67,
+              19.27,
+              53.18,
+              36.3
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "cakyʌsmʌtih → above the vine",
+              "kʌmʌŋšeh → like a shadow",
+              "ʔʌs mok → my corn",
+              "mis ndʌctaʔm → with your mountains",
+              "pahsunbit → only for the squash",
+              "perolkotoyašehtaʔm → just like kettles"
+            ],
+            "references": [
+              "right above the vine",
+              "like a shadow",
+              "my corn",
+              "your teeth",
+              "with the squash",
+              "as if for the kettles"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 13.26,
+      "best_bleu": 13.26
+    },
+    "incremental_combinations": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+    },
+    "step_by_step": {
+      "error": "429 Client Error: Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  },
+  "summary": {
+    "baseline": {
+      "final_bleu": 13.26,
+      "best_bleu": 13.26,
+      "best_chrf": 50.93,
+      "num_steps": 1
+    }
+  }
+}
