@@ -25,33 +25,41 @@ import requests
 # ─────────────────────────────────────────────
 
 MODELS = {
-    #"llama-3.1-8b-groq": {
-    #    "provider": "groq",
-    #    "model_id": "llama-3.1-8b-instant",
-    #    "tier": "weak",
-    #    "description": "Llama 3.1 8B via Groq — modelo débil (14.400 req/día gratis)"
-    #},
+    "llama-3.1-8b-groq": {
+        "provider": "groq",
+        "model_id": "llama-3.1-8b-instant",
+        "tier": "weak",
+        "description": "Llama 3.1 8B via Groq — familia Meta/Llama (14.400 req/día gratis)"
+    },
     "llama-3.3-70b-groq": {
         "provider": "groq",
         "model_id": "llama-3.3-70b-versatile",
         "tier": "medium",
-        "description": "Llama 3.3 70B via Groq — modelo medio (1.000 req/día gratis)"
+        "description": "Llama 3.3 70B via Groq — familia Meta/Llama (1.000 req/día gratis)"
     },
-    #"llama-3.3-70b-cerebras": {
-    #    "provider": "cerebras",
-    #    "model_id": "llama-3.3-70b",
-    #    "tier": "strong",
-    #    "description": "Llama 3.3 70B via Cerebras — modelo fuerte (14.400 req/día gratis)"
-    #},
+    "gemma-4-26b-openrouter": {
+        "provider": "openrouter",
+        "model_id": "google/gemma-4-26b-a4b-it:free",
+        "tier": "strong",
+        "description": "Gemma 4 26B MoE via OpenRouter — familia Google (50 req/día gratis)"
+    },
+    "gpt-oss-120b-openrouter": {
+        "provider": "openrouter",
+        "model_id": "openai/gpt-oss-120b:free",
+        "tier": "strong",
+        "description": "GPT OSS 120B via OpenRouter — familia OpenAI (50 req/día gratis)"
+    },
 }
+
 
 PROVIDER_URLS = {
     "groq":     "https://api.groq.com/openai/v1/chat/completions",
     "cerebras": "https://api.cerebras.ai/v1/chat/completions",
+    "openrouter": "https://openrouter.ai/api/v1/chat/completions",
 }
 
 def call_model(prompt: str, model_key: str, api_keys: dict) -> str:
-    """Llama al proveedor correcto (Groq o Cerebras, ambos OpenAI-compatible)."""
+    """Llama al proveedor correcto (todos OpenAI-compatible)."""
     model = MODELS[model_key]
     provider = model["provider"]
     key = api_keys.get(provider)
@@ -62,18 +70,30 @@ def call_model(prompt: str, model_key: str, api_keys: dict) -> str:
         "Authorization": f"Bearer {key}",
         "Content-Type": "application/json"
     }
+    # OpenRouter requiere cabeceras adicionales
+    if provider == "openrouter":
+        headers["HTTP-Referer"] = "https://tfg-linguistic-olympiad"
+        headers["X-Title"] = "TFG Olimpiadas Linguisticas"
+
     payload = {
         "model": model["model_id"],
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.0,
         "max_tokens": 1024
     }
-    resp = requests.post(PROVIDER_URLS[provider], headers=headers, json=payload, timeout=90)
-    resp.raise_for_status()
-    data = resp.json()
-    if "error" in data:
-        raise RuntimeError(f"Error de {provider}: {data['error']}")
-    return data["choices"][0]["message"]["content"].strip()
+    for attempt in range(3):  # hasta 3 intentos con backoff
+        resp = requests.post(PROVIDER_URLS[provider], headers=headers, json=payload, timeout=90)
+        if resp.status_code == 429:
+            wait = 30 * (attempt + 1)
+            print(f"    [429] Rate limit en {provider}, esperando {wait}s...")
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        data = resp.json()
+        if "error" in data:
+            raise RuntimeError(f"Error de {provider}: {data['error']}")
+        return data["choices"][0]["message"]["content"].strip()
+    raise RuntimeError(f"Rate limit persistente en {provider} tras 3 intentos")
 
 # ─────────────────────────────────────────────
 # MÉTRICAS BLEU
@@ -541,6 +561,7 @@ if __name__ == "__main__":
     API_KEYS = {
         "groq":     os.getenv("GROQ_API_KEY", ""),
         "cerebras": os.getenv("CEREBRAS_API_KEY", ""),
+        "openrouter": os.getenv("OPENROUTER_API_KEY", ""),
     }
 
     # Filtrar solo los modelos para los que hay key disponible
@@ -565,9 +586,16 @@ if __name__ == "__main__":
     PUZZLES = [
         #"puzzles/ayutla_mixe.json",                        # piloto (8 train)
         #"puzzles/linguini_012023020100.json",               # Apurinã — 16 train
-        "puzzles/linguini_012018020100.json",               # Hakhun — 10 train
+        #"puzzles/linguini_012018020100.json",               # Hakhun — 10 train
         #"puzzles/linguini_012008040100.json",               # Copainalá Zoque — 20 train
         #"puzzles/linguini_012013010200.json",               # Yidiny — 23 train
+
+        "puzzles/linguini_012018030202.json",     # Terena — 41 train
+        "puzzles/linguini_012012050200.json",     # Rotuman — 34 train
+        "puzzles/linguini_012021050200.json",     # Rikbaktsa — 30 train
+        "puzzles/linguini_012017050200.json",     # Madak — 24 train
+        "puzzles/linguini_012015020300.json",     # Besleney Kabardian — 24 train
+        "puzzles/linguini_012013010300.json",     # Yidiny II — 23 train
     ]
 
     for puzzle_path in PUZZLES:

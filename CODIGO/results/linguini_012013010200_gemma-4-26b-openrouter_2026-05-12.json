@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-12T19:27:00.326086",
+    "puzzle_id": "linguini_012013010200",
+    "language": "Yidiny",
+    "language_family": "Pama-Nyungan (Queensland, Australia)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012013010200",
+    "model_key": "gemma-4-26b-openrouter",
+    "model_info": {
+      "provider": "openrouter",
+      "model_id": "google/gemma-4-26b-a4b-it:free",
+      "tier": "strong",
+      "description": "Gemma 4 26B MoE via OpenRouter — familia Google (50 req/día gratis)"
+    },
+    "num_train_pairs": 23,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012013010200",
+    "language": "Yidiny",
+    "language_code": "yii_Latn",
+    "language_family": "Pama-Nyungan (Queensland, Australia)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012013010200",
+    "task_type": "translation",
+    "original_context": "Here are some words in Yidiny and their English translations:\n\ngudaːga | dog\nbuɲa  | woman\nwaguːɟa  | man\nmuyubara  | stranger\ngaɟagimbaːgu  | for a white man\nbamagimbal  | without a person\nbamaːgu | for a person\nbimbiːbi | another father\nmularigu | for an initiated man\nmularini | of an initiated man\nbuɲaːm | from a woman\ngudagabi | another dog\ngaɟagimbaːm | from a white man\nbiɲɟiːngu | for a hornet\nbimbiːn | of a father\nmuɟam | mother\nbiɲɟiːnmu | from a hornet\nmaɟuːrbi | another frog\nbuɲagimbal | without a woman\nbaɟigalni | of a tortoise\nɟuduːlumuɟay | with a pigeon\nmugaɽumu | from a fishing net\nwaŋaːlgu | for a boomerang\n\nThe mark “ː” indicates that the preceding vowel is long.",
+    "train_pairs": [
+      {
+        "source": "gudaːga",
+        "target": "dog"
+      },
+      {
+        "source": "buɲa",
+        "target": "woman"
+      },
+      {
+        "source": "waguːɟa",
+        "target": "man"
+      },
+      {
+        "source": "muyubara",
+        "target": "stranger"
+      },
+      {
+        "source": "gaɟagimbaːgu",
+        "target": "for a white man"
+      },
+      {
+        "source": "bamagimbal",
+        "target": "without a person"
+      },
+      {
+        "source": "bamaːgu",
+        "target": "for a person"
+      },
+      {
+        "source": "bimbiːbi",
+        "target": "another father"
+      },
+      {
+        "source": "mularigu",
+        "target": "for an initiated man"
+      },
+      {
+        "source": "mularini",
+        "target": "of an initiated man"
+      },
+      {
+        "source": "buɲaːm",
+        "target": "from a woman"
+      },
+      {
+        "source": "gudagabi",
+        "target": "another dog"
+      },
+      {
+        "source": "gaɟagimbaːm",
+        "target": "from a white man"
+      },
+      {
+        "source": "biɲɟiːngu",
+        "target": "for a hornet"
+      },
+      {
+        "source": "bimbiːn",
+        "target": "of a father"
+      },
+      {
+        "source": "muɟam",
+        "target": "mother"
+      },
+      {
+        "source": "biɲɟiːnmu",
+        "target": "from a hornet"
+      },
+      {
+        "source": "maɟuːrbi",
+        "target": "another frog"
+      },
+      {
+        "source": "buɲagimbal",
+        "target": "without a woman"
+      },
+      {
+        "source": "baɟigalni",
+        "target": "of a tortoise"
+      },
+      {
+        "source": "ɟuduːlumuɟay",
+        "target": "with a pigeon"
+      },
+      {
+        "source": "mugaɽumu",
+        "target": "from a fishing net"
+      },
+      {
+        "source": "waŋaːlgu",
+        "target": "for a boomerang"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "bamaːn",
+        "target": "of a person",
+        "direction": "lang2en"
+      },
+      {
+        "source": "buɲaːbi",
+        "target": "another woman",
+        "direction": "lang2en"
+      },
+      {
+        "source": "maɟurmuɟay",
+        "target": "with a frog",
+        "direction": "lang2en"
+      },
+      {
+        "source": "muɟaːmni",
+        "target": "of a mother",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\n1. bamaːn\n2. buɲaːbi\n3. maɟurmuɟay\n4. muɟaːmni"
+  },
+  "results": {
+    "baseline": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5e15b0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    },
+    "incremental_combinations": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5e1610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    },
+    "step_by_step": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5e1520>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    }
+  },
+  "summary": {}
+}

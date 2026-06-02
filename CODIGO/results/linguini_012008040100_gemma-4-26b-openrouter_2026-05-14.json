@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-14T20:20:51.398847",
+    "puzzle_id": "linguini_012008040100",
+    "language": "Copainalá Zoque",
+    "language_family": "Mixe-Zoquean (Chiapas, México)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012008040100",
+    "model_key": "gemma-4-26b-openrouter",
+    "model_info": {
+      "provider": "openrouter",
+      "model_id": "google/gemma-4-26b-a4b-it:free",
+      "tier": "strong",
+      "description": "Gemma 4 26B MoE via OpenRouter — familia Google (50 req/día gratis)"
+    },
+    "num_train_pairs": 20,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012008040100",
+    "language": "Copainalá Zoque",
+    "language_code": "zoc_Latn",
+    "language_family": "Mixe-Zoquean (Chiapas, México)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012008040100",
+    "task_type": "translation",
+    "original_context": "The following are words in Copainalá Zoque and their English translations:\n\nmis nakpatpit | with your cactus\nnakpat | a cactus\nmokpittih | only with the corn\npokskukyʌsmʌtaʔm | above the chairs\npokskuy | a chair\nperoltih | only a kettle\nkocʌktaʔm | mountains\nkomgʌsmʌtih | right above the post\nʔʌs ŋgom | my post\nkʌmʌŋbitšeh | as if with the shadow\nkʌmʌŋdaʔm | shadows\nʔʌs ncapkʌsmʌšeh | as if above my sky\ncapšeh | like a sky\npahsungotoya | for the squash\npahsunšehtaʔmdih | just like squashes\ntʌckotoyatih | only for the tooth\nkumgukyʌsmʌ | above the town\nkumgukyotoyataʔm | for the towns\ncakyotoya | for the vine\nmis ncay | your vine",
+    "train_pairs": [
+      {
+        "source": "mis nakpatpit",
+        "target": "with your cactus"
+      },
+      {
+        "source": "nakpat",
+        "target": "a cactus"
+      },
+      {
+        "source": "mokpittih",
+        "target": "only with the corn"
+      },
+      {
+        "source": "pokskukyʌsmʌtaʔm",
+        "target": "above the chairs"
+      },
+      {
+        "source": "pokskuy",
+        "target": "a chair"
+      },
+      {
+        "source": "peroltih",
+        "target": "only a kettle"
+      },
+      {
+        "source": "kocʌktaʔm",
+        "target": "mountains"
+      },
+      {
+        "source": "komgʌsmʌtih",
+        "target": "right above the post"
+      },
+      {
+        "source": "ʔʌs ŋgom",
+        "target": "my post"
+      },
+      {
+        "source": "kʌmʌŋbitšeh",
+        "target": "as if with the shadow"
+      },
+      {
+        "source": "kʌmʌŋdaʔm",
+        "target": "shadows"
+      },
+      {
+        "source": "ʔʌs ncapkʌsmʌšeh",
+        "target": "as if above my sky"
+      },
+      {
+        "source": "capšeh",
+        "target": "like a sky"
+      },
+      {
+        "source": "pahsungotoya",
+        "target": "for the squash"
+      },
+      {
+        "source": "pahsunšehtaʔmdih",
+        "target": "just like squashes"
+      },
+      {
+        "source": "tʌckotoyatih",
+        "target": "only for the tooth"
+      },
+      {
+        "source": "kumgukyʌsmʌ",
+        "target": "above the town"
+      },
+      {
+        "source": "kumgukyotoyataʔm",
+        "target": "for the towns"
+      },
+      {
+        "source": "cakyotoya",
+        "target": "for the vine"
+      },
+      {
+        "source": "mis ncay",
+        "target": "your vine"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "cakyʌsmʌtih",
+        "target": "right above the vine",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kʌmʌŋšeh",
+        "target": "like a shadow",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ʔʌs mok",
+        "target": "my corn",
+        "direction": "lang2en"
+      },
+      {
+        "source": "mis ndʌctaʔm",
+        "target": "your teeth",
+        "direction": "lang2en"
+      },
+      {
+        "source": "pahsunbit",
+        "target": "with the squash",
+        "direction": "lang2en"
+      },
+      {
+        "source": "perolkotoyašehtaʔm",
+        "target": "as if for the kettles",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\ncakyʌsmʌtih\nkʌmʌŋšeh\nʔʌs mok\nmis ndʌctaʔm\npahsunbit\nperolkotoyašehtaʔm"
+  },
+  "results": {
+    "baseline": {
+      "error": "Rate limit persistente en openrouter tras 3 intentos"
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente en openrouter tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente en openrouter tras 3 intentos"
+    }
+  },
+  "summary": {}
+}

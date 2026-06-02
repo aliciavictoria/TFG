@@ -1,0 +1,421 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-14T20:29:57.206734",
+    "puzzle_id": "linguini_012008040100",
+    "language": "Copainalá Zoque",
+    "language_family": "Mixe-Zoquean (Chiapas, México)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012008040100",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_info": {
+      "provider": "openrouter",
+      "model_id": "openai/gpt-oss-120b:free",
+      "tier": "strong",
+      "description": "GPT OSS 120B via OpenRouter — familia OpenAI (50 req/día gratis)"
+    },
+    "num_train_pairs": 20,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012008040100",
+    "language": "Copainalá Zoque",
+    "language_code": "zoc_Latn",
+    "language_family": "Mixe-Zoquean (Chiapas, México)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012008040100",
+    "task_type": "translation",
+    "original_context": "The following are words in Copainalá Zoque and their English translations:\n\nmis nakpatpit | with your cactus\nnakpat | a cactus\nmokpittih | only with the corn\npokskukyʌsmʌtaʔm | above the chairs\npokskuy | a chair\nperoltih | only a kettle\nkocʌktaʔm | mountains\nkomgʌsmʌtih | right above the post\nʔʌs ŋgom | my post\nkʌmʌŋbitšeh | as if with the shadow\nkʌmʌŋdaʔm | shadows\nʔʌs ncapkʌsmʌšeh | as if above my sky\ncapšeh | like a sky\npahsungotoya | for the squash\npahsunšehtaʔmdih | just like squashes\ntʌckotoyatih | only for the tooth\nkumgukyʌsmʌ | above the town\nkumgukyotoyataʔm | for the towns\ncakyotoya | for the vine\nmis ncay | your vine",
+    "train_pairs": [
+      {
+        "source": "mis nakpatpit",
+        "target": "with your cactus"
+      },
+      {
+        "source": "nakpat",
+        "target": "a cactus"
+      },
+      {
+        "source": "mokpittih",
+        "target": "only with the corn"
+      },
+      {
+        "source": "pokskukyʌsmʌtaʔm",
+        "target": "above the chairs"
+      },
+      {
+        "source": "pokskuy",
+        "target": "a chair"
+      },
+      {
+        "source": "peroltih",
+        "target": "only a kettle"
+      },
+      {
+        "source": "kocʌktaʔm",
+        "target": "mountains"
+      },
+      {
+        "source": "komgʌsmʌtih",
+        "target": "right above the post"
+      },
+      {
+        "source": "ʔʌs ŋgom",
+        "target": "my post"
+      },
+      {
+        "source": "kʌmʌŋbitšeh",
+        "target": "as if with the shadow"
+      },
+      {
+        "source": "kʌmʌŋdaʔm",
+        "target": "shadows"
+      },
+      {
+        "source": "ʔʌs ncapkʌsmʌšeh",
+        "target": "as if above my sky"
+      },
+      {
+        "source": "capšeh",
+        "target": "like a sky"
+      },
+      {
+        "source": "pahsungotoya",
+        "target": "for the squash"
+      },
+      {
+        "source": "pahsunšehtaʔmdih",
+        "target": "just like squashes"
+      },
+      {
+        "source": "tʌckotoyatih",
+        "target": "only for the tooth"
+      },
+      {
+        "source": "kumgukyʌsmʌ",
+        "target": "above the town"
+      },
+      {
+        "source": "kumgukyotoyataʔm",
+        "target": "for the towns"
+      },
+      {
+        "source": "cakyotoya",
+        "target": "for the vine"
+      },
+      {
+        "source": "mis ncay",
+        "target": "your vine"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "cakyʌsmʌtih",
+        "target": "right above the vine",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kʌmʌŋšeh",
+        "target": "like a shadow",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ʔʌs mok",
+        "target": "my corn",
+        "direction": "lang2en"
+      },
+      {
+        "source": "mis ndʌctaʔm",
+        "target": "your teeth",
+        "direction": "lang2en"
+      },
+      {
+        "source": "pahsunbit",
+        "target": "with the squash",
+        "direction": "lang2en"
+      },
+      {
+        "source": "perolkotoyašehtaʔm",
+        "target": "as if for the kettles",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\ncakyʌsmʌtih\nkʌmʌŋšeh\nʔʌs mok\nmis ndʌctaʔm\npahsunbit\nperolkotoyašehtaʔm"
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 0,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 20,
+          "prompt": "You are an expert linguistic analyst performing inductive reasoning on an unknown language.\nYou have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).\n\nCore principles:\n- Do NOT use any prior knowledge of this specific language or its family\n- Treat every hypothesis as provisional and subject to revision\n- Always show your reasoning explicitly before reaching any conclusion\n- A wrong rule confidently stated is worse than uncertainty acknowledged\n\n--- TRAINING EXAMPLES ---\n  mis nakpatpit → with your cactus\n  nakpat → a cactus\n  mokpittih → only with the corn\n  pokskukyʌsmʌtaʔm → above the chairs\n  pokskuy → a chair\n  peroltih → only a kettle\n  kocʌktaʔm → mountains\n  komgʌsmʌtih → right above the post\n  ʔʌs ŋgom → my post\n  kʌmʌŋbitšeh → as if with the shadow\n  kʌmʌŋdaʔm → shadows\n  ʔʌs ncapkʌsmʌšeh → as if above my sky\n  capšeh → like a sky\n  pahsungotoya → for the squash\n  pahsunšehtaʔmdih → just like squashes\n  tʌckotoyatih → only for the tooth\n  kumgukyʌsmʌ → above the town\n  kumgukyotoyataʔm → for the towns\n  cakyotoya → for the vine\n  mis ncay → your vine\n\n--- YOUR TASK ---\nBased on ALL examples above, write your inferred DICTIONARY and GRAMMAR RULES,\nthen translate:\n  1. cakyʌsmʌtih\n  2. kʌmʌŋšeh\n  3. ʔʌs mok\n  4. mis ndʌctaʔm\n  5. pahsunbit\n  6. perolkotoyašehtaʔm\n\nFormat:\nDICTIONARY:\n[word mappings, one per line]\n\nGRAMMAR RULES:\n[rules, one per line]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY**  \n*(all entries are tentative and based only on the data given)*  \n\n| Gloss | Form(s) found in the corpus |\n|-------|-----------------------------|\n| you (possessive) | **mis** |\n| my | **ʔʌs** |\n| cactus | **nakpat** |\n| corn | **mok** |\n| chair | **pokskuy** |\n| mountain | **kocʌk** |\n| post | **ŋgom** |\n| shadow | **kʌmʌŋ** |\n| sky | **cap** |\n| vine | **ncay** |\n| tooth | **tʌck** |\n| town | **kumguk** |\n| squash | **pahsu** |\n| kettle | **perol** |\n| with | **‑pit** |\n| above | **‑ʌsmʌ** |\n| for (sg.) | **‑yotoya** |\n| for (pl.) | **‑yotoyataʔm** |\n| only | **‑tih** |\n| like / as if | **‑šeh** |\n| as if with | **‑bitšeh** |\n| plural marker | **‑aʔm** |\n| “just like” (comparative) | **‑šehtaʔm** |\n| “just” (intensifier) | **‑bit** |\n| “just like” (intensifier + plural) | **‑šehtaʔmdih** |\n| “as if above” | **‑smʌtih** (seen in *komgʌsmʌtih*) |\n\n*Note:* The morphemes are listed in the order they appear in the surface form; many of them are suffixes attached to a noun stem.\n\n---\n\n**GRAMMAR RULES (provisional)**  \n\n1. **Basic noun phrase order** – Possessor precedes the possessed noun:  \n   `possessor  noun‑suffixes` → “your/ my …”.  \n   Example: **mis nakpatpit** “with your cactus”.\n\n2. **Possessive pronouns** –  \n   * **mis** = “your” (2nd‑person singular)  \n   * **ʔʌs** = “my” (1st‑person singular)\n\n3. **Derivational suffixes** attach to noun stems in a fixed order:  \n\n   `noun  +  (plural ‑aʔm)  +  (case/semantic ‑…)  +  (focus/limiter ‑tih)`  \n\n   The order observed is:  \n   - plural marker **‑aʔm** (if present)  \n   - spatial/semantic marker (e.g., **‑ʌsmʌ** “above”, **‑pit** “with”, **‑yotoya** “for”)  \n   - limiter **‑tih** “only” (when present)  \n\n   Example: **kumgukyʌsmʌtaʔm** → *kumguk* “town” + **‑y‑ʌsmʌ** “above” + **‑taʔm** (plural) = “above the towns”.\n\n4. **“Only”** is expressed by the suffix **‑tih** attached to the final element of the phrase.  \n   Example: **peroltih** “only a kettle”; **mokpittih** “only with the corn”.\n\n5. **“For”** is expressed by the suffix **‑yotoya** (singular) or **‑yotoyataʔm** (plural).  \n   Example: **cakyotoya** “for the vine”; **kumgukyotoyataʔm** “for the towns”.\n\n6. **“Above”** is expressed by the suffix **‑ʌsmʌ** (or **‑smʌtih** when combined with the limiter “only”).  \n   Example: **komgʌsmʌtih** “only above the post”.\n\n7. **“Like / as if”** is expressed by the suffix **‑šeh**.  \n   Example: **capšeh** “like a sky”.\n\n8. **“As if with”** uses the longer suffix **‑bitšeh**.  \n   Example: **kʌmʌŋbitšeh** “as if with the shadow”.\n\n9. **Comparative “just like”** uses **‑šehtaʔm** (and optionally the limiter **‑dih** for “only”).  \n   Example: **pahsunšehtaʔmdih** “just like squashes (only)”.\n\n10. **Plural nouns** are marked by **‑aʔm** attached directly to the noun stem.  \n    Example: **kʌmʌŋdaʔm** “shadows”, **kocʌktaʔm** “mountains”.\n\n---\n\n**TRANSLATIONS**\n\n1. **cakyʌsmʌtih** → “only above the vine”  \n2. **kʌmʌŋšeh** → “like a shadow”  \n3. **ʔʌs mok** → “my corn”  \n4. **mis ndʌctaʔm** → “your teeth” (plural)  \n5. **pahsunbit** → “squash” (the noun “squash” with the intensifier “just”) – roughly “just squash” / “the very squash”  \n6. **perolkotoyašehtaʔm** → “like for the kettles” (i.e., “as if for the kettles”)  \n\n*All translations are the most plausible English equivalents given the current, provisional analysis.*",
+          "latency_s": 126.01,
+          "bleu": {
+            "corpus_bleu": 0.42,
+            "sentence_bleu": [
+              2.63,
+              0.0,
+              0.0,
+              0.0,
+              1.34,
+              1.24
+            ],
+            "corpus_chrfpp": 7.77,
+            "sentence_chrfpp": [
+              9.13,
+              3.73,
+              4.8,
+              5.56,
+              9.66,
+              9.99
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "**Basic noun phrase order** – Possessor precedes the possessed noun:",
+              "**Possessive pronouns** –",
+              "**Derivational suffixes** attach to noun stems in a fixed order:",
+              "**“Only”** is expressed by the suffix **‑tih** attached to the final element of the phrase.",
+              "**“For”** is expressed by the suffix **‑yotoya** (singular) or **‑yotoyataʔm** (plural).",
+              "**“Above”** is expressed by the suffix **‑ʌsmʌ** (or **‑smʌtih** when combined with the limiter “only”)."
+            ],
+            "references": [
+              "right above the vine",
+              "like a shadow",
+              "my corn",
+              "your teeth",
+              "with the squash",
+              "as if for the kettles"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 0.42,
+      "best_bleu": 0.42
+    },
+    "incremental_combinations": {
+      "error": "('Connection broken: IncompleteRead(0 bytes read)', IncompleteRead(0 bytes read))"
+    },
+    "step_by_step": {
+      "strategy": "step_by_step_linguistic",
+      "strategy_id": 2,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 7,
+          "prompt": "You are an expert linguistic analyst performing inductive reasoning on an unknown language.\nYou have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).\n\nCore principles:\n- Do NOT use any prior knowledge of this specific language or its family\n- Treat every hypothesis as provisional and subject to revision\n- Always show your reasoning explicitly before reaching any conclusion\n- A wrong rule confidently stated is worse than uncertainty acknowledged\n\nSTEP 1/4 — Stage: LEXICAL\nFocus on vocabulary and basic word order. Simple SVO/SOV sentences, no morphological variation.\n\n--- EXAMPLES FOR THIS STAGE ---\n  mis nakpatpit → with your cactus\n  nakpat → a cactus\n  mokpittih → only with the corn\n  pokskukyʌsmʌtaʔm → above the chairs\n  pokskuy → a chair\n  peroltih → only a kettle\n  kocʌktaʔm → mountains\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: lexical\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY**  \n- **nakpat** – “cactus”  \n- **mis** – second‑person singular possessive “your”  \n- **kpit / pit** – post‑position “with” (attached to the noun it governs)  \n- **tih** – focus particle meaning “only” (appears clause‑final)  \n- **mo** – “corn”  \n- **perol** – “kettle”  \n- **pokskuy** – “chair”  \n- **kocʌk** – “mountain”  \n- **taʔm** – plural suffix (adds the meaning “‑s / plural”)  \n- **kʌsmʌ** – spatial preposition “above” (used before the plural suffix)  \n\n**GRAMMAR RULES (lexical stage)**  \n\n1. **Basic word order** – Simple noun phrases follow a **[Possessor] [Noun] [Post‑position]** pattern.  \n   - Example: **mis nakpat pit** → “with your cactus” (literally “your cactus with”).  \n\n2. **Possession** – The possessor is a separate word placed **before** the possessed noun; no morphological marking on the noun itself.  \n\n3. **Post‑positions** – Spatial or relational meanings are expressed by a post‑position that **follows** the noun it modifies.  \n   - *with* → **kpit / pit** (phonologically reduced after certain stems).  \n\n4. **Focus particle “only”** – The particle **tih** follows the entire phrase it scopes, regardless of its position in the English translation.  \n   - Example: **perol tih** → “only a kettle”.  \n   - Example: **mo kpit tih** → “only with the corn”.  \n\n5. **Plural formation** – The suffix **‑taʔm** attaches to a noun (or noun + post‑position) to indicate plurality.  \n   - **kocʌk taʔm** → “mountains”.  \n   - **pokskuy kʌsmʌ taʔm** → “above the chairs”.  \n\n6. **Spatial prepositions** – The preposition “above” is expressed by the element **kʌsmʌ**, which appears **before** the plural suffix when the head noun is plural.  \n\n**TRANSLATIONS**  \n(There were no new sentences supplied for translation in this step.)",
+          "latency_s": 75.16,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Basic word order** – Simple noun phrases follow a **[Possessor] [Noun] [Post‑position]** pattern.\n- Example: **mis nakpat pit** → “with your cactus” (literally “your cactus with”).\n2. **Possession** – The possessor is a separate word placed **before** the possessed noun; no morphological marking on the noun itself.\n3. **Post‑positions** – Spatial or relational meanings are expressed by a post‑position that **follows** the noun it modifies.\n- *with* → **kpit / pit** (phonologically reduced after certain stems).",
+          "bleu": {
+            "corpus_bleu": 0.24,
+            "sentence_bleu": [
+              0.0,
+              1.24,
+              0.0,
+              0.0,
+              0.0,
+              0.97
+            ],
+            "corpus_chrfpp": 6.07,
+            "sentence_chrfpp": [
+              4.84,
+              6.54,
+              2.88,
+              4.85,
+              6.03,
+              9.55
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "**Basic word order** – Simple noun phrases follow a **[Possessor] [Noun] [Post‑position]** pattern.",
+              "**Possession** – The possessor is a separate word placed **before** the possessed noun; no morphological marking on the noun itself.",
+              "**Post‑positions** – Spatial or relational meanings are expressed by a post‑position that **follows** the noun it modifies.",
+              "**Focus particle “only”** – The particle **tih** follows the entire phrase it scopes, regardless of its position in the English translation.",
+              "**Plural formation** – The suffix **‑taʔm** attaches to a noun (or noun + post‑position) to indicate plurality.",
+              "**Spatial prepositions** – The preposition “above” is expressed by the element **kʌsmʌ**, which appears **before** the plural suffix when the head noun is plural."
+            ],
+            "references": [
+              "right above the vine",
+              "like a shadow",
+              "my corn",
+              "your teeth",
+              "with the squash",
+              "as if for the kettles"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "prompt": "You are an expert linguistic analyst performing inductive reasoning on an unknown language.\nYou have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).\n\nCore principles:\n- Do NOT use any prior knowledge of this specific language or its family\n- Treat every hypothesis as provisional and subject to revision\n- Always show your reasoning explicitly before reaching any conclusion\n- A wrong rule confidently stated is worse than uncertainty acknowledged\n\nSTEP 2/4 — Stage: PHONOLOGY\nFocus on phonological patterns: vowel changes, consonant alternations, affixes, allomorphs.\n\n--- ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n(empty)\n\nGRAMMAR RULES:\n1. **Basic word order** – Simple noun phrases follow a **[Possessor] [Noun] [Post‑position]** pattern.\n- Example: **mis nakpat pit** → “with your cactus” (literally “your cactus with”).\n2. **Possession** – The possessor is a separate word placed **before** the possessed noun; no morphological marking on the noun itself.\n3. **Post‑positions** – Spatial or relational meanings are expressed by a post‑position that **follows** the noun it modifies.\n- *with* → **kpit / pit** (phonologically reduced after certain stems).\n\n--- EXAMPLES FOR THIS STAGE ---\n  komgʌsmʌtih → right above the post\n  ʔʌs ŋgom → my post\n  kʌmʌŋbitšeh → as if with the shadow\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: phonology\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY**  \n*(provisional – based only on the three attested strings)*  \n\n| Language form | Gloss (English) | Notes / Reasoning |\n|---------------|-----------------|-------------------|\n| **ʔʌs** | my (possessor) | Appears in the possessor‑noun pattern *ʔʌs ŋgom* “my post”. The initial glottal stop marks a pronoun‑like element. |\n| **ŋgom** | post | The noun that follows the possessor in the example above; also the lexical item that is later referenced in “right above the post”. |\n| **pit / kpit** | with (post‑position) | Given in the background description; the form *kpit* is the reduced variant that occurs after certain stems (e.g., after a word ending in a velar). |\n| **kom‑gʌs‑mʌtih** | right‑above‑the‑post | The whole phrase is expressed by a single phonological string. The internal morphemes can be tentatively segmented as: <br>• **kom‑** “right/very” (intensifier) <br>• **gʌs‑** “above” (spatial) <br>• **mʌtih** “post” (a lexical variant of *ŋgom* triggered by the preceding morpheme). |\n| **kʌm‑ʌŋ‑bitšeh** | as‑if‑with‑the‑shadow | Tentative segmentation: <br>• **kʌm‑** “as‑if” (comparative/conditional) <br>• **ʌŋ‑** “with” (a pre‑positional element that surfaces as a vowel‑initial prefix before a noun beginning with a consonant) <br>• **bitšeh** “shadow”. |\n| **bitšeh** | shadow | Isolated from the above phrase; no other attestations yet. |\n| **kʌm‑ʌŋ** | as‑if (compound) | The first two morphemes together convey the concessive meaning “as if”. |\n\n> **Caveat:** Because the data set is extremely limited, each morpheme is marked as *tentative* and may later be re‑analysed as an allomorph or part of a larger phonological process.\n\n---\n\n**GRAMMAR RULES (Phonology – provisional)**  \n\n1. **Vowel‑initial pronouns** – Possessor pronouns begin with a glottal stop (ʔ) and a low central vowel (ʌ).  \n   - *ʔʌs* = “my”.  \n\n2. **Post‑position alternation** – The post‑position *with* has two surface forms:  \n   - **pit** after most stems.  \n   - **kpit** after stems that end in a velar consonant (k, g, ŋ). This is a *pre‑consonantal fortition* that inserts a homorganic stop to ease the transition.  \n\n3. **Morphophonemic vowel alternation in compounds** – When a lexical noun follows a spatial or intensifier morpheme, the vowel of the noun may shift:  \n   - *ŋgom* “post” → **mʌtih** after the prefix **gʌs‑** (above).  \n   - The shift appears to involve lowering /o/ → /ʌ/ and adding a final *‑tih* suffix, possibly a locative or nominalizer.  \n\n4. **Initial vowel prefix for “with” before a noun** – In the construction *as if with the shadow*, the preposition “with” surfaces as a vowel‑initial prefix **ʌŋ‑** attached to the following noun (*bitšeh*). This may be an instance of *prothesis* to avoid a vowel‑cluster hiatus.  \n\n5. **Intensifier “right”** – The element **kom‑** consistently appears before spatial morphemes and seems to add the sense of “right/very”.  \n\n6. **Allomorphy of spatial morphemes** – The morpheme for “above” appears as **gʌs‑** when it precedes a noun that has undergone the vowel shift (see rule 3).  \n\n7. **Syllable structure** – The language tolerates complex onsets (e.g., *kʌm‑*, *kom‑*) and codas, but there is a tendency to avoid sequences of two identical consonants across morpheme boundaries; instead, a vowel is inserted (as in **ʔʌs ŋgom** rather than *ʔʌs nggom*).  \n\n---\n\n**TRANSLATIONS (using the provisional dictionary and rules)**  \n\n1. **komgʌsmʌtih** → “right above the post”  \n   - *kom‑* (right) + *gʌs‑* (above) + *mʌtih* (post, vowel‑shifted form).  \n\n2. **ʔʌs ŋgom** → “my post”  \n   - Possessor pronoun *ʔʌs* + noun *ŋgom*.  \n\n3. **kʌmʌŋbitšeh** → “as if with the shadow”  \n   - *kʌm‑ʌŋ‑* (as‑if + with) + *bitšeh* (shadow).  \n\n*All translations are consistent with the current, highly tentative, phonological analysis.*",
+          "latency_s": 84.58,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Vowel‑initial pronouns** – Possessor pronouns begin with a glottal stop (ʔ) and a low central vowel (ʌ).\n- *ʔʌs* = “my”.\n2. **Post‑position alternation** – The post‑position *with* has two surface forms:\n- **pit** after most stems.\n- **kpit** after stems that end in a velar consonant (k, g, ŋ). This is a *pre‑consonantal fortition* that inserts a homorganic stop to ease the transition.\n3. **Morphophonemic vowel alternation in compounds** – When a lexical noun follows a spatial or intensifier morpheme, the vowel of the noun may shift:\n- *ŋgom* “post” → **mʌtih** after the prefix **gʌs‑** (above).\n- The shift appears to involve lowering /o/ → /ʌ/ and adding a final *‑tih* suffix, possibly a locative or nominalizer.\n4. **Initial vowel prefix for “with” before a noun** – In the construction *as if with the shadow*, the preposition “with” surfaces as a vowel‑initial prefix **ʌŋ‑** attached to the following noun (*bitšeh*). This may be an instance of *prothesis* to avoid a vowel‑cluster hiatus.\n5. **Intensifier “right”** – The element **kom‑** consistently appears before spatial morphemes and seems to add the sense of “right/very”.\n6. **Allomorphy of spatial morphemes** – The morpheme for “above” appears as **gʌs‑** when it precedes a noun that has undergone the vowel shift (see rule 3).\n7. **Syllable structure** – The language tolerates complex onsets (e.g., *kʌm‑*, *kom‑*) and codas, but there is a tendency to avoid sequences of two identical consonants across morpheme boundaries; instead, a vowel is inserted (as in **ʔʌs ŋgom** rather than *ʔʌs nggom*).\n---",
+          "bleu": {
+            "corpus_bleu": 0.26,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.24,
+              1.31
+            ],
+            "corpus_chrfpp": 6.7,
+            "sentence_chrfpp": [
+              7.16,
+              6.08,
+              3.82,
+              3.02,
+              8.18,
+              12.34
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "**Vowel‑initial pronouns** – Possessor pronouns begin with a glottal stop (ʔ) and a low central vowel (ʌ).",
+              "**Post‑position alternation** – The post‑position *with* has two surface forms:",
+              "**Morphophonemic vowel alternation in compounds** – When a lexical noun follows a spatial or intensifier morpheme, the vowel of the noun may shift:",
+              "**Initial vowel prefix for “with” before a noun** – In the construction *as if with the shadow*, the preposition “with” surfaces as a vowel‑initial prefix **ʌŋ‑** attached to the following noun (*bitšeh*). This may be an instance of *prothesis* to avoid a vowel‑cluster hiatus.",
+              "**Intensifier “right”** – The element **kom‑** consistently appears before spatial morphemes and seems to add the sense of “right/very”.",
+              "**Allomorphy of spatial morphemes** – The morpheme for “above” appears as **gʌs‑** when it precedes a noun that has undergone the vowel shift (see rule 3)."
+            ],
+            "references": [
+              "right above the vine",
+              "like a shadow",
+              "my corn",
+              "your teeth",
+              "with the squash",
+              "as if for the kettles"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 6,
+          "prompt": "You are an expert linguistic analyst performing inductive reasoning on an unknown language.\nYou have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).\n\nCore principles:\n- Do NOT use any prior knowledge of this specific language or its family\n- Treat every hypothesis as provisional and subject to revision\n- Always show your reasoning explicitly before reaching any conclusion\n- A wrong rule confidently stated is worse than uncertainty acknowledged\n\nSTEP 3/4 — Stage: MORPHOSYNTAX\nFocus on agreement, tense, number, person, gender markings.\n\n--- ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n(empty)\n\nGRAMMAR RULES:\n1. **Vowel‑initial pronouns** – Possessor pronouns begin with a glottal stop (ʔ) and a low central vowel (ʌ).\n- *ʔʌs* = “my”.\n2. **Post‑position alternation** – The post‑position *with* has two surface forms:\n- **pit** after most stems.\n- **kpit** after stems that end in a velar consonant (k, g, ŋ). This is a *pre‑consonantal fortition* that inserts a homorganic stop to ease the transition.\n3. **Morphophonemic vowel alternation in compounds** – When a lexical noun follows a spatial or intensifier morpheme, the vowel of the noun may shift:\n- *ŋgom* “post” → **mʌtih** after the prefix **gʌs‑** (above).\n- The shift appears to involve lowering /o/ → /ʌ/ and adding a final *‑tih* suffix, possibly a locative or nominalizer.\n4. **Initial vowel prefix for “with” before a noun** – In the construction *as if with the shadow*, the preposition “with” surfaces as a vowel‑initial prefix **ʌŋ‑** attached to the following noun (*bitšeh*). This may be an instance of *prothesis* to avoid a vowel‑cluster hiatus.\n5. **Intensifier “right”** – The element **kom‑** consistently appears before spatial morphemes and seems to add the sense of “right/very”.\n6. **Allomorphy of spatial morphemes** – The morpheme for “above” appears as **gʌs‑** when it precedes a noun that has undergone the vowel shift (see rule 3).\n7. **Syllable structure** – The language tolerates complex onsets (e.g., *kʌm‑*, *kom‑*) and codas, but there is a tendency to avoid sequences of two identical consonants across morpheme boundaries; instead, a vowel is inserted (as in **ʔʌs ŋgom** rather than *ʔʌs nggom*).\n---\n\n--- EXAMPLES FOR THIS STAGE ---\n  kʌmʌŋdaʔm → shadows\n  ʔʌs ncapkʌsmʌšeh → as if above my sky\n  capšeh → like a sky\n  pahsungotoya → for the squash\n  pahsunšehtaʔmdih → just like squashes\n  tʌckotoyatih → only for the tooth\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: morphosyntax\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY**  \n\n| Form (as attested) | Gloss / tentative meaning | Notes |\n|--------------------|---------------------------|-------|\n| **ʔʌs** | ‘my’ (possessor pronoun) | vowel‑initial pronoun (Rule 1) |\n| **kʌm‑** | ‘shadow‑’ (root) | appears in *kʌmʌŋdaʔm* ‘shadows’; the final **‑m** is a plural/collective suffix (see Rule M‑1) |\n| **‑daʔ** | nominaliser / collective marker | attached to *kʌmʌŋ* to form a noun; the final **‑m** marks plural |\n| **capšeh** | ‘sky’ | occurs in *capšeh* ‘like a sky’ and in the larger clause *ʔʌs ncapkʌsmʌšeh* |\n| **n‑** | clause‑initial particle meaning ‘as if’ | precedes the spatial construction (see Rule M‑2) |\n| **kʌs‑** | spatial morpheme ‘above’ (allomorph of *gʌs‑*) | appears before nouns that have not undergone the vowel‑shift of Rule 3 |\n| **‑mʌšeh** | nominaliser forming a ‘state/condition’ noun (e.g., *‑mʌšeh* → ‘the‑state‑of‑…’) | seen in *kʌsmʌšeh* ‘above‑(the‑state)’ |\n| **pah‑** | preposition ‘for’ | occurs at the left‑edge of *pahsungotoya* ‘for the squash’ and *pahsunšehtaʔmdih* ‘just like squashes’ |\n| **‑sun‑** | noun ‘squash’ | the stem *sun* is the lexical noun; the preceding *pah‑* marks the prepositional relation |\n| **‑go‑** | intensifier ‘just/only’ (see Rule M‑3) | appears in *pah‑sun‑šeh‑taʔm‑dih* and *tʌc‑ko‑toy‑tih* |\n| **‑toya** | definite article ‘the’ (used with singular nouns) | follows *‑go* in *pahsungotoya* ‘for the squash’ |\n| **‑ti‑h** | definite article ‘the’ (used with plural nouns) | appears in *tʌckotoyatih* ‘only for the tooth (pl)’ |\n| **toy** | ‘tooth’ | lexical noun |\n| **‑dih** | plural marker on nouns that are the object of a comparison (*‑šeh‑taʔm‑dih*) | see Rule M‑1 |\n| **‑taʔm‑** | comparative/comparative‑like suffix ‘like/just like’ | attaches to a noun to create a comparative phrase |\n| **‑c‑** | particle meaning ‘only’ (see Rule M‑3) | appears in *tʌc‑* ‘only for …’ |\n| **‑ko‑** | preposition ‘for’ when combined with the particle *‑c‑* (see Rule M‑4) | *tʌc‑ko‑* = ‘only for’ |\n\n---\n\n**GRAMMAR RULES (Morphosyntax)**  \n\n**M‑1 Number marking**  \n* a. **‑m** attached to a noun stem marks **plural**.  \n  *kʌmʌŋdaʔ‑m* → ‘shadows’ (plural of *kʌmʌŋdaʔ* ‘shadow’).  \n* b. **‑dih** is a **plural definite** suffix that appears on nouns inside comparative constructions.  \n  *pahsunšeh‑taʔm‑dih* → ‘just like squashes (pl.)’.\n\n**M‑2 Clause‑initial “as‑if” particle**  \n* The particle **n‑** introduces a concessive or hypothetical clause meaning ‘as if’. It precedes the spatial construction.  \n  *ʔʌs **n‑**kʌs‑mʌšeh* → ‘as if above my sky’.\n\n**M‑3 Intensifier / focus particles**  \n* **‑go‑** (or **‑c‑** when combined with *‑ko‑*) functions as an intensifier meaning ‘just/only’.  \n  *‑go‑* before a noun = ‘just …’;  \n  *‑c‑* + *‑ko‑* = ‘only for …’.  \n\n**M‑4 Prepositional phrase structure**  \n* The language uses a **preposition‑noun** order, but the preposition may appear as a **prefix** when the following noun begins with a vowel (cf. Rule 4 in the accumulated knowledge).  \n* The preposition **pah‑** means ‘for’. When the noun that follows is definite, the definite article **‑toya** (singular) or **‑ti‑h** (plural) is suffixed to the noun.  \n\n**M‑5 Definiteness articles**  \n* **‑toya** = singular definite article (attached to the noun).  \n* **‑ti‑h** = plural definite article (attached to the noun).  \n\n**M‑6 Spatial morpheme allomorphy**  \n* The morpheme for ‘above’ surfaces as **gʌs‑** before nouns that have undergone the vowel‑shift of Rule 3, but as **kʌs‑** before nouns that have not.  \n* In the example *n‑kʌs‑mʌšeh* the noun *capšeh* (‘sky’) has not been vowel‑shifted, so the allomorph **kʌs‑** is used.\n\n**M‑7 Comparative construction**  \n* The sequence **‑taʔm‑** attaches to a noun to create a comparative meaning ‘like/just like’.  \n* When the compared noun is plural, the plural suffix **‑dih** follows **‑taʔm‑**.  \n\n**M‑8 Possessor construction**  \n* Possessor pronouns (e.g., **ʔʌs**) precede the possessed noun directly, with no linking morpheme.  \n  *ʔʌs capšeh* → ‘my sky’.\n\n**M‑9 Word order**  \n* Basic clause order is **[Possessor] [Particle‑Clause] [Noun]** for nominal predicates, and **[Preposition] [Noun]** for adpositional phrases.  \n* Comparative clauses follow the pattern **[Particle‑as‑if] [Spatial‑preposition] [Possessor] [Noun]**.\n\n---\n\n**TRANSLATIONS**  \n\n1. **kʌmʌŋdaʔm** → “shadows” (plural noun).  \n\n2. **ʔʌs ncapkʌsmʌšeh** → “as if above my sky”.  \n   *Break‑down*: ʔʌs = my; n‑ = ‘as if’; kʌs‑ = ‘above’; mʌšeh = nominaliser forming ‘the‑state‑of‑…’; capšeh = sky.  \n\n3. **capšeh** → “sky”.  \n\n4. **pahsungotoya** → “for the squash”.  \n   *Break‑down*: pah‑ = ‘for’; sun = ‘squash’; go = intensifier ‘just’; toya = singular definite article.  \n\n5. **pahsunšehtaʔmdih** → “just like squashes”.  \n   *Break‑down*: pah‑ = ‘for’; sun = ‘squash’; šeh = comparative marker; taʔm = ‘like’; dih = plural definite.  \n\n6. **tʌckotoyatih** → “only for the tooth (plural)”.  \n   *Break‑down*: tʌc‑ = ‘only’; ko‑ = ‘for’; toy = ‘tooth’; ti‑h = plural definite article.  \n\nThese translations and rules are provisional and will be revised as more data become available.",
+          "latency_s": 99.94,
+          "accumulated_dict": "",
+          "accumulated_rules": "**M‑1 Number marking**\n* a. **‑m** attached to a noun stem marks **plural**.\n*kʌmʌŋdaʔ‑m* → ‘shadows’ (plural of *kʌmʌŋdaʔ* ‘shadow’).\n* b. **‑dih** is a **plural definite** suffix that appears on nouns inside comparative constructions.\n*pahsunšeh‑taʔm‑dih* → ‘just like squashes (pl.)’.\n**M‑2 Clause‑initial “as‑if” particle**\n* The particle **n‑** introduces a concessive or hypothetical clause meaning ‘as if’. It precedes the spatial construction.\n*ʔʌs **n‑**kʌs‑mʌšeh* → ‘as if above my sky’.\n**M‑3 Intensifier / focus particles**\n* **‑go‑** (or **‑c‑** when combined with *‑ko‑*) functions as an intensifier meaning ‘just/only’.\n*‑go‑* before a noun = ‘just …’;\n*‑c‑* + *‑ko‑* = ‘only for …’.\n**M‑4 Prepositional phrase structure**\n* The language uses a **preposition‑noun** order, but the preposition may appear as a **prefix** when the following noun begins with a vowel (cf. Rule 4 in the accumulated knowledge).\n* The preposition **pah‑** means ‘for’. When the noun that follows is definite, the definite article **‑toya** (singular) or **‑ti‑h** (plural) is suffixed to the noun.\n**M‑5 Definiteness articles**\n* **‑toya** = singular definite article (attached to the noun).\n* **‑ti‑h** = plural definite article (attached to the noun).\n**M‑6 Spatial morpheme allomorphy**\n* The morpheme for ‘above’ surfaces as **gʌs‑** before nouns that have undergone the vowel‑shift of Rule 3, but as **kʌs‑** before nouns that have not.\n* In the example *n‑kʌs‑mʌšeh* the noun *capšeh* (‘sky’) has not been vowel‑shifted, so the allomorph **kʌs‑** is used.\n**M‑7 Comparative construction**\n* The sequence **‑taʔm‑** attaches to a noun to create a comparative meaning ‘like/just like’.\n* When the compared noun is plural, the plural suffix **‑dih** follows **‑taʔm‑**.\n**M‑8 Possessor construction**\n* Possessor pronouns (e.g., **ʔʌs**) precede the possessed noun directly, with no linking morpheme.\n*ʔʌs capšeh* → ‘my sky’.\n**M‑9 Word order**\n* Basic clause order is **[Possessor] [Particle‑Clause] [Noun]** for nominal predicates, and **[Preposition] [Noun]** for adpositional phrases.\n* Comparative clauses follow the pattern **[Particle‑as‑if] [Spatial‑preposition] [Possessor] [Noun]**.\n---",
+          "bleu": {
+            "corpus_bleu": 3.32,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              9.54
+            ],
+            "corpus_chrfpp": 15.95,
+            "sentence_chrfpp": [
+              3.47,
+              8.29,
+              2.08,
+              10.07,
+              31.58,
+              26.67
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "“shadows” (plural noun).",
+              "“as if above my sky”.",
+              "“sky”.",
+              "“for the squash”.",
+              "“just like squashes”.",
+              "“only for the tooth (plural)”."
+            ],
+            "references": [
+              "right above the vine",
+              "like a shadow",
+              "my corn",
+              "your teeth",
+              "with the squash",
+              "as if for the kettles"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "prompt": "You are an expert linguistic analyst performing inductive reasoning on an unknown language.\nYou have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).\n\nCore principles:\n- Do NOT use any prior knowledge of this specific language or its family\n- Treat every hypothesis as provisional and subject to revision\n- Always show your reasoning explicitly before reaching any conclusion\n- A wrong rule confidently stated is worse than uncertainty acknowledged\n\nSTEP 4/4 — Stage: SYNTAX\nCombine all rules: negation, questions, complex clauses.\n\n--- ACCUMULATED KNOWLEDGE ---\nDICTIONARY:\n(empty)\n\nGRAMMAR RULES:\n**M‑1 Number marking**\n* a. **‑m** attached to a noun stem marks **plural**.\n*kʌmʌŋdaʔ‑m* → ‘shadows’ (plural of *kʌmʌŋdaʔ* ‘shadow’).\n* b. **‑dih** is a **plural definite** suffix that appears on nouns inside comparative constructions.\n*pahsunšeh‑taʔm‑dih* → ‘just like squashes (pl.)’.\n**M‑2 Clause‑initial “as‑if” particle**\n* The particle **n‑** introduces a concessive or hypothetical clause meaning ‘as if’. It precedes the spatial construction.\n*ʔʌs **n‑**kʌs‑mʌšeh* → ‘as if above my sky’.\n**M‑3 Intensifier / focus particles**\n* **‑go‑** (or **‑c‑** when combined with *‑ko‑*) functions as an intensifier meaning ‘just/only’.\n*‑go‑* before a noun = ‘just …’;\n*‑c‑* + *‑ko‑* = ‘only for …’.\n**M‑4 Prepositional phrase structure**\n* The language uses a **preposition‑noun** order, but the preposition may appear as a **prefix** when the following noun begins with a vowel (cf. Rule 4 in the accumulated knowledge).\n* The preposition **pah‑** means ‘for’. When the noun that follows is definite, the definite article **‑toya** (singular) or **‑ti‑h** (plural) is suffixed to the noun.\n**M‑5 Definiteness articles**\n* **‑toya** = singular definite article (attached to the noun).\n* **‑ti‑h** = plural definite article (attached to the noun).\n**M‑6 Spatial morpheme allomorphy**\n* The morpheme for ‘above’ surfaces as **gʌs‑** before nouns that have undergone the vowel‑shift of Rule 3, but as **kʌs‑** before nouns that have not.\n* In the example *n‑kʌs‑mʌšeh* the noun *capšeh* (‘sky’) has not been vowel‑shifted, so the allomorph **kʌs‑** is used.\n**M‑7 Comparative construction**\n* The sequence **‑taʔm‑** attaches to a noun to create a comparative meaning ‘like/just like’.\n* When the compared noun is plural, the plural suffix **‑dih** follows **‑taʔm‑**.\n**M‑8 Possessor construction**\n* Possessor pronouns (e.g., **ʔʌs**) precede the possessed noun directly, with no linking morpheme.\n*ʔʌs capšeh* → ‘my sky’.\n**M‑9 Word order**\n* Basic clause order is **[Possessor] [Particle‑Clause] [Noun]** for nominal predicates, and **[Preposition] [Noun]** for adpositional phrases.\n* Comparative clauses follow the pattern **[Particle‑as‑if] [Spatial‑preposition] [Possessor] [Noun]**.\n---\n\n--- EXAMPLES FOR THIS STAGE ---\n  kumgukyʌsmʌ → above the town\n  kumgukyotoyataʔm → for the towns\n  cakyotoya → for the vine\n  mis ncay → your vine\n\n--- YOUR TASK ---\n1. Refine DICTIONARY with new vocabulary\n2. Add/update GRAMMAR RULES for stage: syntax\n3. Translate using ALL accumulated knowledge\n\nFormat:\nDICTIONARY:\n[word mappings]\n\nGRAMMAR RULES:\n[rules]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "**DICTIONARY**  \n*(new lexical items inferred from the four examples)*  \n\n| Form                | Gloss (tentative)                     |\n|---------------------|---------------------------------------|\n| **kum‑**            | ‘above / over’ (spatial preposition) |\n| **guky**            | ‘town’ (noun stem)                    |\n| **‑ʌs‑**            | definite article (singular) – attaches after the noun when the noun follows a spatial preposition (cf. *‑toya* in other contexts) |\n| **‑mʌ**             | definite article (singular) – attaches after the noun when the noun follows a spatial preposition (variant of *‑ʌs‑*) |\n| **‑otoya‑**         | definite article (singular) – attaches to a noun that is the object of the preposition *kum* (variant of *‑toya*) |\n| **‑taʔm**           | comparative ‘like / just like’ (suffix) |\n| **‑ti‑h**           | plural definite article (as in M‑5) |\n| **c‑**              | intensifier ‘only / just’ (cf. M‑3) |\n| **‑ko‑**            | part of the ‘only for …’ construction (cf. M‑3) |\n| **mis**             | 2nd‑person singular pronoun ‘your’ (possessor) |\n| **ncay**            | ‘vine’ (noun)                         |\n| **‑yʌs‑**           | plural marker *‑m* (variant)          |\n| **‑taʔm‑dih**       | comparative ‘like … (pl.)’ (cf. M‑7)  |\n\n*Note:* Because the language shows several allomorphic variants of the same grammatical morpheme (e.g., different definite‑article suffixes after different prepositions), the dictionary records each observed form separately, pending further data.\n\n---\n\n**GRAMMAR RULES (syntax – stage 4)**  \n\n1. **Clause‑initial concessive/hypothetical particle**  \n   *n‑* introduces a concessive or hypothetical clause (M‑2). It appears before any spatial preposition that follows.\n\n2. **Spatial preposition placement**  \n   The language uses a **preposition‑noun** order. When the noun begins with a vowel, the preposition may surface as a prefix; otherwise it appears as a separate preposition preceding the noun.  \n   *Example:* **kum‑guky** ‘above town’; **pah‑** (for) behaves similarly (M‑4).\n\n3. **Definite article attachment**  \n   - After a noun that follows a spatial preposition, the definite article appears as **‑ʌs‑** or **‑mʌ** (variant of *‑toya*).  \n   - When the noun is the object of *kum* (the ‘for‑/above‑’ preposition), the article surfaces as **‑otoya‑** (singular) or **‑ti‑h** (plural).  \n   - The article is always **suffixal** and attaches directly to the noun stem.\n\n4. **Plural marking**  \n   The plural suffix **‑m** (or its variant **‑yʌs‑**) attaches to the noun stem. When a noun is both plural and definite, the plural suffix precedes the definite article (e.g., *guky‑m‑otoya* ‘the towns’).\n\n5. **Comparative construction**  \n   The comparative suffix **‑taʔm** attaches to the noun that serves as the standard of comparison. If that noun is plural, the plural definite suffix **‑dih** follows **‑taʔm** (M‑7). The whole comparative phrase can function as a nominal predicate or as the complement of *n‑*.\n\n6. **Intensifier / focus particles**  \n   - **‑go‑** (or **‑c‑** when combined with *‑ko‑*) functions as an intensifier meaning ‘just/only’.  \n   - When placed before a noun, it narrows the reference: *‑go‑guky* ‘just the town’.  \n   - The complex *‑c‑…‑ko‑* construction yields ‘only for …’.\n\n7. **Possessor construction**  \n   Possessor pronouns (e.g., **ʔʌs** ‘my’, **mis** ‘your’) precede the possessed noun directly, with no linking morpheme (M‑8). The possessed noun then takes any required definiteness or number morphology.\n\n8. **Basic clause order**  \n   - **Nominal predicate**: **[Possessor] [Particle‑Clause] [Noun]** (M‑9).  \n   - **Adpositional phrase**: **[Preposition] [Noun]** (M‑9).  \n   - **Comparative clause**: **[Particle‑as‑if] [Spatial‑preposition] [Possessor] [Noun]** (M‑9).  \n\n9. **Word‑final phonology**  \n   When a suffix begins with a vowel and the preceding morpheme ends in a vowel, a glide /y/ or /w/ may be inserted for ease of pronunciation (observed in *‑otoya‑* vs. *‑toya*). This is a phonological adjustment, not a separate grammatical morpheme.\n\n---\n\n**TRANSLATIONS**  \n\n1. **kumgukyʌsmʌ** → *‘above the town’*  \n   - **kum‑** = spatial preposition ‘above’.  \n   - **guky** = ‘town’.  \n   - **‑ʌs‑** = singular definite article attached after the noun because it follows a spatial preposition.  \n   - **‑mʌ** = variant definite suffix (phonologically conditioned).  \n\n2. **kumgukyotoyataʔm** → *‘for the towns’*  \n   - **kum‑** = preposition ‘for’ (here the same form as the ‘above’ preposition, showing polysemy).  \n   - **guky** = ‘town’.  \n   - **‑otoya‑** = singular definite article used after *kum*; the presence of **‑taʔm** (comparative ‘like’) triggers a plural reading, so the noun is interpreted as plural.  \n   - **‑taʔm** = comparative suffix ‘like/just like’; in this context it functions as a nominalizer meaning ‘the towns (as a set)’.  \n\n3. **cakyotoya** → *‘for the vine’*  \n   - **c‑** = intensifier ‘just/only’.  \n   - **ak** (implicit root) = ‘vine’ (identified from *ncay* ‘vine’; the vowel‑shifted form appears as **ak**).  \n   - **‑otoya** = singular definite article after the preposition *c* (here functioning as a prepositional/intensifier element).  \n\n4. **mis ncay** → *‘your vine’*  \n   - **mis** = 2nd‑person singular possessor ‘your’.  \n   - **ncay** = ‘vine’ (noun stem).  \n   - No article is present, so the noun is indefinite.  \n\n*All translations respect the accumulated morphological and syntactic information, while remaining open to revision as further data become available.*",
+          "latency_s": 95.41,
+          "accumulated_dict": "---",
+          "accumulated_rules": "1. **Clause‑initial concessive/hypothetical particle**\n*n‑* introduces a concessive or hypothetical clause (M‑2). It appears before any spatial preposition that follows.\n2. **Spatial preposition placement**\nThe language uses a **preposition‑noun** order. When the noun begins with a vowel, the preposition may surface as a prefix; otherwise it appears as a separate preposition preceding the noun.\n*Example:* **kum‑guky** ‘above town’; **pah‑** (for) behaves similarly (M‑4).\n3. **Definite article attachment**\n- After a noun that follows a spatial preposition, the definite article appears as **‑ʌs‑** or **‑mʌ** (variant of *‑toya*).\n- When the noun is the object of *kum* (the ‘for‑/above‑’ preposition), the article surfaces as **‑otoya‑** (singular) or **‑ti‑h** (plural).\n- The article is always **suffixal** and attaches directly to the noun stem.\n4. **Plural marking**\nThe plural suffix **‑m** (or its variant **‑yʌs‑**) attaches to the noun stem. When a noun is both plural and definite, the plural suffix precedes the definite article (e.g., *guky‑m‑otoya* ‘the towns’).\n5. **Comparative construction**\nThe comparative suffix **‑taʔm** attaches to the noun that serves as the standard of comparison. If that noun is plural, the plural definite suffix **‑dih** follows **‑taʔm** (M‑7). The whole comparative phrase can function as a nominal predicate or as the complement of *n‑*.\n6. **Intensifier / focus particles**\n- **‑go‑** (or **‑c‑** when combined with *‑ko‑*) functions as an intensifier meaning ‘just/only’.\n- When placed before a noun, it narrows the reference: *‑go‑guky* ‘just the town’.\n- The complex *‑c‑…‑ko‑* construction yields ‘only for …’.\n7. **Possessor construction**\nPossessor pronouns (e.g., **ʔʌs** ‘my’, **mis** ‘your’) precede the possessed noun directly, with no linking morpheme (M‑8). The possessed noun then takes any required definiteness or number morphology.\n8. **Basic clause order**\n- **Nominal predicate**: **[Possessor] [Particle‑Clause] [Noun]** (M‑9).\n- **Adpositional phrase**: **[Preposition] [Noun]** (M‑9).\n- **Comparative clause**: **[Particle‑as‑if] [Spatial‑preposition] [Possessor] [Noun]** (M‑9).\n9. **Word‑final phonology**\nWhen a suffix begins with a vowel and the preceding morpheme ends in a vowel, a glide /y/ or /w/ may be inserted for ease of pronunciation (observed in *‑otoya‑* vs. *‑toya*). This is a phonological adjustment, not a separate grammatical morpheme.\n---",
+          "bleu": {
+            "corpus_bleu": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "corpus_chrfpp": 8.45,
+            "sentence_chrfpp": [
+              10.85,
+              5.83,
+              4.72,
+              3.66,
+              5.54,
+              14.38
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "**Clause‑initial concessive/hypothetical particle**",
+              "**Spatial preposition placement**",
+              "**Definite article attachment**",
+              "**Plural marking**",
+              "**Comparative construction**",
+              "**Intensifier / focus particles**"
+            ],
+            "references": [
+              "right above the vine",
+              "like a shadow",
+              "my corn",
+              "your teeth",
+              "with the squash",
+              "as if for the kettles"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 0.0,
+      "best_bleu": 3.32
+    }
+  },
+  "summary": {
+    "baseline": {
+      "final_bleu": 0.42,
+      "best_bleu": 0.42,
+      "best_chrf": 7.77,
+      "num_steps": 1
+    },
+    "step_by_step": {
+      "final_bleu": 0.0,
+      "best_bleu": 3.32,
+      "best_chrf": 15.95,
+      "num_steps": 4
+    }
+  }
+}

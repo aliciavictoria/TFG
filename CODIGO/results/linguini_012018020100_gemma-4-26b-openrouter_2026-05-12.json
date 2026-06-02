@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-12T19:09:12.232285",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "model_key": "gemma-4-26b-openrouter",
+    "model_info": {
+      "provider": "openrouter",
+      "model_id": "google/gemma-4-26b-a4b-it:free",
+      "tier": "strong",
+      "description": "Gemma 4 26B MoE via OpenRouter — familia Google (50 req/día gratis)"
+    },
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_code": "nst-hkn_Latn",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "task_type": "translation",
+    "original_context": "Here are some sentences in Hakhun and their English translations:\n\n1. ŋa ka kɤ ne | Do I go?\n2. nɤ ʒip tuʔ ne | Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne | Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne | Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne | Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne | Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne | Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne | Did you(sg) know him?\n9. tarum kəmə nirum lapkʰi ri ne | Do they see us?\n10. ati kəmə ŋa lapkʰi tʰɤ ne | Did he see me?",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\n1. nɤ ʒip ku ne\n2. ati kəmə nirum lapkʰi tʰi ne\n3. tarum kəmə nuʔrum cʰam ran ne\n4. nirum kəmə tarum lan ki ne\n5. nirum kəmə nɤ cʰam tiʔ ne\n6. nirum ka tiʔ ne"
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 0,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "prompt": "You are an expert linguistic analyst performing inductive reasoning on an unknown language.\nYou have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).\n\nCore principles:\n- Do NOT use any prior knowledge of this specific language or its family\n- Treat every hypothesis as provisional and subject to revision\n- Always show your reasoning explicitly before reaching any conclusion\n- A wrong rule confidently stated is worse than uncertainty acknowledged\n\n--- TRAINING EXAMPLES ---\n  ŋa ka kɤ ne → Do I go?\n  nɤ ʒip tuʔ ne → Did you(sg) sleep?\n  ŋabə ati lapkʰi tɤʔ ne → Did I see him?\n  nirum kəmə nuʔrum cʰam ki ne → Do we know you(pl)?\n  nɤbə ŋa lapkʰi rɤ ne → Do you(sg) see me?\n  tarum kəmə nɤ lan tʰu ne → Did they beat you(sg)?\n  nuʔrum kəmə ati lapkʰi kan ne → Do you(pl) see him?\n  nɤbə ati cʰam tuʔ ne → Did you(sg) know him?\n  tarum kəmə nirum lapkʰi ri ne → Do they see us?\n  ati kəmə ŋa lapkʰi tʰɤ ne → Did he see me?\n\n--- YOUR TASK ---\nBased on ALL examples above, write your inferred DICTIONARY and GRAMMAR RULES,\nthen translate:\n  1. nɤ ʒip ku ne\n  2. ati kəmə nirum lapkʰi tʰi ne\n  3. tarum kəmə nuʔrum cʰam ran ne\n  4. nirum kəmə tarum lan ki ne\n  5. nirum kəmə nɤ cʰam tiʔ ne\n  6. nirum ka tiʔ ne\n\nFormat:\nDICTIONARY:\n[word mappings, one per line]\n\nGRAMMAR RULES:\n[rules, one per line]\n\nTRANSLATIONS:\n1. [translation]\n2. [translation]\n",
+          "response": "### Reasoning Process\n\n**1. Morphological Analysis (Pronouns & Case/Role):**\n*   Looking at the subjects and objects:\n    *   `ŋa` (I) vs `ŋabə` (me)\n    *   `nɤ` (you sg) vs `nɤbə` (you sg - object?) -> Wait, let's re-examine.\n    *   `ŋa ka kɤ ne` (Do I go?) -> `ŋa` is subject.\n    *   `nɤbə ŋa lapkʰi rɤ ne` (Do you(sg) see me?) -> `nɤbə` is subject, `ŋa` is object.\n    *   `ati kəmə ŋa lapkʰi tʰɤ ne` (Did he see me?) -> `ati` is subject, `ŋa` is object.\n    *   *Correction:* The pattern for \"me\" is `ŋa`. The pattern for \"I\" is `ŋa`.\n    *   Let's look at \"you(sg)\": `nɤ ʒip tuʔ ne` (Did you sleep?). `nɤ` is subject.\n    *   `tarum kəmə nɤ lan tʰu ne` (Did they beat you(sg)?). `nɤ` is object.\n    *   Let's look at \"him\": `ŋabə ati lapkʰi tɤʔ ne` (Did I see him?). `ati` is object.\n    *   `nuʔrum kəmə ati lapkʰi kan ne` (Do you(pl) see him?). `ati` is object.\n    *   `nɤbə ati cʰam tuʔ ne` (Did you(sg) know him?). `ati` is object.\n    *   *Hypothesis:* Pronouns change based on whether they are Subject or Object, but some appear stable.\n    *   Let's map the pronouns:\n        *   I: `ŋa` (Subj), `ŋabə` (Obj) -> Wait, `ŋabə ati lapkʰi tɤʔ ne` (Did I see him?). Here `ŋabə` is Subject.\n        *   Let's re-map carefully:\n            1. `ŋa` (I-Subj)\n            2. `nɤ` (You-Subj)\n            3. `ŋabə` (I-Subj) -> `ŋabə ati lapkʰi tɤʔ ne` (Did I see him?)\n            4. `nirum` (We-Subj)\n            5. `nɤbə` (You-Subj) -> `nɤbə ŋa lapkʰi rɤ ne` (Do you see me?)\n            6. `tarum` (They-Subj)\n            7. `nuʔrum` (You-pl-Subj)\n            8. `nɤbə` (You-Subj) -> `nɤbə ati cʰam tuʔ ne` (Did you know him?)\n            9. `tarum` (They-Subj)\n            10. `ati` (He-Subj) -> `ati kəmə ŋa lapkʰi tʰɤ ne` (Did he see me?)\n\n    *   *Refined Pronoun List (Subject form):*\n        *   `ŋa` / `ŋabə`: I\n        *   `nɤ` / `nɤbə`: You (sg)\n        *   `ati`: He\n        *   `nirum`: We\n        *   `nuʔrum`: You (pl)\n        *   `tarum`: They\n\n    *   *Refined Pronoun List (Object form):*\n        *   `ŋa`: Me\n        *   `nɤ`: You (sg)\n        *   `ati`: Him\n        *   `nirum`: Us\n        *   `nuʔrum`: You (pl)\n        *   `cʰam`: You (sg/pl?) -> `nirum kəmə nuʔrum cʰam ki ne` (Do we know you(pl)?). Here `cʰam` is you(pl).\n        *   `cʰam`: Him? -> `nɤbə ati cʰam tuʔ ne` (Did you know him?). Here `cʰam` is him.\n        *   *Wait, let's look at the verbs.*\n\n**2. Verb/Predicate Analysis:**\n*   `ka kɤ` (go)\n*",
+          "latency_s": 22.95,
+          "bleu": {
+            "corpus_bleu": 1.44,
+            "sentence_bleu": [
+              8.17,
+              0.0,
+              3.74,
+              0.0,
+              4.02,
+              0.0
+            ],
+            "corpus_chrfpp": 5.28,
+            "sentence_chrfpp": [
+              5.21,
+              1.08,
+              6.55,
+              2.76,
+              10.24,
+              1.25
+            ],
+            "num_evaluated": 6,
+            "hypotheses": [
+              "`ŋa` (I-Subj)",
+              "`nɤ` (You-Subj)",
+              "`ŋabə ati lapkʰi tɤʔ ne` (Did I see him?)",
+              "`nirum` (We-Subj)",
+              "`nɤbə ŋa lapkʰi rɤ ne` (Do you see me?)",
+              "`tarum` (They-Subj)"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ]
+          }
+        }
+      ],
+      "final_bleu": 1.44,
+      "best_bleu": 1.44
+    },
+    "incremental_combinations": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out. (read timeout=90)"
+    },
+    "step_by_step": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5c7e80>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    }
+  },
+  "summary": {
+    "baseline": {
+      "final_bleu": 1.44,
+      "best_bleu": 1.44,
+      "best_chrf": 5.28,
+      "num_steps": 1
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-12T19:27:00.290229",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_info": {
+      "provider": "openrouter",
+      "model_id": "openai/gpt-oss-120b:free",
+      "tier": "strong",
+      "description": "GPT OSS 120B via OpenRouter — familia OpenAI (50 req/día gratis)"
+    },
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2
+    ]
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_code": "nst-hkn_Latn",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "source": "Linguini benchmark (Sánchez et al., 2024) — problem 012018020100",
+    "task_type": "translation",
+    "original_context": "Here are some sentences in Hakhun and their English translations:\n\n1. ŋa ka kɤ ne | Do I go?\n2. nɤ ʒip tuʔ ne | Did you(sg) sleep?\n3. ŋabə ati lapkʰi tɤʔ ne | Did I see him?\n4. nirum kəmə nuʔrum cʰam ki ne | Do we know you(pl)?\n5. nɤbə ŋa lapkʰi rɤ ne | Do you(sg) see me?\n6. tarum kəmə nɤ lan tʰu ne | Did they beat you(sg)?\n7. nuʔrum kəmə ati lapkʰi kan ne | Do you(pl) see him?\n8. nɤbə ati cʰam tuʔ ne | Did you(sg) know him?\n9. tarum kəmə nirum lapkʰi ri ne | Do they see us?\n10. ati kəmə ŋa lapkʰi tʰɤ ne | Did he see me?",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ],
+    "linguistic_features": [],
+    "notes": "Original query: Translate into English:\n\n1. nɤ ʒip ku ne\n2. ati kəmə nirum lapkʰi tʰi ne\n3. tarum kəmə nuʔrum cʰam ran ne\n4. nirum kəmə tarum lan ki ne\n5. nirum kəmə nɤ cʰam tiʔ ne\n6. nirum ka tiʔ ne"
+  },
+  "results": {
+    "baseline": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5e13d0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    },
+    "incremental_combinations": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5e1160>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    },
+    "step_by_step": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Max retries exceeded with url: /api/v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7ffaeb5e1340>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"
+    }
+  },
+  "summary": {}
+}
