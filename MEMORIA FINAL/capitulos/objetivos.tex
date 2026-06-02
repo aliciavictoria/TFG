@@ -1,175 +1,56 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Plantilla TFG/TFM
-% Escuela Politécnica Superior de la Universidad de Alicante
-% Realizado por: Jose Manuel Requena Plens
-% Contacto: info@jmrplens.com / Telegram:@jmrplens
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Objetivos}
+\label{cap:objetivos}
 
-\chapter{Objetivos (Con ejemplos de tablas)}
-\label{objetivos}
+Este capítulo presenta el objetivo principal del trabajo y los objetivos específicos que se derivan de él, así como las restricciones y condicionantes que han guiado el desarrollo del proyecto.
 
-\section{Tablas}
-Ahora veremos otra estructura más: las tablas.
+% ─────────────────────────────────────────────────────────────
+\section{Objetivo principal}
+\label{sec:objetivo_principal}
+% ─────────────────────────────────────────────────────────────
 
+El objetivo principal de este Trabajo de Fin de Grado es diseñar, implementar y evaluar estrategias de \textit{prompting} para que modelos de lenguaje de gran escala puedan resolver puzzles de olimpiadas lingüísticas en idiomas que nunca han formado parte de su entrenamiento, apoyándose únicamente en razonamiento metalingüístico y sin recibir ninguna pista sobre la lengua en cuestión.
 
-Aquí va una tabla\footnote{En http://www.tablesgenerator.com/ se puede encontrar un generador On-Line de tablas para \LaTeX} para que se vea cómo insertar una tabla simple dentro del documento.
+% ─────────────────────────────────────────────────────────────
+\section{Objetivos específicos}
+\label{sec:objetivos_especificos}
+% ─────────────────────────────────────────────────────────────
 
-\begin{lstlisting}[style=Latex-color]
-\begin{table}[h]
-	\centering
-	\begin{tabular}{lllll}
-		&columna A&columna B&columna C\\
-		\hline
-		fila 1&fila 1, columna A & fila 1, columna B & fila 1, columna C\\
-		fila 2&fila 2, columna A & fila 2, columna B & fila 2, columna C\\
-		fila 3&fila 3, columna A & fila 3, columna B & fila 3, columna C\\ \hline
-	\end{tabular}
-	\caption{Ejemplo de tabla.}
-	\label{tabladeejemplo}
-\end{table}
-\end{lstlisting}
+De este objetivo principal se derivan los siguientes objetivos específicos:
 
-\begin{table}[h]
-	\centering
-	\begin{tabular}{lllll}
-		&columna A&columna B&columna C\\
-		\hline
-		fila 1&fila 1, columna A & fila 1, columna B & fila 1, columna C\\
-		fila 2&fila 2, columna A & fila 2, columna B & fila 2, columna C\\
-		fila 3&fila 3, columna A & fila 3, columna B & fila 3, columna C\\ \hline
-	\end{tabular}
-	\caption{Ejemplo de tabla.}
-	\label{tabladeejemplo}
-\end{table}
+\begin{enumerate}
 
-\LaTeX~usa un sistema de parámetros para ``decorar'' las tablas. Puedes consultar estos parámetros en la tabla \ref{tabla_parametros} de la página \pageref{tabla_parametros}. La tabla se ubicará donde, a juicio de \LaTeX, menos moleste por lo que puede no aparecer necesariamente donde se ha insertado en el texto original. 
+    \item \textbf{Revisar el estado del arte} en razonamiento lingüístico con modelos de lenguaje de gran escala, con especial atención a los benchmarks derivados de la Olimpiada Internacional de Lingüística (\textsc{Linguini}, LingOly, modeLing) y a las estrategias de prompting más relevantes de la literatura reciente.
 
-Existe la posibilidad de forzar que las tablas, figuras u otros objetos aparezcan en la zona del texto que se desea aunque en ocasiones puede dejar grandes espacios en blanco. El comando a utilizar es:
-\begin{lstlisting}[style=Latex-color]
-\FloatBarrier	
-\end{lstlisting}
-Que introducido justo después de una tabla, figura, etc (despues del comando \textbackslash end\{...\}) fuerza la aparición en el texto, empujando el contenido.
+    \item \textbf{Diseñar e implementar tres estrategias de prompting} diferenciadas y comparables entre sí:
+    \begin{itemize}
+        \item Una estrategia \textit{baseline} que sirva como punto de referencia directo con la literatura existente.
+        \item Una estrategia de presentación incremental por combinaciones crecientes de ejemplos, con actualización explícita y revisable del diccionario y las reglas gramaticales.
+        \item Una estrategia paso a paso ordenada por nivel lingüístico, inspirada en el trabajo de \citet{zhu2025evaluating}.
+    \end{itemize}
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{|c|L{0.8\textwidth}|}
-\hline
-Parámetro & \multicolumn{1}{c|}{Significado} \\ \hline
-\texttt{h} & Situa el elemento flotante \emph{preferentemente}
-(es decir, si es posible) en la situación exacta donde se incluye este \\
-\texttt{t} & Sitúa el elemento en la parte de arriba de la página \\
-\texttt{b} & Sitúa el elemento en la parte de abajo de la página \\
-\texttt{p} & Sitúa el elemento en una página aparte dedicada sólo a
-elementos flotantes; en el caso del formato \texttt{article},
-ésta se sitúa al final del documento, mientras que para al book es
-colocada al final de cada capítulo \\ \hline
-\end{tabular}
-\caption{Parámetros optativos de los entornos flotantes}
-\label{tabla_parametros}
-\end{table}
-\FloatBarrier
+    \item \textbf{Construir un sistema experimental reproducible} que automatice la ejecución de los experimentos, el registro completo de los prompts y respuestas, y el cálculo de métricas, permitiendo auditar cualquier resultado.
 
-También es posible elegir el ancho de cada columna y la orientación del texto en cada una.
-Por ejemplo:
+    \item \textbf{Evaluar las estrategias} sobre puzzles reales del benchmark \textsc{Linguini} en lenguas de cuatro familias lingüísticas distintas, utilizando modelos de dos familias arquitectónicas diferentes y tres tamaños.
 
-\begin{lstlisting}[style=Latex-color]
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|} % 4 columnas de 2cm - texto centrado y con bordes
-		\hline
-		\multicolumn{4}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}FUENTE: TRÁFICO RODADO\\ HORARIO: TARDE\end{tabular}}} \\ \hline
-		\textbf{dB(A)} & \textbf{Población expuesta tarde} & \textbf{\%} & \textbf{\scriptsize{CENTENAS}} \\ \hline
-		\textbf{\textgreater70} & 0 & 0,000 & 0 \\ \hline
-		\textbf{65 - 70} & 348,9 & 9,792 & 3 \\ \hline
-		\textbf{60 - 65} & 1594,7 & 44,757 & 16 \\ \hline
-		\textbf{55 - 60} & 322,1 & 9,040 & 3 \\ \hline
-		\textbf{50 - 55} & 0 & 0,000 & 0 \\ \hline
-		\textbf{\textgreater50} & 1297,3 & 36,410 & 13 \\ \hline
-		\textbf{TOTAL} & 3563 & 100 & 35 \\ \hline
-	\end{tabular}
-	\label{my-label}
-\end{table}	
-\end{lstlisting}
+    \item \textbf{Comparar los resultados obtenidos} con los valores de referencia publicados en \citet{sanchez2024linguini} mediante las métricas BLEU y chrF++, identificando en qué condiciones cada estrategia supera o iguala el estado del arte.
 
-\LaTeX~genera esto:
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
-		\hline
-		\multicolumn{4}{|c|}{\textbf{\begin{tabular}[c]{@{}c@{}}FUENTE: TRÁFICO RODADO\\ HORARIO: TARDE\end{tabular}}} \\ \hline
-		\textbf{dB(A)} & \textbf{Población expuesta tarde} & \textbf{\%} & \textbf{\scriptsize{CENTENAS}} \\ \hline
-		\textbf{\textgreater70} & 0 & 0,000 & 0 \\ \hline
-		\textbf{65 - 70} & 348,9 & 9,792 & 3 \\ \hline
-		\textbf{60 - 65} & 1594,7 & 44,757 & 16 \\ \hline
-		\textbf{55 - 60} & 322,1 & 9,040 & 3 \\ \hline
-		\textbf{50 - 55} & 0 & 0,000 & 0 \\ \hline
-		\textbf{\textgreater50} & 1297,3 & 36,410 & 13 \\ \hline
-		\textbf{TOTAL} & 3563 & 100 & 35 \\ \hline
-	\end{tabular}
-	\label{my-label}
-\end{table}	
+    \item \textbf{Realizar un análisis cualitativo} comparando el proceso de resolución humana de los puzzles con el razonamiento explícito del modelo, identificando los puntos de divergencia y los patrones de error más frecuentes.
 
-Donde C\{2cm\} indica que la columna tiene el texto centrado y un ancho de 2 cm. Tambien se puede utilizar L\{\} o R\{\} para poner el texto a la izquierda o derecha y definir un ancho concreto.
+\end{enumerate}
 
-Páginas como \url{https://www.tablesgenerator.com/} ayudan a realizar tablas fácilmente, es lo más recomendado, ahorra mucho tiempo de trabajo y luego si falta algún detalle se puede retocar en el documento.
+% ─────────────────────────────────────────────────────────────
+\section{Restricciones y condicionantes}
+\label{sec:restricciones}
+% ─────────────────────────────────────────────────────────────
 
-El formato estándar de las columnas es c, l o r, así lo genera la web mencionada antes, pero una vez generada puedes cambiar ese formato por el definido anteriormente para ajustar el ancho de las columnas, o mantenerlo así si el resultado ya es el deseado.
+El desarrollo del trabajo está sujeto a las siguientes restricciones:
 
-\par Para conocer más sobre las tablas puedes leer manuales como este: \url{https://latexlive.files.wordpress.com/2009/04/tablas.pdf} que contiene muchos ejemplos y explicaciones.
+\begin{description}
+    \item[Acceso a los modelos:] se utilizan exclusivamente modelos accesibles mediante APIs gratuitas (Groq y Google AI Studio), lo que limita los modelos disponibles pero garantiza la reproducibilidad del trabajo sin coste computacional.
 
+    \item[Límites de tasa:] las APIs gratuitas imponen límites de peticiones por minuto y por día, lo que condiciona el número de experimentos que pueden ejecutarse en una sesión y obliga a introducir retardos entre llamadas.
 
-\section{Otros diseños de tablas}
+    \item[Datos:] los puzzles utilizados provienen exclusivamente del benchmark \textsc{Linguini} \citep{sanchez2024linguini}, cuya descarga requiere aceptar los términos de uso del corpus de la IOL (licencia CC-BY-SA 4.0). No se utilizan puzzles de elaboración propia para mantener la comparabilidad con la literatura.
 
-% EJEMPLO 1
-\begin{table}[ht]
-	\centering
-	{\scalefont{0.9}
-	\begin{tabular}{@{}lcc@{}}
-	\toprule
-	Modelo			& 	15LEX1600Nd	&	15P1000Fe V2	 	\\ \midrule
-	fs ($Hz$)		& 	41          & 	45           	\\
-	Re ($ohm$)		& 5.5         	& 5.2         	 	\\
-	Le ($\mu H$)	& 1600        	& 1500         		\\
-	Bl ($N/A$)		& 25.7        	& 27.4         		\\
-	M\textsubscript{MS} ($g$)		& 175	& 157		\\
-	C\textsubscript{MS} ($\mu m/N$)	& 84		& 78			\\
-	R\textsubscript{MS} ($kg/s$)		& 6.8 	& 7.6   	 	\\
-	d ($cm$)		& 33.5			& 33           		\\
-	Vas ($dm^3$)   	& 91          	& 80.7         		\\
-	$Q_\text{TS}$  	& 0.36        	& 0.30         		\\
-	$Q_\text{MS}$  	& 6.6         	& 5.9          		\\
-	$Q_\text{ES}$  	& 0.38        	& 0.31         		\\
-	Sens (dB @ 2.83V/1m) & 96      	& 98           		\\
-	$\eta$          & 1.7\%       	& 2.4\%        		\\
-	Sd ($cm^2$)   	& 880         	& 855          		\\ \bottomrule
-	\end{tabular}
-	}
-	\caption{Parámetros de los altavoces elegidos de la marca Beyma\textsuperscript{\tiny\textregistered}.}
-	\label{tablaparametros}
-\end{table}
-
-% EJEMPLO 2
-\begin{table}[ht]
-\centering
-\begin{tabular}{l|l|c|c|c|c||c|c|c|c} %l:left c:center r:right |:table lines
-\cmidrule[1pt]{3-10}                  % 1pt is the thickness 3-10 is column number
-\multicolumn{2}{c|}{}&\multicolumn{4}{c||}{140PU}&\multicolumn{4}{c}{50PU} \\\cmidrule{3-10}
-\multicolumn{2}{c|}{}&\multicolumn{2}{c|}{Phase II}&\multicolumn{2}{c||}{Phase I}&\multicolumn{2}{c|}{Phase II}&\multicolumn{2}{c}{Phase I}\\\midrule
-\multicolumn{2}{c|}{\# BJet}&$ \geq 4 $ & 2 or 3 &$ \geq 4 $ & 2 or 3&$ \geq 4 $ & 2 or 3 &$ \geq 4 $ & 2 or 3 \\\midrule
-\multicolumn{2}{c|}{\# Bkg} & 123 & 76 & 12 & 7 & 84 & 35 & 7 & 3 \\\midrule\midrule
-\multirow{4}{3mm}{\begin{sideways}\parbox{15mm}{Asimov}\end{sideways}}
-& NM1 & 13 & 6 & 9 & 3 & 15 & 9 & 11 & 4 \\
-& NM2 & 6 & 2 & 4 & 1 & 7 & 3 & 5 & 1 \\
-& NM3 & 3 & 1 & 2 & 0 & 4 & 1 & 2 & 0 \\
-& STC & 6 & 3 & 4 & 1 & 7 & 5 & 5 & 2 \\\midrule
-\end{tabular}
-\caption{Ejemplo 2}
-\end{table}
-
-
-
-
-
-
-
-
+    \item[Ausencia de reentrenamiento:] no se realiza ningún tipo de \textit{fine-tuning} ni adaptación de los modelos. Todas las estrategias operan en modo \textit{zero-shot} o \textit{few-shot} mediante prompting, sin modificar los pesos del modelo.
+\end{description}

@@ -7,39 +7,38 @@
 
 \chapter*{Preámbulo}
 \thispagestyle{empty}
-Poner aquí un texto breve que debe incluir entre otras:
 \begin{quote}
-``las razones que han llevado a la realización del estudio, el tema, la finalidad y el alcance y también los agradecimientos por las ayudas, por ejemplo apoyo económico (becas y subvenciones) y las consultas y discusiones con los tutores y colegas de trabajo. \citep{UNE50136:97}''
+Este trabajo surge del interés por explorar los límites del razonamiento lingüístico en los modelos de lenguaje actuales. El objetivo es diseñar y evaluar estrategias de prompting que permitan a estos modelos resolver puzzles de olimpiadas lingüísticas en idiomas nunca vistos durante su entrenamiento. El trabajo se enmarca en el área de procesamiento de lenguas de baja densidad de recursos y ha sido realizado bajo la supervisión de Juan Antonio Pérez Ortiz en el Grado de Ingeniería Informática de la Universidad de Alicante.
 \end{quote}
 
 
 \cleardoublepage %salta a nueva página impar
-\chapter*{Agradecimientos\footnote{Por si alguien tiene curiosidad, este ``simpático'' agradecimiento está tomado de la ``Tesis de Lydia Chalmers'' basada en el universo del programa de televisión Buffy, la Cazadora de Vampiros.http://www.buffy-cazavampiros.com/Spiketesis/tesis.inicio.htm}
+\chapter*{Agradecimientos
 }
 
 \thispagestyle{empty}
 \vspace{1cm}
 
-Este trabajo no habría sido posible sin el apoyo y el estímulo de mi colega y amigo, Doctor Rudolf Fliesning,  bajo cuya supervisión escogí este tema y comencé la tesis. Sr. Quentin Travers, mi consejero en las etapas finales del trabajo, también ha sido generosamente servicial, y me ha ayudado de numerosos modos, incluyendo el resumen del contenido de los documentos que no estaban disponibles para mi examen, y en particular por permitirme leer, en cuanto estuvieron  disponibles, las copias de los  recientes extractos de los diarios de campaña del Vigilante Rupert Giles y la actual Cazadora la señorita Buffy Summers, que se encontraron con William the Bloody en 1998, y por facilitarme el pleno acceso  a los diarios de anteriores Vigilantes relevantes a la carrera de William the Bloody.
+Quisiera agradecer, en primer lugar, a mi tutor, Juan Antonio Pérez Ortiz, por su orientación, sus consejos y su disponibilidad durante el desarrollo de este Trabajo de Fin de Grado. Su ayuda ha sido fundamental para dar forma al proyecto y para afrontar las distintas decisiones que han ido surgiendo a lo largo del proceso.
 
-También me gustaría agradecerle al Consejo la concesión de Wyndham-Pryce como Compañero, el cual me ha apoyado durante mis dos años de investigación, y la concesión de dos subvenciones de viajes, una para estudiar documentos en los Archivos de Vigilantes sellados en Munich, y otra para la investigación en campaña en Praga. Me gustaría agradecer a Sr. Travers, otra vez, por facilitarme  la acreditación  de seguridad para el trabajo en los Archivos de Munich, y al Doctor Fliesning por su apoyo colegial y ayuda en ambos viajes de investigación.
+También quiero dar las gracias a mi familia, por su apoyo constante durante todos estos años. Su confianza, paciencia y ánimo han sido esenciales no solo durante la realización de este trabajo, sino a lo largo de toda mi etapa universitaria.
 
-No puedo terminar sin agradecer a mi familia, en cuyo estímulo constante y amor he confiado a lo largo de mis años en la Academia. Estoy agradecida también a los ejemplos de mis  difuntos hermano, Desmond Chalmers, Vigilante en Entrenamiento, y padre, Albert Chalmers, Vigilante. Su coraje resuelto y convicción siempre me inspirarán, y espero seguir, a mi propio y pequeño modo, la noble misión por la que dieron sus vidas. 
+Este trabajo nace también de un interés personal por los idiomas y por la forma en que las lenguas permiten entender distintas culturas. Haber vivido en diferentes países me ha permitido acercarme a varios idiomas desde una perspectiva práctica y humana, y ha despertado en mí una curiosidad especial por la traducción y el razonamiento entre lenguas. Esa experiencia personal ha influido directamente en la elección de este tema, centrado en la resolución de problemas de olimpiadas lingüísticas mediante modelos de inteligencia artificial.
 
-Es a ellos a quien dedico este trabajo.
+Por último, quiero agradecer a todas las personas que, de una forma u otra, me han acompañado durante este camino: compañeros, amigos y profesores que han contribuido a mi formación y me han ayudado a llegar hasta aquí.
 
-\cleardoublepage %salta a nueva página impar
+%\cleardoublepage %salta a nueva página impar
 % Aquí va la dedicatoria si la hubiese. Si no, comentar la(s) linea(s) siguientes
-\chapter*{}
-\setlength{\leftmargin}{0.5\textwidth}
-\setlength{\parsep}{0cm}
-\addtolength{\topsep}{0.5cm}
-\begin{flushright}
-\small\em{
-A mi esposa Marganit, y a mis hijos Ella Rose y Daniel Adams,\\
-sin los cuales habría podido acabar este libro dos años antes \footnote{Dedicatoria de Joseph J. Roman en "An Introduction to Algebraic Topology"}
-}
-\end{flushright}
+%\chapter*{}
+%\setlength{\leftmargin}{0.5\textwidth}
+%\setlength{\parsep}{0cm}
+%\addtolength{\topsep}{0.5cm}
+%\begin{flushright}
+%\small\em{
+%A mi esposa Marganit, y a mis hijos Ella Rose y Daniel Adams,\\
+%sin los cuales habría podido acabar este libro dos años antes \footnote{Dedicatoria de Joseph J. Roman en "An Introduction to Algebraic Topology"}
+%}
+%\end{flushright}
 
 
 \cleardoublepage %salta a nueva página impar
@@ -50,14 +49,12 @@ sin los cuales habría podido acabar este libro dos años antes \footnote{Dedica
 \addtolength{\topsep}{0.5cm}
 \begin{flushright}
 \small\em{
-Si consigo ver más lejos\\
-es porque he conseguido auparme\\ 
-a hombros de gigantes
+El límite de mi lenguaje es el límite de mi mundo.
 }
 \end{flushright}
 \begin{flushright}
 \small{
-Isaac Newton.
+Ludwig Wittgenstein.
 }
 \end{flushright}
 \cleardoublepage %salta a nueva página impar
