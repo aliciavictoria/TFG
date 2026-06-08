@@ -1,0 +1,1569 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T16:11:09.920710",
+    "puzzle_id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "language_family": "Mayan (México)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 15,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "language_family": "Mayan (México)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "'Oy 'ox 'ixim ta ana nax.",
+        "target": "You had corn at home today."
+      },
+      {
+        "source": "Bu 'oy 'ox li Romin e 'ok'ob?",
+        "target": "Where will Domingo be tomorrow?"
+      },
+      {
+        "source": "Ch'abal 'ox chenek' ta jp'in po'ot.",
+        "target": "Soon there will be no haricots in my pot."
+      },
+      {
+        "source": "Mi 'oy 'ox k'in ta Jobel 'ok'ob?",
+        "target": "Will there be a party in San Cristobal tomorrow?"
+      },
+      {
+        "source": "'Oy chan-vun ta batz'i k'op ta Jobel.",
+        "target": "There is a Tzotzil school in San Cristobal."
+      },
+      {
+        "source": "Mi 'oy sbatz'i chi'il li Xun e?",
+        "target": "Does Juan have a real friend?"
+      },
+      {
+        "source": "Muk' bu li Xunka e.",
+        "target": "Juana is nowhere."
+      },
+      {
+        "source": "\"Oy 'ox jlekil na po'ot.",
+        "target": "I will soon have a good house."
+      },
+      {
+        "source": "Mi 'oy 'ox chan-vun ta Jobel junabi?",
+        "target": "Was there a school in San Cristobal last year?"
+      },
+      {
+        "source": "Mi 'oy \"ixim ta p'in lavie?",
+        "target": "Is there corn in his pot?"
+      },
+      {
+        "source": "Ch'abal schenek' lavie.",
+        "target": "He has no haricots today."
+      },
+      {
+        "source": "'Oy 'ox lekil vob ta k'in lavie.",
+        "target": "There will be good music at the party today."
+      },
+      {
+        "source": "K'usi 'oy \"ox ta achan-vun volje?",
+        "target": "What did you have at school yesterday?"
+      },
+      {
+        "source": "Bu 'oy 'ox k'op nax?",
+        "target": "Where was the talk today?"
+      },
+      {
+        "source": "Ch'abal 'ox schi'il li Romin e junabi.",
+        "target": "Last year Domingo had no friend."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Ch'abal alekil 'ixim.",
+        "target": [
+          "You have no good corn."
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "Mi 'oy 'ox vob ta k'in?",
+        "target": [
+          "Was there music at the party?",
+          "Will there be music at the party?"
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "K'usi 'oy 'ox ta Mexico lavie?",
+        "target": [
+          "What will there be in Mexico today?"
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "\"Oy \"ox k'op ta batz'i k'op ta jna volje.",
+        "target": [
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Ch'abal alekil 'ixim.",
+      "reference": [
+        "You have no good corn."
+      ],
+      "hypothesis": "**Possible translation:** “The fire is burning.”",
+      "latency_s": 4.6,
+      "metrics": {
+        "corpus_bleu": 3.09,
+        "corpus_chrfpp": 6.55,
+        "corpus_ter": 120.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.09
+        ],
+        "sentence_chrfpp": [
+          6.55
+        ],
+        "sentence_ter": [
+          120.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “The fire is burning.”"
+        ],
+        "references": [
+          "You have no good corn."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 15,
+          "latency_s": 301.42,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 83.88,
+          "accumulated_dict": "Oy = you (2nd‑person pronoun)\n'oy = future marker (will)\n'ox = verb “to be / to have”\n'ixim = corn\nta = at (preposition)\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = [particle – function unclear]\ne = [particle – function unclear]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object – Preposition – Location – Temporal** (e.g., *Oy 'ox 'ixim ta ana nax*).\n2. Interrogative clauses begin with a question word (e.g., *Bu*) followed by the same clause order, with the future particle **'oy** placed immediately before the verb.\n3. The core verb **'ox** does not inflect for tense; tense is expressed by separate particles (e.g., **'oy** for future, past is unmarked in the data).\n4. The preposition **ta** introduces a locative noun phrase.\n5. Temporal adverbs (e.g., **nax**, **'ok'ob**) appear clause‑final.\n6. Unidentified particles **li** and **e** occur between the verb and the subject in interrogative clauses; their exact grammatical role is still unknown.\n---",
+          "metrics": {
+            "corpus_bleu": 1.7,
+            "corpus_chrfpp": 4.54,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              5.2,
+              3.75
+            ],
+            "sentence_chrfpp": [
+              1.51,
+              1.41,
+              3.88,
+              7.92
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              85.71,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will Mi be at k",
+              "Will K",
+              "You be k",
+              "Ch'abal alekil 'ixim. → **Ch'abal alekil corn."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 66.42,
+          "accumulated_dict": "- In *Bu 'oy 'ox li Romin e 'ok'ob?* the interrogative word **Bu** (“where”) is followed by the future particle **'oy**, the verb **'ox**, then the particle **li**, the subject **Romin**, another particle **e**, and the temporal **'ok'ob** (“tomorrow”). This supports the idea that **li** and **e** appear between verb and subject in questions.\n- In *Ch'abal 'ox chenek' ta jp'in po'ot* we encounter new morphemes: **Ch'abal** = “soon”, **chenek'** = negation (“no”), **jp'in** = “my”, **po'ot** = “pot”. The clause lacks an overt subject; the verb **'ox** functions existentially (“there is/are”). The order here is **Temporal – Verb – Negation – ta – Possessor – Noun**, showing that the earlier “Subject‑Verb‑Object‑Preposition‑Location‑Temporal” pattern applies only when a lexical subject is present; otherwise the verb can appear clause‑initial.\nNo contradictions to the existing entries were found, but the clause‑order hypothesis must be broadened to allow existential constructions and fronted temporal adverbials.\n---\n**DICTIONARY**\n'oy = future marker (will)\n'ox = verb “to be / to have / exist”\n'ixim = corn\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = particle occurring between verb and subject in interrogatives (function unclear)\ne = particle occurring after subject in interrogatives (function unclear)\nta = locative preposition (“at”)\nCh'abal = soon\nchenek' = no / not (negation)\njp'in = my (possessive)\npo'ot = pot\n[DELETED: oy = you — replaced by ’Oy, which is the same form; the entry is retained under ’Oy]\n---",
+          "accumulated_rules": "1. **Basic clause (with overt subject):** Subject – Verb – Object – (ta) Location – Temporal.\n2. **Existential / impersonal clause:** Verb (often ‘ox) may appear clause‑initial, optionally preceded by a temporal adverb; the subject is implicit (“there”).\n3. **Future tense:** The particle **'oy** is placed immediately before the verb. Past is unmarked; present is unmarked as well.\n4. **Interrogatives:** Begin with a question word (e.g., **Bu**). In questions, the sequence after the verb is **li** – Subject – **e** – Temporal (if a temporal adverb follows).\n5. **Locative phrase:** Introduced by **ta** followed by a noun denoting a place.\n6. **Negation:** The particle **chenek'** follows the verb and precedes **ta** in existential clauses.\n7. **Possession:** Possessor precedes the possessed noun, linked directly (e.g., **jp'in po'ot** “my pot”).\n[DELETED: Rule 1 “Subject – Verb – Object – Preposition – Location – Temporal” — too rigid; revised to allow existential constructions and fronted temporals.]\n---",
+          "metrics": {
+            "corpus_bleu": 4.05,
+            "corpus_chrfpp": 14.95,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              6.57,
+              8.05,
+              3.8
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              7.79,
+              25.4,
+              8.49
+            ],
+            "sentence_ter": [
+              80.0,
+              116.67,
+              57.14,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Mi will you be vob at k'in?",
+              "K'usi will be at Mexico lavie?",
+              "You are k'op at batz'i k'op at jna volje."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 70.08,
+          "accumulated_dict": "- In *Bu 'oy 'ox li Romin e 'ok'ob?* the interrogative word **Bu** (“where”) is followed by the future particle **'oy**, the verb **'ox**, then the particle **li**, the subject **Romin**, another particle **e**, and the temporal **'ok'ob** (“tomorrow”). This supports the idea that **li** and **e** appear between verb and subject in questions.\n- In *Ch'abal 'ox chenek' ta jp'in po'ot* we encounter new morphemes: **Ch'abal** = “soon”, **chenek'** = negation (“no”), **jp'in** = “my”, **po'ot** = “pot”. The clause lacks an overt subject; the verb **'ox** functions existentially (“there is/are”). The order here is **Temporal – Verb – Negation – ta – Possessor – Noun**, showing that the earlier “Subject‑Verb‑Object‑Preposition‑Location‑Temporal” pattern applies only when a lexical subject is present; otherwise the verb can appear clause‑initial.\nNo contradictions to the existing entries were found, but the clause‑order hypothesis must be broadened to allow existential constructions and fronted temporal adverbials.\n---\n**DICTIONARY**\n'oy = future marker (will)\n'ox = verb “to be / to have / exist”\n'ixim = corn\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = particle occurring between verb and subject in interrogatives (function unclear)\ne = particle occurring after subject in interrogatives (function unclear)\nta = locative preposition (“at”)\nCh'abal = soon\nchenek' = no / not (negation)\njp'in = my (possessive)\npo'ot = pot\n[DELETED: oy = you — replaced by ’Oy, which is the same form; the entry is retained under ’Oy]\n---",
+          "accumulated_rules": "1. **Basic clause with overt subject:** Subject – Verb – Object – (ta) Location – Temporal.\n2. **Existential / impersonal clause:** Optional fronted temporal → (Mi) → Future particle → Verb → (Negation) → (ta) Location → (Object) → Temporal. The dummy **Mi** functions as a placeholder subject when no lexical subject is expressed.\n3. **Future tense:** The particle **'oy** precedes the verb. Present and past are unmarked.\n4. **Interrogatives:** Begin with a question word. Order after the verb is **li – Subject – e – Temporal** (if a temporal adverb follows).\n5. **Locative phrase:** Introduced by **ta** followed by a noun denoting a place.\n6. **Negation:** The particle **chenek'** follows the verb and precedes any locative phrase in existential clauses.\n7. **Possession:** Possessor directly precedes the possessed noun (e.g., **jp'in po'ot** “my pot”).\n---",
+          "metrics": {
+            "corpus_bleu": 6.48,
+            "corpus_chrfpp": 24.43,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.49,
+              7.81,
+              7.49
+            ],
+            "sentence_chrfpp": [
+              22.82,
+              27.94,
+              22.37
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              57.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there is corn.",
+              "Will there be a party at vob?",
+              "Will K'usi be at Mexico lavie?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 56.32,
+          "accumulated_dict": "- In *Bu 'oy 'ox li Romin e 'ok'ob?* the interrogative word **Bu** (“where”) is followed by the future particle **'oy**, the verb **'ox**, then the particle **li**, the subject **Romin**, another particle **e**, and the temporal **'ok'ob** (“tomorrow”). This supports the idea that **li** and **e** appear between verb and subject in questions.\n- In *Ch'abal 'ox chenek' ta jp'in po'ot* we encounter new morphemes: **Ch'abal** = “soon”, **chenek'** = negation (“no”), **jp'in** = “my”, **po'ot** = “pot”. The clause lacks an overt subject; the verb **'ox** functions existentially (“there is/are”). The order here is **Temporal – Verb – Negation – ta – Possessor – Noun**, showing that the earlier “Subject‑Verb‑Object‑Preposition‑Location‑Temporal” pattern applies only when a lexical subject is present; otherwise the verb can appear clause‑initial.\nNo contradictions to the existing entries were found, but the clause‑order hypothesis must be broadened to allow existential constructions and fronted temporal adverbials.\n---\n**DICTIONARY**\n'oy = future marker (will)\n'ox = verb “to be / to have / exist”\n'ixim = corn\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = particle occurring between verb and subject in interrogatives (function unclear)\ne = particle occurring after subject in interrogatives (function unclear)\nta = locative preposition (“at”)\nCh'abal = soon\nchenek' = no / not (negation)\njp'in = my (possessive)\npo'ot = pot\n[DELETED: oy = you — replaced by ’Oy, which is the same form; the entry is retained under ’Oy]\n---",
+          "accumulated_rules": "1. **Basic clause with overt lexical subject:** Subject – Verb – Object – (ta) Location – Temporal.\n2. **Existential / impersonal clause:** Optional fronted temporal → (Mi | 'Oy) → (future ‘oy) → Verb → (Negation) → (Object) → (ta) Location → (Object) → Temporal. The dummy **Mi** or **'Oy** occupies the subject position when no lexical subject is expressed.\n3. **Future tense:** The particle **'oy** precedes the verb; it may be omitted if a future‑oriented temporal adverb (e.g., *Ch'abal*) is present.\n4. **Interrogatives:** Begin with a question word; order after the verb is **li – Subject – e – (Temporal)**.\n5. **Locative phrase:** Introduced by **ta**; a location‑classifier **k'op** may appear before **ta** + place name.\n6. **Negation:** The particle **chenek'** follows the verb and precedes any locative phrase in existential clauses.\n7. **Possession:** Possessor directly precedes the possessed noun (e.g., **jp'in po'ot** “my pot”).\n8. **Temporal adverbials:** May appear clause‑initially (e.g., *Ch'abal*, *Mi*) and are not required to be followed by a particle.\n[DELETED: Rule 2 wording that forced a single dummy “Mi” – expanded to allow **'Oy** as an alternative dummy subject.]\n---",
+          "metrics": {
+            "corpus_bleu": 17.38,
+            "corpus_chrfpp": 35.83,
+            "corpus_ter": 60.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.38,
+              36.56,
+              24.08,
+              9.55
+            ],
+            "sentence_chrfpp": [
+              23.32,
+              53.1,
+              39.27,
+              28.36
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              42.86,
+              70.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon alekil corn.",
+              "Will there be vob at the party?",
+              "K'usi will be in Mexico lavie?",
+              "There is k'op in Tzotzil k'op in jna volje."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 88.6,
+          "accumulated_dict": "- In *Bu 'oy 'ox li Romin e 'ok'ob?* the interrogative word **Bu** (“where”) is followed by the future particle **'oy**, the verb **'ox**, then the particle **li**, the subject **Romin**, another particle **e**, and the temporal **'ok'ob** (“tomorrow”). This supports the idea that **li** and **e** appear between verb and subject in questions.\n- In *Ch'abal 'ox chenek' ta jp'in po'ot* we encounter new morphemes: **Ch'abal** = “soon”, **chenek'** = negation (“no”), **jp'in** = “my”, **po'ot** = “pot”. The clause lacks an overt subject; the verb **'ox** functions existentially (“there is/are”). The order here is **Temporal – Verb – Negation – ta – Possessor – Noun**, showing that the earlier “Subject‑Verb‑Object‑Preposition‑Location‑Temporal” pattern applies only when a lexical subject is present; otherwise the verb can appear clause‑initial.\nNo contradictions to the existing entries were found, but the clause‑order hypothesis must be broadened to allow existential constructions and fronted temporal adverbials.\n---\n**DICTIONARY**\n'oy = future marker (will)\n'ox = verb “to be / to have / exist”\n'ixim = corn\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = particle occurring between verb and subject in interrogatives (function unclear)\ne = particle occurring after subject in interrogatives (function unclear)\nta = locative preposition (“at”)\nCh'abal = soon\nchenek' = no / not (negation)\njp'in = my (possessive)\npo'ot = pot\n[DELETED: oy = you — replaced by ’Oy, which is the same form; the entry is retained under ’Oy]\n---",
+          "accumulated_rules": "1. **Basic clause with overt lexical subject:** Subject – Verb – Object – (ta) Location – Temporal.\n2. **Existential / impersonal clause:** [Dummy Mi or ‘Oy] – (Future ‘oy) – Verb – (Neg chenek') – Object – (ta) Location – Temporal.\n3. **Future tense:** Particle **‘oy** precedes the verb; it may be omitted when a future‑oriented temporal adverb (e.g., *Ch'abal*) is present.\n4. **Interrogative clause:** Interrogative word – (Future ‘oy) – Verb – **li** – Subject – **e** – (Temporal). If the subject is omitted, **li** and **e** still appear with a gap.\n5. **Negation:** **chenek'** follows the verb and precedes any locative phrase in existential clauses.\n6. **Locative phrase:** Basic form **ta Place**. When a location‑classifier is used, the order is **Noun k’op ta Place**.\n7. **Possession:** Possessor directly precedes possessed noun (Possessor Possessed).\n8. **Temporal adverbials:** May appear clause‑initially (e.g., *Ch'abal*, *Mi*, *nax*, *‘ok’ob*) and are not obligatorily marked.\n9. **Yes/No questions:** Fronted dummy **Mi** (or **‘Oy** when existential) plus optional future particle; no special interrogative particle is required.\n[DELETED: Rule 2 wording that forced a single dummy “Mi” – expanded to allow ‘Oy as alternative dummy subject.]\n---",
+          "metrics": {
+            "corpus_bleu": 12.42,
+            "corpus_chrfpp": 30.56,
+            "corpus_ter": 83.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.25,
+              6.57,
+              24.08
+            ],
+            "sentence_chrfpp": [
+              23.34,
+              13.94,
+              49.02
+            ],
+            "sentence_ter": [
+              80.0,
+              116.67,
+              57.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon corn.",
+              "Will you have a house at today?",
+              "How will there be at Mexico?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 68.5,
+          "accumulated_dict": "- In *Bu 'oy 'ox li Romin e 'ok'ob?* the interrogative word **Bu** (“where”) is followed by the future particle **'oy**, the verb **'ox**, then the particle **li**, the subject **Romin**, another particle **e**, and the temporal **'ok'ob** (“tomorrow”). This supports the idea that **li** and **e** appear between verb and subject in questions.\n- In *Ch'abal 'ox chenek' ta jp'in po'ot* we encounter new morphemes: **Ch'abal** = “soon”, **chenek'** = negation (“no”), **jp'in** = “my”, **po'ot** = “pot”. The clause lacks an overt subject; the verb **'ox** functions existentially (“there is/are”). The order here is **Temporal – Verb – Negation – ta – Possessor – Noun**, showing that the earlier “Subject‑Verb‑Object‑Preposition‑Location‑Temporal” pattern applies only when a lexical subject is present; otherwise the verb can appear clause‑initial.\nNo contradictions to the existing entries were found, but the clause‑order hypothesis must be broadened to allow existential constructions and fronted temporal adverbials.\n---\n**DICTIONARY**\n'oy = future marker (will)\n'ox = verb “to be / to have / exist”\n'ixim = corn\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = particle occurring between verb and subject in interrogatives (function unclear)\ne = particle occurring after subject in interrogatives (function unclear)\nta = locative preposition (“at”)\nCh'abal = soon\nchenek' = no / not (negation)\njp'in = my (possessive)\npo'ot = pot\n[DELETED: oy = you — replaced by ’Oy, which is the same form; the entry is retained under ’Oy]\n---",
+          "accumulated_rules": "1. **Basic declarative with lexical subject:** *Subject – Verb – Object – (ta Location) – Temporal*.\n2. **Existential / impersonal clause:** *Dummy ‘Oy* (or personal pronoun) – (Future ‘oy) – Verb (*‘ox* or zero‑copula) – (Neg chenek') – Object – (ta Location) – Temporal.\n3. **Future tense:** Particle **‘oy** precedes the verb; it may be omitted when a future‑oriented temporal adverb (e.g., *Ch'abal*) is present.\n4. **Wh‑interrogative clause:** *Bu – (Future ‘oy) – Verb – li – Subject – e – (Temporal)*.\n5. **Yes/No question:** Sentence‑initial particle **Mi**, optionally followed by **‘oy** (future) and then the clause structure of (2) or (1).\n6. **Negation:** **chenek'** follows the verb and precedes any locative phrase.\n7. **Locative phrase:** Basic *ta Place*. With a location‑classifier the order is *Noun k’op ta Place*.\n8. **Possession:** Possessor directly precedes possessed noun (*Possessor Possessed*).\n9. **Temporal adverbials:** May appear clause‑initially (e.g., *Ch'abal, nax, ‘ok’ob*) and are otherwise unmarked.\n10. **Particles in interrogatives:** **li** marks the verb‑subject boundary; **e** follows the subject. They appear even when the subject is post‑verbal (as in (6)).\n---",
+          "metrics": {
+            "corpus_bleu": 6.67,
+            "corpus_chrfpp": 27.19,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.25,
+              7.81,
+              7.49
+            ],
+            "sentence_chrfpp": [
+              23.34,
+              28.42,
+              28.06
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              57.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon corn.",
+              "Will there be a party at Mexico?",
+              "Will you be at Mexico tomorrow?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 95.69,
+          "accumulated_dict": "- In *Bu 'oy 'ox li Romin e 'ok'ob?* the interrogative word **Bu** (“where”) is followed by the future particle **'oy**, the verb **'ox**, then the particle **li**, the subject **Romin**, another particle **e**, and the temporal **'ok'ob** (“tomorrow”). This supports the idea that **li** and **e** appear between verb and subject in questions.\n- In *Ch'abal 'ox chenek' ta jp'in po'ot* we encounter new morphemes: **Ch'abal** = “soon”, **chenek'** = negation (“no”), **jp'in** = “my”, **po'ot** = “pot”. The clause lacks an overt subject; the verb **'ox** functions existentially (“there is/are”). The order here is **Temporal – Verb – Negation – ta – Possessor – Noun**, showing that the earlier “Subject‑Verb‑Object‑Preposition‑Location‑Temporal” pattern applies only when a lexical subject is present; otherwise the verb can appear clause‑initial.\nNo contradictions to the existing entries were found, but the clause‑order hypothesis must be broadened to allow existential constructions and fronted temporal adverbials.\n---\n**DICTIONARY**\n'oy = future marker (will)\n'ox = verb “to be / to have / exist”\n'ixim = corn\nana = home\nnax = today\nBu = where (interrogative)\nRomin = Domingo (proper name)\n'ok'ob = tomorrow\nli = particle occurring between verb and subject in interrogatives (function unclear)\ne = particle occurring after subject in interrogatives (function unclear)\nta = locative preposition (“at”)\nCh'abal = soon\nchenek' = no / not (negation)\njp'in = my (possessive)\npo'ot = pot\n[DELETED: oy = you — replaced by ’Oy, which is the same form; the entry is retained under ’Oy]\n---",
+          "accumulated_rules": "1. **Basic declarative with lexical subject:** *Subject – Verb – Object – (ta Location) – Temporal*.\n2. **Existential / impersonal clause:** *Dummy ‘Oy* (or omitted) – (Future ‘oy) – Verb (*‘ox* or zero‑copula) – (Neg chenek') – Object – (ta Location) – Temporal.\n3. **Future tense:** Particle **‘oy** precedes the verb; it may be omitted when a future‑oriented temporal adverb (e.g., *Ch'abal*) is present. The same form can function as the verb “to have” in possession constructions.\n4. **Wh‑interrogative:** *Bu – (Future ‘oy) – Verb – li – Subject – e – (Temporal)*.\n5. **Yes/No question:** Sentence‑initial particle **Mi**, optionally followed by **‘oy** (future) and then the clause structure of (1) or (2).\n6. **Negation:** **chenek'** follows the verb (or future particle) and precedes any locative phrase or object.\n7. **Locative phrase:** Basic *ta Place*. With a classifier the order is *Noun k’op ta Place*.\n8. **Possession:** Possessor directly precedes possessed noun (*Possessor Possessed*). In questions the possessed noun appears before the possessor, separated by **li … e** particles (see rule 9).\n9. **Possessive‑question construction:** *Mi ‘oy [Possessed] [Adj] li Possessor e* (e.g., *Mi ‘oy sbatz'i chi'il li Xun e*).\n10. **Adjective placement:** Adjectives follow the noun they modify; the marker **na** can appear after the adjective when the adjective is part of a predicate (e.g., *jlekil na* “good house”).\n11. **Particles in non‑interrogative clauses:** **li** and **e** may appear in zero‑copula nominal predications to mark the noun‑subject boundary (e.g., *Muk' bu li Xunka e*).\n12. **Temporal adverbials:** May appear clause‑initially (e.g., *Ch'abal*, *nax*, *‘ok’ob*) and otherwise follow the main clause.\n---",
+          "metrics": {
+            "corpus_bleu": 9.32,
+            "corpus_chrfpp": 29.58,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.25,
+              11.34,
+              24.6,
+              5.02
+            ],
+            "sentence_chrfpp": [
+              23.34,
+              29.17,
+              49.62,
+              18.29
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              57.14,
+              90.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon corn.",
+              "Will there be a house at the sun?",
+              "When will there be Mexico?",
+              "I am a school‑CLF at the Tzotzil school."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 141.84,
+          "accumulated_dict": "4. There is a school at the school at jna volje. (The string contains repeated **k'op ta** and unknown nouns; literal rendering follows the given order).",
+          "accumulated_rules": "1. **Basic declarative (lexical subject):**\n*Subject – (Temporal) – (‘oy) – ‘ox – (Neg chenek') – Object/Noun – (ta Place) – (Temporal)*\n2. **Existential / impersonal clause:**\n*[Dummy ‘Oy] – (Temporal) – (‘oy) – ‘ox – (Neg chenek') – Noun – (ta Place) – (Temporal)*\nThe dummy pronoun **‘Oy** (or omission) functions like English “there”.\n3. **Tense/aspect marker:**\n**‘oy** appears before the verb to signal non‑present time (future or past). It may be omitted when a temporal adverb already conveys the time reference.\n4. **Yes/No question:**\nSentence‑initial **Mi**, optionally followed by **‘oy**, then the clause structure of (1) or (2).\n5. **Wh‑question:**\n*Bu – (‘oy) – ‘ox – li – Subject – e – (Temporal)*\nThe particles **li … e** mark the subject boundary.\n6. **Negation:**\n**chenek'** follows the verb (or tense marker) and precedes any locative phrase or object.\n7. **Locative phrase:**\n*ta Place* (simple). With a classifier the order is *Noun k’op ta Place*.\n8. **Possession (assertive):**\n*Possessor Possessed* (e.g., **jp'in po'ot** “my house”).\n9. **Possessive‑question construction:**\n*Mi ‘oy [Possessed] [Adj] li Possessor e* (e.g., **Mi ‘oy sbatz'i chi'il li Xun e?**).\n10. **Adjective placement:**\na) In a nominal predicate, adjective follows the noun and is optionally followed by **na** (e.g., **jlekil na**).\nb) As a pre‑modifier of a noun, the adjective precedes the noun (e.g., **chan‑vun batz'i k'op** “Tzotzil school”).\n11. **Particles **li** and **e** in non‑interrogative nominal predications:**\nThey can appear to mark the noun‑subject boundary even when no overt verb is present (e.g., **Muk' bu li Xunka e**).\n12. **Temporal adverbials:**\nMay appear clause‑initially (e.g., **Ch'abal**, **nax**, **‘ok'ob**) or clause‑finally after the main clause.\n13. **Pronoun **‘Oy**** – a 1st/2nd person pronoun; person is inferred from discourse.\n---",
+          "metrics": {
+            "corpus_bleu": 2.5,
+            "corpus_chrfpp": 23.58,
+            "corpus_ter": 155.56,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              6.75,
+              1.92
+            ],
+            "sentence_chrfpp": [
+              19.19,
+              27.34,
+              22.95
+            ],
+            "sentence_ter": [
+              80.0,
+              116.67,
+              242.86
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon a good house.",
+              "Yes/no question: Will there be a pot at the sun?",
+              "Soon will be at Mexico? (Note: **lavie** is not in the dictionary; assuming it is a place name “Mexico”)."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 132.04,
+          "accumulated_dict": "'Oy = you (2nd sg pronoun) / dummy existential “there” (context‑dependent)\nMi = yes/no question particle\nBu = where (interrogative)\n‘oy = non‑present tense marker (future/past)\n‘ox = copular / existential verb “to be, to have”\nchenek' = negation (post‑verbal)\nta = locative preposition “at, in”\nana = home\nnax = today\nok'ob = tomorrow\nk'in = party\nJobel = San Cristóbal (place)\nchan‑vun = Tzotzil (adjective)\nbatz'i k'op = school (noun + classifier)\njlekil = good\nna = adjective‑noun linker (as in *jlekil na*)\npo'ot = house\nsbatz'i = friend\nchi'il = real\nXun = Juan (proper name)\nXunka = Juana (proper name)\nMuk' = copular verb used in locative equatives (“is …”)\np'in = his (3rd‑person possessive)\nlavie = pot\nvob = **[UNIDENTIFIED]** (lexical item)\nalekil = **[UNIDENTIFIED]** (lexical item)\nk'usi = **[UNIDENTIFIED]** (lexical item)",
+          "accumulated_rules": "1. **Basic declarative**: *Subject – (Temporal) – (‘oy) – ‘ox – (Neg chenek') – Object/Noun – (ta Place) – (Temporal)*.\n2. **Existential / impersonal clause** can be realized in three ways:\na) Dummy **'Oy** + Noun Phrase + *ta Place* (verb optional).\nb) **‘oy** + Noun + *ta Place* (no dummy).\nc) Noun Phrase alone with a temporal adverb, verb **‘ox** optional.\n3. **Tense/aspect**: **‘oy** precedes the verb (or can replace the verb when the verb is omitted) to mark non‑present time.\n4. **Yes/No question**: Sentence‑initial **Mi**, optionally followed by **‘oy**, then the clause order of (1) or (2).\n5. **Wh‑question**: *Bu – (‘oy) – ‘ox – li – Subject – e – (Temporal)*.\n6. **Negation**: **chenek'** follows the verb (or tense marker) and precedes any locative or object.\n7. **Locative phrase**: *ta Place*; with a classifier the order is *Noun k’op ta Place*.\n8. **Possession**: *Possessed Possessor* (e.g., *jp'in po'ot* “my pot”).\n9. **Possessive‑question**: *Mi ‘oy [Possessed] [Adj] li Possessor e?* (e.g., *Mi ‘oy sbatz'i chi'il li Xun e?*).\n10. **Adjective placement**:\na) Predicative adjective follows the noun, optionally with **na** (*jlekil na*).\nb) Attributive adjective precedes the noun (*chan‑vun batz'i k'op*).\n11. **Particle pair li … e** can appear in nominal predications to mark the subject noun phrase, even without an overt verb.\n12. **Temporal adverbials** may appear clause‑initially or clause‑finally.\n13. **Pronoun ‘Oy** serves either as 2nd‑person pronoun (“you”) or as a dummy existential pronoun (“there”), distinguished by syntactic position.",
+          "metrics": {
+            "corpus_bleu": 13.65,
+            "corpus_chrfpp": 28.22,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              36.56,
+              13.54,
+              5.02
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              53.1,
+              34.31,
+              11.47
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              85.71,
+              90.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Will there be vob at the party?",
+              "Is there a pot in Mexico?",
+              "I will have a school in Jna Volje."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 135.41,
+          "accumulated_dict": "'Oy = you (2nd sg pronoun) / dummy existential “there” (context‑dependent)\nMi = yes/no question particle\nBu = where (interrogative)\n‘oy = non‑present tense marker (future/past)\n‘ox = copular / existential verb “to be, to have”\nchenek' = negation (post‑verbal)\nta = locative preposition “at, in”\nana = home\nnax = today\nok'ob = tomorrow\nk'in = party\nJobel = San Cristóbal (place)\nchan‑vun = Tzotzil (adjective)\nbatz'i k'op = school (noun + classifier)\njlekil = good\nna = adjective‑noun linker (as in *jlekil na*)\npo'ot = house\nsbatz'i = friend\nchi'il = real\nXun = Juan (proper name)\nXunka = Juana (proper name)\nMuk' = copular verb used in locative equatives (“is …”)\np'in = his (3rd‑person possessive)\nlavie = pot\nvob = **[UNIDENTIFIED]** (lexical item)\nalekil = **[UNIDENTIFIED]** (lexical item)\nk'usi = **[UNIDENTIFIED]** (lexical item)",
+          "accumulated_rules": "1. **Basic clause order**: *Subject – (Temporal) – (‘oy) – ‘ox – (Neg chenek') – Object/Noun – (ta Place) – (Temporal)*.\n2. **Existential / impersonal clause** can appear as:\na) Dummy **‘Oy** + Noun Phrase + *ta Place* (verb optional).\nb) **‘oy** + Noun + *ta Place* (no dummy).\nc) Noun Phrase alone with a temporal adverb; **‘ox** optional.\n3. **Tense/aspect**: **‘oy** precedes the verb to mark non‑present time (future or past). Absence of ‘oy defaults to past.\n4. **Yes/No question**: Sentence‑initial **Mi**, optionally followed by **‘oy**, then the clause order of (1) or (2).\n5. **Wh‑question**: *Bu – (‘oy) – ‘ox – li – Subject – e – (Temporal)*.\n6. **Negation**: **chenek'** (or schenek') follows the verb (or tense marker) and precedes any locative or object.\n7. **Locative phrase**: *ta Place*; with a classifier the order is *Noun k’op ta Place*.\n8. **Possession**: *Possessed Possessor* (e.g., *jp'in po'ot* “my pot”).\n9. **Possessive‑question**: *Mi ‘oy [Possessed] [Adj] li Possessor e?* (e.g., *Mi ‘oy sbatz'i chi'il li Xun e?*).\n10. **Adjective placement**:\na) Predicative adjective follows the noun, optionally with **na** (*jlekil na*).\nb) Attributive adjective precedes the noun (*chan‑vun batz'i k'op*).\n11. **Subject‑marker pair** *li … e* can appear in nominal predications to mark the subject noun phrase, even without an overt verb.\n12. **Temporal adverbials** may appear clause‑initially or clause‑finally.\n13. **Muk'** functions as a locative equative copular: *Muk' bu li Xunka e* → “Xunka is nowhere.”\n---",
+          "metrics": {
+            "corpus_bleu": 13.85,
+            "corpus_chrfpp": 28.72,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.38,
+              36.56,
+              13.13,
+              5.0
+            ],
+            "sentence_chrfpp": [
+              23.32,
+              53.1,
+              33.52,
+              12.06
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon alekil corn.",
+              "Will there be vob at the party?",
+              "Is there a K'usi pot in Mexico?",
+              "I am a school in the village."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 62.14,
+          "accumulated_dict": "‘Oy = non‑present (future) marker; also dummy existential pronoun when clause‑initial.\nMi = yes/no question particle.\nBu = where (interrogative).\n‘ox = copular / existential “to be, to have”.\nchenek' / schenek' = negation (post‑verbal).\nta = locative preposition “at, in”.\nana = home.\nnax = today.\nok'ob = tomorrow.\nk'in = party.\nJobel = San Cristóbal (place).\nchan‑vun = Tzotzil (adjective).\nbatz'i k'op = school (noun + classifier).\njlekil = good.\nlekil = good (variant).\nna = adjective‑noun linker (optional).\npo'ot = house.\nsbatz'i = friend.\nchi'il = real.\nXun = Juan (proper name).\nXunka = Juana (proper name).\nMuk' = locative equative copula “is …”.\nli … e = subject‑marker construction (marks the subject noun phrase).\np'in = his (3rd‑person masculine possessor).\njp'in = my (1st‑person possessor).\nvob = music (new lexical item).\n‘ixim = corn.\nRomin = Domingo (proper name).\nCh'abal = soon.\n‘ox (zero‑rated) = present‑time copula (may be omitted).\n---",
+          "accumulated_rules": "1. **Clause order (basic existential):** *[Temporal‑optional] ‘Oy (dummy) – Subject (optional) – ‘ox – (Neg chenek') – Noun/NP – (ta Place) – (Temporal‑optional).*\n2. **Future/non‑present marker** **‘Oy** appears before the copula (or alone as dummy) to signal future; absence defaults to past or present.\n3. **Yes/No questions:** Initial **Mi**, optionally followed by **‘Oy**, then the clause order of (1).\n4. **Wh‑questions (where):** *Bu ‘Oy ‘ox li X e Temporal?* where X is the subject noun phrase.\n5. **Negation:** **chenek' / schenek'** follows the copula (or zero‑copula) and precedes any locative or object.\n6. **Locative phrase:** *ta Place*; with classifier the order is *Noun k’op ta Place*.\n7. **Possession:** *Possessor Possessed* (e.g., *p'in lavie* “his pot”, *jp'in po'ot* “my pot”).\n8. **Possessive‑question:** *Mi ‘Oy [Possessed] [Adj] li Possessor e?* (e.g., *Mi ‘Oy sbatz'i chi'il li Xun e?*).\n9. **Adjective placement:**\na) Predicative after noun, optionally with **na** (*jlekil na po'ot* “good house”).\nb) Attributive before noun (*chan‑vun batz'i k'op* “Tzotzil school”).\nThe linker **na** is optional; adjectives may directly modify nouns.\n10. **Subject‑marker construction:** *li Noun e* marks the subject when no overt verb is present or in equative clauses.\n11. **Temporal adverbials** may appear clause‑initially, clause‑finally, or after the subject‑marker block.\n12. **Locative equative copula:** *Muk' [adverbial] li Noun e* expresses “Noun is [adverbial]” (e.g., *Muk' bu li Xunka e* “Juana is nowhere”).\n13. **Present‑time copula** can be zero‑rated; the clause may consist of negation + noun directly (e.g., *Ch'abal schenek' lavie*).\n---",
+          "metrics": {
+            "corpus_bleu": 20.35,
+            "corpus_chrfpp": 47.89,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              46.71,
+              10.55
+            ],
+            "sentence_chrfpp": [
+              24.23,
+              70.3,
+              43.97
+            ],
+            "sentence_ter": [
+              100.0,
+              50.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will soon have a good house.",
+              "Will there be good music at the party?",
+              "Will there be music at Mexico in his pot?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 98.33,
+          "accumulated_dict": "‘Oy = non‑present (future) marker; also dummy existential pronoun when clause‑initial.\nMi = yes/no question particle.\nBu = where (interrogative).\n‘ox = copular / existential “to be, to have”.\nchenek' / schenek' = negation (post‑verbal).\nta = locative preposition “at, in”.\nana = home.\nnax = today.\nok'ob = tomorrow.\nk'in = party.\nJobel = San Cristóbal (place).\nchan‑vun = Tzotzil (adjective).\nbatz'i k'op = school (noun + classifier).\njlekil = good.\nlekil = good (variant).\nna = adjective‑noun linker (optional).\npo'ot = house.\nsbatz'i = friend.\nchi'il = real.\nXun = Juan (proper name).\nXunka = Juana (proper name).\nMuk' = locative equative copula “is …”.\nli … e = subject‑marker construction (marks the subject noun phrase).\np'in = his (3rd‑person masculine possessor).\njp'in = my (1st‑person possessor).\nvob = music (new lexical item).\n‘ixim = corn.\nRomin = Domingo (proper name).\nCh'abal = soon.\n‘ox (zero‑rated) = present‑time copula (may be omitted).\n---",
+          "accumulated_rules": "1. **Basic existential clause:** \\[Temporal‑optional\\] **‘Oy** (tense marker or dummy) – **‘ox** (copula, may be omitted) – (Neg chenek'/schenek') – Noun/NP – (ta Place) – (Temporal‑optional).\n2. **‘Oy** marks non‑present time (past or future) when it precedes **‘ox**; when it appears clause‑initial without a following **‘ox**, it functions as a dummy existential pronoun.\n3. **Yes/No questions:** **Mi** + (optional **‘Oy**) + clause order of (1).\n4. **Wh‑questions (where):** **Bu** + **‘Oy** (optional) + **‘ox** + **li X e** + (Temporal) ?\n5. **Negation:** **chenek' / schenek'** follows the copula (or appears alone when the copula is omitted) and precedes any locative or object.\n6. **Locative phrase:** **ta Place**; with classifier the order is *Noun k’op ta Place*.\n7. **Possession:** Possessor + Possessed (e.g., *p'in lavie*).\n8. **Possessive‑question:** **Mi** **‘Oy** + Possessed + Adj + **li Possessor e** ?\n9. **Adjective placement:**\na) Predicative after noun, optionally with **na** (*jlekil na po'ot*).\nb) Attributive before noun (*chan‑vun batz'i k’op*).\n10. **Subject‑marker construction:** **li Noun e** marks the subject when no overt verb is present or in equative clauses.\n11. **Temporal adverbials** may appear clause‑initially, clause‑finally, or after the subject‑marker block.\n12. **Equative copula:** **Muk'** + Locative + **li Noun e** expresses “Noun is Locative” (e.g., *Muk' bu li Xunka e*).\n13. **Present‑time copula** can be zero‑rated; the clause may consist of negation + noun directly (e.g., *Ch'abal schenek' lavie*).\n---",
+          "metrics": {
+            "corpus_bleu": 28.96,
+            "corpus_chrfpp": 43.12,
+            "corpus_ter": 60.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              38.5,
+              5.0
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              53.89,
+              15.08
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              42.86,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What is in Mexico today?",
+              "There is a school at jna volje."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 137.96,
+          "accumulated_dict": "‘Oy = non‑present (past/future) marker; also dummy existential pronoun when clause‑initial without ‘ox.\nMi = yes/no question particle.\nBu = where / wh‑locative.\n‘ox = copular / existential “to be, to have”; may be omitted in present.\nchenek' / schenek' = negation (post‑verbal).\nta = locative preposition “at, in”.\nana = home.\nnax = today.\nok'ob = tomorrow.\nk'in = party.\nJobel = San Cristóbal (place).\nchan‑vun = Tzotzil (adjective).\nbatz'i k'op = school (noun + classifier).\njlekil = good.\nlekil = good (variant).\nna = adjective‑noun linker (optional).\npo'ot = house.\nsbatz'i = friend.\nchi'il = real.\nXun = Juan (proper name).\nXunka = Juana (proper name).\nMuk' = locative equative copula “is …”.\nli … e = subject‑marker construction (marks the subject noun phrase).\np'in = his (3rd‑person masculine possessor).\njp'in = my (1st‑person possessor).\nvob = music.\n‘ixim = corn.\nRomin = Domingo (proper name).\nCh'abal = soon.\n‘ox (zero‑rated) = present‑time copula (may be omitted).\njunabi = last year.\nvolje = yesterday.\nachan‑vun = school (noun).\nk'op = talk (noun) / classifier when attached to *batz'i*.\njna = (locative/temporal element in the last sentence, exact gloss unclear).",
+          "accumulated_rules": "1. **Existential clause:** [Temporal‑optional] **‘Oy** (tense marker or dummy) – **‘ox** (copula, may be omitted) – (Neg chenek'/schenek') – Noun/NP – (ta Place) – (Temporal‑optional).\n2. **‘Oy** marks past/future when it precedes **‘ox**; when clause‑initial without **‘ox**, it functions as a dummy existential pronoun.\n3. **Yes/No questions:** **Mi** + (optional **‘Oy**) + clause order of (1).\n4. **Wh‑questions (where):** **Bu** + **‘Oy** (optional) + **‘ox** (optional) + **li X e** (subject) + (Temporal) ?\n5. **Negation:** **chenek' / schenek'** follows the copula (or appears alone when the copula is omitted) and precedes any locative or object.\n6. **Locative phrase:** **ta Place**; with classifier the order is *Noun k’op ta Place*.\n7. **Possession:** Possessor + Possessed (e.g., *p'in lavie*).\n8. **Possessive‑question:** **Mi** **‘Oy** + Possessed + Adj + **li Possessor e** ?\n9. **Adjective placement:**\na) Predicative after noun, optionally with **na** (*jlekil na po'ot*).\nb) Attributive before noun (*chan‑vun batz'i k’op*).\n10. **Subject‑marker construction:** **li Noun e** marks the subject when no overt verb/copula is present, or in equative clauses; it can co‑occur with **‘Oy**.\n11. **Temporal adverbials** may appear clause‑initially, clause‑finally, or after the subject‑marker block.\n12. **Equative copula:** **Muk'** + Locative + **li Noun e** expresses “Noun is Locative”.\n13. **Present‑time copula** can be zero‑rated; the clause may consist of negation + noun directly (e.g., *Ch'abal schenek' lavie*).\n14. **New temporal nouns:** **junabi** “last year”, **volje** “yesterday”.\n15. **New lexical noun:** **achan‑vun** “school” (used without classifier).",
+          "metrics": {
+            "corpus_bleu": 34.59,
+            "corpus_chrfpp": 52.84,
+            "corpus_ter": 53.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              54.11,
+              36.56,
+              28.42
+            ],
+            "sentence_chrfpp": [
+              24.83,
+              75.62,
+              54.02,
+              50.96
+            ],
+            "sentence_ter": [
+              100.0,
+              33.33,
+              42.86,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The corn will be good soon.",
+              "Will there be music at the party?",
+              "What did you have in Mexico today?",
+              "There was a talk at the school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 86.96,
+          "accumulated_dict": "‘Oy = past/future tense marker; also dummy existential pronoun when clause‑initial without ‘ox.\nMi = yes/no question particle.\nBu = where / wh‑locative; also “nowhere” in equative clauses.\n‘ox = copular / existential “to be, to have”; may be omitted in present.\nchenek' / schenek' / schi'il = negation (post‑verbal).\nta = locative preposition “at, in”; can also introduce a possessor phrase after a noun.\nana = home.\nnax = today.\nok'ob = tomorrow.\nk'in = party.\nJobel = San Cristóbal (place).\nchan‑vun = Tzotzil (adjective).\nbatz'i k'op = school (noun + classifier).\njlekil = good.\nlekil = good (variant).\nna = adjective‑noun linker (optional).\npo'ot = pot/house (noun).\nsbatz'i = friend.\nchi'il = real.\nXun = Juan (proper name).\nXunka = Juana (proper name).\nMuk' = equative copula “is …”.\nli … e = subject‑marker construction (marks the subject noun phrase).\np'in = his (3rd‑person masculine possessor).\njp'in = my (1st‑person possessor).\nvob = music.\n‘ixim = corn.\nRomin = Domingo (proper name).\nCh'abal = soon.\njunabi = last year.\nvolje = yesterday.\nachan‑vun = school (noun without classifier).\nk'op = talk (noun) / classifier when attached to *batz'i*.\nK'usi = you (sg) pronoun.\n‘ox (zero‑rated) = present‑time copula (may be omitted).\n[DELETED: none – all entries retained, only clarified.]\n---",
+          "accumulated_rules": "1. **Existential / equative clause:** Optional temporal → *‘Oy* (tense) → optional *‘ox* (copula) → optional negation → NP (noun or adjective‑noun) → optional locative *ta Place* → optional temporal. Zero‑rated *‘ox* is allowed in present.\n2. **‘Oy** marks past/future when preceding *‘ox*; when clause‑initial without *‘ox* it functions as a dummy existential pronoun.\n3. **Yes/No questions:** *Mi* + optional *‘Oy* + clause order of (1).\n4. **Wh‑questions (where):** *Bu* + optional *‘Oy* + optional *‘ox* + *li X e* (subject‑marker) + optional temporal → “Where is X …?”\n5. **Negation:** *chenek' / schenek' / schi'il* follows the copula (or appears alone when copula omitted) and precedes any locative or object.\n6. **Locative phrase:** *ta Place*; with classifier the order is *Noun k’op ta Place*.\n7. **Possession:** Possessor can follow *ta* after the possessed noun (*Noun ta Possessor*), or possessor can precede possessed (*Possessor Possessed*) as in *p'in lavie*.\n8. **Possessive‑question:** *Mi* *‘Oy* + Possessed + Adj (optional) + *li Possessor e* ? (e.g., “Does Juan have a real friend?”).\n9. **Adjective placement:**\na) Predicative after noun, optionally linked by *na* (*jlekil na po'ot*).\nb) Attributive before noun (*chan‑vun batz'i k’op*).\n10. **Subject‑marker construction:** *li Noun e* marks the subject when no overt verb/copula is present, or in equative clauses; it can co‑occur with *‘Oy* and with negation.\n11. **Temporal adverbials** may appear clause‑initial, clause‑final, or after the subject‑marker block.\n12. **Equative copula:** *Muk'* + (optional locative) + *li Noun e* expresses “Noun is Locative”.\n13. **Present‑time copula** can be zero‑rated; the clause may consist of negation + noun directly (e.g., *Ch'abal schenek' lavie*).\n14. **Classifier usage:** *k'op* attaches to *batz'i* to form “school”; when standing alone *k'op* means “talk”.\n15. **Pronouns:** Personal pronouns (e.g., *K'usi*) can appear before the clause, taking the subject role.\n[DELETED: none – all previous rules retained, with minor clarifications.]\n---",
+          "metrics": {
+            "corpus_bleu": 22.68,
+            "corpus_chrfpp": 43.32,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              54.11,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              24.23,
+              75.62,
+              27.98
+            ],
+            "sentence_ter": [
+              100.0,
+              33.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon I will have a good house.",
+              "Will there be music at the party?",
+              "Did you have a pot in Mexico?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 34.59,
+        "corpus_chrfpp": 52.84,
+        "corpus_ter": 53.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.64,
+          54.11,
+          36.56,
+          28.42
+        ],
+        "sentence_chrfpp": [
+          24.83,
+          75.62,
+          54.02,
+          50.96
+        ],
+        "sentence_ter": [
+          100.0,
+          33.33,
+          42.86,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The corn will be good soon.",
+          "Will there be music at the party?",
+          "What did you have in Mexico today?",
+          "There was a talk at the school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 13
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 62.35,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Basic clause order:** *Subject – Copula – (Negation) – Noun – Locative‑Phrase – Temporal‑Phrase.*\n- Example: **'Oy 'ox 'ixim ta ana nax** → “You are corn at home today.” (interpreted as “You had corn at home today.”)\n2. **Existential / Impersonal constructions** use a dummy pronoun **'Oy** followed by the copula and the noun phrase, e.g., **'Oy chan‑vun ta batz'i k'op ta Jobel** → “There is a Tzotzil school in San Cristóbal.”\n3. **Future questions** are formed with the particle **Mi** (or **Bu** for “where”) + optional dummy **'Oy** + copula **'ox** + future marker **li** before the subject noun, ending with the temporal noun **'ok'ob** (“tomorrow”).\n- Structure: *Question‑particle – (dummy) – Copula – Future‑marker – Subject – Temporal‑noun?*\n4. **Negation** is expressed by the particle **chenek'** placed directly before the noun that is being negated.\n5. **Temporal adverbs** (e.g., **nax** “today”, **'ok'ob** “tomorrow”) appear at the end of the clause, after the locative phrase.\n6. **Locative preposition** **ta** introduces a location noun phrase; the location noun follows directly (e.g., **ta ana** “at home”, **ta Jobel** “in San Cristóbal”).\n7. **Proper names** function as nouns and do not require additional case marking.",
+          "metrics": {
+            "corpus_bleu": 2.36,
+            "corpus_chrfpp": 19.14,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              6.87,
+              5.93,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              31.0,
+              10.72,
+              26.33,
+              13.46
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              85.71,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You had corn at home today.",
+              "Where will Domingo be tomorrow?",
+              "Soon there will be no haricots in my pot.",
+              "Will there be a party in San Cristóbal tomorrow?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 31.2,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Question formation** – The particle **Mi** (or **Bu** for “where”) initiates a clause; it is followed by the dummy pronoun **'oy**, the copular/auxiliary verb, the future marker **li** (if the clause is future), then the subject noun, and finally the interrogative particle **e**.\n2. **Future marker** – **li** obligatorily precedes the subject noun when the clause is future‑tense; it does not appear in present‑time clauses.\n3. **Copular vs. Existential verbs** –\n- **'ox** (from the core grammar) is the generic copula used in existential constructions.\n- **e** functions as a present‑time copular particle linking a subject to a predicate adjective or noun.\n- **Muk'** is a present‑time existential verb used with locative adverbs (e.g., “nowhere”).\n4. **Negation of location** – The locative adverb **bu** encodes a negative spatial meaning (“nowhere”). It replaces a regular locative noun phrase and does not combine with the particle **chenek'** (which negates nouns).\n5. **Derivation of feminine proper names** – Adding the suffix **‑ka** to a masculine name root yields the corresponding feminine form (e.g., **Xun** → **Xunka**).\n6. **Word order in questions** – *Mi* + *'oy* + *verb* + *li* (if future) + *subject* + *e*; the interrogative particle **e** caps the clause.",
+          "metrics": {
+            "corpus_bleu": 3.84,
+            "corpus_chrfpp": 10.99,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              13.51,
+              8.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Does Juan have a real friend?",
+              "Juana is nowhere."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 5,
+          "latency_s": 68.61,
+          "accumulated_dict": "- **Oy** – first‑person pronoun “I”\n- **'ox** – copular / existential verb “to have / there is”\n- **jlekil** – adjective “good”\n- **na** – temporal adverb “soon”\n- **po'ot** – noun “house”\n- **Mi** – interrogative particle introducing a question\n- **'oy** – dummy pronoun used in questions (non‑referential)\n- **chan‑vun** – noun “school”\n- **ta** – locative preposition “in / at”\n- **Jobel** – proper name “San Cristóbal”\n- **junabi** – temporal noun “last year”\n- **ixim** – noun “corn”\n- **p'in** – noun “pot”\n- **lavie** – noun “today”\n- **Ch'abal** – third‑person pronoun “he”\n- **schenek'** – noun‑negation particle “no / not”\n- **lavlav** – noun “haricots / beans”\n- **lekil** – adjective “good” (used with nouns other than “house”)\n- **vob** – noun “music”\n- **k'in** – noun “party”",
+          "accumulated_rules": "1. **Question clause structure**:\n*Mi* + *'oy* + *verb* + *li* (future marker, optional) + *subject* + *e* (interrogative cap).\nThe dummy pronoun *'oy* occupies the subject position; the real subject follows the verb (or the future marker *li* when present).\n2. **Future marker**: *li* obligatorily appears immediately before the subject noun in clauses that are future‑tense. It is absent in present‑time clauses.\n3. **Copular / existential verb**:\n- *'ox* functions as the generic copula for existential statements (“there is/are”, “to have”).\n- In present‑time clauses the particle *e* can serve as a copular link between a subject and a predicate adjective or noun.\n- *Muk'* (not attested in the current data) is a present‑time existential verb used with locative adverbs.\n4. **Negation of nouns**: The particle *schenek'* precedes a noun to negate it (“no …”). It does not combine with the locative negator *bu*.\n5. **Word order**: In declarative clauses the order is generally **Subject – Verb – (Future marker) – Predicate(s) – (Locative phrase)**. Adjectives follow the copular verb and precede the noun they modify.\n6. **Locative preposition**: *ta* introduces a locative complement (e.g., “in”, “at”). The locative noun follows it.\n7. **Proper‑name gender derivation** (not needed for the current data): Adding the suffix *‑ka* to a masculine name yields the feminine counterpart.",
+          "metrics": {
+            "corpus_bleu": 4.16,
+            "corpus_chrfpp": 19.47,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              9.29,
+              7.49,
+              3.53
+            ],
+            "sentence_chrfpp": [
+              24.23,
+              30.1,
+              17.67,
+              10.5
+            ],
+            "sentence_ter": [
+              100.0,
+              116.67,
+              71.43,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will soon have a good house.",
+              "Was there a school in San Cristóbal last year?",
+              "Is there corn in his pot?",
+              "He has no haricots today."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 61.65,
+          "accumulated_dict": "- **Oy** – first‑person pronoun “I”\n- **'ox** – copular / existential verb “to have / there is”\n- **jlekil** – adjective “good”\n- **na** – temporal adverb “soon”\n- **po'ot** – noun “house”\n- **Mi** – interrogative particle introducing a question\n- **'oy** – dummy pronoun used in questions (non‑referential)\n- **chan‑vun** – noun “school”\n- **ta** – locative preposition “in / at”\n- **Jobel** – proper name “San Cristóbal”\n- **junabi** – temporal noun “last year”\n- **ixim** – noun “corn”\n- **p'in** – noun “pot”\n- **lavie** – noun “today”\n- **Ch'abal** – third‑person pronoun “he”\n- **schenek'** – noun‑negation particle “no / not”\n- **lavlav** – noun “haricots / beans”\n- **lekil** – adjective “good” (used with nouns other than “house”)\n- **vob** – noun “music”\n- **k'in** – noun “party”",
+          "accumulated_rules": "1. **Basic clause order (declarative)**:\n**Subject – Verb – (Future marker *li*) – Predicate(s) – (Locative phrase)**.\n- Adjectives follow the copular verb and precede the noun they modify.\n2. **Question clause structure (Mi‑questions)**:\n**Mi + 'oy + Verb + (Future marker *li*) + Subject + e** (interrogative cap).\n- The dummy pronoun *'oy* occupies the canonical subject slot; the real subject follows the verb (or the future marker when present).\n3. **Future marker**: *li* appears **immediately before the subject noun** in clauses that are future‑tense; it is absent in present‑time clauses.\n4. **Existential / copular verb**:\n- *'ox* is the generic copula for existential statements (“there is/are”, “to have”).\n- In present‑time clauses the particle *e* can serve as a copular link between a subject and a predicate adjective or noun.\n5. **Negation of nouns**: The particle **schenek'** precedes a noun to negate it (“no …”). It does **not** combine with the locative negator *bu*.\n6. **Locative preposition**: *ta* introduces a locative complement; the locative noun follows it.\n7. **Interrogative adverb “where”**: **Bu** functions as a locative question word and occupies the clause‑initial position, followed by the dummy pronoun *'oy* and the rest of the clause.\n8. **Second‑person question pronoun**: **K'usi** is the interrogative pronoun “you” used in wh‑questions; it behaves like a regular noun phrase and appears after the dummy *'oy* in the Mi‑question pattern.\n9. **Past‑tense verb form**: **volje** appears in past‑tense contexts where *'ox* would be used for present; its position follows the same Subject‑Verb order.\n---",
+          "metrics": {
+            "corpus_bleu": 2.88,
+            "corpus_chrfpp": 15.39,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              8.17,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              19.45,
+              22.09,
+              7.02
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "What did you have at school yesterday?",
+              "Where was the talk today?",
+              "Last year Domingo had no friend."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?"
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.16,
+        "corpus_chrfpp": 19.47,
+        "corpus_ter": 96.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.27,
+          9.29,
+          7.49,
+          3.53
+        ],
+        "sentence_chrfpp": [
+          24.23,
+          30.1,
+          17.67,
+          10.5
+        ],
+        "sentence_ter": [
+          100.0,
+          116.67,
+          71.43,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I will soon have a good house.",
+          "Was there a school in San Cristóbal last year?",
+          "Is there corn in his pot?",
+          "He has no haricots today."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 15,
+          "latency_s": 290.5,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 196.24,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 33.97,
+          "metrics": {
+            "corpus_bleu": 2.36,
+            "corpus_chrfpp": 19.14,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              6.87,
+              5.93,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              31.0,
+              10.72,
+              26.33,
+              13.46
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              85.71,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You had corn at home today.",
+              "Where will Domingo be tomorrow?",
+              "Soon there will be no haricots in my pot.",
+              "Will there be a party in San Cristobal tomorrow?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.36,
+        "corpus_chrfpp": 19.14,
+        "corpus_ter": 89.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.64,
+          6.87,
+          5.93,
+          4.52
+        ],
+        "sentence_chrfpp": [
+          31.0,
+          10.72,
+          26.33,
+          13.46
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          85.71,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You had corn at home today.",
+          "Where will Domingo be tomorrow?",
+          "Soon there will be no haricots in my pot.",
+          "Will there be a party in San Cristobal tomorrow?"
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4
+      },
+      "delta": {
+        "bleu_delta": 2.36,
+        "chrf_delta": 19.14,
+        "ter_delta": -10.71,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 3.09,
+      "chrf": 6.55,
+      "ter": 120.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “The fire is burning.”",
+      "reference": [
+        "You have no good corn."
+      ]
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 34.59,
+      "best_chrf": 52.84,
+      "best_ter": 53.57,
+      "best_em": 0.0,
+      "num_steps": 14,
+      "best_hypotheses": [
+        "The corn will be good soon.",
+        "Will there be music at the party?",
+        "What did you have in Mexico today?",
+        "There was a talk at the school yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "best_step": 13
+    },
+    "step_by_step": {
+      "best_bleu": 4.16,
+      "best_chrf": 19.47,
+      "best_ter": 96.43,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "I will soon have a good house.",
+        "Was there a school in San Cristóbal last year?",
+        "Is there corn in his pot?",
+        "He has no haricots today."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "self_correction": {
+      "best_bleu": 2.36,
+      "best_chrf": 19.14,
+      "best_ter": 89.29,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "You had corn at home today.",
+        "Where will Domingo be tomorrow?",
+        "Soon there will be no haricots in my pot.",
+        "Will there be a party in San Cristobal tomorrow?"
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "delta": {
+        "bleu_delta": 2.36,
+        "chrf_delta": 19.14,
+        "ter_delta": -10.71,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

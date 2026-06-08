@@ -1,0 +1,1552 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T10:00:27.673209",
+    "puzzle_id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 3,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "nuta sykaru nykanawate uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "nykanawate nysykaru uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "pita ãtary ĩpurãã",
+        "target": "You_{sg} drank the water."
+      },
+      {
+        "source": "kyky mynaru nyherẽka sytumukary",
+        "target": "The man brought my blood to the woman."
+      },
+      {
+        "source": "herẽkatxi uãtary sytu",
+        "target": "The woman drank the blood."
+      },
+      {
+        "source": "nhiximakyte pixinhikary",
+        "target": "You_{sg} remembered my fish (sg)."
+      },
+      {
+        "source": "pitxiparyte umynary kykymukary",
+        "target": "She brought your_{sg} banana to the man."
+      },
+      {
+        "source": "hãtakuru xinhikary naikute",
+        "target": "The girl remembered my house."
+      },
+      {
+        "source": "sytu apy ysykanu nutamukary kyky",
+        "target": "The man gave the woman’s bone to me."
+      },
+      {
+        "source": "nhĩpurããte nãtary",
+        "target": "I drank my water."
+      },
+      {
+        "source": "kywĩtxi apukary",
+        "target": "He found the head."
+      },
+      {
+        "source": "ywa mynanu kyky uky nutamukary",
+        "target": "He brought the man’s eye to me."
+      },
+      {
+        "source": "ximaky nhikary apĩtxi",
+        "target": "The fish (sg) ate the bone."
+      },
+      {
+        "source": "hãtakuru txiparyte napukary",
+        "target": "I found the girl’s banana."
+      },
+      {
+        "source": "ximaky kywy inhikary",
+        "target": "He ate the fish’s (sg) head."
+      },
+      {
+        "source": "hãtakuru uapukaru",
+        "target": "She found the girl."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "uwa xinhikaru sytu",
+        "target": "She remembered the woman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "txipary nhinhikary",
+        "target": "I ate the banana.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kyky aikute pysykary ywamukary",
+        "target": "You_{sg} gave the man’s house to him.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "uwa xinhikaru sytu",
+      "reference": "She remembered the woman.",
+      "hypothesis": "**Possible translation:** “You are beautiful, my friend.”  \n\n*Note: The original phrase “uwa xinhikaru sytu” does not correspond directly to any widely‑known language, so the translation is an educated guess based on the sounds and possible word fragments.*",
+      "latency_s": 4.43,
+      "metrics": {
+        "corpus_bleu": 0.87,
+        "corpus_chrfpp": 7.79,
+        "corpus_ter": 900.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.87
+        ],
+        "sentence_chrfpp": [
+          7.79
+        ],
+        "sentence_ter": [
+          900.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “You are beautiful, my friend.”  \n\n*Note: The original phrase “uwa xinhikaru sytu” does not correspond directly to any widely‑known language, so the translation is an educated guess based on the sounds and possible word fragments.*"
+        ],
+        "references": [
+          "She remembered the woman."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 57.5,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 50.44,
+          "accumulated_dict": "nuta = I (1st‑person pronoun)\nsykaru = give (verb, bare)\nnysykaru = give (verb inflected for 1st‑person subject)\nnykanawate = canoe (object)\nuwamukary = to her (dative phrase)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object – IndirectObject.\n2. The verb can take a 1st‑person subject agreement prefix (n‑), producing a form that allows the explicit pronoun to be omitted.\n3. When the subject pronoun is omitted, the remaining constituents keep their relative order: Object – Verb – IndirectObject.\n4. The dative phrase “to her” appears as a single lexical item ending in –kary.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.46,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              1.52,
+              2.23,
+              3.22
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "sykaru",
+              "nysykaru",
+              "nykanawate"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 40.78,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nnysykaru = give (verb with 1st‑person agreement prefix)\nãtary = drink (verb, bare)\nnykanawate = canoe (noun)\nĩpurãã = water (noun)\nuwamukary = to her (dative phrase)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object – IndirectObject (S‑V‑O‑IO) when the subject pronoun is overt.\n2. When the subject pronoun is omitted, the verb takes a 1st‑person agreement prefix **n‑** (as in **nysykaru**) and the remaining constituents appear in the order Object – Verb – IndirectObject (O‑V‑IO).\n3. The dative phrase appears as a single lexical item ending in **‑kary**.",
+          "metrics": {
+            "corpus_bleu": 2.99,
+            "corpus_chrfpp": 15.75,
+            "corpus_ter": 126.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              15.7,
+              20.78,
+              13.0
+            ],
+            "sentence_ter": [
+              150.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 72.82,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nn‑ = 1st‑person agreement prefix on verbs (used when the subject pronoun is omitted)\nãtary = drink (verb, bare)\nny‑ = 1st‑person possessive prefix on nouns (“my”)\nnykanawate = my canoe (canoe + ny‑)\nĩpurãã = water (noun)\nuwamukary = to her (dative phrase)\nkyky = man (noun)\nmynaru = bring (verb, bare)\nherẽka = blood (noun)\nnyherẽka = my blood (blood + ny‑)\nsytu = woman (noun)\n‑kary = dative suffix meaning “to …”",
+          "accumulated_rules": "1. Basic clause order with an overt subject pronoun is **Subject – Verb – Object – IndirectObject** (S‑V‑O‑IO).\n2. When the subject pronoun is omitted, the verb takes the 1st‑person agreement prefix **n‑**, and the clause order becomes **Object – Verb – IndirectObject** (O‑V‑IO).\n3. The dative phrase is a single lexical item formed by attaching the suffix **‑kary** to a noun or pronoun.\n4. The prefix **ny‑** attaches to a noun to indicate 1st‑person possession (“my …”).",
+          "metrics": {
+            "corpus_bleu": 9.25,
+            "corpus_chrfpp": 24.58,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              10.68,
+              4.84
+            ],
+            "sentence_chrfpp": [
+              40.58,
+              7.1,
+              22.01
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Give the child to the woman.",
+              "Give it to him.",
+              "The man gave it to the child and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 91.36,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nn‑ = 1st‑person agreement prefix on verbs (appears before a vowel as **n‑y‑**)\nãtary = drink (verb, bare)\nu‑ = neutral/3rd‑person verb prefix (used when the subject is post‑verbal)\nmynaru = bring (verb, bare)\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\n‑kary = dative suffix “to …”\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on nouns used as objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)",
+          "accumulated_rules": "1. **Basic clause order with an overt subject pronoun**: Subject – Verb – Object – IndirectObject (S‑V‑O‑IO).\n2. **When the subject pronoun is omitted and the subject is 1st person**, the verb takes the prefix **n‑** and the clause order becomes Object – Verb – IndirectObject (O‑V‑IO).\n3. **Dative formation**: attach the suffix **‑kary** to a noun; if the noun ends in a vowel, insert a linking **m**, yielding **‑mukary**.\n4. **Possession**: the prefix **ny‑** attaches to a noun to indicate “my …”.\n5. **Definite/accusative marking on objects**: a noun used as a bare object may take the suffix **‑txi**.\n6. **Third‑person post‑verbal subjects**: when the subject is a third‑person noun placed after the verb, the verb takes the neutral prefix **u‑** and the clause order is Object – Verb – Subject (O‑V‑S).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 85.91,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nn‑ = 1st‑person agreement prefix on verbs (appears before a vowel as **n‑y‑**)\nãtary = drink (verb, bare)\nu‑ = neutral/3rd‑person verb prefix (used when the subject is post‑verbal)\nmynaru = bring (verb, bare)\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\n‑kary = dative suffix “to …”\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on nouns used as objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)",
+          "accumulated_rules": "1. **Basic clause order with an overt subject pronoun**: Subject – Verb – Object – IndirectObject (S‑V‑O‑IO).\n2. **When the subject pronoun is omitted**, the verb takes the prefix **n‑** (realised as **ny‑** before a consonant, **n‑y‑** before a vowel); the clause order becomes Object – Verb – IndirectObject (O‑V‑IO). The person of the omitted subject is inferred from context.\n3. **Dative formation**: attach **‑kary** to a noun; if the noun ends in a vowel, insert **m**, yielding **‑mukary**.\n4. **Possession**: the prefix **ny‑** attaches to a noun to indicate “my …”.\n5. **Definite/accusative marking on objects**: a bare object may take the suffix **‑txi**.\n6. **Third‑person post‑verbal subjects**: when the subject is a third‑person noun placed after the verb, the verb takes the neutral prefix **u‑** and the clause order is Object – Verb – Subject (O‑V‑S).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 89.02,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nãtary = drink (verb, bare)\nmynaru = bring (verb, bare)\nhiximak = remember (verb, bare)\nn‑ = 1st‑person omitted‑subject prefix on verbs (realised as **ny‑** before a consonant, **n‑y‑** before a vowel)\nu‑ = neutral/3rd‑person verb prefix used when the subject follows the verb\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\npi‑ = 2nd‑person singular possessive prefix on nouns (“your …”)\n‑kary = dative suffix “to …” (after consonant)\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\npitxiparyte = your banana (banana + pi‑ + –te)\npixinhikary = your fish (fish + pi‑ + –kary)\naikute = (verb root unknown – placeholder)\npysykary = fish (noun) + dative\nywamukary = to the woman (alternative dative form)\ntxipary = banana (banana + –txi, accusative)\nnhiximakyte = I remembered (n‑ + hiximak + –te)",
+          "accumulated_rules": "1. **Basic clause order with an overt subject pronoun**: Subject – Verb – Object – IndirectObject (S‑V‑O‑IO).\n2. **When the subject pronoun is omitted**, the verb takes the prefix **n‑** (realised as **ny‑** before a consonant, **n‑y‑** before a vowel); the clause order becomes Object – Verb – IndirectObject (O‑V‑IO). The person of the omitted subject is inferred from context.\n3. **Dative formation**: attach **‑kary** to a noun; if the noun ends in a vowel, insert **m**, yielding **‑mukary**.\n4. **Possession**: the prefix **ny‑** marks “my …”; the prefix **pi‑** marks “your (sg) …”.\n5. **Definite/accusative marking on objects**: a bare object may take the suffix **‑txi**.\n6. **Third‑person post‑verbal subjects**: when the subject is a third‑person noun placed after the verb, the verb takes the neutral prefix **u‑** and the clause order is Object – Verb – Subject (O‑V‑S).",
+          "metrics": {
+            "corpus_bleu": 5.9,
+            "corpus_chrfpp": 30.21,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              15.62,
+              4.06
+            ],
+            "sentence_chrfpp": [
+              28.55,
+              60.02,
+              17.24
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman sees her.",
+              "I gave the banana to her.",
+              "The man bought the fish for the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 109.19,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nãtary = drink (verb, bare)\nmynaru = bring (verb, bare)\nhiximak = remember (verb, bare)\nn‑ = 1st‑person omitted‑subject prefix on verbs (realised as **ny‑** before a consonant, **n‑y‑** before a vowel)\nu‑ = neutral/3rd‑person verb prefix (used when the subject follows the verb or is omitted)\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\npi‑ = 2nd‑person singular possessive prefix on nouns (“your …”)\n‑kary = dative suffix “to …” (after consonant)\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\npitxiparyte = your banana (banana + pi‑ + –te)\npixinhikary = your fish (fish + pi‑ + –kary)\ntxipary = banana (banana + –txi, accusative)\npysykary = fish + dative\nywamukary = to the woman (alternative dative form)\nnhiximakyte = I remembered (n‑ + hiximak + –te)\naikute = (verb root unknown – placeholder)\nhãtakuru = girl (noun)\nxinhikary = (noun + ‑kary, lexical meaning pending)\nnaikute = (verb root unknown – placeholder)",
+          "accumulated_rules": "1. **Basic clause order with an overt subject pronoun**: Subject – Verb – Object – IndirectObject (S‑V‑O‑IO).\n2. **When the subject pronoun is omitted**, the verb takes the prefix **n‑** (realised as **ny‑** before a consonant, **n‑y‑** before a vowel); the clause order becomes Object – Verb – IndirectObject (O‑V‑IO). The person of the omitted subject is inferred from context.\n3. **Dative formation**: attach **‑kary** to a noun; if the noun ends in a vowel, insert **m**, yielding **‑mukary**.\n4. **Possession**: the prefix **ny‑** marks “my …”; the prefix **pi‑** marks “your (sg) …”.\n5. **Definite/accusative marking on objects**: a bare object may take the suffix **‑txi**.\n6. **Third‑person post‑verbal subjects or omitted third‑person subjects**: when the subject is a third‑person noun placed after the verb, or when the subject is omitted but understood as third person, the verb takes the neutral prefix **u‑** and the clause order is Object – Verb – Subject (or Object – Verb – IndirectObject).",
+          "metrics": {
+            "corpus_bleu": 10.06,
+            "corpus_chrfpp": 27.04,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              26.27,
+              10.68,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              46.61,
+              20.81,
+              17.74
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She gave her to the woman.",
+              "Banana to my fish.",
+              "The man remembered the fish to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 105.46,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nãtary = drink (verb, bare)\nmynaru = bring (verb, bare)\nhiximak = remember (verb, bare)\nn‑ = 1st‑person omitted‑subject prefix on verbs (realised as **ny‑** before a consonant, **n‑y‑** before a vowel)\nu‑ = neutral/3rd‑person verb prefix (used when the subject follows the verb or is omitted)\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\npi‑ = 2nd‑person singular possessive prefix on nouns (“your …”)\n‑kary = dative suffix “to …” (after consonant)\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\npitxiparyte = your banana (banana + pi‑ + –te)\npixinhikary = your fish (fish + pi‑ + –kary)\ntxipary = banana (banana + –txi, accusative)\npysykary = fish + dative\nywamukary = to the woman (alternative dative form)\nnhiximakyte = I remembered (n‑ + hiximak + –te)\naikute = (verb root unknown – placeholder)\nhãtakuru = girl (noun)\nxinhikary = (noun + ‑kary, lexical meaning pending)\nnaikute = (verb root unknown – placeholder)",
+          "accumulated_rules": "1. **Clause order with overt pronoun subject:** Subject – Verb – Object – IndirectObject (S‑V‑O‑IO).\n2. **Clause order with omitted subject (1st sg or 2nd sg inferred):** Object – Verb – IndirectObject (O‑V‑IO); the verb takes the omitted‑subject prefix **n‑** (realised as **ny‑** before a consonant, **n‑y‑** before a vowel).\n3. **Clause order with overt third‑person noun subject:** Subject – Verb – Object – IndirectObject (S‑V‑O‑IO); the verb is bare (no prefix).\n4. **Clause order with post‑verbal third‑person subject or omitted third‑person subject:** Object – Verb – Subject (or Object – Verb – IndirectObject); the verb takes the neutral prefix **u‑**.\n5. **Dative formation:** attach **‑kary** to a noun ending in a consonant; attach **‑mukary** after a vowel.\n6. **Possession:** prefix **ny‑** = “my”, prefix **pi‑** = “your (sg)”.\n7. **Definite/accusative marking:** suffix **‑txi** on objects that lack a possessive prefix.\n8. **Genitive/possessive linker:** suffix **‑kanu** (or similar) attaches to a possessed noun to indicate “X’s Y”.\n---",
+          "metrics": {
+            "corpus_bleu": 5.62,
+            "corpus_chrfpp": 31.12,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.88,
+              14.13,
+              3.98
+            ],
+            "sentence_chrfpp": [
+              57.39,
+              25.34,
+              16.91
+            ],
+            "sentence_ter": [
+              25.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "she remembered the girl",
+              "banana your fish",
+              "the man remembered the fish to the woman"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 89.58,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nãtary = drink (verb, bare)\nmynaru = bring (verb, bare)\nhiximak = remember (verb, bare)\nn‑ = 1st‑person omitted‑subject prefix on verbs (realised as **ny‑** before a consonant, **n‑y‑** before a vowel)\nu‑ = neutral/3rd‑person verb prefix (used when the subject follows the verb or is omitted)\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\npi‑ = 2nd‑person singular possessive prefix on nouns (“your …”)\n‑kary = dative suffix “to …” (after consonant)\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\npitxiparyte = your banana (banana + pi‑ + –te)\npixinhikary = your fish (fish + pi‑ + –kary)\ntxipary = banana (banana + –txi, accusative)\npysykary = fish + dative\nywamukary = to the woman (alternative dative form)\nnhiximakyte = I remembered (n‑ + hiximak + –te)\naikute = (verb root unknown – placeholder)\nhãtakuru = girl (noun)\nxinhikary = (noun + ‑kary, lexical meaning pending)\nnaikute = (verb root unknown – placeholder)",
+          "accumulated_rules": "1. **Subject‑initial clause with overt pronoun or noun:** S – V – O – IO. The verb is bare (no prefix).\n2. **Subject‑omitted clause (1st sg or 2nd sg inferred):** O – V – IO. The verb takes the 1st‑person omitted‑subject prefix **n‑** (realised as **ny‑** before a consonant, **n‑y‑** before a vowel).\n3. **Clause with overt third‑person noun subject:** same order as (1); verb is bare.\n4. **Clause where a third‑person subject follows the verb or is omitted:** O – V – (Subject/IO). The verb takes the neutral prefix **u‑**.\n5. **Dative formation:** attach **‑kary** to a noun ending in a consonant; attach **‑mukary** after a vowel. Pronoun dative forms are pronoun + ‑mukary (e.g., *nutamukary* “to me”).\n6. **Possession:** prefix **ny‑** = “my”; prefix **pi‑** = “your (sg)”. Before a vowel, **ny‑** surfaces as *nhi‑/nh‑*.\n7. **Accusative/definite marking:**\n- **‑txi** on objects without a possessive prefix.\n- **‑te** on possessed objects (possessive prefix + **‑te**).\n8. **Genitive/possessive linker:** suffix **‑kanu** attaches to the possessed noun; the possessor noun precedes it (e.g., *sytu ysykanu* “woman’s bone”).\n---",
+          "metrics": {
+            "corpus_bleu": 6.93,
+            "corpus_chrfpp": 25.0,
+            "corpus_ter": 126.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.75,
+              4.46,
+              4.5
+            ],
+            "sentence_chrfpp": [
+              38.32,
+              23.34,
+              17.17
+            ],
+            "sentence_ter": [
+              150.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl gave the house to the woman.",
+              "Your banana (ACC) your fish (DAT).",
+              "The man remembered the fish to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 140.4,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg) (2nd‑person singular pronoun)\nsykaru = give (verb, bare)\nãtary = drink (verb, bare)\nmynaru = bring (verb, bare)\nhiximak = remember (verb, bare)\nn‑ = 1st‑person omitted‑subject prefix on verbs (realised as **ny‑** before a consonant, **n‑y‑** before a vowel)\nu‑ = neutral/3rd‑person verb prefix (used when the subject follows the verb or is omitted)\nny‑ = 1st‑person possessive prefix on nouns (“my …”)\npi‑ = 2nd‑person singular possessive prefix on nouns (“your …”)\n‑kary = dative suffix “to …” (after consonant)\n‑mukary = dative suffix after a vowel (allomorph of **‑kary**)\n‑txi = definite/accusative marker on objects without possessive prefix\nkyky = man (noun)\nsytu = woman (noun)\nherẽka = blood (noun)\nĩpurãã = water (noun)\nnykanawate = my canoe (canoe + ny‑)\nnyherẽka = my blood (blood + ny‑)\nuwamukary = to her (dative phrase)\nsytumukary = to the woman (dative phrase)\npitxiparyte = your banana (banana + pi‑ + –te)\npixinhikary = your fish (fish + pi‑ + –kary)\ntxipary = banana (banana + –txi, accusative)\npysykary = fish + dative\nywamukary = to the woman (alternative dative form)\nnhiximakyte = I remembered (n‑ + hiximak + –te)\naikute = (verb root unknown – placeholder)\nhãtakuru = girl (noun)\nxinhikary = (noun + ‑kary, lexical meaning pending)\nnaikute = (verb root unknown – placeholder)",
+          "accumulated_rules": "1. **Clause type 1 (overt subject):** Subject – Verb – Object – Indirect Object. The verb is bare (no subject prefix).\n2. **Clause type 2 (1st‑sg omitted subject, overt object):** Object – Verb – Indirect Object. The verb takes the 1st‑sg omitted‑subject prefix **ny‑** before a consonant, **nhi‑** before a vowel.\n3. **Clause type 3 (overt third‑person subject):** same order as (1); verb is bare.\n4. **Clause type 4 (third‑person subject follows verb or is omitted):** Object – Verb – (Subject/Indirect Object). The verb takes a neutral prefix **u‑** (or **a‑** in some lexical items).\n5. **Possession on nouns:** prefix **ny‑** = ‘my’, **pi‑** = ‘your (sg)’. Before a vowel, **ny‑** surfaces as **nhi‑**.\n6. **Possessed‑noun marking:** when a noun already has a possessive prefix, attach **‑te** (e.g., *pitxiparyte*).\n7. **Definite/accusative marker:** **‑txi** on objects that lack a possessive prefix.\n8. **Genitive/possessive linker:** suffix **‑kanu** attaches to the possessed noun; the possessor noun precedes it (e.g., *sytu ysykanu* “woman’s bone”).\n9. **Dative/recipient case:** attach **‑kary** after a consonant, **‑mukary** after a vowel. This suffix also appears on possessed nouns (e.g., *xinhikary* ‘my house’). Pronoun datives are pronoun + ‑mukary (e.g., *nutamukary* ‘to me’).\n10. **Verb prefixes:** **n‑/ny‑/nhi‑** = 1st‑sg omitted‑subject; **u‑/a‑** = neutral/3rd‑sg prefix used when the subject is post‑verbal or absent.\n[DELETED: Rule 6 “‑te only on possessed objects without a possessive prefix” – revised to allow **‑te** on nouns that already carry a possessive prefix.]\n---",
+          "metrics": {
+            "corpus_bleu": 11.01,
+            "corpus_chrfpp": 34.97,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              22.09,
+              13.13,
+              8.13
+            ],
+            "sentence_chrfpp": [
+              44.15,
+              35.56,
+              29.16
+            ],
+            "sentence_ter": [
+              100.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She gave my house to the woman.",
+              "Your fish (as) banana.",
+              "The man gave the fish to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 188.07,
+          "accumulated_dict": "nuta = I (1 sg pronoun)\npita = you (sg) (2 sg pronoun)\nsykaru = give (verb root)\nãtary = drink (verb root)\nmynaru = bring (verb root)\nhiximak = remember (verb root)\nny‑ = 1 sg omitted‑subject prefix on verbs (realised as ny‑ before consonant, nhi‑ before vowel)\nu‑ = neutral/3 sg verb prefix (used when subject follows verb or is omitted)\n‑kary = dative/recipient suffix (after consonant)\n‑mukary = dative suffix (after vowel)\n‑txi = accusative/definite marker on objects without a possessive prefix\nny‑ / nhi‑ = my (possessive prefix on nouns)\npi‑ = your (sg) (possessive prefix on nouns)\n‑te = possessed‑noun marker (used on nouns that already carry a possessive prefix)\n‑kanu = genitive linker (possessor noun precedes possessed noun+‑kanu)\nkyky = man\nsytu = woman\nherẽka = blood\nĩpurãã = water\nnykanawate = my canoe\nnyherẽka = my blood\nuwamukary = to her\nsytumukary = to the woman\nywamukary = to the woman (alternative)\npitxiparyte = your banana\npixinhikary = your fish (possessive suffix ‑kary)\ntxipary = banana (accusative)\npysykary = fish (dative)\nnhiximakyte = remembered (verb form with 1 sg omitted‑subject prefix and ‑te)\napy = give (verb, used in clause type 4 without a prefix)\nnãtary = drank (drink + 1 sg omitted‑subject prefix before vowel)\nnhĩpurããte = my water (ny‑ → nhi‑ + water + ‑te)\nkywĩtxi = head (accusative)\napukary = find (verb)\nywa = eye\nmynanu = eye‑genitive (eye + ‑nanu)\nxinhikary = my house (house + ‑kary, possessive suffix)\nhaka? (none)",
+          "accumulated_rules": "1. **Clause type 1 (overt subject):** Subject – Verb – Object – Indirect Object. Verb appears bare (no subject prefix).\n2. **Clause type 2 (1 sg omitted subject, overt object):** Object – Verb – Indirect Object. Verb takes the 1 sg omitted‑subject prefix **ny‑** before a consonant, **nhi‑** before a vowel.\n3. **Clause type 3 (overt third‑person subject):** same order as (1); verb is bare.\n4. **Clause type 4 (third‑person subject follows verb or is omitted):** Object – Verb – (Subject/Indirect Object). The verb normally takes the neutral prefix **u‑**, but some verbs (e.g., *apy*) may appear without any prefix.\n5. **Possessive prefixes on nouns:** **ny‑ / nhi‑** = ‘my’, **pi‑** = ‘your (sg)’.\n6. **Possessed‑noun marker:** **‑te** attaches to a noun that already bears a possessive prefix.\n7. **Accusative/definite marker:** **‑txi** on objects lacking a possessive prefix.\n8. **Genitive construction:** suffix **‑kanu** attaches to the possessed noun; the possessor noun precedes this construction (e.g., *sytu ysykanu* “woman’s bone”).\n9. **Dative/recipient case:** attach **‑kary** after a consonant, **‑mukary** after a vowel. The same suffix can serve as a possessive suffix on nouns (e.g., *xinhikary* “my house”). Pronoun datives are pronoun + ‑mukary (e.g., *nutamukary* “to me”).\n10. **Verb‑object ordering:** In clause types 2 and 4 the object precedes the verb; in clause types 1 and 3 the subject precedes the verb.",
+          "metrics": {
+            "corpus_bleu": 5.32,
+            "corpus_chrfpp": 22.93,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.13,
+              10.68,
+              3.98
+            ],
+            "sentence_chrfpp": [
+              31.83,
+              10.48,
+              22.74
+            ],
+            "sentence_ter": [
+              125.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "she gave my house to the woman",
+              "your fish to the head",
+              "the man brought the woman’s eye to me"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 172.67,
+          "accumulated_dict": "nuta = I (1 sg pronoun)\npita = you (sg) (2 sg pronoun)\nsykaru = give (verb root)\nãtary = drink (verb root)\nmynaru = bring (verb root)\nhiximak = remember (verb root)\nny‑ = 1 sg omitted‑subject prefix on verbs (realised as ny‑ before consonant, nhi‑ before vowel)\nu‑ = neutral/3 sg verb prefix (used when subject follows verb or is omitted)\n‑kary = dative/recipient suffix (after consonant)\n‑mukary = dative suffix (after vowel)\n‑txi = accusative/definite marker on objects without a possessive prefix\nny‑ / nhi‑ = my (possessive prefix on nouns)\npi‑ = your (sg) (possessive prefix on nouns)\n‑te = possessed‑noun marker (used on nouns that already carry a possessive prefix)\n‑kanu = genitive linker (possessor noun precedes possessed noun+‑kanu)\nkyky = man\nsytu = woman\nherẽka = blood\nĩpurãã = water\nnykanawate = my canoe\nnyherẽka = my blood\nuwamukary = to her\nsytumukary = to the woman\nywamukary = to the woman (alternative)\npitxiparyte = your banana\npixinhikary = your fish (possessive suffix ‑kary)\ntxipary = banana (accusative)\npysykary = fish (dative)\nnhiximakyte = remembered (verb form with 1 sg omitted‑subject prefix and ‑te)\napy = give (verb, used in clause type 4 without a prefix)\nnãtary = drank (drink + 1 sg omitted‑subject prefix before vowel)\nnhĩpurããte = my water (ny‑ → nhi‑ + water + ‑te)\nkywĩtxi = head (accusative)\napukary = find (verb)\nywa = eye\nmynanu = eye‑genitive (eye + ‑nanu)\nxinhikary = my house (house + ‑kary, possessive suffix)\nhaka? (none)",
+          "accumulated_rules": "1. **Clause type 1 (overt subject):** Subject – Verb – Object – Indirect Object. Verb appears bare (no subject prefix).\n2. **Clause type 2 (1 sg omitted subject, overt object):** Object – Verb – Indirect Object. Verb takes the 1 sg omitted‑subject prefix **ny‑** before a consonant, **n‑** (or **nhi‑**) before a vowel.\n3. **Clause type 3 (overt third‑person subject):** same order as (1); verb is bare.\n4. **Clause type 4 (third‑person subject follows verb or is omitted):** Object – Verb – (Subject/Indirect Object). Verb normally takes the neutral prefix **u‑**; the verb *apy* may appear without any prefix.\n5. **Possessive prefixes on nouns:** **ny‑ / nhi‑** = ‘my’, **pi‑** = ‘your (sg)’.\n6. **Possessed‑noun marker:** **‑te** attaches to a noun that already bears a possessive prefix **or** a possessive suffix.\n7. **Accusative/definite marker:** **‑txi** on objects lacking a possessive prefix/suffix.\n8. **Genitive construction:** suffix **‑kanu** attaches to the possessed noun; the possessor noun precedes this construction (e.g., *sytu ysykanu* “woman’s bone”).\n9. **Dative/recipient case:** attach **‑kary** after a consonant, **‑mukary** after a vowel. The same suffix can serve as a possessive suffix on nouns that already have a possessive prefix, and can appear on verbs as an object marker. Pronoun datives are pronoun + ‑mukary (e.g., *nutamukary* “to me”).\n10. **Verb‑object ordering:** In clause types 2 and 4 the object precedes the verb; in clause types 1 and 3 the subject precedes the verb.\n11. **Verb‑subject agreement:** When the subject is 1 sg and omitted, the verb carries the appropriate omitted‑subject prefix (ny‑ / n‑). When the subject is overt, no prefix is used (except the neutral **u‑** in clause type 4).\n12. **Special verb *apy*:** can appear without any prefix in clause type 4.\n[DELETED rules: none; only refined the description of the 1 sg omitted‑subject prefix and the multifunctionality of **‑kary**.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 146.0,
+          "accumulated_dict": "nuta = I (1 sg pronoun)\npita = you (sg) (2 sg pronoun)\nsykaru = give (verb root)\nãtary = drink (verb root)\nmynaru = bring (verb root)\nhiximak = remember (verb root)\nny‑ = 1 sg omitted‑subject prefix on verbs (realised as ny‑ before consonant, nhi‑ before vowel)\nu‑ = neutral/3 sg verb prefix (used when subject follows verb or is omitted)\n‑kary = dative/recipient suffix (after consonant)\n‑mukary = dative suffix (after vowel)\n‑txi = accusative/definite marker on objects without a possessive prefix\nny‑ / nhi‑ = my (possessive prefix on nouns)\npi‑ = your (sg) (possessive prefix on nouns)\n‑te = possessed‑noun marker (used on nouns that already carry a possessive prefix)\n‑kanu = genitive linker (possessor noun precedes possessed noun+‑kanu)\nkyky = man\nsytu = woman\nherẽka = blood\nĩpurãã = water\nnykanawate = my canoe\nnyherẽka = my blood\nuwamukary = to her\nsytumukary = to the woman\nywamukary = to the woman (alternative)\npitxiparyte = your banana\npixinhikary = your fish (possessive suffix ‑kary)\ntxipary = banana (accusative)\npysykary = fish (dative)\nnhiximakyte = remembered (verb form with 1 sg omitted‑subject prefix and ‑te)\napy = give (verb, used in clause type 4 without a prefix)\nnãtary = drank (drink + 1 sg omitted‑subject prefix before vowel)\nnhĩpurããte = my water (ny‑ → nhi‑ + water + ‑te)\nkywĩtxi = head (accusative)\napukary = find (verb)\nywa = eye\nmynanu = eye‑genitive (eye + ‑nanu)\nxinhikary = my house (house + ‑kary, possessive suffix)\nhaka? (none)",
+          "accumulated_rules": "1. **Clause type 1 (overt subject):** Subject – Verb – Object – Indirect Object. Verb has no subject prefix.\n2. **Clause type 2 (1 sg omitted subject, overt object):** Object – Verb – Indirect Object. Verb takes the 1 sg omitted‑subject prefix **ny‑** before a consonant, **n‑/nhi‑** before a vowel.\n3. **Clause type 3 (overt third‑person subject):** same order as (1); verb is bare.\n4. **Clause type 4 (third‑person subject follows verb or is omitted):** Object – Verb – (Subject/Indirect Object). Verb normally takes the neutral prefix **u‑**; the verb *apy* may appear without any prefix.\n5. **Possessive prefixes on nouns:** **ny‑ / nhi‑** = “my”, **pi‑** = “your (sg)”.\n6. **Possessed‑noun marker:** **‑te** attaches to a noun that follows a possessor noun (possessor + possessed‑te) **or** to a noun already bearing a possessive prefix/suffix.\n7. **Accusative/definite marker:** **‑txi** on objects lacking any possessive morphology.\n8. **Genitive constructions:** two alternatives\na. possessor + possessed‑kanu (e.g., *sytu ysykanu*)\nb. possessor + possessed‑te (e.g., *hãtakuru txiparyte* “the girl’s banana”).\n9. **Dative/recipient case:** attach **‑kary** after a consonant, **‑mukary** after a vowel. Pronoun + ‑mukary = “to X”. The same suffix can serve as a possessive suffix on nouns that already have a possessive prefix.\n10. **Verb‑object ordering:** In clause types 2 and 4 the object precedes the verb; in clause types 1 and 3 the subject precedes the verb.\n11. **Verb‑subject agreement:** When the subject is 1 sg and omitted, the verb carries the appropriate omitted‑subject prefix (ny‑ / n‑/nhi‑). When the subject is overt, no prefix is used (except the neutral **u‑** in clause 4).\n12. **Past‑tense on verbs:** the suffix **‑te** marks a past or perfective aspect on verbs (e.g., *nhiximakyte* “remembered”).\n13. **Special verb *apy*:** can appear without any prefix in clause 4.\n[DELETED: previous rule stating that **‑kary** is only a dative; now clarified that it also functions as a possessive suffix on nouns with a possessive prefix.]\n---",
+          "metrics": {
+            "corpus_bleu": 7.71,
+            "corpus_chrfpp": 35.59,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.13,
+              24.88,
+              7.41
+            ],
+            "sentence_chrfpp": [
+              32.73,
+              56.25,
+              29.07
+            ],
+            "sentence_ter": [
+              125.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "she gave her house to the woman",
+              "you gave the banana",
+              "the man gave the fish to the woman"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 131.04,
+          "accumulated_dict": "nuta = I (1 sg pronoun)\npita = you (sg) (2 sg pronoun)\nsykaru = give (verb root)\nãtary = drink (verb root)\nmynaru = bring (verb root)\nhiximak = remember (verb root)\nny‑ = 1 sg omitted‑subject prefix on verbs (realised as ny‑ before consonant, nhi‑ before vowel)\nu‑ = neutral/3 sg verb prefix (used when subject follows verb or is omitted)\n‑kary = dative/recipient suffix (after consonant)\n‑mukary = dative suffix (after vowel)\n‑txi = accusative/definite marker on objects without a possessive prefix\nny‑ / nhi‑ = my (possessive prefix on nouns)\npi‑ = your (sg) (possessive prefix on nouns)\n‑te = possessed‑noun marker (used on nouns that already carry a possessive prefix)\n‑kanu = genitive linker (possessor noun precedes possessed noun+‑kanu)\nkyky = man\nsytu = woman\nherẽka = blood\nĩpurãã = water\nnykanawate = my canoe\nnyherẽka = my blood\nuwamukary = to her\nsytumukary = to the woman\nywamukary = to the woman (alternative)\npitxiparyte = your banana\npixinhikary = your fish (possessive suffix ‑kary)\ntxipary = banana (accusative)\npysykary = fish (dative)\nnhiximakyte = remembered (verb form with 1 sg omitted‑subject prefix and ‑te)\napy = give (verb, used in clause type 4 without a prefix)\nnãtary = drank (drink + 1 sg omitted‑subject prefix before vowel)\nnhĩpurããte = my water (ny‑ → nhi‑ + water + ‑te)\nkywĩtxi = head (accusative)\napukary = find (verb)\nywa = eye\nmynanu = eye‑genitive (eye + ‑nanu)\nxinhikary = my house (house + ‑kary, possessive suffix)\nhaka? (none)",
+          "accumulated_rules": "1. **Clause type 1 (overt subject):** Subject – Verb – Object – Indirect Object. Verb bears no subject prefix.\n2. **Clause type 2 (1 sg omitted subject, overt object):** Object – Verb – Indirect Object. Verb takes the 1 sg omitted‑subject prefix **ny‑** before a consonant, **n‑/nhi‑** before a vowel.\n3. **Clause type 3 (overt third‑person subject):** Subject – Verb – Object – Indirect Object. Verb is bare.\n4. **Clause type 4 (third‑person subject follows verb or is omitted):** Object – Verb – (Subject/Indirect Object). Verb normally takes the neutral prefix **u‑**; the special verb **apy** may appear without any prefix.\n5. **Possessive prefixes on nouns:** **ny‑ / nhi‑** = “my”, **pi‑** = “your (sg)”.\n6. **Possessed‑noun marker:** **‑te** attaches to a noun that follows a possessor noun (possessor + possessed‑te) **or** to a noun already bearing a possessive prefix/suffix.\n7. **Accusative/definite marker:** **‑txi** on objects lacking any possessive morphology.\n8. **Genitive constructions:**\na. possessor + possessed‑kanu (e.g., *sytu ysykanu* “woman’s bone”).\nb. possessor + possessed‑te (e.g., *hãtakuru txiparyte* “the girl’s banana”).\n9. **Dative/recipient case:** attach **‑kary** after a consonant, **‑mukary** after a vowel. Pronoun + ‑mukary = “to X”. The same suffix (or its vowel‑initial allomorph **‑ru**) can serve as a **possessive suffix** on nouns that already have a possessive prefix.\n10. **Verb‑object ordering:** In clause types 2 and 4 the object precedes the verb; in clause types 1 and 3 the subject precedes the verb.\n11. **Verb‑subject agreement:** When the subject is 1 sg and omitted, the verb carries the appropriate omitted‑subject prefix (ny‑ / n‑/nhi‑). When the subject is overt, no prefix is used (except the neutral **u‑** in clause 4).\n12. **Past‑tense/perfective on verbs:** the suffix **‑te** marks past or perfective aspect (e.g., *nhiximakyte*, *naikute*, *apĩtxi*).\n13. **Special verb *apy*:** can appear without any prefix in clause 4.\n14. **Allomorphy of ‑kary:** after a vowel‑initial noun that already carries a possessive prefix, the dative/possessive suffix appears as **‑ru** (e.g., *xinhikaru*, *pixinhikary*).\n*Deleted rules:* none; all previous rules are retained, with the addition of rule 14.\n---",
+          "metrics": {
+            "corpus_bleu": 15.33,
+            "corpus_chrfpp": 29.68,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              50.81,
+              4.06
+            ],
+            "sentence_chrfpp": [
+              16.56,
+              79.6,
+              15.29
+            ],
+            "sentence_ter": [
+              125.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She gave my house to her.",
+              "Your fish ate the banana.",
+              "The man remembered the fish for the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 226.84,
+          "accumulated_dict": "nuta = I (1 sg pronoun)\npita = you (sg) (2 sg pronoun)\nsykaru = give (verb root)\nãtary = drink (verb root)\nmynaru = bring (verb root)\nhiximak = remember (verb root)\nnaik‑ = remember (past/perfective verb stem)\napuk‑ = find (verb root)\napĩ‑ = eat (verb root)\ninh‑ = eat (alternative verb root)\nãtary = drink (verb root)\nny‑ / nhi‑ = 1 sg omitted‑subject prefix on verbs (ny‑ before consonant, nhi‑ before vowel)\nu‑ = neutral/3 sg verb prefix (used when subject follows verb or is omitted)\n‑kary = dative/recipient suffix (after consonant) / possessive suffix (1 sg) on nouns that already have a possessive prefix or on nouns without a prefix to mark “my”.\n‑mukary = dative suffix (after vowel)\n‑ru = allomorph of ‑kary after a vowel‑initial noun that already carries a possessive prefix.\n‑txi = accusative/definite marker on objects without a possessive prefix.\nny‑ / nhi‑ = my (possessive prefix on nouns)\npi‑ = your (sg) (possessive prefix on nouns)\n‑te = possessed‑noun marker (used on nouns that already carry a possessive prefix/suffix or after a possessor noun).\n‑kanu = genitive linker (possessor noun precedes possessed noun+‑kanu)\nkyky = man\nsytu = woman\nherẽka = blood\nĩpurãã = water\nnykanawate = my canoe\nnyherẽka = my blood\nuwamukary = to her\nsytumukary = to the woman\nywamukary = to the woman (alternative)\npitxiparyte = your banana\npixinhikary = your fish (possessive suffix ‑kary)\ntxipary = banana (accusative)\npysykary = fish (dative)\nnhiximakyte = remembered (verb form with 1 sg omitted‑subject prefix and ‑te)\napy = give (verb, used in clause type 4 without a prefix)\nnãtary = drank (drink + 1 sg omitted‑subject prefix before vowel)\nnhĩpurããte = my water (ny‑ → nhi‑ + water + ‑te)\nkywĩtxi = head (accusative)\nxinhikary = my house (house + ‑kary, 1 sg possessive suffix)\nhãtakuru = girl\nys = bone (root)\nys‑kanu = bone‑kanu (bone with genitive linker)\nywa = eye\nmynanu = eye‑genitive (eye + ‑nanu)\nu‑apukaru = find (verb with neutral prefix)\nn‑apukary = find (1 sg omitted‑subject prefix)",
+          "accumulated_rules": "1. **Clause type 1 (overt subject):** Subject – Verb – Object – Indirect Object. Verb bears no subject prefix.\n2. **Clause type 2 (1 sg omitted subject, overt object):** Object – Verb – Indirect Object. Verb takes the 1 sg omitted‑subject prefix **ny‑** before a consonant, **n‑/nhi‑** before a vowel.\n3. **Clause type 3 (overt third‑person subject):** Subject – Verb – Object – Indirect Object. Verb is bare.\n4. **Clause type 4 (third‑person subject follows verb or is omitted):** Object – Verb – (Subject/Indirect Object). Verb normally takes the neutral prefix **u‑**; the special verb **apy** may appear without any prefix, and some verbs (e.g., **apukary**) can appear bare.\n5. **Possessive prefixes on nouns:** **ny‑ / nhi‑** = “my”, **pi‑** = “your (sg)”.\n6. **Possessed‑noun marker:** **‑te** attaches to a noun that follows a possessor noun (possessor + possessed‑te) **or** to a noun already bearing a possessive prefix/suffix.\n7. **Accusative/definite marker:** **‑txi** on objects lacking any possessive morphology.\n8. **Genitive constructions:**\na. possessor + possessed‑kanu (e.g., *sytu ys‑kanu* “woman’s bone”).\nb. possessor + possessed‑te (e.g., *hãtakuru txiparyte* “the girl’s banana”).\n9. **Dative/recipient case:** attach **‑kary** after a consonant, **‑mukary** after a vowel. Pronoun + ‑mukary = “to X”. The same suffix (or its vowel‑initial allomorph **‑ru**) can serve as a **possessive suffix** on nouns that already have a possessive prefix, marking first‑person possession.\n10. **Verb‑object ordering:** In clause types 2 and 4 the object precedes the verb; in clause types 1 and 3 the subject precedes the verb.\n11. **Verb‑subject agreement:** When the subject is 1 sg and omitted, the verb carries the appropriate omitted‑subject prefix (ny‑ / n‑/nhi‑). When the subject is overt, no prefix is used (except the neutral **u‑** in clause 4).\n12. **Past‑tense/perfective on verbs:** the suffix **‑te** marks past or perfective aspect (e.g., *nhiximakyte*, *naikute*, *apĩtxi*).\n13. **Special verb *apy*:** can appear without any prefix in clause 4.\n14. **Allomorphy of ‑kary:** after a vowel‑initial noun that already carries a possessive prefix, the dative/possessive suffix appears as **‑ru** (e.g., *xinhikaru*, *pixinhikary*).",
+          "metrics": {
+            "corpus_bleu": 5.5,
+            "corpus_chrfpp": 30.59,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              9.65,
+              8.13
+            ],
+            "sentence_chrfpp": [
+              27.67,
+              38.7,
+              29.16
+            ],
+            "sentence_ter": [
+              175.0,
+              125.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman gave my house to her.",
+              "The banana is my house.",
+              "The man gave the fish to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 7.71,
+        "corpus_chrfpp": 35.59,
+        "corpus_ter": 93.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.13,
+          24.88,
+          7.41
+        ],
+        "sentence_chrfpp": [
+          32.73,
+          56.25,
+          29.07
+        ],
+        "sentence_ter": [
+          125.0,
+          75.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "she gave her house to the woman",
+          "you gave the banana",
+          "the man gave the fish to the woman"
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3
+      },
+      "best_step": 13
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 70.0,
+          "accumulated_dict": "- nuta → I (1st‑person pronoun, optional when verb is prefixed)\n- pita → you (sg) (2nd‑person pronoun)\n- kyky → the man\n- herẽkatxi → the woman\n- nykanawate → my canoe\n- nyherẽka → my blood\n- sytu → blood\n- ãtary → drank (verb stem *‑tary* “drink”, with 2nd‑person prefix ã‑)\n- uãtary → drank (verb stem *‑tary* “drink”, with 3rd‑person/animate prefix uã‑)\n- sykaru → give (verb stem *‑karu* “give”)\n- nysykaru → gave (verb stem *‑karu* with 1st‑person prefix n‑)\n- uwamukary → to her (dative construction: *uwa* “her” + dative suffix *‑mukary*)\n- sytumukary → to the woman (dative: *sytu* “woman” + *‑mukary*)\n- mynaru → brought (verb stem *‑naru* “bring”)\n- (implicit) “my” is expressed by the prefix **ny‑** attached to the possessed noun (e.g., ny‑kanawate “my canoe”, ny‑herẽka “my blood”).",
+          "accumulated_rules": "1. **Basic word order** appears to be S‑V‑O‑(IO/Dative).\n- Example: *nuta sykaru nykanawate uwamukary* → I gave my canoe to her.\n2. **Subject pronouns are optional** when the verb carries a person‑marking prefix.\n- 1st‑person: prefix **n‑** on the verb (e.g., *nysykaru*).\n- 2nd‑person: prefix **ã‑** on the verb (e.g., *ãtary*).\n- 3rd‑person/animate: prefix **uã‑** on the verb (e.g., *uãtary*).\n3. **Possession** is marked by the prefix **ny‑** attached directly to the noun that is possessed.\n- *ny‑kanawate* “my canoe”, *ny‑herẽka* “my blood”.\n4. **Dative case** is expressed by the suffix **‑mukary** attached to the recipient noun.\n- The noun itself appears without a separate preposition.\n5. **Nouns** can appear with an additional suffix **‑txi** when they function as animate agents (e.g., *herẽka* → *herẽkatxi* “woman”). This suffix is not used for inanimate nouns (e.g., *sytu* “blood”).\n6. **Verb stems** appear without person marking when the subject pronoun is overt (e.g., *sykaru* “gave” with explicit *nuta* “I”). When the pronoun is omitted, the verb takes the appropriate person prefix.",
+          "metrics": {
+            "corpus_bleu": 3.35,
+            "corpus_chrfpp": 12.64,
+            "corpus_ter": 113.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              7.81,
+              3.47
+            ],
+            "sentence_chrfpp": [
+              12.01,
+              14.95,
+              11.62
+            ],
+            "sentence_ter": [
+              150.0,
+              125.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I gave my canoe to her.",
+              "I gave my canoe to her.",
+              "You drank the water."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 68.63,
+          "accumulated_dict": "- nuta → I (1st‑person pronoun, optional when verb is prefixed)\n- pita → you (sg) (2nd‑person pronoun)\n- kyky → the man\n- herẽkatxi → the woman\n- nykanawate → my canoe\n- nyherẽka → my blood\n- sytu → blood\n- ãtary → drank (verb stem *‑tary* “drink”, with 2nd‑person prefix ã‑)\n- uãtary → drank (verb stem *‑tary* “drink”, with 3rd‑person/animate prefix uã‑)\n- sykaru → give (verb stem *‑karu* “give”)\n- nysykaru → gave (verb stem *‑karu* with 1st‑person prefix n‑)\n- uwamukary → to her (dative construction: *uwa* “her” + dative suffix *‑mukary*)\n- sytumukary → to the woman (dative: *sytu* “woman” + *‑mukary*)\n- mynaru → brought (verb stem *‑naru* “bring”)\n- (implicit) “my” is expressed by the prefix **ny‑** attached to the possessed noun (e.g., ny‑kanawate “my canoe”, ny‑herẽka “my blood”).",
+          "accumulated_rules": "1. **Word order** is S‑V‑O (with an optional IO/Dative after the object).\n2. **Subject pronouns** are omitted when the verb carries a person‑marking prefix; otherwise the verb appears without a prefix.\n3. **Person‑marking prefixes on verbs**:\n- 1st sg = **n‑**\n- 2nd sg = **ã‑**\n- 3rd sg/animate = **uã‑**\n4. **Possession** can be expressed in two ways:\n- a) **Prefix ny‑** attached directly to the possessed noun (used with inanimate nouns).\n- b) **Suffix ‑ikary** attached to the possessed noun (used with a broader set of nouns, including animate and inanimate). Both mean “my”.\n5. **Dative case** is marked by the suffix **‑mukary** attached to the recipient noun.\n6. **Animate‑agent suffixes**: nouns denoting animate actors receive either **‑txi** or **‑kuru** (the choice appears lexical).\n7. **Verb stems** are invariant; tense/aspect is not overtly marked in the data we have.\n8. **Compound nouns** may appear with internal morphemes (e.g., *pixinh* “fish”, *xinh* “house”). The final **‑ikary** attaches to the whole noun phrase to indicate “my”.",
+          "metrics": {
+            "corpus_bleu": 3.48,
+            "corpus_chrfpp": 25.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              7.27,
+              3.55
+            ],
+            "sentence_chrfpp": [
+              36.4,
+              34.08,
+              13.81
+            ],
+            "sentence_ter": [
+              75.0,
+              150.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You remembered my fish.",
+              "She brought your banana to the man.",
+              "The girl remembered my house."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 64.7,
+          "accumulated_dict": "- nuta → I (1st‑person pronoun, optional when verb is prefixed)\n- pita → you (sg) (2nd‑person pronoun)\n- kyky → the man\n- herẽkatxi → the woman\n- nykanawate → my canoe\n- nyherẽka → my blood\n- sytu → blood\n- ãtary → drank (verb stem *‑tary* “drink”, with 2nd‑person prefix ã‑)\n- uãtary → drank (verb stem *‑tary* “drink”, with 3rd‑person/animate prefix uã‑)\n- sykaru → give (verb stem *‑karu* “give”)\n- nysykaru → gave (verb stem *‑karu* with 1st‑person prefix n‑)\n- uwamukary → to her (dative construction: *uwa* “her” + dative suffix *‑mukary*)\n- sytumukary → to the woman (dative: *sytu* “woman” + *‑mukary*)\n- mynaru → brought (verb stem *‑naru* “bring”)\n- (implicit) “my” is expressed by the prefix **ny‑** attached to the possessed noun (e.g., ny‑kanawate “my canoe”, ny‑herẽka “my blood”).",
+          "accumulated_rules": "1. **Basic word order** is S‑V‑O; a dative (IO) follows the object.\n2. **Subject pronouns** are omitted when the verb carries a person‑marking prefix; otherwise the verb appears without a prefix and the subject may be expressed by a free pronoun or omitted.\n3. **Person‑marking prefixes on verbs**:\n- 1st sg = **n‑** (e.g., *n‑tary* “I drink”)\n- 2nd sg = **ã‑** (e.g., *ã‑tary* “you drink”)\n- 3rd sg/animate = **u‑** (or **uk‑** before consonant‑initial stems) (e.g., *u‑karu* “he/she gives”)\n4. **Possession**:\n- **ny‑** + noun = “my + noun” (used mainly with inanimate nouns).\n- **‑ikary** attached to the noun phrase = “my + noun” (more general).\n5. **Dative case** is marked by the suffix **‑mukary** attached to the recipient noun; the dative can also appear with a possessive prefix (e.g., **nutamukary** “to me”).\n6. **Animate‑agent nominal suffixes** **‑txi** and **‑kuru** are lexical; they turn a noun root into an animate referent (e.g., *kywĩtxi* “head”).\n7. **Verb stems are invariant**; tense/aspect is not overtly marked in the data.\n8. **Compound nouns** may contain internal morphemes; possessive suffixes attach to the whole compound (e.g., *pixinh‑ikary* “my fish”).\n9. **Optional third‑person pronoun** *ywa* can appear before a verb that lacks a person prefix, but it does not affect agreement.",
+          "metrics": {
+            "corpus_bleu": 3.35,
+            "corpus_chrfpp": 18.37,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              12.7,
+              3.13
+            ],
+            "sentence_chrfpp": [
+              30.22,
+              15.18,
+              9.88
+            ],
+            "sentence_ter": [
+              175.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man gave the woman’s bone to me.",
+              "I drank my water.",
+              "He found the head."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 38.08,
+          "accumulated_dict": "- nuta → I (1st‑person pronoun, optional when verb is prefixed)\n- pita → you (sg) (2nd‑person pronoun)\n- kyky → the man\n- herẽkatxi → the woman\n- nykanawate → my canoe\n- nyherẽka → my blood\n- sytu → blood\n- ãtary → drank (verb stem *‑tary* “drink”, with 2nd‑person prefix ã‑)\n- uãtary → drank (verb stem *‑tary* “drink”, with 3rd‑person/animate prefix uã‑)\n- sykaru → give (verb stem *‑karu* “give”)\n- nysykaru → gave (verb stem *‑karu* with 1st‑person prefix n‑)\n- uwamukary → to her (dative construction: *uwa* “her” + dative suffix *‑mukary*)\n- sytumukary → to the woman (dative: *sytu* “woman” + *‑mukary*)\n- mynaru → brought (verb stem *‑naru* “bring”)\n- (implicit) “my” is expressed by the prefix **ny‑** attached to the possessed noun (e.g., ny‑kanawate “my canoe”, ny‑herẽka “my blood”).",
+          "accumulated_rules": "1. **Basic clause order** remains **S – V – O**; a dative (indirect object) follows the direct object.\n2. **Person‑marking on the verb**:\n- 1st sg = **n‑**\n- 2nd sg = **ã‑**\n- 3rd sg/animate = **u‑** (or **uk‑** before consonant‑initial stems)\nWhen a verb bears a person prefix, the subject pronoun may be omitted.\n3. **Zero‑person (null) subject**: If a verb lacks a person prefix, the subject can be expressed by a free pronoun (e.g., *nuta*, *pita*, *ywa*) or omitted when context makes it clear.\n4. **Negation** (from previous stages, retained): a negative particle **‑na** attaches to the verb after any person prefix (e.g., *n‑tary‑na* “I do not drink”).\n5. **Yes‑no questions** are formed by adding the particle **‑ka** at the end of the clause (after any final case suffix).\n6. **Embedded/relative clauses**: the verb of the subordinate clause appears in the same **S‑V‑O** order and may carry its own person prefix; the whole clause precedes the noun it modifies.\n7. **Possession**:\n- Prefix **ny‑** + noun = “my + noun” (used mainly with inanimate nouns).\n- Suffix **‑ikary** attached to a noun phrase can also mark possession (more general).\n8. **Dative case**: suffix **‑mukary** attaches to the recipient noun; a possessive prefix may also appear on the dative (e.g., *nutamukary* “to me”).\n9. **Animate‑agent nominal suffixes** **‑txi**, **‑kuru**, **‑karu**, etc., create nouns denoting animate participants; they are lexical and do not affect agreement.\n10. **Optional third‑person pronoun** *ywa* may appear before a verb lacking a person prefix; it does not trigger agreement.",
+          "metrics": {
+            "corpus_bleu": 3.37,
+            "corpus_chrfpp": 11.93,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              14.79,
+              2.16
+            ],
+            "sentence_chrfpp": [
+              14.46,
+              12.76,
+              9.58
+            ],
+            "sentence_ter": [
+              100.0,
+              50.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The fish ate the bone.",
+              "I found the girl",
+              "He ate the fish"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.48,
+        "corpus_chrfpp": 25.84,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.7,
+          7.27,
+          3.55
+        ],
+        "sentence_chrfpp": [
+          36.4,
+          34.08,
+          13.81
+        ],
+        "sentence_ter": [
+          75.0,
+          150.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You remembered my fish.",
+          "She brought your banana to the man.",
+          "The girl remembered my house."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 51.84,
+          "metrics": {
+            "corpus_bleu": 1.11,
+            "corpus_chrfpp": 10.22,
+            "corpus_ter": 325.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              1.65,
+              2.05
+            ],
+            "sentence_chrfpp": [
+              8.4,
+              12.26
+            ],
+            "sentence_ter": [
+              275.0,
+              375.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Personal pronouns appear as independent words (e.g., *nuta* “I”, *pita* “you‑sg”).",
+              "The particle **‑te** at the end of a verb indicates past tense; its absence indicates present."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana."
+            ],
+            "num_evaluated": 2
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.11,
+        "corpus_chrfpp": 10.22,
+        "corpus_ter": 325.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          1.65,
+          2.05
+        ],
+        "sentence_chrfpp": [
+          8.4,
+          12.26
+        ],
+        "sentence_ter": [
+          275.0,
+          375.0
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Personal pronouns appear as independent words (e.g., *nuta* “I”, *pita* “you‑sg”).",
+          "The particle **‑te** at the end of a verb indicates past tense; its absence indicates present."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana."
+        ],
+        "num_evaluated": 2
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 329.42,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 42.89,
+          "metrics": {
+            "corpus_bleu": 3.35,
+            "corpus_chrfpp": 12.64,
+            "corpus_ter": 113.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              7.81,
+              3.47
+            ],
+            "sentence_chrfpp": [
+              12.01,
+              14.95,
+              11.62
+            ],
+            "sentence_ter": [
+              150.0,
+              125.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I gave my canoe to her.",
+              "I gave my canoe to her.",
+              "You drank the water."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.35,
+        "corpus_chrfpp": 12.64,
+        "corpus_ter": 113.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.57,
+          7.81,
+          3.47
+        ],
+        "sentence_chrfpp": [
+          12.01,
+          14.95,
+          11.62
+        ],
+        "sentence_ter": [
+          150.0,
+          125.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I gave my canoe to her.",
+          "I gave my canoe to her.",
+          "You drank the water."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3
+      },
+      "delta": {
+        "bleu_delta": 3.35,
+        "chrf_delta": 12.64,
+        "ter_delta": 13.33,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.87,
+      "chrf": 7.79,
+      "ter": 900.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “You are beautiful, my friend.”  \n\n*Note: The original phrase “uwa xinhikaru sytu” does not co",
+      "reference": "She remembered the woman."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 7.71,
+      "best_chrf": 35.59,
+      "best_ter": 93.33,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "she gave her house to the woman",
+        "you gave the banana",
+        "the man gave the fish to the woman"
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "best_step": 13
+    },
+    "step_by_step": {
+      "best_bleu": 3.48,
+      "best_chrf": 25.84,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "You remembered my fish.",
+        "She brought your banana to the man.",
+        "The girl remembered my house."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 1.11,
+      "best_chrf": 10.22,
+      "best_ter": 325.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Personal pronouns appear as independent words (e.g., *nuta* “I”, *pita* “you‑sg”).",
+        "The particle **‑te** at the end of a verb indicates past tense; its absence indicates present."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 3.35,
+      "best_chrf": 12.64,
+      "best_ter": 113.33,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "I gave my canoe to her.",
+        "I gave my canoe to her.",
+        "You drank the water."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "delta": {
+        "bleu_delta": 3.35,
+        "chrf_delta": 12.64,
+        "ter_delta": 13.33,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

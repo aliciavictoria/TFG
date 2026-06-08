@@ -1,13 +1,10 @@
 """
-setup_and_test.py — Verifica API keys de Groq y/o Cerebras.
-
-Registro gratuito (sin tarjeta):
-  Groq:     https://console.groq.com     → API Keys → Create
-  Cerebras: https://cloud.cerebras.ai    → API Keys → Create
+setup_and_test.py — Verifica API keys de Groq, Cerebras y OpenRouter.
 
 Configurar antes de ejecutar:
   export GROQ_API_KEY='gsk_...'
-  export CEREBRAS_API_KEY='csk_...'
+  export OPENROUTER_API_KEY='sk-or-...'
+  export CEREBRAS_API_KEY='csk_...'  (opcional)
 """
 
 import os, sys, subprocess, requests
@@ -20,21 +17,28 @@ def install_deps():
             subprocess.run([sys.executable, "-m", "pip", "install", dep, "-q"], capture_output=True)
     print("✓ Dependencias listas\n")
 
-def test_api(provider, url, key, model_id, label):
+def test_api(url, key, model_id, label, extra_headers={}):
     try:
+        headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
+        headers.update(extra_headers)
         r = requests.post(url,
-            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            headers=headers,
             json={"model": model_id,
-                  "messages": [{"role": "user", "content": "Reply with only the word OK."}],
-                  "max_tokens": 10, "temperature": 0},
-            timeout=30)
+                  "messages": [{"role": "user", "content": "Reply with only the word OK. Do not write anything else."}],
+                  "max_tokens": 500, "temperature": 0.1},
+            timeout=60)
         r.raise_for_status()
         d = r.json()
         if "error" in d:
             print(f"  ✗ {label}: {d['error']}")
             return False
-        ans = d["choices"][0]["message"]["content"].strip()
-        print(f"  ✓ {label} → '{ans}'")
+        msg = d["choices"][0]["message"]
+        ans = msg.get("content") or msg.get("reasoning") or ""
+        ans = ans.strip()
+        if ans:
+            print(f"  ✓ {label} → '{ans[:50]}'")
+        else:
+            print(f"  ✓ {label} → (conectado pero sin respuesta visible)")
         return True
     except requests.exceptions.HTTPError as e:
         print(f"  ✗ {label}: HTTP {e.response.status_code} — {e.response.text[:120]}")
@@ -50,73 +54,45 @@ if __name__ == "__main__":
 
     install_deps()
 
-    groq_key     = os.getenv("GROQ_API_KEY", "")
+    groq_key       = os.getenv("GROQ_API_KEY", "")
     openrouter_key = os.getenv("OPENROUTER_API_KEY", "")
-    cerebras_key = os.getenv("CEREBRAS_API_KEY", "")
-    any_ok = False
+    cerebras_key   = os.getenv("CEREBRAS_API_KEY", "")
 
     print("Estado de las API keys:")
-    if groq_key:
-        print(f"  ✓ GROQ_API_KEY encontrada:     {groq_key[:14]}...")
-    else:
-        print("  ✗ GROQ_API_KEY no configurada")
+    print(f"  {'✓' if groq_key else '✗'} GROQ_API_KEY:       {groq_key[:14]+'...' if groq_key else 'no configurada'}")
+    print(f"  {'✓' if openrouter_key else '✗'} OPENROUTER_API_KEY: {openrouter_key[:14]+'...' if openrouter_key else 'no configurada'}")
+    print(f"  {'✓' if cerebras_key else '✗'} CEREBRAS_API_KEY:   {cerebras_key[:14]+'...' if cerebras_key else 'no configurada (opcional)'}")
 
-    if openrouter_key:
-        print(f"  ✓ OPENROUTER_API_KEY encontrada: {openrouter_key[:14]}...")
-    else:
-        print("  ✗ OPENROUTER_API_KEY no configurada")
-
-    if cerebras_key:
-        print(f"  ✓ CEREBRAS_API_KEY encontrada: {cerebras_key[:14]}...")
-    else:
-        print("  ✗ CEREBRAS_API_KEY no configurada (opcional)")
-
-    if not groq_key and not google_key and not cerebras_key:
-        print("""
-Necesitas al menos una key. Registro gratuito (sin tarjeta):
-
-  GROQ (14.400 req/día):
-    1. https://console.groq.com → Sign in → API Keys → Create API Key
-    2. export GROQ_API_KEY='gsk_...'
-
-  GOOGLE AI STUDIO (1.500 req/día):
-    1. https://aistudio.google.com → Get API Key → Create API Key
-    2. export GOOGLE_API_KEY='AIza...'
-
-Luego vuelve a ejecutar: python3 setup_and_test.py
-""")
+    if not groq_key:
+        print("\nNecesitas al menos GROQ_API_KEY para continuar.")
         sys.exit(1)
 
     print("\nProbando conectividad:")
-    if groq_key:
-        ok1 = test_api("groq",
-            "https://api.groq.com/openai/v1/chat/completions",
-            groq_key, "llama-3.1-8b-instant", "Groq / Llama 3.1 8B  (débil)")
-        ok2 = test_api("groq",
-            "https://api.groq.com/openai/v1/chat/completions",
-            groq_key, "llama-3.3-70b-versatile", "Groq / Llama 3.3 70B (medio)")
-        any_ok = any_ok or ok1 or ok2
+    any_ok = False
+    groq_url = "https://api.groq.com/openai/v1/chat/completions"
 
-    openrouter_key = os.getenv("OPENROUTER_API_KEY", "")
+    ok1 = test_api(groq_url, groq_key, "llama-3.1-8b-instant",
+                   "Groq       / Llama 3.1 8B   (weak)")
+    ok2 = test_api(groq_url, groq_key, "llama-3.3-70b-versatile",
+                   "Groq       / Llama 3.3 70B  (medium)")
+    any_ok = ok1 or ok2
+
     if openrouter_key:
-        ok3 = test_api("openrouter",
-            "https://openrouter.ai/api/v1/chat/completions",
-            openrouter_key, "google/gemma-4-26b-a4b-it:free",
-            "OpenRouter / Gemma 4 26B MoE  (fuerte/Google)")
-        ok4 = test_api("openrouter",
-            "https://openrouter.ai/api/v1/chat/completions",
-            openrouter_key, "openai/gpt-oss-120b:free",
-            "OpenRouter / GPT OSS 120B     (fuerte/OpenAI)")
-        any_ok = any_ok or ok3 or ok4
+        or_url = "https://openrouter.ai/api/v1/chat/completions"
+        or_headers = {"HTTP-Referer": "https://tfg-linguistic-olympiad", "X-Title": "TFG"}
+        ok3 = test_api(or_url, openrouter_key, "openai/gpt-oss-120b:free",
+                       "OpenRouter / GPT OSS 120B   (strong)", or_headers)
+        any_ok = any_ok or ok3
+    else:
+        print("  — OpenRouter / GPT OSS 120B   (strong) → sin key")
 
     if cerebras_key:
-        ok4 = test_api("cerebras",
-            "https://api.cerebras.ai/v1/chat/completions",
-            cerebras_key, "llama-3.3-70b", "Cerebras / Llama 3.3 70B")
+        cerebras_url = "https://api.cerebras.ai/v1/chat/completions"
+        ok4 = test_api(cerebras_url, cerebras_key, "gpt-oss-120b",
+                       "Cerebras   / GPT OSS 120B   (backup)", {})
         any_ok = any_ok or ok4
 
     if any_ok:
         print("\n✓ Todo listo. Ejecuta: python3 experiment_runner.py")
     else:
         print("\n✗ Ningún modelo respondió correctamente.")
-        print("  Comprueba tus keys en console.groq.com o cloud.cerebras.ai")

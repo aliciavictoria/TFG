@@ -1,0 +1,211 @@
+Modelos disponibles:
+  ✓ llama-3.1-8b-groq                   (weak)
+  ✓ llama-3.3-70b-groq                  (medium)
+  ✓ gpt-oss-120b-openrouter             (strong)
+
+============================================================
+  Idioma:    Hakhun  (Sino-Tibetan (Nagaland, India))
+  Dirección: lang2en
+  Modelo:    llama-3.1-8b-groq  (weak)
+  Tiempo:    2026-06-07T22:36:18
+============================================================
+
+→ M0: verification
+  [M0] 'nɤ ʒip ku ne'
+    → 'I'll do my best to translate the sentence. However, please note that without mor'
+    BLEU= 0.13 chrF= 1.40 TER=7266.67 EM=  0.0%
+
+→ M1: baseline
+  [M1] 10 frases de golpe
+    [429] Rate limit, esperando 30s...
+    BLEU=25.25 chrF=41.95 TER= 50.00 EM= 16.7%
+
+→ M2: incremental_combinations
+  [M2] Paso 1/9: 2 frases
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+  [M2] Paso 2/9: 3 frases
+    [429] Rate limit, esperando 30s...
+    BLEU=12.03 chrF=30.99 TER= 57.14 EM=  0.0%
+  [M2] Paso 3/9: 4 frases
+    BLEU= 6.40 chrF=24.26 TER= 63.64 EM=  0.0%
+  [M2] Paso 4/9: 5 frases
+    [429] Rate limit, esperando 30s...
+    [429] Rate limit, esperando 60s...
+    BLEU= 0.00 chrF= 6.96 TER=100.00 EM=  0.0%
+  [M2] Paso 5/9: 6 frases
+    [429] Rate limit, esperando 30s...
+    BLEU=12.76 chrF=32.94 TER= 63.64 EM=  0.0%
+  [M2] Paso 6/9: 7 frases
+    BLEU=11.38 chrF=26.68 TER= 77.27 EM=  0.0%
+  [M2] Paso 7/9: 8 frases
+    BLEU=11.96 chrF=28.96 TER= 68.18 EM=  0.0%
+  [M2] Paso 8/9: 9 frases
+    [429] Rate limit, esperando 30s...
+    BLEU=32.11 chrF=48.69 TER= 50.00 EM= 16.7%
+  [M2] Paso 9/9: 10 frases
+    [429] Rate limit, esperando 30s...
+    BLEU=27.07 chrF=45.03 TER= 50.00 EM= 16.7%
+
+→ M3: step_by_step
+  [M3] Etapa 1/4: lexical (3 frases)
+    BLEU= 3.84 chrF=10.36 TER=100.00 EM=  0.0%
+  [M3] Etapa 2/4: phonology (2 frases)
+    BLEU= 5.88 chrF= 7.86 TER=100.00 EM=  0.0%
+  [M3] Etapa 3/4: morphosyntax (3 frases)
+    BLEU= 3.14 chrF= 5.81 TER=109.09 EM=  0.0%
+  [M3] Etapa 4/4: syntax (2 frases)
+    BLEU=19.36 chrF=36.35 TER= 57.14 EM=  0.0%
+
+→ M5: self_correction
+  [M5] Turno 1: traducción inicial
+    BLEU=25.25 chrF=41.95 TER= 50.00 EM= 16.7%
+  [M5] Turno 2: autocorrección
+    [429] Rate limit, esperando 30s...
+    BLEU= 0.00 chrF= 5.96 TER=381.82 EM=  0.0%
+    Δ chrF=-35.99  Δ TER=+331.82  Δ EM=-16.7%
+
+✓ Guardado: results/linguini_012018020100_llama-3.1-8b-groq_2026-06-07.json
+
+RESUMEN:
+  Metodología                      BLEU   chrF     TER    EM%
+  ------------------------------ ------ ------ ------- ------
+  M0 verification                  0.13   1.40 7266.67    0.0 ✓desconocido
+  M1 baseline                     25.25  41.95   50.00   16.7
+  M2 incremental_combinations     32.11  48.69   50.00   16.7
+  M3 step_by_step                 19.36  36.35   57.14    0.0
+  M5 self_correction              25.25  41.95   50.00   16.7
+     Δ vs draft                  -25.25 -35.99 +331.82  -16.7
+
+============================================================
+  Idioma:    Hakhun  (Sino-Tibetan (Nagaland, India))
+  Dirección: lang2en
+  Modelo:    llama-3.3-70b-groq  (medium)
+  Tiempo:    2026-06-07T22:43:42
+============================================================
+
+→ M0: verification
+  [M0] 'nɤ ʒip ku ne'
+    → 'I'll do my best to translate the sentence. However, please note that the sentenc'
+    BLEU= 0.20 chrF= 1.67 TER=6166.67 EM=  0.0%
+
+→ M1: baseline
+  [M1] 10 frases de golpe
+    BLEU=36.99 chrF=54.85 TER= 40.91 EM= 16.7%
+
+→ M2: incremental_combinations
+  [M2] Paso 1/9: 2 frases
+    BLEU= 0.00 chrF= 6.96 TER=100.00 EM=  0.0%
+  [M2] Paso 2/9: 3 frases
+    BLEU= 1.16 chrF= 9.08 TER=145.45 EM=  0.0%
+  [M2] Paso 3/9: 4 frases
+    BLEU=16.38 chrF=41.47 TER= 50.00 EM=  0.0%
+  [M2] Paso 4/9: 5 frases
+    BLEU=10.59 chrF=26.03 TER=100.00 EM=  0.0%
+  [M2] Paso 5/9: 6 frases
+    BLEU=29.69 chrF=52.13 TER= 40.91 EM= 16.7%
+  [M2] Paso 6/9: 7 frases
+    BLEU=28.37 chrF=50.76 TER= 40.91 EM= 16.7%
+  [M2] Paso 7/9: 8 frases
+    BLEU=28.37 chrF=51.32 TER= 40.91 EM= 16.7%
+  [M2] Paso 8/9: 9 frases
+    BLEU=15.17 chrF=37.95 TER= 54.55 EM=  0.0%
+  [M2] Paso 9/9: 10 frases
+    BLEU=32.55 chrF=56.27 TER= 36.36 EM= 16.7%
+
+→ M3: step_by_step
+  [M3] Etapa 1/4: lexical (3 frases)
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+  [M3] Etapa 2/4: phonology (2 frases)
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+  [M3] Etapa 3/4: morphosyntax (3 frases)
+    BLEU= 0.00 chrF= 5.71 TER=100.00 EM=  0.0%
+  [M3] Etapa 4/4: syntax (2 frases)
+    BLEU= 4.94 chrF=21.63 TER=342.86 EM=  0.0%
+
+→ M5: self_correction
+  [M5] Turno 1: traducción inicial
+    [429] Rate limit, esperando 30s...
+    BLEU=43.84 chrF=58.71 TER= 36.36 EM= 33.3%
+  [M5] Turno 2: autocorrección
+    [429] Rate limit, esperando 30s...
+    [429] Rate limit, esperando 60s...
+    [429] Rate limit, esperando 90s...
+  ✗ Error: Rate limit persistente tras 3 intentos
+
+✓ Guardado: results/linguini_012018020100_llama-3.3-70b-groq_2026-06-07.json
+
+RESUMEN:
+  Metodología                      BLEU   chrF     TER    EM%
+  ------------------------------ ------ ------ ------- ------
+  M0 verification                  0.20   1.67 6166.67    0.0 ✓desconocido
+  M1 baseline                     36.99  54.85   40.91   16.7
+  M2 incremental_combinations     32.55  56.27   36.36   16.7
+  M3 step_by_step                  4.94  21.63  342.86    0.0
+  self_correction                ERROR: Rate limit persistente tras 3 intentos
+
+============================================================
+  Idioma:    Hakhun  (Sino-Tibetan (Nagaland, India))
+  Dirección: lang2en
+  Modelo:    gpt-oss-120b-openrouter  (strong)
+  Tiempo:    2026-06-07T22:50:11
+============================================================
+
+→ M0: verification
+  [M0] 'nɤ ʒip ku ne'
+    → '**Possible translation:** “I don’t know.”  
+
+*Explanation:* The sequence “nɤ ʒip'
+    BLEU= 0.00 chrF= 2.50 TER=2133.33 EM=  0.0%
+
+→ M1: baseline
+  [M1] 10 frases de golpe
+  ✗ Error: HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out.
+
+→ M2: incremental_combinations
+  [M2] Paso 1/9: 2 frases
+    BLEU= 8.17 chrF=23.24 TER=100.00 EM=  0.0%
+  [M2] Paso 2/9: 3 frases
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+  [M2] Paso 3/9: 4 frases
+    BLEU=25.25 chrF=43.46 TER= 50.00 EM= 16.7%
+  [M2] Paso 4/9: 5 frases
+    BLEU=26.20 chrF=45.98 TER= 45.45 EM= 16.7%
+  [M2] Paso 5/9: 6 frases
+    BLEU=33.86 chrF=53.70 TER= 36.36 EM= 33.3%
+  [M2] Paso 6/9: 7 frases
+    BLEU=33.86 chrF=53.70 TER= 36.36 EM= 33.3%
+  [M2] Paso 7/9: 8 frases
+    BLEU=29.50 chrF=44.42 TER= 45.45 EM= 33.3%
+  [M2] Paso 8/9: 9 frases
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+  [M2] Paso 9/9: 10 frases
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+
+→ M3: step_by_step
+  [M3] Etapa 1/4: lexical (3 frases)
+    BLEU= 3.66 chrF= 9.03 TER= 81.82 EM=  0.0%
+  [M3] Etapa 2/4: phonology (2 frases)
+    BLEU= 5.88 chrF= 7.86 TER=100.00 EM=  0.0%
+  [M3] Etapa 3/4: morphosyntax (3 frases)
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+  [M3] Etapa 4/4: syntax (2 frases)
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+
+→ M5: self_correction
+  [M5] Turno 1: traducción inicial
+    BLEU=41.82 chrF=58.82 TER= 31.82 EM= 33.3%
+  [M5] Turno 2: autocorrección
+    BLEU= 0.00 chrF= 0.00 TER=100.00 EM=  0.0%
+    Δ chrF=-58.82  Δ TER=+68.18  Δ EM=-33.3%
+
+✓ Guardado: results/linguini_012018020100_gpt-oss-120b-openrouter_2026-06-07.json
+
+RESUMEN:
+  Metodología                      BLEU   chrF     TER    EM%
+  ------------------------------ ------ ------ ------- ------
+  M0 verification                  0.00   2.50 2133.33    0.0 ✓desconocido
+  baseline                       ERROR: HTTPSConnectionPool(host='openrouter.ai'
+  M2 incremental_combinations     33.86  53.70   36.36   33.3
+  M3 step_by_step                  3.66   9.03   81.82    0.0
+  M5 self_correction              41.82  58.82   31.82   33.3
+     Δ vs draft                  -41.82 -58.82  +68.18  -33.3

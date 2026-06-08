@@ -8,7 +8,7 @@ Este capítulo presenta el objetivo principal del trabajo y los objetivos espec�
 \label{sec:objetivo_principal}
 % ─────────────────────────────────────────────────────────────
 
-El objetivo principal de este Trabajo de Fin de Grado es diseñar, implementar y evaluar estrategias de \textit{prompting} para que modelos de lenguaje de gran escala puedan resolver puzzles de olimpiadas lingüísticas en idiomas que nunca han formado parte de su entrenamiento, apoyándose únicamente en razonamiento metalingüístico y sin recibir ninguna pista sobre la lengua en cuestión.
+El objetivo principal de este Trabajo de Fin de Grado es diseñar, implementar y evaluar estrategias de \textit{prompting} para que modelos de lenguaje de gran escala puedan resolver puzzles de olimpiadas lingüísticas en idiomas que nunca han formado parte de su entrenamiento, apoyándose únicamente en razonamiento metalingüístico y sin recibir ninguna información previa sobre la lengua en cuestión.
 
 % ─────────────────────────────────────────────────────────────
 \section{Objetivos específicos}
@@ -18,24 +18,27 @@ El objetivo principal de este Trabajo de Fin de Grado es diseñar, implementar y
 De este objetivo principal se derivan los siguientes objetivos específicos:
 
 \begin{enumerate}
-
-    \item \textbf{Revisar el estado del arte} en razonamiento lingüístico con modelos de lenguaje de gran escala, con especial atención a los benchmarks derivados de la Olimpiada Internacional de Lingüística (\textsc{Linguini}, LingOly, modeLing) y a las estrategias de prompting más relevantes de la literatura reciente.
-
-    \item \textbf{Diseñar e implementar tres estrategias de prompting} diferenciadas y comparables entre sí:
-    \begin{itemize}
-        \item Una estrategia \textit{baseline} que sirva como punto de referencia directo con la literatura existente.
-        \item Una estrategia de presentación incremental por combinaciones crecientes de ejemplos, con actualización explícita y revisable del diccionario y las reglas gramaticales.
-        \item Una estrategia paso a paso ordenada por nivel lingüístico, inspirada en el trabajo de \citet{zhu2025evaluating}.
-    \end{itemize}
-
-    \item \textbf{Construir un sistema experimental reproducible} que automatice la ejecución de los experimentos, el registro completo de los prompts y respuestas, y el cálculo de métricas, permitiendo auditar cualquier resultado.
-
-    \item \textbf{Evaluar las estrategias} sobre puzzles reales del benchmark \textsc{Linguini} en lenguas de cuatro familias lingüísticas distintas, utilizando modelos de dos familias arquitectónicas diferentes y tres tamaños.
-
-    \item \textbf{Comparar los resultados obtenidos} con los valores de referencia publicados en \citet{sanchez2024linguini} mediante las métricas BLEU y chrF++, identificando en qué condiciones cada estrategia supera o iguala el estado del arte.
-
-    \item \textbf{Realizar un análisis cualitativo} comparando el proceso de resolución humana de los puzzles con el razonamiento explícito del modelo, identificando los puntos de divergencia y los patrones de error más frecuentes.
-
+	
+	\item \textbf{Revisar el estado del arte} en razonamiento lingüístico con modelos de lenguaje de gran escala, con especial atención a los benchmarks derivados de la Olimpiada Internacional de Lingüística (\textsc{Linguini}, LingOly, modeLing) y a las estrategias de prompting más relevantes de la literatura reciente.
+	
+	\item \textbf{Diseñar e implementar cinco estrategias de prompting} diferenciadas y comparables entre sí:
+	\begin{itemize}
+		\item Una estrategia de \textit{verificación} (M0) que comprueba si el modelo conoce el idioma antes del experimento, garantizando la validez del control.
+		\item Una estrategia \textit{baseline} (M1) que sirve como punto de referencia directo con la literatura existente, presentando todos los ejemplos de entrenamiento de forma simultánea.
+		\item Una estrategia de presentación \textit{incremental por combinaciones crecientes} (M2) de ejemplos, con construcción explícita y revisable de un diccionario y un conjunto de reglas gramaticales.
+		\item Una estrategia \textit{paso a paso} (M3) ordenada por nivel lingüístico (léxico, fonología, morfosintaxis y sintaxis), inspirada en el trabajo de \citet{zhu2025evaluating}.
+		\item Una estrategia de \textit{inspiración humana} (M4) que proporciona al modelo el razonamiento explícito de un experto humano resolviendo un puzzle diferente, para guiar el proceso inductivo.
+		\item Una estrategia de \textit{autocorrección iterativa} (M5), en la que el modelo revisa sus propias hipótesis en un segundo turno buscando contradicciones internas, inspirada en el paradigma \textit{Self-Refine} \citep{madaan2023selfrefine}.
+	\end{itemize}
+	
+	\item \textbf{Construir un sistema experimental reproducible} que automatice la ejecución de los experimentos, el registro de las respuestas del modelo y el cálculo de métricas, permitiendo auditar cualquier resultado de forma independiente.
+	
+	\item \textbf{Evaluar las estrategias} sobre puzzles reales del benchmark \textsc{Linguini} en lenguas de diversas familias lingüísticas, en ambas direcciones de traducción (lengua desconocida $\rightarrow$ inglés e inglés $\rightarrow$ lengua desconocida), utilizando modelos de tres tamaños distintos.
+	
+	\item \textbf{Comparar los resultados obtenidos} con los valores de referencia publicados en \citet{sanchez2024linguini} mediante las métricas BLEU, chrF++ y TER, e identificar en qué condiciones cada estrategia supera o iguala el estado del arte.
+	
+	\item \textbf{Realizar un análisis cualitativo} comparando el proceso de resolución humana de los puzzles con el razonamiento explícito generado por los modelos, identificando los puntos de divergencia y los patrones de error más frecuentes según la familia lingüística, el tamaño del modelo y la dirección de traducción.
+	
 \end{enumerate}
 
 % ─────────────────────────────────────────────────────────────
@@ -46,11 +49,13 @@ De este objetivo principal se derivan los siguientes objetivos específicos:
 El desarrollo del trabajo está sujeto a las siguientes restricciones:
 
 \begin{description}
-    \item[Acceso a los modelos:] se utilizan exclusivamente modelos accesibles mediante APIs gratuitas (Groq y Google AI Studio), lo que limita los modelos disponibles pero garantiza la reproducibilidad del trabajo sin coste computacional.
-
-    \item[Límites de tasa:] las APIs gratuitas imponen límites de peticiones por minuto y por día, lo que condiciona el número de experimentos que pueden ejecutarse en una sesión y obliga a introducir retardos entre llamadas.
-
-    \item[Datos:] los puzzles utilizados provienen exclusivamente del benchmark \textsc{Linguini} \citep{sanchez2024linguini}, cuya descarga requiere aceptar los términos de uso del corpus de la IOL (licencia CC-BY-SA 4.0). No se utilizan puzzles de elaboración propia para mantener la comparabilidad con la literatura.
-
-    \item[Ausencia de reentrenamiento:] no se realiza ningún tipo de \textit{fine-tuning} ni adaptación de los modelos. Todas las estrategias operan en modo \textit{zero-shot} o \textit{few-shot} mediante prompting, sin modificar los pesos del modelo.
+	\item[Acceso a los modelos:] se utilizan exclusivamente modelos accesibles mediante APIs gratuitas (Groq, OpenRouter y Cerebras), lo que limita los modelos disponibles pero garantiza la reproducibilidad del trabajo sin coste computacional.
+	
+	\item[Límites de tasa:] las APIs gratuitas imponen límites de peticiones por minuto y por día, lo que condiciona el número de experimentos que pueden ejecutarse en una sesión y obliga a introducir retardos entre llamadas. Este condicionante es especialmente notable en M2, cuya naturaleza iterativa genera hasta nueve llamadas consecutivas por puzzle.
+	
+	\item[Datos:] los puzzles utilizados provienen exclusivamente del benchmark \textsc{Linguini} \citep{sanchez2024linguini}, cuya descarga requiere aceptar los términos de uso del corpus de la IOL (licencia CC-BY-SA~4.0). No se utilizan puzzles de elaboración propia para mantener la comparabilidad con la literatura.
+	
+	\item[Ausencia de reentrenamiento:] no se realiza ningún tipo de \textit{fine-tuning} ni adaptación de los modelos. Todas las estrategias operan en modo \textit{zero-shot} o \textit{few-shot} mediante prompting, sin modificar los pesos del modelo.
+	
+	\item[Determinismo de las respuestas:] todos los experimentos se ejecutan con temperatura cero (\texttt{temperature=0}), de modo que las respuestas del modelo son deterministas y reproducibles para una misma versión del modelo y del prompt.
 \end{description}

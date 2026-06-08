@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T04:07:06.477262",
+    "puzzle_id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 17,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ob-dahetok",
+        "target": "You_{sg} really returned."
+      },
+      {
+        "source": "nake-dahetok",
+        "target": "We returned."
+      },
+      {
+        "source": "nambat-ihwin",
+        "target": "Aw, I cried."
+      },
+      {
+        "source": "nambe-otab",
+        "target": "We really chased you_{pl} away."
+      },
+      {
+        "source": "um-kulaɣawn",
+        "target": "He laughed at you_{sg} in vain."
+      },
+      {
+        "source": "e-keseh",
+        "target": "You_{pl} spat on him."
+      },
+      {
+        "source": "ubate-huɣanab",
+        "target": "Aw, you_{sg} silenced us."
+      },
+      {
+        "source": "nakum-hoɣab",
+        "target": "I silenced you_{pl} in vain."
+      },
+      {
+        "source": "nambame-ɣadaɣawn",
+        "target": "Oh, we left you_{sg} behind!"
+      },
+      {
+        "source": "ebe-ɣadanawn",
+        "target": "You_{pl} really left us behind."
+      },
+      {
+        "source": "ibatum-ɣadewn",
+        "target": "Aw, you_{pl} left him behind in vain."
+      },
+      {
+        "source": "a-isanab",
+        "target": "He cut me in half."
+      },
+      {
+        "source": "obam-eseb",
+        "target": "Oh, you_{sg} cut him in half!"
+      },
+      {
+        "source": "bate-tamanab",
+        "target": "Aw, we floated to the surface."
+      },
+      {
+        "source": "ba-tamab",
+        "target": "You_{pl} really floated to the surface."
+      },
+      {
+        "source": "a-ɣuyaɣah",
+        "target": "You_{sg} shuddered."
+      },
+      {
+        "source": "bam-ɣuyanah",
+        "target": "Oh, I shuddered!"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "e-ɣuyanah",
+        "target": "We shuddered.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ba-ihwin",
+        "target": "He really cried.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nambum-kisaɣah",
+        "target": "I really spat on you_{sg} in vain.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bat-ɣadawn",
+        "target": "Aw, he left you_{pl} behind.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ubamum-kolewn",
+        "target": "Oh, you_{sg} laughed at him in vain!",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 95.59,
+          "metrics": {
+            "corpus_bleu": 1.02,
+            "corpus_chrfpp": 3.38,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              2.63,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              2.08,
+              2.93,
+              4.58,
+              5.09,
+              1.49
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ob-: You_{sg}",
+              "nake-: We",
+              "nambat-: Aw, I",
+              "nambe-: We really",
+              "um-: He"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.02,
+        "corpus_chrfpp": 3.38,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          2.63,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          2.08,
+          2.93,
+          4.58,
+          5.09,
+          1.49
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ob-: You_{sg}",
+          "nake-: We",
+          "nambat-: Aw, I",
+          "nambe-: We really",
+          "um-: He"
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "baseline": {
+      "best_bleu": 1.02,
+      "best_chrf": 3.38,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ob-: You_{sg}",
+        "nake-: We",
+        "nambat-: Aw, I",
+        "nambe-: We really",
+        "um-: He"
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ]
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

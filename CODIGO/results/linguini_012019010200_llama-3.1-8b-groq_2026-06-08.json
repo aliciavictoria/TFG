@@ -1,0 +1,1328 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T03:30:42.804604",
+    "puzzle_id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 11,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "We will go away and they will come.",
+        "target": "Wananuuwa mananiib.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I take the pig and he takes the fish.",
+        "target": "Awon biina oon been",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He saw the water and the house and heard the dog.",
+        "target": "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "You(sg) eat the bread and sing.",
+        "target": "Om aneneb wingkeeb.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "We will go away and they will come.",
+      "reference": "Wananuuwa mananiib.",
+      "hypothesis": "I'll attempt to translate the sentence into Yonggom, a language spoken in Papua New Guinea. However, please note that I may not be entirely accurate due to the limited availability of Yonggom language resources.\n\nThe sentence \"We will go away and they will come\" can be broken down into its components:\n\n- \"We will go away\" can be translated to \"Mere wala\" (Mere means \"we\" and wala means \"go away\" or \"leave\").\n- \"and\" can be translated to \"a\" (a conjunction used to connect two clauses).\n- \"they will come\" can be translated to \"Meru wala\" (Meru means \"they\" and wala means \"come\").\n\nCombining these components, a possible translation of the sentence into Yonggom could be:\n\n\"Mere wala a Meru wala\"\n\nPlease note that this is just an attempt and may not be entirely accurate.",
+      "latency_s": 30.54,
+      "metrics": {
+        "corpus_bleu": 0.2,
+        "corpus_chrfpp": 3.19,
+        "corpus_ter": 6750.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.2
+        ],
+        "sentence_chrfpp": [
+          3.19
+        ],
+        "sentence_ter": [
+          6750.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll attempt to translate the sentence into Yonggom, a language spoken in Papua New Guinea. However, please note that I may not be entirely accurate due to the limited availability of Yonggom language resources.\n\nThe sentence \"We will go away and they will come\" can be broken down into its components:\n\n- \"We will go away\" can be translated to \"Mere wala\" (Mere means \"we\" and wala means \"go away\" or \"leave\").\n- \"and\" can be translated to \"a\" (a conjunction used to connect two clauses).\n- \"they will come\" can be translated to \"Meru wala\" (Meru means \"they\" and wala means \"come\").\n\nCombining these components, a possible translation of the sentence into Yonggom could be:\n\n\"Mere wala a Meru wala\"\n\nPlease note that this is just an attempt and may not be entirely accurate."
+        ],
+        "references": [
+          "Wananuuwa mananiib."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 4.87,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.59,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              9.57,
+              7.22,
+              3.04,
+              5.52
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "anona: man",
+              "awon: pig",
+              "baan: house",
+              "banuun: bread"
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 5.59,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          9.57,
+          7.22,
+          3.04,
+          5.52
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "anona: man",
+          "awon: pig",
+          "baan: house",
+          "banuun: bread"
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 31.41,
+          "accumulated_dict": "1. an- = ? ( possibly indicating a location or a point in time)\n2. -na = ? ( possibly indicating a verb or an action)\n3. yeedi- = ? ( possibly indicating an action or a state)\n4. -rin = ? ( possibly indicating a verb or an action)\n5. karuwa = ? ( possibly indicating a location or a point in time)\n6. wedmaan = ? ( possibly indicating a person or an animal)\n7. wingkeewa = ? ( possibly indicating an action or a state)",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of two morphemes.",
+          "metrics": {
+            "corpus_bleu": 3.51,
+            "corpus_chrfpp": 17.31,
+            "corpus_ter": 112.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              5.82,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              17.45,
+              8.65,
+              17.84,
+              25.41
+            ],
+            "sentence_ter": [
+              200.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yeekeewa yeediriin anona wedmaan.",
+              "Wingkeewa yeediriin karuwa wedmaan.",
+              "Wingkeewa yeediriin anona wedmaan karuwa.",
+              "Wingkeewa yeediriin wedmaan."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 35.16,
+          "accumulated_dict": "1. an- = locative or temporal marker (possibly paired with a verb or action)\n2. -na = verb or action (possibly paired with a locative or temporal marker)\n3. yeedi- = verb or action (possibly paired with a suffix indicating a verb or action)\n4. -rin = suffix indicating a verb or action (possibly paired with a verb or action)\n5. karuwa = ? (possibly indicating a verb or an action, but its meaning is unclear)\n6. wedmaan = person or animal (possibly paired with a verb or action)\n7. wingkeewa = verb or action (possibly indicating a state or an action)\n8. awon = verb or action (possibly paired with a noun or a person)\n9. baan = noun or person (possibly paired with a verb or action)",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of two morphemes.\n[DELETED: rule 3 — incorrect, nouns can be composed of more than two morphemes]",
+          "metrics": {
+            "corpus_bleu": 1.38,
+            "corpus_chrfpp": 10.71,
+            "corpus_ter": 206.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2,
+              0.0,
+              4.2,
+              4.2
+            ],
+            "sentence_chrfpp": [
+              18.48,
+              5.19,
+              8.73,
+              11.85
+            ],
+            "sentence_ter": [
+              450.0,
+              150.0,
+              128.57,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man and the dog.",
+              "You(sg) sing and I get up.",
+              "He saw the house and I took the pig.",
+              "I came and saw the man and the dog."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 31.45,
+          "accumulated_dict": "1. an- = locative or temporal marker (possibly paired with a verb or action)\n2. -na = suffix indicating a verb or action (possibly paired with a verb or action)\n3. yeedi- = verb or action (possibly paired with a suffix indicating a verb or action)\n4. -rin = suffix indicating a verb or action (possibly paired with a verb or action)\n5. karuwa = ? (possibly indicating a state or an action, but its meaning is unclear)\n6. wedmaan = person or animal (possibly paired with a verb or action)\n7. wingkeewa = verb or action (possibly indicating a state or an action)\n8. awon = verb or action (possibly paired with a noun or a person)\n9. baan = noun or person (possibly paired with a verb or action)\n10. om = verb or action (possibly paired with a suffix indicating a verb or action)",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.",
+          "metrics": {
+            "corpus_bleu": 3.26,
+            "corpus_chrfpp": 22.63,
+            "corpus_ter": 112.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              10.68,
+              5.69,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              17.33,
+              26.86,
+              20.15,
+              29.54
+            ],
+            "sentence_ter": [
+              200.0,
+              75.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yeederenu anona om banuun.",
+              "Awon yeediriin awon baan.",
+              "Wingkeewa wedmoona awon baan awon wedmaan.",
+              "Yeederenu wingkeewa om banuun."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 1.25,
+          "accumulated_dict": "1. an- = locative or temporal marker (possibly paired with a verb or action)\n2. -na = suffix indicating a verb or action (possibly paired with a verb or action)\n3. yeedi- = verb or action (possibly paired with a suffix indicating a verb or action)\n4. -rin = suffix indicating a verb or action (possibly paired with a verb or action)\n5. karuwa = ? (possibly indicating a state or an action, but its meaning is unclear)\n6. wedmaan = person or animal (possibly paired with a verb or action)\n7. wingkeewa = verb or action (possibly indicating a state or an action)\n8. awon = verb or action (possibly paired with a noun or a person)\n9. baan = noun or person (possibly paired with a verb or action)\n10. om = verb or action (possibly paired with a suffix indicating a verb or action)\n11. -riin = suffix indicating a verb or action (possibly paired with a verb or action)\n12. -nuun = suffix indicating a verb or action (possibly paired with a verb or action)\n13. -kanuub = suffix indicating a verb or action (possibly paired with a verb or action)",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.\n4. [DELETED: rule — reason: verbs may be composed of more than two morphemes]",
+          "metrics": {
+            "corpus_bleu": 4.14,
+            "corpus_chrfpp": 17.21,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.52,
+              0.0,
+              5.82,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              17.68,
+              11.45,
+              16.72,
+              24.53
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenuub wingkanuub.",
+              "Baan awon ambib banuun.",
+              "Awon wedmoona baan wedmaan wingkeewa.",
+              "Wingkeewa yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 31.67,
+          "accumulated_dict": "1. an- = locative or temporal marker (possibly paired with a verb or action)\n2. -na = suffix indicating a verb or action (possibly paired with a verb or action)\n3. yeedi- = verb or action (possibly paired with a suffix indicating a verb or action)\n4. -rin = suffix indicating a verb or action (possibly paired with a verb or action)\n5. karuwa = verb or action (possibly indicating a state or an action)\n6. wedmaan = person or animal (possibly paired with a verb or action)\n7. wingkeewa = verb or action (possibly indicating a state or an action)\n8. awon = verb or action (possibly paired with a noun or a person)\n9. baan = noun or person (possibly paired with a verb or action)\n10. om = verb or action (possibly paired with a suffix indicating a verb or action)\n11. -riin = suffix indicating a verb or action (possibly paired with a verb or action)\n12. -nuun = suffix indicating a verb or action (possibly paired with a verb or action)\n13. -kanuub = suffix indicating a verb or action (possibly paired with a verb or action)\n14. meneni = pronoun or verb (possibly composed of two morphemes)\n15. ambib = pronoun or verb (possibly composed of two morphemes)\n16. yeederenu = pronoun or verb (possibly composed of two morphemes)\n17. wenenuub = pronoun or verb (possibly composed of two morphemes)\n18. oma = pronoun or verb (possibly composed of two morphemes)\n19. oka = noun or person (possibly paired with a verb or action)\n20. an- = locative or temporal marker (possibly paired with a verb or action)\n21. -iib = suffix indicating a verb or action (possibly paired with a verb or action)",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.\n4. [DELETED: rule — reason: verbs may be composed of more than two morphemes]",
+          "metrics": {
+            "corpus_bleu": 2.67,
+            "corpus_chrfpp": 19.2,
+            "corpus_ter": 125.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              5.69,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              18.63,
+              18.7,
+              18.0,
+              23.59
+            ],
+            "sentence_ter": [
+              200.0,
+              125.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenuub wingkanuub oka anona.",
+              "Ambib awon baan wedmoona oka anona.",
+              "Ambib wedmoona awon baan wedmaan anona.",
+              "Wingkeewa yeediriin oka anona."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 2.17,
+          "accumulated_dict": "1. an- = locative or temporal marker (possibly paired with a verb or action)\n2. -na = suffix indicating a verb or action (possibly paired with a verb or action)\n3. yeedi- = verb or action (possibly paired with a suffix indicating a verb or action)\n4. -rin = suffix indicating a verb or action (possibly paired with a verb or action)\n5. karuwa = verb or action (possibly indicating a state or an action)\n6. wedmaan = person or animal (possibly paired with a verb or action)\n7. wingkeewa = verb or action (possibly indicating a state or an action)\n8. awon = verb or action (possibly paired with a noun or a person)\n9. baan = noun or person (possibly paired with a verb or action)\n10. om = verb or action (possibly paired with a suffix indicating a verb or action)\n11. -riin = suffix indicating a verb or action (possibly paired with a verb or action)\n12. -nuun = suffix indicating a verb or action (possibly paired with a verb or action)\n13. -kanuub = suffix indicating a verb or action (possibly paired with a verb or action)\n14. meneni = pronoun or verb (possibly composed of two morphemes)\n15. ambib = pronoun or verb (possibly composed of two morphemes)\n16. yeederenu = pronoun or verb (possibly composed of two morphemes)\n17. wenenuub = pronoun or verb (possibly composed of two morphemes)\n18. oma = pronoun or verb (possibly composed of two morphemes)\n19. oka = noun or person (possibly paired with a verb or action)\n20. an- = locative or temporal marker (possibly paired with a verb or action)\n21. -iib = suffix indicating a verb or action (possibly paired with a verb or action)\n22. men- = possibly a part of a pronoun or verb (meneni)\n23. -eni = possibly a suffix indicating a verb or action (meneni)\n24. am- = possibly a part of a pronoun or verb (ambib)\n25. -bib = possibly a suffix indicating a verb or action (ambib)\n26. yeedi- = possibly a part of a verb or action (yeediriin)\n27. -riin = possibly a suffix indicating a verb or action (yeediriin)\n28. wed- = possibly a part of a verb or action (wedmoona)\n29. -moona = possibly a suffix indicating a verb or action (wedmoona)\n30. ba- = possibly a part of a verb or action (banuun)\n31. -nuun = possibly a suffix indicating a verb or action (banuun)\n32. wenen- = possibly a part of a pronoun or verb (wenenuub)\n33. -uub = possibly a suffix indicating a verb or action (wenenuub)\n34. om- = possibly a part of a pronoun or verb (om)\n35. an- = possibly a part of a locative or temporal marker (aniib)\n36. -iib = possibly a suffix indicating a verb or action (aniib)\n37. weng- = possibly a part of a verb or action (wengambaranuuwa)\n38. -ambaranuuwa = possibly a suffix indicating a verb or action (wengambaranuuwa)\n39. weng- = possibly a part of a verb or action (wengambaraneen)\n40. -ambaraneen = possibly a suffix indicating a verb or action (wengambaraneen)",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.\n4. Pronouns may be composed of two morphemes.\n5. Verbs may be composed of more than two morphemes.",
+          "metrics": {
+            "corpus_bleu": 3.51,
+            "corpus_chrfpp": 22.46,
+            "corpus_ter": 112.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              0.0,
+              5.82,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              16.16,
+              16.22,
+              22.14,
+              35.86
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenuub anona oka.",
+              "Meneni ambib awon baan.",
+              "Ambib awon baan wedmaan wengambaranuuwa.",
+              "Oma oka aniib wingkeewa."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 2.28,
+          "accumulated_dict": "1. men- = possibly a part of a pronoun or verb (meneni)\n2. -eni = possibly a suffix indicating a verb or action (meneni)\n3. am- = possibly a part of a pronoun or verb (ambib)\n4. -bib = possibly a suffix indicating a verb or action (ambib)\n5. yeedi- = possibly a part of a verb or action (yeediriin)\n6. -riin = possibly a suffix indicating a verb or action (yeediriin)\n7. wed- = possibly a part of a verb or action (wedmoona)\n8. -moona = possibly a suffix indicating a verb or action (wedmoona)\n9. ba- = possibly a part of a verb or action (banuun)\n10. -nuun = possibly a suffix indicating a verb or action (banuun)\n11. wenen- = possibly a part of a pronoun or verb (wenenuub)\n12. -uub = possibly a suffix indicating a verb or action (wenenuub)\n13. om- = possibly a part of a pronoun or verb (om)\n14. an- = possibly a part of a locative or temporal marker (aniib)\n15. -iib = possibly a suffix indicating a verb or action (aniib)\n16. weng- = possibly a part of a verb or action (wengambaranuuwa)\n17. -ambaranuuwa = possibly a suffix indicating a verb or action (wengambaranuuwa)\n18. weng- = possibly a part of a verb or action (wengambaraneen)\n19. -ambaraneen = possibly a suffix indicating a verb or action (wengambaraneen)\n20. [DELETED: meneni = pronoun or verb (possibly composed of two morphemes) — contradicts with men- and -eni being separate morphemes]\n21. [DELETED: ambib = pronoun or verb (possibly composed of two morphemes) — contradicts with am- and -bib being separate morphemes]\n22. [DELETED: yeederenu = pronoun or verb (possibly composed of two morphemes) — contradicts with yeedi- and -enu being separate morphemes]\n23. [DELETED: wenenuub = pronoun or verb (possibly composed of two morphemes) — contradicts with wenen- and -uub being separate morphemes]\n24. [DELETED: meneni = pronoun or verb (possibly composed of two morphemes) — contradicts with men- and -eni being separate morphemes]\n25. [DELETED: ambib = pronoun or verb (possibly composed of two morphemes) — contradicts with am- and -bib being separate morphemes]\n26. [DELETED: yeederenu = pronoun or verb (possibly composed of two morphemes) — contradicts with yeedi- and -enu being separate morphemes]\n27. [DELETED: wenenuub = pronoun or verb (possibly composed of two morphemes) — contradicts with wenen- and -uub being separate morphemes]",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.\n4. Pronouns may be composed of two morphemes.\n5. Verbs may be composed of more than two morphemes.\n6. [DELETED: Verbs may be composed of two morphemes — contradicts with verbs being composed of more than two morphemes in some cases]\n7. [DELETED: Pronouns may be composed of two morphemes — contradicts with pronouns being composed of more than two morphemes in some cases]",
+          "metrics": {
+            "corpus_bleu": 4.14,
+            "corpus_chrfpp": 17.79,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.52,
+              0.0,
+              5.86,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              17.0,
+              9.1,
+              16.23,
+              31.38
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenuub wengkanuub.",
+              "Om baan awon oka.",
+              "Awon wedmoona baan wedmeen.",
+              "Oma oka wingkeewa."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 92.07,
+          "accumulated_dict": "1. men- = possibly a part of a pronoun or verb\n2. -eni = possibly a suffix indicating a verb or action\n3. am- = possibly a part of a pronoun or verb\n4. -bib = possibly a suffix indicating a verb or action\n5. yeedi- = possibly a part of a verb or action\n6. -riin = possibly a suffix indicating a verb or action\n7. wed- = possibly a part of a verb or action\n8. -moona = possibly a suffix indicating a verb or action\n9. ba- = possibly a part of a verb or action\n10. -nuun = possibly a suffix indicating a verb or action\n11. wenen- = possibly a part of a pronoun or verb\n12. -uub = possibly a suffix indicating a verb or action\n13. om- = possibly a part of a pronoun or verb\n14. an- = possibly a part of a locative or temporal marker\n15. -iib = possibly a suffix indicating a verb or action\n16. weng- = possibly a part of a verb or action\n17. -ambaranuuwa = possibly a suffix indicating a verb or action\n18. -ambaraneen = possibly a suffix indicating a verb or action\n19. karuwa = possibly a noun\n20. anona = possibly a locative or temporal marker\n21. wedmaan = possibly a noun\n22. wingkeewa = possibly a pronoun\n23. awon = possibly a noun\n24. baan = possibly a noun\n25. om = possibly a pronoun\n26. oka = possibly a noun\n27. aniib = possibly a verb\n28. anon = possibly a locative or temporal marker\n29. ye = possibly a pronoun\n30. ok = possibly a pronoun\n31. anaana = possibly a noun\n32. oon = possibly a pronoun\n33. yeederenib = possibly a pronoun\n34. miniib = possibly a verb",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.\n4. Pronouns may be composed of more than two morphemes.\n5. Verbs may be composed of more than two morphemes.\n6. New suffixes: -in, -ambaranuuwa, -ambaraneen, -moona, -nuun, -uub, -iib, -riin",
+          "metrics": {
+            "corpus_bleu": 1.34,
+            "corpus_chrfpp": 9.68,
+            "corpus_ter": 212.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              3.39,
+              4.2
+            ],
+            "sentence_chrfpp": [
+              10.74,
+              4.03,
+              10.5,
+              12.84
+            ],
+            "sentence_ter": [
+              400.0,
+              225.0,
+              157.14,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We will go away and they will come.",
+              "I take the pig and he takes the fish.",
+              "He saw the water and the house and heard the dog.",
+              "You(sg) eat the bread and sing."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 32.67,
+          "accumulated_dict": "1. men- = possibly a part of a verb\n2. -eni = possibly a suffix indicating a verb or action\n3. am- = possibly a part of a verb\n4. -bib = possibly a suffix indicating a verb or action\n5. yeedi- = possibly a part of a verb or action\n6. -riin = possibly a suffix indicating a verb or action\n7. wed- = possibly a part of a verb or action\n8. -moona = possibly a suffix indicating a verb or action\n9. ba- = possibly a part of a verb or action\n10. -nuun = possibly a suffix indicating a verb or action\n11. wenen- = possibly a part of a pronoun or verb\n12. -uub = possibly a suffix indicating a verb or action\n13. om- = possibly a part of a pronoun or verb\n14. an- = possibly a part of a locative or temporal marker\n15. -iib = possibly a suffix indicating a verb or action\n16. weng- = possibly a part of a verb or action\n17. -ambaranuuwa = possibly a suffix indicating a verb or action\n18. -ambaraneen = possibly a suffix indicating a verb or action\n19. karu- = possibly a part of a noun\n20. -wa = possibly a suffix indicating a noun\n21. wed- = possibly a part of a verb or action\n22. -maan = possibly a suffix indicating a noun\n23. wingke- = possibly a part of a pronoun or verb\n24. -ewa = possibly a suffix indicating a pronoun\n25. awon- = possibly a part of a noun\n26. -won = possibly a suffix indicating a noun\n27. ba- = possibly a part of a verb or action\n28. -an = possibly a suffix indicating a noun\n29. o- = possibly a part of a pronoun or noun\n30. -ma = possibly a suffix indicating a pronoun\n31. o- = possibly a part of a pronoun or noun\n32. -ka = possibly a suffix indicating a noun\n33. an- = possibly a part of a locative or temporal marker\n34. -on = possibly a suffix indicating a locative or temporal marker\n35. ye- = possibly a part of a pronoun\n36. -e = possibly a suffix indicating a pronoun\n37. weng- = possibly a part of a verb or action\n38. -e = possibly a suffix indicating a verb or action\n39. weng- = possibly a part of a verb or action\n40. -ambaranuuwa = possibly a suffix indicating a verb or action\n41. awon- = possibly a part of a noun\n42. -won = possibly a suffix indicating a noun\n43. ye- = possibly a part of a pronoun\n44. -e = possibly a suffix indicating a pronoun\n45. weng- = possibly a part of a verb or action\n46. -e = possibly a suffix indicating a verb or action\n47. weng- = possibly a part of a verb or action\n48. -ambaraneen = possibly a suffix indicating a verb or action\n49. ok- = possibly a part of a pronoun\n50. -k = possibly a suffix indicating a pronoun\n51. ana- = possibly a part of a noun\n52. -ana = possibly a suffix indicating a noun\n53. o- = possibly a part of a pronoun or noun\n54. -n = possibly a suffix indicating a pronoun\n55. yeederen- = possibly a part of a pronoun\n56. -ib = possibly a suffix indicating a pronoun\n57. mini- = possibly a part of a verb\n58. -iib = possibly a suffix indicating a verb or action\n59. wingke- = possibly a part of a pronoun or verb\n60. -enu = possibly a suffix indicating a pronoun\n61. wun- = possibly a part of a verb\n62. -uun = possibly a suffix indicating a verb or action",
+          "accumulated_rules": "1. Word order appears to be SVO.\n2. Verbs may be composed of two morphemes.\n3. Nouns may be composed of more than two morphemes.\n4. Pronouns may be composed of more than two morphemes.\n5. Verbs may be composed of more than two morphemes.\n6. New suffixes: -in, -ambaranuuwa, -ambaraneen, -moona, -nuun, -uub, -iib, -riin\nDELETED RULES:\nNone",
+          "metrics": {
+            "corpus_bleu": 1.34,
+            "corpus_chrfpp": 9.68,
+            "corpus_ter": 212.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              3.39,
+              4.2
+            ],
+            "sentence_chrfpp": [
+              10.74,
+              4.03,
+              10.5,
+              12.84
+            ],
+            "sentence_ter": [
+              400.0,
+              225.0,
+              157.14,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We will go away and they will come.",
+              "I take the pig and he takes the fish.",
+              "He saw the water and the house and heard the dog.",
+              "You(sg) eat the bread and sing."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 3.42,
+          "accumulated_dict": "1. men- = possibly a part of a verb (confirmed)\n2. -eni = possibly a suffix indicating a verb or action (confirmed)\n3. am- = possibly a part of a verb (confirmed)\n4. -bib = possibly a suffix indicating a verb or action (confirmed)\n5. yeedi- = possibly a part of a verb or action (confirmed)\n6. -riin = possibly a suffix indicating a verb or action (confirmed)\n7. wed- = possibly a part of a verb or action (confirmed)\n8. -moona = possibly a suffix indicating a verb or action (confirmed)\n9. ba- = possibly a part of a verb or action (confirmed)\n10. -an = possibly a suffix indicating a noun (confirmed)\n11. wenen- = possibly a part of a pronoun or verb (confirmed)\n12. -uub = possibly a suffix indicating a verb or action (confirmed)\n13. om- = possibly a part of a pronoun or verb (confirmed)\n14. an- = possibly a part of a locative or temporal marker (confirmed)\n15. -iib = possibly a suffix indicating a verb or action (confirmed)\n16. weng- = possibly a part of a verb or action (confirmed)\n17. -ambaranuuwa = possibly a suffix indicating a verb or action (confirmed)\n18. -ambaraneen = possibly a suffix indicating a verb or action (confirmed)\n19. karu- = possibly a part of a noun (confirmed)\n20. -wa = possibly a suffix indicating a noun (confirmed)\n21. wed- = possibly a part of a verb or action (confirmed)\n22. -maan = possibly a suffix indicating a noun (confirmed)\n23. wingke- = possibly a part of a pronoun or verb (confirmed)\n24. -ewa = possibly a suffix indicating a pronoun (confirmed)\n25. awon- = possibly a part of a noun (confirmed)\n26. -won = possibly a suffix indicating a noun (confirmed)\n27. ba- = possibly a part of a verb or action (confirmed)\n28. -on = possibly a suffix indicating a locative or temporal marker (confirmed)\n29. o- = possibly a part of a pronoun or noun (confirmed)\n30. -ma = possibly a suffix indicating a pronoun (confirmed)\n31. o- = possibly a part of a pronoun or noun (confirmed)\n32. -ka = possibly a suffix indicating a noun (confirmed)\n33. an- = possibly a part of a locative or temporal marker (confirmed)\n34. -e = possibly a suffix indicating a pronoun (confirmed)\n35. ye- = possibly a part of a pronoun (confirmed)\n36. -e = possibly a suffix indicating a verb or action (confirmed)\n37. weng- = possibly a part of a verb or action (confirmed)\n38. -e = possibly a suffix indicating a verb or action (confirmed)\n39. weng- = possibly a part of a verb or action (confirmed)\n40. -ambaranuuwa = possibly a suffix indicating a verb or action (confirmed)\n41. awon- = possibly a part of a noun (confirmed)\n42. -won = possibly a suffix indicating a noun (confirmed)\n43. ye- = possibly a part of a pronoun (confirmed)\n44. -e = possibly a suffix indicating a pronoun (confirmed)\n45. weng- = possibly a part of a verb or action (confirmed)\n46. -e = possibly a suffix indicating a verb or action (confirmed)\n47. weng- = possibly a part of a verb or action (confirmed)\n48. -ambaraneen = possibly a suffix indicating a verb or action (confirmed)\n49. ok- = possibly a part of a pronoun (confirmed)\n50. -k = possibly a suffix indicating a pronoun (confirmed)\n51. ana- = possibly a part of a noun (confirmed)\n52. -ana = possibly a suffix indicating a noun (confirmed)\n53. o- = possibly a part of a pronoun or noun (confirmed)\n54. -n = possibly a suffix indicating a pronoun (confirmed)\n55. yeederen- = possibly a part of a pronoun (confirmed)\n56. -ib = possibly a suffix indicating a pronoun (confirmed)\n57. mini- = possibly a part of a verb (confirmed)\n58. -iib = possibly a suffix indicating a verb or action (confirmed)\n59. wingke- = possibly a part of a pronoun or verb (confirmed)\n60. -enu = possibly a suffix indicating a pronoun (confirmed)\n61. wun- = possibly a part of a verb (confirmed)\n62. -uun = possibly a suffix indicating a verb or action (confirmed)\n[DELETED: none]",
+          "accumulated_rules": "1. Word order appears to be SVO (confirmed)\n2. Verbs may be composed of two morphemes (confirmed)\n3. Nouns may be composed of more than two morphemes (confirmed)\n4. Pronouns may be composed of more than two morphemes (confirmed)\n5. Verbs may be composed of more than two morphemes (confirmed)\n6. New suffixes: -in, -ambaranuuwa, -ambaraneen, -moona, -nuun, -uub, -iib, -riin (confirmed)",
+          "metrics": {
+            "corpus_bleu": 1.34,
+            "corpus_chrfpp": 9.68,
+            "corpus_ter": 212.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              3.39,
+              4.2
+            ],
+            "sentence_chrfpp": [
+              10.74,
+              4.03,
+              10.5,
+              12.84
+            ],
+            "sentence_ter": [
+              400.0,
+              225.0,
+              157.14,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We will go away and they will come.",
+              "I take the pig and he takes the fish.",
+              "He saw the water and the house and heard the dog.",
+              "You(sg) eat the bread and sing."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.26,
+        "corpus_chrfpp": 22.63,
+        "corpus_ter": 112.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          10.68,
+          5.69,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          17.33,
+          26.86,
+          20.15,
+          29.54
+        ],
+        "sentence_ter": [
+          200.0,
+          75.0,
+          100.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Yeederenu anona om banuun.",
+          "Awon yeediriin awon baan.",
+          "Wingkeewa wedmoona awon baan awon wedmaan.",
+          "Yeederenu wingkeewa om banuun."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 3
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 31.35,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: and the dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: sing\n- zee (new addition): and\n- zil (new addition): up",
+          "accumulated_rules": "- Word order appears to be Subject-Verb-Object (SVO) with possible flexibility in the placement of adverbs and conjunctions.\n- The language uses a combination of free and bound morphemes. For example, 'meneni' and 'awon' seem to be free morphemes, while 'wedmaan' and 'wedmoona' appear to be derived from 'wed' (possibly a prefix or a root).\n- The language may have a system of agreement, as 'wedmaan' and 'wedmoona' both contain the 'wed' element, which could be a marker for a specific grammatical function.\n- The language uses a conjunction 'zee' to connect clauses or phrases.",
+          "metrics": {
+            "corpus_bleu": 1.17,
+            "corpus_chrfpp": 11.05,
+            "corpus_ter": 237.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2,
+              0.0,
+              4.2,
+              2.45
+            ],
+            "sentence_chrfpp": [
+              18.48,
+              5.19,
+              8.73,
+              13.05
+            ],
+            "sentence_ter": [
+              450.0,
+              150.0,
+              128.57,
+              466.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man and the dog.",
+              "You(sg) sing and I get up.",
+              "He saw the house and I took the pig.",
+              "Meneni karuwa anona wedmaan. → I came and saw the man and the dog."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 0.75,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: and the dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: sing\n- zee: and\n- zil: up\n- banuun: bread\n- om: will get up\n- enenu: and will take\n- wenenub: we\n- wingkanuub: sing\n- yeederenu: she",
+          "accumulated_rules": "- Word order appears to be Subject-Verb-Object (SVO) with possible flexibility in the placement of adverbs and conjunctions.\n- The language uses a combination of free and bound morphemes. For example, 'meneni' and 'awon' seem to be free morphemes, while 'wedmaan' and 'wedmoona' appear to be derived from 'wed' (possibly a prefix or a root).\n- The language may have a system of agreement, as 'wedmaan' and 'wedmoona' both contain the 'wed' element, which could be a marker for a specific grammatical function.\n- The language uses a conjunction 'zee' to connect clauses or phrases.\n- The language may have a system of aspectual marking, as 'om' and 'enenu' seem to indicate future or completed actions.\n- The language may have a system of person marking, as 'awon' and 'meneni' seem to be used to indicate the first person singular.",
+          "metrics": {
+            "corpus_bleu": 1.62,
+            "corpus_chrfpp": 9.93,
+            "corpus_ter": 181.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              4.2,
+              3.09
+            ],
+            "sentence_chrfpp": [
+              6.82,
+              6.59,
+              7.64,
+              18.46
+            ],
+            "sentence_ter": [
+              200.0,
+              150.0,
+              114.29,
+              366.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will get up.",
+              "We will sing and will sing.",
+              "Yeederenu om zil. → She will get up.",
+              "Wenenu wingkanuub zee yeediriin. → We will sing and will sing."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.04,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: and the dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: sing\n- zee: and\n- zil: up\n- banuun: bread\n- om: will get up\n- enenu: and will take\n- wenenub: we\n- wingkanuub: sing\n- yeederenu: she\n- oka: eat\n- aniib: drink\n- oon: water\n- wedmeen: fish\n- anaana: drank\n- oon: water\n- wedmeen: fish\n- wengambaranuuwa: dog\n- wengambaraneen: pig\n- oon: water\n- wedmeen: fish\n- oka: eat\n- anaana: drank\n- oon: water\n- wedmeen: fish\n- yeederenu: she\n- saw: (new verb)",
+          "accumulated_rules": "- Word order appears to be Subject-Verb-Object (SVO) with possible flexibility in the placement of adverbs and conjunctions.\n- The language uses a combination of free and bound morphemes. For example, 'meneni' and 'awon' seem to be free morphemes, while 'wedmaan' and 'wedmoona' appear to be derived from 'wed' (possibly a prefix or a root).\n- The language may have a system of agreement, as 'wedmaan' and 'wedmoona' both contain the 'wed' element, which could be a marker for a specific grammatical function.\n- The language uses a conjunction 'zee' to connect clauses or phrases.\n- The language may have a system of aspectual marking, as 'om' and 'enenu' seem to indicate future or completed actions.\n- The language may have a system of person marking, as 'awon' and 'meneni' seem to be used to indicate the first person singular.\n- The language may have a system of number marking, as 'wenenub' and 'wingkanuub' seem to indicate the first person plural.\n- The language may have a system of gender marking, as 'yeederenu' seems to indicate the third person singular feminine.",
+          "metrics": {
+            "corpus_bleu": 1.2,
+            "corpus_chrfpp": 9.6,
+            "corpus_ter": 250.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              4.2,
+              2.84
+            ],
+            "sentence_chrfpp": [
+              10.38,
+              5.0,
+              8.58,
+              15.04
+            ],
+            "sentence_ter": [
+              400.0,
+              275.0,
+              128.57,
+              400.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They eat the bread and drink the water.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "Oma oka aniib. → They eat the bread and drink the water."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 31.06,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: and the dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: sing\n- zee: and\n- zil: up\n- banuun: bread\n- om: will get up\n- enenu: and will take\n- wenenub: we\n- wingkanuub: sing\n- yeederenu: she\n- oka: eat\n- aniib: drink\n- oon: water\n- wedmeen: fish\n- anaana: drank\n- wengambaranuuwa: dog\n- wengambaraneen: pig\n- saw: (new verb)\n- miniib: get up\n- wunuun: go away\n- bene: the\n- aneen: it",
+          "accumulated_rules": "- Word order appears to be Subject-Verb-Object (SVO) with possible flexibility in the placement of adverbs and conjunctions.\n- The language uses a combination of free and bound morphemes. For example, 'meneni' and 'awon' seem to be free morphemes, while 'wedmaan' and 'wedmoona' appear to be derived from 'wed' (possibly a prefix or a root).\n- The language may have a system of agreement, as 'wedmaan' and 'wedmoona' both contain the 'wed' element, which could be a marker for a specific grammatical function.\n- The language uses a conjunction 'zee' to connect clauses or phrases.\n- The language may have a system of aspectual marking, as 'om' and 'enenu' seem to indicate future or completed actions.\n- The language may have a system of person marking, as 'awon' and 'meneni' seem to be used to indicate the first person singular.\n- The language may have a system of number marking, as 'wenenub' and 'wingkanuub' seem to indicate the first person plural.\n- The language may have a system of gender marking, as 'yeederenu' seems to indicate the third person singular feminine.\n- The language may have a system of possession or specificity marking, as 'bene' and 'aneen' seem to indicate a specific or possessed noun.\n- The language may have a system of movement or direction marking, as 'miniib' and 'wunuun' seem to indicate a specific action or direction.",
+          "metrics": {
+            "corpus_bleu": 1.75,
+            "corpus_chrfpp": 9.08,
+            "corpus_ter": 175.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              0.0,
+              4.2,
+              3.39
+            ],
+            "sentence_chrfpp": [
+              9.4,
+              5.59,
+              7.98,
+              13.51
+            ],
+            "sentence_ter": [
+              250.0,
+              100.0,
+              128.57,
+              333.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and came.",
+              "She sings and you.",
+              "He will get up the bread and eats it.",
+              "Yeederenib miniib zee karuwa. → They get up and came."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.17,
+        "corpus_chrfpp": 11.05,
+        "corpus_ter": 237.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.2,
+          0.0,
+          4.2,
+          2.45
+        ],
+        "sentence_chrfpp": [
+          18.48,
+          5.19,
+          8.73,
+          13.05
+        ],
+        "sentence_ter": [
+          450.0,
+          150.0,
+          128.57,
+          466.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I came and saw the man and the dog.",
+          "You(sg) sing and I get up.",
+          "He saw the house and I took the pig.",
+          "Meneni karuwa anona wedmaan. → I came and saw the man and the dog."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 31.76,
+          "metrics": {
+            "corpus_bleu": 1.34,
+            "corpus_chrfpp": 9.68,
+            "corpus_ter": 212.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              3.39,
+              4.2
+            ],
+            "sentence_chrfpp": [
+              10.74,
+              4.03,
+              10.5,
+              12.84
+            ],
+            "sentence_ter": [
+              400.0,
+              225.0,
+              157.14,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We will go away and they will come.",
+              "I take the pig and he takes the fish.",
+              "He saw the water and the house and heard the dog.",
+              "You(sg) eat the bread and sing."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.34,
+        "corpus_chrfpp": 9.68,
+        "corpus_ter": 212.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.77,
+          0.0,
+          3.39,
+          4.2
+        ],
+        "sentence_chrfpp": [
+          10.74,
+          4.03,
+          10.5,
+          12.84
+        ],
+        "sentence_ter": [
+          400.0,
+          225.0,
+          157.14,
+          200.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We will go away and they will come.",
+          "I take the pig and he takes the fish.",
+          "He saw the water and the house and heard the dog.",
+          "You(sg) eat the bread and sing."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "self_correction": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.2,
+      "chrf": 3.19,
+      "ter": 6750.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll attempt to translate the sentence into Yonggom, a language spoken in Papua New Guinea. However, please note that I ",
+      "reference": "Wananuuwa mananiib."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 5.59,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "anona: man",
+        "awon: pig",
+        "baan: house",
+        "banuun: bread"
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 3.26,
+      "best_chrf": 22.63,
+      "best_ter": 112.5,
+      "best_em": 0.0,
+      "num_steps": 10,
+      "best_hypotheses": [
+        "Yeederenu anona om banuun.",
+        "Awon yeediriin awon baan.",
+        "Wingkeewa wedmoona awon baan awon wedmaan.",
+        "Yeederenu wingkeewa om banuun."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "best_step": 3
+    },
+    "step_by_step": {
+      "best_bleu": 1.17,
+      "best_chrf": 11.05,
+      "best_ter": 237.5,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "I came and saw the man and the dog.",
+        "You(sg) sing and I get up.",
+        "He saw the house and I took the pig.",
+        "Meneni karuwa anona wedmaan. → I came and saw the man and the dog."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "best_bleu": 1.34,
+      "best_chrf": 9.68,
+      "best_ter": 212.5,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "We will go away and they will come.",
+        "I take the pig and he takes the fish.",
+        "He saw the water and the house and heard the dog.",
+        "You(sg) eat the bread and sing."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    },
+    "self_correction": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  }
+}

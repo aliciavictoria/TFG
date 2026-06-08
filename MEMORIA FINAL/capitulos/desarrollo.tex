@@ -1,305 +1,1145 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Plantilla TFG/TFM
-% Escuela Politécnica Superior de la Universidad de Alicante
-% Realizado por: Jose Manuel Requena Plens
-% Contacto: info@jmrplens.com / Telegram:@jmrplens
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Desarrollo del sistema}
+\label{cap:desarrollo}
 
-\chapter{Desarrollo (Con ejemplos de código)}
-\label{desarrollo}
+Este capítulo describe en detalle la implementación del sistema experimental: su arquitectura general, el diseño de los prompts de cada estrategia, el extractor de traducciones, el proceso de construcción del dataset y los problemas técnicos encontrados durante el desarrollo con sus soluciones.
 
-\section{Inserción de código}
-A veces tendrás que insertar algún pedazo de código fuente para explicar algo relacionado con él. No sustituyas explicaciones con códigos enormes. Si pones algo de código en tu TFG que sea para demostrar algo o explicar alguna solución.
+% ─────────────────────────────────────────────────────────────
 
-\LaTeX~te ayuda a escribir código de manera que su presentación tenga las marcas y tabulaciones propias de este tipo de texto. Para ello, debes poner el código que escribas DENTRO de un entorno  que se llama ``listings''.  La plantilla ya tiene una serie de instrucciones para incluir el paquete ``listings'' y añadirle algunos modificadores por lo que no tienes que incluirlo tú. Simplemente, mete tu código en el entorno ``lstlisting'' y ya está. Puedes indicar el lenguaje en el que está escrito el código y así \LaTeX~lo mostrará mejor. 
-\\
-\par En el archivo \textit{estiloscodigoprogramacion.tex} están definidos algunos lenguajes para mostrarlos con un diseño concreto, se pueden modificar para cambiar el coloreado del código, qué términos se ponen en negrita, etc.
-Si se quiere profundizar más en la función ``listings'' se puede consultar su manual en \url{http://osl.ugr.es/CTAN/macros/latex/contrib/listings/listings.pdf}, aunque hay mucha información en foros y blog's que es más fácil de comprender.
+\section{Arquitectura general}
+\label{sec:arquitectura-general}
 
-\par Veamos un ejemplo en la figura \ref{C_code}:
+El sistema experimental se implementó en Python y se organizó en torno a un
+script principal denominado \texttt{experiment\_runner.py}. Su función es
+automatizar el proceso completo de evaluación: cargar un puzzle, seleccionar
+un modelo, ejecutar las estrategias de prompting, extraer las traducciones
+generadas, calcular las métricas y almacenar los resultados en un archivo JSON.
 
-\begin{lstlisting}[style=Latex-color]
-\begin{lstlisting}[style=C, caption={ejemplo código C},label=C_code]
-	#include <stdio.h>
-	int main(int argc, char* argv[]) {
-  	puts("Hola mundo!");
-	}
-\ end{lstlisting}	
+El sistema sigue el mismo flujo general para todos los experimentos:
+
+\begin{enumerate}
+	\item Carga del puzzle desde un archivo JSON.
+	\item Selección del modelo y de las estrategias que se desean evaluar.
+	\item Construcción del prompt correspondiente a cada estrategia.
+	\item Envío de la petición al proveedor mediante su API.
+	\item Recepción de la respuesta textual generada por el modelo.
+	\item Extracción automática de las traducciones.
+	\item Comparación con las referencias correctas y cálculo de métricas.
+	\item Almacenamiento de los resultados y de los pasos intermedios en un log JSON.
+\end{enumerate}
+
+La Figura~\ref{fig:flujo-sistema} resume este proceso.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[
+	node distance=0.75cm,
+	every node/.style={
+		draw,
+		rectangle,
+		rounded corners,
+		align=center,
+		minimum width=8cm,
+		minimum height=0.75cm
+	},
+	every path/.style={->, thick}
+	]
+	\node (json) {Carga del puzzle desde JSON};
+	\node (config) [below=of json] {Selección del modelo y de las estrategias};
+	\node (prompt) [below=of config] {Construcción del prompt};
+	\node (api) [below=of prompt] {Llamada a la API del proveedor};
+	\node (response) [below=of api] {Respuesta textual del modelo};
+	\node (extract) [below=of response] {Extracción automática de traducciones};
+	\node (metrics) [below=of extract] {Cálculo de métricas};
+	\node (log) [below=of metrics] {Registro de resultados en JSON};
+	
+	\draw (json) -- (config);
+	\draw (config) -- (prompt);
+	\draw (prompt) -- (api);
+	\draw (api) -- (response);
+	\draw (response) -- (extract);
+	\draw (extract) -- (metrics);
+	\draw (metrics) -- (log);
+	\end{tikzpicture}
+	\caption{Flujo general del sistema experimental.}
+	\label{fig:flujo-sistema}
+\end{figure}
+
+La coordinación de las estrategias se realiza mediante una función principal
+que recorre las metodologías solicitadas y almacena sus resultados de manera
+independiente. El Código~\ref{lst:flujo-experimento} muestra una versión
+simplificada de esta lógica.
+
+\begin{lstlisting}[
+style=Python-color,
+caption={Flujo principal de ejecución de un experimento},
+label={lst:flujo-experimento}
+]
+def run_experiment(puzzle, model_key, api_keys, strategies):
+log = {
+"metadata": build_metadata(puzzle, model_key, strategies),
+"puzzle": puzzle,
+"results": {}
+}
+
+for strategy_id in strategies:
+strategy_name = STRATEGY_NAMES[strategy_id]
+
+try:
+result = RUNNERS[strategy_id](
+puzzle,
+model_key,
+api_keys
+)
+log["results"][strategy_name] = result
+
+except Exception as error:
+log["results"][strategy_name] = {
+"error": str(error)
+}
+
+log["summary"] = build_summary(log["results"])
+save_log(log)
+
+return log
 \end{lstlisting}
 
-El resultado será:
-\begin{lstlisting}[style=C, caption={ejemplo código C},label=C_code]
-#include <stdio.h>
-// Comentario
-int main(int argc, char* argv[]) {
-  puts("Hola mundo!");
+Cada estrategia se ejecuta dentro de un bloque de control de excepciones. Esta
+decisión permite que un fallo puntual no detenga necesariamente el experimento
+completo. Por ejemplo, una petición puede superar el tiempo máximo de espera o
+una API puede rechazar temporalmente una llamada por haber alcanzado su límite
+de uso. En ese caso, el error queda registrado en el log y el sistema puede
+continuar con las estrategias restantes.
+
+\subsection{Formato de entrada}
+\label{subsec:formato-entrada}
+
+Cada puzzle se almacena en un archivo JSON independiente. El formato incluye
+información descriptiva sobre la lengua y dos listas claramente diferenciadas:
+\texttt{train\_pairs} y \texttt{test\_pairs}.
+
+Los pares de entrenamiento se incorporan al prompt y constituyen la única
+fuente de información lingüística disponible para el modelo durante la
+resolución. Los pares de test se reservan para la evaluación automática. Sus
+traducciones correctas se utilizan únicamente después de recibir la respuesta
+del modelo, por lo que no aparecen en el prompt.
+
+El Código~\ref{lst:json-puzzle} muestra una versión reducida del puzzle de
+Hakhun utilizado durante el desarrollo.
+
+\begin{lstlisting}[
+style=Python-color,
+caption={Estructura simplificada de un puzzle en formato JSON},
+label={lst:json-puzzle}
+]
+{
+"id": "linguini_012018020100",
+"language": "Hakhun",
+"language_family": "Sino-Tibetan",
+"translation_direction": "lang2en",
+
+"train_pairs": [
+{
+"source": "ŋa ka kɤ ne",
+"target": "Do I go?"
+},
+{
+"source": "nɤ ʒip tuʔ ne",
+"target": "Did you(sg) sleep?"
+}
+],
+
+"test_pairs": [
+{
+"source": "nɤ ʒip ku ne",
+"target": "Do you(sg) sleep?"
+}
+]
 }
 \end{lstlisting}
-\vspace{1em}
-\noindent\hrule
-\vspace{1em}
-Si lo quieres en color, está definido el estilo C-color en el archivo \textit{estiloscodigoprogramacion.tex}, con algunos parámetros para mejorar la visualización:
-\begin{lstlisting}[style=Latex-color]
-\begin{lstlisting}[style=C-color, caption={ejemplo código C en color},label=C_code-color]
-#include <stdio.h>
-// Comentario
-int main(int argc, char* argv[]) {
-  puts("Hola mundo!");
+
+El campo \texttt{translation\_direction} permite distinguir entre los puzzles
+en los que el modelo traduce desde la lengua desconocida al inglés
+(\texttt{lang2en}) y aquellos en los que debe generar expresiones en la lengua
+desconocida a partir de frases en inglés (\texttt{en2lang}).
+
+\subsection{Formato del log JSON}
+\label{subsec:formato-log}
+
+Cada combinación de puzzle y modelo genera un archivo JSON de resultados. El
+objetivo de este registro es permitir tanto la comparación cuantitativa entre
+estrategias como la revisión manual de casos concretos.
+
+El log contiene tres bloques principales:
+
+\begin{enumerate}
+	\item \texttt{metadata}: información general del experimento, como el modelo,
+	la lengua, la dirección de traducción y las estrategias ejecutadas.
+	
+	\item \texttt{puzzle}: copia de los pares de entrenamiento y de test utilizados.
+	
+	\item \texttt{results}: resultados obtenidos por cada estrategia, incluyendo
+	traducciones extraídas, métricas, latencias y pasos intermedios.
+\end{enumerate}
+
+Las estrategias iterativas, como M2 y M3, almacenan además la evolución de las
+hipótesis. En cada paso se registran el número de ejemplos utilizados, el
+diccionario acumulado, las reglas gramaticales inferidas y las métricas
+obtenidas. Esto permite estudiar si el rendimiento mejora progresivamente o si
+una hipótesis incorrecta provoca una degradación posterior.
+
+El Código~\ref{lst:json-log} muestra una versión simplificada de la estructura
+de salida.
+
+\begin{lstlisting}[
+style=Python-color,
+caption={Estructura simplificada del log de resultados},
+label={lst:json-log}
+]
+{
+"metadata": {
+"puzzle_id": "linguini_012018020100",
+"language": "Hakhun",
+"model_key": "llama-3.3-70b-groq",
+"translation_direction": "lang2en"
+},
+
+"results": {
+"baseline": {
+"best_metrics": {
+"corpus_chrfpp": 54.85,
+"exact_match_corpus": 16.67
 }
-\ end{lstlisting}
-\end{lstlisting}
-\begin{lstlisting}[style=C-color, caption={ejemplo código C en color},label=C_code-color]
-	#include <stdio.h>
-	// Comentario
-	int main(int argc, char* argv[]) {
-  	puts("Hola mundo!");
-	}
-\end{lstlisting}
-\vspace{1em}
-\noindent\hrule
-\vspace{1em}
-Por supuesto, puedes mejorar esta presentación utilizando más modificadores. En la sección \ref{usos} se indican algunos detalles.
+},
 
-Otro ejemplo, ahora para mostrar código PHP, sería escribir en tu fichero \LaTeX~lo siguiente:
-\begin{lstlisting}[style=Latex-color,numbers=none]
- \begin{lstlisting}[style=PHP, caption={ejemplo código PHP},label=PHP_code]
- /* 
-Ejemplo de código en PHP para escribir tu primer programa en este lenguaje
-Copia este código en tu ordenador y ejecútalo
-*/
-<html>
-  <head>
-    <title>Prueba de PHP</title>
-  </head>
-  <body>
-    <?php echo '<p>Hola Mundo</p>'; ?> //esto lo escribe TODO el mundo
-  </body>
-</html>
- \ end{lstlisting}
-\end{lstlisting}
- 
- y el resultado es el siguiente:
- 
- \begin{lstlisting}[style=PHP, caption={ejemplo código PHP},label=PHP_code,firstnumber=100]
-/* 
-Ejemplo de código en PHP para escribir tu primer programa en este lenguaje. Copia este código en tu ordenador y ejecútalo
-*/
- <html>
-  <head>
-    <title>Prueba de PHP</title>
-  </head>
-  <body>
-    <?php echo '<p>Hola Mundo</p>'; ?> //esto lo escribe TODO el mundo
-  </body>
-</html>
- \end{lstlisting}
- \vspace{1em}
-\noindent\hrule
-\vspace{1em}
- O también en color: 
- \begin{lstlisting}[style=PHP-color, caption={ejemplo código PHP},label=PHP_code2]
-/* 
-Ejemplo de código en PHP para escribir tu primer programa en este lenguaje. Copia este código en tu ordenador y ejecútalo
-*/
- <html>
-  <head>
-    <title>Prueba de PHP</title>
-  </head>
-  <body>
-    <?php echo '<p>Hola Mundo</p>'; ?> //esto lo escribe TODO el mundo
-  </body>
-</html>
- \end{lstlisting}
- 
- Observa cómo \LaTeX~ha puesto los comentarios en gris y ajustado el código para que se muestre más claro.
-\vspace{1em}
-\noindent\hrule
-\vspace{1em}
- A continuación se muestran otros ejemplos:
- \begin{lstlisting}[style=Matlab-color, caption={ejemplo código Matlab en color},label=Matlab_code]
-%% Code sections are highlighted.
-% System command are supported...
-!touch testFile.txt
-A = [1, 2, 3;... %... as is line continuation.
-     4, 5, 6];
-fid = fopen('testFile.text', 'w');
-for k=1:10
-  fprintf(fid, '%6.2f \n', k)
-end
-x=1; %% this is just a comment, not the start of a section
-% Context-sensitive keywords get highlighted correctly...
-p = properties(person); %(here, properties is a function)
-x = linspace(0,1,101);
-y = x(end:-1:1);
-% ... even in nonsensical code.
-]end()()(((end while {    end    )end ))))end (end
-%{
-    block comments are supported
-%} even
-runaway block comments are
+"incremental": {
+"steps": [
+{
+"step": 1,
+"num_examples": 2,
+"accumulated_dict": "...",
+"accumulated_rules": "...",
+"metrics": {
+"corpus_chrfpp": 6.96
+}
+}
+]
+}
+}
+}
 \end{lstlisting}
 
-\begin{lstlisting}[style=Matlab, caption={ejemplo código Matlab en blanco y negro},label=Matlab_codebn]
-%% Code sections are highlighted.
-% System command are supported...
-!touch testFile.txt
-A = [1, 2, 3;... %... as is line continuation.
-     4, 5, 6];
-fid = fopen('testFile.text', 'w');
-for k=1:10
-  fprintf(fid, '%6.2f \n', k)
-end
-x=1; %% this is just a comment, not the start of a section
-% Context-sensitive keywords get highlighted correctly...
-p = properties(person); %(here, properties is a function)
-x = linspace(0,1,101);
-y = x(end:-1:1);
-% ... even in nonsensical code.
-]end()()(((end while {    end    )end ))))end (end
-%{
-    block comments are supported
-%} even
-runaway block comments are
-\end{lstlisting}
-\newpage
-\begin{lstlisting}[style=Python-color, caption={ejemplo código Python en color}]
-class Example (object):
-    def __init__ (self, account, password):
-        """e.g. account  = 'bob@example.com/test'
-                password = 'bigbob'
-        """
+Además del log detallado, el sistema genera un resumen compacto con las
+métricas principales de cada estrategia. Esta separación permite realizar
+comparaciones automáticas sin perder la información necesaria para auditar
+manualmente las respuestas.
 
-        reg = telepathy.client.ManagerRegistry()
-        reg.LoadManagers()
+% ─────────────────────────────────────────────────────────────
+\section{Diseño de los prompts}
+\label{sec:prompts}
+% ─────────────────────────────────────────────────────────────
 
-        # get the gabble Connection Manager
-        self.cm = cm = reg.GetManager('gabble')
+\subsection{Instrucción metalingüística base}
 
-        # get the parameters required to make a Jabber connection
-        # begin ex.basics.dbus.language-bindings.python.methods.call
-        cm[CONNECTION_MANAGER].RequestConnection('jabber',
-            {
-                'account':  account,
-                'password': password,
-            },
-            reply_handler = self.request_connection_cb,
-            error_handler = self.error_cb)
-        # end ex.basics.dbus.language-bindings.python.methods.call
+Las estrategias M1 a M5 comienzan con una instrucción común en inglés que establece el marco de razonamiento:
+
+\begin{quote}
+	\textit{You are an expert linguistic analyst performing inductive reasoning on an unknown language. You have never seen this language before. You must reason exclusively from the provided examples using your meta-linguistic knowledge of how human languages work in general (word order typology, morphological patterns, agreement systems, affixation, etc.).}
+	
+	\textit{Core principles: Do NOT use any prior knowledge of this specific language or its family. Treat every hypothesis as provisional and subject to revision. Always show your reasoning explicitly before reaching any conclusion. A wrong rule confidently stated is worse than uncertainty acknowledged.}
+\end{quote}
+
+Varias decisiones de diseño en esta instrucción merecen justificación. Los prompts se escriben en inglés porque es la lengua en que los modelos tienen mejor rendimiento en tareas de razonamiento, y porque las traducciones del puzzle son siempre al inglés o desde el inglés. La instrucción de no usar conocimiento previo es necesaria porque los modelos más grandes pueden reconocer lenguas minoritarias que se suponen desconocidas, como se verificó con Lakota y Yoruba durante la selección de puzzles (véase la Sección~\ref{sec:seleccion_puzzles}). La instrucción de preferir la incertidumbre explícita a la confianza incorrecta reduce el número de casos en que el modelo genera traducciones inventadas con apariencia de corrección.
+
+\subsection{Formato de salida exigido}
+
+Todas las estrategias de traducción solicitan la respuesta en el mismo formato estructurado:
+
+\begin{lstlisting} [style=Latex-color]
+DICTIONARY:
+[entradas morfema = significado, una por línea]
+
+GRAMMAR RULES:
+[reglas numeradas]
+
+TRANSLATIONS:
+1. [traducción]
+2. [traducción]
 \end{lstlisting}
 
-\begin{lstlisting}[style=Python, caption={ejemplo código Python en blanco y negro}]
-class Example (object):
-    def __init__ (self, account, password):
-        """e.g. account  = 'bob@example.com/test'
-                password = 'bigbob'
-        """
+Este formato tiene varias ventajas prácticas. Primero, la separación explícita entre diccionario, reglas y traducciones facilita la extracción automática de cada componente. Segundo, obligar al modelo a escribir el diccionario y las reglas antes de las traducciones le fuerza a hacer explícito su razonamiento, lo que funciona como un mecanismo de \textit{chain-of-thought} implícito \citep{wei2022chain}. Tercero, la sección \texttt{TRANSLATIONS:} proporciona un marcador claro al extractor para localizar las hipótesis.
 
-        reg = telepathy.client.ManagerRegistry()
-        reg.LoadManagers()
+No obstante, los modelos no siempre respetan el formato exacto. El GPT-OSS-120B, en particular, tiende a intercalar análisis morfema a morfema dentro de la sección \texttt{TRANSLATIONS}, usando comillas tipográficas (\texttt{\textquotedblleft\textquotedblright}) y flechas unicode (\texttt{→}) en lugar de líneas numeradas limpias. Este comportamiento motivó el diseño multicapa del extractor descrito en la Sección~\ref{sec:extractor}.
 
-        # get the gabble Connection Manager
-        self.cm = cm = reg.GetManager('gabble')
+\subsection{Prompt de M1 (baseline)}
 
-        # get the parameters required to make a Jabber connection
-        # begin ex.basics.dbus.language-bindings.python.methods.call
-        cm[CONNECTION_MANAGER].RequestConnection('jabber',
-            {
-                'account':  account,
-                'password': password,
-            },
-            reply_handler = self.request_connection_cb,
-            error_handler = self.error_cb)
-        # end ex.basics.dbus.language-bindings.python.methods.call
+M1 proporciona todos los pares de entrenamiento en un único prompt. Su estructura es la más simple:
+
+
+\begin{lstlisting} [style=Latex-color]
+[instrucción metalingüística base]
+
+--- TRAINING EXAMPLES ---
+frase_1 → traducción_1
+...
+frase_n → traducción_n
+
+--- YOUR TASK ---
+Based on ALL examples above, write your inferred DICTIONARY
+and GRAMMAR RULES, then [translate into English / translate
+into LANG]:
+1. frase_test_1
+...
+
+Format your response EXACTLY as:
+DICTIONARY: ...
+GRAMMAR RULES: ...
+TRANSLATIONS: ...
 \end{lstlisting}
 
-\section{Usos y personalización}
-\label{usos}
+\subsection{Prompt de M2 (incremental)}
 
-El texto que acompaña al código puedes incluirlo o no, también puedes decidir si el texto va numerado o no. A continuación se muestra como:
-\begin{lstlisting}[style=Latex-color]
-	% Con esta línea el código no tendrá título
-	\begin{lstlisting}[style=Python]
-		micodigo
-	\ end{lstlisting}
+M2 es la estrategia técnicamente más compleja porque el prompt cambia en cada paso e incluye la hipótesis acumulada del paso anterior. El prompt de cada paso $k$ tiene la siguiente estructura:
+
+\begin{lstlisting} [style=Latex-color]
+[instrucción metalingüística base]
+
+STEP k/total — New subset of examples:
+
+--- YOUR CURRENT HYPOTHESIS (provisional — review critically) ---
+DICTIONARY:
+[diccionario acumulado del paso k-1]
+
+GRAMMAR RULES:
+[reglas acumuladas del paso k-1]
+
+IMPORTANT: New examples may CONFIRM, REFINE or CONTRADICT
+entries above. Delete proven-wrong entries; correct imprecise
+ones.
+
+--- NEW EXAMPLES ---
+frase_i -> traducción_i
+...
+
+--- YOUR TASK (in this order) ---
+
+STEP A · ANALYSIS
+[...]
+Do NOT translate the test sentences yet.
+
+STEP B · REVISED DICTIONARY
+[...]
+Mark deleted entries: [DELETED: entry — reason]
+
+STEP C · REVISED GRAMMAR RULES
+[...]
+
+STEP D · TRANSLATIONS
+[translate / traduce] — write ONLY the translation on each
+line, nothing else:
+1. frase_test_1
+...
+
+Format your response EXACTLY as:
+ANALYSIS: ...
+DICTIONARY: ...
+GRAMMAR RULES: ...
+TRANSLATIONS: ...
 \end{lstlisting}
 
-\begin{lstlisting}[style=Python]
-	micodigo
-\end{lstlisting}
-\vspace{1em}
-\noindent\hrule
-\vspace{1em}
-\begin{lstlisting}[style=Latex-color]
-	% Con esta línea el código tendrá el título abajo
-	\begin{lstlisting}[style=Python, caption={Ejemplo de título abajo},captionpos=b]
-		micodigo
-	\ end{lstlisting}
-\end{lstlisting}
+Tres elementos de diseño de este prompt merecen atención especial. La instrucción \texttt{Do NOT translate the test sentences yet} en el paso de análisis era necesaria porque en las primeras versiones el modelo anticipaba las traducciones en el paso de razonamiento, antes de haber actualizado el diccionario. La cláusula \texttt{[DELETED: entry — reason]} obliga al modelo a ser explícito sobre qué hipótesis descarta y por qué, en lugar de simplemente ignorar entradas anteriores, lo que produce un historial de razonamiento auditable. La instrucción \texttt{write ONLY the translation on each line, nothing else} fue necesaria para reducir la tendencia de los modelos a añadir notas entre paréntesis o justificaciones morfológicas junto a cada traducción.
 
-\begin{lstlisting}[style=Python,caption={Ejemplo de título abajo},captionpos=b]
-	micodigo
-\end{lstlisting}
-\vspace{1em}
-\noindent\hrule
-\vspace{1em}
-\begin{lstlisting}[style=Latex-color]
-	% Con esta línea el código tendrá título no numerado
-	\begin{lstlisting}[style=Python, title={Ejemplo de título no numerado}]
-		micodigo
-	\ end{lstlisting}
-\end{lstlisting}
+\subsection{Prompt de M3 (step-by-step)}
 
-\begin{lstlisting}[style=Python,title={Ejemplo de título no numerado}]
-	micodigo
-\end{lstlisting}
-\vspace{1em}
-\noindent\hrule
-\vspace{1em}
-\begin{lstlisting}[style=Latex-color]
-	% Con esta línea el código no tendrá las líneas numeradas
-\begin{lstlisting}[style=Python,numbers=none, title={Ejemplo de código sin número de líneas}]
-	micodigo
-	sin
-	número
-	de
-	líneas
-\ end{lstlisting}
+M3 divide los ejemplos en cuatro etapas lingüísticas. El prompt de cada etapa incluye su foco específico:
+
+\begin{lstlisting} [style=Latex-color]
+STEP k/4 — Stage: LEXICAL / PHONOLOGY /
+MORPHOSYNTAX / SYNTAX
+[foco de la etapa]
+
+--- ACCUMULATED KNOWLEDGE ---
+DICTIONARY: [acumulado]
+GRAMMAR RULES: [acumuladas]
+
+--- EXAMPLES FOR THIS STAGE ---
+frase_i → traducción_i
+...
+
+--- YOUR TASK ---
+1. Refine DICTIONARY with new vocabulary
+2. Add/update GRAMMAR RULES for this stage
+3. [translate] using ALL accumulated knowledge
 \end{lstlisting}
 
-\begin{lstlisting}[style=Python,numbers=none,title={Ejemplo de código sin número de líneas}]
-		micodigo
-		sin
-		número
-		de
-		líneas
+Las instrucciones de foco por etapa son: para léxico, \textit{Focus on vocabulary and basic word order}; para fonología, \textit{Focus on phonological patterns: vowel changes, consonant alternations, affixes, allomorphs}; para morfosintaxis, \textit{Focus on agreement, tense, number, person, gender markings}; y para sintaxis, \textit{Combine all rules: negation, questions, complex clauses}.
+
+\subsection{Prompt de M4 (inspiración humana)}
+
+M4 prepende el razonamiento humano del puzzle de Hakhun antes del puzzle nuevo, con instrucciones explícitas para no transferir léxico ni reglas:
+
+\begin{lstlisting} [style=Latex-color]
+[instrucción metalingüística base]
+
+[razonamiento humano del puzzle de Hakhun]
+
+Now apply the same style of reasoning to a NEW and COMPLETELY
+DIFFERENT linguistic puzzle.
+The language below is unrelated to the example above — do not
+transfer any vocabulary or rules.
+
+--- TRAINING EXAMPLES (new language) ---
+[...]
 \end{lstlisting}
 
-\section{Importar archivos fuente}
+El razonamiento humano incluye el análisis frase a frase del puzzle de Hakhun: qué elementos invariantes se identifican primero (\texttt{ne} como marcador de pregunta), cómo se aíslan los pronombres, cómo se deduce el sistema aspectual comparando terminaciones, y por qué \texttt{kəmə} se trata como marcador de transitividad sin traducción directa. Esto proporciona al modelo no solo el resultado final sino el proceso de razonamiento inductivo que llevó a él.
 
-Existe la posibilidad de importar un archivo de código en lugar de copiar su contenido y pegarlo en \LaTeX.
+\subsection{Prompt de M5 (autocorrección)}
 
-Para realizarlo debes escribir:
+M5 opera en dos turnos. El primer turno usa el mismo prompt que M1. El segundo turno devuelve al modelo su propio output para que lo critique:
 
-\begin{lstlisting}[style=Latex-color]
-\lstinputlisting[style=C++-color,caption={Archivo C++ importado}]{archivos/ejemplos/holamundo.cpp}	
+\begin{lstlisting} [style=Latex-color]
+[instrucción metalingüística base]
+
+You have already analyzed the following language and produced
+a first draft. Now act as a careful reviewer of your own work.
+
+--- TRAINING EXAMPLES (same as before) ---
+[...]
+
+--- YOUR FIRST-DRAFT ANALYSIS ---
+DICTIONARY: [inferido en turno 1]
+GRAMMAR RULES: [inferidas en turno 1]
+FIRST-DRAFT TRANSLATIONS:
+1. [traducción del turno 1]
+...
+
+--- YOUR TASK ---
+1. CRITIQUE: For each translation above, check whether it is
+consistent with your dictionary and grammar rules. List
+specific contradictions or uncertainties. Be precise: quote
+the rule or entry that is violated or missing.
+2. REVISED DICTIONARY: Update entries if needed.
+3. REVISED GRAMMAR RULES: Update rules if needed.
+4. FINAL TRANSLATIONS: Produce corrected translations based on
+your critique. If a translation was already correct, keep it
+unchanged.
+
+IMPORTANT: The TRANSLATIONS section must contain ONLY the
+final translated sentences, one per line, with no explanations,
+notes, or comments.
 \end{lstlisting}
 
-Y se importará con el formato establecido entre los '[ ]':
-\newpage
-\lstinputlisting[style=C++-color,caption={Archivo C++ importado}]{archivos/ejemplos/holamundo.cpp}
+La instrucción de la sección \texttt{CRITIQUE} es deliberadamente precisa: el modelo debe citar la regla o entrada concreta que cada traducción viola. Sin esta precisión, los modelos tienden a producir críticas genéricas del tipo \textit{the translation may not capture all morphological nuances}, que no conducen a ninguna corrección real. La instrucción \texttt{IMPORTANT} al final fue añadida tras observar que el GPT-OSS-120B incluía justificaciones morfológicas junto a cada traducción en el turno 2, lo que confundía al extractor.
 
-A continuación se muestran otros ejemplos
+% ─────────────────────────────────────────────────────────────
 
-\begin{lstlisting}[style=Latex-color]
-\lstinputlisting[style=Python-color,caption={Archivo Py importado},label=importado_py]{archivos/ejemplos/holamundo.py}	
+\section{Extracción automática de traducciones}
+\label{sec:extractor-traducciones}
+
+La respuesta generada por un modelo no puede utilizarse directamente para
+calcular las métricas. Aunque los prompts solicitan un formato de salida
+específico, los modelos no siempre lo respetan de forma estricta. En algunos
+casos añaden explicaciones, comentarios morfológicos o símbolos Markdown; en
+otros, mezclan las traducciones con entradas del diccionario o con instrucciones
+de revisión.
+
+Por este motivo, se implementó un extractor específico cuya función es
+identificar únicamente las traducciones finales y descartar el resto del
+contenido. Este componente fue refinado progresivamente a medida que se
+detectaron nuevos formatos de respuesta durante los experimentos.
+
+\subsection{Patrones de salida observados}
+\label{subsec:patrones-salida}
+
+Durante el desarrollo se observaron varios patrones frecuentes. La
+Tabla~\ref{tab:patrones-salida} resume los principales casos y el tratamiento
+aplicado.
+
+\begin{table}[ht]
+	\centering
+	\caption{Principales patrones detectados en las respuestas de los modelos.}
+	\label{tab:patrones-salida}
+	\begin{tabularx}{\textwidth}{l X X}
+		\toprule
+		\textbf{Patrón} & \textbf{Ejemplo simplificado} & \textbf{Tratamiento} \\
+		\midrule
+		
+		Línea numerada limpia
+		& \texttt{1. Do you sleep?}
+		& Extracción directa mediante un patrón de línea numerada. \\
+		
+		Traducción precedida por flecha
+		& \texttt{n... -> ``Do you sleep?''}
+		& Extracción del contenido situado a la derecha de la flecha. \\
+		
+		Nota final entre paréntesis
+		& \texttt{1. Do you sleep? (present tense)}
+		& Eliminación de la nota antes de calcular las métricas. \\
+		
+		Entrada de diccionario
+		& \texttt{1. ne = question marker}
+		& Descarte mediante un filtro específico. \\
+		
+		Meta-análisis lingüístico
+		& \texttt{1. The word order is SOV...}
+		& Descarte por contener terminología metalingüística. \\
+		
+		Instrucción de revisión
+		& \texttt{1. Add a new dictionary entry...}
+		& Descarte mediante palabras clave asociadas a correcciones. \\
+		
+		Salida incompleta
+		& El modelo genera menos traducciones de las esperadas.
+		& Registro explícito del fallo y penalización de las respuestas ausentes. \\
+		
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+La variabilidad no depende únicamente del modelo utilizado. Una misma
+arquitectura puede cambiar su formato de salida entre estrategias o incluso
+entre pasos consecutivos de una estrategia incremental. Este comportamiento
+obliga a separar el procesamiento de las traducciones del razonamiento textual
+generado por el modelo.
+
+\subsection{Arquitectura multicapa del extractor}
+\label{subsec:arquitectura-extractor}
+
+El extractor sigue un proceso secuencial formado por cuatro etapas:
+
+\begin{enumerate}
+	\item Localizar la sección \texttt{TRANSLATIONS} de la respuesta.
+	\item Buscar traducciones situadas a la derecha de una flecha.
+	\item Buscar líneas numeradas cuando el patrón anterior no produce
+	suficientes resultados.
+	\item Limpiar y filtrar los candidatos antes de devolver las traducciones.
+\end{enumerate}
+
+El Código~\ref{lst:extractor-traducciones} muestra una versión simplificada de
+la implementación.
+
+\begin{lstlisting}[
+language=Python,
+caption={Lógica principal del extractor de traducciones},
+label={lst:extractor-traducciones}
+]
+def extract_translations(response, num_expected):
+section = locate_translations_section(response)
+
+arrow_hits = [
+clean(match)
+for match in find_arrow_translations(section)
+]
+
+arrow_hits = [
+text for text in arrow_hits
+if is_valid_translation(text)
+]
+
+if len(arrow_hits) >= num_expected:
+return arrow_hits[:num_expected]
+
+numbered_hits = [
+clean(match)
+for match in find_numbered_lines(section)
+]
+
+numbered_hits = [
+text for text in numbered_hits
+if is_valid_translation(text)
+]
+
+combined = arrow_hits + [
+text for text in numbered_hits
+if text not in arrow_hits
+]
+
+return combined[:num_expected]
 \end{lstlisting}
 
-\lstinputlisting[style=Python-color,caption={Archivo Py importado},label=importado_py2]{archivos/ejemplos/holamundo.py}	
+El primer patrón tiene prioridad porque algunos modelos incluyen una explicación
+morfema a morfema y terminan cada análisis mediante una flecha seguida de la
+traducción final. Si no se encuentran suficientes resultados, el sistema busca
+líneas numeradas, que constituyen el formato solicitado originalmente en los
+prompts.
 
-\begin{lstlisting}[style=Latex-color]
-\lstinputlisting[style=Matlab-color,caption={Archivo Matlab importado},label=importado_m]{archivos/ejemplos/holamundo.m}	
+Finalmente, ambos conjuntos se combinan eliminando duplicados y respetando el
+número de frases esperadas.
+
+\subsection{Filtros de descarte}
+\label{subsec:filtros-descarte}
+
+No toda línea numerada representa una traducción. Especialmente en las
+estrategias M2 y M5, los modelos pueden numerar también reglas gramaticales,
+entradas de diccionario o instrucciones de autocorrección.
+
+Para reducir estos falsos positivos se aplican varios filtros. El
+Código~\ref{lst:filtros-extractor} resume su lógica.
+
+\begin{lstlisting}[
+language=Python,
+caption={Filtros utilizados para descartar falsos positivos},
+label={lst:filtros-extractor}
+]
+def is_valid_translation(text):
+if not 4 < len(text) < 120:
+return False
+
+if looks_like_dictionary_entry(text):
+return False
+
+if contains_revision_instruction(text):
+return False
+
+if contains_metalinguistic_analysis(text):
+return False
+
+return True
 \end{lstlisting}
 
-\lstinputlisting[style=Matlab-color,caption={Archivo Matlab importado},label=importado_m]{archivos/ejemplos/holamundo.m}
+El filtro de entradas de diccionario detecta estructuras del tipo
+\texttt{palabra = significado} o \texttt{palabra: significado}. El filtro de
+instrucciones descarta líneas que contienen verbos como \texttt{add},
+\texttt{delete}, \texttt{update} o \texttt{revise} junto con términos como
+\texttt{rule}, \texttt{dictionary} o \texttt{morpheme}. Por último, el filtro
+metalingüístico elimina explicaciones que incluyen expresiones como
+\texttt{word order}, \texttt{suffix}, \texttt{subject marker} o
+\texttt{allomorph}.
 
+Estos filtros no sustituyen a una validación manual, pero reducen
+considerablemente el número de falsos positivos observados durante la ejecución
+automática.
 
+\subsection{Normalización de las traducciones}
+\label{subsec:normalizacion-traducciones}
+
+Antes de calcular las métricas, cada candidato pasa por una función de limpieza.
+Su objetivo es eliminar elementos de formato que no forman parte de la
+traducción: espacios innecesarios, comillas, marcas Markdown y notas explicativas
+situadas al final de la línea.
+
+Una versión simplificada de esta función es la siguiente:
+
+\begin{lstlisting}[
+language=Python,
+caption={Normalización básica de una traducción extraída},
+label={lst:clean-traduccion}
+]
+def clean(text):
+text = text.strip()
+text = text.strip("*")
+text = text.strip('"')
+text = remove_final_parenthetical_note(text)
+
+return text.strip()
+\end{lstlisting}
+
+La limpieza debe aplicarse con cautela. Una eliminación excesivamente agresiva
+puede alterar una traducción válida. Por ejemplo, los marcadores
+\texttt{(sg)} y \texttt{(pl)} forman parte de algunas referencias en inglés y
+no deben descartarse automáticamente. Por este motivo, únicamente se eliminan
+notas explicativas finales claramente separadas del contenido principal.
+
+\subsection{Gestión de respuestas incompletas}
+\label{subsec:respuestas-incompletas}
+
+Durante los experimentos se detectaron casos en los que el extractor recuperaba
+menos traducciones que frases de test. Esta situación puede deberse a dos causas:
+el modelo no ha generado todas las respuestas solicitadas o el formato utilizado
+no ha sido reconocido correctamente.
+
+Las traducciones ausentes no deben ignorarse durante el cálculo de métricas, ya
+que hacerlo favorecería artificialmente a las respuestas incompletas. Por este
+motivo, el sistema completa la lista con cadenas vacías hasta alcanzar el número
+de referencias esperadas.
+
+El Código~\ref{lst:relleno-traducciones} muestra esta normalización.
+
+\begin{lstlisting}[
+language=Python,
+caption={Penalización de traducciones ausentes},
+label={lst:relleno-traducciones}
+]
+def complete_missing_translations(hypotheses, references):
+hypotheses = list(hypotheses[:len(references)])
+
+missing = len(references) - len(hypotheses)
+
+if missing > 0:
+hypotheses.extend([""] * missing)
+
+return hypotheses
+\end{lstlisting}
+
+Además, el log conserva información explícita sobre el proceso de extracción:
+
+\begin{lstlisting}[
+language=Python,
+caption={Metadatos asociados a la extracción},
+label={lst:metadata-extraccion}
+]
+extraction_info = {
+"num_expected": len(references),
+"num_extracted": len(extracted_translations),
+"extraction_complete":
+len(extracted_translations) == len(references)
+}
+\end{lstlisting}
+
+Este registro permite distinguir entre un error lingüístico del modelo y un
+problema de formato o extracción.
+
+\subsection{Validación del extractor}
+\label{subsec:validacion-extractor}
+
+El extractor se validó mediante la revisión manual de respuestas generadas por
+los tres modelos evaluados y por las distintas estrategias. Para cada patrón
+detectado se comprobó que las traducciones recuperadas coincidieran con el
+contenido final producido por el modelo y que las líneas descartadas
+correspondieran realmente a explicaciones, instrucciones o entradas de
+diccionario.
+
+La validación incluyó especialmente las respuestas de las estrategias
+iterativas, ya que generan un volumen mayor de texto y presentan más
+variabilidad de formato. También se revisaron los casos incompletos para
+determinar si el problema procedía de la generación del modelo o de una
+limitación del extractor.
+
+Esta comprobación manual resulta necesaria porque las métricas automáticas solo
+son fiables cuando las hipótesis procesadas representan correctamente las
+traducciones generadas.
+
+% ─────────────────────────────────────────────────────────────
+
+\section{Construcción del conjunto de datos}
+\label{sec:construccion-dataset}
+
+El benchmark Linguini se distribuye en un único archivo JSONL que contiene
+problemas de distintos tipos. Para facilitar la ejecución automática de los
+experimentos, se implementó un proceso de conversión que transforma cada
+problema seleccionado en un archivo JSON independiente con una estructura
+homogénea.
+
+Esta conversión cumple dos objetivos. En primer lugar, separa claramente los
+pares utilizados como contexto de las frases reservadas para evaluación. En
+segundo lugar, permite ejecutar nuevos experimentos sin depender del formato
+interno del benchmark original.
+
+\subsection{Extracción desde el JSONL de Linguini}
+\label{subsec:extraccion-jsonl}
+
+El archivo original de Linguini contiene 160 problemas. Cada registro incluye,
+entre otros, los campos \texttt{context}, \texttt{query}, \texttt{answer},
+\texttt{task\_lang}, \texttt{task\_type} y \texttt{eval\_type}.
+
+El conversor procesa cada registro mediante los siguientes pasos:
+
+\begin{enumerate}
+	\item \textbf{Filtrado por tipo de tarea.} Se conservan únicamente los
+	problemas de traducción, identificados mediante el campo
+	\texttt{task\_type = translation}. Tras este filtrado permanecen 114 de los
+	160 problemas originales.
+	
+	\item \textbf{Extracción de los pares de entrenamiento.} El campo
+	\texttt{context} contiene ejemplos en texto libre. Cada línea se procesa
+	para obtener un par formado por una expresión de origen y su traducción.
+	
+	\item \textbf{Extracción de las frases de test.} El campo \texttt{query}
+	contiene las expresiones que el modelo debe traducir. Estas frases se
+	separan de las instrucciones generales del enunciado.
+	
+	\item \textbf{Normalización de las respuestas.} El campo \texttt{answer}
+	puede contener una única traducción válida o varias alternativas. Cuando
+	existen múltiples referencias, el sistema conserva la primera como
+	referencia principal para el cálculo automático de métricas.
+	
+	\item \textbf{Inferencia de la dirección de traducción.} Se distingue entre
+	problemas de traducción desde la lengua desconocida al inglés
+	(\texttt{lang2en}) y problemas en la dirección inversa
+	(\texttt{en2lang}).
+	
+	\item \textbf{Generación del archivo JSON.} Para cada problema válido se
+	crea un archivo independiente con los campos necesarios para la ejecución
+	del sistema experimental.
+\end{enumerate}
+
+El Código~\ref{lst:json-convertido} muestra una versión reducida de la
+estructura generada.
+
+\begin{lstlisting}[
+caption={Estructura simplificada de un puzzle convertido},
+label={lst:json-convertido}
+]
+{
+"id": "linguini_012018020100",
+"language": "Hakhun",
+"language_code": "nst-hkn_Latn",
+"language_family": "Sino-Tibetan",
+"task_type": "translation",
+"translation_direction": "lang2en",
+
+"train_pairs": [
+{
+"source": "ŋa ka kɤ ne",
+"target": "Do I go?"
+}
+],
+
+"test_pairs": [
+{
+"source": "nɤ ʒip ku ne",
+"target": "Do you(sg) sleep?"
+}
+]
+}
+\end{lstlisting}
+
+Los pares incluidos en \texttt{train\_pairs} se incorporan al prompt como
+contexto. Por el contrario, las traducciones almacenadas en
+\texttt{test\_pairs} se utilizan únicamente después de recibir la respuesta del
+modelo y nunca se incluyen durante la inferencia.
+
+\subsection{Criterios de selección}
+\label{subsec:criterios-filtrado}
+
+No todos los problemas de traducción resultan adecuados para el diseño
+experimental planteado. Tras la conversión inicial se aplican varios criterios
+de selección:
+
+\begin{description}
+	\item[Suficiencia de ejemplos.] El puzzle debe contener al menos ocho pares
+	de entrenamiento y tres frases de test. Esta condición garantiza que la
+	estrategia incremental pueda generar varios pasos y que las métricas no
+	dependan de una única respuesta.
+	
+	\item[Diversidad lingüística.] Se priorizan lenguas pertenecientes a
+	familias distintas con el objetivo de ampliar la variedad tipológica del
+	conjunto evaluado.
+	
+	\item[Dirección de traducción.] Se incluyen problemas en ambas direcciones:
+	desde la lengua desconocida al inglés y desde el inglés a la lengua
+	desconocida. Esta distinción permite estudiar por separado la comprensión
+	y la generación de morfología no familiar.
+	
+	\item[Ausencia de referencias vacías.] Se descartan los problemas que
+	contienen respuestas ausentes o listas vacías en el conjunto de test.
+	
+	\item[Conversión válida.] Se excluyen los registros en los que una
+	instrucción del enunciado original ha sido interpretada erróneamente como
+	una frase que debe traducirse.
+	
+	\item[Control exploratorio de conocimiento previo.] La estrategia M0 se
+	utiliza para detectar posibles indicios de conocimiento previo de la
+	lengua. Este control no permite demostrar que el modelo desconozca por
+	completo el idioma, pero ayuda a identificar casos que requieren una
+	revisión manual adicional.
+\end{description}
+
+La selección final combina criterios automáticos con una comprobación manual
+de los casos dudosos. Esta revisión es necesaria porque algunos errores no
+pueden detectarse de forma fiable mediante una única regla general.
+
+\subsection{Validación de los puzzles convertidos}
+\label{subsec:validacion-puzzles}
+
+Durante el desarrollo se observaron algunos errores de conversión provocados
+por el formato heterogéneo de los enunciados originales. El caso más frecuente
+consistía en interpretar una instrucción parcial como si fuera la primera frase
+de test. Por ejemplo, una indicación incluida en el enunciado podía acabar
+almacenada como una expresión que el modelo debía traducir.
+
+Para reducir estos errores, cada puzzle convertido se valida mediante varias
+comprobaciones:
+
+\begin{enumerate}
+	\item El número de frases de test debe coincidir con el número de
+	referencias disponibles.
+	\item Ninguna referencia puede estar vacía.
+	\item Las frases de test no deben comenzar con expresiones típicas de una
+	instrucción, como \texttt{translate}, \texttt{spoken on},
+	\texttt{given the following} o construcciones equivalentes.
+	\item Los registros dudosos deben revisarse manualmente antes de incluirse
+	en la selección final.
+\end{enumerate}
+
+El Código~\ref{lst:validacion-puzzle} resume estas comprobaciones.
+
+\begin{lstlisting}[
+language=Python,
+caption={Validación básica de un puzzle convertido},
+label={lst:validacion-puzzle}
+]
+def validate_puzzle(puzzle):
+test_pairs = puzzle["test_pairs"]
+
+if len(test_pairs) < 3:
+return False
+
+for pair in test_pairs:
+source = pair["source"].strip()
+target = pair["target"].strip()
+
+if not source or not target:
+return False
+
+if looks_like_instruction(source):
+return False
+
+return True
+\end{lstlisting}
+
+Los puzzles descartados se registran junto con la causa del rechazo. Esta
+información facilita la trazabilidad del proceso de selección y permite revisar
+posteriormente los casos excluidos.
+
+% ─────────────────────────────────────────────────────────────
+
+\section{Problemas encontrados y soluciones}
+\label{sec:problemas-soluciones}
+
+Durante el desarrollo del sistema se detectaron distintas incidencias
+relacionadas con las APIs externas, el procesamiento de las respuestas y el
+cálculo de métricas. Algunas se resolvieron mediante modificaciones en el
+código, mientras que otras constituyen limitaciones inherentes al entorno
+experimental.
+
+En esta sección se resumen los problemas más relevantes y las decisiones
+adoptadas para reducir su impacto.
+
+\subsection{Limitaciones de las APIs y los proveedores}
+\label{subsec:problemas-apis}
+
+Los experimentos se ejecutan mediante servicios externos gratuitos. Esta
+decisión permite evaluar modelos de distintos tamaños sin disponer de
+infraestructura propia, pero introduce restricciones que deben tenerse en
+cuenta al interpretar los resultados.
+
+La Tabla~\ref{tab:problemas-apis} resume las principales incidencias observadas.
+
+\begin{table}[ht]
+	\centering
+	\caption{Principales incidencias relacionadas con las APIs utilizadas.}
+	\label{tab:problemas-apis}
+	\begin{tabularx}{\textwidth}{p{3.3cm} X X}
+		\toprule
+		\textbf{Incidencia} & \textbf{Consecuencia} & \textbf{Solución adoptada} \\
+		\midrule
+		
+		Límites de tasa de las APIs
+		& Algunas peticiones eran rechazadas temporalmente mediante respuestas
+		HTTP 429.
+		& Se añadieron reintentos automáticos con tiempos de espera crecientes y
+		pausas entre llamadas consecutivas. \\
+		
+		Latencia elevada en modelos grandes
+		& Algunas peticiones superaban el tiempo de espera establecido,
+		especialmente en estrategias iterativas.
+		& Se amplió el tiempo máximo de espera y se registraron los errores sin
+		detener la ejecución de las estrategias restantes. \\
+		
+		Límite diario de solicitudes
+		& Algunos proveedores restringen el número máximo de peticiones
+		gratuitas que pueden realizarse en un día.
+		& Los experimentos se distribuyeron en varias sesiones y se almacenaron
+		resultados parciales para evitar repetir ejecuciones ya completadas. \\
+		
+		Respuestas vacías o incompletas
+		& En algunas llamadas el proveedor devolvía una respuesta sin contenido
+		utilizable o con menos traducciones de las solicitadas.
+		& Se añadieron comprobaciones explícitas y se penalizaron las respuestas
+		ausentes durante el cálculo de métricas. \\
+		
+		Dependencia de servicios externos
+		& La disponibilidad de un modelo o su comportamiento puede cambiar con
+		el tiempo.
+		& Se registraron el proveedor, el identificador del modelo, la fecha de
+		ejecución y los parámetros utilizados en cada experimento. \\
+		
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+La función responsable de las llamadas a las APIs incorpora un mecanismo de
+reintento cuando se alcanza temporalmente el límite de uso. El
+Código~\ref{lst:reintentos-api} muestra una versión simplificada.
+
+\begin{lstlisting}[
+language=Python,
+caption={Reintentos automáticos tras alcanzar el límite de tasa},
+label={lst:reintentos-api}
+]
+for attempt in range(3):
+response = requests.post(
+provider_url,
+headers=headers,
+json=payload,
+timeout=timeout
+)
+
+if response.status_code == 429:
+wait = 30 * (attempt + 1)
+time.sleep(wait)
+continue
+
+response.raise_for_status()
+return parse_response(response)
+
+raise RuntimeError("Persistent rate limit after 3 attempts")
+\end{lstlisting}
+
+Este mecanismo no elimina completamente los fallos de red o de disponibilidad,
+pero evita que una limitación puntual invalide automáticamente toda la
+ejecución.
+
+\subsection{Problemas de implementación y extracción}
+\label{subsec:problemas-extraccion}
+
+La extracción automática de traducciones fue la parte que requirió más ajustes
+durante el desarrollo. Los modelos no siempre respetaban el formato solicitado
+y podían mezclar respuestas, reglas gramaticales, entradas de diccionario e
+instrucciones de revisión.
+
+La Tabla~\ref{tab:problemas-extractor} recoge los problemas más relevantes.
+
+\begin{table}[ht]
+	\centering
+	\caption{Principales problemas detectados durante la extracción de respuestas.}
+	\label{tab:problemas-extractor}
+	\begin{tabularx}{\textwidth}{p{3.6cm} X X}
+		\toprule
+		\textbf{Problema} & \textbf{Efecto observado} & \textbf{Solución adoptada} \\
+		\midrule
+		
+		Extracción del lado incorrecto de una flecha
+		& En algunos formatos se recuperaba la expresión original en lugar de
+		la traducción.
+		& Se ajustó el patrón para conservar únicamente el contenido situado a
+		la derecha del símbolo. \\
+		
+		Confusión entre traducciones y entradas de diccionario
+		& Líneas como \texttt{ne = question marker} podían interpretarse como
+		respuestas finales.
+		& Se añadió un filtro específico para detectar asignaciones mediante
+		signos \texttt{=} o \texttt{:}. \\
+		
+		Inclusión de notas morfológicas
+		& Algunas líneas contenían explicaciones sobre sufijos, morfemas o
+		estructura sintáctica.
+		& Se incorporó un filtro basado en términos metalingüísticos frecuentes. \\
+		
+		Inclusión de instrucciones de revisión
+		& En M5 podían recuperarse frases como \texttt{Update this rule} o
+		\texttt{Delete this entry}.
+		& Se añadieron patrones que detectan verbos de corrección junto con
+		términos como \texttt{rule}, \texttt{dictionary} o \texttt{morpheme}. \\
+		
+		Caracteres fonéticos no reconocidos
+		& Algunos patrones iniciales no detectaban correctamente caracteres IPA.
+		& Se amplió el rango Unicode admitido por las expresiones regulares. \\
+		
+		Eliminación excesiva de paréntesis
+		& La función de limpieza podía modificar traducciones válidas con marcas
+		como \texttt{(sg)} o \texttt{(pl)}.
+		& Se restringió la eliminación a notas explicativas finales claramente
+		separadas de la traducción. \\
+		
+		Respuestas incompletas
+		& En algunos pasos se extraían menos traducciones de las esperadas.
+		& Se añadieron metadatos de extracción y las respuestas ausentes se
+		completaron con cadenas vacías para penalizarlas correctamente. \\
+		
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+Estos problemas muestran que el cálculo automático de métricas no puede
+separarse del análisis del formato de salida. Una traducción ausente o una línea
+extraída de forma incorrecta alteraría directamente el resultado cuantitativo.
+
+Por este motivo, además de los filtros automáticos, se realizó una revisión
+manual de una muestra de respuestas de los distintos modelos y estrategias.
+
+\subsection{Problemas relacionados con las métricas}
+\label{subsec:problemas-metricas}
+
+La elección de métricas también requirió ajustes durante el desarrollo. Los
+puzzles evaluados contienen frases cortas y, en algunos casos, diferencias
+morfológicas pequeñas. Estas características hacen que algunas métricas
+habituales de traducción automática resulten poco informativas cuando se
+interpretan de forma aislada.
+
+La Tabla~\ref{tab:problemas-metricas} resume las principales decisiones.
+
+\begin{table}[ht]
+	\centering
+	\caption{Problemas detectados durante el cálculo e interpretación de métricas.}
+	\label{tab:problemas-metricas}
+	\begin{tabularx}{\textwidth}{p{3.6cm} X X}
+		\toprule
+		\textbf{Problema} & \textbf{Consecuencia} & \textbf{Decisión adoptada} \\
+		\midrule
+		
+		Valores BLEU muy bajos
+		& BLEU asigna puntuaciones reducidas cuando las frases son cortas o
+		difieren en una única palabra.
+		& Se mantiene por compatibilidad con la literatura, pero no se utiliza
+		como métrica principal. \\
+		
+		Confusión entre chrF y chrF++
+		& La configuración inicial podía calcular chrF estándar sin incorporar
+		n-gramas de palabras.
+		& Se fijó explícitamente el parámetro \texttt{word\_order=2} para obtener
+		chrF++. \\
+		
+		Penalización de variantes parcialmente correctas
+		& Una respuesta puede ser semánticamente cercana a la referencia y
+		fallar únicamente en número gramatical, tiempo verbal o persona.
+		& Se combinan chrF++, BLEU, TER y exact match para obtener una visión más
+		completa. \\
+		
+		Evaluación parcial de respuestas incompletas
+		& Si solo se evaluaban las traducciones extraídas, una salida incompleta
+		podía obtener una puntuación artificialmente alta.
+		& Se completan las traducciones ausentes con cadenas vacías antes de
+		calcular las métricas. \\
+		
+		Selección optimista del mejor paso
+		& Elegir el mejor paso de una estrategia incremental mediante las
+		respuestas de test introduce un sesgo favorable.
+		& El último paso se utiliza como resultado principal. El mejor paso se
+		conserva únicamente como información diagnóstica sobre la evolución del
+		modelo. \\
+		
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+El uso conjunto de varias métricas permite distinguir distintos tipos de error.
+Exact match identifica las traducciones completamente correctas. chrF++ refleja
+mejor las coincidencias parciales a nivel de caracteres y palabras. TER mide el
+número de ediciones necesarias para transformar la hipótesis en la referencia.
+BLEU se conserva principalmente para facilitar la comparación con trabajos
+anteriores.
+
+\subsection{Limitaciones que permanecen abiertas}
+\label{subsec:limitaciones-abiertas}
+
+Algunas limitaciones no pueden eliminarse completamente mediante cambios en el
+código.
+
+En primer lugar, el sistema depende de proveedores externos. Incluso con
+temperatura cero, una misma petición puede no producir exactamente la misma
+respuesta en momentos distintos si el proveedor modifica internamente el modelo
+o la infraestructura de inferencia.
+
+En segundo lugar, el control M0 solo permite detectar indicios de conocimiento
+previo. Una traducción incorrecta sin contexto no demuestra que el modelo
+desconozca completamente la lengua, del mismo modo que una coincidencia parcial
+no demuestra necesariamente que la conozca.
+
+En tercer lugar, las métricas automáticas no sustituyen al análisis manual. Dos
+traducciones formalmente distintas pueden ser lingüísticamente equivalentes, y
+una respuesta con chrF++ elevado puede contener un error gramatical relevante.
+
+Por estos motivos, los resultados cuantitativos se complementan con un análisis
+cualitativo de casos representativos.

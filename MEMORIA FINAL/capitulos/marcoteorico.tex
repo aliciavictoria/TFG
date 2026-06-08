@@ -1,18 +1,20 @@
 \chapter{Marco Teórico y Estado de la Cuestión}
-\label{marcoteorico}
+\label{cap:marcoteorico}
 
-Este capítulo revisa el estado del arte en los campos que confluyen en este trabajo: el procesamiento de lenguas de baja densidad de recursos, el razonamiento metalingüístico en modelos de lenguaje de gran escala, los benchmarks basados en olimpiadas lingüísticas y las estrategias de prompting más relevantes para la tarea abordada.
+Este capítulo revisa el estado del arte en los campos que confluyen en este trabajo. En primer lugar, se describe la desigual disponibilidad de recursos digitales entre las lenguas del mundo y sus consecuencias para el procesamiento del lenguaje natural. A continuación, se introduce el concepto de razonamiento metalingüístico y su relación con los problemas de olimpiadas lingüísticas. Finalmente, se revisan los principales conjuntos de evaluación y estrategias de prompting utilizados para estudiar este tipo de razonamiento en modelos de lenguaje de gran escala.
 
 % ─────────────────────────────────────────────────────────────
 \section{Lenguas de baja densidad de recursos}
 \label{sec:lowresource}
 % ─────────────────────────────────────────────────────────────
 
-Se estima que existen entre 6.000 y 7.000 lenguas vivas en el mundo \citep{eberhard2020ethnologue}, pero la inmensa mayoría de ellas carecen de los recursos digitales necesarios para desarrollar sistemas de procesamiento automático del lenguaje natural (PLN). \citet{joshi2020state} cuantifican esta desigualdad mostrando que más del 88\% de las lenguas del mundo apenas tienen representación en los conjuntos de datos utilizados para entrenar los modelos actuales. Estas lenguas se denominan \textit{lenguas de baja densidad de recursos} (\textit{low-resource languages}, LRL) y su estudio plantea uno de los retos más relevantes del PLN contemporáneo.
+Se estima que existen entre 6.000 y 7.000 lenguas vivas en el mundo \citep{eberhard2020ethnologue}, pero la inmensa mayoría de ellas carecen de los recursos digitales necesarios para desarrollar sistemas de procesamiento automático del lenguaje natural (PLN). Las lenguas que se encuentran en esta situación suelen denominarse lenguas de baja densidad de recursos (low-resource languages). No se trata de una categoría completamente cerrada, ya que la disponibilidad de recursos puede variar considerablemente de una lengua a otra: mientras algunas cuentan con textos sin anotar, pero carecen de corpus paralelos o herramientas lingüísticas, otras apenas tienen presencia escrita o digital. 
 
-La escasez de datos tiene consecuencias directas en el rendimiento de los sistemas de traducción automática, reconocimiento de voz y análisis morfosintáctico para estas lenguas. Los modelos de lenguaje actuales, entrenados mayoritariamente sobre texto en inglés y otras lenguas de alta densidad, presentan un rendimiento muy inferior cuando se enfrentan a lenguas con poca presencia en sus datos de entrenamiento \citep{joshi2020state}. Este desequilibrio no es únicamente un problema técnico: tiene implicaciones directas para la preservación del patrimonio lingüístico y cultural de comunidades hablantes de lenguas minorizadas.
+\citet{joshi2020state} cuantifican esta desigualdad mostrando que más del 88\% de las lenguas del mundo apenas tienen representación en los conjuntos de datos utilizados para entrenar los modelos actuales. El estudio de dichas lenguas plantea uno de los retos más relevantes del PLN contemporáneo.
 
-Una aproximación prometedora para abordar este problema es el aprendizaje en contexto (\textit{in-context learning}, ICL): la capacidad de los modelos de lenguaje de gran escala para realizar tareas nuevas a partir de unos pocos ejemplos proporcionados directamente en el prompt, sin necesidad de reentrenamiento. Esta capacidad abre la posibilidad de trabajar con lenguas para las que no existen datos de entrenamiento suficientes, siempre que el modelo sea capaz de razonar sobre los patrones lingüísticos presentes en los ejemplos.
+La escasez de datos tiene consecuencias directas en el rendimiento de los sistemas de traducción automática, reconocimiento de voz y análisis morfosintáctico para estas lenguas. Los modelos de lenguaje actuales, entrenados mayoritariamente sobre texto en inglés y otras lenguas de alta densidad, presentan un rendimiento muy inferior cuando se enfrentan a lenguas con poca presencia en sus datos de entrenamiento. Este desequilibrio no es únicamente un problema técnico: tiene implicaciones directas para la preservación del patrimonio lingüístico y cultural de comunidades hablantes de lenguas minorizadas.
+
+Una aproximación prometedora para abordar este problema es el aprendizaje en contexto (\textit{in-context learning}): la capacidad de los modelos de lenguaje de gran escala para realizar tareas nuevas a partir de unos pocos ejemplos proporcionados directamente en el prompt, sin necesidad de reentrenamiento. Esta capacidad abre la posibilidad de trabajar con lenguas para las que no existen datos de entrenamiento suficientes, siempre que el modelo sea capaz de razonar sobre los patrones lingüísticos presentes en los ejemplos.
 
 % ─────────────────────────────────────────────────────────────
 \section{Razonamiento metalingüístico}
@@ -21,28 +23,51 @@ Una aproximación prometedora para abordar este problema es el aprendizaje en co
 
 El concepto de \textit{competencia metalingüística} hace referencia a la capacidad de razonar sobre el lenguaje como objeto de estudio, más allá del uso comunicativo cotidiano. Un hablante con alta competencia metalingüística es capaz de identificar patrones morfológicos en una lengua desconocida, deducir reglas gramaticales a partir de ejemplos y aplicarlas a nuevas frases, sin necesidad de haber aprendido previamente ese idioma.
 
-Esta capacidad es precisamente la que explotan los problemas de la Olimpiada Internacional de Lingüística (IOL), celebrada anualmente desde 2003. Los participantes —estudiantes de secundaria— deben resolver problemas del tipo \textit{piedra Rosetta} \citep{bozhanov2013rosetta}: se les presenta un conjunto de frases en una lengua completamente desconocida junto con sus traducciones al inglés, y deben deducir las reglas del idioma para traducir nuevas frases. Los problemas son autocontenidos —toda la información necesaria está en el enunciado— y están diseñados para lenguas de baja densidad de recursos, lo que minimiza la posibilidad de que los participantes tengan conocimiento previo del idioma \citep{derzhanski2010linguistics}.
+Esta capacidad es precisamente la que explotan los problemas de la Olimpiada Lingüística. A los participantes se les presenta un conjunto de frases en una lengua completamente desconocida junto con sus traducciones al inglés, y deben deducir las reglas del idioma para traducir nuevas frases. Toda la información necesaria para resolver los problemas está en el enunciado y están diseñados para lenguas de baja densidad de recursos, lo que minimiza la posibilidad de que los participantes tengan conocimiento previo del idioma \citep{derzhanski2010linguistics}.
 
-La pregunta central que motiva este TFG y que ha generado una creciente línea de investigación en los últimos años es la siguiente: ¿pueden los modelos de lenguaje de gran escala desarrollar o simular esta competencia metalingüística? La respuesta que ofrece la literatura es que, aunque los modelos actuales muestran cierta capacidad de razonamiento lingüístico inductivo, su rendimiento dista considerablemente del humano en tareas que requieren deducción sistemática de reglas en lenguas no vistas.
+Este formato permite estudiar una cuestión relevante para los modelos de lenguaje de gran escala: hasta qué punto son capaces de reproducir un proceso de inferencia lingüística a partir de pocos datos. La dificultad no consiste únicamente en generar una traducción plausible, sino en extraer patrones, mantener hipótesis coherentes y aplicarlas de forma sistemática.
+
+Conviene distinguir entre el comportamiento observable del modelo y la competencia lingüística humana. Cuando un modelo resuelve correctamente un problema, no puede concluirse automáticamente que razone de la misma forma que una persona. Sin embargo, el análisis de sus respuestas, de sus errores y de las reglas que formula permite estudiar hasta qué punto reproduce algunos de los pasos característicos del razonamiento metalingüístico.
+
+Los problemas de olimpiadas lingüísticas constituyen, por tanto, un entorno especialmente adecuado para esta evaluación. Requieren trabajar con pocos ejemplos, reducen la utilidad de una traducción basada únicamente en asociaciones superficiales y permiten comparar de forma detallada el resultado final con el proceso de deducción seguido para alcanzarlo.
 
 % ─────────────────────────────────────────────────────────────
 \section{Benchmarks de olimpiadas lingüísticas para LLMs}
 \label{sec:benchmarks}
 % ─────────────────────────────────────────────────────────────
 
-La evaluación de la capacidad de razonamiento lingüístico en LLMs ha dado lugar a varios benchmarks específicos en los últimos años, todos ellos basados en problemas de olimpiadas lingüísticas. A continuación se describen los más relevantes para este trabajo.
+La evaluación del razonamiento lingüístico en modelos de lenguaje de gran escala ha dado lugar a varios conjuntos de datos basados en problemas de olimpiadas lingüísticas. Estos benchmarks comparten una idea central: presentar al modelo un número reducido de ejemplos en una lengua poco conocida y comprobar si es capaz de extraer patrones, formular reglas y aplicarlas a nuevas expresiones.
+
+Este tipo de evaluación resulta especialmente adecuado para estudiar el aprendizaje en contexto. A diferencia de otras tareas lingüísticas, el objetivo no es medir cuánto conocimiento previo posee el modelo sobre una lengua concreta, sino analizar su capacidad para deducir regularidades a partir de la información incluida en el propio enunciado.
+
+A continuación se presentan los principales trabajos relacionados con mi Trabajo de Fin de Grado.
 
 \subsection{PuzzLing Machines}
 
-El trabajo de \citet{sahin2020puzzling} constituye el antecedente directo de toda esta línea de investigación. Los autores presentan un conjunto de siete patrones de problemas de tipo piedra Rosetta extraídos de la IOL, y evalúan la capacidad de modelos de traducción automática neural para resolverlos. Sus resultados muestran que los sistemas convencionales de traducción automática fracasan sistemáticamente en esta tarea, ya que no están diseñados para aprender una lengua nueva a partir de unos pocos ejemplos. Este trabajo establece el marco conceptual que seguirán los trabajos posteriores.
+El trabajo de \citet{sahin2020puzzling} constituye uno de los primeros intentos sistemáticos de utilizar problemas de olimpiadas lingüísticas para evaluar sistemas automáticos. Los autores presentan un conjunto de siete patrones de problemas de tipo piedra Rosetta extraídos de la IOL (correspondientes a 81 lenguas de 39 familias distintas), y evalúan la capacidad de modelos de traducción automática neural para resolverlos.
+
+Cabe destacar que aunque estos problemas adoptan formalmente la apariencia de una tarea de traducción, presentan diferencias importantes con respecto a la traducción automática convencional. El sistema no dispone de grandes corpus paralelos, sino únicamente de un conjunto mínimo de ejemplos cuidadosamente seleccionado. A partir de ellos debe extraer un pequeño diccionario, identificar reglas gramaticales y reconocer posibles fenómenos morfológicos o fonológicos antes de traducir nuevas expresiones.
+
+Los experimentos realizados por Şahin y cols. muestran que los modelos de traducción automática evaluados encuentran grandes dificultades para resolver estos problemas de forma robusta. El trabajo pone de manifiesto que aprender asociaciones estadísticas a partir de grandes cantidades de texto no es suficiente cuando la tarea exige deducir reglas a partir de pocos ejemplos.
 
 \subsection{modeLing}
 
-\citet{chi2024modeling} presentan modeLing, un dataset construido manualmente con problemas similares a los de la IOL, diseñado específicamente para evitar la contaminación de datos de entrenamiento. A diferencia de los benchmarks basados directamente en el corpus de la IOL, los problemas de modeLing son originales, lo que garantiza que los modelos evaluados no puedan haberlos memorizado durante el preentrenamiento. El dataset se centra en problemas de transducción de secuencias y ha sido utilizado como base de comparación en trabajos posteriores.
+\citet{chi2024modeling} presentan modeLing, un dataset construido manualmente con problemas similares a los de la IOL, diseñado específicamente para evitar la contaminación de datos de entrenamiento. A diferencia de los benchmarks basados directamente en el corpus de la IOL, los problemas de modeLing son más originales, lo que garantiza que los modelos evaluados no puedan haberlos memorizado durante el preentrenamiento. 
+
+Más concretamente, modeLing utiliza 48 problemas creados expresamente para el trabajo, basados en 19 lenguas con una presencia digital extremadamente reducida. En total, el conjunto incluye 272 preguntas. Los problemas evalúan distintos aspectos del razonamiento lingüístico, como el orden de palabras, la posesión, la semántica y la morfología nominal o adjetival.
+
+Además, los autores realizan experimentos específicos para comprobar posibles fugas de datos y no encuentran evidencias significativas de contaminación en los modelos analizados.
+
+El dataset ha sido utilizado como base de comparación en trabajos posteriores.
 
 \subsection{Linguini}
 
-\citet{sanchez2024linguini} presentan Linguini, el benchmark que constituye la referencia central de este trabajo. Linguini está compuesto por 894 preguntas agrupadas en 160 problemas extraídos del corpus de la IOL, cubriendo 75 lenguas de baja densidad de recursos. Los problemas se clasifican en tres categorías: transducción de secuencias (traducción), relleno de huecos morfológicos y transliteración numérica.
+\citet{sanchez2024linguini} presentan Linguini, el benchmark que constituye la referencia central de este trabajo. Linguini está compuesto por 894 preguntas agrupadas en 160 problemas extraídos del corpus de la IOL, cubriendo 75 lenguas de baja densidad de recursos. Los problemas se clasifican en tres categorías: 
+\begin{enumerate}
+	\item Transducción de secuencias (sequence transduction): el modelo debe transformar una secuencia en otra, por ejemplo, traduciendo una frase o relacionando expresiones equivalentes.
+	\item Relleno de huecos (fill-in-blanks): el modelo debe completar formas lingüísticas aplicando reglas morfológicas o fonológicas deducidas a partir de los ejemplos.
+	\item Transliteración numérica (number transliteration): el modelo debe convertir expresiones numéricas entre su representación textual y su representación mediante cifras.
+\end{enumerate}
 
 Los resultados de la evaluación son reveladores: ninguno de los modelos analizados supera el 25\% de exactitud. El mejor modelo propietario, Claude 3 Opus, alcanza un 24,05\% de exactitud y un chrF++ de 63,96 en configuración zero-shot. El mejor modelo de código abierto, Llama 3 70B, obtiene un 8,84\% de exactitud y un chrF++ de 37,25. Estos valores contrastan con el rendimiento humano en competición, que supera habitualmente el 60\%.
 
@@ -50,9 +75,52 @@ Un hallazgo especialmente relevante del paper es el experimento de ablación sin
 
 \subsection{LingOly}
 
-\citet{bean2024lingoly} presentan LingOly, el benchmark más exhaustivo del campo hasta la fecha, publicado en NeurIPS 2024. LingOly cubre más de 90 lenguas —incluyendo algunas extintas— y contiene 1.133 problemas organizados en seis categorías lingüísticas (fonología, morfología, sintaxis, semántica, sistemas numéricos y problemas compuestos) y cinco niveles de dificultad humana. Esta riqueza taxonómica permite análisis más granulares que los benchmarks anteriores.
+\citet{bean2024lingoly} presentan LingOly, el benchmark más exhaustivo del campo hasta la fecha, publicado en NeurIPS 2024. LingOly cubre más de 90 lenguas (incluyendo algunas extintas) y contiene 1.133 problemas organizados en seis categorías lingüísticas (fonología, morfología, sintaxis, semántica, sistemas numéricos y problemas compuestos) y cinco niveles de dificultad humana. Esta clasificación permite realizar análisis más detallados y estudiar cómo varía el rendimiento de los modelos cuando aumenta la complejidad del razonamiento requerido.
 
-Los resultados en LingOly confirman y amplían los de Linguini: el rendimiento de los modelos es consistentemente bajo, especialmente en los problemas de mayor dificultad, donde incluso el mejor modelo alcanza solo el 38,7\% de exactitud con una mejora de 24,7 puntos sobre el baseline sin contexto. Los autores observan además que los modelos cerrados superan consistentemente a los abiertos, y que existe una correlación positiva entre la densidad de recursos de una lengua y el rendimiento del modelo sobre ella.
+Los autores evalúan once modelos de lenguaje y comparan sus resultados con un baseline sin contexto. Los experimentos muestran que los modelos encuentran dificultades especialmente importantes en los problemas de mayor nivel. Incluso el mejor sistema evaluado alcanza únicamente un 38,7 \% de exactitud en los ejercicios más complejos, aunque mejora en 24,7\% respecto a la versión sin contexto.
+
+Los resultados también muestran una tendencia general: los modelos propietarios de mayor tamaño suelen superar a los modelos abiertos, y el rendimiento tiende a ser superior en lenguas con una mayor disponibilidad de recursos digitales.
+
+Aunque LingOly no se utiliza directamente en los experimentos de este trabajo, su inclusión en el estado de la cuestión resulta relevante porque confirma que las limitaciones observadas en Linguini no son aisladas. Incluso cuando se amplía la variedad de problemas y se estudian modelos más recientes, el razonamiento lingüístico a partir de pocos ejemplos sigue planteando dificultades importantes, y es una afirmación que nos sirve de gran apoyo.
+
+\subsection{Comparación entre los principales benchmarks}
+
+Los cuatro conjuntos de evaluación analizados responden a objetivos complementarios. PuzzLing Machines establece el problema inicial y muestra las limitaciones de los sistemas convencionales de traducción automática. modeLing se centra en reducir el riesgo de contaminación mediante problemas creados específicamente para la evaluación. Linguini amplía considerablemente la escala del análisis y proporciona el marco experimental utilizado en este trabajo. Por último, LingOly incorpora una mayor variedad de formatos y niveles de dificultad. Como se resume en la Tabla~\ref{tab:comparacion_benchmarks}, los cuatro benchmarks
+responden a objetivos complementarios.
+
+En conjunto, estos trabajos muestran que los problemas de olimpiadas lingüísticas constituyen una herramienta útil para estudiar la capacidad de los modelos de lenguaje para generalizar a partir de pocos ejemplos. También ponen de manifiesto que el rendimiento sigue siendo limitado y que la forma de presentar la información al modelo puede tener una influencia importante en los resultados.
+
+\begin{table}[ht]
+	\centering
+	\caption{Comparación de los principales benchmarks de olimpiadas lingüísticas para LLMs.}
+	\label{tab:comparacion_benchmarks}
+	\begin{tabularx}{\textwidth}{l c c X}
+		\toprule
+		\textbf{Benchmark} & \textbf{Año} & \textbf{Tamaño} & \textbf{Rasgo principal} \\
+		\midrule
+		\textit{PuzzLing Machines} 
+		& 2020 
+		& $\sim$100 problemas 
+		& Antecedente centrado en problemas de tipo piedra Rosetta. \\
+		
+		\textit{modeLing} 
+		& 2024 
+		& 48 problemas, 272 preguntas 
+		& Problemas originales diseñados para reducir el riesgo de contaminación de los datos de entrenamiento. \\
+		
+		\textit{Linguini} 
+		& 2024 
+		& 160 problemas, 894 preguntas 
+		& Benchmark de referencia utilizado en los experimentos de este trabajo. \\
+		
+		\textit{LingOly} 
+		& 2024 
+		& 1.133 problemas 
+		& Conjunto de mayor tamaño, con distintos formatos y niveles de dificultad. \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
 
 % ─────────────────────────────────────────────────────────────
 \section{Estrategias de prompting para razonamiento lingüístico}
@@ -63,26 +131,50 @@ Ante los pobres resultados obtenidos con prompting directo, varios trabajos han 
 
 \subsection{Aprendizaje en contexto con ejemplos}
 
-La estrategia más simple consiste en proporcionar al modelo ejemplos adicionales del mismo formato de tarea antes de presentar el problema a resolver (\textit{few-shot learning}). \citet{sanchez2024linguini} evalúan configuraciones de 0 a 5 ejemplos en contexto y observan un efecto mixto: algunos modelos mejoran con más ejemplos, mientras que otros empeoran, posiblemente porque los ejemplos adicionales introducen ruido de lenguas no relacionadas con el puzzle en cuestión.
+El aprendizaje en contexto (in-context learning, ICL) es la capacidad de un modelo de lenguaje para realizar una tarea nueva a partir de la información incluida directamente en el prompt, sin necesidad de actualizar sus parámetros.
+
+En los problemas de olimpiadas lingüísticas, esta capacidad resulta fundamental. El modelo recibe un conjunto reducido de pares formados por una expresión en una lengua desconocida y su traducción. A partir de estos ejemplos debe deducir vocabulario, identificar regularidades morfológicas y aplicar las reglas extraídas a nuevas frases.
+
+Conviene diferenciar este mecanismo del few-shot prompting. En una configuración few-shot, el modelo recibe ejemplos adicionales que muestran cómo debe resolverse la tarea o cómo debe estructurarse la respuesta. Estos ejemplos no forman parte necesariamente del problema lingüístico concreto, sino que actúan como demostraciones previas.
+
+\citet{sanchez2024linguini} comparan distintas configuraciones con un número variable de demostraciones y observan resultados heterogéneos. Algunos modelos mejoran al recibir ejemplos adicionales, mientras que otros empeoran. Una posible explicación es que las demostraciones introducen información útil sobre el formato de la tarea, pero también pueden añadir ruido cuando proceden de lenguas o estructuras poco relacionadas con el problema que se desea resolver.
+
+Esta observación resulta relevante para el presente trabajo: proporcionar más información no garantiza por sí solo una mejora del rendimiento. También es necesario estudiar cómo se presenta esa información y en qué orden se incorpora al razonamiento del modelo.
 
 \subsection{Razonamiento paso a paso}
 
-\citet{zhu2025evaluating} proponen una estrategia de descomposición paso a paso inspirada en el chain-of-thought prompting \citep{wei2022chain}. En lugar de presentar todos los ejemplos de entrenamiento de golpe, organizan la información en etapas lingüísticas sucesivas: primero se presenta el léxico y el orden de palabras básico, después los patrones fonológicos, luego la morfosintaxis y finalmente la sintaxis compleja. En cada etapa, el modelo actualiza su comprensión de la lengua antes de pasar a la siguiente. Este enfoque obtiene mejoras significativas respecto al prompting directo en lenguas con morfología verbal compleja.
+\citet{zhu2025evaluating} proponen una estrategia de descomposición paso a paso inspirada en el chain-of-thought prompting \citep{wei2022chain}, que en resumen, busca dividir un problema complejo en pasos intermedios más manejables. 
+
+En el contexto de las olimpiadas lingüísticas, el razonamiento paso a paso puede consistir en identificar primero el vocabulario básico, después analizar los patrones morfológicos, formular reglas gramaticales y, finalmente, aplicar esas reglas a las frases de prueba.
+
+En el estudio de la estrategia de la descomposición progresiva, en lugar de presentar todos los ejemplos de entrenamiento de golpe, organizan la información en etapas lingüísticas sucesivas: primero se presenta el léxico y el orden de palabras básico, después los patrones fonológicos, luego la morfosintaxis y finalmente la sintaxis compleja. En cada etapa, el modelo actualiza su comprensión de la lengua antes de pasar a la siguiente. Este enfoque obtiene mejoras significativas respecto al prompting directo en lenguas con morfología verbal compleja.
 
 \subsection{Prompting analógico}
 
-\citet{ramji2024inductive} proponen una estrategia diferente basada en el prompting analógico: en lugar de depender únicamente de los ejemplos del puzzle, el modelo genera automáticamente ejemplos auxiliares en lenguas tipológicamente relacionadas que conoce de su preentrenamiento, y los utiliza como contexto adicional para guiar el razonamiento inductivo. Esta aproximación explota el conocimiento implícito del modelo sobre familias de lenguas para compensar la escasez de ejemplos en la lengua objetivo.
+\citet{ramji2024inductive} proponen una estrategia basada en el razonamiento analógico. En lugar de depender únicamente de los ejemplos incluidos en el problema, el modelo genera o recupera ejemplos auxiliares relacionados con fenómenos lingüísticos similares.
+
+La idea consiste en aprovechar el conocimiento general adquirido durante el preentrenamiento. Por ejemplo, si una lengua desconocida presenta un patrón de concordancia o una estructura sintáctica poco habitual, el modelo puede intentar relacionarlo con estructuras semejantes presentes en otras lenguas que conoce mejor.
+
+Esta estrategia puede facilitar la identificación de determinados patrones, pero también introduce una limitación importante: el razonamiento deja de depender exclusivamente de la información proporcionada en el enunciado. El modelo puede apoyarse en analogías incorrectas o trasladar reglas de una lengua a otra sin suficiente evidencia.
+
+En este trabajo no se utiliza prompting analógico, ya que uno de los objetivos es evaluar hasta qué punto el modelo puede resolver los problemas a partir de los ejemplos disponibles, sin recibir pistas sobre la lengua ni sobre su familia lingüística. No obstante, esta aproximación resulta relevante como posible línea de ampliación futura.
 
 \subsection{Gramática en contexto}
 
-\citet{tanzer2024benchmark} demuestran que los LLMs pueden adquirir cierta competencia traductora en una lengua no vista si se les proporciona directamente un libro de gramática como contexto. Este enfoque, denominado \textit{one-book prompting}, no requiere pares de traducción y es especialmente interesante para lenguas que disponen de gramáticas descriptivas pero no de corpus paralelos. Los resultados muestran mejoras modestas pero consistentes sobre el baseline sin contexto, y apuntan a que la combinación de gramática y ejemplos es más efectiva que cualquiera de los dos por separado.
+\citet{tanzer2024benchmark} estudian otra aproximación: proporcionar al modelo una gramática descriptiva de la lengua como parte del contexto. Este enfoque, denominado one-book prompting, permite trabajar con lenguas para las que existe documentación lingüística, aunque no se disponga de grandes corpus paralelos.
+
+A diferencia de los problemas de olimpiadas lingüísticas, el modelo no debe deducir todas las reglas exclusivamente a partir de ejemplos. En su lugar, puede consultar una descripción explícita de la lengua y utilizarla para traducir nuevas frases.
+
+Los resultados muestran que incluir una gramática puede mejorar el rendimiento del modelo, especialmente cuando se combina con ejemplos. Esta estrategia resulta prometedora para aplicaciones reales de traducción y documentación lingüística, ya que muchas lenguas con pocos recursos digitales sí disponen de gramáticas, diccionarios o estudios elaborados por especialistas.
+
+Sin embargo, este enfoque responde a un objetivo diferente del abordado en el presente trabajo. Aquí se pretende evaluar la capacidad de deducción a partir de un conjunto reducido de pares de traducción, sin incorporar documentación externa sobre la lengua.
 
 % ─────────────────────────────────────────────────────────────
 \section{Análisis de las dificultades de los LLMs en puzzles lingüísticos}
 \label{sec:dificultades}
 % ─────────────────────────────────────────────────────────────
 
-Más allá de cuantificar el rendimiento de los modelos, algunos trabajos recientes han intentado explicar \textit{por qué} los LLMs fallan en estos puzzles.
+Más allá de cuantificar el rendimiento de los modelos, algunos trabajos recientes han intentado explicar por qué los LLMs fallan en estos puzzles.
 
 \citet{choudhary2025unveiling} realizan el análisis más sistemático hasta la fecha, anotando 629 problemas en 41 lenguas de baja densidad con 50 características lingüísticas y correlacionando estas características con el rendimiento de los modelos. Sus conclusiones principales son dos. En primer lugar, la complejidad morfológica es el factor predictivo más importante del fracaso: cuanto más compleja es la morfología de la lengua (más morfemas por palabra, más procesos de afijación y fusión), peor rinden los modelos. En segundo lugar, los modelos rinden significativamente mejor en puzzles cuyas características lingüísticas también están presentes en inglés, lo que sugiere que el razonamiento metalingüístico de los LLMs está sesgado hacia los patrones del inglés y las lenguas de alta densidad de recursos.
 
@@ -95,8 +187,22 @@ El trabajo más reciente del campo, \citet{majmudar2025llms}, extiende la evalua
 \label{sec:sintesis}
 % ─────────────────────────────────────────────────────────────
 
-La revisión de la literatura permite identificar con claridad el hueco que ocupa este TFG. Los trabajos existentes han establecido que los LLMs son capaces de razonamiento lingüístico inductivo pero con un rendimiento muy inferior al humano; han identificado la complejidad morfológica como el principal factor de dificultad; y han explorado estrategias de prompting que mejoran el rendimiento con respecto al baseline directo.
+La revisión de la literatura permite extraer varias conclusiones. En primer lugar, los modelos de lenguaje de gran escala son capaces de identificar algunos patrones lingüísticos a partir de pocos ejemplos, pero su rendimiento continúa siendo limitado en comparación con el humano en numerosos tipos de problemas. En segundo lugar, la dificultad no depende únicamente del número de ejemplos disponibles: factores como la complejidad morfológica, la escasa representación digital de determinadas lenguas y la segmentación interna de las palabras influyen de forma importante en los resultados. Finalmente, los trabajos revisados muestran que la forma de presentar la información al modelo puede modificar considerablemente su rendimiento.
 
-Sin embargo, ningún trabajo previo ha evaluado sistemáticamente una estrategia de presentación \textit{incremental por combinaciones crecientes}: proporcionar al modelo subconjuntos de ejemplos de tamaño creciente —de dos en dos, de tres en tres, etc.— para que construya y refine iterativamente su propio diccionario y sus propias reglas gramaticales, con capacidad explícita de corregir y eliminar hipótesis anteriores conforme recibe nueva evidencia. Esta estrategia se inspira en el proceso cognitivo humano de aprendizaje de lenguas desconocidas —tal y como se documenta en los protocolos de resolución de puzzles de olimpiada— y constituye la aportación metodológica principal de este trabajo.
+A partir de estas observaciones, este Trabajo de Fin de Grado estudia distintas estrategias de prompting orientadas a mejorar la resolución de problemas de olimpiadas lingüísticas. El objetivo no consiste únicamente en medir cuántas traducciones correctas genera cada modelo, sino también en analizar cómo construye sus hipótesis, hasta qué punto es capaz de revisarlas y en qué momento aparecen los errores.
 
-Adicionalmente, este trabajo compara modelos de dos familias distintas (Llama de Meta y Gemma de Google) en dos tamaños diferentes, y utiliza chrF++ como métrica principal de evaluación, en línea con las recomendaciones más recientes de la literatura para tareas de traducción con lenguas de morfología compleja \citep{popovic2017chrf}.
+La primera aportación del trabajo es una estrategia incremental por combinaciones crecientes de ejemplos. En lugar de presentar todos los pares de entrenamiento en un único bloque, el modelo recibe subconjuntos de tamaño progresivamente mayor. Tras analizar cada subconjunto, debe actualizar un diccionario y un conjunto de reglas gramaticales. Estas hipótesis no se consideran definitivas: el modelo puede ampliarlas, corregirlas o eliminar aquellas que resulten incompatibles con la nueva evidencia.
+
+Esta estrategia se inspira en el proceso que sigue una persona al enfrentarse a una lengua desconocida. Habitualmente, el razonamiento humano no consiste en formular de inmediato una gramática completa, sino en comparar ejemplos, detectar elementos recurrentes, proponer interpretaciones provisionales y revisarlas cuando aparecen contradicciones. La incorporación explícita de esta lógica de revisión pretende evitar que el modelo mantenga hipótesis iniciales incorrectas durante todo el proceso de resolución.
+
+La segunda aportación es la evaluación de un baseline con una fase adicional de revisión. En esta variante, el modelo recibe todos los ejemplos del problema desde el inicio, como en el baseline directo, pero debe revisar su primera propuesta antes de generar la respuesta definitiva. El objetivo es comprobar si una segunda lectura de los mismos datos permite detectar errores, corregir inconsistencias y mejorar las traducciones sin necesidad de introducir información adicional.
+
+Esta comparación permite distinguir dos posibles fuentes de mejora. Por una parte, la presentación progresiva de los ejemplos puede facilitar la construcción del conocimiento lingüístico. Por otra, la simple obligación de revisar una respuesta inicial puede mejorar el resultado incluso cuando el contexto permanece constante. Separar ambos efectos resulta necesario para evaluar con mayor precisión la utilidad real de la estrategia incremental.
+
+La tercera aportación es la incorporación de pautas inspiradas en la resolución humana de los problemas. El modelo no recibe únicamente la orden de traducir, sino que debe identificar vocabulario, analizar regularidades morfológicas, formular reglas, señalar contradicciones y justificar cualquier modificación de sus hipótesis. De este modo, el prompt intenta reproducir algunos de los pasos observados durante la resolución humana, sin asumir que el proceso interno del modelo sea equivalente al de una persona.
+
+En los trabajos revisados se han estudiado estrategias como el aprendizaje en contexto, el razonamiento paso a paso, el prompting analógico y la incorporación de gramáticas descriptivas. Sin embargo, dentro de la literatura analizada, la combinación sistemática de revisión explícita, presentación incremental por combinaciones crecientes y comparación con un baseline de doble revisión no ha recibido la misma atención.
+
+Este trabajo se sitúa, por tanto, en un punto intermedio entre la evaluación cuantitativa y el análisis cualitativo. Por un lado, compara el rendimiento de distintos modelos y estrategias mediante métricas automáticas. Por otro, estudia cómo evolucionan el diccionario y las reglas formuladas por el modelo, y contrasta ese proceso con las estrategias empleadas durante la resolución humana de un problema representativo.
+
+La finalidad no es demostrar que los modelos razonan de la misma manera que una persona, sino analizar hasta qué punto una organización más estructurada del proceso de resolución permite obtener respuestas más correctas, coherentes y revisables.

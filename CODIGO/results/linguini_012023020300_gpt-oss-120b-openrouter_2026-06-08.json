@@ -1,0 +1,1611 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T10:45:05.053845",
+    "puzzle_id": "linguini_012023020300",
+    "language": "Apurinã",
+    "language_family": "Arawakan (Amazonia, Brasil)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023020300",
+    "language": "Apurinã",
+    "language_family": "Arawakan (Amazonia, Brasil)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "nuta sykaru nykanawate uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "nykanawate nysykaru uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "pita ãtary ĩpurãã",
+        "target": "You_{sg} drank the water."
+      },
+      {
+        "source": "kyky mynaru nyherẽka sytumukary",
+        "target": "The man brought my blood to the woman."
+      },
+      {
+        "source": "herẽkatxi uãtary sytu",
+        "target": "The woman drank the blood."
+      },
+      {
+        "source": "nhiximakyte pixinhikary",
+        "target": "You_{sg} remembered my fish (sg)."
+      },
+      {
+        "source": "pitxiparyte umynary kykymukary",
+        "target": "She brought your_{sg} banana to the man."
+      },
+      {
+        "source": "hãtakuru xinhikary naikute",
+        "target": "The girl remembered my house."
+      },
+      {
+        "source": "sytu apy ysykanu nutamukary kyky",
+        "target": "The man gave the woman’s bone to me."
+      },
+      {
+        "source": "nhĩpurããte nãtary",
+        "target": "I drank my water."
+      },
+      {
+        "source": "kywĩtxi apukary",
+        "target": "He found the head."
+      },
+      {
+        "source": "ywa mynanu kyky uky nutamukary",
+        "target": "He brought the man’s eye to me."
+      },
+      {
+        "source": "ximaky nhikary apĩtxi",
+        "target": "The fish (sg) ate the bone."
+      },
+      {
+        "source": "hãtakuru txiparyte napukary",
+        "target": "I found the girl’s banana."
+      },
+      {
+        "source": "ximaky kywy inhikary",
+        "target": "He ate the fish’s (sg) head."
+      },
+      {
+        "source": "hãtakuru uapukaru",
+        "target": "She found the girl."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "You_{sg} found the house.",
+        "target": "aiku papukary",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I brought your_{sg} canoe to the girl.",
+        "target": "pykanawate nymynaru hãtakurumukary",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He brought your_{sg} water to me.",
+        "target": "pĩpurããte ymynanu nutamukary",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The man drank the girl’s blood.",
+        "target": "hãtakuru herẽka ãtary kyky",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I remembered the eye.",
+        "target": "ukĩtxi nhixinhikary",
+        "direction": "en2lang"
+      },
+      {
+        "source": "You_{sg} ate my banana.",
+        "target": "nhitxiparyte pinhikary",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "You_{sg} found the house.",
+      "reference": "aiku papukary",
+      "hypothesis": "**Apurinã (attempt):**  \n*Ira‑kɨtɨ*  \n\n*Explanation:* In Apurinã, the verb “to find” can be expressed with the root **ira** and the suffix **‑kɨtɨ** marks a completed action directed toward a third‑person object (“the house”). The pronoun “you (singular)” is often omitted because the verb inflection already indicates the subject. This is a best‑effort reconstruction; Apurinã has limited publicly‑available resources, so the exact form may differ.",
+      "latency_s": 9.37,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 2.19,
+        "corpus_ter": 3150.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          2.19
+        ],
+        "sentence_ter": [
+          3150.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Apurinã (attempt):**  \n*Ira‑kɨtɨ*  \n\n*Explanation:* In Apurinã, the verb “to find” can be expressed with the root **ira** and the suffix **‑kɨtɨ** marks a completed action directed toward a third‑person object (“the house”). The pronoun “you (singular)” is often omitted because the verb inflection already indicates the subject. This is a best‑effort reconstruction; Apurinã has limited publicly‑available resources, so the exact form may differ."
+        ],
+        "references": [
+          "aiku papukary"
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 42.04,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 44.36,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nnykanawate = my canoe (possessive noun phrase)\nuwamukary = to her (dative phrase)",
+          "accumulated_rules": "1. The verb occupies the second position in the clause, regardless of what constituent precedes it.\n2. A 1st‑person singular subject can be expressed either as the free pronoun **nuta** or as the prefix **n‑** attached to the verb; the two are mutually exclusive.\n3. Basic clause order: [First constituent] – Verb – Direct Object – Indirect Object.\n4. Possessive constructions are encoded within the noun phrase (e.g., **nykanawate** = “my canoe”); no separate possessive marker is observed yet.\n5. Dative arguments are expressed by a post‑verbal dative phrase (e.g., **uwamukary** = “to her”).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 77.73,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (appears on the verb)\nsykaru = give (verb root)\nny‑ = my (1sg possessive prefix on nouns)\nkanawate = canoe (noun) → ny‑kanawate = my canoe\nuwamukary = to her (dative phrase)\npita = you (sg pronoun)\nãtary = drink (verb root)\nĩpurãã = water (noun)\n*Deleted entries:* none (all previous entries still viable).\n---",
+          "accumulated_rules": "1. The clause is V2: the verb occupies the second position, whatever constituent is first.\n2. The 1sg subject can be expressed either as the free pronoun **nuta** or as the prefix **n‑** on the verb; when the prefix is used and the clause begins with a non‑subject constituent, an epenthetic **y** appears between the prefix and the verb root (e.g., **n‑y‑sykaru** → **nysykaru**).\n3. After the verb, arguments appear in their usual order: direct object → indirect object (dative). If an argument is fronted as the first constituent, it is omitted from the post‑verbal slot.\n4. Possessive relations are marked by a possessive prefix on the noun (e.g., **ny‑** = “my”).\n5. Dative arguments are expressed by a post‑verbal dative phrase (e.g., **uwamukary** = “to her”).\n*Deleted rules:* none (previous rules revised but not removed).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 7.54,
+            "corpus_ter": 175.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.33,
+              6.71,
+              6.98,
+              4.79,
+              4.17,
+              10.07
+            ],
+            "sentence_ter": [
+              450.0,
+              100.0,
+              100.0,
+              125.0,
+              150.0,
+              250.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "2. nuta <brought> ny‑<your‑sg> kanawate uwamukary? (note: “the girl",
+              "ny‑<your‑sg> ĩpurãã nuta",
+              "ãtary ny‑<girl‑sg> <blood>",
+              "6. pita <ate> ny‑<my> <banana>",
+              "pita <found> <house>",
+              "nuta <brought> ny‑<your‑sg> kanawate uwamukary?"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 57.21,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (appears on the verb)\nsykaru = give (verb root)\nny‑ = my (1sg possessive prefix on nouns)\nkanawate = canoe (noun) → ny‑kanawate = my canoe\nuwamukary = to her (dative phrase)\npita = you (sg pronoun)\nãtary = drink (verb root)\nĩpurãã = water (noun)\n*Deleted entries:* none (all previous entries still viable).\n---",
+          "accumulated_rules": "1. **V2 word order** – the verb occupies the second position of the clause; whatever constituent appears first (subject noun, object, or other) is followed by the verb.\n2. **1 sg subject expression** – either the free pronoun **nuta** or the prefix **n‑** on the verb. When the prefix is used and the clause begins with a non‑subject constituent, an epenthetic **y** is inserted between the prefix and the verb root (e.g., **n‑y‑sykaru → nysykaru**).\n3. **Post‑verbal argument order** – after the verb the arguments appear in the fixed order: direct object → indirect object (dative). If an argument is fronted as the first constituent, it is omitted from the post‑verbal slot.\n4. **Possessive prefix** – a noun can take a possessive prefix (e.g., **ny‑** “my”). The same morphological strategy is expected for other persons (2 sg, 3 sg, etc.), though the exact forms are not yet attested.\n5. **Dative construction** – a dative phrase is a possessor stem followed by the dative suffix **‑mukary** (e.g., **uw‑mukary** “to her”, **sytu‑mukary** “to the woman”).\n*Deleted rules:* none.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.95,
+            "corpus_ter": 187.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              2.88,
+              5.67,
+              5.95,
+              5.09,
+              2.78,
+              5.72
+            ],
+            "sentence_ter": [
+              200.0,
+              233.33,
+              200.0,
+              125.0,
+              200.0,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "you found the house.",
+              "I brought your canoe to the girl.",
+              "he brought your water to me.",
+              "the man drank my blood.",
+              "I remembered the eye.",
+              "you ate my banana."
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 89.82,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **V2 word order** – the verb is obligatorily the second constituent of a clause.\n2. **1 sg subject expression** – either the free pronoun *nuta* or the prefix *n‑* on the verb. When the prefix is used and the clause begins with a non‑subject constituent, an epenthetic *y* is inserted between *n‑* and the verb root (e.g., *n‑y‑sykaru → nysykaru*).\n3. **Post‑verbal argument order** – after the verb the arguments appear in the fixed order: direct object → indirect object (dative). If an argument is fronted as the first constituent, it is omitted from the post‑verbal slot.\n4. **Possessive prefix** – a noun can take a possessive prefix (*ny‑* = my). The same strategy is expected for other persons, though forms are not yet attested.\n5. **Dative construction** – a dative phrase is a noun stem followed by the suffix *‑mukary* (e.g., *uw‑mukary* “to her”, *sytu‑mukary* “to the woman”).\n6. **Definite suffix** – the suffix *‑txi* appears on some nouns (e.g., *herẽkatxi*) and marks a definite or class‑specific form; its exact function is still provisional.\n*No rules deleted.*\n---",
+          "metrics": {
+            "corpus_bleu": 0.68,
+            "corpus_chrfpp": 17.66,
+            "corpus_ter": 125.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              2.16,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              8.22,
+              28.36,
+              14.58,
+              26.84,
+              6.02,
+              7.68
+            ],
+            "sentence_ter": [
+              150.0,
+              133.33,
+              100.0,
+              100.0,
+              150.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "pita **kuru** ny‑**táxi",
+              "nykanawate **mynaru** ny‑pita **sytu",
+              "nysykaru ny‑**ũwá** **ũmukary",
+              "kyky **uãtary** ny‑**sytu**‑**táxi** **herẽka",
+              "nuta **memaru** ny‑**õkí",
+              "pita **katu** ny‑**banána"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 85.46,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **V2 word order** – the verb obligatorily occupies the second position of a clause.\n2. **1 sg subject expression** – either the free pronoun *nuta* or the prefix *n‑* on the verb. When the prefix is used and the clause begins with a non‑subject constituent, an epenthetic *y* is inserted between *n‑* and the verb root (e.g., *n‑y‑sykaru* → *nysykaru*).\n3. **Post‑verbal argument order** – after the verb the arguments appear in the fixed order: direct object → indirect object (dative). If an argument is fronted as the first constituent, it is omitted from the post‑verbal slot.\n4. **Possessive prefixes** – nouns can take a possessive prefix; *ny‑* marks 1 sg “my”. Other persons use different prefixes (e.g., *pi‑* for 1 sg in *pixinhikary*).\n5. **Dative construction** – a dative phrase is a noun stem followed by the suffix *‑mukary* (e.g., *uw‑mukary* “to her”, *sytu‑mukary* “to the woman”).\n6. **Definite suffix** – the suffix *‑txi* on a noun marks a definite or specific referent (e.g., *herẽkatxi* “the woman”).\n7. **2 sg verbal morphology** – a suffix *‑yte* on a verb marks a 2 sg past subject (as in *nhiximakyte* “you remembered”).\n*No rules deleted.*\n---",
+          "metrics": {
+            "corpus_bleu": 1.09,
+            "corpus_chrfpp": 19.49,
+            "corpus_ter": 125.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              8.12,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.41,
+              38.36,
+              18.92,
+              18.45,
+              3.47,
+              9.8
+            ],
+            "sentence_ter": [
+              100.0,
+              133.33,
+              133.33,
+              100.0,
+              150.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "pita ___",
+              "nykanawate nymy­naru ___‑txi‑girl uw‑mukary",
+              "kyky ___‑yte ___‑mukary nuta",
+              "kyky uãtary ___‑txi‑girl‑blood",
+              "nuta ___‑yte ___‑eye",
+              "pita ___‑yte ny‑banana"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 88.68,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Verb‑second (V2) order** – the verb obligatorily occupies the second position of a clause.\n2. **1 sg subject expression** – either the free pronoun *nuta* or the prefix *n‑* on the verb. When the prefix is used and the clause begins with a non‑subject constituent, an epenthetic *y* is inserted between *n‑* and the verb root (e.g., *n‑y‑sykaru* → *nysykaru*).\n3. **Post‑verbal argument order** – after the verb the arguments appear in the fixed order: direct object → indirect object (dative). If an argument is fronted as the first constituent, it is omitted from the post‑verbal slot.\n4. **Possessive prefixes** – nouns can take a possessive prefix: *ny‑* or *pi‑* = 1 sg “my”, *u‑* = 2 sg “your”. (Other persons not yet attested.)\n5. **Dative construction** – a dative phrase is a noun or pronoun stem followed by the suffix *‑mukary* (e.g., *uw‑mukary* “to her”, *sytu‑mukary* “to the woman”).\n6. **Definite suffix** – the suffix *‑txi* on a noun marks a definite or specific referent (e.g., *herẽkatxi* “the woman”).\n7. **Past tense suffix** – *‑yte* marks past tense on verbs; it does not encode a fixed person (appears with 2 sg and 3 sg subjects).\n8. **2 sg verbal agreement** – the suffix *‑yte* on a verb can indicate a 2 sg past subject (as in *nhiximakyte*), but the same suffix is also used for 3 sg past, so person agreement is optional or context‑driven.\n*No rules deleted; rule 7 refined to reflect broader use of *‑yte*.*\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 109.83,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Verb‑second (V2)** – the finite verb occupies the second slot of a clause.\n2. **1 sg subject expression** – either the free pronoun *nuta* or the prefix *n‑* on the verb. When the clause begins with a non‑subject constituent, an epenthetic *y* is inserted after *n‑* (e.g. *n‑y‑sykaru* → *nysykaru*).\n3. **Post‑verbal argument order** – after the verb the arguments appear in the fixed order: direct object → indirect object (dative). If an argument is fronted, it is omitted from the post‑verbal slot.\n4. **Possessive marking** – (a) **prefixal**: *ny‑*, *pi‑* = 1 sg “my”; *u‑* = 2 sg “your”. (b) **suffixal**: *‑ary* attaches to a noun to indicate 1 sg possession (seen on *xinhikary*, *pixinhikary*). The two strategies coexist pending further data.\n5. **Dative construction** – noun or pronoun stem + *‑mukary* (e.g. *uw‑mukary*, *kyky‑mukary*). A phonological vowel may be inserted for ease of pronunciation (*uwamukary*).\n6. **Definite suffix** – *‑txi* on a noun marks a specific/definite referent.\n7. **Past tense** – the suffix *‑yte* marks past on verbs (used with 2 sg and 3 sg subjects). A variant *‑ute* also appears on a 3 sg past verb (*naikute*); the distribution is not yet fully resolved.\n8. **Person agreement on verbs** – optional; the past suffix *‑yte* can also signal 2 sg subject (as in *nhiximakyte*). Absence of a dedicated 1 sg agreement suffix; 1 sg subjects are expressed by the *n‑* prefix.\n*Deleted rules:* none (all previous rules retained, with refinements to 4 and 7).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 119.88,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Word order is flexible.** The finite verb may appear second (V‑S‑O‑IO) or clause‑final (S‑O‑V). Arguments (subject, direct object, indirect object) can be fronted; any argument not fronted follows the verb in the fixed order **DO → IO**.\n2. **Subject expression** – either a free pronoun (e.g., *nuta*, *pita*) or a noun phrase. When the subject is 1 sg and the verb is not clause‑initial, the subject prefix *n‑* takes an epenthetic *y* (*n‑y‑…*).\n3. **Agreement on the verb** – the past tense is marked by the suffix *‑yte* or *‑ute* (allomorphs). No separate person‑agreement affix is required; the subject is identified by the pronoun or by the presence/absence of the 1 sg prefix *n‑*.\n4. **Possession** – two strategies coexist:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg).\nb. **Suffixal**: *‑ary* attaches to a noun to indicate 1 sg possession. Both can appear together (e.g., *pixinhikary*).\n5. **Dative construction** – noun or pronoun stem + *‑mukary*. A vowel may be inserted for phonotactic reasons (e.g., *uwamukary*).\n6. **Definiteness** – suffix *‑txi* on a noun marks a specific/definite referent.\n7. **Past tense morphology** – *‑yte* and *‑ute* are allomorphs; distribution appears conditioned by phonological environment rather than person.\n8. **Epenthetic vowel *a*** – inserted between a possessor stem ending in a consonant and *‑mukary* (e.g., *uw‑a‑mukary*).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 121.8,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Word order** – flexible. The finite verb may be clause‑initial (V‑S‑O‑IO) or clause‑final (S‑O‑V). Any argument not fronted follows the verb in the fixed order **DO → IO**.\n2. **Subject expression** – a free pronoun (*nuta*, *pita*) or a noun phrase. When the subject is 1 sg and the verb is not clause‑initial, the subject prefix *n‑* appears with an epenthetic *y* (*n‑y‑…*). A 3 sg subject is marked by the prefix *y‑* (or *ny‑* when the verb is clause‑initial).\n3. **Verb agreement / tense** – past tense is expressed by a suffix that varies phonologically: *‑yte*, *‑ute*, *‑kyte*, *‑kute*. The choice depends on the final segment of the verb root (vowel vs. consonant, labial vs. velar). No separate person‑agreement affix is required; person is indicated by the subject pronoun or by the subject prefix on the verb.\n4. **Possession** – two simultaneous strategies:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg).\nb. **Suffixal**: *‑ary* (default), *‑kary* (after consonant clusters), *‑te* (after vowel‑initial nouns).\nBoth can co‑occur (e.g., *pi‑xinh‑kary* ‘my fish’).\n5. **Dative construction** – noun or pronoun stem + *‑mukary*. If the stem ends in a consonant, an epenthetic vowel *a* is inserted (*uw‑a‑mukary*). The dative marks the indirect object (recipient).\n6. **Definiteness** – suffix *‑txi* on a noun marks a specific/definite referent.\n7. **Past‑tense allomorphy** – the four past suffixes (*‑yte, ‑ute, ‑kyte, ‑kute*) are conditioned by the phonological shape of the verb root (vowel vs. consonant, place of articulation). No evidence yet for person‑based distribution.\n8. **Epenthetic vowel *a*** – inserted between a possessor stem ending in a consonant and *‑mukary* (e.g., *uw‑a‑mukary*).\n9. **Verb‑root alternations** – some verbs show a vowel change in the past (e.g., *ãtary* → *uãtary*). This is part of the past‑tense allomorphy.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 8.08,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              10.73,
+              8.76,
+              5.61,
+              9.34
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uxinhary",
+              "pita uzaru uxinhary",
+              "n‑y‑nhiximakyte kiri",
+              "pita ny‑katu mynary"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 186.09,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Basic word order** – flexible. Finite verb may be clause‑initial (V‑S‑O‑IO) or clause‑final (S‑O‑V). When the verb is not clause‑initial, arguments that are not fronted follow the fixed order **DO → IO**.\n2. **Subject expression** – a free pronoun (*nuta*, *pita*, *kywĩtxi*) or a noun phrase. When the subject is 1 sg and the verb is not clause‑initial, the subject prefix *n‑* appears with an epenthetic *y* (*n y‑*). A 3 sg subject is marked by the prefix *y‑* (used when the verb is clause‑initial).\n3. **Verb agreement / tense** – past tense is expressed by a suffix whose shape depends on the phonological shape of the verb root:\n- *‑yte* after vowel‑final roots,\n- *‑ute* after labial‑final roots,\n- *‑kyte* after velar‑final roots,\n- *‑kute* after other consonant‑final roots.\nAdditional allomorphs (*‑nu*, *‑par‑yte*, *‑kuru*, *‑te*) appear with specific verbs or subject persons (e.g., *‑nu* with *sykaru* for 3 sg).\n4. **Possession** – two simultaneous strategies:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg).\nb. **Suffixal**: *‑ary* (after vowel‑initial stems), *‑kary* (after consonant‑final stems), *‑te* (after vowel‑final stems).\nBoth may co‑occur (e.g., *pixinhikary* “my fish”).\n5. **Dative construction** – noun or pronoun stem + *‑mukary* “to …”. If the stem ends in a consonant, insert an epenthetic vowel *a* (e.g., *uw‑a‑mukary* “to her”).\n6. **Definiteness** – suffix *‑txi* on a noun marks a specific/definite referent.\n7. **Past‑tense allomorphy** – the four main past suffixes are conditioned by the final segment of the verb root; additional allomorphs (*‑nu*, *‑par‑yte*, *‑kuru*, *‑te*) are verb‑specific and will be refined as more data appear.\n8. **Epenthetic vowel *a*** – inserted between a consonant‑final possessor stem and *‑mukary* (e.g., *uw‑a‑mukary*).\n9. **Verb‑root alternations** – some verbs show internal vowel change in the past (e.g., *ãtary* → *uãtary*).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 147.69,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Clause order** – Finite verb may be clause‑initial (V‑S‑O‑IO) or clause‑final (S‑O‑V). When the verb is clause‑final, non‑fronted arguments follow the order **DO → IO**.\n2. **Subject marking** – Free pronouns (*nuta*, *pita*, *kywĩtxi*) or noun phrases serve as subjects. If the subject is 1 sg and the verb is not clause‑initial, the subject prefix *n‑* appears with an epenthetic *y* (*n y‑*). A 3 sg subject is marked by prefix *y‑* when the verb is clause‑initial.\n3. **Past‑tense morphology** – The past suffix varies with the phonological shape of the verb root and sometimes with the verb itself:\n*‑yte* after vowel‑final roots,\n*‑ute* after labial‑final roots,\n*‑kyte* after velar‑final roots,\n*‑kute* after other consonant‑final roots,\n*‑u* after labial‑final roots (variant),\n*‑par‑yte* and *‑kuru* are verb‑specific allomorphs.\n4. **Possession** – Two simultaneous strategies:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg).\nb. **Suffixal**: *‑ary* after consonant‑final nouns, *‑kary* after vowel‑final nouns, *‑nu* after vowel‑final nouns for 3 sg possessor. Both may co‑occur (e.g., *pi‑xinhik‑ary* “my fish”).\n5. **Dative construction** – Noun or pronoun stem + one of three dative suffixes:\n*‑mukary* (after consonant‑final stems),\n*‑kute* (after labial‑final stems, with epenthetic *a* or *i* before it),\n*‑ky* (after vowel‑final stems).\n6. **Definiteness** – Suffix *‑txi* marks a specific/definite referent on nouns and on the 3sg pronoun (*kywĩtxi*).\n7. **Epenthetic vowels** – *a* is inserted between a consonant‑final possessor stem and *‑mukary* (e.g., *uw‑a‑mukary*). *i* is inserted before *‑kute* after vowel‑final stems (e.g., *na‑i‑kute*).\n8. **Verb‑root alternations** – Some verbs show internal vowel change in the past (e.g., *ãtary* → *u‑ãtary*).\n[DELETED: Rule 4b “‑kary after vowel‑final stems” – corrected to “‑ky after vowel‑final stems”.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 143.08,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Clause order** – Two basic orders are attested:\na. **Clause‑initial**: V S O IO (verb first, then subject pronoun or noun, then direct object, then dative).\nb. **Clause‑final**: S O V IO or S V O (subject first, verb final or medial, dative last). The language freely alternates; when the verb carries a subject prefix, the subject pronoun is omitted and the clause tends to be clause‑final.\n2. **Subject marking** –\n* Free pronouns (*nuta*, *pita*, *kywĩtxi*, *ywa*) appear when the verb is clause‑initial.\n* When the verb is clause‑final, a subject prefix is attached to the verb: **n‑y‑** for 1 sg, **p‑y‑** (observed as *nh‑* in *nhiximakyte*) for 2 sg, and no overt prefix for 3 sg (subject is inferred from verb morphology or from a pronoun). The epenthetic *y* appears before vowel‑initial verb roots.\n3. **Past tense** – Past is most often expressed by a suffix attached to the verb root. The shape of the suffix depends on the final segment of the root:\n*‑yte* after vowel‑final roots (e.g., *nhiximakyte*),\n*‑te* after vowel‑final roots when a subject prefix is present (e.g., *nhĩpurããte*),\n*‑par‑yte* is a verb‑specific allomorph (e.g., *pitxiparyte*).\nSome verbs (e.g., *sykaru*, *ãtary*) have a past meaning without an overt suffix; these are lexical exceptions.\n4. **Possession** – Two simultaneous strategies:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg).\nb. **Suffixal**: *‑ary* after consonant‑final nouns (1 sg possessor), *‑kary* after vowel‑final nouns (1 sg possessor), *‑nu* after vowel‑final nouns (3 sg possessor).\nBoth may co‑occur (e.g., *pixinhikary* “my fish”).\n5. **Dative construction** – A noun or pronoun stem takes one of three dative suffixes:\n*‑mukary* after consonant‑final stems (preceded by epenthetic *a* when the possessor stem ends in a consonant, e.g., *uw‑a‑mukary*).\n*‑kute* after labial‑final stems (preceded by epenthetic *i*, e.g., *na‑i‑kute*).\n*‑ky* after vowel‑final stems (no epenthetic vowel).\n6. **Definiteness** – Suffix *‑txi* marks a specific/definite referent on nouns and on the 3 sg pronoun (*kywĩtxi*).\n7. **Epenthetic vowels** – *a* is inserted between a consonant‑final possessor stem and *‑mukary*; *i* is inserted before *‑kute* after vowel‑final stems.\n8. **Verb‑root alternations** – Some verbs show internal vowel change in the past (e.g., *ãtary* → *uãtary*), but this is lexical and not productive.\n[DELETED: Rule 4b “‑kary after vowel‑final stems” – replaced by Rule 5 distinction between *‑kary* (possessive) and *‑ky* (dative).]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 116.63,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Clause order** – Two orders are attested:\na. **Verb‑initial**: V S O IO (verb first, then subject pronoun or noun, then direct object, then dative).\nb. **Verb‑final**: S O V IO or S V O (subject first; if the verb bears a subject prefix, the overt pronoun is omitted and the verb appears clause‑final).\n2. **Subject marking** –\n* Free pronouns (*nuta*, *pita*, *kywĩtxi*, *ywa*) appear in verb‑initial clauses.\n* When the verb is clause‑final, a subject prefix is attached to the verb: **n‑** for 1 sg, **nh‑** for 2 sg, no overt prefix for 3 sg. An epenthetic *y* is inserted before vowel‑initial verb roots (e.g., *n‑y‑sykaru* → *nysykaru*).\n3. **Past tense** – Past is expressed by a suffix:\n* **‑yte** after vowel‑final roots when no subject prefix is present.\n* **‑te** after vowel‑final roots when a subject prefix is present.\n* **‑par‑yte** is a verb‑specific allomorph (e.g., *pitxi* → *pitxiparyte*).\n* Some verbs have lexical past forms without a suffix (e.g., *sykaru* “give” vs. *sykaru* can be used in past; *ãtary* → *uãtary*).\n4. **Possession** – Two strategies coexist:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg).\nb. **Suffixal**: *‑ary* after consonant‑final nouns (1 sg possessor).\nBoth may co‑occur (e.g., *pi‑xinhik‑ary* “my house”).\n5. **Dative construction** – A noun or pronoun stem takes a dative suffix according to its final segment:\n* **‑kary** after consonant‑final stems (preceded by epenthetic *a* when the possessor stem ends in a consonant, e.g., *uw‑a‑kary*).\n* **‑kute** after labial‑final stems (preceded by epenthetic *i*, e.g., *na‑i‑kute*).\n* **‑ky** after vowel‑final stems (no epenthetic vowel).\nThe form *‑mukary* is a phonological variant of *‑kary* that appears after possessor stems ending in a vowel.\n6. **Definiteness** – Suffix *‑txi* marks a specific/definite referent on nouns and on the 3 sg pronoun (*kywĩtxi*).\n7. **Epenthetic vowels** – *a* is inserted between a consonant‑final possessor stem and *‑kary*; *i* is inserted before *‑kute* after vowel‑final stems.\n8. **Verb‑root alternations** – Some verbs show lexical vowel change in the past (e.g., *ãtary* → *uãtary*); this is not productive.\n[DELETED: Rule 4b “‑kary after vowel‑final stems” – merged into Rule 5.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 165.54,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Clause order** – Two basic orders are attested:\na. **Verb‑initial**: V S O IO (verb first, then subject pronoun or noun, then direct object, then dative).\nb. **Verb‑final**: S V O IO, S O V IO, or O V IO when the verb carries a subject prefix; the overt subject pronoun is omitted in the latter two.\n2. **Subject marking** –\n* Free pronouns (*nuta*, *pita*, *kywĩtxi*, *ywa*) appear in verb‑initial clauses.\n* When the verb is clause‑final, a subject prefix is attached: **n‑** (1 sg), **nh‑** (2 sg), no prefix for 3 sg.\n* An epenthetic *y* is inserted before vowel‑initial verb roots (e.g. *n‑y‑sykaru* → *nysykaru*).\n3. **Past tense** –\n* **‑te** follows a verb that already bears a subject prefix.\n* **‑yte** follows a verb without a subject prefix.\n* Some verbs have lexical past allomorphs: **‑par‑yte** for *pitxi* “bring”, **‑nu** for *sykaru* “give”, and vowel‑change forms such as *ãtary* → *uãtary*.\n4. **Possession** – Two strategies coexist:\na. **Prefixal**: *ny‑* (1 sg), *pi‑* (1 sg alternative), *u‑* (2 sg), *na‑* (3 sg/3 sg‑fem).\nb. **Suffixal**: *‑ary* after consonant‑final nouns (1 sg possessor).\n* Both may co‑occur (e.g. *pi‑xinhik‑ary* “my house”).\n5. **Dative construction** – A noun or pronoun stem takes a dative suffix according to its final segment:\n* **‑kary** after consonant‑final stems (preceded by epenthetic *a* when the possessor stem ends in a consonant, e.g. *uw‑a‑kary* → *uwamukary*).\n* **‑kute** after labial‑ or vowel‑final stems (preceded by epenthetic *i*, e.g. *na‑i‑kute* → *naikute*).\n* **‑ky** after vowel‑final stems (no epenthetic vowel).\n* **‑mukary** is a phonological variant of **‑kary** that appears after vowel‑final possessor stems.\n6. **Definiteness** – Suffix **‑txi** marks a specific/definite referent on nouns and on the 3 sg pronoun (*kywĩtxi*).\n7. **Epenthetic vowels** – *a* is inserted between a consonant‑final possessor stem and **‑kary**; *i* is inserted before **‑kute** after vowel‑final stems.\n8. **Verb‑root alternations** – Some verbs show lexical vowel change in the past (e.g. *ãtary* → *uãtary*); this is not productive.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 25.37,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              30.33,
+              19.72,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              35.87,
+              29.42,
+              33.48,
+              31.92,
+              5.79,
+              11.52
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              66.67,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "pita apukary xinhik",
+              "n‑mynaru uw‑a‑kary hãtakuru",
+              "nh‑apukary nutamukary",
+              "kyky uãtary nyherẽka",
+              "n‑ximaky kyky‑ky",
+              "nh‑ximaky pi‑banan‑ary"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 148.41,
+          "accumulated_dict": "nuta = I (1sg pronoun)\nn‑ = 1sg subject prefix (on verbs)\nsykaru = give (verb root)\nny‑ = 1sg possessive prefix (on nouns)\nkanawate = canoe (noun)\nuw‑ = her (possessor stem)\n‑mukary = dative suffix “to … ”\npita = you (sg)\nãtary = drink (verb root, non‑past)\nuãtary = drank (verb root, past)\nĩpurãã = water (noun)\nkyky = the man (noun)\nmynaru = brought (verb root, past)\nherẽka = blood (noun) *[possible alternative: blood]*\nnyherẽka = my blood (possessive form)\nherẽkatxi = the woman (noun, definite)\nsytu = woman (noun) *[possible alternative: blood]*\nsytumukary = to the woman (dative)\n*No entries deleted.*\n---",
+          "accumulated_rules": "1. **Clause types**\na. **Verb‑initial**: V S O IO (verb first, free pronoun or noun subject follows).\nb. **Verb‑final / non‑initial**: the verb may appear after the object (O V IO) or after the subject (S V O). When the verb carries a subject prefix, the overt subject noun can be omitted.\n2. **Subject marking**\n- Free pronouns (**nuta**, **pita**, **kywĩtxi**, **ywa**) appear in verb‑initial clauses or before the verb in S V O order.\n- When the verb is not preceded by a free pronoun, a subject prefix is attached: **n‑** (1sg), **nh‑** (2sg), no prefix for 3sg.\n- An epenthetic *y* is inserted before a vowel‑initial verb root after a subject prefix (e.g., **n‑y‑sykaru** → *nysykaru*).\n3. **Past tense formation**\n- After a subject prefix **n‑** (1sg) → **‑te** (e.g., *n‑y‑sykaru‑te*).\n- After **nh‑** (2sg) → **‑yte** (e.g., *nh‑ximak‑yte*).\n- Without a subject prefix → **‑yte** (e.g., *nysykanu*).\n- Some verbs have lexical past forms: **‑nu** (give), vowel‑change (**ãtary → uãtary**), **‑par‑yte** (bring).\n4. **Possession**\na. **Prefixal**: **ny‑** (my), **pi‑** (my alternative), **u‑** (your / 3sg), **na‑** (3sg).\nb. **Suffixal**: **‑ary** attaches to a noun to indicate a 1sg possessor; it can also appear with other possessors (e.g., **inhik‑ary** “the fish’s head”).\nc. Both strategies may co‑occur (e.g., **pi‑xinhik‑ary** “my house”).\n5. **Dative construction**\n- **‑kary** after consonant‑final possessor stems.\n- **‑mukary** after vowel‑final possessor stems (phonological variant of **‑kary**).\n- **‑kute** after labial‑ or vowel‑final stems, preceded by epenthetic *i* (e.g., **na‑i‑kute**).\n6. **Definiteness**\n- Suffix **‑txi** marks a specific/definite noun and also appears on the 3sg pronoun (**kywĩtxi**).\n7. **Epenthetic vowels**\n- *y* before vowel‑initial verb roots after a subject prefix.\n- *a* between a consonant‑final possessor stem and **‑kary**.\n- *i* before **‑kute** after vowel‑final stems.\n8. **Verb‑root alternations**\n- Lexical past allomorphs (e.g., **‑nu**, vowel change) are verb‑specific and not productive.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.86,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              4.17,
+              2.28
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "more natural:",
+              "actually:"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary"
+            ],
+            "num_evaluated": 2
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 25.37,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          30.33,
+          19.72,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          35.87,
+          29.42,
+          33.48,
+          31.92,
+          5.79,
+          11.52
+        ],
+        "sentence_ter": [
+          150.0,
+          100.0,
+          66.67,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "pita apukary xinhik",
+          "n‑mynaru uw‑a‑kary hãtakuru",
+          "nh‑apukary nutamukary",
+          "kyky uãtary nyherẽka",
+          "n‑ximaky kyky‑ky",
+          "nh‑ximaky pi‑banan‑ary"
+        ],
+        "references": [
+          "aiku papukary",
+          "pykanawate nymynaru hãtakurumukary",
+          "pĩpurããte ymynanu nutamukary",
+          "hãtakuru herẽka ãtary kyky",
+          "ukĩtxi nhixinhikary",
+          "nhitxiparyte pinhikary"
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 14
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 52.55,
+          "accumulated_dict": "nuta = I (1st‑person singular pronoun)\npita = you (sg)\nkyky = the man\nherẽkatxi = the woman\nny‑ = my‑ (possessive prefix)\nnykanawate = my canoe (canoe with my‑)\nnyherẽka = my blood (blood with my‑)\nĩpurãã = water\nsytu = blood\nsykaru = gave (1st‑person singular)\nnysykaru = gave (1st‑person singular, verb‑inflected)\nmynaru = brought (3rd‑person singular)\nãtary = drank (2nd‑person singular)\nuãtary = drank (3rd‑person singular)\nuwamukary = to her (dative, “to” + her)\nsytumukary = to the woman (dative, “to” + woman)",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb – Object – (Goal).\nExample: *kyky mynaru nyherẽka sytumukary* → “The man brought my blood to the woman.”\n2. **Possession**: A possessor is expressed by a prefix on the noun. The prefix **ny‑** marks first‑person singular (“my”).\n- *ny‑kanawate* = “my canoe”\n- *ny‑herẽka* = “my blood”\n3. **Pronoun omission / verbal agreement**: The subject pronoun can be omitted when the verb carries person‑marking.\n- *nuta sykaru …* → explicit 1sg pronoun + verb.\n- *ny‑sykaru …* → verb form that includes the 1sg subject, so the pronoun is dropped.\n4. **Verb person marking**: The initial vowel (or vowel‑plus‑glottal) of the verb signals the person of the subject.\n- 1sg: *sy‑* (as in *sykaru*) or *nys‑* (as in *nysykaru*)\n- 2sg: *ã‑* (as in *ãtary*)\n- 3sg: *u‑* (as in *uãtary*, *mynaru*)\n5. **Dative construction**: Goal noun takes the suffix **‑mukary** preceded by a prefix that indexes the recipient.\n- *uwa‑* = “her” → *uwamukary* “to her”\n- *sytu‑* = “woman” → *sytumukary* “to the woman”",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 27.8,
+          "accumulated_dict": "nhiximakyte = you (2sg) remembered (my) fish\npixinhikary = my fish\npitxiparyte = she brought your banana\numynary = your banana\nkykymukary = to the man\nhãtakuru = the girl remembered (my) house\nxinhikary = my house\nnaikute = the girl",
+          "accumulated_rules": "1. **Clause order** remains S‑V‑O‑(Goal).\n2. **Possession** can be expressed either by the prefix **ny‑** (as in *ny‑herẽka*) or by the suffix **‑hikary** attached to the possessed noun (e.g., *pixinhikary* “my fish”, *xinhikary* “my house”).\n3. **Verb‑person marking**: the initial segment of the verb indicates the subject’s person.\n- 1sg → *sy‑* or *nys‑* (e.g., *sykaru*, *nysykaru*)\n- 2sg → *nh‑* (e.g., *nhiximakyte*)\n- 3sg → *u‑* or a bare stem (e.g., *uãtary*, *mynaru*)\n4. **Object‑possessor agreement**: when the object is possessed by the speaker, the possessed noun takes the suffix **‑hikary**; the possessor is not otherwise overt.\n5. **Dative Goal**: the goal noun takes the suffix **‑mukary** preceded by a person‑indexing prefix (as previously described).\n6. **Verb morphology**: many verbs appear with a final **‑te** or **‑ye** that marks past tense; the exact distribution is still tentative.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 17.69,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              14.21,
+              21.26,
+              15.04
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nhiximakyte pixinhikary",
+              "pitxiparyte umynary kykymukary",
+              "hãtakuru xinhikary naikute"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 21.09,
+          "accumulated_dict": "nhiximakyte = you (2sg) remembered (my) fish\npixinhikary = my fish\npitxiparyte = she brought your banana\numynary = your banana\nkykymukary = to the man\nhãtakuru = the girl remembered (my) house\nxinhikary = my house\nnaikute = the girl",
+          "accumulated_rules": "1. **Basic clause order** – S V O (Goal). The Goal (dative) follows the object and is marked by the suffix **‑mukary** preceded by a person‑indexing prefix (see Rule 5).\n2. **Possession** – Two strategies:\n- **Prefix ny‑** attaches to the possessed noun when the possessor is a third‑person referent that is not the speaker (e.g. *ny‑herẽka* “his/her house”).\n- **Suffix ‑hikary** attaches to the possessed noun when the possessor is the speaker (1 sg) (e.g. *pixinhikary* “my fish”, *xinhikary* “my house”).\n3. **Verb‑person marking (subject)** – The verb stem begins with a person‑indexing morpheme:\n- 1 sg → *sy‑* or *nys‑* (e.g. *sykaru*, *nysykaru*)\n- 2 sg → *nh‑* (e.g. *nhiximakyte*)\n- 3 sg → *u‑* or a zero‑prefix (bare stem) (e.g. *uãtary*, *mynaru*)\n4. **Object‑possessor agreement** – When the object is possessed by the speaker, the possessed noun obligatorily bears **‑hikary**; the possessor is not otherwise expressed.\n5. **Dative Goal marking** – The Goal noun takes the suffix **‑mukary**. The suffix is preceded by a person‑indexing prefix that indexes the Goal‑holder (the recipient). The same person‑prefix system used for subjects applies (e.g. *nutamukary* “to me”, *kyky* “to you (2 sg)”).\n6. **Tense‑aspect morphology** – A final **‑te** or **‑ye** on the verb signals past tense. Distribution is still uncertain; both appear with past events.\n7. **Agreement hierarchy** – The only overt agreement observed is between the possessed noun and a first‑person possessor (‑hikary). No overt agreement is seen on the verb for number or gender; person is the sole agreement category encoded on the verb.",
+          "metrics": {
+            "corpus_bleu": 4.64,
+            "corpus_chrfpp": 13.82,
+            "corpus_ter": 133.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              18.66,
+              10.19,
+              11.65,
+              16.61
+            ],
+            "sentence_ter": [
+              250.0,
+              100.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "sytu apy ysykanu nutamukary kyky",
+              "nhĩpurããte nãtary",
+              "kywĩtxi apukary",
+              "ywa mynanu kyky uky nutamukary"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 39.52,
+          "accumulated_dict": "nhiximakyte = you (2sg) remembered (my) fish\npixinhikary = my fish\npitxiparyte = she brought your banana\numynary = your banana\nkykymukary = to the man\nhãtakuru = the girl remembered (my) house\nxinhikary = my house\nnaikute = the girl",
+          "accumulated_rules": "1. **Clause order** – S V O (Goal). The Goal (dative) follows the object and is marked by **‑mukary** with a person‑indexing prefix (see Rule 5).\n2. **Possession** – Two morphological strategies:\n* **Prefix ny‑** attaches to the possessed noun when the possessor is a third‑person referent that is not the speaker.\n* **Suffix ‑hikary** attaches to the possessed noun when the possessor is the speaker (1 sg).\n3. **Verb‑person marking (subject)** – The verb stem is preceded by a person‑indexing morpheme:\n* 1 sg → *sy‑* or *nys‑*\n* 2 sg → *nh‑*\n* 3 sg → *u‑* or zero‑prefix (bare stem)\n4. **Object‑possessor agreement** – When the object is possessed by the speaker, the possessed noun obligatorily bears **‑hikary**; the possessor is not otherwise expressed.\n5. **Dative Goal marking** – The Goal noun takes the suffix **‑mukary**. The suffix is preceded by a person‑indexing prefix that indexes the Goal‑holder (the recipient). The same person‑prefix system used for subjects applies (e.g. *nutamukary* “to me”, *kyky* “to you (2 sg)”).\n6. **Tense‑aspect morphology** – A final **‑te** or **‑ye** on the verb signals past tense. Both appear with past events; the choice is lexical/phonological rather than grammatical.\n7. **Negation** – A preverbal particle **na‑** (or **ma‑**) precedes the verb to negate the clause. The particle does not change according to person or number.\n8. **Yes‑no questions** – A sentence‑final particle **‑ka** (or **‑ke**) marks a polar question. It follows the entire clause, after any Goal suffix.\n9. **Embedded clauses** – When a clause functions as the object of another verb, the embedded verb loses its subject prefix and appears in a “bare‑stem” form; the matrix verb supplies the subject index.\n10. **Complex clause ordering** – In sentences containing both a Goal and a subordinate clause, the order is:\nS V O (embedded clause) Goal ? (Question particle) Negation (when applicable).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 17.69,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          14.21,
+          21.26,
+          15.04
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nhiximakyte pixinhikary",
+          "pitxiparyte umynary kykymukary",
+          "hãtakuru xinhikary naikute"
+        ],
+        "references": [
+          "aiku papukary",
+          "pykanawate nymynaru hãtakurumukary",
+          "pĩpurããte ymynanu nutamukary"
+        ],
+        "num_evaluated": 3
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 64.36,
+          "metrics": {
+            "corpus_bleu": 3.84,
+            "corpus_chrfpp": 34.77,
+            "corpus_ter": 131.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              10.68,
+              19.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              28.0,
+              40.68,
+              36.16,
+              43.85,
+              8.19,
+              36.83
+            ],
+            "sentence_ter": [
+              150.0,
+              166.67,
+              133.33,
+              75.0,
+              150.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "pita hãtakuru uapukaru",
+              "nutamukary kyky nykanawate txiparyte hãtakuru",
+              "pita kywy nykanawate hãtakuru nutamukary",
+              "kyky hãtakuru nyherẽka nykanawate",
+              "nuta hãtakuru nyherẽka",
+              "pita nhiximakyte pixinhikary"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.84,
+        "corpus_chrfpp": 34.77,
+        "corpus_ter": 131.25,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          10.68,
+          19.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          28.0,
+          40.68,
+          36.16,
+          43.85,
+          8.19,
+          36.83
+        ],
+        "sentence_ter": [
+          150.0,
+          166.67,
+          133.33,
+          75.0,
+          150.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "pita hãtakuru uapukaru",
+          "nutamukary kyky nykanawate txiparyte hãtakuru",
+          "pita kywy nykanawate hãtakuru nutamukary",
+          "kyky hãtakuru nyherẽka nykanawate",
+          "nuta hãtakuru nyherẽka",
+          "pita nhiximakyte pixinhikary"
+        ],
+        "references": [
+          "aiku papukary",
+          "pykanawate nymynaru hãtakurumukary",
+          "pĩpurããte ymynanu nutamukary",
+          "hãtakuru herẽka ãtary kyky",
+          "ukĩtxi nhixinhikary",
+          "nhitxiparyte pinhikary"
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 47.82,
+          "metrics": {
+            "corpus_bleu": 4.32,
+            "corpus_chrfpp": 24.63,
+            "corpus_ter": 131.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              19.72,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              34.02,
+              33.26,
+              21.15,
+              31.92,
+              8.81,
+              14.84
+            ],
+            "sentence_ter": [
+              150.0,
+              133.33,
+              133.33,
+              100.0,
+              150.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "pita apukary xinhikary",
+              "hãtakuru sytumukary umynary hãtakuru",
+              "kyky sytumukary umynary hãtakuru",
+              "kyky uãtary nyherẽka",
+              "hãtakuru ximaky ysykanu",
+              "nhiximakyte ximaky umynary"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 51.57,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 21.44,
+            "corpus_ter": 112.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              19.72,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              34.02,
+              26.27,
+              15.01,
+              21.59,
+              19.17,
+              14.83
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "pita apukary xinhikary",
+              "hãtakuru txiparyte napukary",
+              "kyky txiparyte napukary",
+              "kyky uãtary ĩpurãã",
+              "kywĩtxi ximaky kywyapukary",
+              "nhiximakyte nyumynary"
+            ],
+            "references": [
+              "aiku papukary",
+              "pykanawate nymynaru hãtakurumukary",
+              "pĩpurããte ymynanu nutamukary",
+              "hãtakuru herẽka ãtary kyky",
+              "ukĩtxi nhixinhikary",
+              "nhitxiparyte pinhikary"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.32,
+        "corpus_chrfpp": 24.63,
+        "corpus_ter": 131.25,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          19.72,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          34.02,
+          33.26,
+          21.15,
+          31.92,
+          8.81,
+          14.84
+        ],
+        "sentence_ter": [
+          150.0,
+          133.33,
+          133.33,
+          100.0,
+          150.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "pita apukary xinhikary",
+          "hãtakuru sytumukary umynary hãtakuru",
+          "kyky sytumukary umynary hãtakuru",
+          "kyky uãtary nyherẽka",
+          "hãtakuru ximaky ysykanu",
+          "nhiximakyte ximaky umynary"
+        ],
+        "references": [
+          "aiku papukary",
+          "pykanawate nymynaru hãtakurumukary",
+          "pĩpurããte ymynanu nutamukary",
+          "hãtakuru herẽka ãtary kyky",
+          "ukĩtxi nhixinhikary",
+          "nhitxiparyte pinhikary"
+        ],
+        "num_evaluated": 6
+      },
+      "delta": {
+        "bleu_delta": -4.32,
+        "chrf_delta": -3.19,
+        "ter_delta": -18.75,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 2.19,
+      "ter": 3150.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Apurinã (attempt):**  \n*Ira‑kɨtɨ*  \n\n*Explanation:* In Apurinã, the verb “to find” can be expressed with the root **ir",
+      "reference": "aiku papukary"
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 0.0,
+      "best_chrf": 25.37,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "pita apukary xinhik",
+        "n‑mynaru uw‑a‑kary hãtakuru",
+        "nh‑apukary nutamukary",
+        "kyky uãtary nyherẽka",
+        "n‑ximaky kyky‑ky",
+        "nh‑ximaky pi‑banan‑ary"
+      ],
+      "best_references": [
+        "aiku papukary",
+        "pykanawate nymynaru hãtakurumukary",
+        "pĩpurããte ymynanu nutamukary",
+        "hãtakuru herẽka ãtary kyky",
+        "ukĩtxi nhixinhikary",
+        "nhitxiparyte pinhikary"
+      ],
+      "best_step": 14
+    },
+    "step_by_step": {
+      "best_bleu": 0.0,
+      "best_chrf": 17.69,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "nhiximakyte pixinhikary",
+        "pitxiparyte umynary kykymukary",
+        "hãtakuru xinhikary naikute"
+      ],
+      "best_references": [
+        "aiku papukary",
+        "pykanawate nymynaru hãtakurumukary",
+        "pĩpurããte ymynanu nutamukary"
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 3.84,
+      "best_chrf": 34.77,
+      "best_ter": 131.25,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "pita hãtakuru uapukaru",
+        "nutamukary kyky nykanawate txiparyte hãtakuru",
+        "pita kywy nykanawate hãtakuru nutamukary",
+        "kyky hãtakuru nyherẽka nykanawate",
+        "nuta hãtakuru nyherẽka",
+        "pita nhiximakyte pixinhikary"
+      ],
+      "best_references": [
+        "aiku papukary",
+        "pykanawate nymynaru hãtakurumukary",
+        "pĩpurããte ymynanu nutamukary",
+        "hãtakuru herẽka ãtary kyky",
+        "ukĩtxi nhixinhikary",
+        "nhitxiparyte pinhikary"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 4.32,
+      "best_chrf": 24.63,
+      "best_ter": 131.25,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "pita apukary xinhikary",
+        "hãtakuru sytumukary umynary hãtakuru",
+        "kyky sytumukary umynary hãtakuru",
+        "kyky uãtary nyherẽka",
+        "hãtakuru ximaky ysykanu",
+        "nhiximakyte ximaky umynary"
+      ],
+      "best_references": [
+        "aiku papukary",
+        "pykanawate nymynaru hãtakurumukary",
+        "pĩpurããte ymynanu nutamukary",
+        "hãtakuru herẽka ãtary kyky",
+        "ukĩtxi nhixinhikary",
+        "nhitxiparyte pinhikary"
+      ],
+      "delta": {
+        "bleu_delta": -4.32,
+        "chrf_delta": -3.19,
+        "ter_delta": -18.75,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

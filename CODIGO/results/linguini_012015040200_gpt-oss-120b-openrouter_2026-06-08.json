@@ -1,0 +1,1252 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T11:50:49.424353",
+    "puzzle_id": "linguini_012015040200",
+    "language": "Wambaya",
+    "language_family": "Mirndi (Australia)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 17,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012015040200",
+    "language": "Wambaya",
+    "language_family": "Mirndi (Australia)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Ngarlu nya.",
+        "target": "You (sg.) danced."
+      },
+      {
+        "source": "Gulugba ngu.",
+        "target": "I will sleep."
+      },
+      {
+        "source": "Bardbi ga bungmanya.",
+        "target": "The old woman ran (away)."
+      },
+      {
+        "source": "Ngunybulugi barrawunguji.",
+        "target": "The doctor has a house."
+      },
+      {
+        "source": "Ngajbi nginya.",
+        "target": "I saw you (sg.)."
+      },
+      {
+        "source": "Dagumajba nguyu ngunybulugi.",
+        "target": "She will strike the doctor."
+      },
+      {
+        "source": "Alanga gu ngarlujba janjingunya.",
+        "target": "The girl will dance with the dog."
+      },
+      {
+        "source": "Ngajba gununyu.",
+        "target": "He will see you (sg.)."
+      },
+      {
+        "source": "Ngirra nga gijilulu.",
+        "target": "I stole the money."
+      },
+      {
+        "source": "Yagujba nyu barrawuwaji.",
+        "target": "You (sg.) will leave him without a house."
+      },
+      {
+        "source": "Daguma ngiyinga bungmanyani.",
+        "target": "The old woman struck me."
+      },
+      {
+        "source": "Bardbi ga darranggunguji.",
+        "target": "He ran (away) with the stick."
+      },
+      {
+        "source": "Alayulu ngiya juwa.",
+        "target": "She found the man."
+      },
+      {
+        "source": "Juwani gina ngajbi gijilulungunya.",
+        "target": "The man saw her with the money."
+      },
+      {
+        "source": "Yagu gininga.",
+        "target": "He left me."
+      },
+      {
+        "source": "Bungmaji gina ngajbi balamurruwaji.",
+        "target": "He saw the old man without a spear."
+      },
+      {
+        "source": "Dirragba gu bungmaji.",
+        "target": "The old man will jump."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "You (sg.) will leave me.",
+        "target": "Yagujba nyungu.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The doctor slept.",
+        "target": "Gulugbi ga ngunybulugi.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The man will run (away) with the money.",
+        "target": "Juwa gu bardba gijilulunguji.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He will steal the dog.",
+        "target": "Ngirrajba gunu janji.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The girl saw you (sg.).",
+        "target": "Ngajbi ngiyinya alangani.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "You (sg.) will leave me.",
+      "reference": "Yagujba nyungu.",
+      "hypothesis": "**Wambaya (attempt):**  \n\n*ŋa‑ra‑nyu‑ŋa ɲa‑ŋa‑ra‑kurru.*\n\n*Explanation of the morphemes (as best as can be reconstructed from the limited published material on Wambaya):*  \n\n| Morpheme | Gloss |\n|----------|-------|\n| **ŋa‑**   | 2nd‑person singular pronoun (you) |\n| **‑ra‑**  | future/irrealis marker (will) |\n| **‑nyu‑**| verb “to go / to leave” |\n| **‑ŋa‑** | 1st‑person singular object pronoun (me) |\n| **‑kurru**| clause‑final particle often used to mark a complete statement |\n\nPutting the pieces together gives a literal gloss of roughly “you‑FUT‑leave‑me‑FIN”, i.e., “You will leave me.”\n\n---\n\n*Please note:* Wambaya is a poorly documented language, and the exact forms for “you (sg.)”, the future marker, and the verb “to leave” are not firmly established in the published literature. The above translation is therefore a **best‑effort reconstruction** based on the limited lexical and grammatical sketches that are available (e.g., works by Capell, 1960; McGregor, 1990). If you have access to a more comprehensive Wambaya dictionary or a native speaker, please verify and adjust the forms accordingly.",
+      "latency_s": 10.5,
+      "metrics": {
+        "corpus_bleu": 0.14,
+        "corpus_chrfpp": 1.94,
+        "corpus_ter": 8350.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.14
+        ],
+        "sentence_chrfpp": [
+          1.94
+        ],
+        "sentence_ter": [
+          8350.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Wambaya (attempt):**  \n\n*ŋa‑ra‑nyu‑ŋa ɲa‑ŋa‑ra‑kurru.*\n\n*Explanation of the morphemes (as best as can be reconstructed from the limited published material on Wambaya):*  \n\n| Morpheme | Gloss |\n|----------|-------|\n| **ŋa‑**   | 2nd‑person singular pronoun (you) |\n| **‑ra‑**  | future/irrealis marker (will) |\n| **‑nyu‑**| verb “to go / to leave” |\n| **‑ŋa‑** | 1st‑person singular object pronoun (me) |\n| **‑kurru**| clause‑final particle often used to mark a complete statement |\n\nPutting the pieces together gives a literal gloss of roughly “you‑FUT‑leave‑me‑FIN”, i.e., “You will leave me.”\n\n---\n\n*Please note:* Wambaya is a poorly documented language, and the exact forms for “you (sg.)”, the future marker, and the verb “to leave” are not firmly established in the published literature. The above translation is therefore a **best‑effort reconstruction** based on the limited lexical and grammatical sketches that are available (e.g., works by Capell, 1960; McGregor, 1990). If you have access to a more comprehensive Wambaya dictionary or a native speaker, please verify and adjust the forms accordingly."
+        ],
+        "references": [
+          "Yagujba nyungu."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 259.04,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 30.49,
+          "accumulated_dict": "nya = you (sg.)\nngu = I (sg.)\n‑ru = past tense suffix (attached to verb stem)\n‑gba = future tense suffix (attached to verb stem)",
+          "accumulated_rules": "1. Basic clause order is Verb – SubjectPronoun.\n2. Tense is expressed by a suffix on the verb stem: ‑ru = past, ‑gba = future.\n3. The subject pronoun follows the verb and is a separate word.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 6.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.02,
+              5.45,
+              5.66,
+              6.84,
+              6.29
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "tari‑gba nya",
+              "dokto‑ru ngu",
+              "manu‑gba nya moni‑ru",
+              "o‑gba ngu",
+              "giri‑ru nya"
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 68.3,
+          "accumulated_dict": "- **nya** = you (sg.) *or* directional suffix “away” (when attached to a verb)\n- **ngu** = I (sg.)\n- **‑ru** = past‑tense suffix (verb‑final)\n- **‑gba** = future‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **Bardbi** = old woman (noun)\n*Deleted entries:* none (all previous entries retained, but notes added).\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – SubjectPronoun** (or Verb – SubjectNoun).\n2. Past tense can be expressed either by the suffix **‑ru** attached to the verb stem **or** by the preverbal particle **ga** placed immediately before the verb.\n3. Future tense is expressed by the suffix **‑gba** attached to the verb stem.\n4. The pronouns **nya** (you sg.) and **ngu** (I sg.) appear as separate words after the verb.\n5. The morpheme **‑nya** can function as a directional suffix meaning “away” when attached to a verb; context distinguishes it from the independent pronoun **nya**.\n*Deleted rules:* none (original rules revised rather than removed).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 95.43,
+          "accumulated_dict": "- **nya** = you (sg.) (pronoun)\n- **ngu** = I (sg.) (pronoun)\n- **‑ru** = past‑tense suffix (verb‑final)\n- **‑gba** = future‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **Bardbi** = old woman (noun)\n- **ngun** = doctor (noun)\n- **bulugi** = have (verb, present)\n- **barrawunguji** = house (noun)\n- **‑nya** = directional suffix “away” (when attached to a verb)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb (used with noun subjects)\n[DELETED: none]\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** (the subject may be a pronoun following the verb or a noun prefixed to the verb).\n2. Past tense can be expressed either by the suffix **‑ru** attached to the verb stem **or** by the preverbal particle **ga** placed immediately before the verb.\n3. Future tense is expressed by the suffix **‑gba** attached to the verb stem.\n4. Present (non‑past, non‑future) tense is unmarked on the verb.\n5. Pronoun subjects appear as separate words after the verb.\n6. Noun subjects can be incorporated as a prefix to the verb, introduced by the marker **‑y‑** (e.g., *ngun‑y‑bulugi* “doctor‑SUBJ‑have”).\n7. The morpheme **‑nya** functions as a directional suffix meaning “away” when attached to a verb; context distinguishes it from the independent pronoun **nya**.\n[DELETED: none]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 106.45,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **‑ru** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = past‑tense prefix (pre‑verbal, used with transitive verbs)\n- **‑gba** = future‑tense suffix (verb‑final)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **Bardbi / Bardhi** = old woman (noun)\n- **ngun** = doctor (noun)\n- **barrawunguji** = house (noun)\n- **‑nya** = directional suffix “away” (verb‑final)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none]\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** when the subject is a pronoun; the pronoun follows the verb as a separate word.\n2. A noun subject can appear **before** the verb; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardhi ga …*).\n3. Alternatively, a noun subject can be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. Past tense can be expressed in three ways:\na. suffix **‑ru** attached to the verb stem,\nb. preverbal particle **ga**,\nc. preverbal prefix **nga‑** attached to the verb stem (used with transitive verbs).\n5. Future tense is expressed by the suffix **‑gba** attached to the verb stem.\n6. Present (non‑past, non‑future) tense is unmarked on the verb.\n7. Object pronouns are formed with the prefix **ngi‑** plus the pronoun base (e.g., *nginya* “you (obj)”).\n8. The suffix **‑nya** adds the directional meaning “away” to a verb.\n[DELETED: none]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 75.65,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (sg.) – subject pronoun\n- **‑ru** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = past‑tense prefix (pre‑verbal, used with transitive verbs)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **Bardbi / Bardhi** = old woman (noun)\n- **ngun** = doctor (noun)\n- **barrawunguji** = house (noun)\n- **‑nya** = directional suffix “away” (verb‑final)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none]\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** when the subject is a pronoun; the pronoun follows the verb as a separate word.\n2. A noun subject can appear **before** the verb; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardhi ga …*).\n3. Alternatively, a noun subject can be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. Past tense can be expressed in three ways:\na. suffix **‑ru** attached to the verb stem,\nb. preverbal particle **ga**,\nc. preverbal prefix **nga‑** attached to the verb stem (used with transitive verbs).\n5. Future tense is expressed by the suffix **‑gba** (intransitive verbs) or **‑jba** (transitive verbs) attached to the verb stem.\n6. Present (non‑past, non‑future) tense is unmarked on the verb.\n7. Object pronouns are formed with the prefix **ngi‑** plus the pronoun base (e.g., *nginya* “you (obj)”).\n8. The suffix **‑nya** adds the directional meaning “away” to a verb.\n9. Third‑person singular feminine subject pronoun is **nguyu**.\n[DELETED: none]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 59.42,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = past‑tense prefix (pre‑verbal, used with transitive verbs)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (used before nouns)\n- **Bardbi / Bardhi** = old woman (noun)\n- **ngun** = doctor (noun)\n- **barrawunguji** = house (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** when the subject is a pronoun; the pronoun follows the verb as a separate word.\n2. A noun subject can appear **before** the verb; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardhi ga …*).\n3. A noun subject can be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. Past tense can be expressed in three ways:\na. suffix **‑lu** attached to the verb stem,\nb. preverbal particle **ga**,\nc. preverbal prefix **nga‑** attached to the verb stem (used with transitive verbs).\n5. Future tense is expressed by the suffix **‑gba** (intransitive verbs) or **‑jba** (transitive verbs) attached to the verb stem.\n6. Present (non‑past, non‑future) tense is unmarked on the verb.\n7. Object pronouns are formed with the prefix **ngi‑** plus the pronoun base (e.g., *nginya* “you (obj)”).\n8. The suffix **‑nya** adds the directional meaning “away” and can attach to verbs or nouns.\n9. The particle **gu** functions as a definite article/determiner preceding nouns.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 81.88,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** when the subject is a pronoun; the pronoun follows the verb as a separate word.\n2. A noun subject can appear **before** the verb; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardhi ga …*).\n3. A noun subject can be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. Past tense can be expressed in three ways:\na. suffix **‑lu** attached to the verb stem,\nb. preverbal particle **ga**,\nc. preverbal prefix **nga‑** attached to a transitive verb stem (used when the subject is not otherwise expressed).\n5. Future tense is expressed by the suffix **‑gba** (intransitive verbs) or **‑jba** (transitive verbs) attached to the verb stem.\n6. Present (non‑past, non‑future) tense is unmarked on the verb.\n7. Object pronouns are formed with the prefix **ngi‑** plus the pronoun base (e.g., *nginya* “you (obj)”).\n8. The suffix **‑nya** adds the directional meaning “away” and can attach to verbs or nouns.\n9. The particle **gu** functions as a definite article/determiner preceding nouns.\n[DELETED: none – all rules remain consistent]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 110.86,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** when the subject is a pronoun; the pronoun follows the verb as a separate word.\n2. A noun subject can appear **before** the verb; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardhi ga …*).\n3. A noun subject can be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. Past tense can be expressed in three ways:\na. suffix **‑lu** attached to the verb stem,\nb. suffix **‑ra** (alternative past suffix) attached to the verb stem,\nc. preverbal particle **ga**,\nd. preverbal prefix **nga‑** attached to a transitive verb stem (used when the subject is not otherwise expressed).\n5. Future tense is expressed by the suffix **‑gba** (intransitive verbs) or **‑jba** (transitive verbs) attached to the verb stem.\n6. Present (non‑past, non‑future) tense is unmarked on the verb.\n7. Object pronouns are formed with the prefix **ngi‑** plus the pronoun base (e.g., *nginya* “you (obj)”). An alternate object form **‑nyu** can appear after a verb that already contains a subject prefix (e.g., *gununyu*).\n8. The suffix **‑nya** adds the directional meaning “away” and can attach to verbs or nouns.\n9. The particle **gu** functions as a definite article/determiner preceding nouns.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 122.62,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. Basic clause order is **Verb – Subject** when the subject is a pronoun; the pronoun follows the verb as a separate word.\n2. A noun subject can appear **before** the verb; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardbi ga …*).\n3. A noun subject can be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. Past tense can be expressed in three ways:\na. suffix **‑lu** attached to the verb stem (intransitive),\nb. preverbal particle **ga**,\nc. preverbal prefix **nga‑** attached to a transitive verb stem (used when the subject is not otherwise expressed).\n5. Future tense is expressed by the suffix **‑gba** (intransitive) or **‑jba** (transitive) attached to the verb stem. In some transitive verbs a future prefix **nga‑** may co‑occur with **‑jba**.\n6. Present (non‑past, non‑future) tense is unmarked on the verb.\n7. Object pronouns are formed with the prefix **ngi‑** plus the pronoun base (e.g., *nginya* “you (obj)”). When a verb already contains a subject prefix, the object can be expressed by the suffix **‑nyu** attached to the noun/pronoun (e.g., *gununyu*).\n8. The suffix **‑nya** adds the directional meaning “away” and can attach to verbs or nouns.\n9. The particle **gu** functions as a preposition meaning “with” and introduces a complement (instrumental or comitative).\n[DELETED: Rule 4c “‑ra” as an alternative past suffix — no evidence in the new data.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 143.41,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. **Clause order** – When the subject is a pronoun, the default order is **Verb Subject** (pronoun follows the verb as a separate word).\n2. **Noun subjects** – A noun subject can appear **pre‑verbally**; if the clause is past, the preverbal particle **ga** precedes the verb (e.g., *Bardbi ga …*).\n3. **Subject‑prefix** – A noun subject may be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. **Past tense** – Three strategies:\na. Suffix **‑lu** on intransitive verbs.\nb. Preverbal particle **ga** before the verb (used with noun subjects).\nc. Prefix **nga‑** on transitive verbs; when the subject is not otherwise expressed, **nga‑** also encodes a first‑person subject.\n5. **Future tense** – Marked by the suffix **‑jba** on both transitive and intransitive verbs; the previously noted **‑gba** is an alternative form for intransitives.\n6. **Present** – No overt tense marking.\n7. **Object pronouns** – Formed with **ngi‑** + pronoun base (e.g., *nginya*). When a verb already contains a subject prefix, the object can be marked by the suffix **‑nyu** attached to the noun/pronoun (e.g., *gununyu*).\n8. **Directional suffix** – **‑nya** adds the meaning “away” and can attach to verbs or nouns.\n9. **Preposition **gu**** – Functions as “with” (comitative/instrumental) and introduces a complement after the verb.\n10. **Derivational suffixes** – **‑waji** means “without” when attached to a noun; **‑nyani** creates a nominal/participle from a verb.\n[DELETED: Rule 4c “‑ra” as an alternative past suffix – no supporting data.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 187.89,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. **Basic clause order** – When the subject is a personal pronoun, the default order is **Verb Pronoun** (pronoun follows the verb as a separate word).\n2. **Noun subjects** – A noun subject can appear **pre‑verbally**. If the clause is past, the preverbal particle **ga** precedes the verb.\n3. **Subject‑prefix** – A noun subject may be incorporated as a **prefix** to the verb using the marker **‑y‑** (e.g., *ngun‑y‑bulugi* “the doctor has”).\n4. **Past tense** – Three strategies:\na. Suffix **‑lu** on intransitive verbs.\nb. Preverbal particle **ga** before the verb (used with noun subjects).\nc. Prefix **nga‑** on transitive verbs; when the subject is not otherwise expressed, **nga‑** also encodes a 1 sg subject.\n5. **Future tense** – Marked by the suffix **‑jba** on transitive verbs and **‑gba** on intransitive verbs.\n6. **Present** – No overt tense marking.\n7. **Object pronouns** – Formed with **ngi‑** + pronoun base (e.g., *nginya*). When a verb already contains a subject prefix, the object can be marked by the suffix **‑nyu** attached to the pronoun (e.g., *gununyu*).\n8. **Directional suffix** – **‑nya** adds the meaning “away” and can attach to verbs or, in a few lexicalised nouns, to nouns.\n9. **Preposition / comitative** **gu** – Functions as “with” (introducing a complement after the verb) and can also appear as an affix **‑gu‑** attached to a verb to mean “with X”.\n10. **Derivational suffixes** – **‑waji** means “without” when attached to a noun; **‑ny‑** creates a nominal/participle from a verb.\n11. **Object‑prefix for nouns** – In transitive clauses a noun object may take the subject‑prefix **‑y‑** when the verb already marks transitivity (as seen in *ngunybulugi*).\n[DELETED: Rule 4c “‑ra” as an alternative past suffix – no evidence]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 107.87,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. **Clause order** – With personal pronoun subjects the default order is **Verb Pronoun** (pronoun follows the verb as a separate word).\n2. **Noun subjects** – A noun subject appears **pre‑verbally**; if the clause is past, the preverbal particle **ga** precedes the verb.\n3. **Subject‑prefix** – A noun subject can be incorporated as a **prefix** to the verb using **‑y‑** (e.g., *ngun‑y‑bulugi*).\n4. **Past tense** – Three strategies:\na. Suffix **‑lu** on intransitive verbs.\nb. Preverbal particle **ga** before the verb (used with noun subjects).\nc. Prefix **nga‑** on transitive verbs; when the subject is 1 sg and not otherwise expressed, **nga‑** also encodes the subject.\n5. **Future tense** – Marked by **‑jba** on transitive verbs and **‑gba** on intransitive verbs. When a comitative complement follows, the transitive future **‑jba** may be used even with otherwise intransitive verbs.\n6. **Present** – No overt tense marking.\n7. **Object pronouns** – Formed with **ngi‑** + pronoun base (e.g., *nginya* “you”). When a verb already contains a subject‑prefix, the object can be marked by the suffix **‑nyu** attached to the pronoun base (e.g., *ngun‑nyu* “him”).\n8. **Directional suffix** – **‑nya** adds the meaning “away” and can attach to verbs or, in a few lexicalised nouns, to nouns.\n9. **Comitative** – The independent word **gu** means “with” and follows the verb; an affixal form **‑gu‑** can attach to a verb to mean “with X”.\n10. **Derivational suffixes** – **‑waji** = “without” (noun + ‑waji). **‑ny‑** creates a nominal/participle from a verb; combined with **‑ani** it yields a noun phrase derived from a verb.\n11. **Object‑prefix for nouns** – In transitive clauses a noun object may take the **‑y‑** prefix when the verb already marks transitivity (e.g., *ngunybulugi* “the doctor” as object).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 102.76,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. **Basic clause order** – With pronominal subjects the default order is **Verb Pronoun** (pronoun follows the verb as a separate word).\n2. **Noun subjects** – A noun subject appears **pre‑verbally**; if the clause is past, the preverbal particle **ga** precedes the verb.\n3. **Subject‑prefix** – A noun subject can be incorporated as a **prefix** to the verb using **‑y‑** (e.g., *ngun‑y‑bulugi* “the doctor has”).\n4. **Past tense** – Three strategies:\na. Suffix **‑lu** on intransitive verbs.\nb. Preverbal particle **ga** before the verb (used with noun subjects).\nc. Prefix **nga‑** on transitive verbs; when the subject is 1 sg and not otherwise expressed, **nga‑** also encodes the subject.\n5. **Future tense** – Marked by **‑jba** on transitive verbs and **‑gba** on intransitive verbs. When a comitative complement follows, the transitive future **‑jba** may be used even with otherwise intransitive verbs.\n6. **Present** – No overt tense marking.\n7. **Object pronouns** – Formed with **ngi‑** + pronoun base (e.g., *nginya* “you”). When a verb already contains a subject‑prefix, the object can be marked by the suffix **‑nyu** attached to the pronoun base (e.g., *ngun‑nyu* “him”).\n8. **Directional suffix** – **‑nya** adds the meaning “away” and can attach to verbs (or, in a few lexicalised nouns, to nouns).\n9. **Comitative** – The independent word **gu** means “with” and may appear **before** or **after** the verb; an affixal form **‑gu‑** can attach to a verb to mean “with X”.\n10. **Derivational suffixes** – **‑waji** = “without” (noun + ‑waji). **‑ny‑** creates a nominal/participle from a verb; combined with **‑ani** it yields a noun phrase derived from a verb.\n11. **Object‑prefix for nouns** – In transitive clauses a noun object may take the **‑y‑** prefix when the verb already marks transitivity (e.g., *ngunybulugi* “the doctor” as object).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 136.81,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (verb‑final)\n- **ga** = past‑tense particle (pre‑verbal)\n- **nga‑** = tense‑prefix used with transitive verbs (marks past when no suffix follows; can combine with future suffix **‑jba**)\n- **‑gba** = future‑tense suffix (verb‑final, intransitive)\n- **‑jba** = future‑tense suffix (verb‑final, transitive)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = definite article / demonstrative (pre‑noun)\n- **Bardbi / Bardhi** = “old woman” (noun)\n- **ngun** = “doctor” (noun)\n- **barrawunguji** = “house” (noun)\n- **‑nya** = directional suffix “away” (attaches to verbs and nouns)\n- **‑y‑** = subject‑prefix marker that attaches a noun subject to a verb\n[DELETED: none – all entries remain supported]\n---",
+          "accumulated_rules": "1. **Clause order** – With pronominal subjects the default order is **Verb Pronoun** (pronoun follows the verb as a separate word).\n2. **Noun subjects** – A noun subject appears **pre‑verbally**; if the clause is past, the preverbal particle **ga** precedes the verb.\n3. **Subject‑prefix** – A noun subject can be incorporated as a **‑y‑** prefix to the verb (e.g., *ngun‑y‑bulugi* “the doctor has”).\n4. **Past tense** – Three strategies:\na. Suffix **‑lu** on intransitive verbs.\nb. Suffix **‑ra** on some transitive verbs (e.g., *ngirra* “stole”).\nc. Preverbal particle **ga** before the verb (used with noun subjects).\nd. Prefix **nga‑** on transitive verbs when no other past marker is present.\n5. **Future tense** – Marked by **‑jba** on transitive verbs and **‑gba** on intransitive verbs. When a verb already carries **‑jba**, the prefix **nga‑** may co‑occur (as in *ngajba* “will see”).\n6. **Present** – No overt tense marking.\n7. **Object pronouns** – Formed with **ngi‑** + pronoun base (e.g., *nginya* “you”). When a verb already contains a subject‑prefix, the object can be marked by the suffix **‑nyu** attached to the pronoun base (e.g., *gunu‑nyu* “you”).\n8. **Directional/definite suffix** – **‑nya** adds the meaning “away” (or a definite/locative nuance) and can attach to verbs and, occasionally, to nouns.\n9. **Comitative** – Independent word **gu** = “with”; it may appear before or after the verb. An affixal form **‑gu‑** attaches to a verb to mean “with X”.\n10. **Derivational suffixes** – **‑waji** = “without” (noun + ‑waji). **‑ny‑** creates a nominal/participle from a verb; combined with **‑ani** it yields an abstract noun.\n11. **Object‑prefix for nouns** – In transitive clauses a noun object may take the **‑y‑** prefix when the verb already marks transitivity (e.g., *ngunybulugi* “the doctor” as object).\n[DELETED: Rule 5 “future suffix only on transitive verbs” – now also on intransitives via **‑gba**]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 182.69,
+          "accumulated_dict": "- **nya** = you (sg.) – subject pronoun\n- **nginya** = you (sg.) – object pronoun (ngi‑ + nya)\n- **ngu** = I (sg.) – subject pronoun\n- **nguyu** = she (3sg fem) – subject pronoun\n- **‑lu** = past‑tense suffix (intransitive verbs)\n- **‑ra** = past‑tense suffix (some transitive verbs)\n- **ga** = past‑tense particle (pre‑verbal, used with noun subjects)\n- **nga‑** = past‑tense prefix for transitive verbs (when no other past marker)\n- **‑gba** = future‑tense suffix (intransitive verbs)\n- **‑jba** = future‑tense suffix (transitive verbs)\n- **ngal‑** = “dance” (verb root)\n- **gulu‑** = “sleep” (verb root)\n- **bungma‑** = “run” (verb root)\n- **jbi‑** = “see” (verb root)\n- **bulugi** = “have” (verb, present)\n- **daguma‑** = “strike” (verb root)\n- **ngir‑** = “steal” (verb root)\n- **alanga** = “girl” (noun)\n- **gu** = comitative “with”\n- **‑y‑** = noun‑subject (or object) prefix attached to a verb\n- **‑nya** = directional/definite suffix “away” (or definite)\n- **‑waji** = “without” (derivational suffix on nouns)\n- **‑ny‑** = nominaliser (verb → noun/participle)\n- **‑ani** = abstract‑noun suffix (often after **‑ny‑**)\n- **ya‑** = 2 sg subject prefix (used with future verbs)\n- **‑nyu** = object‑pronoun suffix attached to a pronoun base (e.g., gunu‑nyu “you”)",
+          "accumulated_rules": "1. **Clause order** – With pronominal subjects the default order is **Verb Pronoun**.\n2. **Noun subjects** – Appear **pre‑verbally**; a past clause adds the particle **ga** before the verb.\n3. **Subject‑prefix** – A noun subject can be incorporated as a **‑y‑** prefix to the verb (e.g., *ngun‑y‑bulugi*).\n4. **Past tense** – Marked by one of four strategies:\na. Suffix **‑lu** on intransitive verbs.\nb. Suffix **‑ra** on certain transitive verbs.\nc. Pre‑verbal particle **ga** with noun subjects.\nd. Prefix **nga‑** on transitive verbs when no other past marker appears.\n5. **Future tense** –\na. Intransitive verbs take **‑gba**.\nb. Transitive verbs take **‑jba**.\nc. A 2 sg subject may be expressed as a prefix **ya‑** attached to the future verb.\n6. **Present** – No overt tense marking.\n7. **Object pronouns** – Formed with **ngi‑** + pronoun base (e.g., *nginya* “you”). When the verb already contains a subject‑prefix, the object can be marked by the suffix **‑nyu** attached to the pronoun base (e.g., *gunu‑nyu* “you”).\n8. **Directional/definite suffix** – **‑nya** adds the sense “away” (or a definite/locative nuance) and can attach to verbs and nouns.\n9. **Comitative** – Independent word **gu** = “with”; it may appear before the verb. An affixal form **‑gu‑** can also attach to a verb.\n10. **Derivational suffixes** – **‑waji** = “without” (noun + ‑waji). **‑ny‑** creates a nominal/participle from a verb; combined with **‑ani** it yields an abstract noun.\n11. **Object‑prefix for nouns** – In transitive clauses a noun object may take the **‑y‑** prefix when the verb already marks transitivity.",
+          "metrics": {
+            "corpus_bleu": 5.37,
+            "corpus_chrfpp": 34.4,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              19.0,
+              12.7,
+              19.72,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              46.95,
+              21.71,
+              35.35,
+              29.94,
+              40.08
+            ],
+            "sentence_ter": [
+              50.0,
+              66.67,
+              75.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba nginga.",
+              "Ngun ga gululu.",
+              "Gina gu bungmajbanyanya gijilulu.",
+              "Ngirjba janjingu.",
+              "Alanga ga ngajbi nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.37,
+        "corpus_chrfpp": 34.4,
+        "corpus_ter": 86.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          34.67,
+          19.0,
+          12.7,
+          19.72,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          46.95,
+          21.71,
+          35.35,
+          29.94,
+          40.08
+        ],
+        "sentence_ter": [
+          50.0,
+          66.67,
+          75.0,
+          100.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Yagujba nginga.",
+          "Ngun ga gululu.",
+          "Gina gu bungmajbanyanya gijilulu.",
+          "Ngirjba janjingu.",
+          "Alanga ga ngajbi nginya."
+        ],
+        "references": [
+          "Yagujba nyungu.",
+          "Gulugbi ga ngunybulugi.",
+          "Juwa gu bardba gijilulunguji.",
+          "Ngirrajba gunu janji.",
+          "Ngajbi ngiyinya alangani."
+        ],
+        "num_evaluated": 5
+      },
+      "best_step": 15
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 33.94,
+          "accumulated_dict": "- ngarlu = you (sg.)\n- nya = danced\n- gulugba = I (subject form used with future)\n- ngu = will sleep / future sleep\n- bardbi = the old woman\n- ga = ran\n- bungmanya = away\n- ngunybulugi = the doctor\n- barrawunguji = has a house (compound predicate: barra = has, wunguji = house)\n- ngajbi = I (subject form used with past/perfect)\n- nginya = saw you (verb “see” with object you incorporated)",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb** (or Subject – Predicate).\n2. The subject is a noun or pronoun that appears unchanged regardless of tense.\n3. Verbal predicates may be simple (single verb) or compound (auxiliary + verb or verb + object incorporated).\n4. Future tense is expressed by a dedicated verb form (e.g., *ngu* “will sleep”) attached directly to the subject; no separate future particle is needed.\n5. Past/perfect actions are expressed by a different subject‑verb pairing (e.g., *ngajbi nginya* “I saw you”), suggesting aspectual alternation rather than a separate tense marker.\n6. Directional or manner adverbials follow the verb (e.g., *bungmanya* “away” after *ga* “ran”).\n7. Possession is expressed by a compound predicate where the verb “have” (*barra*) is directly attached to the possessed noun (*wunguji* “house”), forming a single word (*barrawunguji*).\n8. Object pronouns can be incorporated into the verb form (e.g., *nginya* = “saw‑you”).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 21.04,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.52,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              12.89,
+              26.25
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ngarlu nya.",
+              "Gulugba ngu."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 60.65,
+          "accumulated_dict": "- ngarlu = you (sg.)\n- nya = danced\n- gulugba = I (subject form used with future)\n- ngu = will sleep / future sleep\n- bardbi = the old woman\n- ga = ran\n- bungmanya = away\n- ngunybulugi = the doctor\n- barrawunguji = has a house (compound predicate: barra = has, wunguji = house)\n- ngajbi = I (subject form used with past/perfect)\n- nginya = saw you (verb “see” with object you incorporated)\n- **Dagumajba** = she\n- **nguyu** = will strike\n- **Alanga** = the girl\n- **gu** = future auxiliary / future marker\n- **ngarlujba** = dance (verb stem)\n- **janjingunya** = with the dog\n- **Ngajba** = he\n- **gununyu** = will see you (future “see” with incorporated object *you*)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb (or Subject – Predicate).\n2. The subject noun/pronoun is invariant across tenses.\n3. Future meaning can be expressed in two ways:\na. By a dedicated verb form that incorporates the future meaning (e.g., *nguyu* “will strike”, *gununyu* “will see‑you”).\nb. By a preverbal future auxiliary **gu** followed by a non‑future verb stem (e.g., *gu ngarlujba* “will dance”).\n4. Object pronouns may be incorporated into the verb (e.g., *nginya* “saw‑you”, *gununyu* “will see‑you”).\n5. Directional or manner adverbials follow the verb (e.g., *bungmanya* “away” after *ga* “ran”).\n6. Possession is expressed by a compound predicate where the verb “have” (*barra*) is directly attached to the possessed noun (*wunguji*), forming a single lexical item (*barrawunguji*).\n7. Prepositional/relational meanings such as “with” are encoded in a post‑verbal noun phrase that carries a case‑like suffix (e.g., *janjingunya* “with the dog”, where *janjing* = dog and *-unya* marks the comitative/with relation).",
+          "metrics": {
+            "corpus_bleu": 7.01,
+            "corpus_chrfpp": 19.83,
+            "corpus_ter": 122.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              10.68,
+              14.13
+            ],
+            "sentence_chrfpp": [
+              31.06,
+              20.26,
+              11.92
+            ],
+            "sentence_ter": [
+              150.0,
+              133.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Dagumajba nguyu ngunybulugi.",
+              "Alanga gu ngarlujba janjingunya.",
+              "Ngajba gununyu."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 5,
+          "latency_s": 38.63,
+          "accumulated_dict": "- ngarlu = you (sg.)\n- nya = danced\n- gulugba = I (subject form used with future)\n- ngu = will sleep / future sleep\n- bardbi = the old woman\n- ga = ran\n- bungmanya = away\n- ngunybulugi = the doctor\n- barrawunguji = has a house (compound predicate: barra = has, wunguji = house)\n- ngajbi = I (subject form used with past/perfect)\n- nginya = saw you (verb “see” with object you incorporated)\n- **Dagumajba** = she\n- **nguyu** = will strike\n- **Alanga** = the girl\n- **gu** = future auxiliary / future marker\n- **ngarlujba** = dance (verb stem)\n- **janjingunya** = with the dog\n- **Ngajba** = he\n- **gununyu** = will see you (future “see” with incorporated object *you*)",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb (or Subject – Predicate).\n2. **Subject invariance**: The lexical subject noun/pronoun does not change across tenses; tense is marked on the verb or by a preverbal auxiliary.\n3. **Future formation**:\na. **Lexical future verb**: Certain verbs have a dedicated future form (e.g., *nguyu* “will strike”, *gununyu* “will see‑you”).\nb. **Auxiliary future**: The preverbal particle **gu** precedes a non‑future verb stem to give future meaning (e.g., *gu ngarlujba* “will dance”).\n4. **Object incorporation**: Pronoun objects can be incorporated into the verb stem, yielding a single lexical item (e.g., *nginya* “saw‑you”, *ngiyinga* “struck‑me”).\n5. **Tense‑aspect morphology**: Past/perfect is expressed by using a past‑subject form (e.g., *ngajbi*, *ngirra*) together with a non‑future verb stem; perfective aspect is not overtly marked beyond this.\n6. **Negation of possession**: The negative counterpart of the possessive compound is formed by replacing the possessed noun with a negative form (e.g., *barrawuwaji* “without‑a‑house”).\n7. **Direction/manner adverbials**: Follow the verb (e.g., *ga bungmanya* “ran away”).\n8. **Comitative/with‑relation**: Expressed by a post‑verbal noun phrase bearing the suffix **‑unya** (or similar) that marks “with” (e.g., *janjingunya* “with the dog”, *darranggunguji* “with the stick”).\n9. **Compound predicates**: “Have” is a verb (*barra*) that directly attaches to the possessed noun, forming a single lexical item (e.g., *barrawunguji*).\n10. **Pronoun forms**:\n- **I**: *gulugba* (future‑subject), *ngajbi* / *ngirra* (past‑subject).\n- **You (sg.)**: *ngarlu* (non‑future), *yagujba* (future‑subject).\n- **He/She**: *Ngajba* (he), *Dagumajba* (she), *alayulu* (she alternative).\n- **The old woman**: *bardbi* / *daguma*.",
+          "metrics": {
+            "corpus_bleu": 7.08,
+            "corpus_chrfpp": 28.46,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              19.72,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              18.94,
+              42.52,
+              21.9
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "gu ngarlujba",
+              "Dagumajba nginya ngunybulugi",
+              "yagujba gu ga bungmanya darranggunguji"
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 29.16,
+          "accumulated_dict": "- ngarlu = you (sg.)\n- nya = danced\n- gulugba = I (future‑subject form)\n- ngajbi = I (past‑subject form)\n- ngirra = I (past‑subject alternative)\n- nguyu = will strike\n- gu = future auxiliary\n- ngarlujba = dance (verb stem)\n- ga = ran\n- bungmanya = away\n- ngunybulugi = the doctor\n- barrawunguji = has a house (compound predicate)\n- barrawuwaji = without a house (negative of barrawunguji)\n- nginya = saw‑you (object‑incorporated verb)\n- gununyu = will see‑you (future, object‑incorporated)\n- janjingunya = with the dog\n- Ngajba = he\n- Dagumajba = she\n- Alanga = the girl\n- bardbi = the old woman / old woman\n- daguma = the old woman (alternative)\n- Dirragba = the old man\n- bungmaji = the old man (object form)\n- gina = with (comitative marker used before incorporated object)\n- gijilulungunya = with the money (comitative noun phrase)\n- yagu = he (subject pronoun used with certain verbs)\n- gininga = left‑me (verb “leave” with incorporated object “me”)\n- balamurruwaji = without a spear (negative possession)\n- jang = with (suffix –unya attaches to noun)\n- darranggunguji = with the stick (example of –unya)",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb (or Subject – Predicate).\n2. **Subject invariance**: The lexical subject noun/pronoun itself does not change for tense; tense is marked on the verb or by a preverbal auxiliary.\n3. **Future formation**:\na. **Lexical future verb**: Some verbs have a dedicated future form (e.g., *nguyu* “will strike”, *gununyu* “will see‑you”).\nb. **Auxiliary future**: The particle **gu** precedes a non‑future verb stem to give future meaning (e.g., *gu ngarlujba* “will dance”).\n4. **Object incorporation**: Pronoun objects can be incorporated into the verb stem, producing a single lexical item (e.g., *nginya* “saw‑you”, *gininga* “left‑me”).\n5. **Past/perfect**: Expressed by using a past‑subject pronoun (*ngajbi*, *ngirra*) together with a non‑future verb stem; no additional aspect marking is required.\n6. **Negation of possession**: The negative counterpart of a possessive compound replaces the possessed noun with its negative form (e.g., *barrawuwaji* “without‑a‑house”).\n7. **Direction / manner adverbials**: Follow the verb (e.g., *ga bungmanya* “ran away”).\n8. **Comitative / with‑relation**: Expressed by a post‑verbal noun phrase bearing the suffix **‑unya** (or a similar form) that means “with” (e.g., *janjingunya* “with the dog”, *darranggunguji* “with the stick”). When the comitative noun is incorporated into the verb, the marker **gina** appears before the incorporated form (e.g., *gina ngajbi gijilulungunya* “saw her with the money”).\n9. **Compound predicates (possession)**: The verb *barra* “have” directly attaches to the possessed noun, forming a single lexical item (e.g., *barrawunguji* “has‑a‑house”).\n10. **Pronoun subject forms**:\n- **I**: *gulugba* (future‑subject), *ngajbi* / *ngirra* (past‑subject).\n- **You (sg.)**: *ngarlu* (non‑future), *yagujba* (future‑subject).\n- **He**: *Ngajba*.\n- **She**: *Dagumajba* (or *alayulu* as an alternative).\n- **The old woman / old man**: *bardbi* / *daguma* (old woman), *Dirragba* / *bungmaji* (old man).\n11. **Verb‑object incorporation with future**: When a future auxiliary *gu* is used, the incorporated object follows the verb stem (e.g., *gu gununyu* “will see‑you”).",
+          "metrics": {
+            "corpus_bleu": 4.83,
+            "corpus_chrfpp": 6.47,
+            "corpus_ter": 200.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              8.65,
+              4.56
+            ],
+            "sentence_ter": [
+              350.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man saw her with the money.",
+              "He left me."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi."
+            ],
+            "num_evaluated": 2
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 7.08,
+        "corpus_chrfpp": 28.46,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          19.72,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          18.94,
+          42.52,
+          21.9
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "gu ngarlujba",
+          "Dagumajba nginya ngunybulugi",
+          "yagujba gu ga bungmanya darranggunguji"
+        ],
+        "references": [
+          "Yagujba nyungu.",
+          "Gulugbi ga ngunybulugi.",
+          "Juwa gu bardba gijilulunguji."
+        ],
+        "num_evaluated": 3
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 320.94,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 29.12,
+          "metrics": {
+            "corpus_bleu": 2.13,
+            "corpus_chrfpp": 6.85,
+            "corpus_ter": 133.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              15.97,
+              5.52,
+              8.12,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              9.99,
+              5.84,
+              7.46,
+              6.18,
+              5.48
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              125.0,
+              166.67,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (sg.) danced.",
+              "I will sleep.",
+              "The old woman ran (away).",
+              "The doctor has a house.",
+              "I saw you (sg.)."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.13,
+        "corpus_chrfpp": 6.85,
+        "corpus_ter": 133.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.57,
+          15.97,
+          5.52,
+          8.12,
+          5.52
+        ],
+        "sentence_chrfpp": [
+          9.99,
+          5.84,
+          7.46,
+          6.18,
+          5.48
+        ],
+        "sentence_ter": [
+          150.0,
+          100.0,
+          125.0,
+          166.67,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You (sg.) danced.",
+          "I will sleep.",
+          "The old woman ran (away).",
+          "The doctor has a house.",
+          "I saw you (sg.)."
+        ],
+        "references": [
+          "Yagujba nyungu.",
+          "Gulugbi ga ngunybulugi.",
+          "Juwa gu bardba gijilulunguji.",
+          "Ngirrajba gunu janji.",
+          "Ngajbi ngiyinya alangani."
+        ],
+        "num_evaluated": 5
+      },
+      "delta": {
+        "bleu_delta": 2.13,
+        "chrf_delta": 6.85,
+        "ter_delta": 33.33,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.14,
+      "chrf": 1.94,
+      "ter": 8350.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Wambaya (attempt):**  \n\n*ŋa‑ra‑nyu‑ŋa ɲa‑ŋa‑ra‑kurru.*\n\n*Explanation of the morphemes (as best as can be reconstructed",
+      "reference": "Yagujba nyungu."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 5.37,
+      "best_chrf": 34.4,
+      "best_ter": 86.67,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "Yagujba nginga.",
+        "Ngun ga gululu.",
+        "Gina gu bungmajbanyanya gijilulu.",
+        "Ngirjba janjingu.",
+        "Alanga ga ngajbi nginya."
+      ],
+      "best_references": [
+        "Yagujba nyungu.",
+        "Gulugbi ga ngunybulugi.",
+        "Juwa gu bardba gijilulunguji.",
+        "Ngirrajba gunu janji.",
+        "Ngajbi ngiyinya alangani."
+      ],
+      "best_step": 15
+    },
+    "step_by_step": {
+      "best_bleu": 7.08,
+      "best_chrf": 28.46,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "gu ngarlujba",
+        "Dagumajba nginya ngunybulugi",
+        "yagujba gu ga bungmanya darranggunguji"
+      ],
+      "best_references": [
+        "Yagujba nyungu.",
+        "Gulugbi ga ngunybulugi.",
+        "Juwa gu bardba gijilulunguji."
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "self_correction": {
+      "best_bleu": 2.13,
+      "best_chrf": 6.85,
+      "best_ter": 133.33,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "You (sg.) danced.",
+        "I will sleep.",
+        "The old woman ran (away).",
+        "The doctor has a house.",
+        "I saw you (sg.)."
+      ],
+      "best_references": [
+        "Yagujba nyungu.",
+        "Gulugbi ga ngunybulugi.",
+        "Juwa gu bardba gijilulunguji.",
+        "Ngirrajba gunu janji.",
+        "Ngajbi ngiyinya alangani."
+      ],
+      "delta": {
+        "bleu_delta": 2.13,
+        "chrf_delta": 6.85,
+        "ter_delta": 33.33,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

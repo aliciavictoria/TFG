@@ -1,0 +1,1181 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-07T22:43:42.515987",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "nɤ ʒip ku ne",
+      "reference": "Do you(sg) sleep?",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that the sentence appears to be in a non-Latin script and may be from a language that I'm not familiar with.\n\nBased on my analysis, the sentence \"nɤ ʒip ku ne\" seems to be in the International Phonetic Alphabet (IPA) transcription, which is used to represent the sounds of spoken languages.\n\nHere's my attempt to translate the sentence:\n\n* \"nɤ\" could be a nasal vowel sound, similar to \"ng\" in \"sing\"\n* \"ʒip\" sounds like \"zhip\" or \"jip\", which could be a verb or a noun\n* \"ku\" might be a preposition or a conjunction, similar to \"to\" or \"with\"\n* \"ne\" could be a pronoun, similar to \"I\" or \"me\"\n\nTaking these sounds into account, a possible translation of the sentence could be:\n\n\"I zip up to me\" or \"I jump with me\"\n\nHowever, please note that this is a very rough translation, and the actual meaning of the sentence could be entirely different. If you provide more context or information about the language, I may be able to give a more accurate translation.",
+      "latency_s": 0.91,
+      "metrics": {
+        "corpus_bleu": 0.2,
+        "corpus_chrfpp": 1.67,
+        "corpus_ter": 6166.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.2
+        ],
+        "sentence_chrfpp": [
+          1.67
+        ],
+        "sentence_ter": [
+          6166.67
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that the sentence appears to be in a non-Latin script and may be from a language that I'm not familiar with.\n\nBased on my analysis, the sentence \"nɤ ʒip ku ne\" seems to be in the International Phonetic Alphabet (IPA) transcription, which is used to represent the sounds of spoken languages.\n\nHere's my attempt to translate the sentence:\n\n* \"nɤ\" could be a nasal vowel sound, similar to \"ng\" in \"sing\"\n* \"ʒip\" sounds like \"zhip\" or \"jip\", which could be a verb or a noun\n* \"ku\" might be a preposition or a conjunction, similar to \"to\" or \"with\"\n* \"ne\" could be a pronoun, similar to \"I\" or \"me\"\n\nTaking these sounds into account, a possible translation of the sentence could be:\n\n\"I zip up to me\" or \"I jump with me\"\n\nHowever, please note that this is a very rough translation, and the actual meaning of the sentence could be entirely different. If you provide more context or information about the language, I may be able to give a more accurate translation."
+        ],
+        "references": [
+          "Do you(sg) sleep?"
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 2.56,
+          "metrics": {
+            "corpus_bleu": 36.99,
+            "corpus_chrfpp": 54.85,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              4.1,
+              39.76,
+              36.79,
+              100.0,
+              21.87,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              6.96,
+              46.66,
+              68.46,
+              100.0,
+              45.39,
+              49.71
+            ],
+            "sentence_ter": [
+              100.0,
+              50.0,
+              25.0,
+              0.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you",
+              "Do they see us?",
+              "Do they know you",
+              "Do we beat them?",
+              "Do we know you",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 36.99,
+        "corpus_chrfpp": 54.85,
+        "corpus_ter": 40.91,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          4.1,
+          39.76,
+          36.79,
+          100.0,
+          21.87,
+          59.46
+        ],
+        "sentence_chrfpp": [
+          6.96,
+          46.66,
+          68.46,
+          100.0,
+          45.39,
+          49.71
+        ],
+        "sentence_ter": [
+          100.0,
+          50.0,
+          25.0,
+          0.0,
+          50.0,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Did you",
+          "Do they see us?",
+          "Do they know you",
+          "Do we beat them?",
+          "Do we know you",
+          "Do we go?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 2.25,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = unclear\nʒip = possibly related to sleeping (provisional)\ntuʔ = unclear\nne = question marker (provisional)",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" may precede the verb to indicate the subject is first person.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Question Marker (provisional).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 6.96,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.1
+            ],
+            "sentence_chrfpp": [
+              6.96
+            ],
+            "sentence_ter": [
+              100.0
+            ],
+            "sentence_em": [
+              false
+            ],
+            "hypotheses": [
+              "Did you"
+            ],
+            "references": [
+              "Do you(sg) sleep?"
+            ],
+            "num_evaluated": 1
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 2.79,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = unclear, possibly related to aspect or tense of \"ka\"\nʒip = possibly related to sleeping (provisional)\ntuʔ = unclear, possibly related to aspect or tense of \"ʒip\"\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = unclear\nlapkʰi = unclear\ntɤʔ = unclear",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Question Marker, but this is provisional and may need refinement based on further examples.",
+          "metrics": {
+            "corpus_bleu": 1.16,
+            "corpus_chrfpp": 9.08,
+            "corpus_ter": 145.45,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.1,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.96,
+              7.73,
+              12.65,
+              10.98,
+              10.6,
+              3.29
+            ],
+            "sentence_ter": [
+              100.0,
+              125.0,
+              125.0,
+              125.0,
+              125.0,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you",
+              "Unknown, due to unclear morphemes.",
+              "Unknown, due to unclear morphemes.",
+              "Unknown, due to unclear morphemes.",
+              "Unknown, due to unclear morphemes.",
+              "Unknown, due to unclear morphemes and the context of"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 2.17,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (new)\nlapkʰi = possibly related to the object of seeing (new)\ntɤʔ = possibly related to aspect or tense of \"ati\" (new)\nnirum = possibly related to first person plural marker (new)\nkəmə = unclear (new)\nnuʔrum = unclear (new)\ncʰam = possibly related to knowing (new)\nki = possibly related to second person plural marker (new)",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".",
+          "metrics": {
+            "corpus_bleu": 16.38,
+            "corpus_chrfpp": 41.47,
+            "corpus_ter": 50.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              10.68,
+              23.45,
+              30.21,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              9.09,
+              56.25,
+              43.02,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              66.67,
+              100.0,
+              25.0,
+              25.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Do they know him?",
+              "Do they know us?",
+              "Do we know them?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 2.38,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (provisional)\nlapkʰi = possibly related to the object of seeing (provisional)\ntɤʔ = possibly related to aspect or tense of \"ati\" (provisional)\nnirum = possibly related to first person plural marker (new)\nkəmə = unclear (new)\nnuʔrum = unclear (new)\ncʰam = possibly related to knowing (new)\nki = possibly related to second person plural marker (new)\nnɤbə = possibly a combination of second person singular and first person markers (new)",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Aspect-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Aspect-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".\n6. The language may have a system for combining person markers to indicate different cases or contexts.",
+          "metrics": {
+            "corpus_bleu": 10.59,
+            "corpus_chrfpp": 26.03,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              12.7,
+              0.0,
+              0.0,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              21.54,
+              10.26,
+              7.27,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              175.0,
+              175.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Do we see something?",
+              "Unknown, due to lack of information about",
+              "Unknown, due to lack of information about",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 2.38,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (provisional)\nlapkʰi = possibly related to the object of seeing (provisional)\ntɤʔ = possibly related to aspect or tense of \"ati\" (provisional)\nnirum = possibly related to first person plural marker (new)\nkəmə = unclear, possibly related to an action or state (new)\nnuʔrum = unclear, possibly related to an object or context (new)\ncʰam = possibly related to knowing (new)\nki = possibly related to second person plural marker (new)\nnɤbə = possibly a combination of second person singular and first person markers, or a different grammatical function (new)\ntarum = possibly related to third person or an action (new)\nlan = possibly related to an action or object (new)\nrɤ = possibly related to aspect or tense (new)\ntʰu = possibly related to aspect or tense (new)",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Aspect-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Aspect-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".\n6. The language may have a system for combining person markers to indicate different cases or contexts.\n7. The language may use different morphemes to indicate different grammatical functions, such as \"nɤbə\" which could be a combination of person markers or a different grammatical function.",
+          "metrics": {
+            "corpus_bleu": 29.69,
+            "corpus_chrfpp": 52.13,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              16.7,
+              12.7,
+              23.45,
+              100.0,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              22.18,
+              52.55,
+              100.0,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              25.0,
+              0.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Do we see him?",
+              "Do they know something?",
+              "Do we beat them?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 2.58,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (provisional)\nlapkʰi = possibly related to the object of seeing (provisional)\ntɤʔ = possibly related to aspect or tense of \"ati\" (provisional)\nnirum = possibly related to first person plural marker (new)\nkəmə = possibly related to an action or state (new)\nnuʔrum = possibly related to an object or context (new)\ncʰam = possibly related to knowing (new)\nki = possibly related to second person plural marker (new)\nnɤbə = possibly a combination of second person singular and first person markers, or a different grammatical function (new)\ntarum = possibly related to third person or an action (new)\nlan = possibly related to an action or object (new)\nrɤ = possibly related to aspect or tense (new)\ntʰu = possibly related to aspect or tense (new)\n[DELETED: None]",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Aspect-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Aspect-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".\n6. The language may have a system for combining person markers to indicate different cases or contexts.\n7. The language may use different morphemes to indicate different grammatical functions, such as \"nɤbə\" which could be a combination of person markers or a different grammatical function.\n[DELETED: None]",
+          "metrics": {
+            "corpus_bleu": 28.37,
+            "corpus_chrfpp": 50.76,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              21.34,
+              12.7,
+              12.98,
+              100.0,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              47.13,
+              21.96,
+              37.74,
+              100.0,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              33.33,
+              75.0,
+              50.0,
+              0.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "Do we see them?",
+              "Did they know something?",
+              "Do we beat them?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 2.79,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (provisional)\nlapkʰi = possibly related to the object of seeing (provisional)\ntɤʔ = possibly related to aspect or tense of \"ati\" (provisional)\nnirum = possibly related to first person plural marker (new)\nkəmə = possibly related to an action or state (new)\nnuʔrum = possibly related to an object or context (new)\ncʰam = possibly related to knowing (new)\nki = possibly related to second person plural marker (new)\nnɤbə = possibly a combination of second person singular and first person markers, or a different grammatical function (provisional)\ntarum = possibly related to third person or an action (new)\nlan = possibly related to an action or object (new)\nrɤ = possibly related to aspect or tense (new)\ntʰu = possibly related to aspect or tense (new)",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Aspect-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Aspect-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".\n6. The language may have a system for combining person markers to indicate different cases or contexts.\n7. The language may use different morphemes to indicate different grammatical functions, such as \"nɤbə\" which could be a combination of person markers or a different grammatical function.\n8. \"ki\" may be used to indicate the second person plural (new).",
+          "metrics": {
+            "corpus_bleu": 28.37,
+            "corpus_chrfpp": 51.32,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              21.34,
+              12.7,
+              12.98,
+              100.0,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              47.13,
+              21.96,
+              39.16,
+              100.0,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              33.33,
+              75.0,
+              50.0,
+              0.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "Do we see them?",
+              "Did they know him?",
+              "Do we beat them?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 3.19,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (provisional)\nlapkʰi = possibly related to the object of seeing (provisional)\ntɤʔ = possibly related to aspect or tense of \"ati\" (provisional)\nnirum = possibly related to first person plural marker (new)\nkəmə = possibly related to an action or state (new)\nnuʔrum = possibly related to an object or context (new)\ncʰam = possibly related to knowing (new)\nki = possibly related to second person plural marker (new)\nnɤbə = possibly a marker for the second person singular seeing the first person (refined)\ntarum = possibly related to the third person or an action (new)\nlan = possibly related to an action or object (new)\nrɤ = possibly related to aspect or tense (new)\ntʰu = possibly related to aspect or tense (new)\nri = possibly related to aspect or tense (new)\n[DELETED: None]",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Aspect-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Aspect-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".\n6. The language may have a system for combining person markers to indicate different cases or contexts.\n7. The language may use different morphemes to indicate different grammatical functions, such as \"nɤbə\" which could be a marker for the second person singular seeing the first person.\n8. \"ki\" may be used to indicate the second person plural.\n[DELETED: None]",
+          "metrics": {
+            "corpus_bleu": 15.17,
+            "corpus_chrfpp": 37.95,
+            "corpus_ter": 54.55,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              12.7,
+              6.97,
+              42.73,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              22.18,
+              20.08,
+              56.29,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              75.0,
+              25.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Do we see him?",
+              "Does he know them?",
+              "Do we beat you?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 3.27,
+          "accumulated_dict": "ŋa = first person marker (provisional)\nnɤ = second person singular marker (provisional)\nka = possibly related to going (provisional)\nkɤ = possibly related to aspect or tense of \"ka\" (provisional)\nʒip = possibly related to sleeping (provisional)\ntuʔ = possibly related to aspect or tense of \"ʒip\" (provisional)\nne = question marker (provisional)\nŋabə = first person marker in a specific case or context (provisional)\nati = possibly related to seeing (provisional)\nlapkʰi = possibly related to the object of seeing (provisional)\ntɤʔ = possibly related to aspect or tense of \"ati\" (provisional)\nnirum = possibly related to first person plural marker (provisional)\nkəmə = possibly related to an action or state (provisional)\nnuʔrum = possibly related to an object or context (provisional)\ncʰam = possibly related to knowing (provisional)\nki = possibly related to second person plural marker (provisional)\nnɤbə = marker for the second person singular seeing the first person (provisional)\ntarum = possibly related to the third person or an action (provisional)\nlan = possibly related to an action or object (provisional)\nrɤ = possibly related to aspect or tense (provisional)\ntʰu = possibly related to aspect or tense (provisional)\nri = possibly related to aspect or tense (provisional)\n[DELETED: None]",
+          "accumulated_rules": "1. Sentences may end with \"ne\" to indicate a question.\n2. \"ŋa\" or its variants (like \"ŋabə\") may precede the verb to indicate the subject is first person, with possible variations based on case or context.\n3. \"nɤ\" may precede the verb to indicate the subject is second person singular.\n4. The order of morphemes may be Subject-Verb-Aspect-Question Marker, but this is provisional and may need refinement based on further examples.\n5. The order of morphemes may also be Subject-Object-Verb-Aspect-Question Marker, as seen in the example \"ŋabə ati lapkʰi tɤʔ ne\".\n6. The language may have a system for combining person markers to indicate different cases or contexts.\n7. The language may use different morphemes to indicate different grammatical functions, such as \"nɤbə\" which could be a marker for the second person singular seeing the first person.\n8. \"ki\" may be used to indicate the second person plural.\n9. \"nirum\" may be used to indicate the first person plural.\n[DELETED: None]",
+          "metrics": {
+            "corpus_bleu": 32.55,
+            "corpus_chrfpp": 56.27,
+            "corpus_ter": 36.36,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              16.7,
+              39.76,
+              23.45,
+              100.0,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              46.66,
+              54.88,
+              100.0,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              25.0,
+              0.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Do they see us?",
+              "Do they know him?",
+              "Do we beat them?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 32.55,
+        "corpus_chrfpp": 56.27,
+        "corpus_ter": 36.36,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          16.7,
+          39.76,
+          23.45,
+          100.0,
+          23.45,
+          59.46
+        ],
+        "sentence_chrfpp": [
+          35.78,
+          46.66,
+          54.88,
+          100.0,
+          47.87,
+          49.71
+        ],
+        "sentence_ter": [
+          66.67,
+          50.0,
+          25.0,
+          0.0,
+          50.0,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Did you sleep?",
+          "Do they see us?",
+          "Do they know him?",
+          "Do we beat them?",
+          "Do we know you?",
+          "Do we go?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 2.5,
+          "accumulated_dict": "- **ŋa**: I (first person singular)\n- **ŋabə**: I (first person singular, possibly with a different case or aspect)\n- **nɤ**: you (second person singular)\n- **ne**: question marker\n- **ka**: go (verb root)\n- **kɤ**: possibly a modifier or aspect marker for \"go\"\n- **ʒip**: sleep (verb root)\n- **tuʔ**: past tense or completion marker\n- **ati**: see (verb root)\n- **lapkʰi**: him (object pronoun or noun)\n- **tɤʔ**: past tense or completion marker",
+          "accumulated_rules": "- The language might use a subject-verb-object (SVO) word order, given the structure of the examples.\n- Questions are formed using a question marker (**ne**) at the end of the sentence.\n- Verb roots (**ka**, **ʒip**, **ati**) might be modified by aspect or tense markers (**kɤ**, **tuʔ**, **tɤʔ**).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 2.69,
+          "accumulated_dict": "- **ŋa**: I (first person singular)\n- **ŋabə**: I (first person singular, possibly with a different case or aspect)\n- **nɤ**: you (second person singular)\n- **nɤbə**: you (second person singular, possibly with a different case or aspect)\n- **ne**: question marker\n- **ka**: go (verb root)\n- **kɤ**: possibly a modifier or aspect marker for \"go\"\n- **ʒip**: sleep (verb root)\n- **tuʔ**: past tense or completion marker\n- **ati**: see (verb root)\n- **lapkʰi**: him (object pronoun or noun)\n- **tɤʔ**: past tense or completion marker\n- **nirum**: possibly \"we\" or a plural marker\n- **nuʔrum**: possibly \"you\" (plural) or a specific case\n- **kəmə**: unknown, possibly related to knowing or understanding\n- **cʰam**: unknown, possibly an object or modifier\n- **ki**: unknown, possibly a pronoun or modifier\n- **rɤ**: possibly related to seeing or understanding",
+          "accumulated_rules": "- The language might use a subject-verb-object (SVO) word order, given the structure of the examples.\n- Questions are formed using a question marker (**ne**) at the end of the sentence.\n- Verb roots (**ka**, **ʒip**, **ati**) might be modified by aspect or tense markers (**kɤ**, **tuʔ**, **tɤʔ**).\n- Pronouns may have different forms based on case or aspect (**nɤ** vs. **nɤbə**, **ŋa** vs. **ŋabə**).\n- Plural forms or specific cases might be marked by distinct morphemes (**nirum**, **nuʔrum**).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 2.08,
+          "accumulated_dict": "- **ŋa**: I (first person singular)\n- **ŋabə**: I (first person singular, possibly with a different case or aspect)\n- **nɤ**: you (second person singular)\n- **nɤbə**: you (second person singular, possibly with a different case or aspect)\n- **ne**: question marker\n- **ka**: go (verb root)\n- **kɤ**: possibly a modifier or aspect marker for \"go\"\n- **ʒip**: sleep (verb root)\n- **tuʔ**: past tense or completion marker\n- **ati**: see (verb root)\n- **lapkʰi**: him (object pronoun or noun)\n- **tɤʔ**: past tense or completion marker\n- **nirum**: possibly \"we\" or a plural marker\n- **nuʔrum**: possibly \"you\" (plural) or a specific case\n- **kəmə**: possibly related to hitting or beating\n- **cʰam**: possibly an object or person known\n- **ki**: unknown, possibly a pronoun or modifier\n- **rɤ**: possibly related to seeing or understanding\n- **tarum**: possibly \"they\" or a third person plural marker\n- **lan**: possibly a verb root related to hitting or beating\n- **tʰu**: possibly an aspect marker or intensifier\n- **kan**: possibly a verb root or modifier related to knowing or seeing",
+          "accumulated_rules": "- The language might use a subject-verb-object (SVO) word order, given the structure of the examples.\n- Questions are formed using a question marker (**ne**) at the end of the sentence.\n- Verb roots (**ka**, **ʒip**, **ati**, **lan**) might be modified by aspect or tense markers (**kɤ**, **tuʔ**, **tɤʔ**).\n- Pronouns may have different forms based on case or aspect (**nɤ** vs. **nɤbə**, **ŋa** vs. **ŋabə**).\n- Plural forms or specific cases might be marked by distinct morphemes (**nirum**, **nuʔrum**, **tarum**).\n- The language may have a system of agreement between the subject and verb, with different verb forms for different persons or numbers.\n- The verb **ati** might be related to both seeing and knowing, depending on the context.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.71,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.1,
+              0.0,
+              2.49
+            ],
+            "sentence_chrfpp": [
+              7.78,
+              2.92,
+              5.84
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Were you",
+              "Do you",
+              "Did you"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 1.54,
+          "accumulated_dict": "- **ŋa**: I (first person singular)\n- **ŋabə**: I (first person singular, possibly with a different case or aspect)\n- **nɤ**: you (second person singular)\n- **nɤbə**: you (second person singular, possibly with a different case or aspect)\n- **ne**: question marker\n- **ka**: go (verb root)\n- **kɤ**: possibly a modifier or aspect marker for \"go\"\n- **ʒip**: sleep (verb root)\n- **tuʔ**: past tense or completion marker\n- **ati**: see (verb root), possibly related to knowing\n- **lapkʰi**: him (object pronoun or noun)\n- **tɤʔ**: past tense or completion marker\n- **nirum**: possibly \"we\" or a plural marker\n- **nuʔrum**: possibly \"you\" (plural) or a specific case\n- **kəmə**: possibly related to hitting or beating, or an action done to the object\n- **cʰam**: possibly an object or person known\n- **ki**: unknown, possibly a pronoun or modifier\n- **rɤ**: possibly related to seeing or understanding\n- **tarum**: possibly \"they\" or a third person plural marker\n- **lan**: possibly a verb root related to hitting or beating\n- **tʰu**: possibly an aspect marker or intensifier\n- **kan**: possibly a verb root or modifier related to knowing or seeing\n- **tʰɤ**: possibly a past tense marker or a marker indicating a completed action",
+          "accumulated_rules": "- The language might use a subject-verb-object (SVO) word order, given the structure of the examples.\n- Questions are formed using a question marker (**ne**) at the end of the sentence.\n- Verb roots (**ka**, **ʒip**, **ati**, **lan**) might be modified by aspect or tense markers (**kɤ**, **tuʔ**, **tɤʔ**, **tʰɤ**).\n- Pronouns may have different forms based on case or aspect (**nɤ** vs. **nɤbə**, **ŋa** vs. **ŋabə**).\n- Plural forms or specific cases might be marked by distinct morphemes (**nirum**, **nuʔrum**, **tarum**).\n- The language may have a system of agreement between the subject and verb, with different verb forms for different persons or numbers.\n- The verb **ati** might be related to both seeing and knowing, depending on the context.\n- The verb **kəmə** could be used to indicate an action done to the object, possibly implying a passive voice or an action focused on the object.\n- The marker **tʰɤ** might indicate a past or completed action, similar to **tuʔ** and **tɤʔ**.",
+          "metrics": {
+            "corpus_bleu": 4.94,
+            "corpus_chrfpp": 21.63,
+            "corpus_ter": 342.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.83,
+              8.59
+            ],
+            "sentence_chrfpp": [
+              10.9,
+              34.15
+            ],
+            "sentence_ter": [
+              433.33,
+              275.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Are they seen by us? (Alternatively, Do they see us? considering the context of",
+              "Was he seen by me? (Alternatively, Did he see me? considering the context of"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?"
+            ],
+            "num_evaluated": 2
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.94,
+        "corpus_chrfpp": 21.63,
+        "corpus_ter": 342.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.83,
+          8.59
+        ],
+        "sentence_chrfpp": [
+          10.9,
+          34.15
+        ],
+        "sentence_ter": [
+          433.33,
+          275.0
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Are they seen by us? (Alternatively, Do they see us? considering the context of",
+          "Was he seen by me? (Alternatively, Did he see me? considering the context of"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?"
+        ],
+        "num_evaluated": 2
+      },
+      "best_stage": "syntax"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.2,
+      "chrf": 1.67,
+      "ter": 6166.67,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that the sentence appears to be in a non-Latin script an",
+      "reference": "Do you(sg) sleep?"
+    },
+    "baseline": {
+      "best_bleu": 36.99,
+      "best_chrf": 54.85,
+      "best_ter": 40.91,
+      "best_em": 16.67,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Did you",
+        "Do they see us?",
+        "Do they know you",
+        "Do we beat them?",
+        "Do we know you",
+        "Do we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 32.55,
+      "best_chrf": 56.27,
+      "best_ter": 36.36,
+      "best_em": 16.67,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "Did you sleep?",
+        "Do they see us?",
+        "Do they know him?",
+        "Do we beat them?",
+        "Do we know you?",
+        "Do we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 4.94,
+      "best_chrf": 21.63,
+      "best_ter": 342.86,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "Are they seen by us? (Alternatively, Do they see us? considering the context of",
+        "Was he seen by me? (Alternatively, Did he see me? considering the context of"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?"
+      ],
+      "best_stage": "syntax"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

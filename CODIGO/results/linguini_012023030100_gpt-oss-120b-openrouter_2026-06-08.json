@@ -1,0 +1,1770 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T13:28:49.847481",
+    "puzzle_id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 17,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ob-dahetok",
+        "target": "You_{sg} really returned."
+      },
+      {
+        "source": "nake-dahetok",
+        "target": "We returned."
+      },
+      {
+        "source": "nambat-ihwin",
+        "target": "Aw, I cried."
+      },
+      {
+        "source": "nambe-otab",
+        "target": "We really chased you_{pl} away."
+      },
+      {
+        "source": "um-kulaɣawn",
+        "target": "He laughed at you_{sg} in vain."
+      },
+      {
+        "source": "e-keseh",
+        "target": "You_{pl} spat on him."
+      },
+      {
+        "source": "ubate-huɣanab",
+        "target": "Aw, you_{sg} silenced us."
+      },
+      {
+        "source": "nakum-hoɣab",
+        "target": "I silenced you_{pl} in vain."
+      },
+      {
+        "source": "nambame-ɣadaɣawn",
+        "target": "Oh, we left you_{sg} behind!"
+      },
+      {
+        "source": "ebe-ɣadanawn",
+        "target": "You_{pl} really left us behind."
+      },
+      {
+        "source": "ibatum-ɣadewn",
+        "target": "Aw, you_{pl} left him behind in vain."
+      },
+      {
+        "source": "a-isanab",
+        "target": "He cut me in half."
+      },
+      {
+        "source": "obam-eseb",
+        "target": "Oh, you_{sg} cut him in half!"
+      },
+      {
+        "source": "bate-tamanab",
+        "target": "Aw, we floated to the surface."
+      },
+      {
+        "source": "ba-tamab",
+        "target": "You_{pl} really floated to the surface."
+      },
+      {
+        "source": "a-ɣuyaɣah",
+        "target": "You_{sg} shuddered."
+      },
+      {
+        "source": "bam-ɣuyanah",
+        "target": "Oh, I shuddered!"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "e-ɣuyanah",
+        "target": "We shuddered.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ba-ihwin",
+        "target": "He really cried.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nambum-kisaɣah",
+        "target": "I really spat on you_{sg} in vain.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bat-ɣadawn",
+        "target": "Aw, he left you_{pl} behind.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ubamum-kolewn",
+        "target": "Oh, you_{sg} laughed at him in vain!",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "e-ɣuyanah",
+      "reference": "We shuddered.",
+      "hypothesis": "**Possible translation:** “the woman” (or “the lady”).  \n\n*Explanation:* The string “e-ɣuyanah” looks like a transliteration that includes the voiced velar fricative ɣ, which appears in several Afro‑Asiatic languages (e.g., Arabic, Berber, Hausa). In many of these languages the suffix “‑ah” marks the feminine gender, and the prefix “e‑” can function as a definite article (“the”). Thus a plausible rendering in English is “the woman” or “the lady.” If the word belongs to a different language or dialect, the exact meaning could vary, but “the woman” is a reasonable best guess.",
+      "latency_s": 12.23,
+      "metrics": {
+        "corpus_bleu": 0.3,
+        "corpus_chrfpp": 3.0,
+        "corpus_ter": 4500.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.3
+        ],
+        "sentence_chrfpp": [
+          3.0
+        ],
+        "sentence_ter": [
+          4500.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “the woman” (or “the lady”).  \n\n*Explanation:* The string “e-ɣuyanah” looks like a transliteration that includes the voiced velar fricative ɣ, which appears in several Afro‑Asiatic languages (e.g., Arabic, Berber, Hausa). In many of these languages the suffix “‑ah” marks the feminine gender, and the prefix “e‑” can function as a definite article (“the”). Thus a plausible rendering in English is “the woman” or “the lady.” If the word belongs to a different language or dialect, the exact meaning could vary, but “the woman” is a reasonable best guess."
+        ],
+        "references": [
+          "We shuddered."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 279.18,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 27.2,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. Verbal predicates consist of a subject‑prefix attached to a verb stem plus a tense/aspect suffix.\n2. The subject prefix appears before the verb stem; the tense/aspect suffix appears at the end of the verb complex.\n3. No overt pronoun or agreement marking appears elsewhere in the clause.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 61.08,
+          "accumulated_dict": "ob‑ = you (singular)\nnake‑ = we\nnambat‑ = I\ndahe‑ = return (verb root)\n‑tok = past / perfective suffix (used with dahe)\nih‑ = cry (verb root)\n‑win = past suffix (used with ih)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex is formed by a verb stem possibly followed by a tense/aspect suffix.\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. Lexical meaning (e.g., “really”) may be incorporated into the verb complex and is not marked by an independent morpheme.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.16,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              2.6,
+              1.37,
+              2.4,
+              2.1,
+              2.27
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɣuyanah",
+              "ihwin",
+              "kisaɣah",
+              "ɣadawn",
+              "kolewn"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 36.56,
+          "accumulated_dict": "ob‑ = you (sg)\nnake‑ = we (subject prefix)\nnambe‑ = we (allomorph of nake‑, used before certain stems)\nnambat‑ = I\ndahe‑ = return (verb root)\n‑tok = past / perfective (used with some verbs)\nih‑ = cry (verb root)\n‑win = past (used with ih)\notab = chase away (verb root)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex is formed by a verb root optionally followed by a tense/aspect suffix (e.g., ‑tok, ‑win).\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. The adverb “really” is expressed pragmatically or lexically; it does not appear as an independent morpheme in the data.\n5. Subject‑prefix allomorphy occurs (e.g., nake‑ → nambe‑) depending on phonological environment.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 7.11,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.57,
+              4.81,
+              10.37,
+              5.32,
+              8.46
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "translation unavailable",
+              "translation unavailable",
+              "translation unavailable",
+              "translation unavailable",
+              "translation unavailable"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 97.68,
+          "accumulated_dict": "ob‑ = you (sg)\nnake‑ = we (subject prefix)\nnambe‑ = we (allomorph of nake‑)\nnambat‑ = I\ndahe‑ = return\n‑tok = past / perfective (tense‑aspect suffix)\nih‑ = cry\n‑win = past (tense‑aspect suffix)\notab = chase away\num‑ = he (sg)\nkulaɣa‑ = laugh (verb root)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex is formed by a verb root optionally followed by a suffix (tense, aspect, or modal).\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. The adverb “really” is expressed pragmatically and does not appear as an independent morpheme.\n5. Subject‑prefix allomorphy occurs (e.g., nake‑ → nambe‑) depending on phonological environment.\n6. Different verbs may combine with different suffixes; past can be marked by **‑tok** or **‑win**, and other meanings (e.g., “in vain”) by **‑wn**.",
+          "metrics": {
+            "corpus_bleu": 1.16,
+            "corpus_chrfpp": 6.77,
+            "corpus_ter": 104.17,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              18.39,
+              2.63,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              2.02,
+              28.08,
+              5.0,
+              4.08,
+              3.28
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) ɣuyanah",
+              "They cried",
+              "You (sg) kisaɣah",
+              "He/she ɣadawn",
+              "They (pl) kolewn"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 48.37,
+          "accumulated_dict": "ob‑ = you (sg)\ne‑ = you (pl)\nnake‑ = we (sg) (subject prefix)\nnambe‑ = we (allomorph of nake‑)\nnambat‑ = I (subject prefix)\num‑ = he (sg)\ndahe‑ = return (verb root)\notab = chase away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\n‑tok = past / perfective (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex is formed by a verb root optionally followed by a suffix (tense, aspect, or modal).\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. The adverb “really” is expressed pragmatically and does not appear as an independent morpheme.\n5. Subject‑prefix allomorphy occurs (e.g., nake‑ → nambe‑) depending on phonological environment.\n6. Past can be marked by **‑tok** or **‑win**, but may also be zero‑marked for certain lexical verbs (e.g., otab).\n7. The suffix **‑wn** adds the meaning “in vain” to the verb it follows.",
+          "metrics": {
+            "corpus_bleu": 3.52,
+            "corpus_chrfpp": 10.96,
+            "corpus_ter": 95.83,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              39.43,
+              2.99,
+              4.54,
+              6.77
+            ],
+            "sentence_chrfpp": [
+              1.08,
+              42.41,
+              0.53,
+              4.53,
+              15.28
+            ],
+            "sentence_ter": [
+              150.0,
+              66.67,
+              100.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) ___",
+              "They cried.",
+              "___ ___",
+              "___ ___ in vain.",
+              "___ ___ in vain."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 59.42,
+          "accumulated_dict": "ob‑ = you (sg)\ne‑ = you (pl)\nnake‑ = we (sg) (subject prefix)\nnambe‑ = we (sg) (allomorph of nake‑)\nnambat‑ = I (subject prefix)\num‑ = he (sg)\nubate‑ = you (sg) (allomorph of ob‑ before h‑initial roots)\ndahe‑ = return (verb root)\notab = chase away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\n‑tok = past / perfective (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (alternative past suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex is formed by a verb root optionally followed by a suffix (tense, aspect, or modal).\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. The adverb “really” is expressed pragmatically and does not appear as an independent morpheme.\n5. Subject‑prefix allomorphy occurs depending on the phonological environment (e.g., *ob‑* → *ubate‑* before h‑initial roots; *nake‑* → *nambe‑*).\n6. Past can be marked by **‑tok**, **‑win**, **‑ab**, or may be zero‑marked for certain lexical verbs (e.g., *otab*, *keseh*).\n7. The suffix **‑wn** adds the meaning “in vain” to the verb it follows.",
+          "metrics": {
+            "corpus_bleu": 7.22,
+            "corpus_chrfpp": 14.14,
+            "corpus_ter": 88.24,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.52,
+              10.68,
+              13.74,
+              3.71
+            ],
+            "sentence_chrfpp": [
+              14.31,
+              5.13,
+              24.69,
+              6.06
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              71.43,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They cried.",
+              "We [unknown].",
+              "You (sg) [unknown] in vain.",
+              "We [unknown] in vain."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 68.53,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex = verb root + optional suffix (tense, aspect, or modal).\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. Subject‑prefix allomorphy occurs according to the phonological shape of the following root (e.g., ob‑ → ubate‑ before h‑initial roots; nake‑ → nambe‑; nambat‑ → nakum‑).\n5. Past can be marked by **‑tok**, **‑win**, **‑ab**, or may be zero‑marked for certain lexical verbs (e.g., otab, keseh).\n6. The suffix **‑wn** adds the meaning “in vain” to the verb it follows.\n7. When a verb root begins with **h**, the preceding subject prefix may undergo a vowel‑change (e.g., ob‑ → ubate‑, nambat‑ → nakum‑).",
+          "metrics": {
+            "corpus_bleu": 1.48,
+            "corpus_chrfpp": 1.22,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              2.57,
+              3.53,
+              2.53
+            ],
+            "sentence_chrfpp": [
+              1.08,
+              0.99,
+              3.61,
+              0.61,
+              0.5
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              85.71,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) ___",
+              "___ past",
+              "I ___",
+              "___ ___",
+              "___ ___"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 104.36,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. A verbal predicate consists of a subject prefix attached to a verb complex.\n2. The verb complex = verb root + optional suffix (tense, aspect, or modal).\n3. The subject prefix encodes person and number; no separate pronoun is required.\n4. Subject‑prefix allomorphy is conditioned by the phonological shape of the following root (e.g., *ob‑* → *ubate‑* before h‑initial roots; *nambat‑* → *nakum‑* before h‑initial roots; *nake‑* → *nambe‑* or *nambame‑* before certain roots).\n5. Past can be marked by **‑tok**, **‑win**, **‑ab**, **‑nab**, or may be zero‑marked for some lexical verbs (e.g., *otab*, *keseh*).\n6. The suffix **‑wn** adds a modal/attitudinal nuance, commonly “in vain”, to the verb it follows.\n7. When a verb root begins with **h**, the preceding subject prefix may undergo a vowel‑change (as in rule 4).\n---",
+          "metrics": {
+            "corpus_bleu": 3.07,
+            "corpus_chrfpp": 10.49,
+            "corpus_ter": 95.83,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              15.97,
+              2.57,
+              3.75,
+              7.01
+            ],
+            "sentence_chrfpp": [
+              1.12,
+              19.92,
+              3.61,
+              7.12,
+              19.51
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              85.71,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "you pl ___",
+              "___ cried",
+              "I ___",
+              "___ (past) leave/abandon in vain",
+              "you sg ___ in vain"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 126.59,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Subject prefix attaches directly to the verb complex**; it encodes person and number. No independent pronoun is required.\n2. **Verb complex = verb root + optional suffix(es).** Suffixes may be a single past marker, a modal *‑wn*, or a fused past‑+‑wn form (*‑awn*, *‑nawn*).\n3. **Allomorphy of subject prefixes** is conditioned by the initial phoneme of the following root:\n- *ob‑* → *ubate‑* before h‑initial roots.\n- *nambat‑* → *nakum‑* before h‑initial roots.\n- *nake‑* → *nambe‑* or *nambame‑* before certain roots (including h‑initial).\n4. **Past tense** can be marked by any of the following suffixes: *‑tok, ‑win, ‑ab, ‑nab, ‑awn, ‑nawn*. Some verbs allow zero‑past (no overt suffix).\n5. **Modal “in vain”** is expressed by *‑wn*. When it follows a past suffix, the two may fuse into *‑awn* or *‑nawn*. The modal can also appear alone (e.g., *kulaɣa‑wn*) and still yields a past interpretation.\n6. **Zero‑past** is lexicalised for certain verbs (e.g., *otab*, *keseh*).\n7. **Adverbial meanings such as “really”** are not morphologically encoded in the data; they are discourse‑level particles not reflected in the morpheme inventory.\n[DELETED RULES: none; all previous rules are retained, with clarifications added.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.15,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              2.3,
+              2.14,
+              2.84,
+              2.79
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "DICTIONARY",
+              "ubate‑",
+              "nake‑",
+              "nambe‑",
+              "nambame‑"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 102.11,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Subject prefix attaches directly to the verb complex** and marks person/number. Allomorphy is conditioned by the initial phoneme of the following root (e.g., *ob‑ → ubate‑* before h‑initial roots).\n2. **Additional material (‑b‑) may appear inside a subject prefix** when the clause carries a discourse‑level emphasis such as “really”. This material does not affect agreement.\n3. **Verb complex = verb root + suffix(es).** Suffixes can be a past marker, the modal “in vain” (**‑wn**), or a fused past‑+‑modal form (**‑awn**, **‑nawn**).\n4. **Past‑tense markers**: **‑tok**, **‑win**, **‑ab**, **‑nab**, **‑awn**, **‑nawn**. The marker **‑ab** can also convey the “in vain” meaning when the context requires it (as in *nakum‑hoɣab*).\n5. **Modal “in vain”** is expressed by **‑wn**; when it follows a past marker the two may fuse into **‑awn** or **‑nawn**.\n6. **Zero‑past** is lexicalised for certain verbs (e.g., *otab*, *keseh*).\n7. **New verb root** **ɣada‑** (or **ɣadaɣ**) means “leave/leave behind”. It combines with the same past/modal suffixes as other verbs.\n8. **Word order** is strictly prefix‑root‑suffix; no independent pronouns appear.\n[DELETED: none – all earlier rules retained, with the clarification that **‑ab** can also encode the “in vain” modal.]\n---",
+          "metrics": {
+            "corpus_bleu": 3.81,
+            "corpus_chrfpp": 19.65,
+            "corpus_ter": 95.83,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              23.64,
+              3.98,
+              4.54,
+              7.41
+            ],
+            "sentence_chrfpp": [
+              6.97,
+              37.21,
+              9.03,
+              18.4,
+              27.63
+            ],
+            "sentence_ter": [
+              150.0,
+              66.67,
+              100.0,
+              80.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) saw.",
+              "He/she cried.",
+              "I/We (uncertain) laughed.",
+              "He/She left (in vain).",
+              "You sg (with focus) laughed (in vain)."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 136.01,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Subject prefix attaches directly to the verb complex** and marks person/number. Allomorphy is conditioned by the initial phoneme of the following verb root (e.g., *nakum‑* before h‑initial, *a‑* before non‑h‑initial).\n2. **Emphatic/“really” nuance** is expressed by inserting **‑b‑** somewhere inside the subject prefix (e.g., *nambe‑*, *ub‑*, *ebe‑*). The position of the inserted **‑b‑** is not fixed.\n3. **A discourse particle “Aw/Oh”** may appear as a separate prefix *i‑* before the subject prefix; it does not affect agreement.\n4. **Verb complex = subject prefix + verb root + suffix(es).**\n5. **Past‑tense suffixes**: *‑tok*, *‑win*, *‑ab*, *‑nab*. The suffix *‑ab* can also convey the “in vain” modal when context requires.\n6. **Modal “in vain”** = *‑wn*. When it follows a past marker, the two may fuse to *‑awn* or *‑nawn*.\n7. **Zero‑past** is lexicalised for certain verbs (e.g., *otab*, *keseh*).\n8. **Verb root ɣada‑ / ɣadaɣ** = “leave / leave behind”; it combines with the same past/modal suffixes as other verbs.\n9. **Word order** is strictly prefix‑root‑suffix; no independent pronouns appear.\n[DELETED: none – earlier rules retained, with the addition of rules 2, 3, 5, 6, 8.]\n---",
+          "metrics": {
+            "corpus_bleu": 3.87,
+            "corpus_chrfpp": 11.81,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              9.65,
+              5.27,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              1.16,
+              22.28,
+              17.61,
+              3.53
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              85.71,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You pl …",
+              "He/she/it cried",
+              "He left … in vain",
+              "You sg … in vain"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 99.34,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Verb complex** = (optional *i‑* particle) + subject prefix (with possible *‑b* emphatic) + verb root + suffix(es).\n2. **Subject prefixes** encode person/number; allomorphy occurs before h‑initial verb roots (e.g., *nakum‑* for I).\n3. **Emphatic “really”** is expressed by inserting the consonant **b** inside the subject prefix (e.g., *ob‑*, *nambe‑*, *ub‑*, *ebe‑*, *nambame‑*).\n4. **Past tense** can be marked by *‑tok*, *‑win*, *‑ab*, or the fused forms *‑awn*, *‑nawn* (past + modal).\n5. **Modal “in vain”** = *‑wn*. When it follows a past marker the two fuse to *‑awn* / *‑nawn*. The suffix *‑ab* may also convey this modal when context demands.\n6. **Zero‑past** is lexicalised for certain verbs (e.g., *otab*, *keseh*).\n7. **Object marker** *‑ate‑* appears after the subject prefix to indicate a plural object “us”.\n8. **Verb root allomorphy**: roots may have h‑initial variants (*huɣa* / *hoɣ*) or final‑ɣ variants (*ɣadaɣ*).\n9. **Word order** is strictly prefix‑root‑suffix; no independent pronouns appear.\n[DELETED: Rule 5 “‑ab can also convey ‘in vain’” – merged into Rule 5 above for clarity.]\n---",
+          "metrics": {
+            "corpus_bleu": 1.55,
+            "corpus_chrfpp": 10.6,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              18.39,
+              2.99,
+              2.76,
+              2.56
+            ],
+            "sentence_chrfpp": [
+              2.16,
+              20.75,
+              6.01,
+              13.57,
+              11.86
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              100.0,
+              80.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "you pl laugh",
+              "I cried",
+              "we sg + b cut‑you sg",
+              "you pl left",
+              "you sg + b laugh"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 84.17,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Verb complex** = (optional *i‑* particle) + subject prefix (may contain emphatic *b*) + (optional object‑marker) + verb root + tense‑aspect suffix(es).\n2. **Subject prefixes** encode person/number; allomorphy appears before h‑initial verb roots (e.g., *nakum‑* for I). Variant forms (*a‑*, *ba‑*) are context‑dependent.\n3. **Emphatic “really”** is expressed by inserting *b* inside the subject prefix (e.g., *ob‑*, *nambe‑*, *nambame‑*, *ebe‑*).\n4. **Past tense** can be marked by *‑tok*, *‑win*, *‑ab* (simple past) or by the fused forms *‑awn*, *‑nawn* (past + modal).\n5. **Modal “in vain”** = *‑wn*. When it follows a past marker the two fuse to *‑awn* / *‑nawn*.\n6. **Zero‑past** is lexicalised for certain verbs (e.g., *otab*, *keseh*).\n7. **Object markers** follow the subject prefix: *‑ate‑* = “us” (plural object), *‑am‑* = “him”, *‑an‑* = “me”.\n8. **Verb root allomorphy**: some roots have h‑initial variants (*huɣa* / *hoɣ*) or final‑ɣ variants (*ɣadaɣ*).\n9. **Word order** is strictly prefix‑object‑root‑suffix; independent pronouns do not appear.\n---",
+          "metrics": {
+            "corpus_bleu": 1.18,
+            "corpus_chrfpp": 5.37,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              30.33,
+              0.0,
+              3.35,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.65,
+              3.81,
+              5.37,
+              4.04,
+              4.63
+            ],
+            "sentence_ter": [
+              50.0,
+              133.33,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We cried",
+              "I … (verb root",
+              "You (sg) … (verb root",
+              "e‑ɣuyanah → You",
+              "ba‑ihwin → We cried"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 63.74,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Verb complex** = (optional *i‑* particle) + subject prefix (may contain emphatic *b*) + (optional object‑marker) + verb root + tense‑aspect suffix(es).\n2. **Subject prefixes** encode person/number; allomorphy appears before h‑initial verb roots (e.g., *nakum‑* for I). Variant forms (*a‑*, *ba‑*) are context‑dependent.\n3. **Emphatic “really”** is expressed by inserting *b* inside the subject prefix (e.g., *ob‑*, *nambe‑*, *nambame‑*, *ebe‑*).\n4. **Past tense** can be marked by *‑tok*, *‑win*, *‑ab* (simple past) or by the fused forms *‑awn*, *‑nawn* (past + modal).\n5. **Modal “in vain”** = *‑wn*. When it follows a past marker the two fuse to *‑awn* / *‑nawn*.\n6. **Zero‑past** is lexicalised for certain verbs (e.g., *otab*, *keseh*).\n7. **Object markers** follow the subject prefix: *‑ate‑* = “us” (plural object), *‑am‑* = “him”, *‑an‑* = “me”.\n8. **Verb root allomorphy**: some roots have h‑initial variants (*huɣa* / *hoɣ*) or final‑ɣ variants (*ɣadaɣ*).\n9. **Word order** is strictly prefix‑object‑root‑suffix; independent pronouns do not appear.\n---",
+          "metrics": {
+            "corpus_bleu": 1.22,
+            "corpus_chrfpp": 11.82,
+            "corpus_ter": 133.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              4.2,
+              3.13,
+              3.53,
+              2.83
+            ],
+            "sentence_chrfpp": [
+              3.79,
+              7.28,
+              8.87,
+              8.14,
+              21.82
+            ],
+            "sentence_ter": [
+              200.0,
+              166.67,
+              100.0,
+              100.0,
+              157.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ob‑ (you sg, emphatic",
+              "nake‑ (we sg), dahe‑, ‑tok.",
+              "nambat‑ (I), ih‑ (cry), ‑win (past).",
+              "nambe‑ (we sg, emphatic",
+              "um‑ (he sg), kulaɣ‑ (laugh), ‑awn (past + modal “in vain"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 92.73,
+          "accumulated_dict": "ob‑ = you sg (subject prefix)\ne‑ = you pl (subject prefix)\nnake‑ = we sg (subject prefix)\nnambe‑ = we sg (allomorph of nake‑ before certain roots)\nnambat‑ = I (subject prefix)\nnakum‑ = I (allomorph of nambat‑ before h‑initial roots)\num‑ = he sg (subject prefix)\ndahe‑ = return (verb root)\notab = chase‑away (verb root)\nkulaɣa‑ = laugh (verb root)\nih‑ = cry (verb root)\nkeseh = spit (verb root)\nhuɣa‑ = silence (verb root)\nhoɣ = silence (h‑initial variant of huɣa)\n‑tok = past (tense‑aspect suffix)\n‑win = past (tense‑aspect suffix)\n‑ab = past (tense‑aspect suffix)\n‑wn = “in vain” (modal/attitudinal suffix)",
+          "accumulated_rules": "1. **Verb complex** = (optional *i‑* particle) + subject prefix (may contain emphatic *b*) + (optional object‑marker) + verb root + tense‑aspect / modal suffix(es).\n2. **Subject prefixes** encode person/number; *b* inside the prefix adds the meaning “really”. *a‑* can serve as plain second‑person singular or third‑person singular “he” depending on context.\n3. **Allomorphy**: *nambat‑* → *nakum‑* before h‑initial verb roots; *dahe‑* → *dahe‑* (no change).\n4. **Past tense** is marked by *‑tok, ‑win, ‑ab, ‑ah*.\n5. **Modal “in vain”** = *‑wn*. When it follows a past marker the two fuse to *‑awn* or *‑nawn*.\n6. **Zero‑past** (no suffix) is lexicalised for certain verbs (*otab, keseh*).\n7. **Object markers** (suffixes attached to the subject prefix) are: *‑ate‑* “us”, *‑am‑* “him”, *‑an‑* “me”. They appear directly after the subject prefix; they may be absent when the object is a second‑person pronoun that is understood from context.\n8. **Verb‑root allomorphy**: some roots have h‑initial variants (*huɣa‑ / hoɣ*) or final‑ɣ variants (*ɣadaɣ*).\n9. **Word order** within the verb complex is strictly prefix → object‑marker → root → suffix(es). Independent pronouns do not appear.\n[DELETED: Rule 3 “Variant forms (a‑, ba‑) are context‑dependent” – replaced by the more precise allomorphy rule above.]\n---",
+          "metrics": {
+            "corpus_bleu": 6.59,
+            "corpus_chrfpp": 30.44,
+            "corpus_ter": 83.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              24.45,
+              3.13,
+              7.81,
+              3.31
+            ],
+            "sentence_chrfpp": [
+              65.66,
+              72.58,
+              7.54,
+              29.79,
+              17.8
+            ],
+            "sentence_ter": [
+              100.0,
+              66.67,
+              85.71,
+              60.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) shuddered.",
+              "You (pl) really cried.",
+              "I left it behind.",
+              "We really left it behind.",
+              "You (sg) really laughed."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 6.59,
+        "corpus_chrfpp": 30.44,
+        "corpus_ter": 83.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          16.23,
+          24.45,
+          3.13,
+          7.81,
+          3.31
+        ],
+        "sentence_chrfpp": [
+          65.66,
+          72.58,
+          7.54,
+          29.79,
+          17.8
+        ],
+        "sentence_ter": [
+          100.0,
+          66.67,
+          85.71,
+          60.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You (pl) shuddered.",
+          "You (pl) really cried.",
+          "I left it behind.",
+          "We really left it behind.",
+          "You (sg) really laughed."
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5
+      },
+      "best_step": 15
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 34.17,
+          "accumulated_dict": "- **ob-** = you (sg) (often with the nuance “really”)\n- **nake-** = we (plain)\n- **nambe-** = we (with the nuance “really”)\n- **nambat-** = I\n- **um-** = he\n- **dahetok** = returned\n- **ihwin** = cried\n- **otab** = chased you (pl) away\n- **kulaɣawn** = laughed at you (sg) in vain",
+          "accumulated_rules": "1. **Subject‑prefix + verb** construction: the subject is expressed as a bound prefix attached to the verb stem with a hyphen (e.g., *ob‑dahetok* “you returned”).\n2. **Person/number encoding**: different prefixes mark person and number (1sg = *nambat‑*, 2sg = *ob‑*, 1pl = *nake‑* or *nambe‑*, 3sg = *um‑*).\n3. **Aspectual/modal nuance**: the prefixes *ob‑* and *nambe‑* carry an additional “intensifier” meaning roughly “really” or “emphatically”. The plain *nake‑* lacks this nuance.\n4. **Verb stems** are invariant across subjects; tense/aspect is not overtly marked in the data provided.\n5. **Object pronouns** are incorporated into the verb stem (e.g., *otab* = “chase you (pl) away”, *kulaɣawn* = “laugh at you (sg) in vain”).",
+          "metrics": {
+            "corpus_bleu": 4.0,
+            "corpus_chrfpp": 19.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              19.72,
+              3.13,
+              5.02,
+              9.73
+            ],
+            "sentence_chrfpp": [
+              14.74,
+              16.05,
+              5.64,
+              10.38,
+              39.7
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              100.0,
+              120.0,
+              71.43
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You really returned.",
+              "We returned.",
+              "Aw, I cried.",
+              "We really chased you (pl) away.",
+              "He laughed at you (sg) in vain."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 56.14,
+          "accumulated_dict": "- **ob-** = you (sg) (often with the nuance “really”)\n- **nake-** = we (plain)\n- **nambe-** = we (with the nuance “really”)\n- **nambat-** = I\n- **um-** = he\n- **dahetok** = returned\n- **ihwin** = cried\n- **otab** = chased you (pl) away\n- **kulaɣawn** = laughed at you (sg) in vain",
+          "accumulated_rules": "1. **Subject‑prefix + verb**: The subject is expressed as a bound prefix attached to the verb stem with a hyphen.\n2. **Allomorphic subject prefixes**:\n- The basic 1 sg prefix is *nambat‑*. When the following verb stem begins with a voiceless velar or uvular consonant (/k, h, ɣ/), the prefix undergoes reduction to *nakum‑* (loss of /b/ and vowel‑consonant harmony).\n- The basic 2 sg prefix is *ob‑*. Before stems that begin with a vowel or a glottal stop, an epenthetic vowel /a/ and a post‑prefix consonant /t/ appear, giving the surface form *ubate‑* (e.g., *ubate‑huɣanab*).\n- The 2 pl prefix is *e‑*. It surfaces unchanged before all stems observed so far.\n3. **Vowel harmony / consonant assimilation**: The vowel of the subject prefix often harmonises with the first vowel of the verb stem (e.g., *ob‑* → *ub‑* before a stem whose first vowel is /a/). Consonant assimilation can also cause the final consonant of the prefix to change or disappear (as in *nambat‑* → *nakum‑*).\n4. **Object incorporation**: Objects are built into the verb stem; no separate object pronouns appear.\n5. **Aspectual nuance**: The prefixes *ob‑* and *nambe‑* carry an emphatic “really” nuance; the plain forms (*e‑*, *nake‑*, *nambat‑*) lack it.\n6. **In‑vain / “in vain” marker**: The suffix *‑ab* on a verb stem signals the “in‑vain” meaning (compare *kulaɣawn* “laughed … in vain” and *hoɣab* “silenced … in vain”).\n---",
+          "metrics": {
+            "corpus_bleu": 8.47,
+            "corpus_chrfpp": 18.92,
+            "corpus_ter": 108.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              6.57,
+              14.45
+            ],
+            "sentence_chrfpp": [
+              7.23,
+              9.67,
+              28.46
+            ],
+            "sentence_ter": [
+              250.0,
+              133.33,
+              57.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) spat on him.",
+              "You (sg) silenced us.",
+              "I silenced you (pl) in vain."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 5,
+          "latency_s": 66.91,
+          "accumulated_dict": "- **ob-** = you (sg) (often with the nuance “really”)\n- **nake-** = we (plain)\n- **nambe-** = we (with the nuance “really”)\n- **nambat-** = I\n- **um-** = he\n- **dahetok** = returned\n- **ihwin** = cried\n- **otab** = chased you (pl) away\n- **kulaɣawn** = laughed at you (sg) in vain",
+          "accumulated_rules": "1. **Subject prefixation** – The subject is expressed as a bound prefix attached to the verb stem.\n- 1 sg: *nambat‑* → reduced to *nakum‑* before stems beginning with /k, h, ɣ/.\n- 2 sg: *ob‑* → before vowel‑initial stems an epenthetic vowel *a* and a post‑prefix *t* appear, giving *ob‑a‑* (surface *obam‑*).\n- 2 pl: *e‑*; before vowel‑initial stems an epenthetic *b* appears, giving *ebe‑*.\n- 3 sg: *um‑* → surface *a‑* before vowel‑initial stems (vowel harmony).\n2. **Vowel harmony / consonant assimilation** – The vowel of the subject prefix often harmonises with the first vowel of the verb stem (e.g., *ob‑* → *ub‑* before a‑stem). Final consonants of the prefix may be deleted or altered (e.g., *nambat‑* → *nakum‑*).\n3. **Object incorporation** – The direct object is incorporated into the verb stem as a suffix. The suffix encodes both the semantic role (person/number) and, in many cases, a lexical “directional” or “resultative” meaning:\n- *‑awn* / *‑nawn*: “…behind” (object is the entity left behind).\n- *‑ewn*: “…in vain” (object is the entity left behind in vain).\n- *‑ab*: “…in half” (object is the entity being cut in half).\n4. **Aspectual/nuance markers** – The prefixes *ob‑* (2 sg) and *nambe‑* (1 pl) carry an emphatic “really” nuance. The 2 pl emphatic form *ebe‑* is derived by epenthetic *b* insertion before vowel‑initial stems.\n5. **Suffix semantics** –\n- *‑ab* = “in‑half”.\n- *‑awn* / *‑nawn* = “behind”.\n- *‑ewn* = “in‑vain”.\n6. **Word order** – The language is head‑final: the subject prefix precedes the verb stem, and any incorporated object appears as a suffix on the stem. No separate object pronouns occur.\n---",
+          "metrics": {
+            "corpus_bleu": 1.97,
+            "corpus_chrfpp": 9.84,
+            "corpus_ter": 108.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              9.08,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              1.28,
+              5.54,
+              2.98,
+              31.02,
+              2.27
+            ],
+            "sentence_ter": [
+              100.0,
+              200.0,
+              100.0,
+              80.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɣadaɣawn",
+              "Oh, we left you (sg) behind!",
+              "ɣadanawn",
+              "You (pl) really left us behind.",
+              "ɣadewn"
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 41.6,
+          "accumulated_dict": "- **ob-** = you (sg) (often with the nuance “really”)\n- **nake-** = we (plain)\n- **nambe-** = we (with the nuance “really”)\n- **nambat-** = I\n- **um-** = he\n- **dahetok** = returned\n- **ihwin** = cried\n- **otab** = chased you (pl) away\n- **kulaɣawn** = laughed at you (sg) in vain",
+          "accumulated_rules": "1. **Subject prefixation (re‑examined).**\n- 1 pl emphatic = *nake‑* → surface *bate‑* before consonant‑initial verb stems.\n- 2 pl emphatic = *e‑* → surface *ba‑* before consonant‑initial verb stems (the epenthetic *b* of the 2 pl marker is realised as the whole prefix).\n- 2 sg = *ob‑* → surface *a‑* before consonant‑initial verb stems (the vowel of *ob‑* harmonises to *a*).\n- 1 sg = *nambat‑* → surface *bam‑* before consonant‑initial verb stems (the reduction rule from the general description).\n2. **Verb stem + object‑directional suffix.**\n- The core lexical meaning is carried by the verb stem (e.g., *taman‑* “float”, *ɣuya‑* “shudder”).\n- A suffix encodes a resultative or directional nuance.\n* **‑ab** = “upward / to the surface”.\n* **‑ah** = perfective, punctual aspect (used when the event is presented as a completed single occurrence).\n3. **Word order.**\n- The language is strictly head‑final: the subject prefix precedes the verb stem, and any resultative/aspectual suffix follows the stem.\n- No separate object pronouns appear; any object‑like semantics are expressed by the suffixes.\n4. **Negation (from earlier stages).**\n- Negation is expressed by the prefix **ma‑** attached directly to the subject prefix (e.g., *ma‑ob‑* → “you do not”).\n5. **Interrogatives.**\n- Yes‑no questions are formed by adding the particle **‑ka** at the end of the clause.\n- Wh‑questions use the fronted particle **ka‑** before the subject prefix (e.g., *ka‑ob‑…* “what do you …?”).\n6. **Complex clauses.**\n- Subordination is signalled by the conjunctive suffix **‑ta** attached to the verb of the subordinate clause.\n- The main clause follows the subordinate clause with a pause; both retain their own subject prefixes.",
+          "metrics": {
+            "corpus_bleu": 2.44,
+            "corpus_chrfpp": 12.95,
+            "corpus_ter": 141.18,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              4.99,
+              3.55,
+              3.83
+            ],
+            "sentence_chrfpp": [
+              14.39,
+              26.42,
+              6.91,
+              8.52
+            ],
+            "sentence_ter": [
+              300.0,
+              200.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Aw, we really floated to the surface.",
+              "You (pl) really floated to the surface.",
+              "You (sg) shuddered.",
+              "Oh, I shuddered."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.0,
+        "corpus_chrfpp": 19.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.97,
+          19.72,
+          3.13,
+          5.02,
+          9.73
+        ],
+        "sentence_chrfpp": [
+          14.74,
+          16.05,
+          5.64,
+          10.38,
+          39.7
+        ],
+        "sentence_ter": [
+          150.0,
+          100.0,
+          100.0,
+          120.0,
+          71.43
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You really returned.",
+          "We returned.",
+          "Aw, I cried.",
+          "We really chased you (pl) away.",
+          "He laughed at you (sg) in vain."
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5
+      },
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 101.86,
+          "metrics": {
+            "corpus_bleu": 6.29,
+            "corpus_chrfpp": 30.41,
+            "corpus_ter": 87.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              24.45,
+              2.63,
+              7.81,
+              2.79
+            ],
+            "sentence_chrfpp": [
+              61.86,
+              69.18,
+              5.02,
+              30.33,
+              21.23
+            ],
+            "sentence_ter": [
+              100.0,
+              66.67,
+              100.0,
+              60.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (plural) shuddered.",
+              "You (plural) really cried.",
+              "Aw, we shivered.",
+              "He really left us behind.",
+              "You (plural) in‑vain laughed."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 6.29,
+        "corpus_chrfpp": 30.41,
+        "corpus_ter": 87.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          16.23,
+          24.45,
+          2.63,
+          7.81,
+          2.79
+        ],
+        "sentence_chrfpp": [
+          61.86,
+          69.18,
+          5.02,
+          30.33,
+          21.23
+        ],
+        "sentence_ter": [
+          100.0,
+          66.67,
+          100.0,
+          60.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You (plural) shuddered.",
+          "You (plural) really cried.",
+          "Aw, we shivered.",
+          "He really left us behind.",
+          "You (plural) in‑vain laughed."
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 368.26,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 90.27,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      },
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.3,
+      "chrf": 3.0,
+      "ter": 4500.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “the woman” (or “the lady”).  \n\n*Explanation:* The string “e-ɣuyanah” looks like a translitera",
+      "reference": "We shuddered."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 6.59,
+      "best_chrf": 30.44,
+      "best_ter": 83.33,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "You (pl) shuddered.",
+        "You (pl) really cried.",
+        "I left it behind.",
+        "We really left it behind.",
+        "You (sg) really laughed."
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ],
+      "best_step": 15
+    },
+    "step_by_step": {
+      "best_bleu": 4.0,
+      "best_chrf": 19.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "You really returned.",
+        "We returned.",
+        "Aw, I cried.",
+        "We really chased you (pl) away.",
+        "He laughed at you (sg) in vain."
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ],
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "best_bleu": 6.29,
+      "best_chrf": 30.41,
+      "best_ter": 87.5,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "You (plural) shuddered.",
+        "You (plural) really cried.",
+        "Aw, we shivered.",
+        "He really left us behind.",
+        "You (plural) in‑vain laughed."
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [],
+      "best_references": [],
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

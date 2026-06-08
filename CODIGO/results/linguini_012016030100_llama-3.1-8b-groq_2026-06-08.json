@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T04:41:10.463903",
+    "puzzle_id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 10,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ar kanarriːcciːg kamiːg jaːnticcirsu.",
+        "target": "We bought the camels for the neighbours."
+      },
+      {
+        "source": "tirt kadeːg allesu.",
+        "target": "The owner repaired the dress."
+      },
+      {
+        "source": "jahali waliːg darbadki biticcirra.",
+        "target": "The young men will give the chicken to the dogs."
+      },
+      {
+        "source": "man jahalgi kadeːcciːg maːgtirsu.",
+        "target": "He stole the dresses for the young man."
+      },
+      {
+        "source": "ay beyyeːcciːg ajaːnirri.",
+        "target": "I am buying the necklaces."
+      },
+      {
+        "source": "wal aygi baːbiːg eldeːnsu.",
+        "target": "The dog found the doors for me."
+      },
+      {
+        "source": "magas ikki waliːg ticcirsu.",
+        "target": "The thief gave you (pl.) the dogs."
+      },
+      {
+        "source": "iːdi magaski kamiːg tirsa.",
+        "target": "The men gave the camels to the thief."
+      },
+      {
+        "source": "ay hanuːg bijomri.",
+        "target": "I will strike the donkey."
+      },
+      {
+        "source": "sarkaːyi aygi beyyeːcciːg adeːnda.",
+        "target": "The cowards are giving me the necklaces."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "magasi argi ajomirra.",
+        "target": "The thieves are striking us.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay kanarriːg baːbki alletirsi.",
+        "target": "I repaired the door for the neighbour.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "hanu tirtiːg elirsu.",
+        "target": "The donkey found the owners.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tirti argi kamgi deːccirsa.",
+        "target": "The owners gave us the camel.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay darbadki bijaːndi.",
+        "target": "I will buy the chicken.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 31.52,
+          "metrics": {
+            "corpus_bleu": 15.96,
+            "corpus_chrfpp": 55.08,
+            "corpus_ter": 60.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.78,
+              8.05,
+              27.78,
+              3.22,
+              34.98
+            ],
+            "sentence_chrfpp": [
+              79.35,
+              26.69,
+              83.33,
+              39.98,
+              54.88
+            ],
+            "sentence_ter": [
+              40.0,
+              57.14,
+              40.0,
+              116.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thieves are striking you (pl.).",
+              "I bought the doors for me.",
+              "The donkey found the owner (pl.).",
+              "The owner (pl.) bought the camels for you (pl.).",
+              "I give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 15.96,
+        "corpus_chrfpp": 55.08,
+        "corpus_ter": 60.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          27.78,
+          8.05,
+          27.78,
+          3.22,
+          34.98
+        ],
+        "sentence_chrfpp": [
+          79.35,
+          26.69,
+          83.33,
+          39.98,
+          54.88
+        ],
+        "sentence_ter": [
+          40.0,
+          57.14,
+          40.0,
+          116.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thieves are striking you (pl.).",
+          "I bought the doors for me.",
+          "The donkey found the owner (pl.).",
+          "The owner (pl.) bought the camels for you (pl.).",
+          "I give the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "baseline": {
+      "best_bleu": 15.96,
+      "best_chrf": 55.08,
+      "best_ter": 60.71,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The thieves are striking you (pl.).",
+        "I bought the doors for me.",
+        "The donkey found the owner (pl.).",
+        "The owner (pl.) bought the camels for you (pl.).",
+        "I give the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

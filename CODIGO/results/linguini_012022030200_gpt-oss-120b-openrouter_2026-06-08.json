@@ -1,0 +1,1767 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T12:38:08.852430",
+    "puzzle_id": "linguini_012022030200",
+    "language": "N|uuki",
+    "language_family": "Tuu (Sudáfrica)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012022030200",
+    "language": "N|uuki",
+    "language_family": "Tuu (Sudáfrica)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ǂoo ŋǀii ŋ",
+        "target": "Does the man see me?"
+      },
+      {
+        "source": "ɡǀa ǃaukea ŋ ŋǀŋ",
+        "target": "Are you_{sg} afraid of me?"
+      },
+      {
+        "source": "cuu xae a ǂʔii ŋǁa",
+        "target": "Whom do you_{sg} think about?"
+      },
+      {
+        "source": "u ǁãu ke ǁu ǀqhõʕo",
+        "target": "Your_{pl} brother does not dance."
+      },
+      {
+        "source": "ɟanasa xae ǂqheeke",
+        "target": "Is it the thief who sings?"
+      },
+      {
+        "source": "ŋǀŋ si sĩisen ŋ ǃhaeke",
+        "target": "Will I work tomorrow?"
+      },
+      {
+        "source": "ǂhun ke ǃaukea ŋ ɡǀi",
+        "target": "The dog is afraid of us."
+      },
+      {
+        "source": "na ǁu ǂʔii ŋ ɡǀa xaŋki",
+        "target": "I do not think about your_{sg} mother."
+      },
+      {
+        "source": "ɡǀi aŋki si ǀqhõʕo ŋ ɡǃari",
+        "target": "Will our father dance in Upington?"
+      },
+      {
+        "source": "kiɟa xae ǂoo sĩisen ŋǁa",
+        "target": "Where does the man work?"
+      },
+      {
+        "source": "ɡǀa ŋǀii a ŋǁŋ",
+        "target": "Do you_{sg} see your_{sg} house?"
+      },
+      {
+        "source": "ŋǀŋ xae a ǃʔai",
+        "target": "Is it me whom you_{sg} call?"
+      },
+      {
+        "source": "u kee ǀeeki ǂʔii ŋǁa",
+        "target": "It is you_{pl} whom the woman thinks about."
+      },
+      {
+        "source": "a xaŋki ke kacuuʔi ŋ ɡǀa ts’aaʔa ŋ",
+        "target": "Your_{sg} mother asks if you_{sg} like me."
+      },
+      {
+        "source": "kama ɟa xae ŋ si ŋǀii u ŋǁa",
+        "target": "When will I see you_{pl}?"
+      },
+      {
+        "source": "ŋ ǃuu ke kacuuʔi ŋ ŋǀŋ si ǂqheeke ŋ ǃhaeke",
+        "target": "My grandfather asks if I will sing tomorrow."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Our mother will not call your_{sg} brother.",
+        "target": "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "direction": "en2lang"
+      },
+      {
+        "source": "It is you_{sg} whom my dog is afraid of.",
+        "target": "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Where will you_{pl} sing?",
+        "target": "kiɟa xae u si ǂqheeke ŋǁa",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I ask if it is our grandfather whom you_{sg} think",
+        "target": "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Who will dance tomorrow?",
+        "target": "cuu xae si ǀqhõʕo ŋ !haeke",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you_{pl} see us?",
+        "target": "gǀu ŋǀii i",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Our mother will not call your_{sg} brother.",
+      "reference": "i xaŋki ke ǁu si !ʔai a ǁãu",
+      "hypothesis": "**N|uuki:**  \n*Ŋa‑kʰa tʰa na‑ri kʰa sə bʊr‑a kʰi tʰa ŋa‑ri.*  \n\n*(Word‑by‑word gloss: “our‑mother NEG‑call you‑sg brother”)*",
+      "latency_s": 5.77,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 5.8,
+        "corpus_ter": 200.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          5.8
+        ],
+        "sentence_ter": [
+          200.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**N|uuki:**  \n*Ŋa‑kʰa tʰa na‑ri kʰa sə bʊr‑a kʰi tʰa ŋa‑ri.*  \n\n*(Word‑by‑word gloss: “our‑mother NEG‑call you‑sg brother”)*"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu"
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 44.55,
+          "metrics": {
+            "corpus_bleu": 5.55,
+            "corpus_chrfpp": 36.73,
+            "corpus_ter": 68.42,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.5,
+              19.36,
+              21.44,
+              6.89,
+              15.09,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              17.11,
+              62.37,
+              47.04,
+              30.88,
+              39.74,
+              23.1
+            ],
+            "sentence_ter": [
+              75.0,
+              66.67,
+              50.0,
+              66.67,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xa ke ǀqhõʕo ǁãu a ŋǀii",
+              "u ǂhun ǃaukea ŋ ǁa",
+              "kiɟa si ǂqheeke ǁǁa",
+              "ɟa kacuuʔi ǂqheeke ŋ ɟanasa ǃuu a ŋǀii",
+              "ŋǀŋ si ǀqhõʕo ǃhaeke",
+              "ɡǀa si ŋǀii ŋǁŋ"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.55,
+        "corpus_chrfpp": 36.73,
+        "corpus_ter": 68.42,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.5,
+          19.36,
+          21.44,
+          6.89,
+          15.09,
+          15.97
+        ],
+        "sentence_chrfpp": [
+          17.11,
+          62.37,
+          47.04,
+          30.88,
+          39.74,
+          23.1
+        ],
+        "sentence_ter": [
+          75.0,
+          66.67,
+          50.0,
+          66.67,
+          66.67,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ɡǀi xa ke ǀqhõʕo ǁãu a ŋǀii",
+          "u ǂhun ǃaukea ŋ ǁa",
+          "kiɟa si ǂqheeke ǁǁa",
+          "ɟa kacuuʔi ǂqheeke ŋ ɟanasa ǃuu a ŋǀii",
+          "ŋǀŋ si ǀqhõʕo ǃhaeke",
+          "ɡǀa si ŋǀii ŋǁŋ"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu",
+          "a kee ŋ ǂhun ǃaukea ŋǁa",
+          "kiɟa xae u si ǂqheeke ŋǁa",
+          "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+          "cuu xae si ǀqhõʕo ŋ !haeke",
+          "gǀu ŋǀii i"
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 51.61,
+          "accumulated_dict": "ǂoo = man\nɡǀa = youₛg (second‑person singular)\nŋǀii = see (verb)\nǃaukea = afraid (adjective/verb)\nŋ = of (preposition) / me (1st‑person singular object, base form) – context determines function\nŋǀŋ = me (1st‑person singular object after a preposition)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. When a preposition is required, the order is Subject – Verb – Preposition – Object.\n3. The first‑person singular object has two surface forms: a bare form (ŋ) used directly after the verb, and a form (ŋǀŋ) used after a preposition.\n4. No overt interrogative particle is observed; sentence type is inferred from context.\n[No rules deleted at this stage.]",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 62.01,
+          "accumulated_dict": "ǂoo = man\nɡǀa = youₛg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = of (preposition) / 1st‑person singular object (bare) – context determines function\nŋǀŋ = me (1st‑person singular object after a preposition)\nŋǀii = see + 1st‑person object prefix (verb “see” when object is 1st sg)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = third‑person singular object (him/her/it)\nxae = complementizer/particle introducing embedded clause (observed in wh‑question)\na = linker/auxiliary appearing before embedded verb in wh‑question (function tentative)\n[DELETED: ǀii = see – replaced by ŋǀii for 1st‑person object]\n---",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. When a preposition is required, the order is Subject – Verb – Preposition – Object.\n3. The 1st‑person singular object has two surface forms:\n- bare ŋ when it follows the verb directly,\n- ŋǀŋ when it follows a preposition.\n4. Verbs can take a proclitic prefix **ŋ‑** to index a 1st‑person singular object; the verb stem follows (e.g., ŋǀii “see‑1sg‑obj”).\n5. The preposition **ŋ** means “of”.\n6. Interrogative pronoun **cuu** occupies the object position in wh‑questions.\n7. Wh‑questions with an embedded clause use the pattern: **cuu xae a [verb] [object]** (e.g., cuu xae a ǂʔii ŋǁa “who think‑about him”). The exact grammatical status of *xae* and *a* is provisional.\n[DELETED: Rule 3 (original “first‑person singular object has two surface forms…”) – refined to include the proclitic prefix case.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 90.35,
+          "accumulated_dict": "ǂoo = man\nɡǀa = youₛg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = of (preposition) / 1st‑person singular object (bare) – context determines function\nŋǀŋ = me (1st‑person singular object after a preposition)\nŋǀii = see + 1st‑person object prefix (verb “see” when object is 1st sg)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = third‑person singular object (him/her/it)\nxae = complementizer/particle introducing embedded clause (observed in wh‑question)\na = linker/auxiliary appearing before embedded verb in wh‑question (function tentative)\n[DELETED: ǀii = see – replaced by ŋǀii for 1st‑person object]\n---",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. When a preposition is required, the order is Subject – Verb – Preposition – Object.\n3. The 1st‑person singular object is realized as **ŋ** when it follows the verb directly, and as **ŋǀŋ** when it follows a preposition.\n4. All personal objects (1 sg, 3 sg, etc.) appear with the object‑prefix **ŋ** attached to the pronoun stem (e.g., **ŋǁa**, **ŋǀŋ**).\n5. The preposition **ŋ** means “of”.\n6. Wh‑questions with an embedded clause follow the pattern **cuu xae a [verb] [object]**.\n7. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your pl brother”).\n8. Negation is expressed by the particle **ke** placed after the noun and before the auxiliary.\n9. Declarative clauses use the auxiliary **ǁu** (do/does) before the main verb; the auxiliary can be omitted in simple present statements.\n[DELETED: Rule 4 (proclitic ŋ‑ on verbs) – no evidence for verb‑internal 1sg object indexing]\n---",
+          "metrics": {
+            "corpus_bleu": 3.58,
+            "corpus_chrfpp": 14.45,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.71,
+              11.52,
+              6.57,
+              9.6,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              13.27,
+              28.48,
+              8.96,
+              19.4,
+              3.16
+            ],
+            "sentence_ter": [
+              75.0,
+              83.33,
+              100.0,
+              77.78,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ǂoo ǁu ǀkʰa uǀǁa ǁãu",
+              "ɡǀa ǃaukea ŋ ŋǀŋ",
+              "ǂʔii a ǂoo ŋǁa ɡǀa ǂʔii ŋǁa",
+              "cuu xae a ǁu ǀqhõʕo",
+              "ǁu‑? ǁa‑? ŋǀii ŋǀŋ"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke"
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 65.96,
+          "accumulated_dict": "ǂoo = man\nɡǀa = youₛg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = of (preposition) / 1st‑person singular object (bare) – context determines function\nŋǀŋ = me (1st‑person singular object after a preposition)\nŋǀii = see + 1st‑person object prefix (verb “see” when object is 1st sg)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = third‑person singular object (him/her/it)\nxae = complementizer/particle introducing embedded clause (observed in wh‑question)\na = linker/auxiliary appearing before embedded verb in wh‑question (function tentative)\n[DELETED: ǀii = see – replaced by ŋǀii for 1st‑person object]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is realized as **ŋ** when it follows the verb directly; after a preposition it appears as **ŋǀŋ**.\n4. **3 sg object** is realized as **ŋǁa** (object pronoun prefixed by ŋ).\n5. The preposition **ŋ** means “of”.\n6. **Wh‑questions / relative clauses** use the pattern **cuu xae a [verb] [object]** (or noun xae [verb] for relative clauses).\n7. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”).\n8. Negation is expressed by the particle **ke**, placed after the noun and before the auxiliary.\n9. Declarative clauses use the auxiliary **ǁu** (“do/does”) before the main verb; the auxiliary may be omitted in simple present statements.\n[DELETED: Rule 4 (proclitic ŋ‑ on verbs) – no evidence for verb‑internal 1 sg object indexing]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 107.14,
+          "accumulated_dict": "ǂoo = man\nɡǀa = youₛg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = of (preposition) / 1st‑person singular object (bare) – context determines function\nŋǀŋ = me (1st‑person singular object after a preposition)\nŋǀii = see + 1st‑person object prefix (verb “see” when object is 1st sg)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = third‑person singular object (him/her/it)\nxae = complementizer/particle introducing embedded clause (observed in wh‑question)\na = linker/auxiliary appearing before embedded verb in wh‑question (function tentative)\n[DELETED: ǀii = see – replaced by ŋǀii for 1st‑person object]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is realized as **ŋ** when it follows the verb directly; after a preposition it appears as **ŋǀŋ**.\n4. **3 sg object** is realized as **ŋǁa** (object pronoun prefixed by ŋ).\n5. The preposition **ŋ** means “of”.\n6. **Wh‑questions / relative clauses** use the pattern **cuu xae a [verb] [object]** (or **N xae V** for relative clauses).\n7. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”).\n8. Negation is expressed by the particle **ke**, placed after the noun and before the auxiliary.\n9. Declarative clauses use the auxiliary **ǁu** (“do/does”) before the main verb; the auxiliary may be omitted in simple present statements.\n10. Future tense is formed with the auxiliary **si** placed after the subject, optionally followed by a temporal adverb, then the future‑tense particle **ŋ** immediately before the main verb (e.g., **Subject si Temporal ŋ Verb**).\n[DELETED: Rule 4 (proclitic ŋ‑ on verbs) – no longer supported.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 94.95,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of” / 1sg object pronoun when it follows a verb that already bears the 1sg‑object prefix (context‑dependent)\nŋǀŋ = me (1sg object after a preposition)\nŋǀii = see + 1sg object prefix (verb “see” with 1sg object)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = 3sg object pronoun (him/her/it)\nxae = complementizer/relative‑clause introducer (used in wh‑questions and relative clauses)\na = linker/auxiliary appearing before embedded verb in wh‑questions (function tentative)\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not”\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nŋ (as a particle) = future‑tense marker placed immediately before the main verb\nǂhun = dog (noun)\nɡǀi = us (1pl object after a preposition)\n[DELETED: ŋǀii = see – replaced by ŋǀii for 1sg‑object prefix]\n[DELETED: ǀii = see – superseded by ŋǀii]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1sg object** is realized as **ŋ** when it follows a verb that already contains the 1sg‑object prefix; after a preposition it appears as **ŋǀŋ**.\n4. **3sg object** is realized as **ŋǁa** (object pronoun prefixed by ŋ).\n5. The preposition **ŋ** means “of”.\n6. **Wh‑questions / relative clauses** use the pattern **cuu xae a [verb] [object]** (or **N xae V** for relative clauses).\n7. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”).\n8. The copula **ke** expresses “be”.\n9. Negation is expressed by the particle **ǁu**, placed after the copula (or directly after the noun when no copula is overt).\n10. Declarative clauses may use the auxiliary **ǁu** “do/does” before the main verb; the auxiliary can be omitted in simple present statements.\n11. Future tense is formed with the auxiliary **si** placed after the subject, optionally followed by a temporal adverb, then the future‑tense particle **ŋ** immediately before the main verb (Subject si Temporal ŋ Verb).\n[DELETED: Rule 4 (proclitic ŋ‑ on verbs) – no longer supported.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 128.95,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of” / 1sg object pronoun when it follows a verb that already bears the 1sg‑object prefix (context‑dependent)\nŋǀŋ = me (1sg object after a preposition)\nŋǀii = see + 1sg object prefix (verb “see” with 1sg object)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = 3sg object pronoun (him/her/it)\nxae = complementizer/relative‑clause introducer (used in wh‑questions and relative clauses)\na = linker/auxiliary appearing before embedded verb in wh‑questions (function tentative)\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not”\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nŋ (as a particle) = future‑tense marker placed immediately before the main verb\nǂhun = dog (noun)\nɡǀi = us (1pl object after a preposition)\n[DELETED: ŋǀii = see – replaced by ŋǀii for 1sg‑object prefix]\n[DELETED: ǀii = see – superseded by ŋǀii]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1sg object** is expressed by the independent pronoun **ŋ** placed after the verb (or **ŋǀŋ** after a preposition).\n4. **3sg object** is expressed by **ŋǁa** placed after the verb.\n5. The particle **ŋ** functions as the preposition “of/about” when it appears between a verb/adjective and a noun phrase; the same shape **ŋ** functions as a future‑tense particle when it appears immediately before the main verb.\n6. **Wh‑questions / relative clauses** use the pattern **cuu xae a [verb] [object]** (or **N xae V** for relative clauses).\n7. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”).\n8. The copula **ke** expresses “be”.\n9. Negation is expressed by the particle **ǁu**, which can follow the copula or follow the subject (before the main verb).\n10. Future tense is formed with the auxiliary **si** placed after the subject, optionally followed by a temporal adverb, then the future‑tense particle **ŋ** immediately before the main verb: **Subject si Temporal ŋ Verb**.\n11. In yes/no questions the word order is the same as in declaratives; interrogative intonation (or context) signals the question.\n[DELETED: Rule 4 (proclitic ŋ‑ on verbs) — reason: no evidence of object‑prefix on verbs]\n---",
+          "metrics": {
+            "corpus_bleu": 2.46,
+            "corpus_chrfpp": 29.56,
+            "corpus_ter": 76.32,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.48,
+              10.68,
+              10.4,
+              6.74,
+              9.72,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              22.76,
+              38.26,
+              27.73,
+              30.43,
+              28.14,
+              32.76
+            ],
+            "sentence_ter": [
+              62.5,
+              83.33,
+              83.33,
+              88.89,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "na xaŋki si ŋ u ǁãu",
+              "ǂhun ke ǃaukea ŋ na ǁãu",
+              "ɡǀa si ŋ síisen ǂqheeke",
+              "na ǁu xae ǂʔii ŋ ɟanasa cuu ɡǀa ǂʔii",
+              "cuu ŋ si síisen ŋ ǀqhõʕo",
+              "ɡǀa ǁu ŋǀii ɡǀi"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 165.29,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of” / 1sg object pronoun when it follows a verb that already bears the 1sg‑object prefix (context‑dependent)\nŋǀŋ = me (1sg object after a preposition)\nŋǀii = see + 1sg object prefix (verb “see” with 1sg object)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = 3sg object pronoun (him/her/it)\nxae = complementizer/relative‑clause introducer (used in wh‑questions and relative clauses)\na = linker/auxiliary appearing before embedded verb in wh‑questions (function tentative)\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not”\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nŋ (as a particle) = future‑tense marker placed immediately before the main verb\nǂhun = dog (noun)\nɡǀi = us (1pl object after a preposition)\n[DELETED: ŋǀii = see – replaced by ŋǀii for 1sg‑object prefix]\n[DELETED: ǀii = see – superseded by ŋǀii]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is expressed by the independent pronoun **ŋ** placed after the verb (or **ŋǀŋ** after a preposition).\n4. **3 sg object** is expressed by **ŋǁa** placed after the verb.\n5. The particle **ŋ** functions as the preposition “of/about” when it appears between a verb/adjective and a noun phrase; the same shape **ŋ** functions as a future‑tense particle when it appears immediately before the main verb.\n6. **Wh‑questions / relative clauses** use the pattern **cuu xae a [verb] [object]** (wh‑questions) or **N xae V** (relative clauses).\n7. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”, **ɡǀi aŋki** “our father”).\n8. The copula **ke** expresses “be”.\n9. Negation is expressed by the particle **ǁu**, which can follow the copula (**Subject ke ǁu V**) or follow the subject directly (**Subject ǁu V**).\n10. Future tense is formed with the auxiliary **si** placed after the subject, optionally followed by a temporal adverb, then the future‑tense particle **ŋ** immediately before the main verb: **Subject si [Temporal] ŋ Verb**.\n11. In yes/no questions the word order is the same as in declaratives; interrogative intonation (or context) signals the question.\n[DELETED: Rule 4 (proclitic ŋ‑ on verbs) – no evidence of object‑prefix on verbs]\n---",
+          "metrics": {
+            "corpus_bleu": 5.29,
+            "corpus_chrfpp": 35.33,
+            "corpus_ter": 76.32,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.59,
+              12.22,
+              9.65,
+              11.34,
+              15.21,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              36.02,
+              50.56,
+              27.32,
+              29.21,
+              37.7,
+              31.74
+            ],
+            "sentence_ter": [
+              62.5,
+              100.0,
+              100.0,
+              66.67,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xaŋki ǁu si ŋ ǃhaeke ɡǀa ǁãu",
+              "ŋǀŋ ke ɡǀa ǁu ǂhun ǃaukea ŋ ɡǀa",
+              "ɡǀa si ŋ síisen ǂqheeke?",
+              "na xae ke ǂoo ǁu ɡǀa aŋki ǂʔii ŋǁa",
+              "cuu xae a ǀqhõʕo síisen?",
+              "ɡǀa ǁu ŋǀii ɡǀi?"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 130.38,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (second‑person singular)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in” (when between verb/adjective and noun) / future‑tense particle (when directly before main verb)\nŋǀŋ = me (1 sg object after a preposition)\nŋǀii = see (verb)\nǃaukea = afraid (adjective/verb)\nǂʔii = think (verb)\nŋǁa = 3 sg object pronoun (him/her/it)\nxae = complementizer/relative‑clause introducer (used in wh‑questions and relative clauses)\na = question‑linker appearing before the embedded verb in wh‑questions\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not”\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive)\naŋki = father (noun)\nna = I (1 sg subject pronoun)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǃhaeke = work (verb)\n[DELETED: ŋǀii = see + 1sg object prefix — evidence shows ŋǀii is simply “see”]\n[DELETED: ǀii = see – superseded by ŋǀii]",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is expressed by the independent pronoun **ŋ** placed after the verb (or **ŋǀŋ** after a preposition).\n4. **3 sg object** is expressed by **ŋǁa** placed after the verb.\n5. The particle **ŋ** functions as a preposition (“of/about/in”) when it appears between a verb/adjective and a noun phrase; the same shape **ŋ** functions as a future‑tense particle when it appears immediately before the main verb.\n6. **Wh‑questions** use either the interrogative pronoun **cuu** or adverb **kiɟa**, followed by **xae**, then the linker **a**, then the verb and its object:\n- cuu xae a V O\n- kiɟa xae Subject V [Object].\n7. **Relative clauses** are formed with **N xae V** (optionally followed by an object).\n8. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your brother”, **ɡǀi aŋki** “our father”).\n9. The copula **ke** expresses “be”.\n10. Negation is expressed by the particle **ǁu**, which can follow the subject (**Subject ǁu V**) or follow the copula (**Subject ke ǁu V**).\n11. Future tense is formed with the auxiliary **si** placed after the subject, optionally followed by a temporal adverb, then the future‑tense particle **ŋ** immediately before the main verb: **Subject si [Temporal] ŋ Verb**. Negation can be inserted before the auxiliary: **Subject ǁu si … ŋ Verb**.\n12. Yes/no questions have the same word order as declaratives; intonation signals the question.",
+          "metrics": {
+            "corpus_bleu": 3.57,
+            "corpus_chrfpp": 26.51,
+            "corpus_ter": 84.21,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.59,
+              8.64,
+              9.65,
+              6.74,
+              8.64,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              32.57,
+              36.92,
+              27.07,
+              24.03,
+              21.03,
+              10.5
+            ],
+            "sentence_ter": [
+              62.5,
+              100.0,
+              83.33,
+              66.67,
+              66.67,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xaŋki ǁu si ŋ call u ǁãu",
+              "ǂhun ke ǃaukea ŋ ɡǀa xa ɡǀa",
+              "ɡǀa si ŋ ǂqheeke si síisen",
+              "na ǁu ǂʔii xa ɡǀi xaŋki xae ɡǀa ǂʔii",
+              "kiɟa xae ǂoo si síisen ŋ ǃhaeke",
+              "ɡǀa ǁu si ŋ ǀqhõʕo ɡǀi"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 283.83,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (subject pronoun) / you sg (possessive pronoun)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in” (also future‑tense particle when placed immediately before a verb)\nŋǀŋ = 1 sg pronoun “I/me” (subject or object)\nŋǁa = 3 sg object pronoun (him/her/it)\nxae = complementizer / relative‑clause introducer (used in wh‑questions and relative clauses)\na = question‑linker (appears before the embedded verb in wh‑questions; also appears before a possessed noun in object position)\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not” (follows subject or copula)\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive pronoun)\naŋki = father (noun)\nna = I (1 sg subject pronoun – alternative form to ŋǀŋ)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂ",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. When a preposition is required, the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is expressed by the independent pronoun **ŋ** placed after the verb (or **ŋǀŋ** after a preposition).\n4. **3 sg object** is expressed by **ŋǁa** placed after the verb.\n5. The particle **ŋ** functions as a preposition (“of/about/in”) when it appears between a verb/adjective and a noun phrase; the same shape **ŋ** functions as a future‑tense particle when it appears immediately before the main verb.\n6. **Wh‑questions** use either the interrogative pronoun **cuu** or adverb **kiɟa**, followed by **xae**, then the linker **a**, then the verb and its object:\n- cuu xae a V O\n- kiɟa xae Subject V [Object].\n7. **Relative clauses** are formed with **N xae V** (optionally followed by an object).\n8. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your brother”, **ɡǀi aŋki** “our father”).\n9. The copula **ke** expresses “be”.\n10. Negation is expressed by the particle **ǁu**, which can follow the subject (**Subject ǁu V**) or follow the copula (**Subject ke ǁu V**).\n11. Future tense is formed with the auxiliary **si** placed after the subject, optionally followed by a temporal adverb, then the future‑tense particle **ŋ** immediately before the main verb: **Subject si [Temporal] ŋ Verb**. Negation can be inserted before the auxiliary: **Subject ǁu si … ŋ Verb**.\n12. Yes/no questions have the same word order as declaratives; intonation signals the question.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 3.86,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.94,
+              2.21,
+              3.94,
+              3.55,
+              6.52,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Example 1 confirms",
+              "Example 2 shows",
+              "Example 3 confirms",
+              "Example 4 confirms",
+              "Example 5 confirms the relative‑clause pattern",
+              "Example 6 shows"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 140.4,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (subject pronoun) / you sg (possessive pronoun)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in” (also future‑tense particle when placed immediately before a verb)\nŋǀŋ = 1 sg pronoun “I/me” (subject or object)\nŋǁa = 3 sg object pronoun (him/her/it)\nxae = complementizer / relative‑clause introducer (used in wh‑questions and relative clauses)\na = question‑linker (appears before the embedded verb in wh‑questions; also appears before a possessed noun in object position)\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not” (follows subject or copula)\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive pronoun)\naŋki = father (noun)\nna = I (1 sg subject pronoun – alternative form to ŋǀŋ)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂ",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. With a preposition the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is the independent pronoun **ŋ** placed after the verb.\n4. **3 sg object** is **ŋǁa** placed after the verb.\n5. The morpheme **ŋ** functions as a preposition (“of/about/in”) when it follows a verb/adjective; the same shape **ŋ** functions as a future‑tense particle when it appears immediately before the main verb.\n6. **Wh‑questions**:\n- Interrogative pronoun **cuu**: **cuu xae a V O**.\n- Interrogative adverb **kiɟa**: **kiɟa xae Subject V [Object]**.\n7. **Relative clauses**: **N xae V** (optionally followed by an object).\n8. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your brother”, **ɡǀi aŋki** “our father”).\n9. The copula **ke** expresses “be”.\n10. Negation **ǁu** follows the subject (**Subject ǁu V**) or follows the copula (**Subject ke ǁu V**).\n11. Future tense: **Subject si [Temporal] ŋ Verb**. Negation can precede the auxiliary: **Subject ǁu si … ŋ Verb**.\n12. Yes/no questions have the same word order as declaratives; intonation marks the question.\n[DELETED: rule 5 “future‑tense particle when placed immediately before a verb” – merged into rule 11 for clarity]\n---",
+          "metrics": {
+            "corpus_bleu": 7.08,
+            "corpus_chrfpp": 20.7,
+            "corpus_ter": 89.47,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.98,
+              7.81,
+              8.12,
+              19.74,
+              8.52,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              28.9,
+              18.79,
+              7.28,
+              33.35,
+              7.57,
+              24.28
+            ],
+            "sentence_ter": [
+              87.5,
+              100.0,
+              100.0,
+              77.78,
+              66.67,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi aŋki ǁu si ŋ síisen a ǃʔai u ǁãu",
+              "ŋǀŋ ke ǁu ǂhun ŋ ɡǀa xaŋki",
+              "ɡǀi si ŋ a ǂʔii síisen",
+              "na xae a ǂʔii ŋǀŋ a ɟanasa",
+              "ŋǀŋ si síisen ŋ ǂʔii",
+              "ɡǀi ŋǀii a u ǁãu"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 141.07,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (subject pronoun) / you sg (possessive pronoun)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in” (also future‑tense particle when placed immediately before a verb)\nŋǀŋ = 1 sg pronoun “I/me” (subject or object)\nŋǁa = 3 sg object pronoun (him/her/it)\nxae = complementizer / relative‑clause introducer (used in wh‑questions and relative clauses)\na = question‑linker (appears before the embedded verb in wh‑questions; also appears before a possessed noun in object position)\nu = your (pl) (possessive pronoun)\nǁãu = brother\nke = copula “be”\nǁu = negation particle “not” (follows subject or copula)\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive pronoun)\naŋki = father (noun)\nna = I (1 sg subject pronoun – alternative form to ŋǀŋ)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂʔii = think (verb)\nǂ",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. With a preposition the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is the independent pronoun **ŋ** placed after the verb.\n4. **3 sg object** is **ŋǁa** placed after the verb.\n5. The morpheme **ŋ** functions as a preposition “of/about/in” when it follows a verb/adjective; the same shape **ŋ** functions as a future‑tense particle when it appears immediately before the main verb (after any temporal adverb).\n6. **Wh‑questions**:\n- Interrogative pronoun **cuu**: **cuu xae a V O**.\n- Interrogative adverb **kiɟa**: **kiɟa xae Subject V [Object]**.\n7. **Relative clauses**: **N xae V** (optionally followed by an object).\n8. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”, **ɡǀi aŋki** “our father”).\n9. The copula **ke** expresses “be”.\n10. Negation **ǁu** follows the subject (**Subject ǁu V**) or follows the copula (**Subject ke ǁu V**).\n11. Future tense: **Subject si [Temporal] ŋ Verb**. Negation can precede the auxiliary: **Subject ǁu si … ŋ Verb**.\n12. Yes/no questions have the same word order as declaratives; intonation marks the question.\n[DELETED: rule 5 (original wording) – merged into rule 5 above for clarity]\n---",
+          "metrics": {
+            "corpus_bleu": 6.09,
+            "corpus_chrfpp": 25.29,
+            "corpus_ter": 89.47,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.29,
+              5.67,
+              9.65,
+              17.75,
+              8.52,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              29.2,
+              11.86,
+              31.35,
+              35.97,
+              13.1,
+              22.85
+            ],
+            "sentence_ter": [
+              62.5,
+              133.33,
+              100.0,
+              77.78,
+              66.67,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xaŋki si ǁu ǀqhõʕo a u ǁãu",
+              "ŋǀŋ ke ǁu ǀqhõʕo ŋ ɡǀa a u ǁãu",
+              "ɡǀǃa si a ǂqheeke ŋ síisen",
+              "na xae a ǂʔii ŋǀŋ ɟanasa ke ŋǁa ɡǀa xaŋki",
+              "ŋǀŋ si síisen ŋ ǂqheeke",
+              "ɡǀa ŋǀii a u ǁãu"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 145.55,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (subject pronoun / possessive pronoun)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in”; also future‑tense particle when placed immediately before a verb; also complementizer “if” in embedded clauses\nŋǀŋ = 1 sg pronoun “I/me” (subject or object)\nŋǁa = 3 sg object pronoun (him/her/it)\nxae = complementizer / relative‑clause introducer (used in wh‑questions and relative clauses)\na = question‑linker (appears before the embedded verb in wh‑questions; also appears before a possessed noun in object position)\nu = you (pl) (possessive pronoun) / you (pl) (subject pronoun – used for plural “you”)\nǁãu = brother\nke = copula “be”\nkee = copula “be” (variant)\nǁu = negation particle “not” (follows subject or copula)\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive pronoun)\naŋki = father (noun)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǂʔii = think (verb)\nŋǀii = see (verb)\nǃaukea = be‑afraid (verb/adjective)\nǂʔai = call (verb)\nǀeeki = woman (noun)\nkacuuʔi = ask (verb)\nts’aaʔa = like (verb)\nŋǁŋ = house (noun)",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. With a preposition the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is the independent pronoun **ŋ** placed after the verb.\n4. **3 sg object** is **ŋǁa** placed after the verb.\n5. The morpheme **ŋ** functions as a preposition “of/about/in” when it follows a verb/adjective; it functions as a future‑tense particle when it appears immediately before the main verb (after any temporal adverb); it also serves as a complementizer meaning “if” in embedded clauses.\n6. **Wh‑questions**:\n- Interrogative pronoun **cuu**: **cuu xae a V O**.\n- Interrogative adverb **kiɟa**: **kiɟa xae Subject V [Object]**.\n7. **Relative clauses**: **N xae V** (optionally followed by an object).\n8. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”, **ɡǀi aŋki** “our father”).\n9. The copula **ke** (or **kee**) expresses “be”.\n10. Negation **ǁu** follows the subject (**Subject ǁu V**) or follows the copula (**Subject ke ǁu V**).\n11. Future tense: **Subject si [Temporal] ŋ Verb**. Negation can precede the auxiliary: **Subject ǁu si … ŋ Verb**.\n12. Yes/no questions have the same word order as declaratives; intonation marks the question.",
+          "metrics": {
+            "corpus_bleu": 14.63,
+            "corpus_chrfpp": 47.9,
+            "corpus_ter": 55.26,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.99,
+              17.97,
+              53.73,
+              14.26,
+              16.52,
+              27.52
+            ],
+            "sentence_chrfpp": [
+              40.75,
+              53.92,
+              70.23,
+              42.05,
+              41.63,
+              36.62
+            ],
+            "sentence_ter": [
+              62.5,
+              66.67,
+              33.33,
+              55.56,
+              50.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xaŋki ǁu si ŋ ǃʔai a ɡǀa ǁãu",
+              "ɡǀa ke ǂhun ǃaukea ŋ ɡǀa",
+              "kiɟa xae u si ŋ ǂqheeke",
+              "na ke kacuuʔi ŋ ɡǀa xae a ɂ?",
+              "cuu xae a si síisen ŋ ǀqhõʕo",
+              "u ŋǀii ɡǀi"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 253.33,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (subject pronoun / possessive pronoun)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in”; also future‑tense particle when placed immediately before a verb; also complementizer “if” in embedded clauses\nŋǀŋ = 1 sg pronoun “I/me” (subject or object)\nŋǁa = 3 sg object pronoun (him/her/it)\nxae = complementizer / relative‑clause introducer (used in wh‑questions and relative clauses)\na = question‑linker (appears before the embedded verb in wh‑questions; also appears before a possessed noun in object position)\nu = you (pl) (possessive pronoun) / you (pl) (subject pronoun – used for plural “you”)\nǁãu = brother\nke = copula “be”\nkee = copula “be” (variant)\nǁu = negation particle “not” (follows subject or copula)\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (placed after the subject)\nsíisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive pronoun)\naŋki = father (noun)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǂʔii = think (verb)\nŋǀii = see (verb)\nǃaukea = be‑afraid (verb/adjective)\nǂʔai = call (verb)\nǀeeki = woman (noun)\nkacuuʔi = ask (verb)\nts’aaʔa = like (verb)\nŋǁŋ = house (noun)",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. With a preposition the order is **Subject – Verb – Preposition – Object**.\n3. **1 sg object** is the independent pronoun **ŋ** placed after the verb.\n4. **3 sg object** is **ŋǁa** placed after the verb.\n5. The morpheme **ŋ** functions as a preposition “of/about/in” when it follows a verb/adjective; it functions as a future‑tense particle when it appears immediately before the main verb (after any temporal adverb); it also serves as a complementizer meaning “if” in embedded clauses.\n6. **Wh‑questions**:\n- Interrogative pronoun **cuu**: **cuu xae a V O**.\n- Interrogative adverb **kiɟa**: **kiɟa xae Subject V [Object]**.\n7. **Relative clauses**: **N xae V** (optionally followed by an object).\n8. Possessive pronouns precede the noun they modify (e.g., **u ǁãu** “your (pl) brother”, **ɡǀi aŋki** “our father”).\n9. The copula **ke** (or **kee**) expresses “be”.\n10. Negation **ǁu** follows the subject (**Subject ǁu V**) or follows the copula (**Subject ke ǁu V**).\n11. Future tense: **Subject si [Temporal] ŋ Verb**. Negation can precede the auxiliary: **Subject ǁu si … ŋ Verb**.\n12. Yes/no questions have the same word order as declaratives; intonation marks the question.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0
+            ],
+            "sentence_ter": [
+              100.0
+            ],
+            "sentence_em": [
+              false
+            ],
+            "hypotheses": [
+              "DICTIONARY"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu"
+            ],
+            "num_evaluated": 1
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 175.35,
+          "accumulated_dict": "ǂoo = man\nɡǀa = you sg (subject / possessive)\ncuu = who/whom (interrogative pronoun)\nŋ = preposition “of/about/in”; future‑tense particle (placed before verb); complementizer “if”\nŋǀŋ = I/me (1 sg pronoun)\nŋǁa = him/her/it (3 sg object pronoun)\nxae = complementizer / relative‑clause introducer\na = object‑introducing/linker particle (used before possessed nouns and before verbs in relative/wh‑clauses)\nu = you (pl) (subject or possessive)\nǁãu = brother\nke / kee = copula “be”\nǁu = negation particle “not”\nǀqhõʕo = dance (verb)\nɟanasa = thief (noun)\nǂqheeke = sing (verb)\nsi = future auxiliary (post‑subject)\nsíisen / sĩisen = tomorrow (temporal adverb)\nǂhun = dog (noun)\nɡǀi = our (1 pl possessive)\naŋki = father (noun)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nkiɟa = where (interrogative adverb)\nǂʔii = think (verb)\nŋǀii = see (verb)\nǃaukea = be‑afraid (verb)\nǂʔai = call (verb)\nǀeeki = woman (noun)\nkacuuʔi = ask (verb)\nts’aaʔa = like (verb)\nǈŋ = house (noun)\nǃhaeke = tomorrow (alternative form)\nkama = when (interrogative adverb)\nɟa = question‑linker for temporal wh‑clauses\nǃuu = grandfather (noun)",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object** (SVO).\n2. With a preposition: **Subject – Verb – Preposition – Object**.\n3. 1 sg object pronoun is **ŋ**, placed after the verb.\n4. 3 sg object pronoun is **ŋǁa**, placed after the verb.\n5. **ŋ** as a preposition follows the verb/adjective; as a future particle it appears immediately before the main verb (after any temporal adverb); as a complementizer it introduces embedded clauses.\n6. **Wh‑questions (interrogative pronoun)**: **cuu xae a V [Object]**.\n7. **Wh‑questions (interrogative adverb)**: **kiɟa xae Subject V [Object]** (temporal wh‑questions may insert **ɟa** after the adverb).\n8. **Relative clauses**: **N xae V [Object]** (optionally followed by an object).\n9. Possessive pronouns precede the noun they modify.\n10. Copula **ke/kee** expresses “be”.\n11. Negation **ǁu** follows the subject for non‑copular verbs (**Subject ǁu V**) and follows the copula for copular clauses (**Subject ke ǁu Adj/Verb**).\n12. Future tense: **Subject si [Temporal] ŋ Verb** or **Subject si Verb ŋ [Temporal]**. Negation can precede the auxiliary: **Subject ǁu si … ŋ Verb**.\n13. Yes/no questions have the same word order as declaratives; intonation marks the question.\n14. Two 1 sg subject forms exist: **ŋǀŋ** (general) and **na** (present‑tense).",
+          "metrics": {
+            "corpus_bleu": 26.99,
+            "corpus_chrfpp": 56.17,
+            "corpus_ter": 44.74,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.59,
+              19.3,
+              53.73,
+              51.33,
+              16.52,
+              27.52
+            ],
+            "sentence_chrfpp": [
+              37.87,
+              58.43,
+              70.23,
+              75.25,
+              41.63,
+              36.62
+            ],
+            "sentence_ter": [
+              62.5,
+              50.0,
+              33.33,
+              22.22,
+              50.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xaŋki ǁu si ŋ ǂʔai ɡǀa ǁãu",
+              "ɡǀa kee ǂhun ǃaukea ŋ ɡǀa",
+              "kiɟa xae u si ŋ ǂqheeke",
+              "na kacuuʔi ŋ ɡǀi ǃuu ke ɡǀa ǂʔii ŋǁa",
+              "cuu xae a si sĩisen ŋ ǀqhõʕo",
+              "u ŋǀii ɡǀi"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 26.99,
+        "corpus_chrfpp": 56.17,
+        "corpus_ter": 44.74,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.59,
+          19.3,
+          53.73,
+          51.33,
+          16.52,
+          27.52
+        ],
+        "sentence_chrfpp": [
+          37.87,
+          58.43,
+          70.23,
+          75.25,
+          41.63,
+          36.62
+        ],
+        "sentence_ter": [
+          62.5,
+          50.0,
+          33.33,
+          22.22,
+          50.0,
+          66.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ɡǀi xaŋki ǁu si ŋ ǂʔai ɡǀa ǁãu",
+          "ɡǀa kee ǂhun ǃaukea ŋ ɡǀa",
+          "kiɟa xae u si ŋ ǂqheeke",
+          "na kacuuʔi ŋ ɡǀi ǃuu ke ɡǀa ǂʔii ŋǁa",
+          "cuu xae a si sĩisen ŋ ǀqhõʕo",
+          "u ŋǀii ɡǀi"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu",
+          "a kee ŋ ǂhun ǃaukea ŋǁa",
+          "kiɟa xae u si ǂqheeke ŋǁa",
+          "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+          "cuu xae si ǀqhõʕo ŋ !haeke",
+          "gǀu ŋǀii i"
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 15
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 32.37,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb – Object (S‑V‑O) for simple transitive clauses.\n2. **Prepositional phrases**: The object of a preposition follows the preposition (e.g., *ŋǀŋ* “of” + *ŋ* “me”).\n3. **Negation**: The particle *ke* precedes the verb it negates.\n4. **Possessive determiners**: Possessor precedes the possessed noun (e.g., *u* “your(pl)” + *ǁãu* “brother”).\n5. **Auxiliary for declarative present**: *ǀqhõʕo* appears before the main verb in affirmative declaratives.\n6. **Interrogative pronouns**: The interrogative word (*a* “who/whom”) appears at the beginning of the clause, followed by the rest of the clause in S‑V‑O order.\n7. **Embedded questions**: In a clause like “Whom do you think about?”, the embedded clause retains S‑V‑O order, with the preposition *ǂʔii* “about” placed after the verb and before its object.",
+          "metrics": {
+            "corpus_bleu": 4.19,
+            "corpus_chrfpp": 14.73,
+            "corpus_ter": 92.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              11.52
+            ],
+            "sentence_chrfpp": [
+              2.13,
+              28.48
+            ],
+            "sentence_ter": [
+              100.0,
+              83.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ǂoo ŋǀii ŋ",
+              "ɡǀa ǃaukea ŋ ŋǀŋ"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 28.7,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Negation** – The particle *ǁu* precedes the verb it negates (e.g., *na ǁu ɡǀa* “I do not think”).\n2. **Future** – The auxiliary *si* appears before the main verb to mark future tense.\n3. **Stativity** – The copular auxiliary *ke* follows the subject and precedes a predicative adjective (e.g., *ǂhun ke ǃaukea* “The dog is afraid”).\n4. **Possessive preposition** – *ŋǀŋ* “of” takes the possessor as its complement (e.g., *ŋǀŋ ŋ* “of you”).\n5. **Prepositional phrase order** – Preposition precedes its object (*ǂʔii ŋ ɡǀa* “about you think”).\n6. **Word‑final consonant harmony** – When a noun ending in a velar stop (*‑k, ‑g*) is followed by a vowel‑initial suffix or particle, the final stop is often devoiced (e.g., *xaŋki* → *xaŋki‑a* “mother‑(poss.)”).\n7. **Vowel reduction in fast speech** – The high front vowel /i/ in unstressed syllables may reduce to [ɨ] after palatal clicks, but the orthography remains unchanged.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 57.52,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Word order** – Basic clause order is **Subject – (Possessor) – (Tense/Aspect) – Verb – (Object/Complement) – (Locative/Prepositional Phrase)**.\n2. **Future** – The auxiliary *si* is placed **immediately before** the lexical verb and marks future tense for all persons. No additional inflection on the verb.\n3. **Negation** – The particle *ǁu* precedes the verb (or verb phrase) it negates; it does **not** agree for person or number.\n4. **Yes‑no questions** – The auxiliary *ɡǀa* (or *ɡǀa*‑like form) appears at the **clause‑initial** position, followed by the subject pronoun. The rest of the clause is in declarative order.\n5. **Interrogative “where”** – The interrogative particle *kiɟa* occupies clause‑initial position; the rest of the clause follows the normal S‑V‑O order.\n6. **Possession** – The preposition *ŋǀŋ* means “of”. The possessor follows it, while the possessed noun appears **without** a separate genitive marker. Possessor pronouns can also be expressed by a dedicated possessive pronoun (e.g., *ɡǀi* “our”).\n7. **Possessive suffix** – When a noun is possessed by a pronoun, a suffix ‑ŋ attaches to the noun (e.g., *ŋǁ* “house” → *ŋǁŋ* “your house”). This suffix does **not** change for number or gender.\n8. **Stative/copular** – The copular auxiliary *ke* follows the subject and precedes a predicative adjective; the adjective does not inflect for agreement.\n9. **Prepositional phrases** – The preposition precedes its object (e.g., *ǂʔii ŋ ɡǀa* “about you think”). The object can be a pronoun or a noun phrase.\n10. **Locative complement** – The particle *ŋ* (or *ŋǁa* in the “work” example) marks a locative complement after the verb.\n11. **Agreement** – No overt agreement morphology is observed on verbs for person, number, or gender. Agreement is expressed only by the presence of the appropriate pronoun or possessive suffix.\n12. **Phonological harmony** – When a noun ending in a velar stop (*‑k, ‑g*) is followed by a vowel‑initial suffix or particle, the final stop is devoiced (e.g., *xaŋki* → *xaŋki‑a*). This does not affect the orthography but is reflected in pronunciation.",
+          "metrics": {
+            "corpus_bleu": 3.81,
+            "corpus_chrfpp": 11.86,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.92,
+              8.75
+            ],
+            "sentence_chrfpp": [
+              12.46,
+              11.26
+            ],
+            "sentence_ter": [
+              87.5,
+              83.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi aŋki si ǀqhõʕo ŋ ɡǃari",
+              "kiɟa xae ǂoo sĩisen ŋǁa"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 285.19,
+          "accumulated_dict": "- u",
+          "accumulated_rules": "1. **Word order** – Basic clause order is **Subject – (Possessor) – (Tense/Aspect) – Verb – (Object/Complement) – (Locative/Prepositional Phrase)**.\n2. **Future** – The auxiliary *si* is placed **immediately before** the lexical verb and marks future tense for all persons. No additional inflection on the verb.\n3. **Negation** – The particle *ǁu* precedes the verb (or verb phrase) it negates; it does **not** agree for person or number.\n4. **Yes‑no questions** – The auxiliary *ɡǀa* (or *ɡǀa*‑like form) appears at the **clause‑initial** position, followed by the subject pronoun. The rest of the clause is in declarative order.\n5. **Interrogative “where”** – The interrogative particle *kiɟa* occupies clause‑initial position; the rest of the clause follows the normal S‑V‑O order.\n6. **Possession** – The preposition *ŋǀŋ* means “of”. The possessor follows it, while the possessed noun appears **without** a separate genitive marker. Possessor pronouns can also be expressed by a dedicated possessive pronoun (e.g., *ɡǀi* “our”).\n7. **Possessive suffix** – When a noun is possessed by a pronoun, a suffix ‑ŋ attaches to the noun (e.g., *ŋǁ* “house” → *ŋǁŋ* “your house”). This suffix does **not** change for number or gender.\n8. **Stative/copular** – The copular auxiliary *ke* follows the subject and precedes a predicative adjective; the adjective does not inflect for agreement.\n9. **Prepositional phrases** – The preposition precedes its object (e.g., *ǂʔii ŋ ɡǀa* “about you think”). The object can be a pronoun or a noun phrase.\n10. **Locative complement** – The particle *ŋ* (or *ŋǁa* in the “work” example) marks a locative complement after the verb.\n11. **Agreement** – No overt agreement morphology is observed on verbs for person, number, or gender. Agreement is expressed only by the presence of the appropriate pronoun or possessive suffix.\n12. **Phonological harmony** – When a noun ending in a velar stop (*‑k, ‑g*) is followed by a vowel‑initial suffix or particle, the final stop is devoiced (e.g., *xaŋki* → *xaŋki‑a*). This does not affect the orthography but is reflected in pronunciation.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.19,
+        "corpus_chrfpp": 14.73,
+        "corpus_ter": 92.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          11.52
+        ],
+        "sentence_chrfpp": [
+          2.13,
+          28.48
+        ],
+        "sentence_ter": [
+          100.0,
+          83.33
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ǂoo ŋǀii ŋ",
+          "ɡǀa ǃaukea ŋ ŋǀŋ"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu",
+          "a kee ŋ ǂhun ǃaukea ŋǁa"
+        ],
+        "num_evaluated": 2
+      },
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 114.15,
+          "metrics": {
+            "corpus_bleu": 5.42,
+            "corpus_chrfpp": 29.05,
+            "corpus_ter": 73.68,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.98,
+              15.62,
+              19.38,
+              11.99,
+              8.17,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              29.79,
+              39.43,
+              18.75,
+              36.19,
+              19.49,
+              28.57
+            ],
+            "sentence_ter": [
+              62.5,
+              83.33,
+              66.67,
+              66.67,
+              66.67,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɡǀi xaŋki si ǁu kacuuʔi u ǁãu",
+              "ŋ ǂhun ke ǃaukea a ɡǀi kacuuʔi",
+              "u si ǀqhõʕo ǃhaeke",
+              "na ke kacuuʔi ɟanasa ŋ ǂhun ke a ǂʔii",
+              "kiɟa xae ǂhun síisen ŋ ǃhaeke",
+              "ɡǀa ǁu ŋǀii ɡǀi ǃhaeke"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.42,
+        "corpus_chrfpp": 29.05,
+        "corpus_ter": 73.68,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.98,
+          15.62,
+          19.38,
+          11.99,
+          8.17,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          29.79,
+          39.43,
+          18.75,
+          36.19,
+          19.49,
+          28.57
+        ],
+        "sentence_ter": [
+          62.5,
+          83.33,
+          66.67,
+          66.67,
+          66.67,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ɡǀi xaŋki si ǁu kacuuʔi u ǁãu",
+          "ŋ ǂhun ke ǃaukea a ɡǀi kacuuʔi",
+          "u si ǀqhõʕo ǃhaeke",
+          "na ke kacuuʔi ɟanasa ŋ ǂhun ke a ǂʔii",
+          "kiɟa xae ǂhun síisen ŋ ǃhaeke",
+          "ɡǀa ǁu ŋǀii ɡǀi ǃhaeke"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu",
+          "a kee ŋ ǂhun ǃaukea ŋǁa",
+          "kiɟa xae u si ǂqheeke ŋǁa",
+          "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+          "cuu xae si ǀqhõʕo ŋ !haeke",
+          "gǀu ŋǀii i"
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 205.47,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 20.76,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.99,
+            "corpus_ter": 102.63,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              1.95,
+              3.32,
+              3.57,
+              2.28,
+              4.79,
+              1.25
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Does the man see me?",
+              "Are you_{sg} afraid of me?",
+              "Whom do you_{sg} think about?",
+              "Your_{pl} brother does not dance.",
+              "Is it the thief who sings?",
+              "Will I work tomorrow?"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 2.99,
+        "corpus_ter": 102.63,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.95,
+          3.32,
+          3.57,
+          2.28,
+          4.79,
+          1.25
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Does the man see me?",
+          "Are you_{sg} afraid of me?",
+          "Whom do you_{sg} think about?",
+          "Your_{pl} brother does not dance.",
+          "Is it the thief who sings?",
+          "Will I work tomorrow?"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu",
+          "a kee ŋ ǂhun ǃaukea ŋǁa",
+          "kiɟa xae u si ǂqheeke ŋǁa",
+          "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+          "cuu xae si ǀqhõʕo ŋ !haeke",
+          "gǀu ŋǀii i"
+        ],
+        "num_evaluated": 6
+      },
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 2.99,
+        "ter_delta": 2.63,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 5.8,
+      "ter": 200.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**N|uuki:**  \n*Ŋa‑kʰa tʰa na‑ri kʰa sə bʊr‑a kʰi tʰa ŋa‑ri.*  \n\n*(Word‑by‑word gloss: “our‑mother NEG‑call you‑sg brothe",
+      "reference": "i xaŋki ke ǁu si !ʔai a ǁãu"
+    },
+    "baseline": {
+      "best_bleu": 5.55,
+      "best_chrf": 36.73,
+      "best_ter": 68.42,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ɡǀi xa ke ǀqhõʕo ǁãu a ŋǀii",
+        "u ǂhun ǃaukea ŋ ǁa",
+        "kiɟa si ǂqheeke ǁǁa",
+        "ɟa kacuuʔi ǂqheeke ŋ ɟanasa ǃuu a ŋǀii",
+        "ŋǀŋ si ǀqhõʕo ǃhaeke",
+        "ɡǀa si ŋǀii ŋǁŋ"
+      ],
+      "best_references": [
+        "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "kiɟa xae u si ǂqheeke ŋǁa",
+        "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "cuu xae si ǀqhõʕo ŋ !haeke",
+        "gǀu ŋǀii i"
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 26.99,
+      "best_chrf": 56.17,
+      "best_ter": 44.74,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "ɡǀi xaŋki ǁu si ŋ ǂʔai ɡǀa ǁãu",
+        "ɡǀa kee ǂhun ǃaukea ŋ ɡǀa",
+        "kiɟa xae u si ŋ ǂqheeke",
+        "na kacuuʔi ŋ ɡǀi ǃuu ke ɡǀa ǂʔii ŋǁa",
+        "cuu xae a si sĩisen ŋ ǀqhõʕo",
+        "u ŋǀii ɡǀi"
+      ],
+      "best_references": [
+        "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "kiɟa xae u si ǂqheeke ŋǁa",
+        "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "cuu xae si ǀqhõʕo ŋ !haeke",
+        "gǀu ŋǀii i"
+      ],
+      "best_step": 15
+    },
+    "step_by_step": {
+      "best_bleu": 4.19,
+      "best_chrf": 14.73,
+      "best_ter": 92.86,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "ǂoo ŋǀii ŋ",
+        "ɡǀa ǃaukea ŋ ŋǀŋ"
+      ],
+      "best_references": [
+        "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "a kee ŋ ǂhun ǃaukea ŋǁa"
+      ],
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "best_bleu": 5.42,
+      "best_chrf": 29.05,
+      "best_ter": 73.68,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ɡǀi xaŋki si ǁu kacuuʔi u ǁãu",
+        "ŋ ǂhun ke ǃaukea a ɡǀi kacuuʔi",
+        "u si ǀqhõʕo ǃhaeke",
+        "na ke kacuuʔi ɟanasa ŋ ǂhun ke a ǂʔii",
+        "kiɟa xae ǂhun síisen ŋ ǃhaeke",
+        "ɡǀa ǁu ŋǀii ɡǀi ǃhaeke"
+      ],
+      "best_references": [
+        "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "kiɟa xae u si ǂqheeke ŋǁa",
+        "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "cuu xae si ǀqhõʕo ŋ !haeke",
+        "gǀu ŋǀii i"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 0.0,
+      "best_chrf": 2.99,
+      "best_ter": 102.63,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Does the man see me?",
+        "Are you_{sg} afraid of me?",
+        "Whom do you_{sg} think about?",
+        "Your_{pl} brother does not dance.",
+        "Is it the thief who sings?",
+        "Will I work tomorrow?"
+      ],
+      "best_references": [
+        "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "kiɟa xae u si ǂqheeke ŋǁa",
+        "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "cuu xae si ǀqhõʕo ŋ !haeke",
+        "gǀu ŋǀii i"
+      ],
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 2.99,
+        "ter_delta": 2.63,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

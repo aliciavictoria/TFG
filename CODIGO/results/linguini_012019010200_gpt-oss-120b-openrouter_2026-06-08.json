@@ -1,0 +1,1010 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T11:22:53.652111",
+    "puzzle_id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 11,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "We will go away and they will come.",
+        "target": "Wananuuwa mananiib.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I take the pig and he takes the fish.",
+        "target": "Awon biina oon been",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He saw the water and the house and heard the dog.",
+        "target": "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "You(sg) eat the bread and sing.",
+        "target": "Om aneneb wingkeeb.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "We will go away and they will come.",
+      "reference": "Wananuuwa mananiib.",
+      "hypothesis": "**Yonggom (best‑effort translation)**  \n\n*“Mik‑aŋa ɲaŋa, a‑pɨr‑iŋa ɲaŋa.”*  \n\n*Explanation*  \n- **Mik‑aŋa** – “we (inclusive) will go” (future marker *‑aŋa*).  \n- **ɲaŋa** – “away / elsewhere”.  \n- **a‑pɨr‑iŋa** – “they will come” (subject prefix *a‑* for third‑person plural, verb *pɨr* “come”, future suffix *‑iŋa*).  \n- The final **ɲaŋa** again marks the direction “to here / arrive”.  \n\n*Note:* This is a tentative reconstruction based on the limited published material on Yonggom grammar and vocabulary. The actual language may use different pronoun forms, aspect markers, or word order. If you have a native speaker or a more detailed reference, please verify and adjust the translation accordingly.",
+      "latency_s": 12.37,
+      "metrics": {
+        "corpus_bleu": 0.22,
+        "corpus_chrfpp": 3.1,
+        "corpus_ter": 5100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.22
+        ],
+        "sentence_chrfpp": [
+          3.1
+        ],
+        "sentence_ter": [
+          5100.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Yonggom (best‑effort translation)**  \n\n*“Mik‑aŋa ɲaŋa, a‑pɨr‑iŋa ɲaŋa.”*  \n\n*Explanation*  \n- **Mik‑aŋa** – “we (inclusive) will go” (future marker *‑aŋa*).  \n- **ɲaŋa** – “away / elsewhere”.  \n- **a‑pɨr‑iŋa** – “they will come” (subject prefix *a‑* for third‑person plural, verb *pɨr* “come”, future suffix *‑iŋa*).  \n- The final **ɲaŋa** again marks the direction “to here / arrive”.  \n\n*Note:* This is a tentative reconstruction based on the limited published material on Yonggom grammar and vocabulary. The actual language may use different pronoun forms, aspect markers, or word order. If you have a native speaker or a more detailed reference, please verify and adjust the translation accordingly."
+        ],
+        "references": [
+          "Wananuuwa mananiib."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 44.36,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 46.21,
+          "accumulated_dict": "- men‑ = 1st person singular subject (I)\n- ‑eni = verb “come” (present)\n- wing‑ = 2nd person singular subject (you)\n- ‑keewa = verb “sing” (present)\n- ‑di‑ = 1st person singular subject (I) (alternative form)\n- ‑riin = verb “get up” (present)\n- an‑ = verb “see/saw” (past)\n- ‑ona = object marker “the man”\n- wed‑ = noun “dog” (or object marker)\n- ‑maan = conjunction “and” (used after nouns)\n- karuwa = conjunction “and” (clause linker)",
+          "accumulated_rules": "1. Subject pronouns are affixed to the verb stem: 1sg → men‑ / ‑di‑, 2sg → wing‑.\n2. Verb stems follow the subject affix and may take a tense suffix (‑eni “come”, ‑keewa “sing”, ‑riin “get up”, ‑ona “see”).\n3. The conjunction *karuwa* links two clauses.\n4. The suffix *‑maan* attaches to a noun to form the coordinating conjunction “and” when joining objects.\n5. Objects follow the verb directly as a noun‑suffix complex (e.g., *‑ona* “the man”, *wed‑* “dog”).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 117.3,
+          "accumulated_dict": "- men‑ = 1st person singular subject (I)\n- ‑eni = verb “come” (present)\n- wing‑ = 2nd person singular subject (you)\n- ‑keewa = verb “sing” (present)\n- ‑di‑ = 1st person singular subject (I) (alternative form)\n- ‑riin = verb “get up” (present)\n- an‑ = verb “see/saw” (past)\n- ‑ona = object marker “the man”\n- wed‑ = noun “dog” (or object marker)\n- ‑maan = conjunction “and” (used after nouns)\n- karuwa = conjunction “and” (clause linker)",
+          "accumulated_rules": "1. **Subject marking** – 1sg is a prefix *men‑* (or the suffix *‑di‑* in certain constructions); 2sg is a prefix *wing‑*; 3sg is a suffix *‑b* attached to the verb stem.\n2. **Verb formation** – Verb = [subject affix] + [verb root] + [tense/aspect suffix] (e.g., *men‑eni*, *wing‑keewa*, *amb‑b*).\n3. **Clause linking** – Two clauses are joined by either the independent conjunction *karuwa* or the fused element *yeedi* which simultaneously means “and I”.\n4. **Object marking** – A noun follows the verb directly and takes a definite‑object suffix (*‑ona*, *‑moona*, *‑an*). The suffix varies with the noun class but functions uniformly as “the X”.\n5. **Coordinating nouns** – When a noun is the last item of a coordinated list, the suffix *‑maan* attaches to it, yielding “X and”.\n6. **Word order** – Basic order is **Subject‑Verb‑Object**; when two clauses are coordinated, the first clause ends with the conjunction (*karuwa* or *yeedi*) and the second clause begins with its own subject‑verb complex.\n[DELETED: Rule 4 in the previous version that said “Objects follow the verb directly as a noun‑suffix complex (e.g., ‑ona “the man”, ‑wed “dog”).” – refined to show multiple object suffixes and that the noun root can vary.]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 112.79,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking** – 1 sg can be a prefix *men‑*; 2 sg a prefix *wing‑*; 3 sg a suffix *‑b* on the verb.\n2. **Verb formation** – Verb = [subject affix (if any)] + [verb root] + [tense/aspect suffix]. Past = *‑an*, future = *‑renu* / *‑nuun*.\n3. **Clause linking** – Two clauses are joined by the independent conjunction *karuwa* or by the fused element *yeedi* (“and I”).\n4. **Noun formation** – A noun is a lexical root followed by a fixed noun‑stem suffix (*‑ona, ‑maan, ‑moona, ‑on*) that encodes the meaning of the noun (“man”, “dog”, “house”, “pig”).\n5. **Coordinating nouns** – When a noun is the final item of a coordinated noun list, the noun‑stem itself carries the meaning “X and” (e.g., *‑maan* = “dog and”).\n6. **Word order** – Basic order is **Subject‑Verb‑Object**; in coordinated clauses the first clause ends with *karuwa* or *yeedi* and the second clause begins with its own subject‑verb complex.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 154.35,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking** –\n- 1 sg: prefix *men‑* (or past‑1 sg suffix *‑an* on a transitive verb).\n- 2 sg: prefix *wing‑*.\n- 3 sg: suffix *‑b* (present/past) or the future markers *om* / *yeede‑* (future).\n- 1 pl: suffix *‑ub* on the verb.\n2. **Verb formation** – Verb = [subject affix (if any)] + [verb root] + [tense/aspect suffix] + [subject suffix (if required)].\n- Present: no tense suffix.\n- Past: suffix *‑an* (also marks 1 sg on transitive verbs).\n- Future: suffix *‑renu* / *‑nuun*; when preceded by *om* or *yeede‑* the verb is interpreted as 3 sg.\n3. **Clause linking** – Two clauses are joined by the independent conjunction *karuwa* or by the fused element *yeedi* (“and I”). Inside a single sentence, *aw* can be used for “and I”.\n4. **Noun formation** – Noun = [definite article *wed‑* (optional)] + [lexical root] + [noun‑stem suffix] (*‑ona, ‑maan, ‑moona, ‑on*).\n5. **Coordinated nouns** – When a noun is the final item of a coordinated noun list, its noun‑stem itself carries the meaning “X and” (e.g., *‑maan* = “dog and”). The conjunction *karuwa* links the clauses, not the nouns.\n6. **Word order** – Basic order is **Subject‑Verb‑Object**. In coordinated clauses the first clause ends with *karuwa* or *yeedi* and the second clause begins with its own subject‑verb complex.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 133.99,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking**\n- 1 sg: prefix *men‑* on the verb (present) or past suffix *‑an* on a transitive verb.\n- 2 sg: prefix *wing‑* on the verb.\n- 3 sg: suffix *‑b* on past verbs; future 3 sg is marked by either the particle *om* before a future‑tense verb or the prefix *yeede‑* attached to the verb.\n- 1 pl: suffix *‑ub* on the verb.\n- 3 pl: particle *om* before a verb in past or future when the clause is part of a coordinated structure.\n2. **Verb formation**\nVerb = [subject prefix (if any)] + [verb root] + [tense/aspect suffix (‑an for past, ‑renu/‑nuun for future, none for present)] + [subject suffix (‑b, ‑ub, etc.)].\nWhen the object noun is attached, it follows the verb root **before** any tense or subject suffixes (e.g., *an‑ona* “see‑man”).\n3. **Clause linking**\n- *karuwa* links two independent clauses.\n- *yeedi* and *awon* are fused clause‑linkers that also encode the subject “I” for the following verb.\n4. **Noun formation**\nNoun = [optional article *wed‑*] + [noun stem] (e.g., *‑ona, ‑maan, ‑moona, ‑on*).\n5. **Object incorporation**\nThe direct object can be suffixed directly to the verb root, forming a single lexical word (verb‑object fusion).\n6. **Word order**\nBasic clause order: **Subject‑Verb‑Object** (object may be fused to the verb). In coordinated sentences the first clause ends with *karuwa* or a fused linker (*yeedi*, *awon*), and the second clause begins with its own subject‑verb complex (or inherits the subject via a suffix).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 122.86,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking**\n- 1 sg: prefix *men‑* on present verbs; past transitive verbs use suffix *‑an* (which also marks past).\n- 2 sg: prefix *wing‑* on present verbs.\n- 3 sg: suffix *‑b* on past verbs; future 3 sg is expressed by the particle *om* before a future‑tense verb, or by the prefix *yeede‑* before a future‑tense suffix.\n- 1 pl: suffix *‑ub* on past verbs; future 1 pl uses the composite suffix *‑nub* (‑n‑ + ‑ub).\n- 3 pl: particle *om* before a verb in coordinated structures (future or past).\n2. **Verb formation**\nVerb = [subject prefix (if any)] + [verb root] + [object noun (if incorporated)] + [tense/aspect suffix (‑an, ‑renu, ‑nuun, or ‑nub)] + [subject suffix (‑b, ‑ub, etc.)].\nThe object noun, when incorporated, appears directly after the root and before any tense or subject suffixes.\n3. **Clause linking**\n- *karuwa* and *awon* are simple coordinators meaning “and”.\n- *yeedi* is a fused coordinator meaning “and I” (adds a 1 sg subject to the following clause).\n- In 3 sg future clauses the particle *om* precedes the verb; when a future suffix is also present, *om* still appears (e.g., *om banuun*).\n4. **Noun formation**\nNoun = [definite article *wed‑* (optional)] + [noun stem]. The article is obligatory when the noun is a definite object.\n5. **Word order**\nBasic clause order is **Subject‑Verb‑Object**; when the object is incorporated, the noun appears inside the verb complex as described in Rule 2.\n6. **Tense‑subject interaction**\n- Past: suffix *‑an* (also marks 1 sg on transitive verbs) or *‑b* (marks 3 sg).\n- Future: suffix *‑renu* (general) or *‑nuun* (after *om*); 1 pl uses *‑nub*; 3 sg future is signalled by *om* or *yeede‑* before the future suffix.\n[DELETED: rule “‑di‑ as 1 sg suffix” – never attested]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 133.78,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking**\n- 1 sg: prefix **men‑** on present/future verbs; on past transitive verbs the subject is encoded by the suffix **‑an**.\n- 1 pl: prefix **wing‑** on present/future verbs; future 1 pl uses the suffix **‑nub / ‑uub** (‑n‑ + ‑ub).\n- 3 sg: suffix **‑b** on past verbs; future 3 sg is expressed either by the particle **om** before a verb with **‑nuun**, or by the prefix **yeede‑** before a verb with **‑renu**.\n- 3 pl: particle **om** before a verb (future or past) when the clause is coordinated.\n2. **Verb complex**\nVerb = [subject prefix (if any)] + [verb root] + [object noun (optional, incorporated)] + [tense/aspect morpheme] + [subject suffix (if any)].\n- Past tense is either the suffix **‑an** (also 1 sg on transitive) or the suffix **‑b** (3 sg).\n- Future tense uses **‑renu** (general) or **‑nuun** (after **om**). 1 pl future adds **‑n‑** before **‑ub**.\n3. **Object incorporation**\nWhen the object noun is incorporated, it follows the verb root and precedes any tense or subject suffixes (e.g., *an‑ona* “see‑man”). Separate definite objects appear as *wed‑* + noun.\n4. **Clause linking**\n- **karuwa** and **awon** are coordinators meaning “and”.\n- **yeedi** = “and I”; it attaches to the following verb and supplies a 1 sg subject.\n- **yeede‑** = 3 sg future marker; it appears before a future suffix.\n- **om** = particle introducing a 3 sg or 3 pl future clause; it also appears before a past verb in coordinated structures.\n5. **Word order**\nBasic order is **Subject – Verb – Object**. When the object is incorporated, it is inside the verb complex; otherwise it follows the verb as a separate noun phrase with the definite article *wed‑*.\n6. **Tense‑subject interaction**\n- Past: **‑an** (1 sg on transitive) or **‑b** (3 sg).\n- Future: **‑renu** (general), **‑nuun** (after **om**), **‑nub / ‑uub** (1 pl).\n- 3 sg future: either **om** + verb + **‑nuun**, or **yeede‑** + verb + **‑renu**.\n[DELETED: rule “‑di‑ as 1 sg suffix” – never attested]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 168.74,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking**\n1.1. 1 sg: prefix *men‑* on present/future verbs; on past transitive verbs the subject is encoded by the suffix *‑an*.\n1.2. 2 sg: prefix *wing‑* on present/future verbs.\n1.3. 3 sg: suffix *‑b* on past verbs; future 3 sg is expressed either by the particle *om* + verb + *‑nuun* or by the prefix *yeede‑* + verb + *‑renu*.\n1.4. 1 pl: future suffix *‑enub* / *‑nuub* attached to the verb stem (no subject prefix).\n1.5. 3 pl: subject suffix *‑ib* on verbs (both present and future); the particle *om* can also introduce a coordinated 3 pl clause.\n2. **Verb complex**\nVerb = [subject prefix (if any)] + [verb root] + [object noun (if incorporated)] + [tense/aspect morpheme] + [subject suffix (if any)].\n- Past: *‑an* (1 sg on transitive) or *‑b* (3 sg).\n- Future: *‑renu* (general), *‑nuun* (after *om*), *‑enub/‑nuub* (1 pl), *‑ib* (3 pl).\n3. **Object incorporation vs. separate object**\n- When the object noun is incorporated, it follows the verb root and precedes any tense/subject suffixes (e.g., *an‑ona* “see‑man”).\n- Separate definite objects appear as *wed‑* + noun and follow the verb phrase.\n4. **Clause linking**\n- *karuwa*, *awon* = simple coordinators “and”.\n- *ye* = “and” used inside complex future clauses.\n- *yeedi* = “and I” (conjunction that also supplies a 1 sg subject).\n- *yeede‑* = 3 sg future marker (precedes *‑renu*).\n- *om* = particle that introduces a coordinated clause; with future it is followed by *‑nuun*, with past it simply links the clause.\n5. **Word order**\nBasic order is **Subject – Verb – Object**. When the object is incorporated it is inside the verb complex; otherwise it follows the verb as a separate noun phrase introduced by *wed‑*.\n6. **Tense‑subject interaction**\n- Past: *‑an* (1 sg on transitive) or *‑b* (3 sg).\n- Future: *‑renu* (general), *‑nuun* (after *om*), *‑enub/‑nuub* (1 pl), *‑ib* (3 pl).\n- 3 sg future can be expressed either as *om* + verb + *‑nuun* or *yeede‑* + verb + *‑renu*.\n[DELETED: rule “‑di‑ as 1 sg suffix” – no evidence]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 112.14,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\n‑di‑ = 1 sg subject suffix (alternative) – [DELETED: not attested in the current data]\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg subject suffix “he/she/it”\n‑eni = verb “come” (present)\n‑keewa = verb “sing” (present)\n‑riin = verb “get up” (present)\n‑an = past tense suffix (also encodes 1 sg subject on transitive verbs)\n‑renu / ‑nuun = future tense suffix (also encodes 3 sg subject when preceded by *om*)\nan = verb root “see” (past)\nba = verb root “take” / “get” (used for “take” and “will take”)\n‑ona = noun “man” (definite)\n‑maan = noun “dog” (definite)\n‑moona = noun “house” (definite)\n‑on = noun “pig” (definite)\nkaruwa = conjunction “and” (clause‑linker)\nyeedi = fused element “and I” (clause‑linker + 1 sg)",
+          "accumulated_rules": "1. **Subject marking**\n1.1. 1 sg: prefix *men‑* on present/future verbs; on past transitive verbs the subject is encoded by the suffix *‑an*.\n1.2. 2 sg: prefix *wing‑* on present/future verbs (when *wing‑* functions as a subject prefix).\n1.3. 3 sg:\n- Past: suffix *‑b*.\n- Future: either *yeede‑* + verb + *‑renu* or *om* + verb + *‑nuun*.\n1.4. 1 pl: suffix *‑enub* (general) or *‑nuub* when the clause follows a coordinator. No subject prefix.\n1.5. 3 pl: suffix *‑ib* on present verbs; on future verbs the suffix *‑ib* follows the future marker (e.g., *yeederenib*). The particle *om* can also introduce a 3 pl clause.\n2. **Verb complex**\nVerb = [subject prefix (if any)] + [verb root] + [object noun (if incorporated)] + [tense/aspect morpheme] + [subject suffix (if any)].\n3. **Tense / aspect morphemes**\n- Past: *‑b* (3 sg) or *‑an* (1 sg transitive).\n- Future: *‑renu* (general), *‑nuun* (3 sg after *om* or after a coordinator), *‑neen* (variant 3 sg), *‑enub/‑nuub* (1 pl), *‑ib* (3 pl).\n4. **Object expression**\n- Incorporated object: follows the verb root directly (e.g., *an‑ona*).\n- Separate definite object: introduced by *wed‑* and placed after the verb complex.\n5. **Clause linking**\n- *karuwa* = simple “and”.\n- *ye* = “and” used inside future clauses.\n- *yeedi* = “and I” (adds 1 sg subject to the following verb).\n- *om* = coordinating particle; with future verbs the verb takes *‑nuun*; with past verbs it simply links clauses.\n6. **Word order**\nBasic order: **Subject – Verb – Object**. When the object is incorporated it appears inside the verb complex; otherwise it follows the verb phrase as a separate noun phrase introduced by *wed‑*.\n[DELETED: rule “‑di‑ as 1 sg suffix” – no supporting data]\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 129.02,
+          "accumulated_dict": "men‑ = 1 sg subject prefix “I”\nwing‑ = 2 sg subject prefix “you”\n‑b = 3 sg past suffix (also marks 3 sg on some verbs)\n‑an = past transitive suffix (marks 1 sg subject on transitive verbs)\n‑renu = future suffix (general)\n‑nuun = future 3 sg suffix (after *om* or after a coordinator)\n‑enub = 1 pl future suffix\n‑nuub = 1 pl future suffix after a coordinator\n‑ib = 3 pl present/future suffix\n‑eni = verb ‘come’ (present)\n‑keewa = verb ‘sing’ (present)\n‑riin = verb ‘get up’ (present)\n‑am = verb ‘see’ (root used in past forms)\n‑ambar = verb ‘hear’\n‑ona = noun ‘man’ (definite)\n‑maan = noun ‘dog’ (definite)\n‑moona = noun ‘house’ (definite)\n‑on = noun ‘pig’ (definite)\n‑ba = verb ‘take / get’ (root)\nkaruwa = conjunction “and” (clause‑linker)\nawon = conjunction “and” (alternative linker)\nyeedi = fused “and I” (conjunction + 1 sg)\nyeede = “and” used in future 3 sg construction\nom = coordinating particle; also part of 3 pl subject pronoun *Oma*\nOma = 3 pl subject pronoun “they”\nwed‑ = object marker introducing a separate definite noun phrase\n‑nuun = future 3 sg suffix (see above)\n‑enub / ‑nuub = 1 pl future suffix (see above)",
+          "accumulated_rules": "1. **Subject marking**\n1.1. 1 sg: prefix *men‑* on present/future verbs; past transitive verbs use suffix *‑an*.\n1.2. 2 sg: prefix *wing‑* on present/future verbs.\n1.3. 3 sg:\n- Past: suffix *‑b*.\n- Future: either *om + verb + ‑nuun* or *yeede + verb + ‑renu*.\n1.4. 1 pl: suffix *‑enub* (general) or *‑nuub* after a coordinator; no subject prefix.\n1.5. 3 pl: subject pronoun *Oma* (or particle *om* before the verb); verb takes suffix *‑ib* (present/future).\n2. **Verb complex**\nVerb = [subject prefix (if any)] + [verb root] + [object noun (if incorporated)] + [tense/aspect morpheme] + [subject suffix (if any)].\n3. **Tense / aspect morphemes**\n- Past: *‑b* (3 sg) or *‑an* (1 sg transitive).\n- Future: *‑renu* (general), *‑nuun* (3 sg after *om* or after a coordinator), *‑enub / ‑nuub* (1 pl), *‑ib* (3 pl).\n4. **Object expression**\n- Incorporated object follows the verb root directly (e.g., *anona* “see‑man”).\n- Separate definite object is introduced by *wed‑* and follows the verb complex.\n5. **Clause linking**\n- *karuwa* and *awon* = simple “and”.\n- *ye* = “and” used inside future clauses.\n- *yeedi* = “and I” (adds 1 sg subject to the following verb).\n- *yeede* = “and” used in the 3 sg future construction (*yeede + verb + ‑renu*).\n- *om* = coordinating particle; with future verbs the verb takes *‑nuun*; with past verbs it simply links clauses.\n6. **Word order**\nBasic order: **Subject – Verb – Object**.\n- When the object is incorporated it appears inside the verb complex; otherwise it follows the verb phrase as a separate noun phrase introduced by *wed‑*.\n[DELETED: ‑di‑ = 1 sg subject suffix – no attested data]",
+          "metrics": {
+            "corpus_bleu": 2.67,
+            "corpus_chrfpp": 19.47,
+            "corpus_ter": 125.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              5.52,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              17.87,
+              9.15,
+              21.37,
+              27.0
+            ],
+            "sentence_ter": [
+              200.0,
+              125.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub karuwa om eninuun.",
+              "menba wedon karuwa bab wedaan.",
+              "ambib wedaan karuwa wedmoona karuwa ambarb wedmaan.",
+              "wingok wedbaan karuwa wingkeewa."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.67,
+        "corpus_chrfpp": 19.47,
+        "corpus_ter": 125.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          0.0,
+          5.52,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          17.87,
+          9.15,
+          21.37,
+          27.0
+        ],
+        "sentence_ter": [
+          200.0,
+          125.0,
+          100.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub karuwa om eninuun.",
+          "menba wedon karuwa bab wedaan.",
+          "ambib wedaan karuwa wedmoona karuwa ambarb wedmaan.",
+          "wingok wedbaan karuwa wingkeewa."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 10
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 51.25,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb – (Conjunction) – Verb – Object(s).\n2. **Conjunction**: The particle **anona** links verbs and also links coordinated objects.\n3. **Subject agreement on verbs**: Verbs carry a suffix that indexes the subject.\n- Suffix **‑maan** marks 1st‑person singular subjects.\n- Suffix **‑moona** marks 3rd‑person singular subjects.\n- (The 2nd‑person singular form appears fused with the verb stem, as in *Wingkeewa*.)\n4. **Pronouns**: Independent pronouns appear before the verb when the verb is not already inflected for that person (e.g., *Meneni* “I”, *Ambib* “he”).\n5. **Noun phrase**: Nouns follow the verb directly; no overt article is used.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 23.61,
+          "accumulated_dict": "- yeederenu = ‘she will get up’\n- om = conjunction ‘and’ (links verbs and also links coordinated objects)\n- banuun = ‘bread’\n- wenenub = ‘we will go away’\n- wingkanuub = ‘will sing’",
+          "accumulated_rules": "1. **Conjunction “om”** links two verb phrases or two objects within the same clause. It appears between the first verb (or object) and the second verb (or object).\n2. **Verb morphology**: Verbs take a suffix that indexes the subject. In the data we see:\n- **‑enu** marks 3rd‑person singular subjects (e.g., *yeeder‑enu* “she gets up”).\n- **‑ub** marks 1st‑person plural subjects (e.g., *wenen‑ub* “we go away”).\n- **‑uub** (or lengthened vowel) marks 1st‑person plural for a different verb class (e.g., *wingkan‑uub* “we sing”).\n(These patterns are provisional and may be refined with more data.)\n3. **Word order** remains Subject – Verb – (Conjunction) – Verb – Object(s) as previously established.\n4. **Noun placement**: Nouns follow the verb directly; no articles are used.",
+          "metrics": {
+            "corpus_bleu": 11.04,
+            "corpus_chrfpp": 12.25,
+            "corpus_ter": 116.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              14.8,
+              10.01
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "yeederenu om banuun.",
+              "wenenub wingkanuub."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 32.64,
+          "accumulated_dict": "- yeederenu = ‘she will get up’\n- om = conjunction ‘and’ (links verbs and also links coordinated objects)\n- banuun = ‘bread’\n- wenenub = ‘we will go away’\n- wingkanuub = ‘will sing’\n- oma = ‘they’ (subject pronoun, 3rd person plural)\n- oka = ‘eat’ (verb stem)\n- aniib = ‘bread’ (noun)\n- anon = ‘we’ (subject pronoun, 1st person plural)\n- ye = future‑tense marker (pre‑verb particle used with 3rd person singular subjects)\n- weng = ‘hear’ (verb stem)\n- wengambara = ‘dog’ (noun)\n- nuuwa = ‘and’ (conjunction used when the second clause has a 3rd person singular subject)\n- neen = ‘pig’ (noun)\n- ok = ‘I’ (subject pronoun, 1st person singular)\n- anaana = ‘drink’ (verb stem, past)\n- oon = ‘water’ (noun)\n- wedmeen = ‘see‑fish’ (verb phrase meaning ‘saw the fish’)",
+          "accumulated_rules": "1. **Subject pronouns** appear clause‑initially and index the person/number of the clause.\n2. **Verb morphology**:\n- Verbs take a suffix that indexes the subject **and** the tense.\n- **‑enu** = 3rd person singular, future.\n- **‑ub** = 1st person plural, future.\n- **‑uub** = 1st person plural, future for a different verb class.\n- **‑ana** = 1st person singular, past (as in *anaana* “drank”).\n- When the subject is 3rd person singular and the clause is future, a preverbal particle **ye** precedes the verb stem (e.g., *ye weng* “he will hear”).\n3. **Conjunction “om”** links two verb phrases or two objects within the same clause. It is placed **between** the first verb (or object) and the second verb (or object).\n4. **Object order**: The direct object follows the verb directly; when two objects are coordinated, they are linked by **om**.\n5. **Word order**:\n**Subject – Verb – Object – (om – Verb – Object)**.\nIf the second clause has a different subject, the subject pronoun is repeated before the second verb.\n6. **Noun placement**: Nouns follow the verb they belong to; no articles are used.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 22.22,
+          "accumulated_dict": "- yeederenu = ‘she will get up’\n- om = conjunction ‘and’ (links verbs and also links coordinated objects)\n- banuun = ‘bread’\n- wenenub = ‘we will go away’\n- wingkanuub = ‘will sing’\n- oma = ‘they’ (subject pronoun, 3rd person plural)\n- oka = ‘eat’ (verb stem)\n- aniib = ‘bread’ (noun)\n- anon = ‘we’ (subject pronoun, 1st person plural)\n- ye = future‑tense marker (pre‑verb particle used with 3rd person singular subjects)\n- weng = ‘hear’ (verb stem)\n- wengambara = ‘dog’ (noun)\n- nuuwa = ‘and’ (conjunction used when the second clause has a 3rd person singular subject)\n- neen = ‘pig’ (noun)\n- ok = ‘I’ (subject pronoun, 1st person singular)\n- anaana = ‘drink’ (verb stem, past)\n- oon = ‘water’ (noun)\n- wedmeen = ‘see‑fish’ (verb phrase meaning ‘saw the fish’)",
+          "accumulated_rules": "1. **Subject pronouns** appear clause‑initially and index the person/number of the clause.\n2. **Verb morphology**:\n- Verbs take a suffix that indexes the subject **and** the tense.\n- **‑enu** = 3rd person singular, future.\n- **‑ub** = 1st person plural, future.\n- **‑uub** = 1st person plural, future for a different verb class.\n- **‑ana** = 1st person singular, past.\n- When the subject is 3rd person singular and the clause is future, a preverbal particle **ye** precedes the verb stem (e.g., *ye weng* “he will hear”).\n3. **Conjunction “om”** links two verb phrases or two objects within the same clause. It is placed **between** the first verb (or object) and the second verb (or object).\n4. **Object order**: The direct object follows the verb directly; when two objects are coordinated, they are linked by **om**.\n5. **Word order**: **Subject – Verb – Object – (om – Verb – Object)**.\nIf the second clause has a different subject, the subject pronoun is repeated before the second verb.\n6. **Noun placement**: Nouns follow the verb they belong to; no articles are used.\n7. **Negation** (inductive hypothesis): a pre‑verbal particle **na** precedes the verb stem to negate the clause (e.g., *na weng* “does not hear”). This hypothesis awaits confirmation from further data.\n8. **Yes‑no questions** (inductive hypothesis): the particle **ka** is placed at the very start of the clause, before the subject pronoun (e.g., *ka ok weng‑ana* “Did I hear?”). This is provisional.\n9. **Embedded clauses / complex sentences** (inductive hypothesis): a subordinate clause introduced by **nuuwa** follows the main clause; the subordinate clause retains the normal S‑V‑O order and its own subject pronoun if different. This rule is tentative pending more examples.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 11.04,
+        "corpus_chrfpp": 12.25,
+        "corpus_ter": 116.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.97,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          14.8,
+          10.01
+        ],
+        "sentence_ter": [
+          150.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "yeederenu om banuun.",
+          "wenenub wingkanuub."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been"
+        ],
+        "num_evaluated": 2
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 33.2,
+          "metrics": {
+            "corpus_bleu": 2.87,
+            "corpus_chrfpp": 27.31,
+            "corpus_ter": 118.75,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              6.57,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              26.48,
+              12.81,
+              34.97,
+              25.23
+            ],
+            "sentence_ter": [
+              200.0,
+              125.0,
+              85.71,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub wingkanuub anona miniib.",
+              "Meneni baan anona Ambib weng.",
+              "Ambib wedmoona om anona awoon weng wengambaraneen.",
+              "Wingkeewa aneen anona yeederenu."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.87,
+        "corpus_chrfpp": 27.31,
+        "corpus_ter": 118.75,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          0.0,
+          6.57,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          26.48,
+          12.81,
+          34.97,
+          25.23
+        ],
+        "sentence_ter": [
+          200.0,
+          125.0,
+          85.71,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub wingkanuub anona miniib.",
+          "Meneni baan anona Ambib weng.",
+          "Ambib wedmoona om anona awoon weng wengambaraneen.",
+          "Wingkeewa aneen anona yeederenu."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 35.27,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 29.5,
+          "metrics": {
+            "corpus_bleu": 1.52,
+            "corpus_chrfpp": 10.96,
+            "corpus_ter": 206.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2,
+              0.0,
+              4.2,
+              4.2
+            ],
+            "sentence_chrfpp": [
+              18.48,
+              5.45,
+              8.73,
+              12.57
+            ],
+            "sentence_ter": [
+              450.0,
+              150.0,
+              128.57,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man and the dog.",
+              "You sing and I get up.",
+              "He saw the house and I took the pig.",
+              "She will get up and will take the bread."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.52,
+        "corpus_chrfpp": 10.96,
+        "corpus_ter": 206.25,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.2,
+          0.0,
+          4.2,
+          4.2
+        ],
+        "sentence_chrfpp": [
+          18.48,
+          5.45,
+          8.73,
+          12.57
+        ],
+        "sentence_ter": [
+          450.0,
+          150.0,
+          128.57,
+          300.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I came and saw the man and the dog.",
+          "You sing and I get up.",
+          "He saw the house and I took the pig.",
+          "She will get up and will take the bread."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "delta": {
+        "bleu_delta": 1.52,
+        "chrf_delta": 10.96,
+        "ter_delta": 106.25,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.22,
+      "chrf": 3.1,
+      "ter": 5100.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Yonggom (best‑effort translation)**  \n\n*“Mik‑aŋa ɲaŋa, a‑pɨr‑iŋa ɲaŋa.”*  \n\n*Explanation*  \n- **Mik‑aŋa** – “we (inclu",
+      "reference": "Wananuuwa mananiib."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 2.67,
+      "best_chrf": 19.47,
+      "best_ter": 125.0,
+      "best_em": 0.0,
+      "num_steps": 10,
+      "best_hypotheses": [
+        "Wenenub karuwa om eninuun.",
+        "menba wedon karuwa bab wedaan.",
+        "ambib wedaan karuwa wedmoona karuwa ambarb wedmaan.",
+        "wingok wedbaan karuwa wingkeewa."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "best_step": 10
+    },
+    "step_by_step": {
+      "best_bleu": 11.04,
+      "best_chrf": 12.25,
+      "best_ter": 116.67,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "yeederenu om banuun.",
+        "wenenub wingkanuub."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been"
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 2.87,
+      "best_chrf": 27.31,
+      "best_ter": 118.75,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Wenenub wingkanuub anona miniib.",
+        "Meneni baan anona Ambib weng.",
+        "Ambib wedmoona om anona awoon weng wengambaraneen.",
+        "Wingkeewa aneen anona yeederenu."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 1.52,
+      "best_chrf": 10.96,
+      "best_ter": 206.25,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "I came and saw the man and the dog.",
+        "You sing and I get up.",
+        "He saw the house and I took the pig.",
+        "She will get up and will take the bread."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "delta": {
+        "bleu_delta": 1.52,
+        "chrf_delta": 10.96,
+        "ter_delta": 106.25,
+        "em_delta": 0.0
+      }
+    }
+  }
+}
