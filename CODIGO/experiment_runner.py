@@ -1077,11 +1077,11 @@ if __name__ == "__main__":
     # ── OPCIÓN A: Llama-70B (lanzar ahora — cuota independiente del 8B) ──────
     PUZZLES = [
         # ── Hakhun (M4 desactivado en lang2en por ser el puzzle fuente) ──
-        "puzzles/linguini_012018020100.json",  # Hakhun →EN  [Sino-Tibetana]
-        "puzzles/linguini_012018020200.json",  # Hakhun EN→  [Sino-Tibetana]
-        "puzzles/linguini_012022030100.json",  # N|uuki →EN  [Tuu]
-        "puzzles/linguini_012019010100.json",  # Yonggom →EN  [Trans-New Guinea]
-        "puzzles/linguini_012015040100.json",  # Wambaya →EN  [Mirndi]
+        # "puzzles/linguini_012018020100.json",  # Hakhun →EN  [Sino-Tibetana]
+        # "puzzles/linguini_012018020200.json",  # Hakhun EN→  [Sino-Tibetana]
+        # "puzzles/linguini_012022030100.json",  # N|uuki →EN  [Tuu]
+        # "puzzles/linguini_012019010100.json",  # Yonggom →EN  [Trans-New Guinea]
+        # "puzzles/linguini_012015040100.json",  # Wambaya →EN  [Mirndi]
         "puzzles/linguini_012023020100.json",  # Apurinã →EN  [Arawakan]
         "puzzles/linguini_012023020300.json",  # Apurinã EN→  [Arawakan]
         "puzzles/linguini_012019010200.json",  # Yonggom EN→  [Trans-New Guinea]
@@ -1097,7 +1097,7 @@ if __name__ == "__main__":
     MODELS_RUN = [
         # "llama-3.1-8b-groq",          # ← EN USO
         # "llama-3.3-70b-groq",         # ← SE LE ACABA LA CUOTA RÁPIDO
-        # "llama-3.3-70b-sambanova",    # ← SE LE ACABA LA CUOTA RÁPIDO
+        "llama-3.3-70b-sambanova",    # ← SE LE ACABA LA CUOTA RÁPIDO
         # "gpt-oss-120b-openrouter",    # ← EN USO (CASI COMPLETADO)
         # "gpt-oss-120b-cerebras",      # ← NO ES NECESARIO
     ]

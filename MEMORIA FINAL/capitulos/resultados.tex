@@ -1,332 +1,280 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Plantilla TFG/TFM
-% Escuela Politécnica Superior de la Universidad de Alicante
-% Realizado por: Jose Manuel Requena Plens
-% Contacto: info@jmrplens.com / Telegram:@jmrplens
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{Resultados (Con ejemplos de gráficos)}
+\chapter{Resultados}
 \label{cap:resultados}
 
-\section{Diagramas}
-Gracias al paquete \textit{Tikz} se pueden incluir multitud de medios gráficos, diagramas, capas sobre imágenes, etc.
-Existen múltiples formas de realizarlo, para ello es recomendable consultar la guía de iniciación disponible aquí: \url{http://cremeronline.com/LaTeX/minimaltikz.pdf} y también el manual completo disponible aquí: \url{http://osl.ugr.es/CTAN/graphics/pgf/base/doc/pgfmanual.pdf}.
-\\
-\par A continuación se muestran algunos ejemplos. Revisa el archivo .tex para ver cómo se utilizan.
-\\
-\par Imagen a la que se le ha añadido cuadros y texto desde latex:
-\begin{figure}[ht]
-\centering	
-\resizebox{0.6\textwidth}{!}{%
-\begin{tikzpicture}[x=39, y=47]%X,Y -> Corrección de coordenadas, según tamaño y posición de la imagen
-    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.9\textwidth]{archivos/mapadia}};
-    % Imprimir coordenadas
-    \begin{scope}[x={(image.south east)},y={(image.north west)}]
-        \draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
-        \foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {\x}; }
-        \foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {\y}; }
-    \end{scope}
-    % Residencias 1
-    \draw[Caja1] (6.8,2) rectangle (8.3,4.5);
-    \node[Texto2] at (6.8,2) {\textbf{Residencias 1}};
-    % Residencias 2
-    \draw[Caja1] (1,0.6) rectangle (7.6,1.8);
-    \node[Texto2] at (1,0.6) {\textbf{Residencias 2}};
-    % Residencias 3
-    \draw[Caja1,rotate around={-45:(2.6,3.6)}] (2.6,3.6) ellipse (1cm and 3.1cm);
-    \node[Texto2] at (1.2,2.1) {\textbf{Residencias 3}};
-    % Hospital
-    \draw[Caja1] (1,6) rectangle (3,7);
-    \node[Texto2] at (1,6) {\textbf{Hospital}};
-    % Colegio
-    \draw[Caja1] (2.3,8.5) rectangle (3.9,9.5);
-    \node[Texto2] at (2.3,8.5) {\textbf{Colegio}};
-    % Numeros de edificios
-    \node[Texto3,font=\tiny] at (7.5,4) {\textbf{1}};
-    \node[Texto3,font=\tiny] at (7.9,2.9) {\textbf{2}};
-    \node[Texto3,font=\tiny] at (7.7,2.3) {\textbf{3}};
-    \node[Texto3,font=\tiny] at (7.2,1.2) {\textbf{4}};
-    \node[Texto3,font=\tiny] at (6.2,1.2) {\textbf{5}};
-    \node[Texto3,font=\tiny] at (4.9,1.2) {\textbf{6}};
-    \node[Texto3,font=\tiny] at (3.6,1.2) {\textbf{7}};
-    \node[Texto3,font=\tiny] at (2.4,1.2) {\textbf{8}};
-    \node[Texto3,font=\tiny] at (1.5,1.7) {\textbf{9}};
-    \node[Texto3,font=\tiny] at (1.5,2.5) {\textbf{10}};
-    \node[Texto3,font=\tiny] at (1.5,3) {\textbf{11}};
-    \node[Texto3,font=\tiny] at (1.8,3.4) {\textbf{12}};
-    \node[Texto3,font=\tiny] at (2.2,3.8) {\textbf{13}};
-    \node[Texto3,font=\tiny] at (2.5,4.2) {\textbf{14}};
-    \node[Texto3,font=\tiny] at (3,4.5) {\textbf{15}};
-    \node[Texto3,font=\tiny] at (3.4,4.8) {\textbf{16}};
-    \node[Texto3,font=\tiny] at (4,4.8) {\textbf{17}};
-    % Nombres de carreteras
-    \node[Texto3] at (9.2,7) {\textbf{A-7}};
-    \node[Texto3] at (9,1.8) {\textbf{N-1}};
-    \node[Texto3] at (4,8) {\textbf{N-2}};
-\end{tikzpicture}
-}
-\end{figure}
+Este capítulo presenta los resultados obtenidos en los experimentos sobre los 16 puzzles del benchmark \textsc{Linguini}, organizados por metodología. La métrica principal es chrF++. Los valores {\color{gray}---} corresponden a experimentos pendientes de relanzamiento por agotamiento de cuota de API; se incorporarán antes de la entrega.
 
-En muchas ocasiones es necesario realizar un diagrama de bloques, más abajo se muestra un ejemplo de ello. En la red hay multitud de ejemplos que pueden ser fácilmente modificables para un fin concreto, como por ejemplo en esta web: \url{http://www.texample.net/tikz/examples/tag/block-diagrams/}.
-\begin{figure}[ht]
-\centering 
-\begin{tikzpicture}[node distance=2cm, auto]
-	% Cuadros
-	\node (pc) [rectvioleta,text width=3cm] {Ordenador{\\}\small{Software: ARTA} \par};
-	\node (sound) [rectamarillo, below of=pc, text width=4cm] {Tarjeta de sonido {\\}Tascam US-144MKII \par};
-	\node (nexus) [rectverde, right of=sound,xshift=6cm, text width=8cm] { Amplificador/Adaptador de impedancia{\\}DIY\par };
-	\node (acel) [rectnaranja, below of=nexus,text width=3cm,xshift=0cm]{\small Acelerómetro {\\}Brüel {\&} Kjær TYPE 4514B-002 \par};
-	\node (micro) [rectnaranja, below of=sound,text width=3cm,xshift=0cm]{\small Micrófono {\\}Behringer ECM8000 \par};
-	\node (excit) [rectnaranja, below of=acel,text width=3cm,xshift=2cm]{\small Excitador \par};
-	\node(barra) [romborosa, below of=acel,xshift=-3.1cm]{\small Barra \par};
-	% Flechas
-	\draw[arrow] (pc) -- (sound);
-	\draw[arrow] (sound) -- (pc);
-	\draw[arrow] (nexus) -- (sound);
-	\draw[arrow] (excit) -- (barra.east);
-	\draw[arrow] (micro) -- (sound);
-	\draw[arrow] (barra.west) -- (0,-6)-- (micro.south);
-	\draw[arrow] (barra.west) -- (3.4,-4)--(acel.west);
- 	\draw[arrow] (acel) -- (nexus);	
-\end{tikzpicture}
-\caption{Diagrama realizado en latex con Tikz.}
-\label{fig:blockcv}
-\end{figure}
+Los modelos evaluados son Llama-3.1-8B (tier débil), Llama-3.3-70B (tier medio, ejecutado via SambaNova) y GPT-OSS-120B (tier fuerte, via OpenRouter).
 
 
+% ─────────────────────────────────────────────────────────────
+\section{M0 — Verificación previa}
+\label{sec:resultados_m0}
+% ─────────────────────────────────────────────────────────────
 
-\section{Gráficas}
-
-Existen múltiples formas de generar gráficas para latex. Hay disponibles herramientas como GeoGebra que dispone de la utilidad para exportar los gráficos en formato Tkiz. También funciones para Matlab que genera las gráficas que muestra habitualmente pero en código para Tkiz.
-
-\subsection{Línea}
-La forma más simple, aunque no sencilla cuando abarca muchos datos es la siguiente:
-
-\begin{lstlisting}[style=Latex-color]
-\begin{figure}[ht]
-\centering
-	\begin{tikzpicture}
-  		\begin{axis}
-  			[ymin=0,ymax=5, % Límites del eje y
-  			xmin=0,xmax=6,  % Límites del eje x
-  			ylabel= eje Y, 	% Nombre del eje y
-    		xlabel= eje X]  % Nombre del eje x
-    		\addplot+[smooth] coordinates % Une los puntos curva suavizada
-      		{(0,0) (1,2) (2,3 (4,3))}; % Puntos de la gráfica
-  		\end{axis}
-	\end{tikzpicture}
-\caption{Gráfica sencilla.}
-\end{figure}
-\end{lstlisting}
-
-El resultado es el siguiente:
-\\
-\begin{figure}[ht]
-\centering
-	\begin{tikzpicture}
-  		\begin{axis}
-  			[ymin=0,ymax=5, 
-  			xmin=0,xmax=6,
-  			ylabel= eje Y,
-    		xlabel= eje X]
-    		\addplot+[smooth] coordinates
-      		{(0,0) (1,2) (2,3) (4,3)};
-  		\end{axis}
-	\end{tikzpicture}
-\caption{Gráfica sencilla.}
-\end{figure}
-\FloatBarrier
-
-Otro ejemplo, en este caso las lineas están calculadas directamente en LaTex y después cada una tiene una anotación (el código se encuentra en el archivo archivos/ejemplos/perjudicialesopticacentro.tex):
-
-\begin{figure}[H]
-	\centering%
-    \input{archivos/ejemplos/perjudicialesopticacentro}%
-    \caption{OP/S003}%
-\end{figure}%
-
-\subsection{Barras}
-Otro ejemplo es la gráfica de barras:
-\begin{lstlisting}[style=Latex-color]
-\begin{figure}[ht]
-\centering
-\begin{tikzpicture}
-	\begin{axis}[
-	    ybar=12pt,
-	    ymin=0,ymax=150,
-	    xtick=data,
-	    enlarge x limits={abs=2cm},
-	    symbolic x coords={rubio, moreno},
-	    bar width = 20pt,
-	    ylabel= número,
-	    xlabel= color de pelo,
-	        ytick align=outside,
-	        ytick pos=left,
-	        major x tick style = transparent,
-	        legend style={at={(0.04,0.96)},anchor=north west, font=\footnotesize, legend cell align=left,},
-	        ]
-	    \addplot[ybar,fill=blue, area legend] coordinates {
-	        (rubio,20)
-	        (moreno,100)};
-	    \addplot[ybar,fill=purple, area legend] coordinates {
-	        (rubio,110)
-	        (moreno,105)};
-	 \legend{Chicos, Chicas}
-	\end{axis}
-\end{tikzpicture}
-\caption{Gráfica barras.}
-\end{figure}
-\end{lstlisting}
-
-El resultado es el siguiente:
-
-\begin{figure}[ht]
-\centering
-\begin{tikzpicture}
-	\begin{axis}[
-	    ybar=12pt,
-	    ymin=0,ymax=150,
-	    xtick=data,
-	    enlarge x limits={abs=2cm},
-	    symbolic x coords={rubio, moreno},
-	    bar width = 20pt,
-	    ylabel= número,
-	    xlabel= color de pelo,
-	        ytick align=outside,
-	        ytick pos=left,
-	        major x tick style = transparent,
-	        legend style={at={(0.04,0.96)},anchor=north west, font=\footnotesize, legend cell align=left,},
-	        ]
-	    \addplot[ybar,fill=blue, area legend] coordinates {
-	        (rubio,20)
-	        (moreno,100)};
-	    \addplot[ybar,fill=purple, area legend] coordinates {
-	        (rubio,110)
-	        (moreno,105)};
-	 \legend{Chicos, Chicas}
-	\end{axis}
-\end{tikzpicture}
-\caption{Gráfica barras.}
-\end{figure}
-\FloatBarrier
-
-\subsection{Polar}
-Un ejemplo de gráfica polar semicircular (ver archivo archivos/ejemplos/polarnorm.tex):
-
-\begin{figure}[H]
-    	\centering%
-         {\scalefont{0.8}%
-    \input{archivos/ejemplos/polarnorm}%
-    }
-    \caption{Directividad normalizada del altavoz (0 dBV en el eje).}\label{norma}
-\end{figure}
-
-
-\section{Importados de MATLAB}
-\label{impmatlab}
-Gracias a la herramienta \textit{matlab2tikz} (\url{https://es.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz}) se pueden exportar las gráficas de cualquier tipo de Matlab a latex.
-Después de incluir los archivos de \textit{matlab2tikz} se debe escribir una llamada después de crear la figura tal que:
-
-\begin{lstlisting}[style=Matlab-color,caption={Ejemplo de llamada a matlab2tikz}]
-fig = plot(x,y);
-matlab2tikz('figurehandle',fig,'NombreArchivo.tex','height','5cm','width','13.5cm','strict',true,'showHiddenStrings',true,'showInfo',false)
-\end{lstlisting}
-
-Y para utilizar el archivo generado por la función en este documento:
-\begin{lstlisting}[style=Latex-color]
-\begin{figure}[ht]
+\begin{table}[h]
 	\centering
-	{\scalefont{0.8}\input{archivos/ejemplos/ParedFina} }
-	\caption{Ejemplo de gráfica obtenida con matlab2tikz.}
-\end{figure}
-\end{lstlisting}
+	\caption{chrF++ — M0. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\label{tab:resultados_m0}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & 1.3 & 1.6 & \textbf{2.5} \\
+			Hakhun & EN→ & 1.1 & \textbf{1.5} & 1.5 \\
+			Ngemba & →EN & 4.1 & 3.6 & \textbf{14.0} \\
+			Yonggom & →EN & 5.1 & 3.1 & \textbf{8.3} \\
+			Yonggom & EN→ & \textbf{3.2} & {\color{gray}---} & 3.1 \\
+			Warlpiri & →EN & 4.8 & 3.1 & \textbf{8.4} \\
+			Wambaya & EN→ & 1.6 & {\color{gray}---} & \textbf{1.9} \\
+			Apurinã & →EN & 0.2 & {\color{gray}---} & \textbf{7.8} \\
+			Apurinã & EN→ & 1.3 & {\color{gray}---} & \textbf{2.2} \\
+			N|uuki & EN→ & 0.2 & {\color{gray}---} & \textbf{5.8} \\
+			Coastal Marind & →EN & 1.5 & {\color{gray}---} & \textbf{3.0} \\
+			Dyirbal & →EN & 7.2 & {\color{gray}---} & \textbf{17.9} \\
+			Kunuz Nubian & →EN & 5.0 & {\color{gray}---} & \textbf{12.1} \\
+			Inuktitut & →EN & 3.0 & {\color{gray}---} & \textbf{8.6} \\
+			Tzeltal & →EN & 3.5 & {\color{gray}---} & \textbf{6.5} \\
+			Lakota & →EN & 8.8 & {\color{gray}---} & \textbf{13.6} \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
 
-\begin{figure}[ht]
+La estrategia M0 verifica que el modelo no conozca previamente la lengua del puzzle. Un chrF++ inferior a 20 se considera indicativo de desconocimiento. En todos los casos los valores están por debajo de 18, confirmando la validez del supuesto experimental. El valor más alto corresponde a Dyirbal con el modelo 120B (chrF=17.9), posiblemente por su presencia en la literatura lingüística accesible durante el preentrenamiento.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{M1 — Baseline}
+\label{sec:resultados_m1}
+% ─────────────────────────────────────────────────────────────
+
+\begin{table}[h]
 	\centering
-	{\scalefont{0.8}\input{archivos/ejemplos/ParedFina} }
-	\caption{Ejemplo de gráfica obtenida con matlab2tikz.}
-\end{figure}
-\FloatBarrier
-Ejemplo de una gráfica 3D generada en Matlab y exportada por \textit{matlab2tikz}:
-\begin{figure}[ht]
-		\centering
-		{\scalefont{0.8}\input{archivos/ejemplos/2D-3314hz} }
-		\caption{Amplitud de la aceleración en el modo número 8.}
-\end{figure}
-\FloatBarrier
+	\caption{chrF++ — M1. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\label{tab:resultados_m1}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & \textbf{42.2} & 32.9 & {\color{gray}---} \\
+			Hakhun & EN→ & 8.9 & \textbf{44.7} & {\color{gray}---} \\
+			Ngemba & →EN & 42.6 & \textbf{47.5} & 22.5 \\
+			Yonggom & →EN & 4.1 & 19.7 & \textbf{31.2} \\
+			Yonggom & EN→ & \textbf{5.6} & {\color{gray}---} & {\color{gray}---} \\
+			Warlpiri & →EN & 39.6 & \textbf{46.8} & 28.2 \\
+			Wambaya & EN→ & \textbf{7.0} & {\color{gray}---} & {\color{gray}---} \\
+			Apurinã & →EN & \textbf{12.4} & {\color{gray}---} & {\color{gray}---} \\
+			Apurinã & EN→ & \textbf{4.7} & {\color{gray}---} & {\color{gray}---} \\
+			N|uuki & EN→ & 3.8 & {\color{gray}---} & \textbf{36.7} \\
+			Coastal Marind & →EN & \textbf{3.4} & {\color{gray}---} & {\color{gray}---} \\
+			Dyirbal & →EN & 10.2 & {\color{gray}---} & \textbf{18.7} \\
+			Kunuz Nubian & →EN & \textbf{45.8} & {\color{gray}---} & 34.6 \\
+			Inuktitut & →EN & \textbf{59.5} & {\color{gray}---} & 46.4 \\
+			Tzeltal & →EN & \textbf{46.4} & {\color{gray}---} & {\color{gray}---} \\
+			Lakota & →EN & 37.8 & {\color{gray}---} & \textbf{59.3} \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
 
-\section{Ejemplo avanzado}
+Los resultados de M1 muestran una varianza considerable entre lenguas. Los valores más altos corresponden a Inuktitut con el modelo 8B (chrF=59.5) y Lakota con el 120B (chrF=59.3), mientras que Coastal Marind y Yonggom obtienen los valores más bajos. El modelo 70B supera al 8B en los puzzles donde ambos tienen datos, aunque la diferencia no es sistemática. Estos valores sirven de referencia directa con el baseline de \citet{sanchez2024linguini}.
 
-El potencial del paquete \textit{Tikz} es muy alto, se pueden realizar muchísimas cosas. En la red se facilitan muchos ejemplos para poder ver el funcionamiento y aprender. Existen hilos donde la gente publica sus mejores diseños de \textit{Tikz} como en \url{https://tex.stackexchange.com/questions/158668/nice-scientific-pictures-show-off} o páginas donde facilitan muchas plantillas como \url{http://www.texample.net/tikz/examples/all/}.
-\par Un ejemplo de lo que se puede llegar a conseguir es el siguiente:
-% Vector Styles
-\tikzset{
-  load/.style   = {ultra thick,-latex},
-  stress/.style = {-latex},
-  dim/.style    = {latex-latex},
-  axis/.style   = {-latex,black!55},
-}
 
-% Drawing View
-\tikzset{dimetric2/.style={
-  x={(0.935cm,-0.118cm)},
-  y={(0.354cm, 0.312cm)},
-  z={(0.000cm, 0.943cm)},
-}}
-\begin{figure}[ht]
-\centering
-  \begin{tikzpicture}
-    \node (origin) at (0,0) {}; % shift relative baseline
-    \coordinate (O) at (2,3);
-    \draw[fill=gray!10] (O) circle (1);
-    \draw[fill=white] (O) circle (0.75) node[below,yshift=-1.125cm] {Corte trasversal};
-    \draw[dim] (O) ++(-0.75,0) -- ++(1.5,0) node[midway,above] {$d_i$};
-    \draw[dim] (O) ++(-1,1.25) -- ++(2,0) node[midway,above] {$d_o$}; 
-    \foreach \x in {-1,1} {
-      \draw (O) ++(\x,0.25) -- ++(0,1.25);
-    }
-  \end{tikzpicture}
-  \begin{tikzpicture}[dimetric2]
-        \coordinate (O) at (0,0,0);
-        \draw[axis] (O) -- ++(6,0,0) node[right] {$x$};
-        \draw[axis] (O) -- ++(0,6,0) node[above right] {$y$};
-        \draw[axis] (O) -- ++(0,0,6) node[above] {$z$};
-        \draw[fill=gray!50] (0,0,-0.5) circle (0.5); 
-        \fill[fill=gray!50] (-0.46,-0.2,-0.5) -- (0.46,0.2,-0.5) -- (0.46,0.2,0) -- (-0.46,-0.2,0) -- cycle;
-        \draw[fill=gray!20] (O) circle (0.5);
-    \draw (0.46,0.2,-0.5) -- ++(0,0,0.5) node[below right,pos=0.0] {Soporte fijo};
-    \draw (-0.46,-0.2,-0.5) -- ++(0,0,0.5);
-    \draw[fill=gray!10] (O) circle (0.2);
-    \fill[fill=gray!10] (-0.175,-0.1,0) -- (0.175,0.1,0) -- ++(0,0,4) -- (-0.175,-0.1,4) -- cycle;
-    \draw (-0.175,-0.1,0) -- ++(0,0,4);
-    \draw (0.175,0.1,0) -- ++(0,0,4) node[right,midway] {Poste de acero};
-    \draw (4,0,3.95) -- ++(0,0,-1);
-    \foreach \z in {0.5,0.75,...,5} {
-      \draw[-latex] (-2*\z/5-0.2,0,\z) -- (-0.2,0,\z);
-    }
-    \draw[load] (0,0,4) -- ++(0,0,-1.25) node[right,xshift=0.1cm] {$F_{z1}$};
-    \draw[fill=gray!20] (-0.25,-0.25,5) -- (4,-0.25,5) -- (4,+0.25,5) -- (-0.25,+0.25,5) -- cycle; 
-    \draw[fill=gray!50] (+4.00,-0.25,4) -- (4,+0.25,4) -- (4,+0.25,5) -- (+4.00,-0.25,5) -- cycle; 
-    \draw[fill=gray!10] (-0.25,-0.25,4) -- (4,-0.25,4) -- (4,-0.25,5) -- (-0.25,-0.25,5) -- cycle; 
-    \draw (4.05,0,4) -- ++(1,0,0);
-    \draw (4.05,0,5) -- ++(1,0,0);
-    \draw[dim] (4.5,0,0) -- ++(0,0,4) node[midway,right] {$h_1$};
-    \draw[dim] (4.5,0,4) -- ++(0,0,1) node[midway,right] {$h_2$};
-    \draw[dim] (0,0,3.4) -- ++(4,0,0) node[midway,below] {$b_2$};
-    \coordinate (P) at (2,-0.25,4.5);
-    \draw (P) -- ++(0,0,0.25);
-    \draw (P) -- ++(0.25,0,0);
-    \draw[dim] (2.125,-0.25,4.5) -- ++(0,0,-0.5) node[midway,right] {$z_1$};
-    \draw[dim] (2,-0.25,4.625) -- ++(-2,0,0) node[midway,below] {$x_1$};
-    \draw[load] (2,-2.45,4.5) -- ++(0,2.2,0) node[pos=0.0,right,xshift=0.08cm] {$F_{y1}$};
-    \draw[axis,dashed,-] (O) -- (0,0,5);
-    \draw (0,0,5.5) -- ++(4,0,0) node[midway,above] {$w_{z}$};
-    \foreach \x in {0,0.25,...,4} {
-      \draw[-latex] (\x,0,5.5) -- ++(0,0,-0.5);
-    }
-    \draw (-0.2,0,0) -- ++(-2,0,5) node[above,xshift=0.5cm] {$w_{x}=\frac{z}{h_1+h_2} w_0$};
-  \end{tikzpicture}
-\caption{Señal realizada con Tikz, sin imágenes.}
-\label{senyal}
-\end{figure}
-\FloatBarrier
+% ─────────────────────────────────────────────────────────────
+\section{M2 — Incremental por combinaciones}
+\label{sec:resultados_m2}
+% ─────────────────────────────────────────────────────────────
+
+\begin{table}[h]
+	\centering
+	\caption{chrF++ — M2. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\label{tab:resultados_m2}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & 35.8 & \textbf{80.4} & 53.7 \\
+			Hakhun & EN→ & \textbf{55.7} & 49.3 & 52.5 \\
+			Ngemba & →EN & {\color{gray}---} & 44.5 & \textbf{47.0} \\
+			Yonggom & →EN & 37.9 & 36.9 & \textbf{42.4} \\
+			Yonggom & EN→ & \textbf{22.6} & {\color{gray}---} & 19.5 \\
+			Warlpiri & →EN & 36.7 & \textbf{37.8} & 26.6 \\
+			Wambaya & EN→ & \textbf{35.2} & {\color{gray}---} & 34.4 \\
+			Apurinã & →EN & \textbf{40.1} & {\color{gray}---} & 35.6 \\
+			Apurinã & EN→ & {\color{gray}---} & {\color{gray}---} & \textbf{25.4} \\
+			N|uuki & EN→ & {\color{gray}---} & {\color{gray}---} & \textbf{56.2} \\
+			Coastal Marind & →EN & \textbf{41.8} & {\color{gray}---} & 30.4 \\
+			Dyirbal & →EN & 38.4 & {\color{gray}---} & \textbf{39.8} \\
+			Kunuz Nubian & →EN & 37.7 & {\color{gray}---} & \textbf{38.5} \\
+			Inuktitut & →EN & \textbf{46.6} & {\color{gray}---} & 34.2 \\
+			Tzeltal & →EN & 23.1 & {\color{gray}---} & \textbf{52.8} \\
+			Lakota & →EN & \textbf{60.1} & {\color{gray}---} & 54.1 \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+M2 es la aportación metodológica principal de este trabajo y no tiene equivalente directo en la literatura. Comparada con el baseline M1 sobre los mismos puzzles y modelos, M2 supera a M1 en el 62\,\% de los casos con diferencia superior a un punto (16 de 26 pares con datos). El resultado más destacado es Hakhun lang2en con el modelo 70B: chrF=80.4 en el paso 9, frente a chrF=32.9 en M1 ($\Delta$=+47.5).
+
+Sin embargo, M2 no supera sistemáticamente a M1. En puzzles con pocas frases de entrenamiento (Kunuz Nubian, 10 frases) o donde el modelo infiere bien desde el contexto completo (Inuktitut, Tzeltal con el 8B), la ventaja del incremental se invierte. El beneficio de M2 depende tanto del tamaño del modelo como de la complejidad morfológica de la lengua.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{M3 — Step-by-step lingüístico}
+\label{sec:resultados_m3}
+% ─────────────────────────────────────────────────────────────
+
+\begin{table}[h]
+	\centering
+	\caption{chrF++ — M3. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\label{tab:resultados_m3}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & 7.9 & \textbf{26.6} & 9.0 \\
+			Hakhun & EN→ & 27.9 & \textbf{49.9} & 8.7 \\
+			Ngemba & →EN & 16.5 & \textbf{19.9} & 12.5 \\
+			Yonggom & →EN & 26.3 & \textbf{34.1} & 34.1 \\
+			Yonggom & EN→ & 11.1 & {\color{gray}---} & \textbf{12.2} \\
+			Warlpiri & →EN & 11.0 & \textbf{15.5} & 15.5 \\
+			Wambaya & EN→ & 23.3 & {\color{gray}---} & \textbf{28.5} \\
+			Apurinã & →EN & {\color{gray}---} & {\color{gray}---} & \textbf{25.8} \\
+			Apurinã & EN→ & 11.9 & {\color{gray}---} & \textbf{17.7} \\
+			N|uuki & EN→ & 12.1 & {\color{gray}---} & \textbf{14.7} \\
+			Coastal Marind & →EN & \textbf{26.9} & {\color{gray}---} & 19.0 \\
+			Dyirbal & →EN & \textbf{34.1} & {\color{gray}---} & 31.4 \\
+			Kunuz Nubian & →EN & 22.2 & {\color{gray}---} & \textbf{24.6} \\
+			Inuktitut & →EN & 18.6 & {\color{gray}---} & \textbf{22.1} \\
+			Tzeltal & →EN & 19.1 & {\color{gray}---} & \textbf{19.5} \\
+			Lakota & →EN & 40.0 & {\color{gray}---} & \textbf{41.9} \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+M3, inspirada en la estrategia de presentación por niveles lingüísticos de \citet{zhu2025evaluating}, produce resultados sistemáticamente inferiores a M2 en este dataset. La partición heurística por nivel (léxico, fonología, morfosintaxis, sintaxis) no corresponde a la estructura real de los puzzles de \textsc{Linguini}, donde las frases no están ordenadas por complejidad. En el trabajo original de \citet{zhu2025evaluating} la partición estaba curada manualmente puzzle a puzzle, lo que explica la diferencia. La comparación confirma que la estrategia step-by-step es sensible a la calidad de la partición: cuando esta es heurística, M2 la supera de forma consistente.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{M4 — Inspiración humana}
+\label{sec:resultados_m4}
+% ─────────────────────────────────────────────────────────────
+
+\begin{table}[h]
+	\centering
+	\caption{chrF++ — M4. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\label{tab:resultados_m4}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & --- & --- & --- \\
+			Hakhun & EN→ & 5.7 & 67.1 & \textbf{74.3} \\
+			Ngemba & →EN & 30.9 & \textbf{48.5} & 34.4 \\
+			Yonggom & →EN & 5.7 & \textbf{43.0} & {\color{gray}---} \\
+			Yonggom & EN→ & 9.7 & {\color{gray}---} & \textbf{27.3} \\
+			Warlpiri & →EN & 1.6 & \textbf{44.6} & 29.3 \\
+			Wambaya & EN→ & \textbf{26.2} & {\color{gray}---} & {\color{gray}---} \\
+			Apurinã & →EN & \textbf{13.7} & {\color{gray}---} & 10.2 \\
+			Apurinã & EN→ & 4.7 & {\color{gray}---} & \textbf{34.8} \\
+			N|uuki & EN→ & 11.9 & {\color{gray}---} & \textbf{29.1} \\
+			Coastal Marind & →EN & 4.8 & {\color{gray}---} & \textbf{30.4} \\
+			Dyirbal & →EN & \textbf{41.7} & {\color{gray}---} & 18.0 \\
+			Kunuz Nubian & →EN & \textbf{7.4} & {\color{gray}---} & {\color{gray}---} \\
+			Inuktitut & →EN & 9.6 & {\color{gray}---} & \textbf{38.2} \\
+			Tzeltal & →EN & {\color{gray}---} & {\color{gray}---} & {\color{gray}---} \\
+			Lakota & →EN & \textbf{5.3} & {\color{gray}---} & {\color{gray}---} \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+M4 muestra el patrón más interesante: beneficia fuertemente a los modelos medios y fuertes pero perjudica al débil. Para el 8B los valores son bajos (media 12.5), posiblemente porque el modelo no abstrae el proceso de razonamiento del ejemplo y tiende a copiar estructuras del puzzle de Hakhun. En contraste, el 70B y el 120B obtienen sus mejores resultados globales en M4 para Hakhun EN→ (chrF=67.1 y 74.3 respectivamente), superando a M2 en +17.8 y +21.8 puntos. M4 no se ejecuta sobre Hakhun →EN por ser el puzzle cuyo razonamiento se emplea como guía.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{M5 — Autocorrección iterativa}
+\label{sec:resultados_m5}
+% ─────────────────────────────────────────────────────────────
+
+\begin{table}[h]
+	\centering
+	\caption{chrF++ — M5. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\label{tab:resultados_m5}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & 43.0 & \textbf{73.2} & 58.8 \\
+			Hakhun & EN→ & {\color{gray}---} & \textbf{44.7} & 36.9 \\
+			Ngemba & →EN & 42.6 & \textbf{48.4} & {\color{gray}---} \\
+			Yonggom & →EN & {\color{gray}---} & \textbf{43.7} & 25.8 \\
+			Yonggom & EN→ & {\color{gray}---} & {\color{gray}---} & \textbf{11.0} \\
+			Warlpiri & →EN & 39.7 & \textbf{46.8} & 29.2 \\
+			Wambaya & EN→ & \textbf{7.0} & {\color{gray}---} & 6.8 \\
+			Apurinã & →EN & 12.4 & {\color{gray}---} & \textbf{12.6} \\
+			Apurinã & EN→ & 5.0 & {\color{gray}---} & \textbf{24.6} \\
+			N|uuki & EN→ & \textbf{3.8} & {\color{gray}---} & 3.0 \\
+			Coastal Marind & →EN & \textbf{27.8} & {\color{gray}---} & {\color{gray}---} \\
+			Dyirbal & →EN & \textbf{29.4} & {\color{gray}---} & {\color{gray}---} \\
+			Kunuz Nubian & →EN & \textbf{37.2} & {\color{gray}---} & 32.4 \\
+			Inuktitut & →EN & \textbf{56.5} & {\color{gray}---} & 19.7 \\
+			Tzeltal & →EN & \textbf{46.4} & {\color{gray}---} & 19.1 \\
+			Lakota & →EN & 37.8 & {\color{gray}---} & \textbf{43.9} \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+M5 empeora respecto al turno 1 en el 78\,\% de los casos (18 de 23 pares con datos en ambos turnos). El patrón es especialmente pronunciado en el modelo 70B: en Hakhun →EN el turno 1 alcanza chrF=73.2 pero el turno 2 cae a 17.6 ($\Delta$=-55.6). El modelo identifica contradicciones reales en su primer borrador, pero las correcciones introducen errores nuevos, posiblemente por sobre-corrección al reescribir el diccionario. Este hallazgo es contrario a la hipótesis de \citet{madaan2023selfrefine} y sugiere que el paradigma Self-Refine requiere señales de retroalimentación externas más ricas para ser eficaz en tareas de razonamiento metalingüístico.
+
+
+% ─────────────────────────────────────────────────────────────
+\section{Tabla resumen y análisis transversal}
+\label{sec:resultados_resumen}
+% ─────────────────────────────────────────────────────────────
+
+La Tabla~\ref{tab:resumen_mejor} recoge el mejor resultado obtenido por cada combinación de puzzle y modelo sobre todas las metodologías M1--M5.
+
+\begin{table}[h]
+	\centering
+	\caption{Mejor chrF++ por puzzle y modelo (máximo sobre M1--M5). En negrita, mejor modelo por puzzle.}
+	\label{tab:resumen_mejor}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{lcrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			Hakhun & →EN & 43.0 & \textbf{80.4} & 58.8 \\
+			Hakhun & EN→ & 55.7 & 67.1 & \textbf{74.3} \\
+			Ngemba & →EN & 42.6 & \textbf{48.5} & 47.0 \\
+			Yonggom & →EN & 37.9 & \textbf{43.7} & 42.4 \\
+			Yonggom & EN→ & 22.6 & {\color{gray}---} & \textbf{27.3} \\
+			Warlpiri & →EN & 39.7 & \textbf{46.8} & 29.3 \\
+			Wambaya & EN→ & \textbf{35.2} & {\color{gray}---} & 34.4 \\
+			Apurinã & →EN & \textbf{40.1} & {\color{gray}---} & 35.6 \\
+			Apurinã & EN→ & 11.9 & {\color{gray}---} & \textbf{34.8} \\
+			N|uuki & EN→ & 12.1 & {\color{gray}---} & \textbf{56.2} \\
+			Coastal Marind & →EN & \textbf{41.8} & {\color{gray}---} & 30.4 \\
+			Dyirbal & →EN & \textbf{41.7} & {\color{gray}---} & 39.8 \\
+			Kunuz Nubian & →EN & \textbf{45.8} & {\color{gray}---} & 38.5 \\
+			Inuktitut & →EN & \textbf{59.5} & {\color{gray}---} & 46.4 \\
+			Tzeltal & →EN & 46.4 & {\color{gray}---} & \textbf{52.8} \\
+			Lakota & →EN & \textbf{60.1} & {\color{gray}---} & 59.3 \\
+			\bottomrule
+		\end{tabular}%
+	}
+\end{table}
+
+\paragraph{Efecto del tamaño del modelo.} En M1 baseline, el Llama-3.1-8B obtiene una media de chrF=23.4, el Llama-3.3-70B de 38.3 y el GPT-OSS-120B de 34.7. La ventaja del 70B sobre el 120B en promedio se explica por la distribución de puzzles disponibles: el 70B tiene datos principalmente en puzzles donde el 120B también rinde bien.
+
+\paragraph{Dirección de traducción.} La dirección lang2en obtiene una media de chrF=38.0 frente a 28.9 en en2lang, considerando M1 y M2 en todos los modelos. M4 reduce parcialmente esta brecha en los modelos medios y fuertes (Hakhun EN→: 67.1 y 74.3 respectivamente), lo que sugiere que el razonamiento guiado ayuda especialmente cuando la tarea requiere producción morfológica.
+
+\paragraph{Limitación: marcadores de número gramatical.} Las referencias gold de algunos puzzles incluyen marcadores entre paréntesis (\texttt{you(sg)}, \texttt{you(pl)}) que son anotaciones del puzzle y no inglés natural. Los tres modelos producen sistemáticamente \texttt{you} en lugar de \texttt{you(sg)}, penalizando el chrF++ incluso cuando la traducción es semánticamente correcta. Esta limitación se discutirá con el tutor y se documentará como sesgo de fluencia en el análisis de errores.

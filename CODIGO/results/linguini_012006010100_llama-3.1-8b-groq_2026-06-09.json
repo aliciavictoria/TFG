@@ -1,0 +1,1613 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-09T20:35:38.228894",
+    "puzzle_id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 13,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "lakhota ki wičhakte",
+        "target": "The Indian killed them."
+      },
+      {
+        "source": "matho ki wakte",
+        "target": "I killed the bear."
+      },
+      {
+        "source": "lakhota ki mačho",
+        "target": "The Indian called me."
+      },
+      {
+        "source": "tuwa ničho",
+        "target": "Who called you?"
+      },
+      {
+        "source": "wičhaša ki tuwa kte",
+        "target": "The person killed someone."
+      },
+      {
+        "source": "tuwa hi he",
+        "target": "Who came?"
+      },
+      {
+        "source": "matho ki wičhačho",
+        "target": "He called the bears."
+      },
+      {
+        "source": "yahi čha hi",
+        "target": "You came, and he came."
+      },
+      {
+        "source": "matho ki hipi ną lakhota ki čhopi",
+        "target": "The bears came and called the Indian."
+      },
+      {
+        "source": "yahi čha hokšila ki nikte",
+        "target": "You came, and the boy killed you."
+      },
+      {
+        "source": "lakhota ki wačho ną hokšila ki wakte",
+        "target": "I called the Indian and killed the boy."
+      },
+      {
+        "source": "hokšila ki wakte čha tuwa lakhota ki wičhačho",
+        "target": "I killed the boy, and someone called the Indians."
+      },
+      {
+        "source": "lakhota ki hipi čha mayačho",
+        "target": "The Indians came, and you called me."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "wahi čha lakhota ki matho ki wičhačhopi",
+        "target": "I came and the Indians called the bears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte ną mačho",
+        "target": "The man killed you and called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte čha mačho",
+        "target": "The man killed you and he called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nikte",
+        "target": "He killed you.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "wahi čha lakhota ki matho ki wičhačhopi",
+      "reference": "I came and the Indians called the bears.",
+      "hypothesis": "Based on my knowledge, I'll attempt to translate the sentence. \n\nThe sentence appears to be in the Lakota language, which is a Siouan language spoken by the Lakota people. \n\nHere's my translation:\n\n\"Wahi čha lakhota ki matho ki wičhačhopi\"\n\nTranslation: \"This is the Lakota way of life.\"\n\nBreakdown:\n\n- \"Wahi čha\" means \"this is\" or \"this one is\"\n- \"Lakhota\" refers to the Lakota people or their language\n- \"Ki matho\" means \"way of life\" or \"customs\"\n- \"Ki wičhačhopi\" means \"of life\" or \"of living\"\n\nPlease note that the translation may not be exact, and the nuances of the language may be lost in translation.",
+      "latency_s": 0.6,
+      "metrics": {
+        "corpus_bleu": 0.61,
+        "corpus_chrfpp": 8.83,
+        "corpus_ter": 1287.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.61
+        ],
+        "sentence_chrfpp": [
+          8.83
+        ],
+        "sentence_ter": [
+          1287.5
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "Based on my knowledge, I'll attempt to translate the sentence. \n\nThe sentence appears to be in the Lakota language, which is a Siouan language spoken by the Lakota people. \n\nHere's my translation:\n\n\"Wahi čha lakhota ki matho ki wičhačhopi\"\n\nTranslation: \"This is the Lakota way of life.\"\n\nBreakdown:\n\n- \"Wahi čha\" means \"this is\" or \"this one is\"\n- \"Lakhota\" refers to the Lakota people or their language\n- \"Ki matho\" means \"way of life\" or \"customs\"\n- \"Ki wičhačhopi\" means \"of life\" or \"of living\"\n\nPlease note that the translation may not be exact, and the nuances of the language may be lost in translation."
+        ],
+        "references": [
+          "I came and the Indians called the bears."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 13,
+          "latency_s": 31.33,
+          "metrics": {
+            "corpus_bleu": 5.79,
+            "corpus_chrfpp": 37.82,
+            "corpus_ter": 57.69,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.96,
+              8.26,
+              6.89,
+              4.98
+            ],
+            "sentence_chrfpp": [
+              52.48,
+              34.22,
+              27.22,
+              38.42
+            ],
+            "sentence_ter": [
+              50.0,
+              57.14,
+              62.5,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Who came and called the Indian?",
+              "The person killed me and the bear.",
+              "The person killed someone and the bear.",
+              "killed"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.79,
+        "corpus_chrfpp": 37.82,
+        "corpus_ter": 57.69,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.96,
+          8.26,
+          6.89,
+          4.98
+        ],
+        "sentence_chrfpp": [
+          52.48,
+          34.22,
+          27.22,
+          38.42
+        ],
+        "sentence_ter": [
+          50.0,
+          57.14,
+          62.5,
+          66.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Who came and called the Indian?",
+          "The person killed me and the bear.",
+          "The person killed someone and the bear.",
+          "killed"
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 3.93,
+          "accumulated_dict": "1. ki = marker of grammatical relationship (possessor or object)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill)\n4. čha = marker of object agreement or object of verb\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. wičhačhopi = verb (unknown meaning)",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object.\n3. The word \"čha\" is a marker of object agreement or object of verb.\n4. Verbs can be conjugated or agree with the subject or object.",
+          "metrics": {
+            "corpus_bleu": 2.79,
+            "corpus_chrfpp": 25.82,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              7.65,
+              6.48,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              39.34,
+              21.49,
+              21.39,
+              6.64
+            ],
+            "sentence_ter": [
+              75.0,
+              71.43,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bear killed the Indian.",
+              "The hunter killed the bear.",
+              "The hunter killed the bear.",
+              "The bear."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 1.51,
+          "accumulated_dict": "1. ki = marker of grammatical relationship (possessor or object) [DELETED: reason - contradicted by new examples]\n2. wičhakte = verb (kill)\n3. wakte = verb (kill)\n4. čha = marker of object (object of verb) [DELETED: reason - contradicted by new examples]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. mačho = subject marker (unknown person or group)\n8. wičhačhopi = verb (unknown meaning)",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the verb. [NEW: reason - new examples]\n3. The word \"čha\" is a marker of object (object of verb). [NEW: reason - new examples]\n4. Verbs can be conjugated or agree with the subject or object.\n5. The word \"mačho\" is a subject marker for a specific person or group. [NEW: reason - new examples]",
+          "metrics": {
+            "corpus_bleu": 2.35,
+            "corpus_chrfpp": 12.35,
+            "corpus_ter": 84.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.71,
+              6.77,
+              5.87,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              18.01,
+              11.82,
+              11.03,
+              1.28
+            ],
+            "sentence_ter": [
+              75.0,
+              85.71,
+              87.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The stranger called me.",
+              "The stranger is a bad person.",
+              "The stranger is a bad person.",
+              "Stranger"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 1.15,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object [NEW: reason - new examples]\n2. wičhakte = verb (kill)\n3. wakte = verb (kill)\n4. čha = marker of object (object of verb) [PARTIALLY DELETED: reason - not universal]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. mačho = subject marker (specific person or group) [PARTIALLY DELETED: reason - different form \"ničho\"]\n8. wičhačhopi = verb (unknown meaning) [PARTIALLY DELETED: reason - different form \"wakte\"]",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object. [NEW: reason - new examples]\n3. The word \"čha\" is a marker of object (object of verb). [PARTIALLY DELETED: reason - not universal]\n4. Verbs can be conjugated or agree with the subject or object.\n5. The word \"mačho\" is a subject marker for a specific person or group. [PARTIALLY DELETED: reason - different form \"ničho\"]",
+          "metrics": {
+            "corpus_bleu": 2.96,
+            "corpus_chrfpp": 34.23,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.27,
+              8.29,
+              6.79,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              38.5,
+              32.24,
+              30.0,
+              36.61
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The stranger killed the Indian who called me.",
+              "The stranger called you.",
+              "The stranger called you.",
+              "Who called you?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 0.98,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. čha = [DELETED: marker of object — not universal]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. mačho = subject marker (specific person or group) [variant: ničho]\n8. wičhačhopi = [DELETED: verb — different form \"wakte\"]\n9. tuwa = question word or pronoun",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object.\n3. [DELETED: The word \"čha\" is a marker of object — not universal]\n4. Verbs can be conjugated or agree with the subject or object.\n5. [DELETED: The word \"mačho\" is a subject marker for a specific person or group — different form \"ničho\"]",
+          "metrics": {
+            "corpus_bleu": 2.63,
+            "corpus_chrfpp": 28.7,
+            "corpus_ter": 86.96,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.27,
+              5.52,
+              6.27
+            ],
+            "sentence_chrfpp": [
+              38.5,
+              22.76,
+              23.09
+            ],
+            "sentence_ter": [
+              87.5,
+              100.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The stranger killed the Indian who called me.",
+              "The person killed the one who was not there.",
+              "The person killed the one who was there."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 31.16,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker (specific person or group) [variant: ničho]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object.\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"čha\" is a marker of object — not universal]\n5. [DELETED: The word \"mačho\" is a subject marker for a specific person or group — different form \"ničho\"]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 5.28,
+            "corpus_chrfpp": 34.71,
+            "corpus_ter": 69.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.9,
+              8.29,
+              6.79
+            ],
+            "sentence_chrfpp": [
+              41.59,
+              31.65,
+              29.41
+            ],
+            "sentence_ter": [
+              62.5,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The person called the Indian.",
+              "The person called you.",
+              "The person called you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 1.31,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker (specific person or group) [variant: ničho]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"čha\" is a marker of object — not universal]\n5. [DELETED: The word \"mačho\" is a subject marker for a specific person or group — different form \"ničho\"]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 2.71,
+            "corpus_chrfpp": 24.91,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              7.65,
+              6.48,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              33.59,
+              24.19,
+              23.91,
+              2.23
+            ],
+            "sentence_ter": [
+              75.0,
+              71.43,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The stranger killed the Indian.",
+              "The person killed the bear.",
+              "The person killed the bear.",
+              "Who came?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 1.35,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker [general subject marker]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)\n11. čha = marker of object or pronoun\n12. yahi = pronoun or marker",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"čha\" is a marker of object — not universal]\n5. [DELETED: The word \"mačho\" is a subject marker for a specific person or group — different form \"ničho\"]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 3.15,
+            "corpus_chrfpp": 24.67,
+            "corpus_ter": 78.26,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.5,
+              8.29,
+              6.79
+            ],
+            "sentence_chrfpp": [
+              14.65,
+              31.65,
+              29.41
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and he came.",
+              "The person called you.",
+              "The person called you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 1.23,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker [specific person or group]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)\n11. čha = marker of object or pronoun [specific context]\n12. yahi = pronoun or marker\n13. ničho = subject marker [general]\n14. hipi = verb [variant of wičhačho or wakte]\n15. čhopi = verb [variant of wičhačho or wakte]",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"čha\" is a universal marker of object]\n5. [DELETED: The word \"mačho\" is a subject marker for a general person or group]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 7.1,
+            "corpus_chrfpp": 42.52,
+            "corpus_ter": 69.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.71,
+              13.94,
+              11.42
+            ],
+            "sentence_chrfpp": [
+              53.84,
+              37.02,
+              34.34
+            ],
+            "sentence_ter": [
+              62.5,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bears called the Indian.",
+              "The person killed you.",
+              "The person killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 31.88,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker [specific person or group]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)\n11. čha = marker of object or pronoun [specific context]\n12. yahi = pronoun or marker\n13. ničho = subject marker [general]\n14. hipi = verb [variant of wičhačho or wakte]\n15. čhopi = verb [variant of wičhačho or wakte]\n16. he = verb [variant of wičhačho]\n17. ną = conjunction [similar to \"and\" in English]",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"mačho\" is a subject marker for a general person or group]\n5. [DELETED: The word \"čha\" is a universal marker of object]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 13.24,
+            "corpus_chrfpp": 60.13,
+            "corpus_ter": 57.69,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.11,
+              19.08,
+              19.08,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              70.17,
+              59.57,
+              56.98,
+              38.12
+            ],
+            "sentence_ter": [
+              50.0,
+              57.14,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and the bears called the Indian.",
+              "The person killed you, and the boy called me.",
+              "The person killed you, and the boy called me.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 2.38,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker [specific person or group]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)\n11. čha = marker of object or pronoun [specific context]\n12. yahi = pronoun or marker\n13. ničho = subject marker [general]\n14. hipi = verb [variant of wičhačho or wakte]\n15. čhopi = verb [variant of wičhačho or wakte]\n16. he = verb [variant of wičhačho]\n17. ną = conjunction [similar to \"and\" in English]\n18. wačho = verb (call)\n19. hokšila = subject (boy)",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"mačho\" is a subject marker for a general person or group]\n5. [DELETED: The word \"čha\" is a universal marker of object]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 15.95,
+            "corpus_chrfpp": 48.07,
+            "corpus_ter": 61.54,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              33.03,
+              12.55,
+              12.55,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              52.32,
+              49.39,
+              45.91,
+              38.12
+            ],
+            "sentence_ter": [
+              50.0,
+              57.14,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and he called the bears.",
+              "The person killed you, and he called.",
+              "The person killed you, and you called.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 33.4,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker [specific person or group]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)\n11. čha = marker of object or pronoun [specific context]\n12. yahi = pronoun or marker\n13. ničho = subject marker [general]\n14. hipi = verb [variant of wičhačho or wakte]\n15. čhopi = verb [variant of wičhačho or wakte]\n16. he = verb [variant of wičhačho]\n17. ną = conjunction [similar to \"and\" in English]\n18. wačho = verb (call)\n19. hokšila = subject (boy)",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"mačho\" is a subject marker for a general person or group]\n5. [DELETED: The word \"čha\" is a universal marker of object]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 6.09,
+            "corpus_chrfpp": 36.08,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.5,
+              11.04,
+              11.04,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              14.65,
+              47.35,
+              45.63,
+              38.12
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and he came.",
+              "The person killed you, and the general called.",
+              "The person killed you, and the general called.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 32.17,
+          "accumulated_dict": "1. ki = marker of grammatical relationship between the subject and the object (or verb)\n2. wičhakte = verb (kill)\n3. wakte = verb (kill) [variant of wičhakte]\n4. mačho = subject marker [specific person or group]\n5. lakhota = subject (Indian)\n6. matho = subject (I)\n7. tuwa = question word or pronoun\n8. hi = question word or pronoun [variant of tuwa]\n9. kte = verb (kill) [variant of wakte or wičhakte]\n10. wičhaša = subject (person)\n11. čha = marker of object or pronoun [specific context]\n12. yahi = pronoun or marker\n13. ničho = subject marker [general]\n14. hipi = verb [variant of wičhačho or wakte]\n15. čhopi = verb [variant of wičhačho or wakte]\n16. he = verb [variant of wičhačho]\n17. ną = conjunction [similar to \"and\" in English]\n18. wačho = verb (call)\n19. hokšila = subject (boy)\n20. mayačho = subject marker [specific person or group]",
+          "accumulated_rules": "1. Word order is SOV.\n2. The word \"ki\" is a marker of grammatical relationship between the subject and the object (or verb).\n3. Verbs can be conjugated or agree with the subject or object.\n4. [DELETED: The word \"mačho\" is a subject marker for a general person or group]\n5. [DELETED: The word \"čha\" is a universal marker of object]\n6. [DELETED: The word \"wičhačhopi\" is a verb — different form \"wakte\"]",
+          "metrics": {
+            "corpus_bleu": 20.46,
+            "corpus_chrfpp": 56.86,
+            "corpus_ter": 46.15,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              33.03,
+              21.36,
+              21.36,
+              31.95
+            ],
+            "sentence_chrfpp": [
+              52.32,
+              60.96,
+              57.37,
+              59.88
+            ],
+            "sentence_ter": [
+              50.0,
+              42.86,
+              37.5,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and he called the bears.",
+              "The person killed you, and you called me.",
+              "The person killed you, and you called me.",
+              "Who killed you?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 13.24,
+        "corpus_chrfpp": 60.13,
+        "corpus_ter": 57.69,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.11,
+          19.08,
+          19.08,
+          24.84
+        ],
+        "sentence_chrfpp": [
+          70.17,
+          59.57,
+          56.98,
+          38.12
+        ],
+        "sentence_ter": [
+          50.0,
+          57.14,
+          50.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You came, and the bears called the Indian.",
+          "The person killed you, and the boy called me.",
+          "The person killed you, and the boy called me.",
+          "You killed."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 4,
+          "latency_s": 0.74,
+          "accumulated_dict": "- ki: indicates the subject of the sentence (similar to English 'the' or 'a')\n- wičhakte: means 'killed' (verb)\n- matho: means 'I' (first person singular pronoun)\n- wakte: means 'killed the bear' (verb phrase)\n- lakhota: means 'Indian' (noun)\n- mačho: means 'called me' (verb phrase)\n- tuwa: means 'who' (interrogative pronoun)\n- ničho: means 'called you' (verb phrase)",
+          "accumulated_rules": "- Word order: Subject-Verb-Object (SVO) appears to be the dominant pattern, but more examples are needed to confirm.\n- Verb conjugation: The verb 'wičhakte' and 'wakte' seem to be in the third person singular and third person singular with a direct object, respectively. This suggests a system of verb conjugation based on person and number.\n- Pronoun agreement: The pronouns 'matho' and 'tuwa' appear to agree with the subject and object, respectively, in person and number.\n- Case marking: The word 'ki' seems to mark the subject, but more examples are needed to confirm the case system.",
+          "metrics": {
+            "corpus_bleu": 7.74,
+            "corpus_chrfpp": 28.88,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.8,
+              6.97,
+              19.2,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              28.77,
+              17.96,
+              35.55,
+              36.61
+            ],
+            "sentence_ter": [
+              87.5,
+              85.71,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian killed them.",
+              "I killed the bear.",
+              "The Indian called me.",
+              "Who called you?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 0.74,
+          "accumulated_dict": "- ki: indicates the subject of the sentence (similar to English 'the' or 'a')\n- wičhakte: means 'killed' (verb)\n- matho: means 'I' (first person singular pronoun)\n- wakte: means 'killed the bear' (verb phrase)\n- lakhota: means 'Indian' (noun)\n- mačho: means 'called me' (verb phrase)\n- tuwa: means 'who' (interrogative pronoun)\n- ničho: means 'called you' (verb phrase)\n- wičhaša: means 'person' (noun)\n- hi: means 'came' (verb)\n- kte: means 'someone' (pronoun)",
+          "accumulated_rules": "- Word order: Subject-Verb-Object (SVO) appears to be the dominant pattern, but more examples are needed to confirm.\n- Verb conjugation: The verb 'wičhakte' and 'wakte' seem to be in the third person singular and third person singular with a direct object, respectively. This suggests a system of verb conjugation based on person and number.\n- Pronoun agreement: The pronouns 'matho' and 'tuwa' appear to agree with the subject and object, respectively, in person and number.\n- Case marking: The word 'ki' seems to mark the subject, but more examples are needed to confirm the case system.\n- New observation: The verb 'hi' in the example 'tuwa hi he' seems to be in a different conjugation form, possibly indicating a different tense or aspect.\n- New observation: The word 'kte' in the example 'wičhaša ki tuwa kte' seems to be a pronoun indicating a non-specific or indefinite object.",
+          "metrics": {
+            "corpus_bleu": 2.2,
+            "corpus_chrfpp": 13.57,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.8,
+              0.0,
+              4.93,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.2,
+              4.36,
+              25.62,
+              2.88
+            ],
+            "sentence_ter": [
+              87.5,
+              100.0,
+              87.5,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The person killed someone.",
+              "Who came?",
+              "The person killed someone. → The person killed someone.",
+              "Who came? → Who came?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 1.02,
+          "accumulated_dict": "- yahi: means 'you' (second person singular pronoun)\n- čha: means 'came' (verb)\n- hokšila: means 'boy' (noun)\n- nikte: means 'killed you' (verb phrase)\n- ną: means 'and' (conjunction)\n- čhopi: means 'called' (verb)\n- ki: indicates the subject of the sentence (similar to English 'the' or 'a')\n- hipi: means 'bears' (noun)\n- hokšila ki: means 'the boy' (noun phrase)",
+          "accumulated_rules": "- Word order: Subject-Verb-Object (SVO) appears to be the dominant pattern, but more examples are needed to confirm.\n- Verb conjugation: The verb 'wičhakte' and 'wakte' seem to be in the third person singular and third person singular with a direct object, respectively. This suggests a system of verb conjugation based on person and number.\n- Pronoun agreement: The pronouns 'matho' and 'tuwa' appear to agree with the subject and object, respectively, in person and number.\n- Case marking: The word 'ki' seems to mark the subject, but more examples are needed to confirm the case system.\n- Tense/aspect: The verb 'hi' in the example 'tuwa hi he' seems to be in a different conjugation form, possibly indicating a different tense or aspect.\n- Non-specific/indefinite object: The word 'kte' in the example 'wičhaša ki tuwa kte' seems to be a pronoun indicating a non-specific or indefinite object.\n- New observation: The verb 'čhopi' in the example 'matho ki hipi ną lakhota ki čhopi' seems to be in a different conjugation form, possibly indicating a different tense or aspect.\n- New observation: The verb 'nikte' in the example 'yahi čha hokšila ki nikte' seems to be in a different conjugation form, possibly indicating a different tense or aspect.",
+          "metrics": {
+            "corpus_bleu": 16.01,
+            "corpus_chrfpp": 33.91,
+            "corpus_ter": 84.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              30.05,
+              6.77,
+              6.89,
+              17.75
+            ],
+            "sentence_chrfpp": [
+              45.93,
+              15.36,
+              26.0,
+              59.17
+            ],
+            "sentence_ter": [
+              62.5,
+              85.71,
+              75.0,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He called the bears.",
+              "You came, and he came.",
+              "The bears came and called the Indian.",
+              "You came, and the boy killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.07,
+          "accumulated_dict": "- lakhota: means 'Indian' (noun)\n- wačho: means 'called' (verb)\n- mayačho: means 'called me' (verb phrase)\n- wachte: means 'killed the boy' (verb phrase)\n- wičhačho: means 'someone called' (verb phrase)\n- tuwa: means 'I' (first person singular pronoun)\n- maya: means 'me' (object pronoun)\n- ki: indicates the subject of the sentence (similar to English 'the' or 'a')\n- ną: means 'and' (conjunction)\n- wachte: means 'killed the boy' (verb phrase)\n- wičhačho: means 'someone called' (verb phrase)\n- wačho: means 'called' (verb)\n- čha: means 'came' (verb)\n- hokšila ki: means 'the boy' (noun phrase)\n- hipi: means 'bears' (noun)\n- kte: means 'something' or 'something non-specific' (pronoun)",
+          "accumulated_rules": "- Word order: Subject-Verb-Object (SVO) appears to be the dominant pattern, but more examples are needed to confirm.\n- Verb conjugation: The verb 'wičhakte' and 'wakte' seem to be in the third person singular and third person singular with a direct object, respectively. This suggests a system of verb conjugation based on person and number.\n- Pronoun agreement: The pronouns 'matho' and 'tuwa' appear to agree with the subject and object, respectively, in person and number.\n- Case marking: The word 'ki' seems to mark the subject, but more examples are needed to confirm the case system.\n- Tense/aspect: The verb 'hi' in the example 'tuwa hi he' seems to be in a different conjugation form, possibly indicating a different tense or aspect.\n- Non-specific/indefinite object: The word 'kte' in the example 'wičhaša ki tuwa kte' seems to be a pronoun indicating a non-specific or indefinite object.\n- Aspectual distinction: The verb 'čhopi' in the example 'matho ki hipi ną lakhota ki čhopi' seems to be in a different conjugation form, possibly indicating a different aspect (e.g., completed vs. ongoing).\n- Aspectual distinction: The verb 'nikte' in the example 'yahi čha hokšila ki nikte' seems to be in a different conjugation form, possibly indicating a different aspect (e.g., completed vs. ongoing).\n- Negation: The verb 'nikte' in the example 'yahi čha hokšila ki nikte' seems to be negated by the presence of 'yahi', which may indicate a different conjugation form or a negation marker.\n- Questions: The word order in questions appears to be the same as in statements, but more examples are needed to confirm.\n- Complex clauses: The conjunction 'ną' seems to be used to connect clauses, but more examples are needed to confirm the structure of complex clauses.",
+          "metrics": {
+            "corpus_bleu": 7.07,
+            "corpus_chrfpp": 39.98,
+            "corpus_ter": 119.23,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              18.58,
+              5.6,
+              21.11,
+              2.55
+            ],
+            "sentence_chrfpp": [
+              58.02,
+              34.59,
+              41.77,
+              17.75
+            ],
+            "sentence_ter": [
+              62.5,
+              85.71,
+              50.0,
+              533.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians called the Indian and killed the boy.",
+              "The boy was killed, and someone called the Indians.",
+              "The Indians came, and you called me.",
+              "lakhota ki wačho ną hokšila ki wakte → The Indians called the Indian and killed the boy."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 7.07,
+        "corpus_chrfpp": 39.98,
+        "corpus_ter": 119.23,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          18.58,
+          5.6,
+          21.11,
+          2.55
+        ],
+        "sentence_chrfpp": [
+          58.02,
+          34.59,
+          41.77,
+          17.75
+        ],
+        "sentence_ter": [
+          62.5,
+          85.71,
+          50.0,
+          533.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indians called the Indian and killed the boy.",
+          "The boy was killed, and someone called the Indians.",
+          "The Indians came, and you called me.",
+          "lakhota ki wačho ną hokšila ki wakte → The Indians called the Indian and killed the boy."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 13,
+          "latency_s": 1.37,
+          "metrics": {
+            "corpus_bleu": 1.29,
+            "corpus_chrfpp": 5.27,
+            "corpus_ter": 115.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              4.77
+            ],
+            "sentence_chrfpp": [
+              2.66,
+              4.4,
+              2.83,
+              15.33
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              233.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "lakhota ki",
+              "matho ki",
+              "wičhačhopi",
+              "CONCLUSION: You and I called the Indian."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.29,
+        "corpus_chrfpp": 5.27,
+        "corpus_ter": 115.38,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          4.77
+        ],
+        "sentence_chrfpp": [
+          2.66,
+          4.4,
+          2.83,
+          15.33
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          233.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "lakhota ki",
+          "matho ki",
+          "wičhačhopi",
+          "CONCLUSION: You and I called the Indian."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 31.82,
+          "metrics": {
+            "corpus_bleu": 5.79,
+            "corpus_chrfpp": 37.82,
+            "corpus_ter": 57.69,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.96,
+              8.26,
+              6.89,
+              4.98
+            ],
+            "sentence_chrfpp": [
+              52.48,
+              34.22,
+              27.22,
+              38.42
+            ],
+            "sentence_ter": [
+              50.0,
+              57.14,
+              62.5,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Who came and called the Indian?",
+              "The person killed me and the bear.",
+              "The person killed someone and the bear.",
+              "killed"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 1.85,
+          "metrics": {
+            "corpus_bleu": 4.57,
+            "corpus_chrfpp": 34.69,
+            "corpus_ter": 84.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.74,
+              8.26,
+              6.89,
+              5.67
+            ],
+            "sentence_chrfpp": [
+              45.97,
+              34.22,
+              27.22,
+              26.79
+            ],
+            "sentence_ter": [
+              75.0,
+              57.14,
+              62.5,
+              233.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Who called the Indian and came?",
+              "The person killed me and the bear.",
+              "The person killed someone and the bear.",
+              "I called the Indian and killed the boy."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.79,
+        "corpus_chrfpp": 37.82,
+        "corpus_ter": 57.69,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.96,
+          8.26,
+          6.89,
+          4.98
+        ],
+        "sentence_chrfpp": [
+          52.48,
+          34.22,
+          27.22,
+          38.42
+        ],
+        "sentence_ter": [
+          50.0,
+          57.14,
+          62.5,
+          66.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Who came and called the Indian?",
+          "The person killed me and the bear.",
+          "The person killed someone and the bear.",
+          "killed"
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      },
+      "delta": {
+        "bleu_delta": -1.22,
+        "chrf_delta": -3.13,
+        "ter_delta": 26.93,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.61,
+      "chrf": 8.83,
+      "ter": 1287.5,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "Based on my knowledge, I'll attempt to translate the sentence. \n\nThe sentence appears to be in the Lakota language, whic",
+      "reference": "I came and the Indians called the bears."
+    },
+    "baseline": {
+      "best_bleu": 5.79,
+      "best_chrf": 37.82,
+      "best_ter": 57.69,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Who came and called the Indian?",
+        "The person killed me and the bear.",
+        "The person killed someone and the bear.",
+        "killed"
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 13.24,
+      "best_chrf": 60.13,
+      "best_ter": 57.69,
+      "best_em": 0.0,
+      "num_steps": 12,
+      "best_hypotheses": [
+        "You came, and the bears called the Indian.",
+        "The person killed you, and the boy called me.",
+        "The person killed you, and the boy called me.",
+        "You killed."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 7.07,
+      "best_chrf": 39.98,
+      "best_ter": 119.23,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "The Indians called the Indian and killed the boy.",
+        "The boy was killed, and someone called the Indians.",
+        "The Indians came, and you called me.",
+        "lakhota ki wačho ną hokšila ki wakte → The Indians called the Indian and killed the boy."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ],
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 1.29,
+      "best_chrf": 5.27,
+      "best_ter": 115.38,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "lakhota ki",
+        "matho ki",
+        "wičhačhopi",
+        "CONCLUSION: You and I called the Indian."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 5.79,
+      "best_chrf": 37.82,
+      "best_ter": 57.69,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Who came and called the Indian?",
+        "The person killed me and the bear.",
+        "The person killed someone and the bear.",
+        "killed"
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ],
+      "delta": {
+        "bleu_delta": -1.22,
+        "chrf_delta": -3.13,
+        "ter_delta": 26.93,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

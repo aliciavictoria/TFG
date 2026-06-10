@@ -44,7 +44,9 @@ A continuación se presentan los principales trabajos relacionados con mi Trabaj
 
 \subsection{PuzzLing Machines}
 
-El trabajo de \citet{sahin2020puzzling} constituye uno de los primeros intentos sistemáticos de utilizar problemas de olimpiadas lingüísticas para evaluar sistemas automáticos. Los autores presentan un conjunto de siete patrones de problemas de tipo piedra Rosetta extraídos de la IOL (correspondientes a 81 lenguas de 39 familias distintas), y evalúan la capacidad de modelos de traducción automática neural para resolverlos.
+El trabajo de \citet{sahin2020puzzling} constituye uno de los primeros intentos sistemáticos de utilizar problemas de olimpiadas lingüísticas para evaluar
+sistemas automáticos. Los autores presentan un conjunto cercano a cien problemas de tipo piedra Rosetta procedentes de olimpiadas lingüísticas, correspondientes a 81 lenguas de 39 familias distintas, y evalúan la capacidad de modelos de
+traducción automática neural para resolverlos.
 
 Cabe destacar que aunque estos problemas adoptan formalmente la apariencia de una tarea de traducción, presentan diferencias importantes con respecto a la traducción automática convencional. El sistema no dispone de grandes corpus paralelos, sino únicamente de un conjunto mínimo de ejemplos cuidadosamente seleccionado. A partir de ellos debe extraer un pequeño diccionario, identificar reglas gramaticales y reconocer posibles fenómenos morfológicos o fonológicos antes de traducir nuevas expresiones.
 
@@ -52,7 +54,7 @@ Los experimentos realizados por Şahin y cols. muestran que los modelos de tradu
 
 \subsection{modeLing}
 
-\citet{chi2024modeling} presentan modeLing, un dataset construido manualmente con problemas similares a los de la IOL, diseñado específicamente para evitar la contaminación de datos de entrenamiento. A diferencia de los benchmarks basados directamente en el corpus de la IOL, los problemas de modeLing son más originales, lo que garantiza que los modelos evaluados no puedan haberlos memorizado durante el preentrenamiento. 
+\citet{chi2024modeling} presentan modeLing, un dataset construido manualmente con problemas similares a los de la IOL, diseñado específicamente para evitar la contaminación de datos de entrenamiento. A diferencia de los benchmarks basados directamente en el corpus de la IOL, los problemas de modeLing son más originales, lo que reduce considerablemente el riesgo de que los modelos evaluados hayan memorizado los propios enunciados durante el preentrenamiento. 
 
 Más concretamente, modeLing utiliza 48 problemas creados expresamente para el trabajo, basados en 19 lenguas con una presencia digital extremadamente reducida. En total, el conjunto incluye 272 preguntas. Los problemas evalúan distintos aspectos del razonamiento lingüístico, como el orden de palabras, la posesión, la semántica y la morfología nominal o adjetival.
 
@@ -71,11 +73,11 @@ El dataset ha sido utilizado como base de comparación en trabajos posteriores.
 
 Los resultados de la evaluación son reveladores: ninguno de los modelos analizados supera el 25\% de exactitud. El mejor modelo propietario, Claude 3 Opus, alcanza un 24,05\% de exactitud y un chrF++ de 63,96 en configuración zero-shot. El mejor modelo de código abierto, Llama 3 70B, obtiene un 8,84\% de exactitud y un chrF++ de 37,25. Estos valores contrastan con el rendimiento humano en competición, que supera habitualmente el 60\%.
 
-Un hallazgo especialmente relevante del paper es el experimento de ablación sin contexto: al eliminar las frases de entrenamiento del prompt, el rendimiento de todos los modelos cae drásticamente, lo que confirma que los modelos resuelven los puzzles por razonamiento inductivo sobre el contexto proporcionado, no por memorización del idioma durante el preentrenamiento.
+Un hallazgo especialmente relevante del paper es el experimento de ablación sin contexto: al eliminar las frases de entrenamiento del prompt, el rendimiento de todos los modelos cae drásticamente, lo que confirma, o al menos sugiere, que los modelos resuelven los puzzles por razonamiento inductivo sobre el contexto proporcionado, no por memorización del idioma durante el preentrenamiento.
 
 \subsection{LingOly}
 
-\citet{bean2024lingoly} presentan LingOly, el benchmark más exhaustivo del campo hasta la fecha, publicado en NeurIPS 2024. LingOly cubre más de 90 lenguas (incluyendo algunas extintas) y contiene 1.133 problemas organizados en seis categorías lingüísticas (fonología, morfología, sintaxis, semántica, sistemas numéricos y problemas compuestos) y cinco niveles de dificultad humana. Esta clasificación permite realizar análisis más detallados y estudiar cómo varía el rendimiento de los modelos cuando aumenta la complejidad del razonamiento requerido.
+\citet{bean2024lingoly} presentan LingOly, un benchmark de mayor escala y variedad, publicado en NeurIPS 2024. LingOly cubre más de 90 lenguas (incluyendo algunas extintas) y contiene 1.133 problemas organizados en seis categorías lingüísticas (fonología, morfología, sintaxis, semántica, sistemas numéricos y problemas compuestos) y cinco niveles de dificultad humana. Esta clasificación permite realizar análisis más detallados y estudiar cómo varía el rendimiento de los modelos cuando aumenta la complejidad del razonamiento requerido.
 
 Los autores evalúan once modelos de lenguaje y comparan sus resultados con un baseline sin contexto. Los experimentos muestran que los modelos encuentran dificultades especialmente importantes en los problemas de mayor nivel. Incluso el mejor sistema evaluado alcanza únicamente un 38,7 \% de exactitud en los ejercicios más complejos, aunque mejora en 24,7\% respecto a la versión sin contexto.
 
@@ -180,7 +182,7 @@ Más allá de cuantificar el rendimiento de los modelos, algunos trabajos recien
 
 Este hallazgo tiene implicaciones directas para la interpretación de los resultados de este trabajo: la variación en el rendimiento entre los distintos puzzles evaluados puede explicarse en parte por las diferencias tipológicas entre las lenguas seleccionadas.
 
-El trabajo más reciente del campo, \citet{majmudar2025llms}, extiende la evaluación a modelos de razonamiento como o1 de OpenAI y encuentra que estos modelos superan a los humanos en la mayoría de categorías de puzzles, con la excepción notable de los sistemas de escritura no familiares y las lenguas más alejadas tipológicamente del inglés. Este resultado abre una nueva perspectiva sobre el papel del razonamiento explícito en la resolución de puzzles lingüísticos, y sugiere que los modelos con capacidad de razonamiento extendido representan el siguiente paso en esta línea de investigación.
+Un trabajo posterior de \citet{majmudar2025llms}, extiende la evaluación a modelos de razonamiento como o1 de OpenAI y encuentra que estos modelos superan a los humanos en la mayoría de categorías de puzzles, con la excepción notable de los sistemas de escritura no familiares y las lenguas más alejadas tipológicamente del inglés. Este resultado abre una nueva perspectiva sobre el papel del razonamiento explícito en la resolución de puzzles lingüísticos, y sugiere que los modelos con capacidad de razonamiento extendido representan el siguiente paso en esta línea de investigación.
 
 % ─────────────────────────────────────────────────────────────
 \section{Síntesis y posicionamiento del trabajo}
@@ -191,7 +193,7 @@ La revisión de la literatura permite extraer varias conclusiones. En primer lug
 
 A partir de estas observaciones, este Trabajo de Fin de Grado estudia distintas estrategias de prompting orientadas a mejorar la resolución de problemas de olimpiadas lingüísticas. El objetivo no consiste únicamente en medir cuántas traducciones correctas genera cada modelo, sino también en analizar cómo construye sus hipótesis, hasta qué punto es capaz de revisarlas y en qué momento aparecen los errores.
 
-La primera aportación del trabajo es una estrategia incremental por combinaciones crecientes de ejemplos. En lugar de presentar todos los pares de entrenamiento en un único bloque, el modelo recibe subconjuntos de tamaño progresivamente mayor. Tras analizar cada subconjunto, debe actualizar un diccionario y un conjunto de reglas gramaticales. Estas hipótesis no se consideran definitivas: el modelo puede ampliarlas, corregirlas o eliminar aquellas que resulten incompatibles con la nueva evidencia.
+La primera aportación del trabajo es una estrategia de presentación incremental acumulativa de ejemplos. En lugar de presentar todos los pares de entrenamiento en un único bloque, el modelo recibe subconjuntos de tamaño progresivamente mayor. Tras analizar cada subconjunto, debe actualizar un diccionario y un conjunto de reglas gramaticales. Estas hipótesis no se consideran definitivas: el modelo puede ampliarlas, corregirlas o eliminar aquellas que resulten incompatibles con la nueva evidencia. Sobre esta aportación, se plantea además una variante exhaustiva que recorrerá todas las combinaciones posibles de ejemplos para cada tamaño de subconjunto.
 
 Esta estrategia se inspira en el proceso que sigue una persona al enfrentarse a una lengua desconocida. Habitualmente, el razonamiento humano no consiste en formular de inmediato una gramática completa, sino en comparar ejemplos, detectar elementos recurrentes, proponer interpretaciones provisionales y revisarlas cuando aparecen contradicciones. La incorporación explícita de esta lógica de revisión pretende evitar que el modelo mantenga hipótesis iniciales incorrectas durante todo el proceso de resolución.
 
