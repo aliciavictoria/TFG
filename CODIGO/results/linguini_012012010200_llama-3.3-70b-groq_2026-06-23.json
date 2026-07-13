@@ -1,0 +1,1601 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-23T13:55:24.655210",
+    "puzzle_id": "linguini_012012010200",
+    "language": "Dyirbal",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 16,
+    "num_test_pairs": 3,
+    "strategies_run": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012012010200",
+    "language": "Dyirbal",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "bayi yaɽa ɳunɟaymuɳa baɳgu gurugugu biɳgunman.",
+        "target": "Booze is making the man that is always being blamed tired."
+      },
+      {
+        "source": "balan yabu bimabanɟalɳaymuɳa baɳgul yaɽaɳgu guliɳgu ɳunɟaɲu.",
+        "target": "The strong man is blaming the mother that is always following death adders."
+      },
+      {
+        "source": "balan waymin bambun baɳgu ɟugaɳgu ɟamiman.",
+        "target": "Sugar is making the healthy mother-in-law fat."
+      },
+      {
+        "source": "bala yila wura baɳgul bargandu biɳgundu guniɲu.",
+        "target": "The tired wallaby is searching for the little feather."
+      },
+      {
+        "source": "balan malayigara baɳgu garandu biɳgunman.",
+        "target": "The smoke is making the scorpion tired."
+      },
+      {
+        "source": "bala gurugu baɳgul ɳumaɳgu munduɳgu dimbaɲu.",
+        "target": "The offended father is carrying the booze."
+      },
+      {
+        "source": "bayi midin baɳgun bimaɳgu malayigaraguninaymuɳagu banɟan.",
+        "target": "The death adder that is always searching for scorpions is following the possum."
+      },
+      {
+        "source": "bayi gubimbulu biɳgun baɳgu gurugugu ɟagunman.",
+        "target": "Booze is making the tired doctor fall asleep."
+      },
+      {
+        "source": "bala garan baɳgul biɲɟiriɲɟu banɟan.",
+        "target": "The lizard is following the smoke."
+      },
+      {
+        "source": "balan duɳan baɳgul yiriɲɟilagu guniɲu.",
+        "target": "The dragonfly is searching for the stinging tree."
+      },
+      {
+        "source": "bala ɟuga baɳgun yabuɳgu ɳaɟilmuɳagu dimbaɲu.",
+        "target": "The mother that is always being ignored is carrying the sugar."
+      },
+      {
+        "source": "bala diban ɟagiɲ baɳgul gubimbulugu ɟamiɳgu bilmban.",
+        "target": "The fat doctor is pushing the big stone."
+      },
+      {
+        "source": "bala garan baɳgun waymindu dibanbilmbalɳaymuɳagu buɽan.",
+        "target": "The mother-in-law that is always pushing stones is looking at the smoke."
+      },
+      {
+        "source": "balan baNgay waɽu baNgun bundiɲɟu ɟagiɲɟu guniɲu.",
+        "target": "The big grasshopper is searching for the bent spear."
+      },
+      {
+        "source": "bayi biɲɟiriɲ biɳgun baɳgul ɲalɳgaɳgu mugurugu buɽan.",
+        "target": "The quiet boy is looking at the tired lizard."
+      },
+      {
+        "source": "bayi ɳuma guli baɳgul yaɽaɳgu banɟalmuɳagu munduman.",
+        "target": "The man that is always being followed is offending the strong father."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "balan ɲalɳga baɳgul ɳumaɳgu guniymuɳagu bambunman.",
+        "target": "The father that is always being searched for is healing the girl.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bala diban bilmbalmuɳa baɳgun biɲɟiriɲɟu guniɲu.",
+        "target": "The lizard is searching for the stone that is always being pushed.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bayi bargan baɳgul yaɽaɳgu gubimbuluɳunɟanaymuɳagu banɟan.",
+        "target": "The man that is always blaming doctors is following the wallaby",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 4.08,
+          "accumulated_dict": "bayi = unknown (possibly a noun or verb)\nyaɽa = unknown (possibly related to 'man' or 'male')\nɳunɟaymuɳa = unknown (possibly a participle or continuous aspect form)\nbaɳgu = unknown (possibly indicating a case or grammatical function)\ngurugugu = unknown (possibly an adjective or adverb)\nbiɳgunman = unknown (possibly a noun or verb)\nbalan = unknown (possibly an adjective meaning 'strong')\nyabu = unknown (possibly a noun or verb)\nbimabanɟalɳaymuɳa = unknown (possibly a participle or continuous aspect form)\nbaɳgul = unknown (possibly related to 'baɳgu' with a different case or function)\nyaɽaɳgu = unknown (possibly related to 'yaɽa' with an affix)\nguliɳgu = unknown (possibly a noun or verb)\nɳunɟaɲu = unknown (possibly related to 'ɳunɟaymuɳa')",
+          "accumulated_rules": "1. The language might use suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this is highly speculative without more data.\n3. There might be a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases.",
+          "metrics": {
+            "corpus_bleu": 9.82,
+            "corpus_chrfpp": 37.41,
+            "corpus_ter": 88.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.11,
+              12.09,
+              16.47
+            ],
+            "sentence_chrfpp": [
+              32.29,
+              35.74,
+              44.53
+            ],
+            "sentence_ter": [
+              91.67,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is following the death adders that are always biting the man.",
+              "The man is blaming the strong woman that is always hitting the death adders.",
+              "The booze is making the man that is always being blamed by the strong mother tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 3.0,
+          "accumulated_dict": "bayi = unknown (possibly a noun or verb)\nyaɽa = male or man (more likely given the context)\nɳunɟaymuɳa = participle or continuous aspect form (reinforced by the pattern)\nbaɳgu = case marker or grammatical function indicator (possibly accusative or direct object)\ngurugugu = adjective or adverb (possibly indicating a state or condition)\nbiɳgunman = noun or verb (possibly related to a state or action)\nbalan = strong (adjective, given the context)\nyabu = mother (noun, based on the second example)\nbimabanɟalɳaymuɳa = participle or continuous aspect form (following the \"-muɳa\" pattern)\nbaɳgul = case marker or grammatical function indicator (possibly genitive or possessive)\nyaɽaɳgu = male or man with an affix (possibly indicating possession or relation)\nguliɳgu = death adders (noun, based on the context)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\n[DELETED: ɳunɟaymuɳa = unknown — reason: more specifically identified as a participle or continuous aspect form]\n[DELETED: yaɽa = unknown — reason: more specifically identified as related to 'man' or 'male']\n[DELETED: baɳgu = unknown — reason: more specifically identified as a case marker or grammatical function indicator]\n[DELETED: balan = unknown — reason: more specifically identified as an adjective meaning 'strong']\n[DELETED: yabu = unknown — reason: more specifically identified as a noun meaning 'mother']",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as accusative and genitive, respectively.\n[DELETED: The language might use suffixes — reason: confirmed and specified]",
+          "metrics": {
+            "corpus_bleu": 8.56,
+            "corpus_chrfpp": 33.79,
+            "corpus_ter": 102.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.37,
+              9.31,
+              13.79
+            ],
+            "sentence_chrfpp": [
+              23.83,
+              34.67,
+              42.68
+            ],
+            "sentence_ter": [
+              83.33,
+              108.33,
+              118.18
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong woman is following the death adders with the healthy mother-in-law.",
+              "The strong sugar is blaming the mother that is always following the death adders with the healthy one.",
+              "The booze is making the man that is always being blamed tired with the death adders and the mother."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 2.63,
+          "accumulated_dict": "bayi = unknown (possibly a noun or verb)\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form\nbaɳgu = case marker or grammatical function indicator (possibly accusative or direct object)\ngurugugu = adjective or adverb (possibly indicating a state or condition)\nbiɳgunman = noun or verb (possibly related to a state or action)\nbalan = strong (adjective)\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form\nbaɳgul = case marker or grammatical function indicator (possibly genitive or possessive)\nyaɽaɳgu = male or man with an affix (possibly indicating possession or relation)\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = unknown (possibly a noun or verb)\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as accusative and genitive, respectively.",
+          "metrics": {
+            "corpus_bleu": 10.76,
+            "corpus_chrfpp": 34.44,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.65,
+              7.84,
+              21.14
+            ],
+            "sentence_chrfpp": [
+              25.2,
+              24.6,
+              53.47
+            ],
+            "sentence_ter": [
+              75.0,
+              83.33,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong man is searching for the healthy mother.",
+              "The tired wallaby is blaming the little bird for the death.",
+              "The booze is making the man that is always following death adders tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 2.89,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object\nbaɳgul = case marker for genitive or possessive\ngurugugu = describing a state or condition, possibly tired\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = strong (adjective)\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = unknown, possibly related to sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as accusative and genitive, respectively.",
+          "metrics": {
+            "corpus_bleu": 12.54,
+            "corpus_chrfpp": 33.21,
+            "corpus_ter": 65.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.62,
+              30.04,
+              4.79
+            ],
+            "sentence_chrfpp": [
+              25.61,
+              53.59,
+              19.36
+            ],
+            "sentence_ter": [
+              75.0,
+              41.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong woman is searching for the death adder of the mother.",
+              "The wallaby that is always crying is searching for the feather.",
+              "The booze of the little man is making the mother tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 4.06,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object\nbaɳgul = case marker for non-direct object relationships (possibly genitive, possessive, or associative)\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = descriptor or specifier, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\n[DELETED: biɳgundu as solely feather due to potential overlap with other meanings]\n[DELETED: guliɳgu's strict definition as death adders due to potential for broader meaning]",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 9.58,
+            "corpus_chrfpp": 29.62,
+            "corpus_ter": 65.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              20.48,
+              5.37
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              38.19,
+              20.13
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The wallaby is searching for the feather.",
+              "The booze is making the man tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 3.24,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = descriptor or specifier, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 15.59,
+            "corpus_chrfpp": 42.79,
+            "corpus_ter": 54.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              14.82,
+              31.7
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              43.84,
+              56.65
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              36.36
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The specifier is carrying the little feather that is always searching.",
+              "The little man that is always searching is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 34.12,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = descriptor or specifier, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 19.82,
+            "corpus_chrfpp": 42.87,
+            "corpus_ter": 57.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              21.18,
+              26.58
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              38.93,
+              59.18
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              45.45
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The wallaby is searching for the little bird.",
+              "The little man that is always following the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 4.1,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = descriptor or specifier, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 27.45,
+            "corpus_chrfpp": 47.16,
+            "corpus_ter": 54.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              37.85,
+              26.58
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              52.04,
+              59.18
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              45.45
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The lizard is searching for the smoke.",
+              "The little man that is always following the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 3.82,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = descriptor or specifier, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲɟu = unknown\ngaran = lizard (noun)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 20.0,
+            "corpus_chrfpp": 44.86,
+            "corpus_ter": 62.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              31.65,
+              17.68
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              50.68,
+              53.45
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The tired lizard is searching for the stinging tree.",
+              "The little man is following the doctor that is always searching for the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 5.0,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = descriptor or specifier, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲɟu = unknown\ngaran = lizard (noun)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 22.11,
+            "corpus_chrfpp": 46.16,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              40.9,
+              15.46
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              61.58,
+              45.75
+            ],
+            "sentence_ter": [
+              66.67,
+              41.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The wallaby that is always being ignored is searching for the unknown.",
+              "The booze is making the little man that is always being searched for by the doctor tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 4.74,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = specifier or descriptor, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲɟu = unknown\ngaran = lizard (noun)\ndiban = unknown\nɟagiɲ = unknown\nɟamiɳgu = unknown\nbilmban = unknown\nbaɳgun = case marker, possibly similar to baɳgu but used in different contexts\n[DELETED: None — All current entries are either confirmed or refined]",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.\n[DELETED: None — The current rules are either confirmed or require further refinement]",
+          "metrics": {
+            "corpus_bleu": 15.41,
+            "corpus_chrfpp": 40.68,
+            "corpus_ter": 62.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              22.01,
+              17.68
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              40.0,
+              53.45
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The fat stone is searching for the unknown.",
+              "The little man is following the doctor that is always searching for the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 4.28,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = specifier or descriptor, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲɟu = unknown\ngaran = lizard (noun)\ndiban = unknown\nɟagiɲ = unknown\nɟamiɳgu = unknown\nbilmban = unknown\nbaɳgun = case marker, possibly similar to baɳgu but used in different contexts\nbuɽan = unknown\nwaymindu = healthy (adjective)\n[DELETED: None — All current entries are either confirmed or refined]",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.\n[DELETED: None — The current rules are either confirmed or require further refinement]",
+          "metrics": {
+            "corpus_bleu": 31.1,
+            "corpus_chrfpp": 58.72,
+            "corpus_ter": 54.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              55.65,
+              22.89
+            ],
+            "sentence_chrfpp": [
+              38.14,
+              78.74,
+              59.5
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong dragonfly that is always searching is looking at the mother-in-law.",
+              "The fat stone that is always being pushed is searching for the unknown.",
+              "The little man that is always being treated by the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 3.43,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = specifier or descriptor, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲɟu = unknown\ngaran = lizard (noun)\ndiban = unknown\nɟagiɲ = unknown\nɟamiɳgu = unknown\nbilmban = unknown\nbaɳgun = case marker, possibly similar to baɳgu but used in different contexts\nbuɽan = unknown\nwaymindu = healthy (adjective)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.",
+          "metrics": {
+            "corpus_bleu": 33.96,
+            "corpus_chrfpp": 65.07,
+            "corpus_ter": 57.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              31.61,
+              55.65,
+              18.95
+            ],
+            "sentence_chrfpp": [
+              58.43,
+              78.74,
+              58.22
+            ],
+            "sentence_ter": [
+              50.0,
+              33.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father that is always being ignored.",
+              "The fat stone that is always being pushed is searching for the unknown.",
+              "The little booze with the man that is always being treated by the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 4.31,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = specifier or descriptor, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲ = quiet or boy\ndiban = unknown\nɟagiɲ = unknown\nɟamiɳgu = unknown\nbilmban = unknown\nbaɳgun = case marker, possibly similar to baɳgu but used in different contexts\nbuɽan = unknown\nwaymindu = healthy (adjective)\n[DELETED: biɲɟiriɲɟu — reason: possibly related to biɲɟiriɲ]\n[DELETED: ɟuga — reason: possibly related to ɟugaɳgu]",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.\n[DELETED: None]",
+          "metrics": {
+            "corpus_bleu": 19.43,
+            "corpus_chrfpp": 43.99,
+            "corpus_ter": 62.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              40.9,
+              10.83
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              62.71,
+              40.25
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The fat stone that is always pushing is searching for the unknown.",
+              "The booze is making the little scorpion that is always falling asleep follow the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 34.39,
+          "accumulated_dict": "bayi = substance or object, possibly booze\nyaɽa = male or man\nɳunɟaymuɳa = participle or continuous aspect form, possibly related to blame\nbaɳgu = case marker for direct object relationships\nbaɳgul = case marker for non-direct object relationships\ngurugugu = describing a state or condition, possibly tired or offended\nbiɳgunman = verb or noun related to an action or state, possibly being tired\nbalan = descriptor for cause or condition, possibly strong or causal\nyabu = mother (noun)\nbimabanɟalɳaymuɳa = participle or continuous aspect form, possibly related to following\nyaɽaɳgu = male or man with an affix, possibly indicating possession or relation\nguliɳgu = death adders (noun)\nɳunɟaɲu = following or related to death (possibly a verb or noun)\nwaymin = healthy (adjective)\nbambun = mother-in-law (noun)\nɟugaɳgu = fat (adjective)\nɟamiman = possibly sugar or a state\nyila = wallaby (noun)\nwura = tired (adjective)\nbargandu = little (adjective)\nbiɳgundu = feather (noun)\nguniɲu = searching for (possibly a verb)\nmalayigara = smoke (noun)\ngarandu = scorpion (noun)\nbala = specifier or descriptor, possibly 'the'\nɳumaɳgu = father (noun)\nmunduɳgu = carrying (verb)\ndimbaɲu = booze (noun)\nmidin = death adders (noun)\nbimaɳgu = searching (possibly a verb)\nbanɟan = possum (noun)\ngubimbulu = doctor (noun)\nɟagunman = falling asleep (verb)\nduɳan = dragonfly (noun)\nyiriɲɟilagu = stinging tree (noun)\nbiɲɟiriɲ = quiet or boy\ndiban = unknown\nɟagiɲ = unknown\nɟamiɳgu = unknown\nbilmban = unknown\nbaɳgun = case marker, possibly similar to baɳgu but used in different contexts\nbuɽan = unknown\nwaymindu = healthy (adjective)\nbiɲɟiriɲɟu = [DELETED: possibly related to biɲɟiriɲ — reason: redundancy]\nɟuga = [DELETED: possibly related to ɟugaɳgu — reason: redundancy]",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical function or aspect, as suggested by the \"-muɳa\" and \"-gu\" patterns.\n2. Word order could be subject-object-verb (SOV), given the structure of the examples, but this remains speculative without more data.\n3. There is a system of case marking, with \"baɳgu\" and \"baɳgul\" potentially indicating different cases, such as direct and non-direct object relationships, respectively.\n[DELETED: None]",
+          "metrics": {
+            "corpus_bleu": 9.9,
+            "corpus_chrfpp": 38.12,
+            "corpus_ter": 65.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              8.18,
+              19.1
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              26.35,
+              58.64
+            ],
+            "sentence_ter": [
+              66.67,
+              66.67,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The fat stone is looking for the quiet boy.",
+              "The little wallaby is following the doctor that is always searching for scorpions."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 33.96,
+        "corpus_chrfpp": 65.07,
+        "corpus_ter": 57.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          31.61,
+          55.65,
+          18.95
+        ],
+        "sentence_chrfpp": [
+          58.43,
+          78.74,
+          58.22
+        ],
+        "sentence_ter": [
+          50.0,
+          33.33,
+          90.91
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong mother is searching for the father that is always being ignored.",
+          "The fat stone that is always being pushed is searching for the unknown.",
+          "The little booze with the man that is always being treated by the doctor is following the possum."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 13
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 1.46,
+          "accumulated_dict": "yaɽa - booze, man\nɳunɟaymuɳa - always being blamed, that is always being blamed\nbaɳgu - making, the\ngurugugu - tired\nbiɳgunman - tired\nbalan - strong, man, healthy\nyabu - strong\nbimabanɟalɳaymuɳa - that is always following death adders\nbaɳgul - the\nyaɽaɳgu - mother\nguliɳgu - death adders\nɳunɟaɲu - following\nwaymin - sugar\nbambun - healthy\nɟugaɳgu - fat\nɟamiman - mother-in-law\nbala - tired, wallaby\nyila - wallaby\nwura - little\nbargandu - little, searching for\nbiɳgundu - feather\nguniɲu - searching for\nmalayigara - smoke\ngarandu - scorpion\nbiɳgunman - tired",
+          "accumulated_rules": "1. The language appears to have a subject-object-verb (SOV) word order, with the verb often being implied or marked by a suffix.\n2. There may be a system of suffixes or affixes to indicate grammatical relationships, such as -ɳa or -ɟa, but the pattern is not yet clear.\n3. The language seems to use a system of compounding or noun incorporation, with words like yaɽa and balan having multiple related meanings.",
+          "metrics": {
+            "corpus_bleu": 6.87,
+            "corpus_chrfpp": 27.91,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              7.47,
+              5.02
+            ],
+            "sentence_chrfpp": [
+              35.53,
+              29.29,
+              17.99
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The booze is making the man who is always being blamed tired.",
+              "The strong man is blaming the mother who is always following death adders.",
+              "The sugar is making the healthy mother-in-law fat."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 3.07,
+          "accumulated_dict": "yaɽa - booze, man\nɳunɟaymuɳa - always being blamed, that is always being blamed\nbaɳgu - making, the\ngurugugu - tired\nbiɳgunman - tired\nbalan - strong, man, healthy\nyabu - strong\nbimabanɟalɳaymuɳa - that is always following death adders\nbaɳgul - the\nyaɽaɳgu - mother\nguliɳgu - death adders\nɳunɟaɲu - following\nwaymin - sugar\nbambun - healthy\nɟugaɳgu - fat\nɟamiman - mother-in-law\nbala - tired, wallaby\nyila - wallaby\nwura - little\nbargandu - little, searching for\nbiɳgundu - feather\nguniɲu - searching for\nmalayigara - smoke\ngarandu - scorpion\nbiɳgunman - tired\nbimaɳgu - scorpions\nmidin - possum\ngubimbulu - doctor\nmunduɳgu - father\ndimbaɲu - carrying\nbanɟan - offended\nɟagunman - fall asleep\ngurugu - offended\nmalayigaraguninaymuɳagu - always searching for scorpions\nbaya - the (possible article or determiner)\nbayi - the (possible article or determiner)",
+          "accumulated_rules": "1. The language appears to have a subject-object-verb (SOV) word order, with the verb often being implied or marked by a suffix.\n2. There may be a system of suffixes or affixes to indicate grammatical relationships, such as -ɳa or -ɟa, but the pattern is not yet clear.\n3. The language seems to use a system of compounding or noun incorporation, with words like yaɽa and balan having multiple related meanings.\n4. The language may use a system of case marking, with suffixes like -gu indicating the nominative or accusative case.\n5. The word order may be flexible, with the verb sometimes appearing at the end of the sentence and sometimes in the middle.",
+          "metrics": {
+            "corpus_bleu": 6.94,
+            "corpus_chrfpp": 31.22,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.42,
+              15.4,
+              4.54
+            ],
+            "sentence_chrfpp": [
+              23.25,
+              48.05,
+              19.55
+            ],
+            "sentence_ter": [
+              75.0,
+              66.67,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The offended father is carrying the booze.",
+              "The death adder that is always searching for scorpions is following the possum.",
+              "Booze is making the tired doctor fall asleep."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 1.88,
+          "accumulated_dict": "yaɽa - booze, man\nɳunɟaymuɳa - always being blamed, that is always being blamed\nbaɳgu - making, the\ngurugugu - tired\nbiɳgunman - tired\nbalan - strong, man, healthy\nyabu - strong\nbimabanɟalɳaymuɳa - that is always following death adders\nbaɳgul - the\nyaɽaɳgu - mother\nguliɳgu - death adders\nɳunɟaɲu - following\nwaymin - sugar\nbambun - healthy\nɟugaɳgu - fat\nɟamiman - mother-in-law\nbala - tired, wallaby, lizard\nyila - wallaby\nwura - little\nbargandu - little, searching for\nbiɳgundu - feather\nguniɲu - searching for\nmalayigara - smoke\ngarandu - scorpion\nbiɳgunman - tired\nbimaɳgu - scorpions\nmidin - possum\ngubimbulu - doctor\nmunduɳgu - father\ndimbaɲu - carrying\nbanɟan - offended\nɟagunman - fall asleep\ngurugu - offended\nmalayigaraguninaymuɳagu - always searching for scorpions\nbaya - the (possible article or determiner)\nbayi - the (possible article or determiner)\nduɳan - dragonfly\nyiriɲɟilagu - stinging tree\nɳaɟilmuɳagu - always being ignored\nbilmban - big stone",
+          "accumulated_rules": "1. The language appears to have a subject-object-verb (SOV) word order, with the verb often being implied or marked by a suffix.\n2. There may be a system of suffixes or affixes to indicate grammatical relationships, such as -ɳa or -ɟa, but the pattern is not yet clear.\n3. The language seems to use a system of compounding or noun incorporation, with words like yaɽa and balan having multiple related meanings.\n4. The language may use a system of case marking, with suffixes like -gu indicating the nominative or accusative case.\n5. The word order may be flexible, with the verb sometimes appearing at the end of the sentence and sometimes in the middle.\n6. The language appears to use a system of suffixes to indicate tense or aspect, such as -muɳa for \"always\" or \"continuously\".\n7. The language may have a system of agreement between nouns and adjectives, with suffixes like -ɳgu indicating the noun's properties.",
+          "metrics": {
+            "corpus_bleu": 12.27,
+            "corpus_chrfpp": 31.77,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.94,
+              21.18,
+              14.99
+            ],
+            "sentence_chrfpp": [
+              16.21,
+              40.99,
+              37.3
+            ],
+            "sentence_ter": [
+              75.0,
+              58.33,
+              45.45
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The lizard is following the smoke.",
+              "The dragonfly is searching for the stinging tree.",
+              "The mother that is always being ignored is carrying the sugar."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 2.98,
+          "accumulated_dict": "yaɽa - booze, man\nɳunɟaymuɳa - always being blamed, that is always being blamed\nbaɳgu - making, the\ngurugugu - tired\nbiɳgunman - tired\nbalan - strong, man, healthy\nyabu - strong\nbimabanɟalɳaymuɳa - that is always following death adders\nbaɳgul - the\nyaɽaɳgu - mother\nguliɳgu - death adders\nɳunɟaɲu - following\nwaymin - sugar\nbambun - healthy\nɟugaɳgu - fat\nɟamiman - mother-in-law\nbala - tired, wallaby, lizard\nyila - wallaby\nwura - little\nbargandu - little, searching for\nbiɳgundu - feather\nguniɲu - searching for\nmalayigara - smoke\ngarandu - scorpion\nbiɳgunman - tired\nbimaɳgu - scorpions\nmidin - possum\ngubimbulu - doctor\nmunduɳgu - father\ndimbaɲu - carrying\nbanɟan - offended\nɟagunman - fall asleep\ngurugu - offended\nmalayigaraguninaymuɳagu - always searching for scorpions\nbaya - the (possible article or determiner)\nbayi - the (possible article or determiner)\nduɳan - dragonfly\nyiriɲɟilagu - stinging tree\nɳaɟilmuɳagu - always being ignored\nbilmban - big stone\ndibanbilmbalɳaymuɳagu - always pushing stones\nbundiɲɟu - bent spear\nɟagiɲɟu - grasshopper\nmugurugu - quiet\nbuɽan - looking at\nwaɽu - big\nbanɟalmuɳagu - always being followed",
+          "accumulated_rules": "1. The language appears to have a subject-object-verb (SOV) word order, with the verb often being implied or marked by a suffix.\n2. There may be a system of suffixes or affixes to indicate grammatical relationships, such as -ɳa or -ɟa, but the pattern is not yet clear.\n3. The language seems to use a system of compounding or noun incorporation, with words like yaɽa and balan having multiple related meanings.\n4. The language may use a system of case marking, with suffixes like -gu indicating the nominative or accusative case.\n5. The word order may be flexible, with the verb sometimes appearing at the end of the sentence and sometimes in the middle.\n6. The language appears to use a system of suffixes to indicate tense or aspect, such as -muɳa for \"always\" or \"continuously\".\n7. The language may have a system of agreement between nouns and adjectives, with suffixes like -ɳgu indicating the noun's properties.\n8. The language uses relative clauses to describe nouns, with the relative clause appearing before the noun it modifies.\n9. The language may use a system of determiners or articles, with words like baya and bayi indicating the noun's definiteness.",
+          "metrics": {
+            "corpus_bleu": 12.32,
+            "corpus_chrfpp": 28.91,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              21.54,
+              5.0
+            ],
+            "sentence_chrfpp": [
+              34.34,
+              37.32,
+              13.62
+            ],
+            "sentence_ter": [
+              58.33,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The mother-in-law that is always pushing stones is looking at the smoke.",
+              "The big grasshopper is searching for the bent spear.",
+              "The quiet boy is looking at the tired lizard."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 12.27,
+        "corpus_chrfpp": 31.77,
+        "corpus_ter": 60.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.94,
+          21.18,
+          14.99
+        ],
+        "sentence_chrfpp": [
+          16.21,
+          40.99,
+          37.3
+        ],
+        "sentence_ter": [
+          75.0,
+          58.33,
+          45.45
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The lizard is following the smoke.",
+          "The dragonfly is searching for the stinging tree.",
+          "The mother that is always being ignored is carrying the sugar."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 2.92,
+          "metrics": {
+            "corpus_bleu": 10.67,
+            "corpus_chrfpp": 45.73,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.69,
+              13.51,
+              13.83
+            ],
+            "sentence_chrfpp": [
+              38.73,
+              41.91,
+              56.4
+            ],
+            "sentence_ter": [
+              66.67,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong boy is searching for the man that is always carrying.",
+              "The fat doctor is looking at the quiet boy that is always searching.",
+              "The booze is making the little wallaby that is always following the doctor tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 10.67,
+        "corpus_chrfpp": 45.73,
+        "corpus_ter": 71.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.69,
+          13.51,
+          13.83
+        ],
+        "sentence_chrfpp": [
+          38.73,
+          41.91,
+          56.4
+        ],
+        "sentence_ter": [
+          66.67,
+          66.67,
+          81.82
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong boy is searching for the man that is always carrying.",
+          "The fat doctor is looking at the quiet boy that is always searching.",
+          "The booze is making the little wallaby that is always following the doctor tired."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 3.73,
+          "metrics": {
+            "corpus_bleu": 8.69,
+            "corpus_chrfpp": 44.24,
+            "corpus_ter": 97.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.52,
+              12.5,
+              11.08
+            ],
+            "sentence_chrfpp": [
+              37.55,
+              45.23,
+              49.83
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              127.27
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong lizard that is always carrying the offended mother is making the healthy mother-in-law tired.",
+              "The big doctor that is always pushing stones is looking at the searching dragonfly.",
+              "The little scorpion that is always being ignored by the mother is following the tired wallaby that is always searching for feathers."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 3.22,
+          "metrics": {
+            "corpus_bleu": 6.26,
+            "corpus_chrfpp": 28.28,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.07,
+              4.57,
+              5.37
+            ],
+            "sentence_chrfpp": [
+              40.83,
+              20.96,
+              21.68
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong man is blaming the mother that is always following death adders.",
+              "The fat doctor is pushing the big stone.",
+              "The tired wallaby is searching for the little feather."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.69,
+        "corpus_chrfpp": 44.24,
+        "corpus_ter": 97.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.52,
+          12.5,
+          11.08
+        ],
+        "sentence_chrfpp": [
+          37.55,
+          45.23,
+          49.83
+        ],
+        "sentence_ter": [
+          83.33,
+          83.33,
+          127.27
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong lizard that is always carrying the offended mother is making the healthy mother-in-law tired.",
+          "The big doctor that is always pushing stones is looking at the searching dragonfly.",
+          "The little scorpion that is always being ignored by the mother is following the tired wallaby that is always searching for feathers."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": -2.43,
+        "chrf_delta": -15.96,
+        "ter_delta": -14.28,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "incremental_combinations": {
+      "best_bleu": 33.96,
+      "best_chrf": 65.07,
+      "best_ter": 57.14,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "The strong mother is searching for the father that is always being ignored.",
+        "The fat stone that is always being pushed is searching for the unknown.",
+        "The little booze with the man that is always being treated by the doctor is following the possum."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ],
+      "best_step": 13
+    },
+    "step_by_step": {
+      "best_bleu": 12.27,
+      "best_chrf": 31.77,
+      "best_ter": 60.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "The lizard is following the smoke.",
+        "The dragonfly is searching for the stinging tree.",
+        "The mother that is always being ignored is carrying the sugar."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 10.67,
+      "best_chrf": 45.73,
+      "best_ter": 71.43,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The strong boy is searching for the man that is always carrying.",
+        "The fat doctor is looking at the quiet boy that is always searching.",
+        "The booze is making the little wallaby that is always following the doctor tired."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 8.69,
+      "best_chrf": 44.24,
+      "best_ter": 97.14,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "The strong lizard that is always carrying the offended mother is making the healthy mother-in-law tired.",
+        "The big doctor that is always pushing stones is looking at the searching dragonfly.",
+        "The little scorpion that is always being ignored by the mother is following the tired wallaby that is always searching for feathers."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ],
+      "delta": {
+        "bleu_delta": -2.43,
+        "chrf_delta": -15.96,
+        "ter_delta": -14.28,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

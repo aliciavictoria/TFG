@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-24T15:53:05.620951",
+    "puzzle_id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-sambanova",
+    "model_tier": "medium",
+    "num_train_pairs": 13,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      4
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "lakhota ki wičhakte",
+        "target": "The Indian killed them."
+      },
+      {
+        "source": "matho ki wakte",
+        "target": "I killed the bear."
+      },
+      {
+        "source": "lakhota ki mačho",
+        "target": "The Indian called me."
+      },
+      {
+        "source": "tuwa ničho",
+        "target": "Who called you?"
+      },
+      {
+        "source": "wičhaša ki tuwa kte",
+        "target": "The person killed someone."
+      },
+      {
+        "source": "tuwa hi he",
+        "target": "Who came?"
+      },
+      {
+        "source": "matho ki wičhačho",
+        "target": "He called the bears."
+      },
+      {
+        "source": "yahi čha hi",
+        "target": "You came, and he came."
+      },
+      {
+        "source": "matho ki hipi ną lakhota ki čhopi",
+        "target": "The bears came and called the Indian."
+      },
+      {
+        "source": "yahi čha hokšila ki nikte",
+        "target": "You came, and the boy killed you."
+      },
+      {
+        "source": "lakhota ki wačho ną hokšila ki wakte",
+        "target": "I called the Indian and killed the boy."
+      },
+      {
+        "source": "hokšila ki wakte čha tuwa lakhota ki wičhačho",
+        "target": "I killed the boy, and someone called the Indians."
+      },
+      {
+        "source": "lakhota ki hipi čha mayačho",
+        "target": "The Indians came, and you called me."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "wahi čha lakhota ki matho ki wičhačhopi",
+        "target": "I came and the Indians called the bears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte ną mačho",
+        "target": "The man killed you and called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte čha mačho",
+        "target": "The man killed you and he called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nikte",
+        "target": "He killed you.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 13,
+          "latency_s": 2.02,
+          "metrics": {
+            "corpus_bleu": 19.19,
+            "corpus_chrfpp": 65.48,
+            "corpus_ter": 50.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.99,
+              36.89,
+              21.36,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              75.79,
+              70.32,
+              57.37,
+              43.22
+            ],
+            "sentence_ter": [
+              62.5,
+              28.57,
+              37.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians came, and the bears called the Indians.",
+              "The person killed you, and called me.",
+              "The person killed you, and you called me.",
+              "You were killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 19.19,
+        "corpus_chrfpp": 65.48,
+        "corpus_ter": 50.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.99,
+          36.89,
+          21.36,
+          19.0
+        ],
+        "sentence_chrfpp": [
+          75.79,
+          70.32,
+          57.37,
+          43.22
+        ],
+        "sentence_ter": [
+          62.5,
+          28.57,
+          37.5,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indians came, and the bears called the Indians.",
+          "The person killed you, and called me.",
+          "The person killed you, and you called me.",
+          "You were killed."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "human_inspiration": {
+      "best_bleu": 19.19,
+      "best_chrf": 65.48,
+      "best_ter": 50.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The Indians came, and the bears called the Indians.",
+        "The person killed you, and called me.",
+        "The person killed you, and you called me.",
+        "You were killed."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ]
+    }
+  }
+}

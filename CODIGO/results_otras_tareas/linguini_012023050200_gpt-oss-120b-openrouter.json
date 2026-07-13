@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T23:08:21.627622",
+    "puzzle_id": "linguini_012023050200",
+    "language": "Supyire",
+    "task_type": "num_to_text",
+    "model_key": "gpt-oss-120b-openrouter"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.1,
+        "corpus_ter": 5966.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.1
+        ],
+        "sentence_ter": [
+          5966.67
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "In Supyire (a Senufo language spoken in southeastern Burkina Faso), the numeral system is basically decimal, and the word for “ten” is **kàŋ** (sometimes rendered *kaŋ*). Numbers 11‑19 are formed by putting the unit after the ten, linked with a connective particle that is roughly equivalent to “and”. The most commonly reported connective is **-n‑** (a short nasal‑like element that attaches to the ten).\n\nPutting this together, the pattern for 15 is:\n\n**kàŋ‑n‑táa**\n\n* **kàŋ** = 10  \n* **‑n‑** = connective “and”  \n* **táa** = 5 (the basic word for the numeral five)\n\nSo a plausible Supyire form for the number **15** would be **kàŋ‑n‑táa** (pronounced something like /kaŋ‑n‑taː/).  \n\n*Note:* This is an educated guess based on the limited published data on Supyire numerals (see works by Bendor‑Samuel & Bendor‑Samson 1995, and the “Senufo” entry in *The World Atlas of Language Structures*). If you have access to a native speaker or a more recent grammar, the exact phonology or the presence/absence of the connective may vary, but the structure “ten‑and‑five” is the most likely way Supyire would express 15."
+        ],
+        "references": [
+          "kɛ na kaŋkuro"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "metrics": {
+        "corpus_bleu": 13.05,
+        "corpus_chrfpp": 38.43,
+        "corpus_ter": 70.37,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          55.03,
+          14.13,
+          8.52,
+          9.65,
+          25.1
+        ],
+        "sentence_chrfpp": [
+          63.46,
+          9.74,
+          27.03,
+          27.15,
+          58.25
+        ],
+        "sentence_ter": [
+          33.33,
+          80.0,
+          71.43,
+          166.67,
+          44.44
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "baaricyɛɛre na kaŋkuro",
+          "taanre na kɛ",
+          "taanre na beɲjaaga na baani",
+          "ŋkwuu taanre na baaricyɛɛre na baani",
+          "kampwɔhii na sicyɛɛre na beɲjaaga na kɛ na baaricyɛɛre"
+        ],
+        "references": [
+          "kɛ na kaŋkuro",
+          "ŋkuu na beɲjaaga na baaricyɛɛre",
+          "ŋkuu na beetaanre na kɛ na shuunni",
+          "kampwoo na taanre",
+          "kampwɔhii taanre na ŋkwuu sicyɛɛre na kɛ na sicyɛɛre"
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true,
+        "exact_match_strict": 0.0
+      },
+      "hypotheses": [
+        "baaricyɛɛre na kaŋkuro",
+        "taanre na kɛ",
+        "taanre na beɲjaaga na baani",
+        "ŋkwuu taanre na baaricyɛɛre na baani",
+        "kampwɔhii na sicyɛɛre na beɲjaaga na kɛ na baaricyɛɛre"
+      ],
+      "references": [
+        "kɛ na kaŋkuro",
+        "ŋkuu na beɲjaaga na baaricyɛɛre",
+        "ŋkuu na beetaanre na kɛ na shuunni",
+        "kampwoo na taanre",
+        "kampwɔhii taanre na ŋkwuu sicyɛɛre na kɛ na sicyɛɛre"
+      ],
+      "latency_s": 109.84
+    }
+  }
+}

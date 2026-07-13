@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T22:17:18.127268",
+    "puzzle_id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 11,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "We will go away and they will come.",
+        "target": "Wananuuwa mananiib.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I take the pig and he takes the fish.",
+        "target": "Awon biina oon been",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He saw the water and the house and heard the dog.",
+        "target": "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "You(sg) eat the bread and sing.",
+        "target": "Om aneneb wingkeeb.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "We will go away and they will come.",
+      "reference": "Wananuuwa mananiib.",
+      "hypothesis": "I'll attempt to translate the sentence into Yonggom, a language spoken in Papua New Guinea. However, please note that I may not be entirely accurate due to the limited availability of Yonggom language resources.\n\nThe sentence \"We will go away and they will come\" can be broken down into its components:\n\n- \"We will go away\" can be translated to \"Mere wala\" (Mere means \"we\" and wala means \"go away\" or \"leave\").\n- \"and\" can be translated to \"a\" (a conjunction used to connect two clauses).\n- \"they will come\" can be translated to \"Meru wala\" (Meru means \"they\" and wala means \"come\").\n\nCombining these components, a possible translation of the sentence into Yonggom could be:\n\n\"Mere wala a Meru wala\"\n\nPlease note that this is just an attempt and may not be entirely accurate.",
+      "latency_s": 0.5,
+      "metrics": {
+        "corpus_bleu": 0.2,
+        "corpus_chrfpp": 3.19,
+        "corpus_ter": 6750.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.2
+        ],
+        "sentence_chrfpp": [
+          3.19
+        ],
+        "sentence_ter": [
+          6750.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll attempt to translate the sentence into Yonggom, a language spoken in Papua New Guinea. However, please note that I may not be entirely accurate due to the limited availability of Yonggom language resources.\n\nThe sentence \"We will go away and they will come\" can be broken down into its components:\n\n- \"We will go away\" can be translated to \"Mere wala\" (Mere means \"we\" and wala means \"go away\" or \"leave\").\n- \"and\" can be translated to \"a\" (a conjunction used to connect two clauses).\n- \"they will come\" can be translated to \"Meru wala\" (Meru means \"they\" and wala means \"come\").\n\nCombining these components, a possible translation of the sentence into Yonggom could be:\n\n\"Mere wala a Meru wala\"\n\nPlease note that this is just an attempt and may not be entirely accurate."
+        ],
+        "references": [
+          "Wananuuwa mananiib."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 34.41,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 4,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 4,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.2,
+      "chrf": 3.19,
+      "ter": 6750.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll attempt to translate the sentence into Yonggom, a language spoken in Papua New Guinea. However, please note that I ",
+      "reference": "Wananuuwa mananiib."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T22:15:15.540379",
+    "puzzle_id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 10,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Did I beat you(sg)?",
+        "target": "ŋabə nɤ lan tɤʔ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Did they see me?",
+        "target": "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Does he know you(sg)?",
+        "target": "ati kəmə nɤ cʰam ru ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you(pl) sleep?",
+        "target": "nuʔrum ʒip kan ne",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Did I beat you(sg)?",
+      "reference": "ŋabə nɤ lan tɤʔ ne",
+      "hypothesis": "I'll attempt to translate the sentence into Hakha Chin (also known as Hakha), a language spoken in Myanmar (Burma) and India. Please note that the translation may not be perfect, as I'm not a native speaker of the language.\n\n Sentence: Did I beat you(sg)?\n Translation: \n\n* 'Did I beat you' can be translated to Hakha Chin as: \n  - 'Mai a hmaa' (Mai a = I did, hmaa = beat)\n* 'you(sg)' can be translated to Hakha Chin as: \n  - 'kha' (kha is a pronoun for 'you' in Hakha Chin)\n\nSo, the translation of the sentence into Hakha Chin would be: 'Mai a hmaa kha?'\n\nPlease note that the translation may vary depending on the dialect and regional variations of the language.",
+      "latency_s": 0.62,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.39,
+        "corpus_ter": 2420.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.39
+        ],
+        "sentence_ter": [
+          2420.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll attempt to translate the sentence into Hakha Chin (also known as Hakha), a language spoken in Myanmar (Burma) and India. Please note that the translation may not be perfect, as I'm not a native speaker of the language.\n\n Sentence: Did I beat you(sg)?\n Translation: \n\n* 'Did I beat you' can be translated to Hakha Chin as: \n  - 'Mai a hmaa' (Mai a = I did, hmaa = beat)\n* 'you(sg)' can be translated to Hakha Chin as: \n  - 'kha' (kha is a pronoun for 'you' in Hakha Chin)\n\nSo, the translation of the sentence into Hakha Chin would be: 'Mai a hmaa kha?'\n\nPlease note that the translation may vary depending on the dialect and regional variations of the language."
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 34.17,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 4,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 0,
+        "num_expected": 4,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "complete": false
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 1.39,
+      "ter": 2420.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll attempt to translate the sentence into Hakha Chin (also known as Hakha), a language spoken in Myanmar (Burma) and I",
+      "reference": "ŋabə nɤ lan tɤʔ ne"
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ]
+    }
+  }
+}

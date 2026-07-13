@@ -1,0 +1,190 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-23T14:23:53.337901",
+    "puzzle_id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 12,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Qingmivit takujaatit.",
+        "target": "Your dog saw you."
+      },
+      {
+        "source": "Inuuhuktuup iluaqhaiji qukiqtanga.",
+        "target": "The boy shot the doctor."
+      },
+      {
+        "source": "Aanniqtutit.",
+        "target": "You hurt yourself."
+      },
+      {
+        "source": "Iluaqhaijiup aarqijaatit.",
+        "target": "The doctor cured you."
+      },
+      {
+        "source": "Qingmiq iputujait.",
+        "target": "You speared the dog."
+      },
+      {
+        "source": "Angatkuq iluaqhaijimik aarqisijuq.",
+        "target": "The shaman cured a doctor."
+      },
+      {
+        "source": "Nanuq qaijuq.",
+        "target": "The polar bear came."
+      },
+      {
+        "source": "Iluaqhaijivit inuuhuktuit aarqijanga.",
+        "target": "Your doctor cured your boy."
+      },
+      {
+        "source": "Angunahuktiup amaruq iputujanga.",
+        "target": "The hunter speared the wolf."
+      },
+      {
+        "source": "Qingmiup ilinniaqtitsijiit aanniqtanga.",
+        "target": "The dog hurt your teacher."
+      },
+      {
+        "source": "Ukiakhaqtutit.",
+        "target": "You fell."
+      },
+      {
+        "source": "Angunahukti nanurmik qukiqsijuq.",
+        "target": "The hunter shot a polar bear."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Amaruup angatkuit takujanga.",
+        "target": "The wolf saw your shaman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Nanuit inuuhukturmik aanniqsijuq.",
+        "target": "Your polar bear hurt a boy.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktiit aarqijuq.",
+        "target": "Your hunter cured himself.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ilinniaqtitsiji qukiqtait.",
+        "target": "You shot the teacher.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Qaijutit.",
+        "target": "You came.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktimik aarqisijutit.",
+        "target": "You cured a hunter.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Amaruup angatkuit takujanga.",
+      "reference": "The wolf saw your shaman.",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language, and my translation may not be accurate.\n\nBased on my analysis, the sentence appears to be in an Inuktitut dialect, which is a language spoken by the Inuit people in Canada.\n\nHere's my attempt at translation:\n\n\"Amaruup angatkuit takujanga\"\n\n* \"Amaruup\" could mean \"wolf\" or \"like a wolf\"\n* \"Angatkuit\" might mean \"spirits\" or \"ghosts\"\n* \"Takujanga\" could be a verb meaning \"to see\" or \"to look\"\n\nWith that in mind, a possible translation of the sentence could be:\n\n\"I see wolf spirits\" or \"Like a wolf, I see ghosts\"\n\nPlease keep in mind that this is a rough translation, and I may be incorrect. If you have more context or information about the language and dialect, I may be able to provide a more accurate translation.",
+      "latency_s": 0.91,
+      "metrics": {
+        "corpus_bleu": 0.23,
+        "corpus_chrfpp": 4.69,
+        "corpus_ter": 2860.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.23
+        ],
+        "sentence_chrfpp": [
+          4.69
+        ],
+        "sentence_ter": [
+          2860.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language, and my translation may not be accurate.\n\nBased on my analysis, the sentence appears to be in an Inuktitut dialect, which is a language spoken by the Inuit people in Canada.\n\nHere's my attempt at translation:\n\n\"Amaruup angatkuit takujanga\"\n\n* \"Amaruup\" could mean \"wolf\" or \"like a wolf\"\n* \"Angatkuit\" might mean \"spirits\" or \"ghosts\"\n* \"Takujanga\" could be a verb meaning \"to see\" or \"to look\"\n\nWith that in mind, a possible translation of the sentence could be:\n\n\"I see wolf spirits\" or \"Like a wolf, I see ghosts\"\n\nPlease keep in mind that this is a rough translation, and I may be incorrect. If you have more context or information about the language and dialect, I may be able to provide a more accurate translation."
+        ],
+        "references": [
+          "The wolf saw your shaman."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "incremental_combinations": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "step_by_step": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "human_inspiration": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "self_correction": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.23,
+      "chrf": 4.69,
+      "ter": 2860.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language, and my translat",
+      "reference": "The wolf saw your shaman."
+    },
+    "baseline": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "incremental_combinations": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "step_by_step": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "human_inspiration": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "self_correction": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    }
+  }
+}

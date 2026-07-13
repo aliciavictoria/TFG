@@ -1,0 +1,1637 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-25T15:22:36.928865",
+    "puzzle_id": "linguini_012023020100",
+    "language": "Apurinã",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "num_test_pairs": 3,
+    "source_raw_log": "raw_logs/linguini_012023020100_llama-3.3-70b-groq.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "She remembered the woman.",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language or dialect used in the sentence.\n\nBased on my analysis, I couldn't find any direct matches or similarities with known languages. The sentence \"uwa xinhikaru sytu\" appears to be a unique or unknown language.\n\nIf I had to make an educated guess, I would break down the sentence into possible components:\n\n* \"uwa\" could be a pronoun or a prefix\n* \"xinhikaru\" might be a verb or a noun, possibly related to \"shine\" or \"light\" (due to the presence of \"xinh\" which resembles the Latin word \"lux\" meaning light)\n* \"sytu\" could be a suffix, a noun, or a verb, possibly related to a location or a state\n\nWith these assumptions, a possible translation could be: \"He/She/It shines in a place\" or \"The light is in a situation.\" However, please keep in mind that this is a highly speculative translation, and the actual meaning could be entirely different.\n\nIf you could provide more context or information about the language or dialect used, I may be able to provide a more accurate translation.",
+      "metrics": {
+        "corpus_bleu": 0.2,
+        "corpus_chrfpp": 3.71,
+        "corpus_ter": 4725.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.2
+        ],
+        "sentence_chrfpp": [
+          3.71
+        ],
+        "sentence_ter": [
+          4725.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language or dialect used in the sentence.\n\nBased on my analysis, I couldn't find any direct matches or similarities with known languages. The sentence \"uwa xinhikaru sytu\" appears to be a unique or unknown language.\n\nIf I had to make an educated guess, I would break down the sentence into possible components:\n\n* \"uwa\" could be a pronoun or a prefix\n* \"xinhikaru\" might be a verb or a noun, possibly related to \"shine\" or \"light\" (due to the presence of \"xinh\" which resembles the Latin word \"lux\" meaning light)\n* \"sytu\" could be a suffix, a noun, or a verb, possibly related to a location or a state\n\nWith these assumptions, a possible translation could be: \"He/She/It shines in a place\" or \"The light is in a situation.\" However, please keep in mind that this is a highly speculative translation, and the actual meaning could be entirely different.\n\nIf you could provide more context or information about the language or dialect used, I may be able to provide a more accurate translation."
+        ],
+        "references": [
+          "She remembered the woman."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 5.91,
+            "corpus_chrfpp": 33.55,
+            "corpus_ter": 160.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.55,
+              5.67,
+              4.07
+            ],
+            "sentence_chrfpp": [
+              54.95,
+              26.59,
+              22.17
+            ],
+            "sentence_ter": [
+              200.0,
+              175.0,
+              128.57
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu - My blood was remembered by the woman.",
+              "txipary nhinhikary - The girl's banana was eaten.",
+              "kyky aikute pysykary ywamukary - The man's house was brought to me."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 5.91,
+        "corpus_chrfpp": 33.55,
+        "corpus_ter": 160.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.55,
+          5.67,
+          4.07
+        ],
+        "sentence_chrfpp": [
+          54.95,
+          26.59,
+          22.17
+        ],
+        "sentence_ter": [
+          200.0,
+          175.0,
+          128.57
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "uwa xinhikaru sytu - My blood was remembered by the woman.",
+          "txipary nhinhikary - The girl's banana was eaten.",
+          "kyky aikute pysykary ywamukary - The man's house was brought to me."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 5.91,
+        "corpus_chrfpp": 33.55,
+        "corpus_ter": 160.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.55,
+          5.67,
+          4.07
+        ],
+        "sentence_chrfpp": [
+          54.95,
+          26.59,
+          22.17
+        ],
+        "sentence_ter": [
+          200.0,
+          175.0,
+          128.57
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "uwa xinhikaru sytu - My blood was remembered by the woman.",
+          "txipary nhinhikary - The girl's banana was eaten.",
+          "kyky aikute pysykary ywamukary - The man's house was brought to me."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.47,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              2.45,
+              6.44,
+              7.21
+            ],
+            "sentence_ter": [
+              125.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I am giving a gift",
+              "The bird is flying",
+              "She is eating a fish"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 1.42,
+            "corpus_chrfpp": 11.76,
+            "corpus_ter": 206.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.84,
+              3.67,
+              3.13
+            ],
+            "sentence_chrfpp": [
+              9.54,
+              13.28,
+              12.51
+            ],
+            "sentence_ter": [
+              275.0,
+              225.0,
+              157.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I don't have enough information to translate \"uwa xinhikaru sytu\" accurately.",
+              "I don't have enough information to translate \"txipary nhinhikary\" accurately.",
+              "I don't have enough information to translate \"kyky aikute pysykary ywamukary\" accurately."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 2.82,
+            "corpus_chrfpp": 14.41,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              0.0,
+              3.98
+            ],
+            "sentence_chrfpp": [
+              14.81,
+              6.54,
+              17.78
+            ],
+            "sentence_ter": [
+              125.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "To her, the bird the house",
+              "The bird my house",
+              "The man is bringing something to the woman"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 6.19,
+            "corpus_chrfpp": 21.03,
+            "corpus_ter": 160.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.61,
+              6.57,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              33.62,
+              9.81,
+              18.03
+            ],
+            "sentence_ter": [
+              225.0,
+              150.0,
+              128.57
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu The woman gave the fish to the woman.",
+              "txipary nhinhikary You remembered my story.",
+              "kyky aikute pysykary ywamukary The man brought the fish to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 6.19,
+            "corpus_chrfpp": 21.74,
+            "corpus_ter": 160.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.61,
+              6.57,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              33.62,
+              11.48,
+              18.71
+            ],
+            "sentence_ter": [
+              225.0,
+              150.0,
+              128.57
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu The woman gave the fish to the woman.",
+              "txipary nhinhikary She brought your fish.",
+              "kyky aikute pysykary ywamukary The man brought the canoe to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 5.51,
+            "corpus_chrfpp": 21.27,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              21.36,
+              0.0,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              31.83,
+              2.6,
+              23.46
+            ],
+            "sentence_ter": [
+              125.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "To the woman my house",
+              "You brought my fish",
+              "The house of the man to the woman"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 6.09,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              5.7,
+              6.39,
+              6.24
+            ],
+            "sentence_ter": [
+              125.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I gave her a gift",
+              "The canoe is hers",
+              "She has a canoe for me"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 3.31,
+            "corpus_chrfpp": 14.21,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              12.7,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              12.01,
+              19.31,
+              13.14
+            ],
+            "sentence_ter": [
+              150.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I gave my canoe to her.",
+              "You drank the water.",
+              "The bird drank the water to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 3.16,
+            "corpus_chrfpp": 13.08,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              8.12,
+              4.5
+            ],
+            "sentence_chrfpp": [
+              7.28,
+              8.92,
+              19.05
+            ],
+            "sentence_ter": [
+              100.0,
+              125.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You brought my fish.",
+              "The bird remembered my fish.",
+              "The man brought the fish to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.61,
+              5.14,
+              3.73
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu",
+              "txipary nhinhikary",
+              "kyky aikute pysykary ywamukary"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 6.06,
+            "corpus_chrfpp": 20.83,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              12.7,
+              8.13
+            ],
+            "sentence_chrfpp": [
+              12.8,
+              12.64,
+              29.8
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He brought the blood.",
+              "She remembered the fish.",
+              "The man brought the house to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 7.25,
+            "corpus_chrfpp": 37.03,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              12.7,
+              9.24
+            ],
+            "sentence_chrfpp": [
+              52.04,
+              13.84,
+              38.05
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              128.57
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The blood remembered the bone.",
+              "Brought the remembered thing.",
+              "The man gave the house to the one who brought the thing."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 5.79,
+            "corpus_chrfpp": 28.05,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              10.68,
+              4.5
+            ],
+            "sentence_chrfpp": [
+              55.78,
+              9.62,
+              17.74
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man remembered the bone.",
+              "She brought my fish.",
+              "The man brought the banana to the girl."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 7.42,
+            "corpus_chrfpp": 35.47,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.64,
+              12.7,
+              8.13
+            ],
+            "sentence_chrfpp": [
+              57.29,
+              13.45,
+              31.51
+            ],
+            "sentence_ter": [
+              50.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He remembered the bone.",
+              "She remembered the head.",
+              "The man brought the house to the man."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 7.42,
+        "corpus_chrfpp": 35.47,
+        "corpus_ter": 73.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          23.64,
+          12.7,
+          8.13
+        ],
+        "sentence_chrfpp": [
+          57.29,
+          13.45,
+          31.51
+        ],
+        "sentence_ter": [
+          50.0,
+          75.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He remembered the bone.",
+          "She remembered the head.",
+          "The man brought the house to the man."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 10,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 7.25,
+        "corpus_chrfpp": 37.03,
+        "corpus_ter": 106.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.97,
+          12.7,
+          9.24
+        ],
+        "sentence_chrfpp": [
+          52.04,
+          13.84,
+          38.05
+        ],
+        "sentence_ter": [
+          75.0,
+          100.0,
+          128.57
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The blood remembered the bone.",
+          "Brought the remembered thing.",
+          "The man gave the house to the one who brought the thing."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 8,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 1.83,
+            "corpus_chrfpp": 14.79,
+            "corpus_ter": 193.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.39,
+              5.67,
+              3.74
+            ],
+            "sentence_chrfpp": [
+              11.25,
+              17.4,
+              15.92
+            ],
+            "sentence_ter": [
+              275.0,
+              175.0,
+              157.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nuta sykaru nykanawate uwamukary → I gave my canoe to her.",
+              "pita ãtary ĩpurãã → You drank the water.",
+              "kyky mynaru nyherẽka sytumukary → The man brought my blood to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 3.48,
+            "corpus_chrfpp": 25.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              7.27,
+              3.55
+            ],
+            "sentence_chrfpp": [
+              36.4,
+              34.08,
+              13.81
+            ],
+            "sentence_ter": [
+              75.0,
+              150.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You remembered my fish.",
+              "She brought your banana to the man.",
+              "The girl remembered my house."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 2.19,
+            "corpus_chrfpp": 18.21,
+            "corpus_ter": 166.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.13,
+              7.27,
+              3.98
+            ],
+            "sentence_chrfpp": [
+              24.41,
+              20.74,
+              10.62
+            ],
+            "sentence_ter": [
+              325.0,
+              125.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "sytu apy ysykanu nutamukary kyky → The man gave the woman's bone to me.",
+              "nhĩpurããte nãtary → I drank the water.",
+              "kywĩtxi apukary → He found the head."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 6.06,
+            "corpus_chrfpp": 20.88,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              19.3,
+              3.82
+            ],
+            "sentence_chrfpp": [
+              14.46,
+              43.53,
+              13.68
+            ],
+            "sentence_ter": [
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The fish ate the bone.",
+              "I found the girl’s banana.",
+              "The fish ate the fish’s head."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 6.06,
+        "corpus_chrfpp": 20.88,
+        "corpus_ter": 86.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          9.65,
+          19.3,
+          3.82
+        ],
+        "sentence_chrfpp": [
+          14.46,
+          43.53,
+          13.68
+        ],
+        "sentence_ter": [
+          100.0,
+          50.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The fish ate the bone.",
+          "I found the girl’s banana.",
+          "The fish ate the fish’s head."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 3.48,
+        "corpus_chrfpp": 25.84,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.7,
+          7.27,
+          3.55
+        ],
+        "sentence_chrfpp": [
+          36.4,
+          34.08,
+          13.81
+        ],
+        "sentence_ter": [
+          75.0,
+          150.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You remembered my fish.",
+          "She brought your banana to the man.",
+          "The girl remembered my house."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "phonology",
+      "all_steps_complete": true
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 6.7,
+            "corpus_chrfpp": 38.6,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.3,
+              7.27,
+              8.17
+            ],
+            "sentence_chrfpp": [
+              67.35,
+              15.07,
+              29.3
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered the house.",
+              "I found the fish (sg).",
+              "The man brought the house to the woman's eye."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 6.7,
+        "corpus_chrfpp": 38.6,
+        "corpus_ter": 86.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          19.3,
+          7.27,
+          8.17
+        ],
+        "sentence_chrfpp": [
+          67.35,
+          15.07,
+          29.3
+        ],
+        "sentence_ter": [
+          75.0,
+          75.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The woman remembered the house.",
+          "I found the fish (sg).",
+          "The man brought the house to the woman's eye."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 6.7,
+        "corpus_chrfpp": 38.6,
+        "corpus_ter": 86.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          19.3,
+          7.27,
+          8.17
+        ],
+        "sentence_chrfpp": [
+          67.35,
+          15.07,
+          29.3
+        ],
+        "sentence_ter": [
+          75.0,
+          75.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The woman remembered the house.",
+          "I found the fish (sg).",
+          "The man brought the house to the woman's eye."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 21.71,
+            "corpus_chrfpp": 50.58,
+            "corpus_ter": 53.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              42.73,
+              66.87,
+              4.5
+            ],
+            "sentence_chrfpp": [
+              69.13,
+              85.44,
+              23.79
+            ],
+            "sentence_ter": [
+              25.0,
+              25.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She remembered the blood.",
+              "You ate the banana.",
+              "The man brought the house's eye to me."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 6.16,
+            "corpus_chrfpp": 27.39,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              17.97,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              29.89,
+              38.39,
+              20.42
+            ],
+            "sentence_ter": [
+              100.0,
+              75.0,
+              71.43
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman drank the blood.",
+              "The fish ate the bone.",
+              "He brought the man's eye to me."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 6.16,
+        "corpus_chrfpp": 27.39,
+        "corpus_ter": 80.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          17.97,
+          4.41
+        ],
+        "sentence_chrfpp": [
+          29.89,
+          38.39,
+          20.42
+        ],
+        "sentence_ter": [
+          100.0,
+          75.0,
+          71.43
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The woman drank the blood.",
+          "The fish ate the bone.",
+          "He brought the man's eye to me."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 21.71,
+        "corpus_chrfpp": 50.58,
+        "corpus_ter": 53.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          42.73,
+          66.87,
+          4.5
+        ],
+        "sentence_chrfpp": [
+          69.13,
+          85.44,
+          23.79
+        ],
+        "sentence_ter": [
+          25.0,
+          25.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She remembered the blood.",
+          "You ate the banana.",
+          "The man brought the house's eye to me."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "initial_draft",
+      "all_steps_complete": true
+    }
+  }
+}

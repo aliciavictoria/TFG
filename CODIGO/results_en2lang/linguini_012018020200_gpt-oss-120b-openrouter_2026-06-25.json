@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T22:15:55.285151",
+    "puzzle_id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 10,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Did I beat you(sg)?",
+        "target": "ŋabə nɤ lan tɤʔ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Did they see me?",
+        "target": "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Does he know you(sg)?",
+        "target": "ati kəmə nɤ cʰam ru ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you(pl) sleep?",
+        "target": "nuʔrum ʒip kan ne",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Did I beat you(sg)?",
+      "reference": "ŋabə nɤ lan tɤʔ ne",
+      "hypothesis": "**Hakhun:** *Ŋa‑kʰa tʰe kʰi?*  \n\n*Breakdown (approximate):*  \n- **Ŋa‑kʰa** – “I” (subject pronoun) + past‑tense marker “‑kʰa” (“did”)  \n- **tʰe** – verb root “beat”  \n- **kʰi** – second‑person singular object pronoun “you” (sg)  \n\nSo the whole phrase literally reads “I‑did beat you?” → “Did I beat you (sg)?”",
+      "latency_s": 7.34,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 2.04,
+        "corpus_ter": 940.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          2.04
+        ],
+        "sentence_ter": [
+          940.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Hakhun:** *Ŋa‑kʰa tʰe kʰi?*  \n\n*Breakdown (approximate):*  \n- **Ŋa‑kʰa** – “I” (subject pronoun) + past‑tense marker “‑kʰa” (“did”)  \n- **tʰe** – verb root “beat”  \n- **kʰi** – second‑person singular object pronoun “you” (sg)  \n\nSo the whole phrase literally reads “I‑did beat you?” → “Did I beat you (sg)?”"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 75.49,
+          "metrics": {
+            "corpus_bleu": 10.99,
+            "corpus_chrfpp": 41.65,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              19.3,
+              12.75,
+              45.14
+            ],
+            "sentence_chrfpp": [
+              42.9,
+              44.22,
+              21.84,
+              61.18
+            ],
+            "sentence_ter": [
+              60.0,
+              50.0,
+              66.67,
+              25.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋa kəmə nɤ lan tʰu ne",
+              "tarum ŋa lapkʰi rɤ tɤʔ ne",
+              "ri cʰam nɤ ne",
+              "nuʔrum ʒip ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 10.99,
+        "corpus_chrfpp": 41.65,
+        "corpus_ter": 52.38,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.97,
+          19.3,
+          12.75,
+          45.14
+        ],
+        "sentence_chrfpp": [
+          42.9,
+          44.22,
+          21.84,
+          61.18
+        ],
+        "sentence_ter": [
+          60.0,
+          50.0,
+          66.67,
+          25.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ŋa kəmə nɤ lan tʰu ne",
+          "tarum ŋa lapkʰi rɤ tɤʔ ne",
+          "ri cʰam nɤ ne",
+          "nuʔrum ʒip ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 2.04,
+      "ter": 940.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Hakhun:** *Ŋa‑kʰa tʰe kʰi?*  \n\n*Breakdown (approximate):*  \n- **Ŋa‑kʰa** – “I” (subject pronoun) + past‑tense marker “",
+      "reference": "ŋabə nɤ lan tɤʔ ne"
+    },
+    "baseline": {
+      "best_bleu": 10.99,
+      "best_chrf": 41.65,
+      "best_ter": 52.38,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ŋa kəmə nɤ lan tʰu ne",
+        "tarum ŋa lapkʰi rɤ tɤʔ ne",
+        "ri cʰam nɤ ne",
+        "nuʔrum ʒip ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ]
+    }
+  }
+}

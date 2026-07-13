@@ -1,0 +1,289 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-23T12:15:54.045858",
+    "puzzle_id": "linguini_012022030100",
+    "language": "Ngemba",
+    "language_family": "Grassfields Bantu (Camerún)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 16,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012022030100",
+    "language": "Ngemba",
+    "language_family": "Grassfields Bantu (Camerún)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ǂoo ŋǀii ŋ",
+        "target": "Does the man see me?"
+      },
+      {
+        "source": "ɡǀa ǃaukea ŋ ŋǀŋ",
+        "target": "Are you_{sg} afraid of me?"
+      },
+      {
+        "source": "cuu xae a ǂʔii ŋǁa",
+        "target": "Whom do you_{sg} think about?"
+      },
+      {
+        "source": "u ǁãu ke ǁu ǀqhõʕo",
+        "target": "Your_{pl} brother does not dance."
+      },
+      {
+        "source": "ɟanasa xae ǂqheeke",
+        "target": "Is it the thief who sings?"
+      },
+      {
+        "source": "ŋǀŋ si sĩisen ŋ ǃhaeke",
+        "target": "Will I work tomorrow?"
+      },
+      {
+        "source": "ǂhun ke ǃaukea ŋ ɡǀi",
+        "target": "The dog is afraid of us."
+      },
+      {
+        "source": "na ǁu ǂʔii ŋ ɡǀa xaŋki",
+        "target": "I do not think about your_{sg} mother."
+      },
+      {
+        "source": "ɡǀi aŋki si ǀqhõʕo ŋ ɡǃari",
+        "target": "Will our father dance in Upington?"
+      },
+      {
+        "source": "kiɟa xae ǂoo sĩisen ŋǁa",
+        "target": "Where does the man work?"
+      },
+      {
+        "source": "ɡǀa ŋǀii a ŋǁŋ",
+        "target": "Do you_{sg} see yoursg house?"
+      },
+      {
+        "source": "ŋǀŋ xae a ǃʔai",
+        "target": "Is it me whom you_{sg} call?"
+      },
+      {
+        "source": "u kee ǀeeki ǂʔii ŋǁa",
+        "target": "It is you_{pl} whom the woman thinks about."
+      },
+      {
+        "source": "a xaŋki ke kacuuʔi ŋ ɡǀa ts’aaʔa ŋ",
+        "target": "Your_{sg} mother asks if you_{sg} like me."
+      },
+      {
+        "source": "kama ɟa xae ŋ si ŋǀii u ŋǁa",
+        "target": "When will I see you_{pl}?"
+      },
+      {
+        "source": "ŋ ǃuu ke kacuuʔi ŋ ŋǀŋ si ǂqheeke ŋ ǃhaeke",
+        "target": "My grandfather asks if I will sing tomorrow."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "na kacuuʔi ŋ ɡǀu xae ŋ ǃuu ǃʔai",
+        "target": "I ask if it is you_{pl} whom my grandfather calls.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "na ǁu si sĩisen ŋ ɡǃari",
+        "target": "I will not work in Upington.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ǀeeki ke ǃaukea ŋ ŋǀŋ ǂhun",
+        "target": "The woman is afraid of my dog.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ŋ kee si ǃʔai a",
+        "target": "It is I who will call you_{sg}.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "cuu xae u ŋǀii",
+        "target": "Whom do you_{pl} see?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "cuu xae ts’aaʔa ŋ",
+        "target": "Who likes me?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 5.09,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      }
+    }
+  },
+  "summary": {
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "I ask if it is you_{pl} whom my grandfather calls.",
+        "I will not work in Upington.",
+        "The woman is afraid of my dog.",
+        "It is I who will call you_{sg}.",
+        "Whom do you_{pl} see?",
+        "Who likes me?"
+      ]
+    }
+  }
+}

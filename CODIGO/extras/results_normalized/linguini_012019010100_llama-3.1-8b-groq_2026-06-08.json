@@ -1,0 +1,1497 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T02:43:33.728603",
+    "puzzle_id": "linguini_012019010100",
+    "language": "Desconocida",
+    "language_family": "Unknown",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 11,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false,
+    "sgpl_normalized": true
+  },
+  "puzzle": {
+    "id": "linguini_012019010100",
+    "language": "Desconocida",
+    "language_family": "Unknown",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Om benu aneen.",
+        "target": "She took the bread and ate it.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Munuuna wunuub.",
+        "target": "She comes and we go away.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Wingkiiwa wengamburuun.",
+        "target": "They sing and she hears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Anon ye weng wengamberenib yeedaraniib.",
+        "target": "They will hear the dog and will get up.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Oon wedmaniina karub wedmaneeb.",
+        "target": "I will see the fish and you will see theman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ok wedmeena aniin.",
+        "target": "He sees the water and I drink it.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Om benu aneen.",
+      "reference": "She took the bread and ate it.",
+      "hypothesis": "I'm not sure about the translation of the sentence \"Om benu aneen.\" It appears to be in a language that I'm not familiar with. However, I can try to break it down and provide a possible interpretation.\n\n\"Om\" is a common prefix in many Indian languages, including Sanskrit and Hindi, which means \"I\" or \"me.\" \"Benu\" could be a variant of \"bana,\" which means \"to do\" or \"to make.\" \"Anee\" could be a variant of \"aane,\" which means \"to come\" or \"to arrive.\"\n\nWith this in mind, a possible translation of the sentence \"Om benu aneen\" could be:\n\n\"I am coming to do something\" or \"I am making my way to do something.\"\n\nHowever, please note that this is just a rough interpretation, and the actual meaning of the sentence may be different depending on the context and the language it is spoken in.",
+      "latency_s": 30.61,
+      "metrics": {
+        "corpus_bleu": 0.26,
+        "corpus_chrfpp": 5.11,
+        "corpus_ter": 2028.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.26
+        ],
+        "sentence_chrfpp": [
+          5.11
+        ],
+        "sentence_ter": [
+          2028.57
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'm not sure about the translation of the sentence \"Om benu aneen.\" It appears to be in a language that I'm not familiar with. However, I can try to break it down and provide a possible interpretation.\n\n\"Om\" is a common prefix in many Indian languages, including Sanskrit and Hindi, which means \"I\" or \"me.\" \"Benu\" could be a variant of \"bana,\" which means \"to do\" or \"to make.\" \"Anee\" could be a variant of \"aane,\" which means \"to come\" or \"to arrive.\"\n\nWith this in mind, a possible translation of the sentence \"Om benu aneen\" could be:\n\n\"I am coming to do something\" or \"I am making my way to do something.\"\n\nHowever, please note that this is just a rough interpretation, and the actual meaning of the sentence may be different depending on the context and the language it is spoken in."
+        ],
+        "references": [
+          "She took the bread and ate it."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 4.48,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 4.2,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.04,
+              4.96,
+              5.7,
+              2.37,
+              4.27,
+              2.79
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "anena: eat",
+              "anena: eat",
+              "anena: eat",
+              "anona: man",
+              "anona: man",
+              "anona: man"
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 4.2,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          6.04,
+          4.96,
+          5.7,
+          2.37,
+          4.27,
+          2.79
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "anena: eat",
+          "anena: eat",
+          "anena: eat",
+          "anona: man",
+          "anona: man",
+          "anona: man"
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 31.23,
+          "accumulated_dict": "1. Meneni = [SUBJECT] ( possibly a pronoun or a noun)\n2. karuwa = [VERB] ( possibly a compound verb)\n3. anona = [VERB] ( possibly a compound verb)\n4. wedmaan = [OBJECT] ( possibly a compound noun)\n5. Wingkeewa = [SUBJECT] ( possibly a pronoun or a noun)\n6. yeediriin = [VERB] ( possibly a compound verb)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.",
+          "metrics": {
+            "corpus_bleu": 2.84,
+            "corpus_chrfpp": 19.95,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              4.99,
+              8.3,
+              8.05,
+              5.3,
+              6.89
+            ],
+            "sentence_chrfpp": [
+              16.38,
+              10.41,
+              28.99,
+              23.36,
+              21.91,
+              16.45
+            ],
+            "sentence_ter": [
+              100.0,
+              83.33,
+              100.0,
+              100.0,
+              80.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man and the dog.",
+              "You(sg) sing and I get up.",
+              "You(sg) sing and the people get up.",
+              "The man and the dog saw the man and the dog.",
+              "I saw the man and the dog and the man.",
+              "I saw the man and the dog."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 31.35,
+          "accumulated_dict": "1. Meneni = [SUBJECT] ( possibly a pronoun or a noun)\n2. karuwa = [VERB] ( possibly a compound verb)\n3. anona = [VERB] ( possibly a compound verb)\n4. wedmaan = [OBJECT] ( possibly a compound noun)\n5. Wingkeewa = [SUBJECT] ( possibly a pronoun or a noun)\n6. yeediriin = [VERB] ( possibly a compound verb)\n7. wedmoona = [VERB] ( possibly a compound verb)\n8. wedmaniina = [VERB] ( possibly a compound verb)\n9. anen = [VERB] ( possibly a conjugated form of \"anona\")\n10. aniin = [VERB] ( possibly a conjugated form of \"anona\")",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.",
+          "metrics": {
+            "corpus_bleu": 2.82,
+            "corpus_chrfpp": 15.28,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.97,
+              7.16,
+              4.46,
+              5.52,
+              5.37,
+              9.29
+            ],
+            "sentence_chrfpp": [
+              12.31,
+              11.81,
+              14.11,
+              15.41,
+              19.77,
+              15.11
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              120.0,
+              88.89,
+              80.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I see the tree.",
+              "The woman is happy.",
+              "You(sg) are happy and I am sad.",
+              "He saw the house and I took the pig.",
+              "I came and saw the man and the dog.",
+              "You(sg) sing and I get up."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 1.23,
+          "accumulated_dict": "1. Meneni = [SUBJECT] ( possibly a pronoun or a noun)\n2. karuwa = [VERB] ( possibly a compound verb)\n3. anona = [VERB] ( possibly a compound verb)\n4. wedmaan = [OBJECT] ( possibly a compound noun)\n5. Wingkeewa = [SUBJECT] ( possibly a pronoun or a noun)\n6. yeediriin = [VERB] ( possibly a compound verb)\n7. wedmoona = [VERB] ( possibly a compound verb)\n8. wedmaniina = [VERB] ( possibly a compound verb)\n9. anen = [VERB] ( possibly a conjugated form of \"anona\")\n10. aniin = [VERB] ( possibly a conjugated form of \"anona\")\n11. Ambib = [SUBJECT] ( possibly a pronoun or a noun)\n12. awon = [OBJECT] ( possibly a pronoun or a noun)\n13. baan = [OBJECT] ( possibly a noun)\n14. Yeederenu = [SUBJECT] ( possibly a pronoun or a noun)\n15. om = [VERB] ( possibly a verb)\n16. banuun = [OBJECT] ( possibly a compound noun)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.",
+          "metrics": {
+            "corpus_bleu": 1.36,
+            "corpus_chrfpp": 9.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.88,
+              7.25,
+              10.12,
+              4.17,
+              3.22,
+              4.58
+            ],
+            "sentence_chrfpp": [
+              6.39,
+              5.41,
+              11.3,
+              10.14,
+              9.58,
+              9.98
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Om benu aneen.",
+              "Munuuna wunuub.",
+              "Wingkiiwa wengamburuun.",
+              "Anon ye weng wengamberenib yeedaraniib.",
+              "Oon wedmaniina karub wedmaneeb.",
+              "Ok wedmeena aniin."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 1.54,
+          "accumulated_dict": "1. Meneni = [SUBJECT] ( possibly a pronoun or a noun)\n2. karuwa = [VERB] ( possibly a compound verb)\n3. anona = [VERB] ( possibly a compound verb)\n4. wedmaan = [OBJECT] ( possibly a compound noun)\n5. Wingkeewa = [SUBJECT] ( possibly a pronoun or a noun)\n6. yeediriin = [VERB] ( possibly a compound verb)\n7. wedmoona = [VERB] ( possibly a compound verb)\n8. wedmaniina = [VERB] ( possibly a compound verb)\n9. anen = [VERB] ( possibly a conjugated form of \"anona\")\n10. aniin = [VERB] ( possibly a conjugated form of \"anona\")\n11. Ambib = [SUBJECT] ( possibly a pronoun or a noun)\n12. awon = [OBJECT] ( possibly a pronoun or a noun)\n13. baan = [OBJECT] ( possibly a noun)\n14. Yeederenu = [SUBJECT] ( possibly a pronoun or a noun)\n15. om = [VERB] ( possibly a verb)\n16. banuun = [OBJECT] ( possibly a compound noun)\n17. maan = [OBJECT] ( possibly a component of compound nouns)\n18. moona = [VERB] ( possibly a component of compound verbs)\n19. nuun = [OBJECT] ( possibly a component of compound nouns)\n20. kanu = [VERB] ( possibly a component of compound verbs)\n21. diri = [VERB] ( possibly a component of compound verbs)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).",
+          "metrics": {
+            "corpus_bleu": 5.14,
+            "corpus_chrfpp": 23.59,
+            "corpus_ter": 97.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              13.13,
+              3.67,
+              9.98,
+              13.67,
+              6.5
+            ],
+            "sentence_chrfpp": [
+              10.2,
+              30.91,
+              12.47,
+              21.92,
+              43.03,
+              13.61
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              160.0,
+              88.89,
+              90.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will get up and will see.",
+              "We will go away and will take.",
+              "You(sg) will get up and will take the pig.",
+              "I came and saw the man and the dog.",
+              "She will get up and will see the man and the dog.",
+              "I will see and will come."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 31.6,
+          "accumulated_dict": "1. Meneni = [SUBJECT] ( possibly a pronoun or a noun)\n2. karuwa = [VERB] ( possibly a compound verb)\n3. anona = [VERB] ( possibly a compound verb)\n4. wedmaan = [OBJECT] ( possibly a compound noun)\n5. Wingkeewa = [SUBJECT] ( possibly a pronoun or a noun)\n6. yeediriin = [VERB] ( possibly a compound verb)\n7. wedmoona = [VERB] ( possibly a compound verb)\n8. wedmaniina = [VERB] ( possibly a compound verb)\n9. anen = [VERB] ( possibly a conjugated form of \"anona\")\n10. aniin = [VERB] ( possibly a conjugated form of \"anona\")\n11. Ambib = [SUBJECT] ( possibly a pronoun or a noun)\n12. awon = [OBJECT] ( possibly a pronoun or a noun)\n13. baan = [OBJECT] ( possibly a noun)\n14. Yeederenu = [SUBJECT] ( possibly a pronoun or a noun)\n15. om = [VERB] ( possibly a verb)\n16. banuun = [OBJECT] ( possibly a compound noun)\n17. maan = [OBJECT] ( possibly a component of compound nouns)\n18. moona = [VERB] ( possibly a component of compound verbs)\n19. nuun = [OBJECT] ( possibly a component of compound nouns)\n20. kanu = [VERB] ( possibly a component of compound verbs)\n21. diri = [VERB] ( possibly a component of compound verbs)\n22. oka = [VERB] ( possibly a verb)\n23. aniib = [VERB] ( possibly a compound verb)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).\n8. The language may have a system of focus or emphasis, with specific morphemes used to indicate focus (e.g. \"awon\" and \"baan\").",
+          "metrics": {
+            "corpus_bleu": 3.31,
+            "corpus_chrfpp": 21.43,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.98,
+              13.13,
+              3.67,
+              6.03,
+              5.37,
+              9.29
+            ],
+            "sentence_chrfpp": [
+              33.03,
+              30.91,
+              12.47,
+              19.01,
+              19.77,
+              15.11
+            ],
+            "sentence_ter": [
+              114.29,
+              100.0,
+              160.0,
+              66.67,
+              80.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will get up and will take the bread.",
+              "We will go away and will sing.",
+              "You(sg) will get up and will take the pig.",
+              "They eat the bread and drink the water.",
+              "I came and saw the man and the dog.",
+              "You(sg) sing and I get up."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 1.56,
+          "accumulated_dict": "1. Meneni = [SUBJECT] ( possibly a pronoun or a noun)\n2. karuwa = [VERB] ( possibly a compound verb)\n3. anona = [VERB] ( possibly a compound verb)\n4. wedmaan = [OBJECT] ( possibly a compound noun)\n5. Wingkeewa = [SUBJECT] ( possibly a pronoun or a noun)\n6. yeediriin = [VERB] ( possibly a compound verb)\n7. wedmoona = [VERB] ( possibly a compound verb)\n8. wedmaniina = [VERB] ( possibly a compound verb)\n9. anen = [VERB] ( possibly a conjugated form of \"anona\")\n10. aniin = [VERB] ( possibly a conjugated form of \"anona\")\n11. Ambib = [SUBJECT] ( possibly a pronoun or a noun)\n12. awon = [OBJECT] ( possibly a pronoun or a noun)\n13. baan = [OBJECT] ( possibly a noun)\n14. Yeederenu = [SUBJECT] ( possibly a pronoun or a noun)\n15. om = [VERB] ( possibly a simple verb)\n16. banuun = [OBJECT] ( possibly a compound noun)\n17. maan = [OBJECT] ( possibly a component of compound nouns)\n18. moona = [VERB] ( possibly a component of compound verbs)\n19. nuun = [OBJECT] ( possibly a component of compound nouns)\n20. kanu = [VERB] ( possibly a component of compound verbs)\n21. diri = [VERB] ( possibly a component of compound verbs)\n22. oka = [VERB] ( possibly a simple verb)\n23. aniib = [VERB] ( possibly a conjugated form of \"ani\")\nDeleted entries:\n[DELETED: 3. anona — reason: contradicted by example \"Oma oka aniib\"]\n[DELETED: 5. Wingkeewa — reason: no new information]",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).\n8. The language may have a system of focus or emphasis, with specific morphemes used to indicate focus (e.g. \"awon\" and \"baan\").\n[DELETED: 2. Verbs may be composed of two morphemes — reason: contradicted by example \"Yeederenu om banuun\"]\n[DELETED: 7. The language may have a pattern of compounding in verbs and nouns — reason: contradicted by example \"Oma oka aniib\"]",
+          "metrics": {
+            "corpus_bleu": 12.75,
+            "corpus_chrfpp": 36.08,
+            "corpus_ter": 84.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.98,
+              13.13,
+              4.93,
+              34.48,
+              5.4,
+              17.75
+            ],
+            "sentence_chrfpp": [
+              32.82,
+              30.91,
+              17.09,
+              57.65,
+              25.63,
+              44.43
+            ],
+            "sentence_ter": [
+              114.29,
+              100.0,
+              120.0,
+              55.56,
+              70.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will get up and will take the bread.",
+              "We will go away and will sing.",
+              "You(sg) will get up and will sing.",
+              "We will hear the dog and he will hear the pig.",
+              "They will take the man and the dog.",
+              "They will drink the water and eat the bread."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 32.2,
+          "accumulated_dict": "1. Meneni = [SUBJECT] (possibly a pronoun or a noun)\n2. karuwa = [VERB] (possibly a compound verb)\n3. anona = [VERB] (possibly a compound verb)\n4. wedmaan = [OBJECT] (possibly a compound noun)\n5. Wingkeewa = [SUBJECT] (possibly a pronoun or a noun)\n6. yeediriin = [VERB] (possibly a compound verb)\n7. wedmoona = [VERB] (possibly a compound verb)\n8. wedmaniina = [VERB] (possibly a compound verb)\n9. Ambib = [SUBJECT] (possibly a pronoun or a noun)\n10. awon = [OBJECT] (possibly a pronoun or a noun)\n11. baan = [OBJECT] (possibly a noun)\n12. Yeederenu = [SUBJECT] (possibly a pronoun or a noun)\n13. om = [VERB] (possibly a simple verb)\n14. banuun = [OBJECT] (possibly a compound noun)\n15. maan = [OBJECT] (possibly a component of compound nouns)\n16. moona = [VERB] (possibly a component of compound verbs)\n17. nuun = [OBJECT] (possibly a component of compound nouns)\n18. kanu = [VERB] (possibly a component of compound verbs)\n19. diri = [VERB] (possibly a component of compound verbs)\n20. oka = [VERB] (possibly a simple verb)\n21. aniib = [VERB] (possibly a conjugated form of \"ani\")\n22. Anon = [SUBJECT] (possibly a pronoun or a noun)\n23. ye = [FOCUS] (possibly a focus marker)\n24. weng = [OBJECT] (possibly a noun)\n25. wengambaranuuwa = [VERB] (possibly a compound verb)\n26. wengambaraneen = [VERB] (possibly a compound verb)\n27. Ok = [SUBJECT] (possibly a pronoun or a noun)\n28. anaana = [VERB] (possibly a compound verb)\n29. oon = [OBJECT] (possibly a pronoun or a noun)\n30. wedmeen = [VERB] (possibly a compound verb)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a system of focus or emphasis, with specific morphemes used to indicate focus (e.g. \"ye\").\n8. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).",
+          "metrics": {
+            "corpus_bleu": 16.39,
+            "corpus_chrfpp": 35.2,
+            "corpus_ter": 75.56,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              13.13,
+              9.29,
+              44.83,
+              5.0,
+              17.75
+            ],
+            "sentence_chrfpp": [
+              10.2,
+              30.91,
+              28.63,
+              68.49,
+              19.22,
+              43.61
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              80.0,
+              44.44,
+              80.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will get up and will see.",
+              "We will go away and will sing.",
+              "You(sg) sing and I get up.",
+              "They will hear the dog and he will hear the pig.",
+              "She saw the man and the dog.",
+              "I drank the water and she saw the fish."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 92.0,
+          "accumulated_dict": "1. Meneni = [SUBJECT] (possibly a pronoun or a noun)\n2. karuwa = [VERB] (possibly a compound verb)\n3. anona = [VERB] (possibly a compound verb)\n4. wedmaan = [OBJECT] (possibly a compound noun)\n5. Wingkeewa = [SUBJECT] (possibly a pronoun or a noun)\n6. yeediriin = [VERB] (possibly a compound verb)\n7. wedmoona = [VERB] (possibly a compound verb)\n8. wedmaniina = [VERB] (possibly a compound verb)\n9. Ambib = [SUBJECT] (possibly a pronoun or a noun)\n10. awon = [OBJECT] (possibly a pronoun or a noun)\n11. baan = [OBJECT] (possibly a noun)\n12. Yeederenu = [SUBJECT] (possibly a pronoun or a noun)\n13. om = [VERB] (possibly a simple verb)\n14. banuun = [OBJECT] (possibly a compound noun)\n15. maan = [OBJECT] (possibly a component of compound nouns)\n16. moona = [VERB] (possibly a component of compound verbs)\n17. nuun = [OBJECT] (possibly a component of compound nouns)\n18. kanu = [VERB] (possibly a component of compound verbs)\n19. diri = [VERB] (possibly a component of compound verbs)\n20. oka = [VERB] (possibly a simple verb)\n21. aniib = [VERB] (possibly a conjugated form of \"ani\")\n22. Anon = [SUBJECT] (possibly a pronoun or a noun)\n23. ye = [FOCUS] (possibly a focus marker)\n24. weng = [OBJECT] (possibly a noun)\n25. wengambaranuuwa = [VERB] (possibly a compound verb)\n26. wengambaraneen = [VERB] (possibly a compound verb)\n27. Ok = [SUBJECT] (possibly a pronoun or a noun)\n28. anaana = [VERB] (possibly a compound verb)\n29. oon = [OBJECT] (possibly a pronoun or a noun)\n30. wedmeen = [VERB] (possibly a compound verb)\n31. miniib = [VERB] (possibly a conjugated form of \"mini\")\n32. wengamburuun = [VERB] (possibly a compound verb)\n33. wengamberenib = [VERB] (possibly a compound verb)\n34. yeedaraniib = [VERB] (possibly a compound verb)\n35. karub = [VERB] (possibly a component of compound verbs)\n36. wedmaneeb = [VERB] (possibly a component of compound verbs)\n37. munuuna = [SUBJECT] (possibly a pronoun or a noun)\n38. wunuub = [OBJECT] (possibly a compound noun)\n39. wingkiiwa = [SUBJECT] (possibly a pronoun or a noun)\n40. wengamburuun = [VERB] (possibly a compound verb)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a system of focus or emphasis, with specific morphemes used to indicate focus (e.g. \"ye\").\n8. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).\n9. The language may have a pattern of repetition, with specific morphemes used to indicate emphasis or focus.",
+          "metrics": {
+            "corpus_bleu": 12.53,
+            "corpus_chrfpp": 28.65,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              13.13,
+              9.29,
+              34.48,
+              9.55,
+              5.85
+            ],
+            "sentence_chrfpp": [
+              10.13,
+              30.91,
+              28.63,
+              57.65,
+              26.03,
+              9.8
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              80.0,
+              55.56,
+              70.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will get up and will come.",
+              "We will go away and will sing.",
+              "You(sg) sing and I get up.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "They get up and come."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 2.44,
+          "accumulated_dict": "1. Meneni = [SUBJECT] (possibly a pronoun or a noun)\n2. karuwa = [VERB] (possibly a compound verb, action of coming)\n3. anona = [VERB] (possibly a compound verb, action of seeing)\n4. wedmaan = [OBJECT] (possibly a compound noun, man and dog)\n5. Wingkeewa = [SUBJECT] (possibly a pronoun or a noun)\n6. yeediriin = [VERB] (possibly a compound verb, action of singing)\n7. Ambib = [SUBJECT] (possibly a pronoun or a noun)\n8. wedmoona = [VERB] (possibly a compound verb, action of seeing)\n9. awon = [OBJECT] (possibly a pronoun or a noun)\n10. baan = [OBJECT] (possibly a noun, house)\n11. Yeederenu = [SUBJECT] (possibly a pronoun or a noun)\n12. om = [VERB] (possibly a simple verb, action of getting up)\n13. banuun = [OBJECT] (possibly a compound noun, bread)\n14. Wenenuub = [SUBJECT] (possibly a pronoun or a noun)\n15. wingkanuub = [VERB] (possibly a compound verb, action of going away and singing)\n16. Oma = [SUBJECT] (possibly a pronoun or a noun)\n17. oka = [VERB] (possibly a simple verb, action of eating)\n18. aniib = [VERB] (possibly a conjugated form of \"ani\", action of drinking)\n19. Anon = [SUBJECT] (possibly a pronoun or a noun)\n20. ye = [FOCUS] (possibly a focus marker)\n21. weng = [OBJECT] (possibly a noun, dog)\n22. wengambaranuuwa = [VERB] (possibly a compound verb, action of hearing)\n23. awon = [OBJECT] (possibly a pronoun or a noun)\n24. ye = [FOCUS] (possibly a focus marker)\n25. weng = [OBJECT] (possibly a noun, pig)\n26. wengambaraneen = [VERB] (possibly a compound verb, action of hearing)\n27. Ok = [SUBJECT] (possibly a pronoun or a noun)\n28. anaana = [VERB] (possibly a compound verb, action of drinking)\n29. oon = [OBJECT] (possibly a pronoun or a noun)\n30. wedmeen = [VERB] (possibly a compound verb, action of seeing)\n31. Yeederenib = [SUBJECT] (possibly a pronoun or a noun)\n32. miniib = [VERB] (possibly a conjugated form of \"mini\", action of coming)\n33. Wingkenu = [SUBJECT] (possibly a pronoun or a noun)\n34. wunuun = [VERB] (possibly a compound verb, action of going away)",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a system of focus or emphasis, with specific morphemes used to indicate focus (e.g. \"ye\").\n8. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).\n9. [DELETED: rule — reason: not supported by new examples]",
+          "metrics": {
+            "corpus_bleu": 12.75,
+            "corpus_chrfpp": 38.58,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.98,
+              13.13,
+              4.46,
+              34.48,
+              16.06,
+              9.86
+            ],
+            "sentence_chrfpp": [
+              33.03,
+              30.91,
+              19.36,
+              57.65,
+              39.7,
+              40.62
+            ],
+            "sentence_ter": [
+              114.29,
+              100.0,
+              180.0,
+              55.56,
+              70.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will get up and will take the bread.",
+              "We will go away and will sing.",
+              "She will hear the dog and will hear the pig.",
+              "We will hear the dog and he will hear the pig.",
+              "The water will see the man and the dog.",
+              "I will see the fish and will drink the water."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 32.75,
+          "accumulated_dict": "1. Meneni = [FIRST-PERSON SINGULAR PRONOUN]\n2. Wingkeewa = [SECOND-PERSON SINGULAR PRONOUN]\n3. Ambib = [THIRD-PERSON SINGULAR PRONOUN]\n4. Yeederenu = [THIRD-PERSON SINGULAR PRONOUN]\n5. Wenenuub = [FIRST-PERSON PLURAL PRONOUN]\n6. Oma = [THIRD-PERSON PLURAL PRONOUN]\n7. Anon = [FIRST-PERSON PLURAL PRONOUN]\n8. Ok = [FIRST-PERSON SINGULAR PRONOUN]\n9. Yeederenib = [FIRST-PERSON PLURAL PRONOUN]\n10. Wingkenu = [THIRD-PERSON SINGULAR PRONOUN]\n11. ye = [FOCUS MARKER]\n12. weng = [NOUN, DOG]\n13. wengambaranuuwa = [COMPOUND VERB, HEARING]\n14. wengambaraneen = [COMPOUND VERB, HEARING]\n15. om = [SIMPLE VERB, GETTING UP]\n16. banuun = [COMPOUND NOUN, BREAD]\n17. wingkanuub = [COMPOUND VERB, GOING AWAY AND SINGING]\n18. oka = [SIMPLE VERB, EATING]\n19. aniib = [CONJUGATED FORM OF \"ANI\", DRINKING]\n20. anaana = [COMPOUND VERB, DRINKING]\n21. oon = [PRONOUN OR NOUN]\n22. wedmeen = [COMPOUND VERB, SEEING]\n23. miniib = [CONJUGATED FORM OF \"MINI\", COMING]\n24. wunuun = [COMPOUND VERB, GOING AWAY]\n25. bene = [COMPOUND NOUN, BREAD]\n26. aneen = [COMPOUND VERB, EATING]",
+          "accumulated_rules": "1. The language appears to have a Subject-Verb-Object (SVO) word order.\n2. Verbs may be composed of two morphemes, possibly indicating a pattern of compounding.\n3. Nouns may be composed of two morphemes, possibly indicating a pattern of compounding.\n4. Affixation may be used to form verbs and nouns.\n5. Verbs may have conjugated forms, possibly indicating a system of agreement or aspect.\n6. The language may have a system of agreement or aspect, with pronouns and nouns agreeing with each other.\n7. The language may have a system of focus or emphasis, with specific morphemes used to indicate focus (e.g. \"ye\").\n8. The language may have a pattern of compounding in verbs and nouns, with specific morphemes associated with specific components (e.g. \"maan\" with objects, \"moona\" with verbs).",
+          "metrics": {
+            "corpus_bleu": 15.18,
+            "corpus_chrfpp": 34.7,
+            "corpus_ter": 71.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              25.85,
+              13.13,
+              9.29,
+              34.48,
+              9.55,
+              5.85
+            ],
+            "sentence_chrfpp": [
+              49.63,
+              30.91,
+              28.63,
+              57.65,
+              26.03,
+              9.8
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              80.0,
+              55.56,
+              70.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and eats it.",
+              "We will go away and will sing.",
+              "You(sg) sing and I get up.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "They get up and come."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 12.75,
+        "corpus_chrfpp": 38.58,
+        "corpus_ter": 93.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          9.98,
+          13.13,
+          4.46,
+          34.48,
+          16.06,
+          9.86
+        ],
+        "sentence_chrfpp": [
+          33.03,
+          30.91,
+          19.36,
+          57.65,
+          39.7,
+          40.62
+        ],
+        "sentence_ter": [
+          114.29,
+          100.0,
+          180.0,
+          55.56,
+          70.0,
+          87.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I will get up and will take the bread.",
+          "We will go away and will sing.",
+          "She will hear the dog and will hear the pig.",
+          "We will hear the dog and he will hear the pig.",
+          "The water will see the man and the dog.",
+          "I will see the fish and will drink the water."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 1.03,
+          "accumulated_dict": "- karuwa: to come\n- anona: to see\n- wedmaan: man\n- yeediriin: to sing",
+          "accumulated_rules": "1. Word order appears to be Subject-Verb-Object (SVO) in the given examples.\n2. The language may use a combination of prefixes and suffixes for grammatical functions, but the examples do not provide clear evidence of this.\n3. The use of 'wedmaan' and 'baan' in different contexts suggests that the language may have a system of agreement, where the form of the noun changes depending on the grammatical context.\n4. The language may use a distinction between singular and plural forms, as evidenced by the use of 'wedmaan' (man) and 'baan' (pig) in different contexts.",
+          "metrics": {
+            "corpus_bleu": 2.24,
+            "corpus_chrfpp": 15.63,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.49,
+              7.81,
+              4.99,
+              4.07,
+              4.93,
+              6.15
+            ],
+            "sentence_chrfpp": [
+              14.37,
+              10.81,
+              17.29,
+              13.71,
+              13.74,
+              22.53
+            ],
+            "sentence_ter": [
+              85.71,
+              83.33,
+              160.0,
+              111.11,
+              90.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man.",
+              "You sing and I get up.",
+              "He saw the house and I took the pig.",
+              "Meneni karuwa anona wedmaan. → I came and saw the man.",
+              "Wingkeewa yeediriin. → You sing and I get up.",
+              "Ambib wedmoona awon baan. → He saw the house and I took the pig."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 30.96,
+          "accumulated_dict": "- karuwa: to come\n- anona: to see\n- wedmaan: man\n- yeediriin: to sing\n- yeederenu: she (provisional, based on the use of 'ye' in the example)\n- banuun: bread (provisional, based on the context of the example)\n- wenenu: we (provisional, based on the use of 'we' in the example)\n- wenenub: we (provisional, based on the use of 'we' in the example, possibly a different form for a specific grammatical context)\n- wingkanuub: to sing (provisional, based on the context of the example)\n- om: and (provisional, based on the use of 'and' in the example)\n- baan: pig (provisional, based on the use of 'baan' in a different context)",
+          "accumulated_rules": "1. Word order appears to be Subject-Verb-Object (SVO) in the given examples.\n2. The language may use a combination of prefixes and suffixes for grammatical functions, but the examples do not provide clear evidence of this.\n3. The use of 'wedmaan' and 'baan' in different contexts suggests that the language may have a system of agreement, where the form of the noun changes depending on the grammatical context.\n4. The language may use a distinction between singular and plural forms, as evidenced by the use of 'wedmaan' (man) and 'baan' (pig) in different contexts.\n5. The language may use a distinction between first person singular and plural forms, as evidenced by the use of 'wenenu' and 'wenenub' in different contexts.\n6. The language may use a distinction between third person singular and plural forms, as evidenced by the use of 'yeederenu' in the example.",
+          "metrics": {
+            "corpus_bleu": 3.87,
+            "corpus_chrfpp": 26.28,
+            "corpus_ter": 129.63,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.55,
+              13.13,
+              3.13,
+              7.35
+            ],
+            "sentence_chrfpp": [
+              36.63,
+              30.91,
+              12.88,
+              25.65
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              240.0,
+              111.11
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will get up and will take the bread.",
+              "We will go away and will sing.",
+              "Yeederenu om banuun. → She will get up and will take the bread.",
+              "Wenenu wenenub wingkanuub. → We will go away and will sing."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 0.95,
+          "accumulated_dict": "- oka: to eat\n- aniib: the bread (provisional, based on the context of the example)\n- oon: the water (provisional, based on the context of the example)\n- anaana: to drink (provisional, based on the context of the example)\n- awon: the dog (provisional, based on the context of the example)\n- wengambaranuuwa: he (provisional, based on the use of 'weng' in the example)\n- wengambaraneen: the pig (provisional, based on the context of the example)",
+          "accumulated_rules": "1. Word order appears to be Subject-Verb-Object (SVO) in the given examples.\n2. The language may use a combination of prefixes and suffixes for grammatical functions, but the examples do not provide clear evidence of this.\n3. The use of 'wedmaan' and 'baan' in different contexts suggests that the language may have a system of agreement, where the form of the noun changes depending on the grammatical context.\n4. The language may use a distinction between singular and plural forms, as evidenced by the use of 'wedmaan' (man) and 'baan' (pig) in different contexts.\n5. The language may use a distinction between first person singular and plural forms, as evidenced by the use of 'wenenu' and 'wenenub' in different contexts.\n6. The language may use a distinction between third person singular and plural forms, as evidenced by the use of 'yeederenu' in the example.\n7. The language may use a distinction between masculine and feminine forms, as evidenced by the use of 'wedmaan' (man) and 'yeederenu' (she) in different contexts.\n8. The language may use a distinction between animate and inanimate forms, as evidenced by the use of 'awon' (dog) and 'aniib' (bread) in different contexts.",
+          "metrics": {
+            "corpus_bleu": 3.88,
+            "corpus_chrfpp": 24.21,
+            "corpus_ter": 131.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.98,
+              4.03,
+              9.29,
+              5.52,
+              2.58,
+              10.34
+            ],
+            "sentence_chrfpp": [
+              31.87,
+              12.95,
+              27.91,
+              16.23,
+              20.15,
+              38.64
+            ],
+            "sentence_ter": [
+              85.71,
+              166.67,
+              140.0,
+              100.0,
+              160.0,
+              137.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They eat the bread.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "Oma oka aniib. → They eat the bread.",
+              "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen. → We will hear the dog and he will hear the pig.",
+              "Ok anaana oon wedmeen. → I drank the water and she saw the fish."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 0.94,
+          "accumulated_dict": "- yeederenib: they (provisional, based on the context of the example)\n- miniib: get up and come (provisional, based on the context of the example)\n- wingkenu: she (provisional, based on the use of 'wing' in the example)\n- wunuun: sings and goes away (provisional, based on the context of the example)\n- om: he (provisional, based on the use of 'om' in the example)\n- bene: takes (provisional, based on the context of the example)\n- aneen: the bread (provisional, based on the context of the example, possibly a different form of 'aniib')\n- yeederenu: she (provisional, based on the context of the example, possibly a different form of 'yeederenib')",
+          "accumulated_rules": "1. Word order appears to be Subject-Verb-Object (SVO) in the given examples.\n2. The language may use a combination of prefixes and suffixes for grammatical functions, but the examples do not provide clear evidence of this.\n3. The use of 'wedmaan' and 'baan' in different contexts suggests that the language may have a system of agreement, where the form of the noun changes depending on the grammatical context.\n4. The language may use a distinction between singular and plural forms, as evidenced by the use of 'wedmaan' (man) and 'baan' (pig) in different contexts.\n5. The language may use a distinction between first person singular and plural forms, as evidenced by the use of 'wenenu' and 'wenenub' in different contexts.\n6. The language may use a distinction between third person singular and plural forms, as evidenced by the use of 'yeederenu' in the example.\n7. The language may use a distinction between masculine and feminine forms, as evidenced by the use of 'wedmaan' (man) and 'yeederenu' (she) in different contexts.\n8. The language may use a distinction between animate and inanimate forms, as evidenced by the use of 'awon' (dog) and 'aniib' (bread) in different contexts.\n9. The language may use a distinction between present and past tense, as evidenced by the use of 'miniib' (get up and come) and 'wunuun' (sings and goes away) in different contexts.\n10. The language may use a distinction between simple and complex clauses, as evidenced by the use of 'Yeederenib miniib' (They get up and come) and 'Om bene aneen' (He takes the bread and eats it) in different contexts.",
+          "metrics": {
+            "corpus_bleu": 3.81,
+            "corpus_chrfpp": 20.08,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              16.34,
+              6.57,
+              10.55,
+              4.52,
+              7.77
+            ],
+            "sentence_chrfpp": [
+              11.74,
+              34.0,
+              15.43,
+              23.84,
+              11.63,
+              26.36
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              120.0,
+              88.89,
+              90.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and come.",
+              "She sings and goes away.",
+              "He takes the bread and eats it.",
+              "Yeederenib miniib. → They get up and come.",
+              "Wingkenu wunuun. → She sings and goes away.",
+              "Om bene aneen. → He takes the bread and eats it."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.87,
+        "corpus_chrfpp": 26.28,
+        "corpus_ter": 129.63,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.55,
+          13.13,
+          3.13,
+          7.35
+        ],
+        "sentence_chrfpp": [
+          36.63,
+          30.91,
+          12.88,
+          25.65
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          240.0,
+          111.11
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will get up and will take the bread.",
+          "We will go away and will sing.",
+          "Yeederenu om banuun. → She will get up and will take the bread.",
+          "Wenenu wenenub wingkanuub. → We will go away and will sing."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 1.81,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.71,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0
+            ],
+            "sentence_chrfpp": [
+              5.71
+            ],
+            "sentence_ter": [
+              100.0
+            ],
+            "sentence_em": [
+              false
+            ],
+            "hypotheses": [
+              "verb agreement:"
+            ],
+            "references": [
+              "She took the bread and ate it."
+            ],
+            "num_evaluated": 1
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 5.71,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          5.71
+        ],
+        "sentence_ter": [
+          100.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "verb agreement:"
+        ],
+        "references": [
+          "She took the bread and ate it."
+        ],
+        "num_evaluated": 1
+      }
+    },
+    "self_correction": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.26,
+      "chrf": 5.11,
+      "ter": 2028.57,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'm not sure about the translation of the sentence \"Om benu aneen.\" It appears to be in a language that I'm not familiar",
+      "reference": "She took the bread and ate it."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 4.2,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "anena: eat",
+        "anena: eat",
+        "anena: eat",
+        "anona: man",
+        "anona: man",
+        "anona: man"
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 12.75,
+      "best_chrf": 38.58,
+      "best_ter": 93.33,
+      "best_em": 0.0,
+      "num_steps": 10,
+      "best_hypotheses": [
+        "I will get up and will take the bread.",
+        "We will go away and will sing.",
+        "She will hear the dog and will hear the pig.",
+        "We will hear the dog and he will hear the pig.",
+        "The water will see the man and the dog.",
+        "I will see the fish and will drink the water."
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 3.87,
+      "best_chrf": 26.28,
+      "best_ter": 129.63,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "She will get up and will take the bread.",
+        "We will go away and will sing.",
+        "Yeederenu om banuun. → She will get up and will take the bread.",
+        "Wenenu wenenub wingkanuub. → We will go away and will sing."
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 0.0,
+      "best_chrf": 5.71,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "verb agreement:"
+      ],
+      "best_references": [
+        "She took the bread and ate it."
+      ]
+    },
+    "self_correction": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  }
+}

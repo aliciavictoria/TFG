@@ -1,0 +1,1503 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-29T22:14:38.713187",
+    "puzzle_id": "linguini_012006010100",
+    "language": "Lakota",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-sambanova",
+    "num_test_pairs": 4,
+    "source_raw_log": "raw_logs/linguini_012006010100_llama-3.3-70b-sambanova.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "I came and the Indians called the bears.",
+      "hypothesis": "A challenging sentence!\n\nBased on my research, it appears to be in the Lakota language, which is a Native American language spoken by the Lakota people.\n\nHere's my attempt at translating the sentence:\n\n\"Wahi čha lakhota ki matho ki wičhačhopi\"\n\n* \"Wahi\" might mean \"he\" or \"that one\"\n* \"čha\" could be a verb or a particle, possibly indicating a relationship or possession\n* \"lakhota\" refers to the Lakota people or language\n* \"ki\" is a preposition meaning \"of\" or \"belonging to\"\n* \"matho\" might mean \"bear\" (as in the animal)\n* \"ki\" (again) is a preposition meaning \"of\" or \"belonging to\"\n* \"wičhačhopi\" could be a verb or a noun, possibly related to \"to speak\" or \"language\"\n\nTaking a stab at it, a possible translation could be:\n\n\"He is a speaker of the Lakota language of the bear\" or \"That one belongs to the Lakota bear language\"\n\nPlease keep in mind that this is a very rough translation, and I may be entirely off the mark. Lakota is a complex language with its own grammar and syntax, and without more context or a fluent speaker's guidance, it's difficult to provide an accurate translation.",
+      "metrics": {
+        "corpus_bleu": 0.21,
+        "corpus_chrfpp": 6.51,
+        "corpus_ter": 2400.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.21
+        ],
+        "sentence_chrfpp": [
+          6.51
+        ],
+        "sentence_ter": [
+          2400.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "A challenging sentence!\n\nBased on my research, it appears to be in the Lakota language, which is a Native American language spoken by the Lakota people.\n\nHere's my attempt at translating the sentence:\n\n\"Wahi čha lakhota ki matho ki wičhačhopi\"\n\n* \"Wahi\" might mean \"he\" or \"that one\"\n* \"čha\" could be a verb or a particle, possibly indicating a relationship or possession\n* \"lakhota\" refers to the Lakota people or language\n* \"ki\" is a preposition meaning \"of\" or \"belonging to\"\n* \"matho\" might mean \"bear\" (as in the animal)\n* \"ki\" (again) is a preposition meaning \"of\" or \"belonging to\"\n* \"wičhačhopi\" could be a verb or a noun, possibly related to \"to speak\" or \"language\"\n\nTaking a stab at it, a possible translation could be:\n\n\"He is a speaker of the Lakota language of the bear\" or \"That one belongs to the Lakota bear language\"\n\nPlease keep in mind that this is a very rough translation, and I may be entirely off the mark. Lakota is a complex language with its own grammar and syntax, and without more context or a fluent speaker's guidance, it's difficult to provide an accurate translation."
+        ],
+        "references": [
+          "I came and the Indians called the bears."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 26.71,
+            "corpus_chrfpp": 62.6,
+            "corpus_ter": 46.15,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              32.47,
+              39.44,
+              12.55,
+              39.43
+            ],
+            "sentence_chrfpp": [
+              72.58,
+              68.92,
+              45.91,
+              63.84
+            ],
+            "sentence_ter": [
+              37.5,
+              42.86,
+              62.5,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and the Indian called the bears.",
+              "The person killed you and called.",
+              "The person killed you, and you called.",
+              "Killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 26.71,
+        "corpus_chrfpp": 62.6,
+        "corpus_ter": 46.15,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          32.47,
+          39.44,
+          12.55,
+          39.43
+        ],
+        "sentence_chrfpp": [
+          72.58,
+          68.92,
+          45.91,
+          63.84
+        ],
+        "sentence_ter": [
+          37.5,
+          42.86,
+          62.5,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You came, and the Indian called the bears.",
+          "The person killed you and called.",
+          "The person killed you, and you called.",
+          "Killed you."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 26.71,
+        "corpus_chrfpp": 62.6,
+        "corpus_ter": 46.15,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          32.47,
+          39.44,
+          12.55,
+          39.43
+        ],
+        "sentence_chrfpp": [
+          72.58,
+          68.92,
+          45.91,
+          63.84
+        ],
+        "sentence_ter": [
+          37.5,
+          42.86,
+          62.5,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You came, and the Indian called the bears.",
+          "The person killed you and called.",
+          "The person killed you, and you called.",
+          "Killed you."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 2.34,
+            "corpus_chrfpp": 23.6,
+            "corpus_ter": 84.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              6.92,
+              5.85,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              39.34,
+              16.55,
+              20.04,
+              1.92
+            ],
+            "sentence_ter": [
+              75.0,
+              85.71,
+              87.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bear killed the Indian.",
+              "The Indian is killing them.",
+              "The Indian kills the bear.",
+              "Bear"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 7.29,
+            "corpus_chrfpp": 33.45,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              23.45,
+              6.48,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              35.53,
+              42.78,
+              27.14,
+              23.16
+            ],
+            "sentence_ter": [
+              87.5,
+              57.14,
+              87.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They killed the Indian bear.",
+              "The killer called me.",
+              "The killer called the bear.",
+              "killer"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 2.56,
+            "corpus_chrfpp": 31.12,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              8.29,
+              6.32,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              35.53,
+              38.48,
+              28.29,
+              7.63
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They killed the Indian bear.",
+              "The killer called you.",
+              "The killer called them.",
+              "You"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 2.77,
+            "corpus_chrfpp": 28.8,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.48,
+              7.49,
+              5.71,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              43.67,
+              23.06,
+              21.13,
+              19.32
+            ],
+            "sentence_ter": [
+              62.5,
+              85.71,
+              87.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians killed the bear.",
+              "The person was called by someone.",
+              "Someone called the person.",
+              "You were called."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 2.86,
+            "corpus_chrfpp": 28.07,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.48,
+              7.49,
+              6.32,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              43.67,
+              23.03,
+              22.4,
+              7.68
+            ],
+            "sentence_ter": [
+              62.5,
+              85.71,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians killed the bear.",
+              "The person was called by them.",
+              "The person called them.",
+              "They came."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 7.23,
+            "corpus_chrfpp": 28.59,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              23.45,
+              6.32,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              35.53,
+              36.39,
+              22.4,
+              3.33
+            ],
+            "sentence_ter": [
+              87.5,
+              57.14,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They killed the Indian bear.",
+              "The person called me.",
+              "The person called them.",
+              "Me"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 10.35,
+            "corpus_chrfpp": 41.78,
+            "corpus_ter": 61.54,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.34,
+              23.45,
+              15.45,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              51.99,
+              36.39,
+              47.03,
+              3.33
+            ],
+            "sentence_ter": [
+              62.5,
+              57.14,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The person and the Indian killed the bear.",
+              "The person called me.",
+              "The person called you and me.",
+              "Me"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 10.48,
+            "corpus_chrfpp": 47.86,
+            "corpus_ter": 61.54,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              22.81,
+              14.63,
+              7.38,
+              18.39
+            ],
+            "sentence_chrfpp": [
+              61.75,
+              48.12,
+              36.63,
+              34.64
+            ],
+            "sentence_ter": [
+              50.0,
+              57.14,
+              75.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You and the Indian killed the bears.",
+              "The person killed and called.",
+              "The person killed, and called.",
+              "You killed"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 16.69,
+            "corpus_chrfpp": 57.59,
+            "corpus_ter": 53.85,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.58,
+              39.44,
+              12.83,
+              18.39
+            ],
+            "sentence_chrfpp": [
+              60.87,
+              68.92,
+              46.94,
+              48.77
+            ],
+            "sentence_ter": [
+              50.0,
+              42.86,
+              62.5,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You and the Indian called the bear.",
+              "The person killed you and called.",
+              "The person killed you, and called.",
+              "Killed you"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 27.11,
+            "corpus_chrfpp": 62.03,
+            "corpus_ter": 46.15,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              36.28,
+              39.44,
+              12.83,
+              39.43
+            ],
+            "sentence_chrfpp": [
+              69.81,
+              68.92,
+              46.94,
+              63.84
+            ],
+            "sentence_ter": [
+              37.5,
+              42.86,
+              62.5,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You and the Indian called the bears.",
+              "The person killed you and called.",
+              "The person killed you, and called.",
+              "Killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 10.81,
+            "corpus_chrfpp": 53.1,
+            "corpus_ter": 57.69,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.99,
+              24.45,
+              13.65,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              52.75,
+              58.1,
+              52.46,
+              43.22
+            ],
+            "sentence_ter": [
+              62.5,
+              42.86,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians and the bear called each other.",
+              "The person killed you and was called.",
+              "The person killed you, and he was called.",
+              "You were killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 10.81,
+        "corpus_chrfpp": 53.1,
+        "corpus_ter": 57.69,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.99,
+          24.45,
+          13.65,
+          19.0
+        ],
+        "sentence_chrfpp": [
+          52.75,
+          58.1,
+          52.46,
+          43.22
+        ],
+        "sentence_ter": [
+          62.5,
+          42.86,
+          50.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indians and the bear called each other.",
+          "The person killed you and was called.",
+          "The person killed you, and he was called.",
+          "You were killed."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 11,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 27.11,
+        "corpus_chrfpp": 62.03,
+        "corpus_ter": 46.15,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          36.28,
+          39.44,
+          12.83,
+          39.43
+        ],
+        "sentence_chrfpp": [
+          69.81,
+          68.92,
+          46.94,
+          63.84
+        ],
+        "sentence_ter": [
+          37.5,
+          42.86,
+          62.5,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You and the Indian called the bears.",
+          "The person killed you and called.",
+          "The person killed you, and called.",
+          "Killed you."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 10,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 7.74,
+            "corpus_chrfpp": 28.88,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.8,
+              6.97,
+              19.2,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              28.77,
+              17.96,
+              35.55,
+              36.61
+            ],
+            "sentence_ter": [
+              87.5,
+              85.71,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian killed them.",
+              "I killed the bear.",
+              "The Indian called me.",
+              "Who called you?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 2.56,
+            "corpus_chrfpp": 17.59,
+            "corpus_ter": 88.46,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.8,
+              0.0,
+              6.32,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              12.2,
+              4.36,
+              28.52,
+              31.98
+            ],
+            "sentence_ter": [
+              87.5,
+              100.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The person killed someone.",
+              "Who came?",
+              "The Indian killed them.",
+              "The bear killed me."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 7.87,
+            "corpus_chrfpp": 29.03,
+            "corpus_ter": 146.15,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              29.85,
+              5.69,
+              3.46,
+              6.29
+            ],
+            "sentence_chrfpp": [
+              43.88,
+              10.17,
+              23.93,
+              38.69
+            ],
+            "sentence_ter": [
+              62.5,
+              100.0,
+              175.0,
+              400.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "matho ki wičhačho → He called the bears.",
+              "yahi čha hi → You came.",
+              "matho ki hipi ną lakhota ki čhopi → The bears came and called the Indian.",
+              "yahi čha hokšila ki nikte → The boy killed you when you came."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 7.33,
+            "corpus_chrfpp": 37.91,
+            "corpus_ter": 84.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.55,
+              5.3,
+              21.11,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              50.56,
+              32.2,
+              41.77,
+              13.52
+            ],
+            "sentence_ter": [
+              62.5,
+              85.71,
+              50.0,
+              233.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I called the Indian and killed the boy.",
+              "I killed the boy, and someone called the Indians.",
+              "The Indians came, and you called me.",
+              "The bears came and called the Indian."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 7.33,
+        "corpus_chrfpp": 37.91,
+        "corpus_ter": 84.62,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.55,
+          5.3,
+          21.11,
+          5.52
+        ],
+        "sentence_chrfpp": [
+          50.56,
+          32.2,
+          41.77,
+          13.52
+        ],
+        "sentence_ter": [
+          62.5,
+          85.71,
+          50.0,
+          233.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I called the Indian and killed the boy.",
+          "I killed the boy, and someone called the Indians.",
+          "The Indians came, and you called me.",
+          "The bears came and called the Indian."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 7.33,
+        "corpus_chrfpp": 37.91,
+        "corpus_ter": 84.62,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.55,
+          5.3,
+          21.11,
+          5.52
+        ],
+        "sentence_chrfpp": [
+          50.56,
+          32.2,
+          41.77,
+          13.52
+        ],
+        "sentence_ter": [
+          62.5,
+          85.71,
+          50.0,
+          233.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I called the Indian and killed the boy.",
+          "I killed the boy, and someone called the Indians.",
+          "The Indians came, and you called me.",
+          "The bears came and called the Indian."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "syntax",
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 38.9,
+            "corpus_chrfpp": 69.25,
+            "corpus_ter": 30.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              32.47,
+              70.71,
+              21.36,
+              39.43
+            ],
+            "sentence_chrfpp": [
+              72.58,
+              80.88,
+              57.37,
+              63.84
+            ],
+            "sentence_ter": [
+              37.5,
+              14.29,
+              37.5,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and the Indian called the bears.",
+              "The person killed you and called me.",
+              "The person killed you, and you called me.",
+              "Killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 2.05,
+            "corpus_chrfpp": 28.04,
+            "corpus_ter": 176.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.2,
+              3.46,
+              5.41,
+              4.03
+            ],
+            "sentence_chrfpp": [
+              34.59,
+              22.85,
+              22.68,
+              29.22
+            ],
+            "sentence_ter": [
+              237.5,
+              128.57,
+              125.0,
+              266.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian killed the bears is not supported, a possible translation for \"lakhota ki wičhakte\" is \"The Indian killed them\".",
+              "The person killed someone, as supported by \"wičhaša ki tuwa kte\".",
+              "You came, and he came, as supported by \"yahi čha hi\".",
+              "Who called you, as supported by \"tuwa ničho\"."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 2.05,
+        "corpus_chrfpp": 28.04,
+        "corpus_ter": 176.92,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.2,
+          3.46,
+          5.41,
+          4.03
+        ],
+        "sentence_chrfpp": [
+          34.59,
+          22.85,
+          22.68,
+          29.22
+        ],
+        "sentence_ter": [
+          237.5,
+          128.57,
+          125.0,
+          266.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indian killed the bears is not supported, a possible translation for \"lakhota ki wičhakte\" is \"The Indian killed them\".",
+          "The person killed someone, as supported by \"wičhaša ki tuwa kte\".",
+          "You came, and he came, as supported by \"yahi čha hi\".",
+          "Who called you, as supported by \"tuwa ničho\"."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 38.9,
+        "corpus_chrfpp": 69.25,
+        "corpus_ter": 30.77,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          32.47,
+          70.71,
+          21.36,
+          39.43
+        ],
+        "sentence_chrfpp": [
+          72.58,
+          80.88,
+          57.37,
+          63.84
+        ],
+        "sentence_ter": [
+          37.5,
+          14.29,
+          37.5,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You came, and the Indian called the bears.",
+          "The person killed you and called me.",
+          "The person killed you, and you called me.",
+          "Killed you."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "initial_draft",
+      "all_steps_complete": true
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 19.19,
+            "corpus_chrfpp": 65.48,
+            "corpus_ter": 50.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.99,
+              36.89,
+              21.36,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              75.79,
+              70.32,
+              57.37,
+              43.22
+            ],
+            "sentence_ter": [
+              62.5,
+              28.57,
+              37.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians came, and the bears called the Indians.",
+              "The person killed you, and called me.",
+              "The person killed you, and you called me.",
+              "You were killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 19.19,
+        "corpus_chrfpp": 65.48,
+        "corpus_ter": 50.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.99,
+          36.89,
+          21.36,
+          19.0
+        ],
+        "sentence_chrfpp": [
+          75.79,
+          70.32,
+          57.37,
+          43.22
+        ],
+        "sentence_ter": [
+          62.5,
+          28.57,
+          37.5,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indians came, and the bears called the Indians.",
+          "The person killed you, and called me.",
+          "The person killed you, and you called me.",
+          "You were killed."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 19.19,
+        "corpus_chrfpp": 65.48,
+        "corpus_ter": 50.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.99,
+          36.89,
+          21.36,
+          19.0
+        ],
+        "sentence_chrfpp": [
+          75.79,
+          70.32,
+          57.37,
+          43.22
+        ],
+        "sentence_ter": [
+          62.5,
+          28.57,
+          37.5,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indians came, and the bears called the Indians.",
+          "The person killed you, and called me.",
+          "The person killed you, and you called me.",
+          "You were killed."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    }
+  }
+}

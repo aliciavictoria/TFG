@@ -1,0 +1,1231 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T02:24:16.799133",
+    "puzzle_id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 10,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false,
+    "sgpl_normalized": true
+  },
+  "puzzle": {
+    "id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Did I beat you(sg)?",
+        "target": "ŋabə nɤ lan tɤʔ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Did they see me?",
+        "target": "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Does he know you(sg)?",
+        "target": "ati kəmə nɤ cʰam ru ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you(pl) sleep?",
+        "target": "nuʔrum ʒip kan ne",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Did I beat you(sg)?",
+      "reference": "ŋabə nɤ lan tɤʔ ne",
+      "hypothesis": "I'll attempt to translate the sentence into Hakha Chin (also known as Hakha), a language spoken in Myanmar (Burma) and India. Please note that the translation may not be perfect, as I'm not a native speaker of the language.\n\n Sentence: Did I beat you(sg)?\n Translation: \n\n* 'Did I beat you' can be translated to Hakha Chin as: \n  - 'Mai a hmaa' (Mai a = I did, hmaa = beat)\n  - 'Mai a hmaa' can be rephrased to 'Mai a hmaa a' (Mai a hmaa a = I beat you)\n* 'you(sg)' can be translated to Hakha Chin as: 'a' (a = you, singular)\n* So, the complete translation would be: 'Mai a hmaa a'\n\nHowever, in Hakha Chin, the sentence structure and word order might be different from what we're used to in English. A more natural way to phrase the sentence in Hakha Chin would be: 'A mai a hmaa?' (A = you, mai a = I, hmaa = beat, ? = question mark)\n\nSo, the final translation is: 'A mai a hmaa?'",
+      "latency_s": 1.01,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.08,
+        "corpus_ter": 3480.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.08
+        ],
+        "sentence_ter": [
+          3480.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll attempt to translate the sentence into Hakha Chin (also known as Hakha), a language spoken in Myanmar (Burma) and India. Please note that the translation may not be perfect, as I'm not a native speaker of the language.\n\n Sentence: Did I beat you(sg)?\n Translation: \n\n* 'Did I beat you' can be translated to Hakha Chin as: \n  - 'Mai a hmaa' (Mai a = I did, hmaa = beat)\n  - 'Mai a hmaa' can be rephrased to 'Mai a hmaa a' (Mai a hmaa a = I beat you)\n* 'you(sg)' can be translated to Hakha Chin as: 'a' (a = you, singular)\n* So, the complete translation would be: 'Mai a hmaa a'\n\nHowever, in Hakha Chin, the sentence structure and word order might be different from what we're used to in English. A more natural way to phrase the sentence in Hakha Chin would be: 'A mai a hmaa?' (A = you, mai a = I, hmaa = beat, ? = question mark)\n\nSo, the final translation is: 'A mai a hmaa?'"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne"
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 4.32,
+          "metrics": {
+            "corpus_bleu": 3.11,
+            "corpus_chrfpp": 8.89,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              9.69,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              6.83,
+              7.11,
+              11.19,
+              11.48
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ka: 1st person singular pronoun",
+              "kɤ: 1st person singular pronoun",
+              "ne: question marker",
+              "ʒip: verb"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.11,
+        "corpus_chrfpp": 8.89,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          9.69,
+          19.72
+        ],
+        "sentence_chrfpp": [
+          6.83,
+          7.11,
+          11.19,
+          11.48
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ka: 1st person singular pronoun",
+          "kɤ: 1st person singular pronoun",
+          "ne: question marker",
+          "ʒip: verb"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 31.38,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker\n7. ne = question particle",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n1. Did I beat you(sg)?\nI hypothesize that the verb \"beat\" is not present in the examples, but based on the word order and subject markers, I will attempt to translate it as \"ŋa pa tuʔ ne\", where \"pa\" is the verb \"beat\".\n2. Did they see me?\nI hypothesize that the subject marker for third person plural is not present in the examples, but based on the word order and subject markers, I will attempt to translate it as \"nɤ ʒip ka ne\", where \"nɤ\" is the second person singular pronoun, but I will use it as a placeholder for the third person plural pronoun.\n3. Does he know you(sg)?\nI hypothesize that the verb \"know\" is not present in the examples, but based on the word order and subject markers, I will attempt to translate it as \"ŋa ʒi tuʔ ne\", where \"ʒi\" is the verb \"know\".\n4. Do you(pl) sleep?\nI hypothesize that the subject marker for second person plural is not present in the examples, but based on the word order and subject markers, I will attempt to translate it as \"nɤ ʒip ka ne\", where \"nɤ\" is the second person singular pronoun, but I will use it as a placeholder for the second person plural pronoun.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.47,
+              2.48,
+              2.91,
+              2.64
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did I beat you(sg)?",
+              "Did they see me?",
+              "Does he know you(sg)?",
+              "Do you(pl) sleep?"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 1.76,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker\n9. a = third person singular pronoun marker\n10. ti = object marker\n11. la = third person singular pronoun marker\n12. pʰi = object marker\n13. t = third person singular pronoun marker\n14. ɤʔ = subject marker",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The third person singular pronoun marker is \"bə\", \"a\", or \"t\".\n7. The object marker is \"ti\" or \"pʰi\".\n8. The subject marker is \"ɤʔ\".",
+          "metrics": {
+            "corpus_bleu": 4.37,
+            "corpus_chrfpp": 14.4,
+            "corpus_ter": 76.19,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.44,
+              9.69,
+              9.69,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              13.61,
+              8.14,
+              7.98,
+              33.04
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              83.33,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋa pa tuʔ ne",
+              "nɤ ʒip ka ne",
+              "ŋa ʒi tuʔ ne",
+              "nɤ ʒip ka ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 31.77,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker\n9. a = third person singular pronoun marker\n10. ti = object marker\n11. la = third person singular pronoun marker\n12. pʰi = object marker\n13. t = third person singular pronoun marker\n14. ɤʔ = subject marker\n15. nirum = first person plural pronoun\n16. kəmə = subject marker (first person plural)\n17. nuʔrum = subject marker (first person plural)\n18. cʰam = verb \"know\"\n19. lapkʰi = verb \"see\"\n20. ki = subject marker (first person plural)",
+          "accumulated_rules": "In the third example, ŋabə ati lapkʰi tɤʔ ne, I see that the subject marker \"tɤʔ\" is used with the first person singular pronoun \"ŋa\" and the third person singular pronoun marker \"bə\", which suggests that the third person singular pronoun marker may be a separate morpheme that can be attached to the subject marker. I also notice that the verb \"lapkʰi\" is followed by the object marker \"ati\" and the subject marker \"tɤʔ\", which suggests that the object marker may be a separate morpheme that can be attached to the verb.\nIn the fourth example, nirum kəmə nuʔrum cʰam ki ne, I see that the subject marker \"ki\" is used with the first person plural pronoun \"nirum\", which suggests that the subject marker may be a separate morpheme that can be attached to the subject. I also notice that the verb \"cʰam\" is followed by the question particle \"ki\", which suggests that the question particle may be a separate morpheme that can be attached to the verb.\n1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The third person singular pronoun marker is \"bə\", \"a\", or \"t\".\n7. The object marker is \"ti\" or \"pʰi\".\n8. The subject marker is \"ɤʔ\".\n9. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n10. The third person singular pronoun marker can be attached to the subject marker (e.g. \"bə\" with \"ka\").\n11. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n12. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.47,
+              2.48,
+              2.91,
+              2.64
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did I beat you(sg)?",
+              "Did they see me?",
+              "Does he know you(sg)?",
+              "Do you(pl) sleep?"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 1.66,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker (contradicts previous hypothesis)\n9. a = third person singular pronoun marker (contradicts previous hypothesis)\n10. ti = object marker\n11. pʰi = object marker\n12. t = third person singular pronoun marker (contradicts previous hypothesis)\n13. ɤʔ = subject marker (contradicts previous hypothesis)\n14. nirum = first person plural pronoun\n15. kəmə = subject marker (first person plural)\n16. nuʔrum = subject marker (first person plural)\n17. cʰam = verb \"know\"\n18. lapkʰi = verb \"see\"\n19. ki = subject marker (first person plural)\n20. rɤ = object marker",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. [DELETED: The third person singular pronoun marker is \"bə\", \"a\", or \"t\" — contradicted by new examples]\n7. The object marker is \"ti\" or \"pʰi\".\n8. The subject marker is \"ɤʔ\" (contradicts previous hypothesis).\n9. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n10. [DELETED: The third person singular pronoun marker can be attached to the subject marker — contradicted by new examples]\n11. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n12. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.47,
+              2.48,
+              2.91,
+              2.64
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did I beat you(sg)?",
+              "Did they see me?",
+              "Does he know you(sg)?",
+              "Do you(pl) sleep?"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 31.56,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker (consistent with new examples)\n9. ati = object marker\n10. lapkʰi = verb \"see\"\n11. tɤʔ = subject marker (consistent with new examples)\n12. nirum = first person plural pronoun\n13. kəmə = subject marker (first person plural)\n14. nuʔrum = subject marker (first person plural)\n15. cʰam = verb \"know\"\n16. ki = subject marker (first person plural)\n17. rɤ = object marker\n18. tarum = third person plural pronoun\n19. lan = verb \"beat\"\n20. tʰu = subject marker (consistent with new examples)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The third person singular pronoun marker is \"bə\".\n7. The object marker is \"ati\" or \"pʰi\".\n8. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n9. The subject marker can be \"tɤʔ\" or \"tʰu\".\n10. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n11. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").",
+          "metrics": {
+            "corpus_bleu": 8.74,
+            "corpus_chrfpp": 30.99,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.53,
+              12.75,
+              11.52,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              37.25,
+              34.2,
+              17.94,
+              34.74
+            ],
+            "sentence_ter": [
+              40.0,
+              50.0,
+              66.67,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ lan tʰu ne",
+              "tarum lapkʰi rɤ ne",
+              "bə cʰam ki ne",
+              "nirum ʒip tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 31.78,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker\n9. ati = object marker\n10. lapkʰi = verb \"see\"\n11. tɤʔ = subject marker (consistent with new examples)\n12. nirum = first person plural pronoun\n13. kəmə = subject marker (first person plural)\n14. nuʔrum = subject marker (first person plural)\n15. cʰam = verb \"know\"\n16. ki = subject marker (first person plural)\n17. rɤ = object marker\n18. tarum = third person plural pronoun\n19. lan = verb \"beat\"\n20. tʰu = subject marker (consistent with new examples)\n21. nɤbə = second person singular pronoun marker (new information)\n22. kan = subject marker (new information)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The third person singular pronoun marker is \"bə\".\n7. The object marker is \"ati\" or \"rɤ\".\n8. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n9. The subject marker can be \"tɤʔ\" or \"tʰu\".\n10. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n11. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").\n12. The subject marker can be \"kəmə\" or \"nuʔrum\" for first person plural.\n13. The subject marker can be \"kan\" (new information).",
+          "metrics": {
+            "corpus_bleu": 21.9,
+            "corpus_chrfpp": 45.33,
+            "corpus_ter": 47.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              53.73,
+              19.36,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              25.66,
+              77.68,
+              36.05,
+              24.36
+            ],
+            "sentence_ter": [
+              60.0,
+              16.67,
+              50.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤbə ŋa lan tʰu ne",
+              "tarum kəmə ŋa lapkʰi rɤ ne",
+              "ŋabə nɤ cʰam tɤʔ ne",
+              "nirum kəmə ʒip ki ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 31.72,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker\n9. ati = object marker\n10. lapkʰi = verb \"see\"\n11. tɤʔ = subject marker (consistent with new examples)\n12. nirum = first person plural pronoun\n13. kəmə = subject marker (first person plural)\n14. nuʔrum = subject marker (first person plural)\n15. cʰam = verb \"know\"\n16. ki = subject marker (first person plural)\n17. rɤ = object marker\n18. tarum = third person plural pronoun\n19. lan = verb \"beat\"\n20. tʰu = subject marker (consistent with new examples)\n21. nɤbə = second person singular pronoun marker (new information)\n22. kan = subject marker (new information)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The third person singular pronoun marker is \"bə\".\n7. The object marker is \"ati\" or \"rɤ\".\n8. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n9. The subject marker can be \"tɤʔ\" or \"tʰu\".\n10. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n11. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").\n12. The subject marker can be \"kəmə\" or \"nuʔrum\" for first person plural.\n13. The subject marker can be \"kan\" (new information).",
+          "metrics": {
+            "corpus_bleu": 8.07,
+            "corpus_chrfpp": 32.33,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              20.8,
+              11.52,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              25.66,
+              46.35,
+              17.75,
+              34.74
+            ],
+            "sentence_ter": [
+              60.0,
+              33.33,
+              66.67,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤbə ŋa lan tʰu ne",
+              "tarum ŋa lapkʰi rɤ ne",
+              "ŋa cʰam tuʔ ne",
+              "nirum ʒip tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 32.41,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker\n9. ati = object marker\n10. lapkʰi = verb \"see\"\n11. tɤʔ = subject marker (consistent with new examples)\n12. nirum = first person plural pronoun\n13. kəmə = subject marker (first person plural)\n14. nuʔrum = subject marker (first person plural)\n15. cʰam = verb \"know\"\n16. ki = subject marker (first person plural)\n17. rɤ = object marker\n18. tarum = third person plural pronoun\n19. lan = verb \"beat\"\n20. tʰu = subject marker (consistent with new examples)\n21. nɤbə = second person singular pronoun marker (new information)\n22. kan = subject marker (new information)\n23. ŋabə = third person singular pronoun (new information)\n24. ri = object marker (new information)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The third person singular pronoun marker is \"bə\".\n7. The object marker is \"ati\" or \"rɤ\".\n8. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n9. The subject marker can be \"tɤʔ\" or \"tʰu\".\n10. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n11. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").\n12. The subject marker can be \"kəmə\" or \"nuʔrum\" for first person plural.\n13. The subject marker can be \"kan\" (new information).\n14. The subject marker can be \"nɤbə\" for second person singular (new information).\n15. The third person singular pronoun marker is \"ŋabə\" (new information).\n16. The object marker can be \"ri\" (new information).",
+          "metrics": {
+            "corpus_bleu": 4.4,
+            "corpus_chrfpp": 26.1,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              10.4,
+              11.51,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              25.66,
+              27.83,
+              25.13,
+              24.36
+            ],
+            "sentence_ter": [
+              60.0,
+              66.67,
+              66.67,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤbə ŋa lan tʰu ne",
+              "ŋabə ati lapkʰi tɤʔ ne",
+              "nɤbə ati cʰam tuʔ ne",
+              "nirum kəmə ʒip ki ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 32.18,
+          "accumulated_dict": "1. ŋa = first person singular pronoun\n2. ka = subject marker (first person singular)\n3. kɤ = verb \"go\"\n4. nɤ = second person singular pronoun\n5. ʒip = verb \"sleep\"\n6. tuʔ = subject marker (second person singular)\n7. ne = question particle\n8. bə = third person singular pronoun marker [DELETED: inconsistent with new examples]\n9. ati = object marker\n10. lapkʰi = verb \"see\"\n11. tɤʔ = subject marker (consistent with new examples)\n12. nirum = first person plural pronoun\n13. kəmə = subject marker (first person plural)\n14. nuʔrum = subject marker (first person plural)\n15. cʰam = verb \"know\"\n16. ki = subject marker (first person plural) [DELETED: inconsistent with new examples]\n17. rɤ = object marker\n18. tarum = third person plural pronoun\n19. lan = verb \"beat\"\n20. tʰu = subject marker (consistent with new examples)\n21. nɤbə = second person singular pronoun marker (new information)\n22. kan = subject marker (new information)\n23. ŋabə = third person singular pronoun (new information)\n24. ri = object marker (new information)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The subject marker is \"ka\" for first person singular and \"tuʔ\" for second person singular.\n3. The verb \"go\" is \"kɤ\".\n4. The verb \"sleep\" is \"ʒip\".\n5. The question particle is \"ne\".\n6. The object marker is \"ati\" or \"rɤ\".\n7. The subject marker can be attached to the subject (e.g. \"ka\" with \"ŋa\").\n8. The subject marker can be \"tɤʔ\" or \"tʰu\".\n9. The object marker can be attached to the verb (e.g. \"ati\" with \"lapkʰi\").\n10. The question particle can be attached to the verb (e.g. \"ne\" with \"kɤ\").\n11. The subject marker can be \"kəmə\" or \"nuʔrum\" for first person plural.\n12. The subject marker can be \"kan\" (new information).\n13. The subject marker can be \"nɤbə\" for second person singular (new information).\n14. The third person singular pronoun marker is \"ŋabə\" (new information).\n15. The object marker can be \"ri\" (new information).\n16. The subject marker can be \"tʰɤ\" (new information) [DELETED: inconsistent with new examples]",
+          "metrics": {
+            "corpus_bleu": 27.83,
+            "corpus_chrfpp": 55.67,
+            "corpus_ter": 33.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              42.73,
+              11.51,
+              53.73,
+              21.02
+            ],
+            "sentence_chrfpp": [
+              67.31,
+              36.18,
+              74.15,
+              49.32
+            ],
+            "sentence_ter": [
+              20.0,
+              50.0,
+              16.67,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə nɤ lan tʰu ne",
+              "tarum ati lapkʰi tɤʔ ne",
+              "ati kəmə nɤ cʰam tuʔ ne",
+              "nirum ʒip nuʔrum ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 27.83,
+        "corpus_chrfpp": 55.67,
+        "corpus_ter": 33.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          42.73,
+          11.51,
+          53.73,
+          21.02
+        ],
+        "sentence_chrfpp": [
+          67.31,
+          36.18,
+          74.15,
+          49.32
+        ],
+        "sentence_ter": [
+          20.0,
+          50.0,
+          16.67,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ŋabə nɤ lan tʰu ne",
+          "tarum ati lapkʰi tɤʔ ne",
+          "ati kəmə nɤ cʰam tuʔ ne",
+          "nirum ʒip nuʔrum ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 30.94,
+          "accumulated_dict": "- ka: possibly a first-person singular pronoun (given its position in the first example)\n- kɤ: possibly a verb or a question marker (given its position in the first example)\n- ne: possibly a question marker or an interrogative particle (given its position in all examples)\n- ʒip: possibly a verb or a noun related to sleep (given its position in the second example)\n- tuʔ: possibly a second-person singular pronoun (given its position in the second example)\n- ŋabə: possibly a first-person singular pronoun (given its position in the third example)\n- ati: possibly a verb or a noun related to seeing (given its position in the third example)\n- lapkʰi: possibly a third-person singular pronoun (given its position in the third example)\n- tɤʔ: possibly a verb or a question marker (given its position in the third example)",
+          "accumulated_rules": "- Word order: SOV (Subject-Object-Verb) or possibly a verb-final language (given the position of the verb in all examples)\n- Pronouns: possibly a system of suffixes or prefixes to indicate person and number (given the different pronouns in the examples)\n- Question formation: possibly involves a question marker or an interrogative particle (given the presence of 'ne' and 'tɤʔ' in the examples)\n- Verb agreement: possibly involves a system of suffixes or prefixes to indicate subject-verb agreement (given the different pronouns in the examples)",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.3,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              1.76,
+              6.19,
+              4.03,
+              8.65
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do I go? (assuming",
+              "person singular pronoun and",
+              "Did you(sg) sleep? (assuming",
+              "person singular pronoun and"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 0.76,
+          "accumulated_dict": "- ka: possibly a first-person singular pronoun\n- kɤ: possibly a verb or a question marker\n- ne: possibly a question marker or an interrogative particle\n- ʒip: possibly a verb or a noun related to sleep\n- tuʔ: possibly a second-person singular pronoun\n- ŋabə: possibly a first-person singular pronoun\n- ati: possibly a verb or a noun related to seeing\n- lapkʰi: possibly a third-person singular pronoun\n- tɤʔ: possibly a verb or a question marker\n- nirum: possibly a second-person plural pronoun\n- kəmə: possibly a noun or a verb related to knowing\n- nuʔrum: possibly a noun or a verb related to knowing\n- cʰam: possibly a verb or a noun related to knowing\n- rɤ: possibly a verb or a noun related to seeing\n- ki: possibly a verb or a noun related to knowing\n- nɤbə: possibly a first-person singular pronoun\n- ŋa: possibly a verb or a noun related to seeing\n- cʰam: possibly a verb or a noun related to knowing",
+          "accumulated_rules": "- Word order: SOV (Subject-Object-Verb) or possibly a verb-final language\n- Pronouns: possibly a system of suffixes or prefixes to indicate person and number\n- Question formation: possibly involves a question marker or an interrogative particle\n- Verb agreement: possibly involves a system of suffixes or prefixes to indicate subject-verb agreement\n- Affixation: possibly involves a system of prefixes or suffixes to indicate grammatical function (given the different forms of 'cʰam' and 'rɤ')\n- Allomorphs: possibly involves vowel changes or consonant alternations to indicate grammatical function (given the different forms of 'cʰam' and 'rɤ')",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.53,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              3.86,
+              5.14,
+              4.76,
+              8.65
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do we know you(pl)? (assuming",
+              "person plural pronoun and",
+              "Do you(sg) see me? (assuming",
+              "person singular pronoun and"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.12,
+          "accumulated_dict": "- ka: possibly a first-person singular pronoun\n- kɤ: possibly a verb or a question marker\n- ne: possibly a question marker or an interrogative particle\n- ʒip: possibly a verb or a noun related to sleep\n- tuʔ: possibly a second-person singular pronoun\n- ŋabə: possibly a first-person singular pronoun\n- ati: possibly a verb or a noun related to seeing\n- lapkʰi: possibly a third-person singular pronoun\n- tɤʔ: possibly a verb or a question marker\n- nirum: possibly a second-person plural pronoun\n- kəmə: possibly a noun or a verb related to knowing\n- nuʔrum: possibly a noun or a verb related to knowing\n- cʰam: possibly a verb or a noun related to knowing\n- rɤ: possibly a verb or a noun related to seeing\n- ki: possibly a verb or a noun related to knowing\n- nɤbə: possibly a first-person singular pronoun\n- ŋa: possibly a verb or a noun related to seeing\n- cʰam: possibly a verb or a noun related to knowing\n- tarum: possibly a verb or a noun related to beating\n- kan: possibly a verb or a noun related to seeing",
+          "accumulated_rules": "- Word order: SOV (Subject-Object-Verb) or possibly a verb-final language\n- Pronouns: possibly a system of suffixes or prefixes to indicate person and number\n- Question formation: possibly involves a question marker or an interrogative particle\n- Verb agreement: possibly involves a system of suffixes or prefixes to indicate subject-verb agreement\n- Affixation: possibly involves a system of prefixes or suffixes to indicate grammatical function (given the different forms of 'cʰam' and 'rɤ')\n- Allomorphs: possibly involves vowel changes or consonant alternations to indicate grammatical function (given the different forms of 'cʰam' and 'rɤ')\n- Tense: possibly indicated by a suffix or prefix on the verb (given the different forms of 'cʰam' and 'rɤ')\n- Number: possibly indicated by a suffix or prefix on the pronoun (given the different forms of 'tuʔ' and 'nirum')\n- Person: possibly indicated by a suffix or prefix on the pronoun (given the different forms of 'ka' and 'tuʔ')\n- Gender: possibly not marked in this language (given the lack of gender-specific pronouns or nouns)",
+          "metrics": {
+            "corpus_bleu": 4.78,
+            "corpus_chrfpp": 27.85,
+            "corpus_ter": 76.19,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              10.68,
+              11.51,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              39.7,
+              38.89,
+              25.13,
+              3.77
+            ],
+            "sentence_ter": [
+              60.0,
+              50.0,
+              66.67,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "tarum kəmə nɤ lan tʰu ne",
+              "nuʔrum kəmə ati lapkʰi kan ne",
+              "nɤbə ati cʰam tuʔ ne",
+              "Did they beat you(sg)? (The verb"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 1.26,
+          "accumulated_dict": "- ka: possibly a first-person singular pronoun\n- kɤ: possibly a verb or a question marker\n- ne: possibly a question marker or an interrogative particle\n- ʒip: possibly a verb or a noun related to sleep\n- tuʔ: possibly a second-person singular pronoun\n- ŋabə: possibly a first-person singular pronoun\n- ati: possibly a verb or a noun related to seeing\n- lapkʰi: possibly a third-person singular pronoun\n- tɤʔ: possibly a verb or a question marker\n- nirum: possibly a second-person plural pronoun\n- kəmə: possibly a noun or a verb related to knowing\n- nuʔrum: possibly a noun or a verb related to knowing\n- cʰam: possibly a verb or a noun related to knowing\n- rɤ: possibly a verb or a noun related to seeing\n- ki: possibly a verb or a noun related to knowing\n- nɤbə: possibly a first-person singular pronoun\n- ŋa: possibly a verb or a noun related to seeing\n- cʰam: possibly a verb or a noun related to knowing\n- tarum: possibly a verb or a noun related to beating\n- kan: possibly a verb or a noun related to seeing\n- ri: possibly a verb or a noun related to seeing (new addition)\n- tʰɤ: possibly a verb or a question marker (new addition)",
+          "accumulated_rules": "- Word order: SOV (Subject-Object-Verb) or possibly a verb-final language\n- Pronouns: possibly a system of suffixes or prefixes to indicate person and number\n- Question formation: possibly involves a question marker or an interrogative particle\n- Verb agreement: possibly involves a system of suffixes or prefixes to indicate subject-verb agreement\n- Affixation: possibly involves a system of prefixes or suffixes to indicate grammatical function (given the different forms of 'cʰam' and 'rɤ')\n- Allomorphs: possibly involves vowel changes or consonant alternations to indicate grammatical function (given the different forms of 'cʰam' and 'rɤ')\n- Tense: possibly indicated by a suffix or prefix on the verb (given the different forms of 'cʰam' and 'rɤ')\n- Number: possibly indicated by a suffix or prefix on the pronoun (given the different forms of 'tuʔ' and 'nirum')\n- Person: possibly indicated by a suffix or prefix on the pronoun (given the different forms of 'ka' and 'tuʔ')\n- Gender: possibly not marked in this language (given the lack of gender-specific pronouns or nouns)\n- Negation: possibly involves a suffix or prefix on the verb (given the different forms of 'ati' and 'tɤʔ')\n- Complex clauses: possibly involve a subordinating conjunction or a relative clause marker (given the different forms of 'ne' and 'tɤʔ')",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.78,
+        "corpus_chrfpp": 27.85,
+        "corpus_ter": 76.19,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.97,
+          10.68,
+          11.51,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          39.7,
+          38.89,
+          25.13,
+          3.77
+        ],
+        "sentence_ter": [
+          60.0,
+          50.0,
+          66.67,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "tarum kəmə nɤ lan tʰu ne",
+          "nuʔrum kəmə ati lapkʰi kan ne",
+          "nɤbə ati cʰam tuʔ ne",
+          "Did they beat you(sg)? (The verb"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 31.21,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 5.65,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              5.68,
+              5.81,
+              4.7,
+              6.48
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Sentence",
+              "Translation",
+              "Sentence",
+              "Translation"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 5.65,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          5.68,
+          5.81,
+          4.7,
+          6.48
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Sentence",
+          "Translation",
+          "Sentence",
+          "Translation"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "self_correction": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 1.08,
+      "ter": 3480.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll attempt to translate the sentence into Hakha Chin (also known as Hakha), a language spoken in Myanmar (Burma) and I",
+      "reference": "ŋabə nɤ lan tɤʔ ne"
+    },
+    "baseline": {
+      "best_bleu": 3.11,
+      "best_chrf": 8.89,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ka: 1st person singular pronoun",
+        "kɤ: 1st person singular pronoun",
+        "ne: question marker",
+        "ʒip: verb"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 27.83,
+      "best_chrf": 55.67,
+      "best_ter": 33.33,
+      "best_em": 0.0,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "ŋabə nɤ lan tʰu ne",
+        "tarum ati lapkʰi tɤʔ ne",
+        "ati kəmə nɤ cʰam tuʔ ne",
+        "nirum ʒip nuʔrum ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 4.78,
+      "best_chrf": 27.85,
+      "best_ter": 76.19,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "tarum kəmə nɤ lan tʰu ne",
+        "nuʔrum kəmə ati lapkʰi kan ne",
+        "nɤbə ati cʰam tuʔ ne",
+        "Did they beat you(sg)? (The verb"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 0.0,
+      "best_chrf": 5.65,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Sentence",
+        "Translation",
+        "Sentence",
+        "Translation"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ]
+    },
+    "self_correction": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    }
+  }
+}

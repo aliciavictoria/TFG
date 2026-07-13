@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-14T18:25:39.552769",
+    "puzzle_id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 17,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ob-dahetok",
+        "target": "You_{sg} really returned."
+      },
+      {
+        "source": "nake-dahetok",
+        "target": "We returned."
+      },
+      {
+        "source": "nambat-ihwin",
+        "target": "Aw, I cried."
+      },
+      {
+        "source": "nambe-otab",
+        "target": "We really chased you_{pl} away."
+      },
+      {
+        "source": "um-kulaɣawn",
+        "target": "He laughed at you_{sg} in vain."
+      },
+      {
+        "source": "e-keseh",
+        "target": "You_{pl} spat on him."
+      },
+      {
+        "source": "ubate-huɣanab",
+        "target": "Aw, you_{sg} silenced us."
+      },
+      {
+        "source": "nakum-hoɣab",
+        "target": "I silenced you_{pl} in vain."
+      },
+      {
+        "source": "nambame-ɣadaɣawn",
+        "target": "Oh, we left you_{sg} behind!"
+      },
+      {
+        "source": "ebe-ɣadanawn",
+        "target": "You_{pl} really left us behind."
+      },
+      {
+        "source": "ibatum-ɣadewn",
+        "target": "Aw, you_{pl} left him behind in vain."
+      },
+      {
+        "source": "a-isanab",
+        "target": "He cut me in half."
+      },
+      {
+        "source": "obam-eseb",
+        "target": "Oh, you_{sg} cut him in half!"
+      },
+      {
+        "source": "bate-tamanab",
+        "target": "Aw, we floated to the surface."
+      },
+      {
+        "source": "ba-tamab",
+        "target": "You_{pl} really floated to the surface."
+      },
+      {
+        "source": "a-ɣuyaɣah",
+        "target": "You_{sg} shuddered."
+      },
+      {
+        "source": "bam-ɣuyanah",
+        "target": "Oh, I shuddered!"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "e-ɣuyanah",
+        "target": "We shuddered.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ba-ihwin",
+        "target": "He really cried.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nambum-kisaɣah",
+        "target": "I really spat on you_{sg} in vain.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bat-ɣadawn",
+        "target": "Aw, he left you_{pl} behind.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ubamum-kolewn",
+        "target": "Oh, you_{sg} laughed at him in vain!",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "e-ɣuyanah",
+      "reference": "We shuddered.",
+      "hypothesis": "I'm not familiar with the language or script used in the sentence \"e-ɣuyanah\". However, based on my analysis, it appears to be a word or phrase in a non-English language, possibly using the International Phonetic Alphabet (IPA) or a similar transcription system.\n\nIf I had to take a guess, I would say that \"e-ɣuyanah\" might be a word or phrase in a language such as Arabic, Berber, or another language that uses similar phonetic patterns. The \"ɣ\" symbol represents a voiced uvular fricative, which is a sound found in some languages.\n\nWithout more context or information about the language and script used, it's difficult for me to provide a more accurate translation. If you can provide more context or clarify the language and script used, I may be able to help you better.",
+      "latency_s": 0.72,
+      "metrics": {
+        "corpus_bleu": 0.23,
+        "corpus_chrfpp": 2.02,
+        "corpus_ter": 6650.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.23
+        ],
+        "sentence_chrfpp": [
+          2.02
+        ],
+        "sentence_ter": [
+          6650.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'm not familiar with the language or script used in the sentence \"e-ɣuyanah\". However, based on my analysis, it appears to be a word or phrase in a non-English language, possibly using the International Phonetic Alphabet (IPA) or a similar transcription system.\n\nIf I had to take a guess, I would say that \"e-ɣuyanah\" might be a word or phrase in a language such as Arabic, Berber, or another language that uses similar phonetic patterns. The \"ɣ\" symbol represents a voiced uvular fricative, which is a sound found in some languages.\n\nWithout more context or information about the language and script used, it's difficult for me to provide a more accurate translation. If you can provide more context or clarify the language and script used, I may be able to help you better."
+        ],
+        "references": [
+          "We shuddered."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 2.04,
+          "metrics": {
+            "corpus_bleu": 12.22,
+            "corpus_chrfpp": 28.04,
+            "corpus_ter": 112.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              4.77,
+              12.74,
+              19.67,
+              18.21
+            ],
+            "sentence_chrfpp": [
+              42.54,
+              17.31,
+              23.13,
+              33.57,
+              26.2
+            ],
+            "sentence_ter": [
+              200.0,
+              133.33,
+              85.71,
+              120.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ɣuyanah = You_{pl} shuddered!",
+              "ihwin = You_{pl} cried!",
+              "kisaɣah = We ? (unknown verb) in vain.",
+              "ɣadawn = You_{pl} left (unknown object) behind!",
+              "kolewn = You_{sg} ? (unknown verb) us in vain."
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 12.22,
+        "corpus_chrfpp": 28.04,
+        "corpus_ter": 112.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.77,
+          4.77,
+          12.74,
+          19.67,
+          18.21
+        ],
+        "sentence_chrfpp": [
+          42.54,
+          17.31,
+          23.13,
+          33.57,
+          26.2
+        ],
+        "sentence_ter": [
+          200.0,
+          133.33,
+          85.71,
+          120.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ɣuyanah = You_{pl} shuddered!",
+          "ihwin = You_{pl} cried!",
+          "kisaɣah = We ? (unknown verb) in vain.",
+          "ɣadawn = You_{pl} left (unknown object) behind!",
+          "kolewn = You_{sg} ? (unknown verb) us in vain."
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.23,
+      "chrf": 2.02,
+      "ter": 6650.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'm not familiar with the language or script used in the sentence \"e-ɣuyanah\". However, based on my analysis, it appears",
+      "reference": "We shuddered."
+    },
+    "baseline": {
+      "best_bleu": 12.22,
+      "best_chrf": 28.04,
+      "best_ter": 112.5,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ɣuyanah = You_{pl} shuddered!",
+        "ihwin = You_{pl} cried!",
+        "kisaɣah = We ? (unknown verb) in vain.",
+        "ɣadawn = You_{pl} left (unknown object) behind!",
+        "kolewn = You_{sg} ? (unknown verb) us in vain."
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ]
+    },
+    "incremental_combinations": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

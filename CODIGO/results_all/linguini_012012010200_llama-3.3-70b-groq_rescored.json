@@ -1,0 +1,1989 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-25T15:22:33.202813",
+    "puzzle_id": "linguini_012012010200",
+    "language": "Dyirbal",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "num_test_pairs": 3,
+    "source_raw_log": "raw_logs/linguini_012012010200_llama-3.3-70b-groq.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "The father that is always being searched for is healing the girl.",
+      "hypothesis": "I'll do my best to translate the sentence, but please note that I'm not familiar with the language and may make errors.\n\nThe sentence appears to be in an Indigenous Australian language, possibly from the Pama-Nyungan language family. Based on my analysis, here's a possible translation:\n\n\"Balan\" might mean \"cloud\" or \"rain\", and \"ɲalɳga\" could be a verb or adjective related to movement or action.\n\"Baɳgul\" might be a noun referring to a place, object, or concept, and \"ɳumaɳgu\" could be a verb or adjective related to feeling or emotion.\n\"Guniymuɳagu\" seems to be a complex word that might be related to a person, group, or community, and \"bambunman\" could be a verb or adjective related to action or state.\n\nWith these possible meanings in mind, a rough translation of the sentence could be:\n\n\"The cloud moves over the place, feeling emotional, for the community to gather.\"\n\nAlternatively, it could be:\n\n\"The rain comes to the land, bringing feelings, for the people to assemble.\"\n\nPlease keep in mind that this is a very tentative translation, and the actual meaning of the sentence may be entirely different. If you have more context or information about the language, I may be able to provide a more accurate translation.",
+      "metrics": {
+        "corpus_bleu": 0.22,
+        "corpus_chrfpp": 7.93,
+        "corpus_ter": 1675.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.22
+        ],
+        "sentence_chrfpp": [
+          7.93
+        ],
+        "sentence_ter": [
+          1675.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence, but please note that I'm not familiar with the language and may make errors.\n\nThe sentence appears to be in an Indigenous Australian language, possibly from the Pama-Nyungan language family. Based on my analysis, here's a possible translation:\n\n\"Balan\" might mean \"cloud\" or \"rain\", and \"ɲalɳga\" could be a verb or adjective related to movement or action.\n\"Baɳgul\" might be a noun referring to a place, object, or concept, and \"ɳumaɳgu\" could be a verb or adjective related to feeling or emotion.\n\"Guniymuɳagu\" seems to be a complex word that might be related to a person, group, or community, and \"bambunman\" could be a verb or adjective related to action or state.\n\nWith these possible meanings in mind, a rough translation of the sentence could be:\n\n\"The cloud moves over the place, feeling emotional, for the community to gather.\"\n\nAlternatively, it could be:\n\n\"The rain comes to the land, bringing feelings, for the people to assemble.\"\n\nPlease keep in mind that this is a very tentative translation, and the actual meaning of the sentence may be entirely different. If you have more context or information about the language, I may be able to provide a more accurate translation."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 14.84,
+            "corpus_chrfpp": 55.52,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.69,
+              28.11,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              48.29,
+              64.22,
+              53.99
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              118.18
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong boy that is always searching is making the father tired.",
+              "The fat doctor that is always pushing stones is searching for the lizard.",
+              "The little scorpion that is always being blamed is following the tired doctor that is always searching for the man."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 14.84,
+        "corpus_chrfpp": 55.52,
+        "corpus_ter": 77.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.69,
+          28.11,
+          12.22
+        ],
+        "sentence_chrfpp": [
+          48.29,
+          64.22,
+          53.99
+        ],
+        "sentence_ter": [
+          66.67,
+          50.0,
+          118.18
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong boy that is always searching is making the father tired.",
+          "The fat doctor that is always pushing stones is searching for the lizard.",
+          "The little scorpion that is always being blamed is following the tired doctor that is always searching for the man."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 14.84,
+        "corpus_chrfpp": 55.52,
+        "corpus_ter": 77.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.69,
+          28.11,
+          12.22
+        ],
+        "sentence_chrfpp": [
+          48.29,
+          64.22,
+          53.99
+        ],
+        "sentence_ter": [
+          66.67,
+          50.0,
+          118.18
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong boy that is always searching is making the father tired.",
+          "The fat doctor that is always pushing stones is searching for the lizard.",
+          "The little scorpion that is always being blamed is following the tired doctor that is always searching for the man."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 8.29,
+            "corpus_chrfpp": 34.62,
+            "corpus_ter": 88.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              4.11,
+              16.47
+            ],
+            "sentence_chrfpp": [
+              33.25,
+              26.48,
+              44.67
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is always following the death adders that are blaming the man.",
+              "The man is blaming the strong death adders that are always following the woman.",
+              "The booze is making the man that is always being blamed by the death adders tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 2.05,
+            "corpus_chrfpp": 19.85,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.32,
+              4.4,
+              5.4
+            ],
+            "sentence_chrfpp": [
+              21.21,
+              19.41,
+              19.0
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is following the fat woman.",
+              "The strong sugar is making the fat mother-in-law tired.",
+              "The booze is making the strong man tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 9.43,
+            "corpus_chrfpp": 35.17,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.19,
+              7.14,
+              18.92
+            ],
+            "sentence_chrfpp": [
+              33.46,
+              27.35,
+              45.1
+            ],
+            "sentence_ter": [
+              83.33,
+              75.0,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong shark is searching for the big fish that is following the mother-in-law.",
+              "The tired man is looking for the small bird with the big nest.",
+              "The booze is making the man that is always being blamed tired and unhappy."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 16.94,
+            "corpus_chrfpp": 37.38,
+            "corpus_ter": 74.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.32,
+              21.54,
+              19.56
+            ],
+            "sentence_chrfpp": [
+              20.89,
+              39.99,
+              50.59
+            ],
+            "sentence_ter": [
+              83.33,
+              66.67,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong woman is following the healthy mother.",
+              "The tired wallaby is searching for the little feather.",
+              "The booze is blaming the man that is always being blamed by the mother-in-law."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 8.97,
+            "corpus_chrfpp": 29.42,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.25,
+              21.4,
+              4.79
+            ],
+            "sentence_chrfpp": [
+              28.12,
+              38.95,
+              20.66
+            ],
+            "sentence_ter": [
+              83.33,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong river is carrying the father with the feather to the mother-in-law.",
+              "The tired dog is searching for the little bird with the feather.",
+              "The booze is making the man with the healthy father tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 21.26,
+            "corpus_chrfpp": 44.99,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.15,
+              21.59,
+              20.45
+            ],
+            "sentence_chrfpp": [
+              51.34,
+              39.56,
+              43.8
+            ],
+            "sentence_ter": [
+              66.67,
+              66.67,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong river is blaming the healthy father that is always searching for feathers.",
+              "The tired dog is searching for the little bird with feathers.",
+              "The booze is making the man that is always searching for scorpions tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 15.12,
+            "corpus_chrfpp": 35.13,
+            "corpus_ter": 74.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.41,
+              21.4,
+              18.92
+            ],
+            "sentence_chrfpp": [
+              23.73,
+              39.53,
+              42.36
+            ],
+            "sentence_ter": [
+              75.0,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong woman is carrying the healthy feather of the mother-in-law.",
+              "The tired man is searching for the little feather of the wallaby.",
+              "The booze is making the little man that is always searching for scorpions tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 9.81,
+            "corpus_chrfpp": 34.72,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.66,
+              7.86,
+              16.2
+            ],
+            "sentence_chrfpp": [
+              27.64,
+              26.92,
+              48.65
+            ],
+            "sentence_ter": [
+              83.33,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong smoke is searching for the healthy mother-in-law with feathers.",
+              "The tired lizard is following the smoke with a feather.",
+              "The booze is making the little man that is always searching for scorpions tired and following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 2.1,
+            "corpus_chrfpp": 24.98,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.65,
+              4.4,
+              5.4
+            ],
+            "sentence_chrfpp": [
+              27.47,
+              20.38,
+              27.36
+            ],
+            "sentence_ter": [
+              75.0,
+              83.33,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother-in-law is searching for the healthy feather.",
+              "The tired dragonfly is following the stinging tree feather.",
+              "The little booze is blaming the doctor possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 12.33,
+            "corpus_chrfpp": 34.63,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.5,
+              4.32,
+              20.45
+            ],
+            "sentence_chrfpp": [
+              41.3,
+              18.0,
+              43.8
+            ],
+            "sentence_ter": [
+              75.0,
+              83.33,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong tree is searching for the object that is always carrying the sugar.",
+              "The tired man is following the little feather.",
+              "The booze is making the man that is always searching for scorpions tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 14.69,
+            "corpus_chrfpp": 40.14,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.53,
+              4.57,
+              16.47
+            ],
+            "sentence_chrfpp": [
+              48.98,
+              24.27,
+              45.6
+            ],
+            "sentence_ter": [
+              83.33,
+              75.0,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong tree is searching for the object that is always being carried by the feather.",
+              "The tired stone is pushing the little feather.",
+              "The booze is making the little man that is always searching for scorpions follow the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 9.82,
+            "corpus_chrfpp": 37.41,
+            "corpus_ter": 88.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.11,
+              12.09,
+              16.47
+            ],
+            "sentence_chrfpp": [
+              32.29,
+              35.74,
+              44.53
+            ],
+            "sentence_ter": [
+              91.67,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is following the death adders that are always biting the man.",
+              "The man is blaming the strong woman that is always hitting the death adders.",
+              "The booze is making the man that is always being blamed by the strong mother tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 8.56,
+            "corpus_chrfpp": 33.79,
+            "corpus_ter": 102.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.37,
+              9.31,
+              13.79
+            ],
+            "sentence_chrfpp": [
+              23.83,
+              34.67,
+              42.68
+            ],
+            "sentence_ter": [
+              83.33,
+              108.33,
+              118.18
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong woman is following the death adders with the healthy mother-in-law.",
+              "The strong sugar is blaming the mother that is always following the death adders with the healthy one.",
+              "The booze is making the man that is always being blamed tired with the death adders and the mother."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 10.76,
+            "corpus_chrfpp": 34.44,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.65,
+              7.84,
+              21.14
+            ],
+            "sentence_chrfpp": [
+              25.2,
+              24.6,
+              53.47
+            ],
+            "sentence_ter": [
+              75.0,
+              83.33,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong man is searching for the healthy mother.",
+              "The tired wallaby is blaming the little bird for the death.",
+              "The booze is making the man that is always following death adders tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 12.54,
+            "corpus_chrfpp": 33.21,
+            "corpus_ter": 65.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.62,
+              30.04,
+              4.79
+            ],
+            "sentence_chrfpp": [
+              25.61,
+              53.59,
+              19.36
+            ],
+            "sentence_ter": [
+              75.0,
+              41.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong woman is searching for the death adder of the mother.",
+              "The wallaby that is always crying is searching for the feather.",
+              "The booze of the little man is making the mother tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 9.58,
+            "corpus_chrfpp": 29.62,
+            "corpus_ter": 65.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              20.48,
+              5.37
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              38.19,
+              20.13
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The wallaby is searching for the feather.",
+              "The booze is making the man tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 15.59,
+            "corpus_chrfpp": 42.79,
+            "corpus_ter": 54.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              14.82,
+              31.7
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              43.84,
+              56.65
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              36.36
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The specifier is carrying the little feather that is always searching.",
+              "The little man that is always searching is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 19.82,
+            "corpus_chrfpp": 42.87,
+            "corpus_ter": 57.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              21.18,
+              26.58
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              38.93,
+              59.18
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              45.45
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The wallaby is searching for the little bird.",
+              "The little man that is always following the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 27.45,
+            "corpus_chrfpp": 47.16,
+            "corpus_ter": 54.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              37.85,
+              26.58
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              52.04,
+              59.18
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              45.45
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The lizard is searching for the smoke.",
+              "The little man that is always following the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 20.0,
+            "corpus_chrfpp": 44.86,
+            "corpus_ter": 62.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              31.65,
+              17.68
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              50.68,
+              53.45
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The tired lizard is searching for the stinging tree.",
+              "The little man is following the doctor that is always searching for the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 22.11,
+            "corpus_chrfpp": 46.16,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              40.9,
+              15.46
+            ],
+            "sentence_chrfpp": [
+              29.82,
+              61.58,
+              45.75
+            ],
+            "sentence_ter": [
+              66.67,
+              41.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father.",
+              "The wallaby that is always being ignored is searching for the unknown.",
+              "The booze is making the little man that is always being searched for by the doctor tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 15.41,
+            "corpus_chrfpp": 40.68,
+            "corpus_ter": 62.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              22.01,
+              17.68
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              40.0,
+              53.45
+            ],
+            "sentence_ter": [
+              66.67,
+              58.33,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The fat stone is searching for the unknown.",
+              "The little man is following the doctor that is always searching for the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 12,
+          "metrics": {
+            "corpus_bleu": 31.1,
+            "corpus_chrfpp": 58.72,
+            "corpus_ter": 54.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              55.65,
+              22.89
+            ],
+            "sentence_chrfpp": [
+              38.14,
+              78.74,
+              59.5
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong dragonfly that is always searching is looking at the mother-in-law.",
+              "The fat stone that is always being pushed is searching for the unknown.",
+              "The little man that is always being treated by the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 13,
+          "metrics": {
+            "corpus_bleu": 33.96,
+            "corpus_chrfpp": 65.07,
+            "corpus_ter": 57.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              31.61,
+              55.65,
+              18.95
+            ],
+            "sentence_chrfpp": [
+              58.43,
+              78.74,
+              58.22
+            ],
+            "sentence_ter": [
+              50.0,
+              33.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is searching for the father that is always being ignored.",
+              "The fat stone that is always being pushed is searching for the unknown.",
+              "The little booze with the man that is always being treated by the doctor is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 14,
+          "metrics": {
+            "corpus_bleu": 19.43,
+            "corpus_chrfpp": 43.99,
+            "corpus_ter": 62.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              40.9,
+              10.83
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              62.71,
+              40.25
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The fat stone that is always pushing is searching for the unknown.",
+              "The booze is making the little scorpion that is always falling asleep follow the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 15,
+          "metrics": {
+            "corpus_bleu": 9.9,
+            "corpus_chrfpp": 38.12,
+            "corpus_ter": 65.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.78,
+              8.18,
+              19.1
+            ],
+            "sentence_chrfpp": [
+              28.11,
+              26.35,
+              58.64
+            ],
+            "sentence_ter": [
+              66.67,
+              66.67,
+              63.64
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is searching for the mother-in-law.",
+              "The fat stone is looking for the quiet boy.",
+              "The little wallaby is following the doctor that is always searching for scorpions."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 9.9,
+        "corpus_chrfpp": 38.12,
+        "corpus_ter": 65.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.78,
+          8.18,
+          19.1
+        ],
+        "sentence_chrfpp": [
+          28.11,
+          26.35,
+          58.64
+        ],
+        "sentence_ter": [
+          66.67,
+          66.67,
+          63.64
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong father is searching for the mother-in-law.",
+          "The fat stone is looking for the quiet boy.",
+          "The little wallaby is following the doctor that is always searching for scorpions."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 15,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 33.96,
+        "corpus_chrfpp": 65.07,
+        "corpus_ter": 57.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          31.61,
+          55.65,
+          18.95
+        ],
+        "sentence_chrfpp": [
+          58.43,
+          78.74,
+          58.22
+        ],
+        "sentence_ter": [
+          50.0,
+          33.33,
+          90.91
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong mother is searching for the father that is always being ignored.",
+          "The fat stone that is always being pushed is searching for the unknown.",
+          "The little booze with the man that is always being treated by the doctor is following the possum."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 13,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 6.87,
+            "corpus_chrfpp": 27.91,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              7.47,
+              5.02
+            ],
+            "sentence_chrfpp": [
+              35.53,
+              29.29,
+              17.99
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The booze is making the man who is always being blamed tired.",
+              "The strong man is blaming the mother who is always following death adders.",
+              "The sugar is making the healthy mother-in-law fat."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 6.94,
+            "corpus_chrfpp": 31.22,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.42,
+              15.4,
+              4.54
+            ],
+            "sentence_chrfpp": [
+              23.25,
+              48.05,
+              19.55
+            ],
+            "sentence_ter": [
+              75.0,
+              66.67,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The offended father is carrying the booze.",
+              "The death adder that is always searching for scorpions is following the possum.",
+              "Booze is making the tired doctor fall asleep."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 12.27,
+            "corpus_chrfpp": 31.77,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.94,
+              21.18,
+              14.99
+            ],
+            "sentence_chrfpp": [
+              16.21,
+              40.99,
+              37.3
+            ],
+            "sentence_ter": [
+              75.0,
+              58.33,
+              45.45
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The lizard is following the smoke.",
+              "The dragonfly is searching for the stinging tree.",
+              "The mother that is always being ignored is carrying the sugar."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 12.32,
+            "corpus_chrfpp": 28.91,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              21.54,
+              5.0
+            ],
+            "sentence_chrfpp": [
+              34.34,
+              37.32,
+              13.62
+            ],
+            "sentence_ter": [
+              58.33,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The mother-in-law that is always pushing stones is looking at the smoke.",
+              "The big grasshopper is searching for the bent spear.",
+              "The quiet boy is looking at the tired lizard."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 12.32,
+        "corpus_chrfpp": 28.91,
+        "corpus_ter": 68.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.21,
+          21.54,
+          5.0
+        ],
+        "sentence_chrfpp": [
+          34.34,
+          37.32,
+          13.62
+        ],
+        "sentence_ter": [
+          58.33,
+          66.67,
+          81.82
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The mother-in-law that is always pushing stones is looking at the smoke.",
+          "The big grasshopper is searching for the bent spear.",
+          "The quiet boy is looking at the tired lizard."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 12.27,
+        "corpus_chrfpp": 31.77,
+        "corpus_ter": 60.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.94,
+          21.18,
+          14.99
+        ],
+        "sentence_chrfpp": [
+          16.21,
+          40.99,
+          37.3
+        ],
+        "sentence_ter": [
+          75.0,
+          58.33,
+          45.45
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The lizard is following the smoke.",
+          "The dragonfly is searching for the stinging tree.",
+          "The mother that is always being ignored is carrying the sugar."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "morphosyntax",
+      "all_steps_complete": true
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 10.67,
+            "corpus_chrfpp": 45.73,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.69,
+              13.51,
+              13.83
+            ],
+            "sentence_chrfpp": [
+              38.73,
+              41.91,
+              56.4
+            ],
+            "sentence_ter": [
+              66.67,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong boy is searching for the man that is always carrying.",
+              "The fat doctor is looking at the quiet boy that is always searching.",
+              "The booze is making the little wallaby that is always following the doctor tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 10.67,
+        "corpus_chrfpp": 45.73,
+        "corpus_ter": 71.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.69,
+          13.51,
+          13.83
+        ],
+        "sentence_chrfpp": [
+          38.73,
+          41.91,
+          56.4
+        ],
+        "sentence_ter": [
+          66.67,
+          66.67,
+          81.82
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong boy is searching for the man that is always carrying.",
+          "The fat doctor is looking at the quiet boy that is always searching.",
+          "The booze is making the little wallaby that is always following the doctor tired."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 10.67,
+        "corpus_chrfpp": 45.73,
+        "corpus_ter": 71.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.69,
+          13.51,
+          13.83
+        ],
+        "sentence_chrfpp": [
+          38.73,
+          41.91,
+          56.4
+        ],
+        "sentence_ter": [
+          66.67,
+          66.67,
+          81.82
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong boy is searching for the man that is always carrying.",
+          "The fat doctor is looking at the quiet boy that is always searching.",
+          "The booze is making the little wallaby that is always following the doctor tired."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 8.69,
+            "corpus_chrfpp": 44.24,
+            "corpus_ter": 97.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.52,
+              12.5,
+              11.08
+            ],
+            "sentence_chrfpp": [
+              37.55,
+              45.23,
+              49.83
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              127.27
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong lizard that is always carrying the offended mother is making the healthy mother-in-law tired.",
+              "The big doctor that is always pushing stones is looking at the searching dragonfly.",
+              "The little scorpion that is always being ignored by the mother is following the tired wallaby that is always searching for feathers."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 6.26,
+            "corpus_chrfpp": 28.28,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.07,
+              4.57,
+              5.37
+            ],
+            "sentence_chrfpp": [
+              40.83,
+              20.96,
+              21.68
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong man is blaming the mother that is always following death adders.",
+              "The fat doctor is pushing the big stone.",
+              "The tired wallaby is searching for the little feather."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 6.26,
+        "corpus_chrfpp": 28.28,
+        "corpus_ter": 82.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.07,
+          4.57,
+          5.37
+        ],
+        "sentence_chrfpp": [
+          40.83,
+          20.96,
+          21.68
+        ],
+        "sentence_ter": [
+          83.33,
+          83.33,
+          81.82
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong man is blaming the mother that is always following death adders.",
+          "The fat doctor is pushing the big stone.",
+          "The tired wallaby is searching for the little feather."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 8.69,
+        "corpus_chrfpp": 44.24,
+        "corpus_ter": 97.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.52,
+          12.5,
+          11.08
+        ],
+        "sentence_chrfpp": [
+          37.55,
+          45.23,
+          49.83
+        ],
+        "sentence_ter": [
+          83.33,
+          83.33,
+          127.27
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong lizard that is always carrying the offended mother is making the healthy mother-in-law tired.",
+          "The big doctor that is always pushing stones is looking at the searching dragonfly.",
+          "The little scorpion that is always being ignored by the mother is following the tired wallaby that is always searching for feathers."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "initial_draft",
+      "all_steps_complete": true
+    }
+  }
+}

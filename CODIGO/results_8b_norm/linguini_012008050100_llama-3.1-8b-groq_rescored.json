@@ -1,0 +1,2158 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-29T22:21:20.960727",
+    "puzzle_id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "num_test_pairs": 6,
+    "source_raw_log": "raw_logs/linguini_012008050100_llama-3.1-8b-groq.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "The wolf saw your shaman.",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I may not be 100% accurate as the sentence appears to be in an indigenous language, possibly from the Amazon region or Papua New Guinea.\n\nAfter analyzing the sentence, I'm going to take a guess that it might be from the Ashaninka language, which is spoken by the Ashaninka people in Peru. Here's my translation:\n\n\"Amaruup\" might be a name or a word with a specific meaning, but I couldn't find any direct translation. \"Angatkuit\" could be a verb or a phrase meaning \"to be\" or \"to exist.\" \"Takujanga\" might be a noun or an adjective, but I couldn't find any direct translation.\n\nWith these assumptions, my translation of the sentence would be:\n\n\"Amaruup exists\" or \"Amaruup is.\"\n\nPlease note that this is just a rough translation, and I may be incorrect. If you have more context or information about the sentence, I'd be happy to try and provide a more accurate translation.",
+      "metrics": {
+        "corpus_bleu": 0.18,
+        "corpus_chrfpp": 3.06,
+        "corpus_ter": 3280.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.18
+        ],
+        "sentence_chrfpp": [
+          3.06
+        ],
+        "sentence_ter": [
+          3280.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that I may not be 100% accurate as the sentence appears to be in an indigenous language, possibly from the Amazon region or Papua New Guinea.\n\nAfter analyzing the sentence, I'm going to take a guess that it might be from the Ashaninka language, which is spoken by the Ashaninka people in Peru. Here's my translation:\n\n\"Amaruup\" might be a name or a word with a specific meaning, but I couldn't find any direct translation. \"Angatkuit\" could be a verb or a phrase meaning \"to be\" or \"to exist.\" \"Takujanga\" might be a noun or an adjective, but I couldn't find any direct translation.\n\nWith these assumptions, my translation of the sentence would be:\n\n\"Amaruup exists\" or \"Amaruup is.\"\n\nPlease note that this is just a rough translation, and I may be incorrect. If you have more context or information about the sentence, I'd be happy to try and provide a more accurate translation."
+        ],
+        "references": [
+          "The wolf saw your shaman."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 14.19,
+            "corpus_chrfpp": 51.95,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              37.99,
+              11.99,
+              27.53,
+              7.81,
+              100.0,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              66.21,
+              43.65,
+              46.32,
+              47.02,
+              100.0,
+              39.59
+            ],
+            "sentence_ter": [
+              20.0,
+              116.67,
+              75.0,
+              125.0,
+              0.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw the shaman.",
+              "The boy was hurt by the polar bear.",
+              "The hunter cured.",
+              "The teacher was shot by the dog.",
+              "You came.",
+              "The hunter was cured."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 14.19,
+        "corpus_chrfpp": 51.95,
+        "corpus_ter": 80.0,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          37.99,
+          11.99,
+          27.53,
+          7.81,
+          100.0,
+          14.06
+        ],
+        "sentence_chrfpp": [
+          66.21,
+          43.65,
+          46.32,
+          47.02,
+          100.0,
+          39.59
+        ],
+        "sentence_ter": [
+          20.0,
+          116.67,
+          75.0,
+          125.0,
+          0.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "hypotheses": [
+          "The wolf saw the shaman.",
+          "The boy was hurt by the polar bear.",
+          "The hunter cured.",
+          "The teacher was shot by the dog.",
+          "You came.",
+          "The hunter was cured."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 14.19,
+        "corpus_chrfpp": 51.95,
+        "corpus_ter": 80.0,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          37.99,
+          11.99,
+          27.53,
+          7.81,
+          100.0,
+          14.06
+        ],
+        "sentence_chrfpp": [
+          66.21,
+          43.65,
+          46.32,
+          47.02,
+          100.0,
+          39.59
+        ],
+        "sentence_ter": [
+          20.0,
+          116.67,
+          75.0,
+          125.0,
+          0.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "hypotheses": [
+          "The wolf saw the shaman.",
+          "The boy was hurt by the polar bear.",
+          "The hunter cured.",
+          "The teacher was shot by the dog.",
+          "You came.",
+          "The hunter was cured."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": false
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 2.66,
+            "corpus_chrfpp": 12.28,
+            "corpus_ter": 104.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              8.17,
+              10.68,
+              7.81,
+              15.97,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              15.87,
+              11.32,
+              7.74,
+              19.01,
+              8.27,
+              8.67
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              100.0,
+              125.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Your friend saw the dog.",
+              "The boy shot the doctor.",
+              "The woman is happy.",
+              "The doctor is shooting the boy.",
+              "He is eating.",
+              "The woman is eating."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 2.58,
+            "corpus_chrfpp": 14.43,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              8.17,
+              12.44,
+              10.68,
+              5.52,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              22.39,
+              11.32,
+              21.42,
+              10.92,
+              7.82,
+              6.51
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Your dog saw you.",
+              "The boy shot the doctor.",
+              "You hurt yourself.",
+              "The doctor cured you.",
+              "He/She/It is happy.",
+              "The man is happy."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 2.31,
+            "corpus_chrfpp": 13.53,
+            "corpus_ter": 108.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              5.52,
+              8.12,
+              7.81,
+              19.0,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              17.95,
+              8.28,
+              11.76,
+              17.85,
+              21.4,
+              7.81
+            ],
+            "sentence_ter": [
+              60.0,
+              116.67,
+              125.0,
+              125.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter saw the bear.",
+              "The woman is looking for the man.",
+              "The old man is tired.",
+              "The fisherman is catching the fish.",
+              "You are happy.",
+              "The old man is happy."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 4.7,
+            "corpus_chrfpp": 16.66,
+            "corpus_ter": 96.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              13.74,
+              10.68,
+              9.65,
+              19.0,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              26.61,
+              16.48,
+              7.74,
+              17.24,
+              21.72,
+              11.64
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              100.0,
+              100.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman cured the dog.",
+              "The woman healed the boy.",
+              "The shaman is sick.",
+              "The doctor cured the patient.",
+              "You are hurt.",
+              "The shaman healed the doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 7.53,
+            "corpus_chrfpp": 33.77,
+            "corpus_ter": 72.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.37,
+              15.62,
+              12.7,
+              17.97,
+              31.95,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              41.99,
+              37.27,
+              18.12,
+              38.64,
+              39.53,
+              30.2
+            ],
+            "sentence_ter": [
+              60.0,
+              50.0,
+              100.0,
+              75.0,
+              100.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman saw you.",
+              "The polar bear cured a man.",
+              "The shaman was cured.",
+              "The fisherman shot the hunter.",
+              "The bear came.",
+              "The shaman cured a shaman."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 6.28,
+            "corpus_chrfpp": 32.53,
+            "corpus_ter": 88.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.48,
+              13.49,
+              12.7,
+              9.65,
+              21.36,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              32.9,
+              44.92,
+              18.12,
+              18.92,
+              36.82,
+              44.27
+            ],
+            "sentence_ter": [
+              60.0,
+              83.33,
+              100.0,
+              100.0,
+              150.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman cured your dog.",
+              "The polar bear was cured by your boy.",
+              "The shaman was cured.",
+              "The hunter speared the dog.",
+              "The polar bear came.",
+              "The shaman cured the hunter."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 12.13,
+            "corpus_chrfpp": 41.64,
+            "corpus_ter": 104.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              17.54,
+              34.57,
+              6.57,
+              39.76,
+              6.27
+            ],
+            "sentence_chrfpp": [
+              19.88,
+              51.28,
+              68.11,
+              18.93,
+              78.03,
+              32.35
+            ],
+            "sentence_ter": [
+              120.0,
+              83.33,
+              75.0,
+              125.0,
+              50.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga. Your wolf cured your dog.",
+              "Nanuit inuuhukturmik aanniqsijuq. Your polar bear cured your boy.",
+              "Angunahuktiit aarqijuq. The hunter cured himself.",
+              "Ilinniaqtitsiji qukiqtait. The fisherman shot you.",
+              "Qaijutit. You came.",
+              "Angunahuktimik aarqisijutit. The hunter cured your doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 9.47,
+            "corpus_chrfpp": 32.49,
+            "corpus_ter": 92.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              18.58,
+              8.12,
+              30.21,
+              21.36,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              25.2,
+              43.59,
+              10.05,
+              59.09,
+              36.82,
+              24.32
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              125.0,
+              75.0,
+              150.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter cured the wolf.",
+              "The polar bear saw the boy.",
+              "The shaman shot the doctor.",
+              "The dog hurt the teacher.",
+              "The polar bear came.",
+              "The hunter shot the wolf."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 5.17,
+            "corpus_chrfpp": 30.34,
+            "corpus_ter": 88.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              9.04,
+              10.68,
+              16.23,
+              34.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              25.99,
+              20.62,
+              33.89,
+              38.6,
+              21.8,
+              37.7
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              100.0,
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter speared the wolf.",
+              "Your boy cured your doctor.",
+              "The doctor cured the hunter.",
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter cured the doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 14.84,
+            "corpus_chrfpp": 38.02,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              9.04,
+              66.87,
+              16.23,
+              34.67,
+              8.64
+            ],
+            "sentence_chrfpp": [
+              25.99,
+              20.62,
+              80.24,
+              38.6,
+              21.8,
+              27.9
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              25.0,
+              100.0,
+              50.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter speared the wolf.",
+              "Your boy cured your doctor.",
+              "The hunter cured himself.",
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter shot a polar bear."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 14.84,
+        "corpus_chrfpp": 38.02,
+        "corpus_ter": 80.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          9.04,
+          66.87,
+          16.23,
+          34.67,
+          8.64
+        ],
+        "sentence_chrfpp": [
+          25.99,
+          20.62,
+          80.24,
+          38.6,
+          21.8,
+          27.9
+        ],
+        "sentence_ter": [
+          80.0,
+          83.33,
+          25.0,
+          100.0,
+          50.0,
+          125.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The hunter speared the wolf.",
+          "Your boy cured your doctor.",
+          "The hunter cured himself.",
+          "The dog hurt your teacher.",
+          "You fell.",
+          "The hunter shot a polar bear."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 11,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 12.13,
+        "corpus_chrfpp": 41.64,
+        "corpus_ter": 104.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.52,
+          17.54,
+          34.57,
+          6.57,
+          39.76,
+          6.27
+        ],
+        "sentence_chrfpp": [
+          19.88,
+          51.28,
+          68.11,
+          18.93,
+          78.03,
+          32.35
+        ],
+        "sentence_ter": [
+          120.0,
+          83.33,
+          75.0,
+          125.0,
+          50.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Amaruup angatkuit takujanga. Your wolf cured your dog.",
+          "Nanuit inuuhukturmik aanniqsijuq. Your polar bear cured your boy.",
+          "Angunahuktiit aarqijuq. The hunter cured himself.",
+          "Ilinniaqtitsiji qukiqtait. The fisherman shot you.",
+          "Qaijutit. You came.",
+          "Angunahuktimik aarqisijutit. The hunter cured your doctor."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 8,
+      "all_steps_complete": false
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 1.87,
+            "corpus_chrfpp": 13.46,
+            "corpus_ter": 128.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              4.46,
+              6.57,
+              4.77,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              20.52,
+              13.16,
+              20.05,
+              10.93,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              120.0,
+              150.0,
+              125.0,
+              150.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Qingmivit takujaatit. → Your dog saw you.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+              "Aanniqtutit. → You hurt yourself.",
+              "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 6,
+            "missing_indices": [
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 1.25,
+            "corpus_chrfpp": 10.83,
+            "corpus_ter": 168.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              4.46,
+              3.75,
+              4.77,
+              6.57,
+              4.77
+            ],
+            "sentence_chrfpp": [
+              9.3,
+              10.78,
+              10.24,
+              10.93,
+              14.76,
+              10.67
+            ],
+            "sentence_ter": [
+              140.0,
+              133.33,
+              225.0,
+              150.0,
+              250.0,
+              175.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Qingmiq iputujait. → You speared the dog.",
+              "Angatkuq iluaqhaijimik aarqisijuq. → The shaman cured a doctor.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+              "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+              "Aarqijaatit aanniqtutit. → You hurt yourself.",
+              "Iluaqhaijiup takujaatit. → The doctor saw you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 2.55,
+            "corpus_chrfpp": 21.18,
+            "corpus_ter": 184.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              8.3,
+              4.46,
+              8.3,
+              4.77,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              14.38,
+              23.09,
+              22.59,
+              28.82,
+              9.05,
+              23.19
+            ],
+            "sentence_ter": [
+              140.0,
+              133.33,
+              200.0,
+              175.0,
+              350.0,
+              225.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nanuq qaijuq. → The polar bear came.",
+              "Iluaqhaijivit inuuhuktuit aarqijanga. → Your doctor cured your boy.",
+              "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+              "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+              "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 4.93,
+            "corpus_chrfpp": 18.42,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              7.25,
+              7.81,
+              17.97,
+              10.68,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              18.47,
+              8.03,
+              21.78,
+              36.98,
+              11.37,
+              9.45
+            ],
+            "sentence_ter": [
+              60.0,
+              100.0,
+              125.0,
+              75.0,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter shot a polar bear.",
+              "The boy shot the doctor.",
+              "The doctor cured you.",
+              "The polar bear came."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 4.93,
+        "corpus_chrfpp": 18.42,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          7.25,
+          7.81,
+          17.97,
+          10.68,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          18.47,
+          8.03,
+          21.78,
+          36.98,
+          11.37,
+          9.45
+        ],
+        "sentence_ter": [
+          60.0,
+          100.0,
+          125.0,
+          75.0,
+          200.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The dog hurt your teacher.",
+          "You fell.",
+          "The hunter shot a polar bear.",
+          "The boy shot the doctor.",
+          "The doctor cured you.",
+          "The polar bear came."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 2.55,
+        "corpus_chrfpp": 21.18,
+        "corpus_ter": 184.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.67,
+          8.3,
+          4.46,
+          8.3,
+          4.77,
+          4.46
+        ],
+        "sentence_chrfpp": [
+          14.38,
+          23.09,
+          22.59,
+          28.82,
+          9.05,
+          23.19
+        ],
+        "sentence_ter": [
+          140.0,
+          133.33,
+          200.0,
+          175.0,
+          350.0,
+          225.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Nanuq qaijuq. → The polar bear came.",
+          "Iluaqhaijivit inuuhuktuit aarqijanga. → Your doctor cured your boy.",
+          "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf.",
+          "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+          "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+          "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "morphosyntax",
+      "all_steps_complete": false
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      "best_step": 1,
+      "all_steps_complete": false
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 8.0,
+            "corpus_chrfpp": 41.51,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.54,
+              15.85,
+              12.22,
+              7.27,
+              10.68,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              53.68,
+              50.98,
+              39.19,
+              38.29,
+              20.17,
+              27.33
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              150.0,
+              125.0,
+              100.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+              "Nanuit inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+              "Angunahuktiit aarqijuq. → The hunter cured.",
+              "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+              "Qaijutit. → Came.",
+              "Angunahuktimik aarqisijutit. → The hunter cures."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 8.0,
+            "corpus_chrfpp": 41.55,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.54,
+              15.85,
+              12.22,
+              7.27,
+              10.68,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              53.68,
+              50.51,
+              39.19,
+              38.29,
+              20.98,
+              27.53
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              150.0,
+              125.0,
+              100.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+              "Nanurmik inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+              "Angunahuktiup aarqijuq. → The hunter cured.",
+              "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+              "Qaijuq. → Came.",
+              "Angunahuktiup aarqisijutit. → The hunter cures."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 8.0,
+        "corpus_chrfpp": 41.55,
+        "corpus_ter": 120.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.54,
+          15.85,
+          12.22,
+          7.27,
+          10.68,
+          6.57
+        ],
+        "sentence_chrfpp": [
+          53.68,
+          50.51,
+          39.19,
+          38.29,
+          20.98,
+          27.53
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          150.0,
+          125.0,
+          100.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+          "Nanurmik inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+          "Angunahuktiup aarqijuq. → The hunter cured.",
+          "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+          "Qaijuq. → Came.",
+          "Angunahuktiup aarqisijutit. → The hunter cures."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 8.0,
+        "corpus_chrfpp": 41.55,
+        "corpus_ter": 120.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.54,
+          15.85,
+          12.22,
+          7.27,
+          10.68,
+          6.57
+        ],
+        "sentence_chrfpp": [
+          53.68,
+          50.51,
+          39.19,
+          38.29,
+          20.98,
+          27.53
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          150.0,
+          125.0,
+          100.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+          "Nanurmik inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+          "Angunahuktiup aarqijuq. → The hunter cured.",
+          "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+          "Qaijuq. → Came.",
+          "Angunahuktiup aarqisijutit. → The hunter cures."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "self_correction",
+      "all_steps_complete": true
+    }
+  }
+}

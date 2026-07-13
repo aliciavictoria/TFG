@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T08:25:51.562531",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 75.17,
+          "metrics": {
+            "corpus_bleu": 74.15,
+            "corpus_chrfpp": 82.7,
+            "corpus_ter": 18.18,
+            "exact_match_corpus": 50.0,
+            "sentence_bleu": [
+              21.34,
+              100.0,
+              100.0,
+              100.0,
+              38.81,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              47.13,
+              100.0,
+              90.65,
+              100.0,
+              68.86,
+              100.0
+            ],
+            "sentence_ter": [
+              33.33,
+              0.0,
+              50.0,
+              0.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you (pl)?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 74.15,
+        "corpus_chrfpp": 82.7,
+        "corpus_ter": 18.18,
+        "exact_match_corpus": 50.0,
+        "sentence_bleu": [
+          21.34,
+          100.0,
+          100.0,
+          100.0,
+          38.81,
+          100.0
+        ],
+        "sentence_chrfpp": [
+          47.13,
+          100.0,
+          90.65,
+          100.0,
+          68.86,
+          100.0
+        ],
+        "sentence_ter": [
+          33.33,
+          0.0,
+          50.0,
+          0.0,
+          25.0,
+          0.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          true,
+          false,
+          true
+        ],
+        "hypotheses": [
+          "Do you sleep?",
+          "Did he see us?",
+          "Do they know you (pl)?",
+          "Do we beat them?",
+          "Did we know you?",
+          "Did we go?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "baseline": {
+      "best_bleu": 74.15,
+      "best_chrf": 82.7,
+      "best_ter": 18.18,
+      "best_em": 50.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Do you sleep?",
+        "Did he see us?",
+        "Do they know you (pl)?",
+        "Do we beat them?",
+        "Did we know you?",
+        "Did we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ]
+    }
+  }
+}

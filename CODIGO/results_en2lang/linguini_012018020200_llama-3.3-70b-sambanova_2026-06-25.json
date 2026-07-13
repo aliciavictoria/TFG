@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T22:15:50.368034",
+    "puzzle_id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.3-70b-sambanova",
+    "model_tier": "medium",
+    "num_train_pairs": 10,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Did I beat you(sg)?",
+        "target": "ŋabə nɤ lan tɤʔ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Did they see me?",
+        "target": "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Does he know you(sg)?",
+        "target": "ati kəmə nɤ cʰam ru ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you(pl) sleep?",
+        "target": "nuʔrum ʒip kan ne",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Did I beat you(sg)?",
+      "reference": "ŋabə nɤ lan tɤʔ ne",
+      "hypothesis": "I'll do my best to translate the sentence into Hakha Chin (also known as Hakhun), a language spoken in Myanmar and India. Please note that my proficiency in Hakha Chin is limited, and the translation may not be perfect.\n\nHere's my attempt:\n\n\"Ka ni ah pa nge?\"\n\nBreakdown:\n- \"Ka\" is a question marker\n- \"ni\" is a first-person singular pronoun (I)\n- \"ah\" is a verb meaning \"to beat\" or \"to win\"\n- \"pa\" is a second-person singular pronoun (you)\n- \"nge\" is a sentence-final particle indicating a question\n\nSo, \"Ka ni ah pa nge?\" is my attempt to translate \"Did I beat you?\" into Hakha Chin.",
+      "latency_s": 2.66,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.54,
+        "corpus_ter": 2160.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.54
+        ],
+        "sentence_ter": [
+          2160.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence into Hakha Chin (also known as Hakhun), a language spoken in Myanmar and India. Please note that my proficiency in Hakha Chin is limited, and the translation may not be perfect.\n\nHere's my attempt:\n\n\"Ka ni ah pa nge?\"\n\nBreakdown:\n- \"Ka\" is a question marker\n- \"ni\" is a first-person singular pronoun (I)\n- \"ah\" is a verb meaning \"to beat\" or \"to win\"\n- \"pa\" is a second-person singular pronoun (you)\n- \"nge\" is a sentence-final particle indicating a question\n\nSo, \"Ka ni ah pa nge?\" is my attempt to translate \"Did I beat you?\" into Hakha Chin."
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 2.24,
+          "metrics": {
+            "corpus_bleu": 41.72,
+            "corpus_chrfpp": 58.94,
+            "corpus_ter": 38.1,
+            "exact_match_corpus": 25.0,
+            "sentence_bleu": [
+              9.65,
+              100.0,
+              12.37,
+              42.73
+            ],
+            "sentence_chrfpp": [
+              20.17,
+              100.0,
+              26.99,
+              72.72
+            ],
+            "sentence_ter": [
+              80.0,
+              0.0,
+              50.0,
+              25.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ati kəmə ŋa lan tʰu ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati cʰam nɤ tuʔ ne",
+              "nuʔrum kəmə ʒip kan ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 41.72,
+        "corpus_chrfpp": 58.94,
+        "corpus_ter": 38.1,
+        "exact_match_corpus": 25.0,
+        "sentence_bleu": [
+          9.65,
+          100.0,
+          12.37,
+          42.73
+        ],
+        "sentence_chrfpp": [
+          20.17,
+          100.0,
+          26.99,
+          72.72
+        ],
+        "sentence_ter": [
+          80.0,
+          0.0,
+          50.0,
+          25.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ati kəmə ŋa lan tʰu ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati cʰam nɤ tuʔ ne",
+          "nuʔrum kəmə ʒip kan ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 1.54,
+      "ter": 2160.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence into Hakha Chin (also known as Hakhun), a language spoken in Myanmar and India",
+      "reference": "ŋabə nɤ lan tɤʔ ne"
+    },
+    "baseline": {
+      "best_bleu": 41.72,
+      "best_chrf": 58.94,
+      "best_ter": 38.1,
+      "best_em": 25.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ati kəmə ŋa lan tʰu ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati cʰam nɤ tuʔ ne",
+        "nuʔrum kəmə ʒip kan ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ]
+    }
+  }
+}

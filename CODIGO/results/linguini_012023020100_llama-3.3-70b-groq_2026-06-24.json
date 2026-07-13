@@ -1,0 +1,648 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-24T14:58:59.207354",
+    "puzzle_id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 16,
+    "num_test_pairs": 3,
+    "strategies_run": [
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "nuta sykaru nykanawate uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "nykanawate nysykaru uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "pita ãtary ĩpurãã",
+        "target": "You_{sg} drank the water."
+      },
+      {
+        "source": "kyky mynaru nyherẽka sytumukary",
+        "target": "The man brought my blood to the woman."
+      },
+      {
+        "source": "herẽkatxi uãtary sytu",
+        "target": "The woman drank the blood."
+      },
+      {
+        "source": "nhiximakyte pixinhikary",
+        "target": "You_{sg} remembered my fish (sg)."
+      },
+      {
+        "source": "pitxiparyte umynary kykymukary",
+        "target": "She brought your_{sg} banana to the man."
+      },
+      {
+        "source": "hãtakuru xinhikary naikute",
+        "target": "The girl remembered my house."
+      },
+      {
+        "source": "sytu apy ysykanu nutamukary kyky",
+        "target": "The man gave the woman’s bone to me."
+      },
+      {
+        "source": "nhĩpurããte nãtary",
+        "target": "I drank my water."
+      },
+      {
+        "source": "kywĩtxi apukary",
+        "target": "He found the head."
+      },
+      {
+        "source": "ywa mynanu kyky uky nutamukary",
+        "target": "He brought the man’s eye to me."
+      },
+      {
+        "source": "ximaky nhikary apĩtxi",
+        "target": "The fish (sg) ate the bone."
+      },
+      {
+        "source": "hãtakuru txiparyte napukary",
+        "target": "I found the girl’s banana."
+      },
+      {
+        "source": "ximaky kywy inhikary",
+        "target": "He ate the fish’s (sg) head."
+      },
+      {
+        "source": "hãtakuru uapukaru",
+        "target": "She found the girl."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "uwa xinhikaru sytu",
+        "target": "She remembered the woman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "txipary nhinhikary",
+        "target": "I ate the banana.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kyky aikute pysykary ywamukary",
+        "target": "You_{sg} gave the man’s house to him.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 3.13,
+          "accumulated_dict": "nuta - I, sykaru - my canoe, nykanawate - gave, uwamukary - to her, pita - You_{sg}, ãtary - drank, ĩpurãã - the water, kyky - the man, mynaru - brought, nyherẽka - my blood, sytumukary - to the woman, herẽkatxi - the woman, uãtary - drank, sytu - the blood",
+          "accumulated_rules": "1. The language may have a flexible word order, as \"nuta sykaru nykanawate uwamukary\" and \"nykanawate nysykaru uwamukary\" both translate to \"I gave my canoe to her\", suggesting that the position of the verb and the subject can be swapped.\n2. The language appears to use suffixes or prefixes to indicate possession, as \"sykaru\" (my canoe) and \"nyherẽka\" (my blood) have a prefix \"ny-\" or \"sy-\" which might indicate the first person singular possessive.\n3. The verb \"nykanawate\" (gave) and \"uãtary\" (drank) seem to be in the past tense, but the exact mechanism for forming the past tense is unclear.",
+          "metrics": {
+            "corpus_bleu": 1.83,
+            "corpus_chrfpp": 14.79,
+            "corpus_ter": 193.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.39,
+              5.67,
+              3.74
+            ],
+            "sentence_chrfpp": [
+              11.25,
+              17.4,
+              15.92
+            ],
+            "sentence_ter": [
+              275.0,
+              175.0,
+              157.14
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nuta sykaru nykanawate uwamukary → I gave my canoe to her.",
+              "pita ãtary ĩpurãã → You drank the water.",
+              "kyky mynaru nyherẽka sytumukary → The man brought my blood to the woman."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 3.16,
+          "accumulated_dict": "nuta - I, sykaru - my canoe, nykanawate - gave, uwamukary - to her, pita - You_{sg}, ãtary - drank, ĩpurãã - the water, kyky - the man, mynaru - brought, nyherẽka - my blood, sytumukary - to the woman, herẽkatxi - the woman, uãtary - drank, sytu - the blood, nhiximakyte - remembered, pixinhikary - my fish, pitxiparyte - brought, umynary - your_{sg} banana, hãtakuru - The girl, xinhikary - my house, naikute - remembered",
+          "accumulated_rules": "1. The language may have a flexible word order, as \"nuta sykaru nykanawate uwamukary\" and \"nykanawate nysykaru uwamukary\" both translate to \"I gave my canoe to her\", suggesting that the position of the verb and the subject can be swapped.\n2. The language appears to use suffixes or prefixes to indicate possession, as \"sykaru\" (my canoe) and \"nyherẽka\" (my blood) have a prefix \"ny-\" or \"sy-\" which might indicate the first person singular possessive.\n3. The verb \"nykanawate\" (gave) and \"uãtary\" (drank) seem to be in the past tense, but the exact mechanism for forming the past tense is unclear.\n4. The prefix \"pixinhi-\" in \"pixinhikary\" (my fish) and \"xinhikary\" (my house) might indicate the first person singular possessive for certain nouns, similar to \"sy-\" and \"ny-\".\n5. The suffix \"-te\" in \"nhiximakyte\" (remembered) and \"pitxiparyte\" (brought) might be a past tense marker or a marker for completed actions.",
+          "metrics": {
+            "corpus_bleu": 3.48,
+            "corpus_chrfpp": 25.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              7.27,
+              3.55
+            ],
+            "sentence_chrfpp": [
+              36.4,
+              34.08,
+              13.81
+            ],
+            "sentence_ter": [
+              75.0,
+              150.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You remembered my fish.",
+              "She brought your banana to the man.",
+              "The girl remembered my house."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 3.3,
+          "accumulated_dict": "nuta - I, sykaru - my canoe, nykanawate - gave, uwamukary - to her, pita - You_{sg}, ãtary - drank, ĩpurãã - the water, kyky - the man, mynaru - brought, nyherẽka - my blood, sytumukary - to the woman, herẽkatxi - the woman, uãtary - drank, sytu - the blood, nhiximakyte - remembered, pixinhikary - my fish, pitxiparyte - brought, umynary - your_{sg} banana, hãtakuru - The girl, xinhikary - my house, naikute - remembered, apy - bone, ysykanu - woman's, nutamukary - to me, nhĩpurããte - my water, nãtary - I drank, kywĩtxi - head, apukary - the head, ywa - he, mynanu - eye, uky - he",
+          "accumulated_rules": "1. The language may have a flexible word order, as \"nuta sykaru nykanawate uwamukary\" and \"nykanawate nysykaru uwamukary\" both translate to \"I gave my canoe to her\", suggesting that the position of the verb and the subject can be swapped.\n2. The language appears to use suffixes or prefixes to indicate possession, as \"sykaru\" (my canoe) and \"nyherẽka\" (my blood) have a prefix \"ny-\" or \"sy-\" which might indicate the first person singular possessive.\n3. The verb \"nykanawate\" (gave) and \"uãtary\" (drank) seem to be in the past tense, but the exact mechanism for forming the past tense is unclear.\n4. The prefix \"pixinhi-\" in \"pixinhikary\" (my fish) and \"xinhikary\" (my house) might indicate the first person singular possessive for certain nouns, similar to \"sy-\" and \"ny-\".\n5. The suffix \"-te\" in \"nhiximakyte\" (remembered) and \"pitxiparyte\" (brought) might be a past tense marker or a marker for completed actions.\n6. The word \"nutamukary\" seems to indicate the recipient of an action is the speaker, as in \"sytu apy ysykanu nutamukary kyky\" (The man gave the woman’s bone to me).\n7. The word \"uwamukary\" and \"sytumukary\" might be related to the feminine form, as they both seem to be associated with female nouns (\"her\" and \"woman\").",
+          "metrics": {
+            "corpus_bleu": 2.19,
+            "corpus_chrfpp": 18.21,
+            "corpus_ter": 166.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.13,
+              7.27,
+              3.98
+            ],
+            "sentence_chrfpp": [
+              24.41,
+              20.74,
+              10.62
+            ],
+            "sentence_ter": [
+              325.0,
+              125.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "sytu apy ysykanu nutamukary kyky → The man gave the woman's bone to me.",
+              "nhĩpurããte nãtary → I drank the water.",
+              "kywĩtxi apukary → He found the head."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 3.99,
+          "accumulated_dict": "nuta - I, sykaru - my canoe, nykanawate - gave, uwamukary - to her, pita - You_{sg}, ãtary - drank, ĩpurãã - the water, kyky - the man, mynaru - brought, nyherẽka - my blood, sytumukary - to the woman, herẽkatxi - the woman, uãtary - drank, sytu - the blood, nhiximakyte - remembered, pixinhikary - my fish, pitxiparyte - brought, umynary - your_{sg} banana, hãtakuru - The girl, xinhikary - my house, naikute - remembered, apy - bone, ysykanu - woman's, nutamukary - to me, nhĩpurããte - my water, nãtary - I drank, kywĩtxi - head, apukary - the head, ywa - he, mynanu - eye, uky - he, ximaky - fish (sg), nhikary - the bone, apĩtxi - ate, txiparyte - found, napukary - the girl's banana, uapukaru - found",
+          "accumulated_rules": "1. The language may have a flexible word order, as \"nuta sykaru nykanawate uwamukary\" and \"nykanawate nysykaru uwamukary\" both translate to \"I gave my canoe to her\", suggesting that the position of the verb and the subject can be swapped.\n2. The language appears to use suffixes or prefixes to indicate possession, as \"sykaru\" (my canoe) and \"nyherẽka\" (my blood) have a prefix \"ny-\" or \"sy-\" which might indicate the first person singular possessive.\n3. The verb \"nykanawate\" (gave) and \"uãtary\" (drank) seem to be in the past tense, but the exact mechanism for forming the past tense is unclear.\n4. The prefix \"pixinhi-\" in \"pixinhikary\" (my fish) and \"xinhikary\" (my house) might indicate the first person singular possessive for certain nouns, similar to \"sy-\" and \"ny-\".\n5. The suffix \"-te\" in \"nhiximakyte\" (remembered) and \"pitxiparyte\" (brought) might be a past tense marker or a marker for completed actions.\n6. The word \"nutamukary\" seems to indicate the recipient of an action is the speaker, as in \"sytu apy ysykanu nutamukary kyky\" (The man gave the woman’s bone to me).\n7. The word \"uwamukary\" and \"sytumukary\" might be related to the feminine form, as they both seem to be associated with female nouns (\"her\" and \"woman\").\n8. The verb \"apĩtxi\" (ate) seems to be in a simple past tense form, without any suffixes or prefixes indicating tense.\n9. The word \"napukary\" (the girl's banana) suggests that the language may use a suffix \"-pukary\" to indicate possession of a specific noun.",
+          "metrics": {
+            "corpus_bleu": 6.06,
+            "corpus_chrfpp": 20.88,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              19.3,
+              3.82
+            ],
+            "sentence_chrfpp": [
+              14.46,
+              43.53,
+              13.68
+            ],
+            "sentence_ter": [
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The fish ate the bone.",
+              "I found the girl’s banana.",
+              "The fish ate the fish’s head."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.48,
+        "corpus_chrfpp": 25.84,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.7,
+          7.27,
+          3.55
+        ],
+        "sentence_chrfpp": [
+          36.4,
+          34.08,
+          13.81
+        ],
+        "sentence_ter": [
+          75.0,
+          150.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You remembered my fish.",
+          "She brought your banana to the man.",
+          "The girl remembered my house."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 2.19,
+          "metrics": {
+            "corpus_bleu": 6.7,
+            "corpus_chrfpp": 38.6,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.3,
+              7.27,
+              8.17
+            ],
+            "sentence_chrfpp": [
+              67.35,
+              15.07,
+              29.3
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered the house.",
+              "I found the fish (sg).",
+              "The man brought the house to the woman's eye."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 6.7,
+        "corpus_chrfpp": 38.6,
+        "corpus_ter": 86.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          19.3,
+          7.27,
+          8.17
+        ],
+        "sentence_chrfpp": [
+          67.35,
+          15.07,
+          29.3
+        ],
+        "sentence_ter": [
+          75.0,
+          75.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The woman remembered the house.",
+          "I found the fish (sg).",
+          "The man brought the house to the woman's eye."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 1.92,
+          "metrics": {
+            "corpus_bleu": 21.71,
+            "corpus_chrfpp": 50.58,
+            "corpus_ter": 53.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              42.73,
+              66.87,
+              4.5
+            ],
+            "sentence_chrfpp": [
+              69.13,
+              85.44,
+              23.79
+            ],
+            "sentence_ter": [
+              25.0,
+              25.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She remembered the blood.",
+              "You ate the banana.",
+              "The man brought the house's eye to me."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 2.33,
+          "metrics": {
+            "corpus_bleu": 6.16,
+            "corpus_chrfpp": 27.39,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              17.97,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              29.89,
+              38.39,
+              20.42
+            ],
+            "sentence_ter": [
+              100.0,
+              75.0,
+              71.43
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman drank the blood.",
+              "The fish ate the bone.",
+              "He brought the man's eye to me."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 21.71,
+        "corpus_chrfpp": 50.58,
+        "corpus_ter": 53.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          42.73,
+          66.87,
+          4.5
+        ],
+        "sentence_chrfpp": [
+          69.13,
+          85.44,
+          23.79
+        ],
+        "sentence_ter": [
+          25.0,
+          25.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She remembered the blood.",
+          "You ate the banana.",
+          "The man brought the house's eye to me."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": -15.55,
+        "chrf_delta": -23.19,
+        "ter_delta": 26.67,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "step_by_step": {
+      "best_bleu": 3.48,
+      "best_chrf": 25.84,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "You remembered my fish.",
+        "She brought your banana to the man.",
+        "The girl remembered my house."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 6.7,
+      "best_chrf": 38.6,
+      "best_ter": 86.67,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The woman remembered the house.",
+        "I found the fish (sg).",
+        "The man brought the house to the woman's eye."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 21.71,
+      "best_chrf": 50.58,
+      "best_ter": 53.33,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "She remembered the blood.",
+        "You ate the banana.",
+        "The man brought the house's eye to me."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "delta": {
+        "bleu_delta": -15.55,
+        "chrf_delta": -23.19,
+        "ter_delta": 26.67,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1652 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T23:24:51.247615",
+    "puzzle_id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 10,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ar kanarriːcciːg kamiːg jaːnticcirsu.",
+        "target": "We bought the camels for the neighbours."
+      },
+      {
+        "source": "tirt kadeːg allesu.",
+        "target": "The owner repaired the dress."
+      },
+      {
+        "source": "jahali waliːg darbadki biticcirra.",
+        "target": "The young men will give the chicken to the dogs."
+      },
+      {
+        "source": "man jahalgi kadeːcciːg maːgtirsu.",
+        "target": "He stole the dresses for the young man."
+      },
+      {
+        "source": "ay beyyeːcciːg ajaːnirri.",
+        "target": "I am buying the necklaces."
+      },
+      {
+        "source": "wal aygi baːbiːg eldeːnsu.",
+        "target": "The dog found the doors for me."
+      },
+      {
+        "source": "magas ikki waliːg ticcirsu.",
+        "target": "The thief gave you (pl.) the dogs."
+      },
+      {
+        "source": "iːdi magaski kamiːg tirsa.",
+        "target": "The men gave the camels to the thief."
+      },
+      {
+        "source": "ay hanuːg bijomri.",
+        "target": "I will strike the donkey."
+      },
+      {
+        "source": "sarkaːyi aygi beyyeːcciːg adeːnda.",
+        "target": "The cowards are giving me the necklaces."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "magasi argi ajomirra.",
+        "target": "The thieves are striking us.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay kanarriːg baːbki alletirsi.",
+        "target": "I repaired the door for the neighbour.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "hanu tirtiːg elirsu.",
+        "target": "The donkey found the owners.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tirti argi kamgi deːccirsa.",
+        "target": "The owners gave us the camel.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay darbadki bijaːndi.",
+        "target": "I will buy the chicken.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "magasi argi ajomirra.",
+      "reference": "The thieves are striking us.",
+      "hypothesis": "**Possible translation:** “My light is shining.”",
+      "latency_s": 6.86,
+      "metrics": {
+        "corpus_bleu": 3.09,
+        "corpus_chrfpp": 10.01,
+        "corpus_ter": 120.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.09
+        ],
+        "sentence_chrfpp": [
+          10.01
+        ],
+        "sentence_ter": [
+          120.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “My light is shining.”"
+        ],
+        "references": [
+          "The thieves are striking us."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 61.5,
+          "metrics": {
+            "corpus_bleu": 4.71,
+            "corpus_chrfpp": 31.28,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              7.49,
+              10.68,
+              8.64,
+              19.3
+            ],
+            "sentence_chrfpp": [
+              24.71,
+              34.8,
+              30.28,
+              34.39,
+              29.83
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              80.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will give the neighbour.",
+              "I will buy the neighbour’s doors.",
+              "He will strike the donkey.",
+              "He gave the neighbour the camels.",
+              "I will strike the donkey."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.71,
+        "corpus_chrfpp": 31.28,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.81,
+          7.49,
+          10.68,
+          8.64,
+          19.3
+        ],
+        "sentence_chrfpp": [
+          24.71,
+          34.8,
+          30.28,
+          34.39,
+          29.83
+        ],
+        "sentence_ter": [
+          100.0,
+          85.71,
+          80.0,
+          66.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will give the neighbour.",
+          "I will buy the neighbour’s doors.",
+          "He will strike the donkey.",
+          "He gave the neighbour the camels.",
+          "I will strike the donkey."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 80.59,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\ntirt = the (definite article)\n‑g = noun suffix (definite / case marker – provisional)\nkanarriːcci = camel\nkami = neighbour\nkade = owner\njaːnticci‑r = buy\nall‑e = repair\n‑su = verb ending (past – provisional)\n‑si = verb ending (present – provisional)\n‑sa = verb ending (future – provisional)",
+          "accumulated_rules": "1. A sentence consists of a subject (pronoun or noun phrase) followed by one or more noun phrases (each bearing the suffix **‑g**) and finally a verb.\n2. The verb core precedes a verbal suffix **‑su / ‑si / ‑sa**, which marks tense/aspect (tentative).",
+          "metrics": {
+            "corpus_bleu": 8.83,
+            "corpus_chrfpp": 31.76,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.75,
+              25.75,
+              10.68,
+              9.04,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              12.85,
+              59.74,
+              30.11,
+              29.91,
+              13.35
+            ],
+            "sentence_ter": [
+              100.0,
+              57.14,
+              60.0,
+              66.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the dress.",
+              "The camels repaired the neighbour.",
+              "The owner bought the camels.",
+              "The owner bought the neighbours.",
+              "The neighbour repaired the dress."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 71.11,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\ntirt = the (definite article)\n‑g = definite noun suffix\nkanarriːcci = camel\nkami = neighbour\nkade = owner\njaːnticci‑r = buy (verb stem)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\njahali = young (adjective)\nwali = man / men (noun)\ndarbadki = dog\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix",
+          "accumulated_rules": "1. A noun phrase consists of an optional article **tirt**, followed by a noun stem plus the definite suffix **‑g**; adjectives (e.g., **jahali**) precede the noun they modify.\n2. Word order is generally Subject – Object(s) – Verb.\n3. Verb = verb‑stem (which may already contain **‑r**) + tense suffix (**‑su**, **‑si**, **‑ra**).\n4. The same **‑g** suffix is used on subjects, direct objects and indirect objects; case relations are inferred from position rather than morphology.",
+          "metrics": {
+            "corpus_bleu": 2.17,
+            "corpus_chrfpp": 13.49,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.75,
+              6.57,
+              10.68,
+              7.81,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              7.03,
+              9.24,
+              18.26,
+              12.98,
+              23.5
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              60.0,
+              83.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Magasi argi will ajomi.",
+              "Ay will sell the camel to baːbki.",
+              "The child bit the dog.",
+              "The dog and argi will deːccir.",
+              "Ay chicken eats.=== END ==="
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 71.25,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\nman = he (3rd‑person singular pronoun)\ntirt = definite article “the”\n‑g = definite noun suffix (also marks case)\n‑iː = plural marker placed before **‑g** on nouns (e.g., kanarriːcci‑iː‑g = camels)\nkanarriːcci = camel (singular)\nkami = neighbour (singular)\nkade = owner (singular)\nkadeːcci = dress (singular)\n‑ci = plural‑forming element (appears as **‑iː** after the stem)\nwali = man / men (noun)\ndarbadki = dog (singular) / dogs (plural when preceded by **‑iː**)\njahali = young (adjective, base form)\njahalgi = young (adjective with agreement suffix **‑i**)\njaːnticci‑r = buy (verb stem)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nmaːgti‑r = steal (verb stem)\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix",
+          "accumulated_rules": "1. A noun phrase = optional **tirt**, noun stem + optional plural marker **‑iː**, then definite suffix **‑g**. Adjectives precede the noun; they may take an agreement suffix **‑i** when the noun follows later.\n2. Basic word order = Subject – (Indirect Object) – Direct Object – Verb. Objects are identified by position; no overt case marking beyond the shared **‑g**.\n3. Verb = verb‑stem (which may already contain **‑r**) + tense suffix (**‑su**, **‑si**, **‑ra**).\n4. Pronouns (e.g., **ar**, **man**) function as subjects without the **‑g** suffix.\n5. Plural nouns are formed by inserting **‑iː** (or **‑ci**) before the definite suffix **‑g**.",
+          "metrics": {
+            "corpus_bleu": 2.89,
+            "corpus_chrfpp": 22.75,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              8.91,
+              6.27,
+              8.17,
+              3.46
+            ],
+            "sentence_chrfpp": [
+              11.46,
+              42.21,
+              20.49,
+              12.32,
+              17.81
+            ],
+            "sentence_ter": [
+              100.0,
+              71.43,
+              120.0,
+              83.33,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will eat the fish.",
+              "He/she will buy the camels for the neighbours.",
+              "The man gave the chicken to the dogs.",
+              "He will repair the dress.",
+              "He will give the dog a bone. === END ==="
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 108.27,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\nay = I (1st‑person singular pronoun)\nman = he (3rd‑person singular pronoun)\ntirt = definite article “the” (pre‑noun)\n‑g = definite noun suffix (marks definiteness)\n‑iː = plural marker placed before **‑g** on nouns (e.g., kanarriːcci‑iː‑g = camels)\n‑ci = alternative plural‑forming element (appears before **‑g**)\nkanarriːcci = camel (singular)\nkami = neighbour (singular)\nkade = owner (singular)\nkadeːcci = dress (singular)\nwali = man (singular)\ndarbadki = chicken (singular) [re‑interpreted from context]\nbeyye = necklace (singular)\njahali = young (adjective, base form)\njahalgi = young (adjective with agreement suffix **‑i**)\njaːnticci‑r = buy (verb stem)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nmaːgti‑r = steal (verb stem)\najaːni‑r = buy (verb stem used in progressive)\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix\n‑ri = present‑progressive suffix",
+          "accumulated_rules": "1. A noun phrase = optional **tirt**, noun stem + optional plural marker (**‑iː** or **‑ci**) + definite suffix **‑g**. Adjectives precede the noun; they may take agreement suffix **‑i** when the noun follows later.\n2. Basic clause order = **Subject – Direct Object – Indirect Object – Verb**. Objects are identified by their position; no overt case marking beyond the shared **‑g**.\n3. Verb = verb‑stem (may already contain **‑r**) + tense suffix (**‑su**, **‑si**, **‑ra**, **‑ri**).\n4. Pronouns (e.g., **ar**, **ay**, **man**) function as subjects and do not take the **‑g** suffix.\n5. Plural nouns are formed by inserting **‑iː** (or **‑ci**) before the definite suffix **‑g**.",
+          "metrics": {
+            "corpus_bleu": 3.9,
+            "corpus_chrfpp": 24.43,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2,
+              7.65,
+              10.4,
+              9.04,
+              7.31
+            ],
+            "sentence_chrfpp": [
+              14.8,
+              14.83,
+              16.11,
+              30.49,
+              48.76
+            ],
+            "sentence_ter": [
+              160.0,
+              71.43,
+              80.0,
+              66.67,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will steal the dresses for the young man.",
+              "I am buying the necklaces.",
+              "He repaired the dress.",
+              "The owner repaired the dress.",
+              "I will give the chicken to the dogs. === END ==="
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 84.9,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\nay = I (1st‑person singular pronoun)\nman = he (3rd‑person singular pronoun)\ntirt = definite article “the” (pre‑noun)\n‑g = definite noun suffix; also marks nouns when they function as core arguments (subject or object)\n‑iː = plural marker placed immediately before **‑g** on nouns\n‑ci = alternative plural‑forming element placed before **‑g**\nkanarriːcci = camel (singular)\nkami = neighbour (singular)\nkade = owner (singular)\nkadeːcci = dress (singular)\nwali = man (singular)\ndarbadki = chicken (singular)\nbeyye = necklace (singular)\njahali = young (adjective, base form)\njahalgi = young (adjective with agreement suffix **‑i**)\njaːnticci‑r = buy (verb stem)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nmaːgti‑r = steal (verb stem)\najaːni‑r = buy (verb stem used in progressive)\nwal = dog (singular)\naygi = me (1st‑person singular pronoun with dative/indirect‑object suffix **‑i**)\nbaːbi = door (singular)\nelde‑n = find (verb stem)\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix\n‑ri = present‑progressive suffix",
+          "accumulated_rules": "1. **Noun phrase** = optional **tirt**, noun stem + optional plural marker (**‑iː** or **‑ci**) + definite suffix **‑g**. The suffix **‑g** appears on any noun that is a core argument (subject or object); pronouns do not take it.\n2. **Adjective placement**: adjectives normally precede the noun they modify. When the adjective appears before a noun that later follows in the clause, it may take the agreement suffix **‑i**.\n3. **Clause order** = Subject – Direct Object – Indirect Object – Verb. The subject can be a pronoun (no **‑g**) or a definite noun phrase (with **‑g**).\n4. **Verb formation** = verb‑stem (may already contain **‑r**) + tense suffix (**‑su** past, **‑si** present, **‑ra** future, **‑ri** present‑progressive).\n5. **Indirect object marking**: a pronoun can take the dative‑like suffix **‑i** (e.g., **aygi** “to me”). No overt case marking on nouns beyond **‑g**.\n6. **Object omission**: when the object is contextually obvious, it may be omitted; the verb still carries the appropriate tense.",
+          "metrics": {
+            "corpus_bleu": 7.08,
+            "corpus_chrfpp": 35.78,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              11.99,
+              19.3,
+              5.52,
+              14.46
+            ],
+            "sentence_chrfpp": [
+              16.96,
+              33.13,
+              42.9,
+              31.17,
+              58.95
+            ],
+            "sentence_ter": [
+              100.0,
+              57.14,
+              40.0,
+              116.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The owner will repair the dress.",
+              "I am buying the camels for the doors.",
+              "The dog found the doors.",
+              "The owner will give the dress to the man.",
+              "I will give the chicken. === END ==="
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 124.79,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\nay = I (1st‑person singular pronoun)\nman = he (3rd‑person singular pronoun)\ntirt = definite article “the” (pre‑noun)\n‑g = definite noun suffix; marks nouns when they are core arguments (subject or object) – optional on subjects\n‑iː = plural marker placed immediately before **‑g** on nouns\n‑ci = alternative plural‑forming element placed before **‑g**\nkanarriːcci = camel (singular)\nkami = neighbour (singular)\nkade = owner (singular)\nkadeːcci = dress (singular)\nwali = man (singular)\nwal = dog (singular)\ndarbadki = chicken (singular)\nbeyye = necklace (singular)\njahali = young (adjective, base form)\njahalgi = young (adjective with agreement suffix **‑i**)\njaːnticci‑r = buy (verb stem)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nmaːgti‑r = steal (verb stem)\najaːni‑r = buy (verb stem used in progressive)\nmagas = thief (singular)\nikki = you (plural pronoun)\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix\n‑ri = present‑progressive suffix\n‑i = dative/indirect‑object suffix on pronouns (e.g., *aygi* “to me”)",
+          "accumulated_rules": "1. **Noun Phrase** = optional **tirt**, noun stem + optional plural marker (**‑iː** or **‑ci**) + definite suffix **‑g**. The suffix **‑g** is obligatory on nouns that are objects; on subjects it is optional. Pronouns never take **‑g**.\n2. **Adjective Placement**: adjectives normally precede the noun they modify. When the adjective is linked to a following noun (even if that noun is omitted), it may take the agreement suffix **‑i**.\n3. **Clause Order** = Subject – Direct Object – Indirect Object – Verb. Any of these constituents may be omitted if context supplies them.\n4. **Verb Formation** = verb‑stem (may already end in **‑r**) + tense suffix (**‑su** past, **‑si** present, **‑ra** future, **‑ri** present‑progressive).\n5. **Indirect Object Marking**: a pronoun can take the dative‑like suffix **‑i** (e.g., *aygi* “to me”). Plural 2nd‑person pronoun *ikki* can appear without **‑i**. No overt case marking on nouns beyond **‑g**.\n6. **Object Omission**: when the object is contextually obvious, it may be omitted; the verb still carries the appropriate tense.",
+          "metrics": {
+            "corpus_bleu": 8.22,
+            "corpus_chrfpp": 27.51,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              8.05,
+              11.51,
+              8.64,
+              34.98
+            ],
+            "sentence_chrfpp": [
+              24.92,
+              24.87,
+              21.71,
+              18.29,
+              54.2
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              60.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will give the owner.",
+              "I am repairing the camel’s door.",
+              "The thief found it.",
+              "The man will give the door.",
+              "I gave the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 133.83,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\nay = I (1st‑person singular pronoun)\nman = he (3rd‑person singular pronoun)\nikki = you (plural pronoun)\ntirt = definite article “the” (used before singular nouns)\niːdi = definite article “the” (used before plural nouns)\n‑g = definite noun suffix; marks nouns when they are core arguments (object or indirect object); optional on subjects; also marks plural nouns when preceded by a plural marker.\n‑iː = plural marker placed immediately before **‑g** on nouns.\n‑ci = alternative plural‑forming element placed before **‑g**.\nkanarriːcci = camel (singular)\nkanarriːcciːg = camels (plural, definite)\nkami = neighbour (singular)\nkamiːg = neighbours (plural, definite)\nkade = owner (singular)\nkadeːg = the owner (definite)\nkadeːcci = dress (singular)\nkadeːcciːg = dresses (plural, definite)\nwali = man (singular)\nwaliːg = men (plural, definite)\nwal = dog (singular)\nwaliːg = dogs (plural, definite) – same form as men; distinction comes from context.\ndarbadki = chicken (singular)\nbeyye = necklace (singular)\nbeyyeːcciːg = necklaces (plural, definite)\nbaːbi = door (singular)\nbaːbiːg = doors (plural, definite)\njahali = young (adjective, base form)\njahalgi = young (adjective with agreement suffix **‑i**)\njaːnticci‑r = buy (verb stem)\najaːni‑r = buy (verb stem used in progressive)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nticci‑r = give (alternative stem)\ntir‑ = give (verb stem found in “tirsa”)\nmaːgti‑r = steal (verb stem)\nmagas = thief (singular)\nmagaski = men (plural, definite)\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix\n‑ri = present‑progressive suffix\n‑i = dative/indirect‑object suffix on pronouns (e.g., aygi “to me”)",
+          "accumulated_rules": "1. **Noun Phrase** = optional article (tirt for singular, iːdi for plural), noun stem + optional plural marker (**‑iː** or **‑ci**) + definite suffix **‑g**. The suffix **‑g** is obligatory on nouns that are objects or indirect objects; on subjects it is optional. Pronouns never take **‑g**.\n2. **Adjective Placement**: adjectives normally precede the noun they modify. When the adjective is directly linked to a following **singular** noun, it takes the agreement suffix **‑i**; with a plural noun the adjective remains in its base form.\n3. **Clause Order** = Subject – Direct Object – Indirect Object – Verb. Any constituent may be omitted if context supplies it.\n4. **Verb Formation** = verb‑stem + tense suffix (**‑su** past, **‑si** present, **‑ra** future, **‑ri** progressive). Different verb stems may be allomorphs for the same meaning (e.g., biticci‑r, ticci‑r, tir‑ for “give”).\n5. **Indirect Object Marking**: pronouns can take the dative‑like suffix **‑i** (e.g., aygi “to me”). Full nouns do not receive a special dative suffix; case is inferred from position and from the presence of **‑g**.\n6. **Object Omission**: when the object (direct or indirect) is contextually obvious, it may be omitted; the verb still carries the appropriate tense.",
+          "metrics": {
+            "corpus_bleu": 4.35,
+            "corpus_chrfpp": 30.76,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.99,
+              7.65,
+              13.13,
+              6.74,
+              13.13
+            ],
+            "sentence_chrfpp": [
+              26.25,
+              14.83,
+              40.22,
+              35.84,
+              42.74
+            ],
+            "sentence_ter": [
+              160.0,
+              71.43,
+              80.0,
+              83.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief stole the dresses for the young man.",
+              "I am buying the necklaces.",
+              "The dog found the doors for me.",
+              "The men gave the camels to the thief.",
+              "I gave the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 133.78,
+          "accumulated_dict": "ar = we (1st‑person plural pronoun)\nay = I (1st‑person singular pronoun)\nman = he (3rd‑person singular pronoun)\nikki = you (plural pronoun)\ntirt = definite article “the” (used before singular nouns)\niːdi = definite article “the” (used before plural nouns)\n‑g = definite noun suffix; marks nouns when they are core arguments (object or indirect object); optional on subjects; also marks plural nouns when preceded by a plural marker.\n‑iː = plural marker placed immediately before **‑g** on nouns.\n‑ci = alternative plural‑forming element placed before **‑g**.\nkanarriːcci = camel (singular)\nkanarriːcciːg = camels (plural, definite)\nkami = neighbour (singular)\nkamiːg = neighbours (plural, definite)\nkade = owner (singular)\nkadeːg = the owner (definite)\nkadeːcci = dress (singular)\nkadeːcciːg = dresses (plural, definite)\nwali = man (singular)\nwaliːg = men (plural, definite) / dogs (plural, definite) – distinguished by context\nwal = dog (singular)\ndarbadki = chicken (singular)\nbeyye = necklace (singular)\nbeyyeːcciːg = necklaces (plural, definite)\nbaːbi = door (singular)\nbaːbiːg = doors (plural, definite)\njahali = young (adjective, base form)\njahalgi = young (adjective with agreement suffix **‑i**)\njaːnticci‑r = buy (verb stem)\najaːni‑r = buy (verb stem used in progressive)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nticci‑r = give (alternative stem)\ntir‑ = give (verb stem found in “tirsa”)\nmaːgti‑r = steal (verb stem)\nmagas = thief (singular)\nmagaski = men (plural, definite) – note: homophonous with “men” in other contexts\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix\n‑ri = present‑progressive suffix (also used for future in a few lexicalised forms)\n‑i = dative/indirect‑object suffix on pronouns (e.g., aygi “to me”)\nhanu = donkey (singular)\nhanuːg = donkey (definite)\nelde = find (verb stem)\nbijom = strike (verb stem)",
+          "accumulated_rules": "1. **Noun Phrase** = optional article (tirt for singular, iːdi for plural) + noun stem + optional plural marker (**‑iː** or **‑ci**) + definite suffix **‑g**. **‑g** is obligatory on nouns that are objects or indirect objects; optional on subjects. Pronouns never take **‑g**.\n2. **Adjective Placement**: adjectives normally precede the noun they modify. When the adjective is directly linked to a following **singular** noun (or stands for a singular indirect object), it takes the agreement suffix **‑i**; with a plural noun the adjective remains in its base form.\n3. **Clause Order** = Subject – Direct Object – Indirect Object – Verb. Any constituent may be omitted if context supplies it.\n4. **Verb Formation** = verb‑stem + tense/agreement suffix (**‑su** past, **‑si** present, **‑ra** future, **‑ri** progressive). Some lexicalised forms may lack an overt suffix (e.g., *tirsa* = present “give”). Different verb stems may be allomorphs for the same meaning.\n5. **Indirect Object Marking**: pronouns take the dative suffix **‑i** (e.g., aygi “to me”). Full noun indirect objects are identified by their post‑verbal position and, when definite, by the **‑g** suffix.\n6. **Object Omission**: when the object (direct or indirect) is contextually obvious, it may be omitted; the verb still carries the appropriate tense.\n7. **Adjective‑Only Indirect Objects**: an adjective with the **‑i** agreement suffix can function as a nominalised indirect object when the head noun is omitted (e.g., *jahalgi* “for the young man”).",
+          "metrics": {
+            "corpus_bleu": 16.18,
+            "corpus_chrfpp": 40.72,
+            "corpus_ter": 64.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              8.05,
+              53.73,
+              6.74,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              29.35,
+              24.87,
+              72.59,
+              22.15,
+              66.25
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              20.0,
+              83.33,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will strike the donkey.",
+              "I am repairing the camel’s door.",
+              "The donkey found the doors.",
+              "The donkey gave the argi to the man.",
+              "I will give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 124.9,
+          "accumulated_dict": "ar = we (1st‑pl pronoun)\nay = I (1st‑sg pronoun)\nman = he (3rd‑sg pronoun)\nikki = you (plural pronoun)\ntirt = definite article “the” (singular)\niːdi = definite article “the” (plural)\n‑g = definite noun suffix; marks core arguments, optional on subjects, obligatory on objects/indirect objects; also marks plural nouns when preceded by a plural marker.\n‑iː = plural marker placed immediately before ‑g on nouns.\n‑ci = alternative plural‑forming element placed before ‑g.\nkanarriːcci = camel (sg)\nkanarriːcciːg = camels (pl, definite)\nkami = neighbour (sg)\nkamiːg = neighbours (pl, definite)\nkade = owner (sg)\nkadeːg = the owner (def)\nkadeːcci = dress (sg)\nkadeːcciːg = dresses (pl, definite)\nwali = man (sg)\nwaliːg = men (pl, definite) / dogs (pl, definite) – context decides.\nwal = dog (sg)\ndarbadki = chicken (sg)\nbeyye = necklace (sg)\nbeyyeːcciːg = necklaces (pl, definite)\nbaːbi = door (sg)\nbaːbiːg = doors (pl, definite)\njahali = young (adj, base)\njahalgi = young (adj with agreement suffix ‑i)\njaːnticci‑r = buy (verb stem)\najaːni‑r = buy (progressive stem)\nall‑e = repair (verb stem)\nbiticci‑r = give (verb stem)\nticci‑r = give (alternative stem)\ntir‑ = give (stem found in “tirsa”)\nmaːgti‑r = steal (verb stem)\nmagas = thief (sg)\nmagaski = men (pl, definite) – homophonous with “men” in other contexts\nhanu = donkey (sg)\nhanuːg = donkey (def)\nelde = find (verb stem)\nbijom = strike (verb stem)\nsarkaːyi = cowards (pl, definite)\nade = give (verb stem)\n‑su = past tense suffix\n‑si = present tense suffix\n‑ra = future tense suffix\n‑ri = progressive suffix (also used for some lexicalised futures)\n‑nda = progressive suffix (alternative to ‑ri)\n‑i = dative/indirect‑object suffix on pronouns (e.g., aygi “to me”)\n‑n = linker appearing before ‑su when a dative pronoun follows the verb (e.g., eldeːnsu)",
+          "accumulated_rules": "1. **Noun Phrase**: [article] + noun stem + optional plural marker (‑iː or ‑ci) + definite suffix ‑g. ‑g is obligatory on nouns that are objects or indirect objects, optional on subjects. Pronouns never take ‑g.\n2. **Adjective Placement & Agreement**: adjectives normally precede the noun they modify. With a singular noun (or when standing for a singular indirect object) the adjective takes the agreement suffix ‑i; with a plural noun it remains in its base form.\n3. **Clause Order**: Basic order is **Subject – Direct Object – Indirect Object – Verb**, but the order can be **Subject – Indirect Object – Direct Object – Verb** when the indirect object is a pronoun or when discourse permits flexibility. Any constituent may be omitted if recoverable from context.\n4. **Verb Formation**: verb‑stem + tense/agreement suffix (‑su past, ‑si present, ‑ra future, ‑ri progressive, ‑nda progressive alternative). Some lexicalised forms lack an overt suffix (e.g., tirsa ‘give‑PRES’).\n5. **Indirect Object Marking**: pronouns take the dative suffix ‑i (e.g., aygi ‘to me’). Full‑noun indirect objects appear post‑verbally and, when definite, bear ‑g.\n6. **Object Omission**: Direct or indirect objects may be omitted when context makes them clear; the verb still carries the appropriate tense.\n7. **Adjective‑Only Indirect Objects**: an adjective with the ‑i agreement suffix can function as a nominalised indirect object when the head noun is omitted (e.g., jahalgi ‘for the young man’).\n8. **Linker ‑n**: inserted before ‑su when a dative pronoun follows the verb (as in eldeːnsu).",
+          "metrics": {
+            "corpus_bleu": 18.4,
+            "corpus_chrfpp": 41.93,
+            "corpus_ter": 53.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              17.29,
+              53.73,
+              9.04,
+              34.98
+            ],
+            "sentence_chrfpp": [
+              24.07,
+              46.42,
+              69.87,
+              17.08,
+              53.9
+            ],
+            "sentence_ter": [
+              100.0,
+              42.86,
+              20.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will ajom the argi.",
+              "I repair the camels for the door.",
+              "The donkey found the tirti.",
+              "tirti argi gave the deːc.",
+              "I strike the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 18.4,
+        "corpus_chrfpp": 41.93,
+        "corpus_ter": 53.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.81,
+          17.29,
+          53.73,
+          9.04,
+          34.98
+        ],
+        "sentence_chrfpp": [
+          24.07,
+          46.42,
+          69.87,
+          17.08,
+          53.9
+        ],
+        "sentence_ter": [
+          100.0,
+          42.86,
+          20.0,
+          66.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will ajom the argi.",
+          "I repair the camels for the door.",
+          "The donkey found the tirti.",
+          "tirti argi gave the deːc.",
+          "I strike the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 32.85,
+          "accumulated_dict": "ar = we (1st person plural pronoun)\nkanarriːcciːg = camels (plural noun, direct object)\nkamiːg = camels (alternative form, likely the same noun)\njaːnticcirsu = neighbours (plural noun, indirect object, dative)\ntirt = the owner (noun, subject)\nkadeːg = repaired (verb, past)\nallesu = dress (noun, direct object)\njahali = young men (plural noun, subject)\nwaliːg = will give (verb, future)\ndarbadki = chicken (noun, direct object)\nbiticcirra = dogs (plural noun, indirect object, dative)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object – (Indirect Object).\n2. The indirect object follows the direct object and carries a dative‑like suffix (e.g., ‑su, ‑ra).\n3. Verbs appear in a single form that encodes tense (past vs. future) but do not change position.\n4. Nouns do not show overt case on the subject; case marking is only visible on the indirect object.\n5. Definite articles are not overt; nouns appear in their bare form.",
+          "metrics": {
+            "corpus_bleu": 3.97,
+            "corpus_chrfpp": 17.16,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              12.87,
+              4.93,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              36.11,
+              23.4,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              120.0,
+              71.43,
+              160.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "The young men will give the chicken to the dogs.",
+              "???",
+              "???"
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 22.38,
+          "accumulated_dict": "ar = we (1st person plural pronoun)\nkanarriːcciːg = camels (plural noun, direct object)\nkamiːg = camels (alternative form, likely the same noun)\njaːnticcirsu = neighbours (plural noun, indirect object, dative)\ntirt = the owner (noun, subject)\nkadeːg = repaired (verb, past)\nallesu = dress (noun, direct object)\njahali = young men (plural noun, subject)\nwaliːg = will give (verb, future)\ndarbadki = chicken (noun, direct object)\nbiticcirra = dogs (plural noun, indirect object, dative)\njahalgi = stole (verb, past)\nmaːgtirsu = for the young man (dative phrase)\nay = I (1st person singular pronoun)\nbeyyeːcciːg = necklaces (plural noun, direct object)\najaːnirri = am buying (verb, present progressive)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object – (Indirect Object).\n2. The indirect object follows the direct object and carries a dative‑like suffix (‑su, ‑ra, etc.).\n3. Verbs appear in a single form that encodes tense (past, present, future) but do not change position.\n4. Nouns do not show overt case on the subject; case marking is only visible on the indirect object.\n5. Definite articles are not overt; nouns appear in their bare form.\n6. Pronouns function as subjects and appear before the verb.\n7. The dative suffix ‑su marks the recipient of an action; ‑ra appears to be a variant used after certain phonological environments.",
+          "metrics": {
+            "corpus_bleu": 2.15,
+            "corpus_chrfpp": 17.97,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              7.65,
+              5.67,
+              9.04,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              16.34,
+              14.83,
+              15.45,
+              31.24,
+              11.96
+            ],
+            "sentence_ter": [
+              140.0,
+              71.43,
+              120.0,
+              66.67,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces.",
+              "We will give the camels to the neighbours.",
+              "The owner repaired the chicken.",
+              "The dogs were given to the owner."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 22.57,
+          "accumulated_dict": "ar = we (1st person plural pronoun)\nay = I (1st person singular pronoun)\njaːnticcirsu = neighbours (plural noun, indirect object, dative)\ntirt = the owner (noun, subject)\nkadeːg = repaired (verb, past)\nallesu = dress (noun, direct object)\njahali = young men (plural noun, subject)\nwaliːg = will give (verb, future)\ndarbadki = chicken (noun, direct object)\nbiticcirra = dogs (plural noun, indirect object, dative)\njahalgi = stole (verb, past)\nmaːgtirsu = for the young man (dative phrase)\nbeyyeːcciːg = necklaces (plural noun, direct object)\najaːnirri = am buying (verb, present progressive)\nkanarriːcciːg = camels (plural noun, direct object)\nkamiːg = camels (alternative form)\nwal = dog (subject)\nbaːbiːg = doors (direct object)\neldeːnsu = for me (dative)\nmagas = thief (subject)\nikki = you (plural object pronoun)\nmagaski = men (subject)\ntirsa = to the thief (dative)",
+          "accumulated_rules": "1. Basic clause order: Subject – Verb – Direct Object – Indirect Object (dative).\n2. The indirect object follows the direct object and bears a dative suffix ‑su, ‑ra, or ‑rsu.\n3. Verbs are invariant for person; tense is expressed by a single verb form (past, present‑progressive, future).\n4. Subjects (including pronouns) are unmarked for case; only indirect objects show overt case marking.\n5. Pronouns appear before the verb when they function as the subject.\n6. The dative suffix ‑su marks the recipient; ‑ra is a phonologically conditioned variant that appears after stems ending in a vowel.\n7. Plural nouns often end in ‑g or ‑riːg; singular nouns lack this plural marker.\n8. The present‑progressive is formed with the suffix ‑nirri on the verb stem; past with ‑gi, future with ‑liːg.",
+          "metrics": {
+            "corpus_bleu": 1.84,
+            "corpus_chrfpp": 15.18,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              4.03,
+              6.27,
+              5.67,
+              10.4
+            ],
+            "sentence_chrfpp": [
+              13.35,
+              15.8,
+              15.3,
+              15.15,
+              16.39
+            ],
+            "sentence_ter": [
+              120.0,
+              100.0,
+              120.0,
+              116.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog found the doors for me.",
+              "The thief will give you (pl.) the dogs.",
+              "The men gave the camels to the thief.",
+              "We repaired the dress for the young men.",
+              "I am buying necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 29.7,
+          "accumulated_dict": "ay = I (1st person singular pronoun)\nar = we (1st person plural pronoun)\nikki = you (plural object pronoun)\ntirt = the owner (noun, subject)\nmagas = thief (noun, subject)\nmagaski = men (noun, subject)\njahali = young men (noun, plural subject)\nmaːgtirsu = for the young man (dative phrase)\ntirsa = to the thief (dative)\neldeːnsu = for me (dative)\njaːnticcirsu = neighbours (plural noun, indirect object, dative)\nbiticcirra = dogs (plural noun, indirect object, dative)\nbeyyeːcciːg = necklaces (plural noun, direct object)\nallesu = dress (noun, direct object)\ndarbadki = chicken (noun, direct object)\nwal = dog (noun, subject)\nbaːbiːg = doors (plural noun, direct object)\nkadeːg = repaired (verb, past)\njahalgi = stole (verb, past)\nwaliːg = will give (verb, future)\najaːnirri = am buying (verb, present progressive)\nkanarriːcciːg = camels (plural noun, direct object)\nkamiːg = camels (alternative form)\nhanuːg = donkey (noun, direct object)\nsarkaːyi = cowards (noun, subject)\nbeyyeːcciːg = necklaces (plural noun, direct object)\nadeːnda = me (dative pronoun)",
+          "accumulated_rules": "1. Basic clause order: Subject – Verb – Direct Object – Indirect Object (dative).\n2. The indirect object follows the direct object and bears a dative suffix ‑su, ‑ra, or ‑rsu (‑ra after vowel‑final stems).\n3. Verbs are invariant for person; tense is expressed by a single verb form: past ‑gi, present‑progressive ‑nirri, future ‑liːg.\n4. Subjects (including pronouns) are unmarked for case; only indirect objects show overt case marking.\n5. Pronouns appear before the verb when they function as the subject.\n6. Plural nouns often end in ‑g or ‑riːg; singular nouns lack this plural marker.\n7. Negation is expressed by placing the particle **na** immediately before the verb.\n8. Yes‑no questions are formed by adding the particle **ka** at the end of the clause.\n9. Relative or subordinate clauses precede the main clause and are linked with the particle **‑ti** attached to the verb of the subordinate clause.\n10. When a clause contains both a direct and an indirect object, the indirect object takes the dative suffix and follows the direct object.",
+          "metrics": {
+            "corpus_bleu": 2.1,
+            "corpus_chrfpp": 17.07,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              6.57,
+              6.57,
+              6.27,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              17.15,
+              14.98,
+              20.08,
+              19.21,
+              13.2
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will strike the donkey.",
+              "The cowards are giving me the necklaces.",
+              "We repaired the dress for the neighbours.",
+              "The thief stole the chicken from the dogs.",
+              "I am buying camels for me."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.15,
+        "corpus_chrfpp": 17.97,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.77,
+          7.65,
+          5.67,
+          9.04,
+          6.57
+        ],
+        "sentence_chrfpp": [
+          16.34,
+          14.83,
+          15.45,
+          31.24,
+          11.96
+        ],
+        "sentence_ter": [
+          140.0,
+          71.43,
+          120.0,
+          66.67,
+          120.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He stole the dresses for the young man.",
+          "I am buying the necklaces.",
+          "We will give the camels to the neighbours.",
+          "The owner repaired the chicken.",
+          "The dogs were given to the owner."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 79.27,
+          "metrics": {
+            "corpus_bleu": 7.39,
+            "corpus_chrfpp": 38.39,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.54,
+              13.89,
+              10.68,
+              5.67,
+              14.46
+            ],
+            "sentence_chrfpp": [
+              37.46,
+              38.56,
+              29.98,
+              29.27,
+              58.95
+            ],
+            "sentence_ter": [
+              80.0,
+              42.86,
+              80.0,
+              116.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thieves will buy the men.",
+              "I bought the necklaces for the doors.",
+              "I will strike the donkey.",
+              "They will give the men to the camels.",
+              "I will give the chicken. === END ==="
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 7.39,
+        "corpus_chrfpp": 38.39,
+        "corpus_ter": 78.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.54,
+          13.89,
+          10.68,
+          5.67,
+          14.46
+        ],
+        "sentence_chrfpp": [
+          37.46,
+          38.56,
+          29.98,
+          29.27,
+          58.95
+        ],
+        "sentence_ter": [
+          80.0,
+          42.86,
+          80.0,
+          116.67,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thieves will buy the men.",
+          "I bought the necklaces for the doors.",
+          "I will strike the donkey.",
+          "They will give the men to the camels.",
+          "I will give the chicken. === END ==="
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 263.88,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 5,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 56.68,
+          "metrics": {
+            "corpus_bleu": 3.46,
+            "corpus_chrfpp": 22.4,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              12.87,
+              4.93,
+              5.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              36.11,
+              23.4,
+              15.22,
+              21.96
+            ],
+            "sentence_ter": [
+              120.0,
+              71.43,
+              160.0,
+              116.67,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "The young men will give the chicken to the dogs.",
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.46,
+        "corpus_chrfpp": 22.4,
+        "corpus_ter": 103.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.52,
+          12.87,
+          4.93,
+          5.67,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          12.11,
+          36.11,
+          23.4,
+          15.22,
+          21.96
+        ],
+        "sentence_ter": [
+          120.0,
+          71.43,
+          160.0,
+          116.67,
+          60.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We bought the camels for the neighbours.",
+          "The owner repaired the dress.",
+          "The young men will give the chicken to the dogs.",
+          "He stole the dresses for the young man.",
+          "I am buying the necklaces."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 3.46,
+        "chrf_delta": 22.4,
+        "ter_delta": 3.57,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 3.09,
+      "chrf": 10.01,
+      "ter": 120.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “My light is shining.”",
+      "reference": "The thieves are striking us."
+    },
+    "baseline": {
+      "best_bleu": 4.71,
+      "best_chrf": 31.28,
+      "best_ter": 75.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The thief will give the neighbour.",
+        "I will buy the neighbour’s doors.",
+        "He will strike the donkey.",
+        "He gave the neighbour the camels.",
+        "I will strike the donkey."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 18.4,
+      "best_chrf": 41.93,
+      "best_ter": 53.57,
+      "best_em": 0.0,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "The thief will ajom the argi.",
+        "I repair the camels for the door.",
+        "The donkey found the tirti.",
+        "tirti argi gave the deːc.",
+        "I strike the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 2.15,
+      "best_chrf": 17.97,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "He stole the dresses for the young man.",
+        "I am buying the necklaces.",
+        "We will give the camels to the neighbours.",
+        "The owner repaired the chicken.",
+        "The dogs were given to the owner."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 7.39,
+      "best_chrf": 38.39,
+      "best_ter": 78.57,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The thieves will buy the men.",
+        "I bought the necklaces for the doors.",
+        "I will strike the donkey.",
+        "They will give the men to the camels.",
+        "I will give the chicken. === END ==="
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 3.46,
+      "best_chrf": 22.4,
+      "best_ter": 103.57,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "We bought the camels for the neighbours.",
+        "The owner repaired the dress.",
+        "The young men will give the chicken to the dogs.",
+        "He stole the dresses for the young man.",
+        "I am buying the necklaces."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "delta": {
+        "bleu_delta": 3.46,
+        "chrf_delta": 22.4,
+        "ter_delta": 3.57,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

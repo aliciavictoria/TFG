@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T23:06:05.595537",
+    "puzzle_id": "linguini_012023050200",
+    "language": "Supyire",
+    "task_type": "num_to_text",
+    "model_key": "llama-3.3-70b-sambanova"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.6,
+        "corpus_ter": 3833.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.6
+        ],
+        "sentence_ter": [
+          3833.33
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "A challenge!\n\nAfter some research, I found that Supyire is a language spoken in Burkina Faso and Mali. While I couldn't find a comprehensive resource on the Supyire language, I did come across a few online sources that provide some basic vocabulary and grammar.\n\nBased on my limited knowledge, I'm going to take a guess that the number 15 in Supyire might be written as \"kɛɛrɛ\" or \"kɛrɛ\" (pronounced \"keh-reh\" or \"kehr-eh\"). However, please note that this is a very uncertain guess, and I may be completely off the mark.\n\nIf you have any more information or context about the Supyire language or its numbering system, I'd be happy to try and help you further!"
+        ],
+        "references": [
+          "kɛ na kaŋkuro"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "metrics": {
+        "corpus_bleu": 8.26,
+        "corpus_chrfpp": 46.6,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          55.03,
+          7.81,
+          8.52,
+          21.36,
+          15.25
+        ],
+        "sentence_chrfpp": [
+          64.76,
+          26.45,
+          43.94,
+          47.97,
+          56.79
+        ],
+        "sentence_ter": [
+          33.33,
+          100.0,
+          71.43,
+          100.0,
+          44.44
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "beɲjaaga na kaŋkuro",
+          "ŋkwuu na beetaanre na baashuunni na niŋkin",
+          "ŋkwuu na taanre na baashuunni",
+          "kampwoo na kaŋkuro na baashuunni",
+          "kampwɔhii sicyɛɛre na ŋkwuu na beetaanre na baashuunni"
+        ],
+        "references": [
+          "kɛ na kaŋkuro",
+          "ŋkuu na beɲjaaga na baaricyɛɛre",
+          "ŋkuu na beetaanre na kɛ na shuunni",
+          "kampwoo na taanre",
+          "kampwɔhii taanre na ŋkwuu sicyɛɛre na kɛ na sicyɛɛre"
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true,
+        "exact_match_strict": 0.0
+      },
+      "hypotheses": [
+        "beɲjaaga na kaŋkuro",
+        "ŋkwuu na beetaanre na baashuunni na niŋkin",
+        "ŋkwuu na taanre na baashuunni",
+        "kampwoo na kaŋkuro na baashuunni",
+        "kampwɔhii sicyɛɛre na ŋkwuu na beetaanre na baashuunni"
+      ],
+      "references": [
+        "kɛ na kaŋkuro",
+        "ŋkuu na beɲjaaga na baaricyɛɛre",
+        "ŋkuu na beetaanre na kɛ na shuunni",
+        "kampwoo na taanre",
+        "kampwɔhii taanre na ŋkwuu sicyɛɛre na kɛ na sicyɛɛre"
+      ],
+      "latency_s": 7.45
+    }
+  }
+}

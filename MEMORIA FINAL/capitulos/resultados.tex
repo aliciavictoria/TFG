@@ -1,47 +1,49 @@
 \chapter{Resultados}
 \label{cap:resultados}
 
-Este capítulo presenta los resultados obtenidos en los experimentos sobre los 16 puzzles del benchmark \textsc{Linguini}, organizados por metodología. La métrica principal es chrF++. Los valores {\color{gray}---} corresponden a experimentos pendientes de relanzamiento por agotamiento de cuota de API; se incorporarán antes de la entrega.
+Este capítulo presenta los resultados obtenidos sobre los 11 puzles, que se indicarán en las tablas de los resultados, de dirección lengua\,$\rightarrow$\,inglés del benchmark \textsc{Linguini}, organizados por metodología. La métrica principal utilizada y representada en las tablas es \textbf{chrF++}, calculada a nivel de corpus sobre el conjunto de frases de test de cada puzle. Esta métrica se toma como referencia principal porque permite captar coincidencias parciales entre la hipótesis generada y la referencia, algo especialmente útil en frases cortas y en problemas donde pequeños cambios morfológicos pueden afectar de forma notable a la puntuación.
 
-Los modelos evaluados son Llama-3.1-8B (tier débil), Llama-3.3-70B (tier medio, ejecutado via SambaNova) y GPT-OSS-120B (tier fuerte, via OpenRouter).
-
+Los modelos evaluados son \textbf{Llama-3.1-8B}, \textbf{Llama-3.3-70B} y \textbf{GPT-OSS-120B}. Como se indicó en la Tabla~\ref{tab:modelos}, en este trabajo se agrupan en tres niveles orientativos de capacidad: débil, medio y fuerte. Esta clasificación no corresponde a una categoría oficial de los proveedores, sino más bien se trata de una división interna que basamos en el tamaño del modelo. Así, Llama-3.1-8B se utiliza como modelo de menor capacidad, Llama-3.3-70B como modelo intermedio y GPT-OSS-120B como modelo de mayor capacidad. Los resultados se han recalculado a partir de los logs crudos generados por el sistema experimental, separando la captura de respuestas del cálculo posterior de métricas, como se describe en la sección~\ref{sec:arquitectura-general}.
 
 % ─────────────────────────────────────────────────────────────
 \section{M0 — Verificación previa}
 \label{sec:resultados_m0}
 % ─────────────────────────────────────────────────────────────
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
-	\caption{chrF++ — M0. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
-	\label{tab:resultados_m0}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	\caption{chrF++ de M0 (verificación previa). Un valor inferior a 20 indica que el modelo no reconoce la lengua según nuestro criterio. En negrita, valor más alto por puzle.}
+	\label{tab:m0-verificacion}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{1.00\textwidth}{@{\extracolsep{\fill}} lccc}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
 			\midrule
-			Hakhun & →EN & 1.3 & 1.6 & \textbf{2.5} \\
-			Hakhun & EN→ & 1.1 & \textbf{1.5} & 1.5 \\
-			Ngemba & →EN & 4.1 & 3.6 & \textbf{14.0} \\
-			Yonggom & →EN & 5.1 & 3.1 & \textbf{8.3} \\
-			Yonggom & EN→ & \textbf{3.2} & {\color{gray}---} & 3.1 \\
-			Warlpiri & →EN & 4.8 & 3.1 & \textbf{8.4} \\
-			Wambaya & EN→ & 1.6 & {\color{gray}---} & \textbf{1.9} \\
-			Apurinã & →EN & 0.2 & {\color{gray}---} & \textbf{7.8} \\
-			Apurinã & EN→ & 1.3 & {\color{gray}---} & \textbf{2.2} \\
-			N|uuki & EN→ & 0.2 & {\color{gray}---} & \textbf{5.8} \\
-			Coastal Marind & →EN & 1.5 & {\color{gray}---} & \textbf{3.0} \\
-			Dyirbal & →EN & 7.2 & {\color{gray}---} & \textbf{17.9} \\
-			Kunuz Nubian & →EN & 5.0 & {\color{gray}---} & \textbf{12.1} \\
-			Inuktitut & →EN & 3.0 & {\color{gray}---} & \textbf{8.6} \\
-			Tzeltal & →EN & 3.5 & {\color{gray}---} & \textbf{6.5} \\
-			Lakota & →EN & 8.8 & {\color{gray}---} & \textbf{13.6} \\
+			Hankun & 1.6 & 1.0 & \textbf{6.5} \\
+			Ngemba & 4.4 & 4.1 & \textbf{9.9} \\
+			Yonggom & 5.1 & 3.8 & \textbf{6.2} \\
+			Warlpiri & 4.7 & 4.2 & \textbf{9.1} \\
+			Apurinã & 0.2 & 3.7 & \textbf{7.5} \\
+			Marind costero & 1.4 & 2.0 & \textbf{4.0} \\
+			Dyirbal & 7.0 & 7.9 & \textbf{17.9} \\
+			Nubio kunuz & 4.5 & 4.6 & \textbf{10.0} \\
+			Inuktitut & 3.1 & 3.3 & \textbf{8.8} \\
+			Tzeltal & 3.9 & 4.7 & \textbf{5.0} \\
+			Lakota & 8.4 & 6.5 & \textbf{14.3} \\
+			\midrule
+			\textbf{Media} & \textbf{4.0} & \textbf{4.2} & \textbf{9.0} \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-La estrategia M0 verifica que el modelo no conozca previamente la lengua del puzzle. Un chrF++ inferior a 20 se considera indicativo de desconocimiento. En todos los casos los valores están por debajo de 18, confirmando la validez del supuesto experimental. El valor más alto corresponde a Dyirbal con el modelo 120B (chrF=17.9), posiblemente por su presencia en la literatura lingüística accesible durante el preentrenamiento.
+M0 actúa como control exploratorio previo de verificación de contaminación de datos. Su objetivo se reduce a comprobar si el modelo puede producir una traducción razonable sin haber recibido ningún ejemplo de entrenamiento. Un chrF++ inferior a 20 se interpreta como indicio de que el modelo no reconoce la lengua de forma suficiente como para resolver la tarea directamente \citep{sanchez2024linguini}.
+
+Como se observa en la tabla~\ref{tab:m0-verificacion}, los tres modelos se mantienen por debajo de ese umbral en todos los puzles. Las medias son bajas en los tres casos: 4.0 para Llama-3.1-8B, 4.2 para Llama-3.3-70B y 9.0 para GPT-OSS-120B. Esto no demuestra que las lenguas estén completamente ausentes de los datos de preentrenamiento, pero sí reduce la probabilidad de que los resultados posteriores se deban a un conocimiento directo de las respuestas. Además, al revisar las salidas de M0, se observa que en muchos casos el modelo responde con una hipótesis claramente aleatoria o con una frase explicativa indicando que no dispone de información suficiente para traducir la lengua.
+
+Los valores más altos aparecen en GPT-OSS-120B para Dyirbal, con chrF++=17.9, y para Lakota, con chrF++=14.3. Aunque ambos siguen por debajo del umbral, son los casos más cercanos a 20 y, por tanto, conviene interpretarlos con cautela. En Dyirbal, además, los otros dos modelos también obtienen valores relativamente altos en comparación con el resto de lenguas, lo que podría indicar una mayor presencia pública de esta lengua o una mayor coincidencia superficial con la referencia. En Lakota, el valor elevado aparece principalmente en GPT-OSS-120B, por lo que puede deberse a una respuesta parcialmente próxima a la referencia sin que ello implique necesariamente conocimiento directo del puzle.
+
+En conjunto, M0 permite mantener el supuesto experimental básico: antes de recibir los ejemplos del puzle, los modelos no parecen disponer de información suficiente para traducir correctamente las frases de test.
 
 
 % ─────────────────────────────────────────────────────────────
@@ -49,232 +51,488 @@ La estrategia M0 verifica que el modelo no conozca previamente la lengua del puz
 \label{sec:resultados_m1}
 % ─────────────────────────────────────────────────────────────
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
-	\caption{chrF++ — M1. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\caption{chrF++ de M1 (baseline: todos los ejemplos de entrenamiento de una sola vez). En negrita, valor más alto por puzle.}
 	\label{tab:resultados_m1}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}} lrrr}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
 			\midrule
-			Hakhun & →EN & \textbf{42.2} & 32.9 & {\color{gray}---} \\
-			Hakhun & EN→ & 8.9 & \textbf{44.7} & {\color{gray}---} \\
-			Ngemba & →EN & 42.6 & \textbf{47.5} & 22.5 \\
-			Yonggom & →EN & 4.1 & 19.7 & \textbf{31.2} \\
-			Yonggom & EN→ & \textbf{5.6} & {\color{gray}---} & {\color{gray}---} \\
-			Warlpiri & →EN & 39.6 & \textbf{46.8} & 28.2 \\
-			Wambaya & EN→ & \textbf{7.0} & {\color{gray}---} & {\color{gray}---} \\
-			Apurinã & →EN & \textbf{12.4} & {\color{gray}---} & {\color{gray}---} \\
-			Apurinã & EN→ & \textbf{4.7} & {\color{gray}---} & {\color{gray}---} \\
-			N|uuki & EN→ & 3.8 & {\color{gray}---} & \textbf{36.7} \\
-			Coastal Marind & →EN & \textbf{3.4} & {\color{gray}---} & {\color{gray}---} \\
-			Dyirbal & →EN & 10.2 & {\color{gray}---} & \textbf{18.7} \\
-			Kunuz Nubian & →EN & \textbf{45.8} & {\color{gray}---} & 34.6 \\
-			Inuktitut & →EN & \textbf{59.5} & {\color{gray}---} & 46.4 \\
-			Tzeltal & →EN & \textbf{46.4} & {\color{gray}---} & {\color{gray}---} \\
-			Lakota & →EN & 37.8 & {\color{gray}---} & \textbf{59.3} \\
+			Hankun          & 14.7              & 81.7              & \textbf{100.0} \\
+			Ngemba          & {\color{gray}---} & \textbf{50.0}     & 41.5          \\
+			Yonggom         & 38.3              & \textbf{43.8}     & 36.5          \\
+			Warlpiri        & 44.6              & \textbf{73.1}     & 36.8          \\
+			Apurinã         & 12.3              & \textbf{33.5}     & 27.0          \\
+			Marind costero  & \textbf{40.4}     & 37.7              & 28.6          \\
+			Dyirbal         & 32.1              & \textbf{55.5}     & 22.3          \\
+			Nubio kunuz     & 47.4              & \textbf{47.7}     & 31.3          \\
+			Inuktitut       & 52.0              & \textbf{57.2}     & 40.5          \\
+			Tzeltal         & 33.6              & \textbf{48.7}     & 38.9          \\
+			Lakota          & 39.3              & \textbf{62.6}     & 42.7          \\
+			\midrule
+			\textbf{Media}      & \textbf{35.5} & \textbf{53.8} & \textbf{40.6} \\
+			($\sigma$) & ($\pm$12.4) & ($\pm$13.8) & ($\pm$19.8) \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-Los resultados de M1 muestran una varianza considerable entre lenguas. Los valores más altos corresponden a Inuktitut con el modelo 8B (chrF=59.5) y Lakota con el 120B (chrF=59.3), mientras que Coastal Marind y Yonggom obtienen los valores más bajos. El modelo 70B supera al 8B en los puzzles donde ambos tienen datos, aunque la diferencia no es sistemática. Estos valores sirven de referencia directa con el baseline de \citet{sanchez2024linguini}.
+M1 establece la línea de base del experimento. En esta metodología, el modelo recibe todos los ejemplos de entrenamiento en un único prompt y debe inferir directamente el diccionario, las reglas gramaticales y las traducciones de test.
 
+El mejor comportamiento medio en M1 lo obtiene Llama-3.3-70B, con chrF++=53.8. Este modelo supera a los otros dos en la mayoría de puzles y destaca especialmente en Hankun (81.7) y Warlpiri (73.1). Lo más relevante no es solo el valor absoluto, sino el incremento respecto a M0: este modelo pasa de una media de 4.2 en la verificación previa a 53.8 en M1, lo que supone una mejora de 49.6 puntos. Este salto indica que el modelo no resolvía los puzles de forma directa antes de recibir ejemplos, pero sí es capaz de aprovechar el contexto de entrenamiento cuando se le proporciona en el prompt.
+
+GPT-OSS-120B obtiene una media de 40.6. Su resultado más alto aparece en Hankun (100.0), donde supera claramente al resto de modelos, pero en otros puzles queda por debajo del modelo de 70B. Los casos más bajos son Dyirbal (22.3), Apurinã (27.0) y Marind costero (28.6). Respecto a M0, GPT-OSS-120B pasa de una media de 9.0 a 40.6, con una mejora de 31.6 puntos. Esto indica que, aunque el modelo grande puede resolver muy bien algunos puzles concretos, su rendimiento no es uniforme, por ello también calculamos la desviación típica que es ligeramente más elevada en el modelo de razonamiento frente a los otros dos.
+
+Llama-3.1-8B alcanza una media de 35.5 sobre los puzles con datos disponibles. Aunque es el modelo más pequeño, consigue resultados competitivos en varios casos, como Inuktitut (52.0), Nubio kunuz (47.4), Warlpiri (44.6) y Marind costero (40.4). Frente a M0, donde obtenía una media de 4.0, M1 supone una mejora de 31.5 puntos. El caso de Ngemba queda sin valor extraíble porque Llama-3.1-8B agotó el presupuesto de tokens durante la fase de análisis del diccionario, antes de alcanzar la sección \texttt{TRANSLATIONS}. Esto puede suceder debido a que Ngemba es uno de los puzles con más pares de entrenamiento de todo el benchmark, lo que provoca que el modelo más pequeño genere un análisis excesivamente extenso antes de producir las traducciones.
+
+La conclusión principal de M1 es que proporcionar todos los ejemplos de entrenamiento en el prompt produce una mejora clara respecto al control M0 en los tres modelos. Sin embargo, el tamaño del modelo no explica por sí solo el rendimiento. Llama-3.3-70B es claramente el mejor baseline, mientras que GPT-OSS-120B solo domina en algunos casos concretos. Esto refuerza la necesidad de comparar metodologías y no asumir que el modelo de mayor tamaño será automáticamente el más eficaz en todos los puzles.
 
 % ─────────────────────────────────────────────────────────────
-\section{M2 — Incremental por combinaciones}
+\section{M2 — Incremental acumulativo}
 \label{sec:resultados_m2}
 % ─────────────────────────────────────────────────────────────
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
-	\caption{chrF++ — M2. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\caption{chrF++ de M2 (incremental acumulativo, último paso). Se reporta el último paso, cuando el modelo ha recibido todos los ejemplos, como resultado principal (véase tabla~\ref{tab:decisiones-tecnicas}). En negrita, valor más alto por puzle.}
 	\label{tab:resultados_m2}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}} lrrr}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
 			\midrule
-			Hakhun & →EN & 35.8 & \textbf{80.4} & 53.7 \\
-			Hakhun & EN→ & \textbf{55.7} & 49.3 & 52.5 \\
-			Ngemba & →EN & {\color{gray}---} & 44.5 & \textbf{47.0} \\
-			Yonggom & →EN & 37.9 & 36.9 & \textbf{42.4} \\
-			Yonggom & EN→ & \textbf{22.6} & {\color{gray}---} & 19.5 \\
-			Warlpiri & →EN & 36.7 & \textbf{37.8} & 26.6 \\
-			Wambaya & EN→ & \textbf{35.2} & {\color{gray}---} & 34.4 \\
-			Apurinã & →EN & \textbf{40.1} & {\color{gray}---} & 35.6 \\
-			Apurinã & EN→ & {\color{gray}---} & {\color{gray}---} & \textbf{25.4} \\
-			N|uuki & EN→ & {\color{gray}---} & {\color{gray}---} & \textbf{56.2} \\
-			Coastal Marind & →EN & \textbf{41.8} & {\color{gray}---} & 30.4 \\
-			Dyirbal & →EN & 38.4 & {\color{gray}---} & \textbf{39.8} \\
-			Kunuz Nubian & →EN & 37.7 & {\color{gray}---} & \textbf{38.5} \\
-			Inuktitut & →EN & \textbf{46.6} & {\color{gray}---} & 34.2 \\
-			Tzeltal & →EN & 23.1 & {\color{gray}---} & \textbf{52.8} \\
-			Lakota & →EN & \textbf{60.1} & {\color{gray}---} & 54.1 \\
+			Hankun          & 54.8              & 79.3              & \textbf{91.7} \\
+			Ngemba          & 21.6              & \textbf{46.9}     & 42.3          \\
+			Yonggom         & \textbf{38.7}     & 32.0              & 36.2          \\
+			Warlpiri        & 32.3              & \textbf{53.0}     & 40.8          \\
+			Apurinã         & 23.5              & 35.5              & \textbf{55.1} \\
+			Marind costero  & 24.1              & \textbf{26.5}     & 19.6          \\
+			Dyirbal         & 33.9              & \textbf{38.1}     & 35.9          \\
+			Nubio kunuz     & 33.4              & 39.5              & \textbf{41.9} \\
+			Inuktitut       & 38.0              & 50.3              & \textbf{65.9} \\
+			Tzeltal         & 39.5              & 41.9              & \textbf{43.9} \\
+			Lakota          & 29.4              & 53.1              & \textbf{60.1} \\
+			\midrule
+			\textbf{Media}      & \textbf{33.6} & \textbf{45.1} & \textbf{48.5} \\
+			($\sigma$) & ($\pm$9.0) & ($\pm$13.6) & ($\pm$18.2) \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-M2 es la aportación metodológica principal de este trabajo y no tiene equivalente directo en la literatura. Comparada con el baseline M1 sobre los mismos puzzles y modelos, M2 supera a M1 en el 62\,\% de los casos con diferencia superior a un punto (16 de 26 pares con datos). El resultado más destacado es Hakhun lang2en con el modelo 70B: chrF=80.4 en el paso 9, frente a chrF=32.9 en M1 ($\Delta$=+47.5).
+M2 es una de las metodologías principales del trabajo. A diferencia de M1, no presenta todos los ejemplos de entrenamiento de una sola vez, sino que incorpora subconjuntos crecientes y obliga al modelo a revisar el diccionario y las reglas acumuladas en cada paso. Para evitar una selección optimista, se reporta siempre el último paso, es decir, aquel en el que el modelo ya ha recibido todos los ejemplos.
 
-Sin embargo, M2 no supera sistemáticamente a M1. En puzzles con pocas frases de entrenamiento (Kunuz Nubian, 10 frases) o donde el modelo infiere bien desde el contexto completo (Inuktitut, Tzeltal con el 8B), la ventaja del incremental se invierte. El beneficio de M2 depende tanto del tamaño del modelo como de la complejidad morfológica de la lengua.
+El comportamiento de M2 depende mucho del modelo. En GPT-OSS-120B, M2 mejora claramente respecto a M1: la media pasa de 40.6 a 48.5. Las mejoras más importantes aparecen en Apurinã (+28.1), Inuktitut (+25.4) y Lakota (+17.4). En estos casos, la presentación progresiva parece ayudar al modelo a construir hipótesis más estables antes de llegar a la traducción final.
 
+Sin embargo, como podemos observar, M2 no mejora todos los puzles respecto a M1. En GPT-OSS-120B baja en Hankun (-8.3), Marind costero (-9.0) y Yonggom (-0.3), y apenas mejora Ngemba (+0.8). Esto muestra que la acumulación incremental puede introducir ruido cuando el modelo arrastra hipótesis incorrectas de pasos anteriores o cuando el baseline ya resuelve bien el puzle.
+
+En Llama-3.1-8B ocurre lo contrario: M2 obtiene una media de 33.6, inferior a su M1 (35.5). Aun así, hay mejoras concretas en Hankun (de 14.7 a 54.8), Apurinã (de 12.3 a 23.5), Dyirbal (de 32.1 a 33.9) y Tzeltal (de 33.6 a 39.5). El patrón sugiere que el modelo pequeño puede beneficiarse de la estrategia incremental en algunos puzles, pero le cuesta mantener de forma estable el diccionario y las reglas acumuladas a lo largo de muchos pasos.
+
+En Llama-3.3-70B, M2 alcanza una media de 45.1, por debajo de su baseline M1 (53.8). Solo mejora en Apurinã y no con diferencia relevante (de 33.5 a 35.5), mientras que empeora en la mayoría de los demás puzles. Esto indica que, para el 70B, la presentación directa de todos los ejemplos resulta más eficaz que el proceso incremental.
+
+En conjunto, M2 es especialmente útil para GPT-OSS-120B, pero no se comporta igual en los otros modelos. La estrategia parece requerir una capacidad suficiente para mantener y revisar hipótesis acumuladas sin degradarlas; cuando esto no ocurre, el proceso incremental puede ser peor que presentar todo el contexto desde el principio.
 
 % ─────────────────────────────────────────────────────────────
 \section{M3 — Step-by-step lingüístico}
 \label{sec:resultados_m3}
 % ─────────────────────────────────────────────────────────────
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
-	\caption{chrF++ — M3. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\caption{chrF++ de M3 (step-by-step lingüístico, etapa de sintaxis). En negrita, valor más alto por puzle. *\,=\,extracción incompleta en alguna etapa.}
 	\label{tab:resultados_m3}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}} lrrr}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
 			\midrule
-			Hakhun & →EN & 7.9 & \textbf{26.6} & 9.0 \\
-			Hakhun & EN→ & 27.9 & \textbf{49.9} & 8.7 \\
-			Ngemba & →EN & 16.5 & \textbf{19.9} & 12.5 \\
-			Yonggom & →EN & 26.3 & \textbf{34.1} & 34.1 \\
-			Yonggom & EN→ & 11.1 & {\color{gray}---} & \textbf{12.2} \\
-			Warlpiri & →EN & 11.0 & \textbf{15.5} & 15.5 \\
-			Wambaya & EN→ & 23.3 & {\color{gray}---} & \textbf{28.5} \\
-			Apurinã & →EN & {\color{gray}---} & {\color{gray}---} & \textbf{25.8} \\
-			Apurinã & EN→ & 11.9 & {\color{gray}---} & \textbf{17.7} \\
-			N|uuki & EN→ & 12.1 & {\color{gray}---} & \textbf{14.7} \\
-			Coastal Marind & →EN & \textbf{26.9} & {\color{gray}---} & 19.0 \\
-			Dyirbal & →EN & \textbf{34.1} & {\color{gray}---} & 31.4 \\
-			Kunuz Nubian & →EN & 22.2 & {\color{gray}---} & \textbf{24.6} \\
-			Inuktitut & →EN & 18.6 & {\color{gray}---} & \textbf{22.1} \\
-			Tzeltal & →EN & 19.1 & {\color{gray}---} & \textbf{19.5} \\
-			Lakota & →EN & 40.0 & {\color{gray}---} & \textbf{41.9} \\
+			Hankun          & 9.3               & 17.4              & \textbf{25.8} \\
+			Ngemba          & 14.2              & \textbf{19.8}     & 13.2          \\
+			Yonggom         & \textbf{19.8}     & 15.6              & 9.0           \\
+			Warlpiri        & 14.3              & 11.9              & \textbf{16.8} \\
+			Apurinã         & 20.4              & \textbf{20.9}     & 6.0           \\
+			Marind costero  & \textbf{10.8}     & 10.2              & 4.6           \\
+			Dyirbal         & \textbf{31.8}     & 28.9              & 28.9          \\
+			Nubio kunuz     & \textbf{20.7}     & 15.8              & 17.1          \\
+			Inuktitut       & \textbf{18.4}     & 17.9              & 10.7          \\
+			Tzeltal         & \textbf{19.5}     & 10.9$^*$          & 10.6          \\
+			Lakota          & 34.8$^*$          & \textbf{37.9}     & 37.8          \\
+			\midrule
+			\textbf{Media}      & \textbf{19.5} & \textbf{18.8} & \textbf{16.4} \\
+			($\sigma$) & ($\pm$7.5) & ($\pm$7.9) & ($\pm$9.9) \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-M3, inspirada en la estrategia de presentación por niveles lingüísticos de \citet{zhu2025evaluating}, produce resultados sistemáticamente inferiores a M2 en este dataset. La partición heurística por nivel (léxico, fonología, morfosintaxis, sintaxis) no corresponde a la estructura real de los puzzles de \textsc{Linguini}, donde las frases no están ordenadas por complejidad. En el trabajo original de \citet{zhu2025evaluating} la partición estaba curada manualmente puzzle a puzzle, lo que explica la diferencia. La comparación confirma que la estrategia step-by-step es sensible a la calidad de la partición: cuando esta es heurística, M2 la supera de forma consistente.
+M3 es la metodología con peor rendimiento global. Las medias son 19.5 para Llama-3.1-8B, 18.8 para Llama-3.3-70B y 16.4 para GPT-OSS-120B. En ningún modelo supera a M1 ni a M2 como estrategia general. La explicación más probable está en la partición heurística de los ejemplos. M3 divide el entrenamiento en cuatro etapas —léxico, fonología, morfosintaxis y sintaxis—, pero los puzles de Linguini no están diseñados ni ordenados para que cada bloque ilustre de forma clara uno de esos niveles. Como consecuencia, el modelo puede recibir en una etapa ejemplos que no corresponden realmente al fenómeno que se le está pidiendo analizar.
 
+Aun así, M3 deja un resultado interesante: el 8B obtiene la mejor media de los tres modelos en esta metodología y supera a GPT-OSS-120B en varios puzles. Esto puede deberse a que la división en etapas reduce el tamaño del contexto que el modelo debe procesar en cada turno. Para un modelo pequeño, esa simplificación puede ser útil, aunque no lo suficiente como para superar a metodologías más directas como M1.
+
+La conclusión es que el razonamiento paso a paso no debe descartarse, aunque esta metodología concreta no parece ser la más adecuada para el benchmark utilizado. Para funcionar mejor, necesitaría una partición lingüística más cuidada. Si los ejemplos no están seleccionados manualmente para ilustrar cada fenómeno, la estructura por etapas puede introducir más ruido que ayuda.
 
 % ─────────────────────────────────────────────────────────────
 \section{M4 — Inspiración humana}
 \label{sec:resultados_m4}
 % ─────────────────────────────────────────────────────────────
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
-	\caption{chrF++ — M4. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
+	\caption{chrF++ de M4 (inspiración humana). Hankun no se evalúa: es el puzle cuyo razonamiento humano se emplea como guía, para evitar \textit{data leakage}. En negrita, valor más alto por puzle. {\color{gray}---}: no extraíble.}
 	\label{tab:resultados_m4}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}} lrrr}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
 			\midrule
-			Hakhun & →EN & --- & --- & --- \\
-			Hakhun & EN→ & 5.7 & 67.1 & \textbf{74.3} \\
-			Ngemba & →EN & 30.9 & \textbf{48.5} & 34.4 \\
-			Yonggom & →EN & 5.7 & \textbf{43.0} & {\color{gray}---} \\
-			Yonggom & EN→ & 9.7 & {\color{gray}---} & \textbf{27.3} \\
-			Warlpiri & →EN & 1.6 & \textbf{44.6} & 29.3 \\
-			Wambaya & EN→ & \textbf{26.2} & {\color{gray}---} & {\color{gray}---} \\
-			Apurinã & →EN & \textbf{13.7} & {\color{gray}---} & 10.2 \\
-			Apurinã & EN→ & 4.7 & {\color{gray}---} & \textbf{34.8} \\
-			N|uuki & EN→ & 11.9 & {\color{gray}---} & \textbf{29.1} \\
-			Coastal Marind & →EN & 4.8 & {\color{gray}---} & \textbf{30.4} \\
-			Dyirbal & →EN & \textbf{41.7} & {\color{gray}---} & 18.0 \\
-			Kunuz Nubian & →EN & \textbf{7.4} & {\color{gray}---} & {\color{gray}---} \\
-			Inuktitut & →EN & 9.6 & {\color{gray}---} & \textbf{38.2} \\
-			Tzeltal & →EN & {\color{gray}---} & {\color{gray}---} & {\color{gray}---} \\
-			Lakota & →EN & \textbf{5.3} & {\color{gray}---} & {\color{gray}---} \\
+			Hankun          & {\color{gray}---} & {\color{gray}---} & {\color{gray}---} \\
+			Ngemba          & 24.4              & \textbf{46.5}     & 40.4              \\
+			Yonggom         & {\color{gray}---} & 33.6              & \textbf{43.0}     \\
+			Warlpiri        & {\color{gray}---} & \textbf{49.3}     & 39.5              \\
+			Apurinã         & 45.9              & 38.6              & \textbf{46.6}     \\
+			Marind costero  & 22.8              & \textbf{28.5}     & 27.1              \\
+			Dyirbal         & {\color{gray}---} & \textbf{45.7}     & 17.9              \\
+			Nubio kunuz     & 46.7              & \textbf{51.3}     & 39.1              \\
+			Inuktitut       & {\color{gray}---} & \textbf{51.1}     & 44.9              \\
+			Tzeltal         & 33.1              & \textbf{51.0}     & 46.8              \\
+			Lakota          & 31.4              & \textbf{65.5}     & 63.3              \\
+			\midrule
+			\textbf{Media$^\ddagger$} & \textbf{34.0} & \textbf{46.2} & \textbf{40.9} \\
+			($\sigma$) & ($\pm$9.4) & ($\pm$9.9) & ($\pm$11.4) \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-M4 muestra el patrón más interesante: beneficia fuertemente a los modelos medios y fuertes pero perjudica al débil. Para el 8B los valores son bajos (media 12.5), posiblemente porque el modelo no abstrae el proceso de razonamiento del ejemplo y tiende a copiar estructuras del puzzle de Hakhun. En contraste, el 70B y el 120B obtienen sus mejores resultados globales en M4 para Hakhun EN→ (chrF=67.1 y 74.3 respectivamente), superando a M2 en +17.8 y +21.8 puntos. M4 no se ejecuta sobre Hakhun →EN por ser el puzzle cuyo razonamiento se emplea como guía.
+M4 utiliza como guía una resolución humana del puzle de Hankun. El modelo que mejor aprovecha esta estrategia es Llama-3.3-70B, con una media de 46.2. Supera a GPT-OSS-120B en la mayoría de puzles evaluados bajo M4 y obtiene resultados especialmente altos en Lakota (65.5), Nubio kunuz (51.3), Inuktitut (51.1), Tzeltal (51.0) y Ngemba (46.5). Esto sugiere que el 70B es capaz de abstraer bien el procedimiento mostrado en el ejemplo humano y aplicarlo a nuevas lenguas.
 
+GPT-OSS-120B obtiene una media de 40.9. Sus mejores resultados aparecen en Lakota (63.3), Tzeltal (46.8), Apurinã (46.6), Inuktitut (44.9) y Yonggom (43.0). En varios de estos casos mejora claramente respecto a M1, lo que indica que la guía humana puede ayudar al modelo a organizar mejor el análisis cuando el puzle requiere prestar atención a marcas morfológicas o regularidades poco evidentes.
+
+Llama-3.1-8B obtiene una media de 34.0, pero debe interpretarse con cautela porque cuatro puzles no pudieron completarse o no produjeron traducciones extraíbles, por los problemas de extracción automática y agotamiento de tokens descritos en las secciones~\ref{subsec:respuestas-incompletas} y~\ref{subsec:bucles-repeticion}. El prompt de M4 es el más largo del sistema, ya que incluye el razonamiento humano completo, y esto afecta especialmente al modelo pequeño. En algunos casos el 8B genera análisis demasiado extensos y agota el presupuesto de tokens antes de llegar a la sección de traducciones.
+
+El resultado general de M4 se podría decir que es positivo, aunque no uniforme. La inspiración humana no actúa como una solución universal, pero sí mejora algunos puzles y resulta especialmente útil para Llama-3.3-70B. Esto sugiere que los ejemplos de razonamiento humano pueden ser una línea prometedora, siempre que se controle la longitud del prompt y se evite transferir contenido lingüístico del ejemplo al nuevo puzle. Tal vez se trate de darle al modelo más ejemplos de razonamiento para que funcione mejor.
+
+\subsection{Comparación cualitativa con la resolución humana}
+\label{subsec:m4-comparacion-humana}
+
+Además de los resultados cuantitativos, M4 permite analizar hasta qué punto una guía basada en razonamiento humano ayuda al modelo a organizar mejor su proceso de deducción. Para ello, se compara la resolución manual del puzle de Hankun con las respuestas generadas por los modelos, prestando atención no solo a la traducción final, sino también al diccionario, las reglas gramaticales y las hipótesis formuladas durante la resolución.
+
+La comparación con la respuesta del modelo en M1 muestra un patrón claro: el modelo identifica parte del léxico básico, especialmente algunos verbos y pronombres, pero tiene más dificultades para aplicar de forma consistente las marcas gramaticales. En el caso de Hankun, el sistema aspectual, es decir, la distinción entre presente y pasado, resulta especialmente problemático. El modelo llega a mencionar en su razonamiento la posibilidad de que \ipa{ʔ} esté relacionado con el pasado, pero no aplica esa hipótesis de manera uniforme a todas las formas verbales. Esto provoca traducciones en las que el significado léxico principal puede ser correcto, pero el tiempo verbal no coincide con la referencia. Este tipo de error es importante porque muestra que el problema no está solo en reconocer palabras aisladas, sino en mantener y aplicar una regla gramatical de forma sistemática.
+
+En M2, los primeros pasos producen traducciones más débiles porque el modelo todavía dispone de poca evidencia para deducir el sistema pronominal y aspectual completo. A medida que recibe más ejemplos, el rendimiento suele mejorar significativamente, aunque en algunos casos las hipótesis acumuladas introducen ruido y afectan a pasos posteriores. Esta evolución contrasta con la resolución humana, donde cada nuevo ejemplo permitió refinar las hipótesis anteriores sin perder las regularidades ya identificadas.
+
+Este contraste sugiere que una de las diferencias principales entre ambos procesos está en la estabilidad de las hipótesis. La persona que resuelve el puzle puede mantener una regla provisional, pero también revisarla cuando aparece nueva evidencia. El modelo, en cambio, puede formular una regla correcta y aun así no aplicarla de forma consistente, o puede conservar una hipótesis incorrecta durante varios pasos. Por ello, el análisis cualitativo resulta útil para complementar las métricas automáticas y entender mejor qué tipo de errores aparecen durante la resolución.
 
 % ─────────────────────────────────────────────────────────────
-\section{M5 — Autocorrección iterativa}
+\section{M5 — Segundo revisor}
 \label{sec:resultados_m5}
 % ─────────────────────────────────────────────────────────────
 
+\begin{table}[H]
+	\centering
+	\caption{chrF++ de M5 (segundo revisor, autocorrección iterativa). Se reporta el turno 2 (revisión final) como resultado principal. En negrita, T2 más alto por puzle entre los modelos disponibles. {\color{gray}---}: pendiente o no extraíble. $\dagger$\,=\,T1 vacío: el modelo agotó tokens antes de producir traducciones.}
+	\label{tab:resultados_m5}
+	{\fontsize{10pt}{11.5pt}\selectfont
+		\begin{tabular*}{0.98\textwidth}{@{\extracolsep{\fill}} lrrrrrr}
+			\toprule
+			\textbf{Lengua}
+			& \textbf{8B T1} & \textbf{8B T2}
+			& \textbf{70B T1} & \textbf{70B T2}
+			& \textbf{GPT T1} & \textbf{GPT T2} \\
+			\midrule
+			Hankun         & 10.7 & 8.3               & 77.8 & \textbf{26.6} & 72.0           & 3.3  \\
+			Ngemba         & 39.2 & \textbf{32.9}     & 49.4 & 20.9          & $\dagger$\,0.0 & 5.8  \\
+			Yonggom        & 36.1 & 36.0              & 42.8 & 38.2          & 31.4           & \textbf{40.2} \\
+			Warlpiri       & 44.6 & 40.9              & 58.2 & \textbf{44.1} & $\dagger$\,0.0 & 12.2 \\
+			Apurinã        & 20.1 & 24.4              & 50.6 & 27.4          & 42.9           & \textbf{38.2} \\
+			Marind costero & $\dagger$\,0.0 & 29.3     & 47.2 & \textbf{47.3} & 13.2           & 16.1 \\
+			Dyirbal        & 32.1 & \textbf{32.1}     & 44.2 & 28.3          & $\dagger$\,0.0 & 31.4 \\
+			Nubio kunuz    & 47.4 & \textbf{47.9}     & 47.7 & 16.6          & $\dagger$\,0.0 & 22.4 \\
+			Inuktitut      & 41.5 & 41.5              & 53.2 & 32.3          & 43.4           & \textbf{43.4} \\
+			Tzeltal        & 33.6 & 31.7              & 42.7 & 45.5          & 59.0           & \textbf{59.0} \\
+			Lakota         & 45.9 & 46.3              & 69.2 & 28.0          & 59.6           & \textbf{49.9} \\
+			\midrule
+			\textbf{Media T2} & & \textbf{33.9} & & \textbf{32.4} & & \textbf{29.3} \\
+			($\sigma$ T2)    & & ($\pm$10.6)   & & ($\pm$9.8)    & & ($\pm$17.8) \\
+			\bottomrule
+		\end{tabular*}
+	}
+	\smallskip
+	
+	{\footnotesize $\dagger$ indica que el turno 1 no llegó a producir ninguna traducción porque el modelo agotó tokens sin completar la sección \texttt{TRANSLATIONS}.}
+\end{table}
+
+M5 evalúa si una segunda fase de revisión permite mejorar el primer borrador generado por el modelo. Para ello se comparan dos turnos: T1, que equivale a una primera solución, y T2, donde el modelo revisa su propia respuesta. Los resultados muestran que esta estrategia es inestable y que la autocorrección no garantiza una mejora.
+
+En GPT-OSS-120B, la media final de T2 es 29.3, por debajo de M1 (40.6), M2 (48.5) y M4 (40.9). El modelo mejora en algunos casos, como Yonggom (31.4 a 40.2), Marind costero (13.2 a 16.1) y Dyirbal (0.0 a 31.4), y mantiene el resultado en Inuktitut y Tzeltal. Sin embargo, también hay caídas muy fuertes, especialmente en Hankun (72.0 a 3.3), Lakota (59.6 a 49.9) y Apurinã (42.9 a 38.2). En los casos marcados con $\dagger$, el primer turno no produjo traducciones válidas, por lo que el segundo turno no puede interpretarse como una revisión real de un borrador completo.
+
+En Llama-3.1-8B, la media de T2 es 33.9, ligeramente inferior a su M1 (35.5), pero superior a la T2 de GPT-OSS-120B. El comportamiento es más moderado: hay mejoras en Apurinã, Marind costero, Nubio kunuz y Lakota, estabilidad en Dyirbal e Inuktitut, y empeoramientos en Hankun, Ngemba, Yonggom, Warlpiri y Tzeltal. Esto sugiere que el segundo turno puede ayudar al modelo pequeño en algunos casos, pero no de forma suficientemente consistente.
+
+En Llama-3.3-70B, la media de T2 es 32.4, muy por debajo de su baseline M1 (53.8). Este modelo muestra algunos de los casos más claros de sobrecorrección. Por ejemplo, Hankun baja de 77.8 a 26.6, Lakota de 69.2 a 28.0, Nubio kunuz de 47.7 a 16.6 e Inuktitut de 53.2 a 32.3. Solo se observan mejoras en Marind costero, donde el cambio es mínimo (47.2 a 47.3), y en Tzeltal (42.7 a 45.5).
+
+La conclusión principal de M5 es que la autocorrección sin retroalimentación externa puede ser peligrosa cuando el primer borrador ya es bueno. El modelo revisa sus propias hipótesis, pero esas hipótesis pueden estar mal formuladas o ser aplicadas de forma incorrecta. En esos casos, el segundo turno no corrige el error, sino que lo amplifica. Este comportamiento coincide con una limitación habitual de los enfoques tipo \textit{Self-Refine}: si la crítica procede del mismo modelo y no hay una señal externa de validación, la revisión puede reforzar los fallos iniciales \citep{madaan2023selfrefine}. Por falta de recursos, la prueba de una crítica externa queda fuera del alcance de esta entrega, aunque sería interesante estudiarla en un trabajo futuro.
+
+% ─────────────────────────────────────────────────────────────
+\section{Experimentos complementarios}
+\label{sec:experimentos-complementarios}
+% ─────────────────────────────────────────────────────────────
+
+Además del experimento principal, centrado en las metodologías M0--M5 sobre puzles de traducción lengua\,$\rightarrow$\,inglés, se realizaron varias pruebas adicionales. Estas pruebas no forman parte de la comparación principal, pero ayudan a entender mejor algunos aspectos del sistema, así como la importancia de seleccionar buenos ejemplos, la dificultad de traducir en la dirección inversa y el comportamiento de los modelos en tareas lingüísticas distintas de la traducción.
+
+% ─────────────────────────────────────────────────────────────
+\subsection{M2.2 — Exploración combinatoria por tamaños crecientes}
+\label{subsec:m22}
+% ─────────────────────────────────────────────────────────────
+
+La estrategia M2 utilizada en el experimento principal trabaja con prefijos crecientes del conjunto de entrenamiento. Es decir, en cada paso añade una nueva frase siguiendo el orden original del puzle: primero las frases $f_1$ y $f_2$, después $f_1$, $f_2$ y $f_3$, y así sucesivamente. Esta decisión permite mantener el número de llamadas bajo control, pero tiene una limitación evidente: asume que los primeros ejemplos son suficientemente informativos. Así, la variante M2.2 se planteó para estudiar precisamente ese punto. En lugar de evaluar un único subconjunto de tamaño $k$, esta estrategia prueba todas las combinaciones posibles de ejemplos para cada tamaño. De esta forma se puede observar hasta qué punto cambia el rendimiento del modelo dependiendo de qué frases concretas recibe al principio.
+
+\subsubsection*{Diseño del experimento}
+
+Se ejecutó M2.2 sobre el puzle de Hankun, en dirección hacia inglés, utilizando GPT-OSS-120B. El conjunto de entrenamiento contiene $n=10$ frases y se limitó la exploración a $k_{\max}=3$ para mantener el coste computacional dentro de un rango asumible. Esto da lugar a $\binom{10}{2}+\binom{10}{3}=45+120=165$ combinaciones posibles.
+
+El diccionario y las reglas gramaticales se acumulan a través de las iteraciones. Cada nueva combinación puede confirmar, refinar o contradecir la hipótesis vigente, del mismo modo que en M2. En total se completaron 162 de las 165 iteraciones previstas; las tres restantes fallaron por errores de red.
+
 \begin{table}[h]
 	\centering
-	\caption{chrF++ — M5. En negrita, mejor modelo por puzzle. {\color{gray}---}: pendiente de relanzamiento.}
-	\label{tab:resultados_m5}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	\caption{Estadísticas de chrF++ en M2.2 por tamaño de combinación $k$ (Hankun, GPT-OSS-120B). La columna «mejor combo» indica los índices de las frases de entrenamiento que forman la combinación con mayor chrF++.}
+	\label{tab:m22_stats}
+	\begin{tabular}{crrrrrll}
+		\toprule
+		$k$ & $\binom{10}{k}$ & $\mu$ & $\sigma$ & máx & mín
+		& mejor combo & peor combo \\
+		\midrule
+		2 & 45  & 59.1 & 12.7 & 71.6 &  8.5
+		& \{7, 10\} & \{1, 2\} \\
+		3 & 120 & 65.8 &  4.8 & 73.3 & 51.6
+		& \{4, 6, 10\} & \{1, 2, 5\} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+El primer resultado relevante es que la desviación típica baja mucho al pasar de $k=2$ a $k=3$. Con dos frases, su valor es $\sigma=12.7$; con tres frases, baja a $\sigma=4.8$. Esto indica que el aprendizaje inductivo del modelo se vuelve más estable cuando dispone de una mínima variedad de ejemplos. Con solo dos frases, la elección concreta del subconjunto puede cambiar por completo el resultado.
+
+La mejor combinación de tamaño 2 está formada por las frases 7 y 10: \ipainline{nuʔrum kəmə ati lapkʰi kan ne} y \ipainline{ati kəmə ŋa lapkʰi tʰɤ ne}. Estas dos frases comparten el verbo \ipainline{lapkʰi} (`see'), pero contrastan distintos pronombres y tiempos verbales. La primera introduce \textit{nuʔrum} como segunda persona plural y una forma de presente, mientras que la segunda incluye \ipainline{ati}, \ipainline{ŋa} y una forma de pasado. Esa complementariedad explica que con solo dos ejemplos el modelo alcance chrF++=71.6.
+
+En cambio, la peor pareja está formada por las frases 1 y 2: \ipainline{ŋa ka kɤ ne} y \ipainline{nɤ ʒip tuʔ ne}. Aunque ambas son frases simples, comparten poco vocabulario útil, usan verbos distintos y no muestran el marcador de transitividad \ipainline{kəmə}. Con tan poca información, el modelo no puede reconstruir bien el sistema pronominal ni el sistema de tiempos, y el resultado cae a chrF++=8.5.
+
+M2.2 no supera a M1 ni a M2 en este experimento. Esto es razonable, ya que M1 recibe los 10 ejemplos desde el primer turno y M2 acaba recibiéndolos todos en el último paso. La utilidad de M2.2 no está tanto en obtener la mejor puntuación final, sino en mostrar cuánto importa la selección inicial de ejemplos. En Hankun, la diferencia entre la mejor y la peor pareja es enorme: 71.6 frente a 8.5. Al añadir una tercera frase, el rango se reduce de forma clara, de 51.6 a 73.3. Esto sugiere que, en escenarios con presupuesto limitado de tokens o pocos ejemplos disponibles, elegir bien los ejemplos iniciales puede ser tan importante como el diseño del prompt.
+
+\begin{table}[h]
+	\centering
+	\caption{Comparación de M2.2 con M1 y M2 sobre Hankun (GPT-OSS-120B).}
+	\label{tab:m22_comparacion}
+	\begin{tabular}{lc}
+		\toprule
+		\textbf{Metodología} & \textbf{chrF++} \\
+		\midrule
+		M1 — baseline (10 frases, 1 turno)      & 100.0 \\
+		M2 — incremental (último paso)           & 91.7 \\
+		M2.2 — mejor combinación $k=3$           & 73.3 \\
+		M2.2 — media $k=3$ ($\sigma$=4.8)        & 65.8 \\
+		M2.2 — media $k=2$ ($\sigma$=12.7)       & 59.1 \\
+		M2.2 — peor combinación $k=2$            &  8.5 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{Dirección inversa: inglés \texorpdfstring{$\rightarrow$}{→} lengua desconocida}
+\label{subsec:en2lang}
+% ─────────────────────────────────────────────────────────────
+
+El experimento principal se centra en la dirección lengua\,$\rightarrow$\,inglés, donde el modelo debe interpretar una lengua desconocida y producir una traducción en inglés. La dirección inversa, inglés\,$\rightarrow$\,lengua desconocida, plantea una dificultad superior, ya que el modelo ya no solo tiene que reconocer patrones, sino generar formas en una lengua que no conoce.
+
+Esta tarea obliga a producir morfemas, marcas funcionales y orden de palabras en la lengua objetivo. Para explorar esta dirección se seleccionaron tres puzles: Hankun, Yonggom y N$|$uuki. Hankun y Yonggom permiten comparar con los resultados obtenidos en la dirección lengua\,$\rightarrow$\,inglés, mientras que N$|$uuki añade un caso con formas fonológicas especialmente alejadas del inglés.
+
+Se ejecutó únicamente la estrategia M1, ya que el objetivo de esta prueba era obtener una primera comparación entre direcciones, no repetir todo el diseño experimental completo. Los resultados de M0 y M1 en dirección inversa se muestran en la tabla~\ref{tab:en2lang}. Además, la tabla~\ref{tab:en2lang_delta} compara directamente los resultados de M1 en ambas direcciones para los dos puzles que cuentan con datos comparables.
+
+\begin{table}[H]
+	\centering
+	\caption{M0 y M1 en dirección inglés\,$\rightarrow$\,lengua desconocida. $^*$\,=\,el modelo entró en bucle de repetición antes de producir traducciones.}
+	\label{tab:en2lang}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}} lllrrr}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua} & \textbf{Familia} & \textbf{M}
+			& \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
 			\midrule
-			Hakhun & →EN & 43.0 & \textbf{73.2} & 58.8 \\
-			Hakhun & EN→ & {\color{gray}---} & \textbf{44.7} & 36.9 \\
-			Ngemba & →EN & 42.6 & \textbf{48.4} & {\color{gray}---} \\
-			Yonggom & →EN & {\color{gray}---} & \textbf{43.7} & 25.8 \\
-			Yonggom & EN→ & {\color{gray}---} & {\color{gray}---} & \textbf{11.0} \\
-			Warlpiri & →EN & 39.7 & \textbf{46.8} & 29.2 \\
-			Wambaya & EN→ & \textbf{7.0} & {\color{gray}---} & 6.8 \\
-			Apurinã & →EN & 12.4 & {\color{gray}---} & \textbf{12.6} \\
-			Apurinã & EN→ & 5.0 & {\color{gray}---} & \textbf{24.6} \\
-			N|uuki & EN→ & \textbf{3.8} & {\color{gray}---} & 3.0 \\
-			Coastal Marind & →EN & \textbf{27.8} & {\color{gray}---} & {\color{gray}---} \\
-			Dyirbal & →EN & \textbf{29.4} & {\color{gray}---} & {\color{gray}---} \\
-			Kunuz Nubian & →EN & \textbf{37.2} & {\color{gray}---} & 32.4 \\
-			Inuktitut & →EN & \textbf{56.5} & {\color{gray}---} & 19.7 \\
-			Tzeltal & →EN & \textbf{46.4} & {\color{gray}---} & 19.1 \\
-			Lakota & →EN & 37.8 & {\color{gray}---} & \textbf{43.9} \\
+			\multirow{2}{*}{Hankun}
+			& \multirow{2}{*}{Sino-tibetana}
+			& M0 & 1.4 & 1.5 & 2.0 \\
+			& & M1 & $0.0^*$ & \textbf{58.9} & 41.6 \\
+			\midrule
+			\multirow{2}{*}{Yonggom}
+			& \multirow{2}{*}{Trans-Nueva Guinea}
+			& M0 & 3.2 & 3.0 & 3.3 \\
+			& & M1 & $0.0^*$ & \textbf{21.6} & 18.1 \\
+			\midrule
+			\multirow{2}{*}{N$|$uuki}
+			& \multirow{2}{*}{Tuu (chasquidos)}
+			& M0 & 0.2 & 2.2 & 3.6 \\
+			& & M1 & $0.0^*$ & 27.3 & \textbf{34.2} \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-M5 empeora respecto al turno 1 en el 78\,\% de los casos (18 de 23 pares con datos en ambos turnos). El patrón es especialmente pronunciado en el modelo 70B: en Hakhun →EN el turno 1 alcanza chrF=73.2 pero el turno 2 cae a 17.6 ($\Delta$=-55.6). El modelo identifica contradicciones reales en su primer borrador, pero las correcciones introducen errores nuevos, posiblemente por sobre-corrección al reescribir el diccionario. Este hallazgo es contrario a la hipótesis de \citet{madaan2023selfrefine} y sugiere que el paradigma Self-Refine requiere señales de retroalimentación externas más ricas para ser eficaz en tareas de razonamiento metalingüístico.
+\begin{table}[H]
+	\centering
+	\caption{Comparación lengua\,$\rightarrow$\,inglés frente a inglés\,$\rightarrow$\,lengua en M1 para los dos puzles con datos en ambas direcciones. $\Delta$ negativo indica degradación al invertir la dirección.}
+	\label{tab:en2lang_delta}
+	{\fontsize{10.5pt}{12pt}\selectfont
+		\begin{tabular*}{0.95\textwidth}{@{\extracolsep{\fill}} llrrr}
+			\toprule
+			\textbf{Lengua} & \textbf{Dirección}
+			& \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\midrule
+			\multirow{3}{*}{Hankun}
+			& lengua$\rightarrow$inglés   & 14.7 & 81.7 & 100.0 \\
+			& inglés$\rightarrow$lengua   & $0.0^*$ & 58.9 & 41.6 \\
+			& $\Delta$                    & $-$14.7 & $-$22.8 & $-$58.4 \\
+			\midrule
+			\multirow{3}{*}{Yonggom}
+			& lengua$\rightarrow$inglés   & 38.3 & 43.8 & 36.5 \\
+			& inglés$\rightarrow$lengua   & $0.0^*$ & 21.6 & 18.1 \\
+			& $\Delta$                    & $-$38.3 & $-$22.2 & $-$18.4 \\
+			\bottomrule
+		\end{tabular*}
+	}
+\end{table}
 
+El resultado más claro es que la dirección inversa es más difícil. Como se observa en la tabla~\ref{tab:en2lang_delta}, en Hankun y Yonggom todos los modelos empeoran al pasar de lengua\,$\rightarrow$\,inglés a inglés\,$\rightarrow$\,lengua. La caída es especialmente fuerte en GPT-OSS-120B para Hankun, donde pasa de 100.0 a 41.6. En Llama-3.3-70B también hay degradación, aunque conserva una parte mayor del rendimiento, con 58.9 en Hankun y 21.6 en Yonggom.
+
+Llama-3.1-8B no produce ninguna traducción válida en los tres puzles de dirección inversa. En todos los casos entra en bucle de generación repetitiva antes de llegar a la sección \texttt{TRANSLATIONS}. Este comportamiento coincide con lo observado en otras pruebas con prompts largos o tareas generativas complejas. El resultado sugiere que el modelo pequeño puede reconocer algunos patrones en dirección lengua\,$\rightarrow$\,inglés, pero tiene muchas más dificultades cuando debe producir formas nuevas en una lengua desconocida.
+
+Entre los modelos que sí generan respuestas, Llama-3.3-70B supera a GPT-OSS-120B en Hankun y Yonggom, mientras que GPT-OSS-120B obtiene mejor resultado en N$|$uuki. Este último caso es interesante porque N$|$uuki incluye consonantes de chasquido, como \ipainline{ǂ}, \ipainline{ǁ}, \ipainline{!} y \ipainline{ǀ}, que no tienen equivalente directo en inglés y pueden dificultar la producción exacta de formas. Aun así, GPT-OSS-120B logra el mejor resultado en ese puzle, como se muestra en la tabla~\ref{tab:en2lang}.
+
+En conjunto, esta prueba refuerza una idea importante: interpretar una lengua desconocida y traducirla al inglés no es equivalente a generar esa lengua. La dirección inversa exige una producción morfológica y fonológica mucho más precisa, y por tanto constituye una ampliación natural del trabajo, pero también más exigente. Este fenómeno podemos comprenderlo perfectamente comparándolo con el razonamiento que seguiríamos las personas. Si un individuo quisiera traducir una frase de su idioma natal, por ejemplo, el español, a una lengua que desconoce, como el italiano, sería más simple averiguar la traducción del italiano al español, ya que podemos reconocer patrones e incluso comprender algunas palabras por su similitud. Sin embargo, si quisiésemos traducir del español al italiano, nos encontraríamos con una situación diferente por falta de conocimiento de las palabras en italiano.
 
 % ─────────────────────────────────────────────────────────────
-\section{Tabla resumen y análisis transversal}
+\subsection{Tareas morfológicas y numéricas}
+\label{subsec:otras-tareas}
+% ─────────────────────────────────────────────────────────────
+
+El benchmark \textsc{Linguini} incluye, además de puzles de traducción, tareas que evalúan otras capacidades metalingüísticas. En esta prueba se seleccionaron tres tipos: \textit{fill\_blanks}, donde el modelo debe completar formas de un paradigma morfológico; \textit{text\_to\_num}, donde debe convertir expresiones numéricas en dígitos; y \textit{num\_to\_text}, donde debe producir expresiones numéricas en una lengua desconocida. Estas tareas no se incluyeron en el experimento principal porque requieren criterios de evaluación algo distintos. Aun así, resultan útiles para comprobar si las estrategias basadas en ejemplos también funcionan fuera de la traducción directa.
+
+Importante mencionar que para estas pruebas complementarias no se reutilizó literalmente el prompt de traducción M1, sino una variante baseline adaptada al tipo de tarea. Más concretamente, en todos los casos se mantuvo la instrucción metalingüística general, pero se modificó la consigna final para ajustarla al formato esperado. Por ejemplo, en \textit{fill\_blanks}, el modelo debía inferir la transformación morfológica entre dos formas verbales y producir únicamente la segunda forma, o en el caso de los problemas de números, en \textit{text\_to\_num}, debía inferir el sistema numérico y devolver solo el valor en dígitos, y en \textit{num\_to\_text}, debía producir únicamente la expresión numérica en la lengua desconocida.
+
+\subsubsection*{Guazacapán Xinka — completar paradigma verbal}
+
+El puzle de Guazacapán Xinka plantea una tarea de tipo \textit{fill\_blanks}. A partir de pares de formas verbales y sus significados en inglés, el modelo debe inferir una segunda forma verbal. Los ejemplos muestran alternancias como \ipainline{piriyʼ} $\rightarrow$ \ipainline{ɨmbirʼi} (`see') o \ipainline{aplayʼ} $\rightarrow$ \ipainline{ɨnapalʼa} (`open'), donde aparecen prefijos y cambios internos de la raíz.
+Los resultados obtenidos para esta tarea se muestran en la Tabla~\ref{tab:xinka}.
+
+\begin{table}[h]
+	\centering
+	\caption{Resultados en Guazacapán Xinka (\textit{fill\_blanks}, M1 baseline). EM\,=\,Exact Match. La única forma correcta para todos los modelos es la cuarta (\ipainline{herʼoy} $\rightarrow$ \ipainline{ɨnherʼo}).}
+	\label{tab:xinka}
+	\begin{tabular}{lrrl}
+		\toprule
+		\textbf{Modelo} & \textbf{chrF++} & \textbf{EM} & \textbf{Patrón identificado} \\
+		\midrule
+		Llama-3.1-8B   & 36.4 & 1/4 & Prefijo ɨn- correcto, sufijos incorrectos \\
+		Llama-3.3-70B  & 44.6 & 1/4 & Prefijo parcial, sufijo -ti erróneo \\
+		GPT-OSS-120B   & \textbf{47.8} & 1/4 & Más cercano en sufijos, orden vocálico incorrecto \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Los tres modelos identifican parte del patrón, especialmente la presencia del prefijo \ipainline{ɨn-}. Sin embargo, ninguno consigue generalizar correctamente todas las alternancias internas. El Exact Match es 1/4 en los tres casos, lo que indica que las formas generadas se parecen parcialmente a las referencias, pero no alcanzan la precisión formal necesaria.
+
+Este resultado muestra una dificultad distinta a la traducción. En un puzle de traducción, una respuesta puede ser parcialmente correcta aunque no coincida exactamente con la referencia. En cambio, en una tarea morfológica, pequeños cambios en una consonante, una vocal o un sufijo pueden hacer que la forma sea incorrecta. Por eso, aunque chrF++ indique cierta cercanía, el EM sigue siendo bajo.
+
+\subsubsection*{Supyire — sistema numérico}
+
+El puzle de Supyire evalúa la capacidad de inferir un sistema numérico a partir de pocos ejemplos. Se consideran dos direcciones: \textit{text\_to\_num}, donde el modelo debe convertir expresiones en Supyire a números, y \textit{num\_to\_text}, donde debe producir expresiones numéricas en Supyire.
+
+\begin{table}[h]
+	\centering
+	\caption{Resultados en Supyire (M1 baseline). EM = Exact Match. chrF++ se reporta para comparabilidad.}
+	\label{tab:supyire}
+	\begin{tabular}{lrrrr}
+		\toprule
+		& \multicolumn{2}{c}{\textbf{text\_to\_num} (n=2)}
+		& \multicolumn{2}{c}{\textbf{num\_to\_text} (n=5)} \\
+		\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+		\textbf{Modelo} & chrF++ & EM & chrF++ & EM \\
+		\midrule
+		Llama-3.1-8B  &  5.8 & 0/2 &  0.7 & 0/5 \\
+		Llama-3.3-70B &  9.3 & 0/2 & \textbf{46.6} & 0/5 \\
+		GPT-OSS-120B  & \textbf{21.3} & 0/2 & 38.4 & 0/5 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Ningún modelo alcanza Exact Match en las tareas numéricas. En \textit{text\_to\_num}, GPT-OSS-120B obtiene el chrF++ más alto, aunque todavía lejos de una decodificación exacta. Esto sugiere que detecta parte de la estructura del sistema, pero no logra descomponer correctamente las expresiones numéricas.
+
+En \textit{num\_to\_text}, Llama-3.3-70B obtiene el mejor chrF++ con 46.6. Esto indica que genera formas parcialmente parecidas a las referencias, aunque ninguna coincide exactamente. Llama-3.1-8B fracasa especialmente en la dirección productiva, con chrF++=0.7, lo que refuerza el patrón observado en la dirección inglés\,$\rightarrow$\,lengua: el modelo pequeño tiene muchas dificultades para producir formas en una lengua desconocida.
+
+\vspace{1cm}
+
+En conclusión, las tareas morfológicas y numéricas amplían la interpretación del experimento principal. Por un lado, muestran que los modelos pueden identificar regularidades parciales, como prefijos o morfemas numéricos, pero eso no siempre se traduce en respuestas exactas. Por otro lado, confirman que las tareas de producción son especialmente delicadas, y es que generar una forma nueva exige mayor precisión que reconocer una traducción aproximada. En conjunto, estas pruebas complementarias refuerzan una de las ideas centrales del trabajo: los modelos de lenguaje pueden extraer patrones lingüísticos a partir de pocos ejemplos, pero su razonamiento no siempre es estable ni suficientemente preciso cuando la tarea exige producir formas exactas en una lengua desconocida.
+
+% ─────────────────────────────────────────────────────────────
+\section{Resumen y análisis}
 \label{sec:resultados_resumen}
 % ─────────────────────────────────────────────────────────────
 
-La Tabla~\ref{tab:resumen_mejor} recoge el mejor resultado obtenido por cada combinación de puzzle y modelo sobre todas las metodologías M1--M5.
+La Tabla~\ref{tab:resumen_mejor} recoge el mejor chrF++ obtenido por cada modelo y puzle considerando las metodologías M1--M5. Esta tabla permite observar qué estrategia funciona mejor en cada caso concreto, aunque no debe interpretarse como que exista una metodología universalmente superior para todas las lenguas.
 
-\begin{table}[h]
+\begin{table}[H]
 	\centering
-	\caption{Mejor chrF++ por puzzle y modelo (máximo sobre M1--M5). En negrita, mejor modelo por puzzle.}
+	\caption{Mejor chrF++ por puzle (máximo sobre M1--M5) y metodología en que se obtuvo. En negrita, mejor modelo por puzle entre los disponibles.}
 	\label{tab:resumen_mejor}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{lcrrr}
+	{\fontsize{10pt}{11.5pt}\selectfont
+		\begin{tabular*}{0.98\textwidth}{@{\extracolsep{\fill}} lrlrlrl}
 			\toprule
-			\textbf{Lengua} & \textbf{Dir} & \textbf{Llama-3.1-8B} & \textbf{Llama-3.3-70B} & \textbf{GPT-OSS-120B} \\
+			\textbf{Lengua}
+			& \textbf{8B} & \textbf{M$_{\text{8B}}$}
+			& \textbf{70B} & \textbf{M$_{\text{70B}}$}
+			& \textbf{GPT} & \textbf{M$_{\text{GPT}}$} \\
 			\midrule
-			Hakhun & →EN & 43.0 & \textbf{80.4} & 58.8 \\
-			Hakhun & EN→ & 55.7 & 67.1 & \textbf{74.3} \\
-			Ngemba & →EN & 42.6 & \textbf{48.5} & 47.0 \\
-			Yonggom & →EN & 37.9 & \textbf{43.7} & 42.4 \\
-			Yonggom & EN→ & 22.6 & {\color{gray}---} & \textbf{27.3} \\
-			Warlpiri & →EN & 39.7 & \textbf{46.8} & 29.3 \\
-			Wambaya & EN→ & \textbf{35.2} & {\color{gray}---} & 34.4 \\
-			Apurinã & →EN & \textbf{40.1} & {\color{gray}---} & 35.6 \\
-			Apurinã & EN→ & 11.9 & {\color{gray}---} & \textbf{34.8} \\
-			N|uuki & EN→ & 12.1 & {\color{gray}---} & \textbf{56.2} \\
-			Coastal Marind & →EN & \textbf{41.8} & {\color{gray}---} & 30.4 \\
-			Dyirbal & →EN & \textbf{41.7} & {\color{gray}---} & 39.8 \\
-			Kunuz Nubian & →EN & \textbf{45.8} & {\color{gray}---} & 38.5 \\
-			Inuktitut & →EN & \textbf{59.5} & {\color{gray}---} & 46.4 \\
-			Tzeltal & →EN & 46.4 & {\color{gray}---} & \textbf{52.8} \\
-			Lakota & →EN & \textbf{60.1} & {\color{gray}---} & 59.3 \\
+			Hankun         & 54.8 & M2 & 81.7 & M1 & \textbf{100.0} & M1 \\
+			Ngemba         & 32.9 & M5 & \textbf{50.0} & M1 & 42.3 & M2 \\
+			Yonggom        & 38.7 & M2 & \textbf{43.8} & M1 & 43.0 & M4 \\
+			Warlpiri       & 44.6 & M1 & \textbf{73.1} & M1 & 40.8 & M2 \\
+			Apurinã        & 45.9 & M4 & 38.6 & M4 & \textbf{55.1} & M2 \\
+			Marind costero & 40.4 & M1 & \textbf{47.3} & M5 & 28.6 & M1 \\
+			Dyirbal        & 33.9 & M2 & \textbf{55.5} & M1 & 35.9 & M2 \\
+			Nubio kunuz    & 47.9 & M5 & \textbf{51.3} & M4 & 41.9 & M2 \\
+			Inuktitut      & 52.0 & M1 & 57.2 & M1 & \textbf{65.9} & M2 \\
+			Tzeltal        & 39.5 & M2 & 51.0 & M4 & \textbf{59.0} & M5 \\
+			Lakota         & 46.3 & M5 & \textbf{65.5} & M4 & 63.3 & M4 \\
+			\midrule
+			\textbf{Media} & \textbf{43.4} & & \textbf{55.9} & & \textbf{52.3} & \\
+			($\sigma$)    & ($\pm$6.7) & & ($\pm$12.3) & & ($\pm$18.8) & \\
 			\bottomrule
-		\end{tabular}%
+		\end{tabular*}
 	}
 \end{table}
 
-\paragraph{Efecto del tamaño del modelo.} En M1 baseline, el Llama-3.1-8B obtiene una media de chrF=23.4, el Llama-3.3-70B de 38.3 y el GPT-OSS-120B de 34.7. La ventaja del 70B sobre el 120B en promedio se explica por la distribución de puzzles disponibles: el 70B tiene datos principalmente en puzzles donde el 120B también rinde bien.
+\subsection*{Ranking de metodologías en GPT-OSS-120B}
 
-\paragraph{Dirección de traducción.} La dirección lang2en obtiene una media de chrF=38.0 frente a 28.9 en en2lang, considerando M1 y M2 en todos los modelos. M4 reduce parcialmente esta brecha en los modelos medios y fuertes (Hakhun EN→: 67.1 y 74.3 respectivamente), lo que sugiere que el razonamiento guiado ayuda especialmente cuando la tarea requiere producción morfológica.
+En GPT-OSS-120B, M2 es la metodología más fuerte. Obtiene el mejor resultado en 6 de los 11 puzles y alcanza la mayor media entre metodologías, con chrF++=48.5. Este patrón indica que GPT-OSS-120B se beneficia especialmente de la presentación incremental acumulativa. El modelo parece aprovechar mejor una secuencia de hipótesis revisables que una única presentación completa de todos los ejemplos. Aun así, M2 no gana en todos los casos: M1 sigue siendo mejor en Hankun y Marind costero, M4 destaca en Yonggom y Lakota, y M5 obtiene el mejor resultado en Tzeltal.
 
-\paragraph{Limitación: marcadores de número gramatical.} Las referencias gold de algunos puzzles incluyen marcadores entre paréntesis (\texttt{you(sg)}, \texttt{you(pl)}) que son anotaciones del puzzle y no inglés natural. Los tres modelos producen sistemáticamente \texttt{you} en lugar de \texttt{you(sg)}, penalizando el chrF++ incluso cuando la traducción es semánticamente correcta. Esta limitación se discutirá con el tutor y se documentará como sesgo de fluencia en el análisis de errores.
+\subsection*{Ranking de metodologías en Llama-3.1-8B}
+
+En Llama-3.1-8B el patrón es más repartido. M2 gana en Hankun, Yonggom, Dyirbal y Tzeltal; M1 gana en Warlpiri, Marind costero e Inuktitut; M5 gana en Ngemba, Nubio kunuz y Lakota; y M4 gana en Apurinã. M3 no gana en ningún puzle, y tampoco en los otros modelos, como podemos observar. Si se observan las medias, M1 es la metodología más estable para el 8B, con chrF++=35.5. M4 (34.0) y M5 (33.9) quedan muy cerca, mientras que M2 baja a 33.6. Esto sugiere que el modelo pequeño no siempre puede aprovechar bien la acumulación incremental de hipótesis. En su caso, presentar todos los ejemplos desde el principio o utilizar una guía humana puede ser igual o más eficaz que forzar una revisión paso a paso.
+
+
+\subsection*{Ranking de metodologías en Llama-3.3-70B}
+
+Llama-3.3-70B muestra el patrón más claro a favor de M1. El baseline obtiene la mayor media, con chrF++=53.8, y es la metodología ganadora en Hankun, Ngemba, Yonggom, Warlpiri, Dyirbal e Inuktitut. M4 aparece como segunda estrategia más útil, con una media de 46.2, y gana en Apurinã, Nubio kunuz, Tzeltal y Lakota. M5 solo obtiene el mejor resultado en Marind costero, y M2 no gana en ningún puzle. A diferencia de GPT-OSS-120B, el 70B no se beneficia especialmente de M2. Para este modelo, disponer de todos los ejemplos desde el principio suele ser más eficaz que introducirlos de forma incremental. La autocorrección M5 también empeora claramente respecto a M1, lo que confirma que el segundo turno tiende a sobrecorregir cuando el primer borrador ya es bueno.
+
+\subsection*{Comparación entre modelos}
+
+La comparación entre modelos muestra que Llama-3.3-70B es el sistema más fuerte en este conjunto de experimentos. Obtiene la mejor media de resultados máximos por puzle, con chrF++=55.9, frente a 52.3 de GPT-OSS-120B y 43.4 de Llama-3.1-8B.
+
+Este resultado es interesante porque rompe la expectativa simple de que el modelo con más parámetros debe obtener siempre mejores resultados. En este benchmark, el modelo de 70B supera con frecuencia a GPT-OSS-120B. Una posible explicación es que el rendimiento no depende solo del tamaño, sino también del ajuste instructivo del modelo, del proveedor, del formato de salida y de cómo cada arquitectura gestiona tareas de razonamiento con pocos ejemplos.
+
+Llama-3.1-8B queda por debajo en media, pero no es irrelevante. En varios puzles obtiene resultados razonables y, en algunos casos, se acerca a los modelos mayores. Esto sugiere que parte del razonamiento necesario para estos puzles no requiere necesariamente modelos enormes, aunque los modelos más grandes suelen ser más robustos cuando la morfología o la estructura del puzle se complican.
+
+\subsection*{Conclusión transversal sobre las metodologías}
+
+Los resultados no muestran una metodología ganadora universal. La mejor estrategia depende del modelo y del puzle. Para GPT-OSS-120B, M2 es la opción más prometedora; para Llama-3.3-70B, el baseline M1 sigue siendo el más fuerte; y para Llama-3.1-8B el comportamiento está algo más repartido.
+
+La conclusión principal es que la forma de presentar los ejemplos importa, pero no de la misma manera para todos los modelos. Una estrategia incremental puede ayudar a un modelo capaz de mantener y revisar hipótesis, pero puede perjudicar a otro si arrastra errores entre pasos. Una guía humana puede orientar el análisis, pero también aumenta mucho la longitud del prompt. La autocorrección puede detectar algunos fallos, pero sin retroalimentación externa tiende a sobrecorregir. Por tanto, el resultado más relevante del capítulo no es solo qué modelo obtiene la puntuación más alta, sino cómo cambia el comportamiento de cada modelo según la metodología. Esto confirma que los puzles de olimpiadas lingüísticas son útiles no solo para medir rendimiento final, sino también para estudiar la estabilidad del razonamiento metalingüístico generado por los modelos.

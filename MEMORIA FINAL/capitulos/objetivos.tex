@@ -1,88 +1,41 @@
 \chapter{Objetivos}
 \label{cap:objetivos}
 
-Este capítulo presenta el objetivo principal del trabajo y los objetivos específicos que se
-derivan de él, así como las restricciones y condicionantes que han guiado el desarrollo del
-proyecto.
+Este capítulo presenta el objetivo principal del trabajo, los objetivos específicos que se derivan de él y las principales restricciones que han condicionado su desarrollo.
 
 % ─────────────────────────────────────────────────────────────
 \section{Objetivo principal}
 \label{sec:objetivo_principal}
 % ─────────────────────────────────────────────────────────────
 
-El objetivo principal de este Trabajo de Fin de Grado es diseñar, implementar y evaluar
-estrategias de \textit{prompting} para analizar hasta qué punto los modelos de lenguaje de
-gran escala pueden resolver puzzles de olimpiadas lingüísticas a partir de un conjunto
-reducido de ejemplos, apoyándose en razonamiento metalingüístico y sin recibir información
-explícita previa sobre la lengua en cuestión.
+El objetivo principal de esta investigación es diseñar, implementar y evaluar distintas estrategias de prompting para estudiar hasta qué punto los modelos de lenguaje de gran escala pueden resolver problemas de olimpiadas lingüísticas a partir de un conjunto reducido de ejemplos, sin recibir información explícita previa sobre la lengua analizada y apoyándose únicamente en el razonamiento metalingüístico inducido por el contexto. Algunas estrategias se inspiran en trabajos previos, como el baseline de aprendizaje en contexto, el razonamiento paso a paso y la autocorrección iterativa; otras se plantean como aportaciones propias o adaptaciones específicas para este trabajo, como la presentación incremental acumulativa, su variante combinatoria, y la estrategia basada en razonamiento humano. Veremos cómo se comporta el modelo y la forma en la que llega a sus conclusiones cuando se le presentan diferentes formatos del problema.
 
 % ─────────────────────────────────────────────────────────────
 \section{Objetivos específicos}
 \label{sec:objetivos_especificos}
 % ─────────────────────────────────────────────────────────────
 
-De este objetivo principal se derivan los siguientes objetivos específicos:
+Basándonos en lo que queremos conseguir, del objetivo principal derivan los siguientes objetivos específicos que ayudarán a desarrollar el trabajo paso a paso:
 
 \begin{enumerate}
 	
-	\item \textbf{Revisar el estado del arte} en razonamiento lingüístico con modelos de
-	lenguaje de gran escala, con especial atención a los benchmarks derivados de la
-	Olimpiada Internacional de Lingüística (\textsc{Linguini}, LingOly, modeLing) y a
-	las estrategias de prompting más relevantes de la literatura reciente.
+	\item \textbf{Revisar el estado de la cuestión} sobre razonamiento lingüístico con modelos de lenguaje de gran escala, prestando especial atención a los benchmarks derivados de problemas de olimpiadas lingüísticas, como Linguini, LingOly y modeLing, así como a las estrategias de prompting más relevantes de la literatura reciente. Sobre todo, destacar el contenido existente a partir de los trabajos previos en la materia para ver qué se podría aportar con este proyecto.
 	
-	\item \textbf{Diseñar e implementar un control exploratorio previo y cinco estrategias
-		de prompting} diferenciadas y comparables entre sí:
+	\item \textbf{Seleccionar un conjunto de puzzles de traducción} procedentes del benchmark Linguini, priorizando problemas de lenguas de baja densidad de recursos, con suficiente número de ejemplos de entrenamiento y test, y pertenecientes a distintas familias lingüísticas. Aunque los resultados que podamos obtener sean escasos debido a las limitaciones de peticiones a modelos abiertos en la nube, escogeremos aquellos que sean relevantes para responder a las preguntas planteadas.
 	
-	\begin{itemize}
-		\item Un \textit{control exploratorio previo} (M0) que permite detectar posibles
-		indicios de conocimiento de la lengua antes del experimento.
-		
-		\item Una estrategia \textit{baseline} (M1) que sirve como punto de referencia
-		directo con la literatura existente, presentando todos los ejemplos de
-		entrenamiento de forma simultánea.
-		
-		\item Una estrategia de \textit{presentación incremental acumulativa} (M2), en la
-		que se incorporan progresivamente nuevos ejemplos y se construye de forma
-		explícita y revisable un diccionario y un conjunto de reglas gramaticales.
-		
-		\item Una estrategia \textit{paso a paso} (M3) ordenada por nivel lingüístico
-		(léxico, fonología, morfosintaxis y sintaxis), inspirada en el trabajo de
-		\citet{zhu2025evaluating}.
-		
-		\item Una estrategia de \textit{inspiración humana} (M4) que proporciona al modelo
-		el razonamiento explícito de una persona resolviendo un puzzle diferente, con el
-		objetivo de guiar el proceso inductivo.
-		
-		\item Una estrategia de \textit{autocorrección iterativa} (M5), en la que el
-		modelo revisa sus propias hipótesis en un segundo turno buscando contradicciones
-		internas, inspirada en el paradigma \textit{Self-Refine}
-		\citep{madaan2023selfrefine}.
-	\end{itemize}
+	\item \textbf{Diseñar e implementar varias estrategias de prompting de metodologías ya estudiadas e incorporar nuevas, comparables entre sí}, incluyendo una estrategia base de aprendizaje in-context, una estrategia de presentación incremental acumulativa, una estrategia paso a paso organizada por niveles lingüísticos, una estrategia inspirada en razonamiento humano y una estrategia de autocorrección iterativa. Todas las estrategias mencionadas se describirán con más detalle en el Capítulo~\ref{cap:metodologia}. Además, para cada problema se realiza una prueba adicional sin ejemplos de entrenamiento, en la que se pide al modelo que responda sin recibir los pares de traducción del enunciado. Esta prueba sirve como control para comprobar si el modelo depende realmente del contexto proporcionado o si podría estar respondiendo a partir de conocimiento previo adquirido durante el preentrenamiento.
 	
-	\item \textbf{Plantear e implementar una extensión combinatoria de la estrategia
-		incremental} (M2.2), en la que se evalúan todas las combinaciones posibles de frases
-	de entrenamiento para cada tamaño de subconjunto. Esta ampliación permitirá analizar
-	si el rendimiento depende del orden y de la selección concreta de los ejemplos
-	proporcionados al modelo.
+	\item \textbf{Plantear una extensión combinatoria de la estrategia incremental, propia del trabajo}, orientada a evaluar en trabajos futuros todas las combinaciones posibles de ejemplos de entrenamiento para cada tamaño de subconjunto. Esta ampliación permitiría analizar si el rendimiento depende del orden y de la selección concreta de los ejemplos proporcionados al modelo. Debido a la cantidad de peticiones que requiere dicha estrategia, esta se probará con un número escaso de problemas, por lo que aún quedaría como una ampliación futura a investigar.
 	
-	\item \textbf{Construir un sistema experimental reproducible} que automatice la
-	ejecución de los experimentos, el registro de las respuestas del modelo y el cálculo
-	de métricas, permitiendo auditar cualquier resultado de forma independiente.
+	\item \textbf{Construir un sistema experimental reproducible} que automatice la carga de puzzles, la generación de prompts, la ejecución de los modelos, la extracción de traducciones, el cálculo de métricas y el almacenamiento de logs completos para su posterior revisión.
 	
-	\item \textbf{Evaluar las estrategias} sobre puzzles reales del benchmark
-	\textsc{Linguini} en lenguas de diversas familias lingüísticas, en ambas direcciones
-	de traducción (lengua desconocida $\rightarrow$ inglés e inglés $\rightarrow$ lengua
-	desconocida), utilizando modelos de distintas familias y tamaños.
+	\item \textbf{Evaluar las estrategias implementadas} sobre puzzles reales del benchmark Linguini, utilizando modelos de lenguaje de distintas familias y tamaños, y centrando el análisis principal en la dirección de traducción desde la lengua desconocida hacia el inglés. Como ampliación, se probará el cambio de dirección de traducción, partiendo de base de que los resultados de esta puedan ser poco prometedores.
 	
-	\item \textbf{Comparar los resultados obtenidos} con los valores de referencia
-	publicados en \citet{sanchez2024linguini} mediante las métricas BLEU, chrF++ y TER,
-	e identificar en qué condiciones cada estrategia mejora o empeora respecto al
-	baseline directo.
+	\item \textbf{Comparar los resultados obtenidos} mediante métricas automáticas de traducción, principalmente BLEU \citep{papineni2002bleu}, chrF++ \citep{popovic2017chrf}, TER \citep{snover2006ter} y Exact Match \citep{sanchez2024linguini}, con el fin de identificar en qué condiciones cada estrategia mejora o empeora respecto al baseline directo.
 	
-	\item \textbf{Realizar un análisis cualitativo} comparando el proceso de resolución
-	humana de los puzzles con el razonamiento explícito generado por los modelos,
-	identificando los puntos de divergencia y los patrones de error más frecuentes según
-	la familia lingüística, el tamaño del modelo y la dirección de traducción.
+	\item \textbf{Realizar un análisis cualitativo} de casos representativos, comparando el proceso de resolución humana con el razonamiento explícito generado por los modelos, para identificar patrones de error, contradicciones internas y diferencias en la forma de construir hipótesis lingüísticas. Esto además servirá para probar una de las metodologías incorporadas: el entrenamiento basado en el razonamiento humano.
+	
+	\item \textbf{Publicar el código desarrollado en un repositorio accesible}, con el fin de facilitar la reutilización y reproducibilidad del trabajo. El repositorio incluirá el código de evaluación y las instrucciones necesarias para repetir los experimentos. La URL del repositorio se recoge en el anexo~\ref{anexo:repositorio}.
 	
 \end{enumerate}
 
@@ -91,51 +44,24 @@ De este objetivo principal se derivan los siguientes objetivos específicos:
 \label{sec:restricciones}
 % ─────────────────────────────────────────────────────────────
 
-El desarrollo del trabajo está sujeto a las siguientes restricciones:
+El desarrollo del trabajo ha tenido una serie de complicaciones durante su realización, debido a las siguientes restricciones:
 
 \begin{description}
 	
-	\item[Acceso a los modelos:] se utilizan modelos accesibles mediante APIs externas
-	gratuitas, como Groq y OpenRouter. Esta decisión limita los modelos disponibles,
-	pero reduce el coste computacional y facilita la reproducción de los experimentos.
+	\item \textbf{Acceso a los modelos:} se utilizan modelos accesibles mediante APIs externas gratuitas, principalmente Groq\footnote{\url{https://groq.com/}} y OpenRouter\footnote{\url{https://openrouter.ai/}}. Durante el desarrollo también se probaron modelos de Cerebras\footnote{\url{https://www.cerebras.ai/inference}} y SambaNova\footnote{\url{https://cloud.sambanova.ai/}}. Esta decisión permite trabajar con modelos de distintos tamaños sin disponer de infraestructura propia, pero limita la selección de modelos disponibles y hace que el sistema dependa de servicios externos. Además, la disponibilidad de estos modelos abiertos ha ido cambiando durante el desarrollo, lo que atrasó la continuidad y redujo la cantidad posible de pruebas a realizar.
 	
-	\item[Límites de tasa:] las APIs gratuitas imponen límites de peticiones por minuto y
-	por día, lo que condiciona el número de experimentos que pueden ejecutarse en una
-	sesión y obliga a introducir retardos entre llamadas. Este condicionante es
-	especialmente notable en M2, cuya naturaleza iterativa genera varias llamadas
-	consecutivas por puzzle, y será todavía más relevante en M2.2 debido al número de
-	combinaciones posibles.
+	\item[Límites de tasa:] las APIs gratuitas imponen límites de peticiones por minuto y por día. Esto condiciona el número de experimentos que pueden ejecutarse en una misma sesión y obliga a introducir pausas entre llamadas. La restricción es especialmente importante en las estrategias iterativas, porque generan varias peticiones para un mismo puzzle. Este es el principal motivo de la escasez de las pruebas de la metodología iterativa combinatoria, la cual era de especial importancia debido a ser una aportación propia a la investigación.
 	
-	\item[Coste combinatorio de M2.2:] la extensión combinatoria incrementa
-	considerablemente el número de llamadas necesarias. Para un puzzle con $n$ pares de
-	entrenamiento, el número de subconjuntos evaluados es:
+	\item[Coste combinatorio de la metodología iterativa combinatoria acumulativa (M2.2):] la extensión combinatoria de la estrategia de prompt incremental aumenta de forma considerable el número de llamadas necesarias. Para un puzzle con $n$ pares de entrenamiento, el número de subconjuntos evaluados sería:
 	
 	\[
 	\sum_{k=2}^{n} \binom{n}{k}
 	\]
 	
-	Por ejemplo, para $n=10$ serían necesarias 1013 iteraciones por puzzle y modelo. Este
-	coste obliga a planificar cuidadosamente la selección de puzzles y proveedores.
+	Por ejemplo, para $n=10$ serían necesarias 1013 iteraciones por puzzle y modelo. Por este motivo, M2.2 se plantea como una ampliación metodológica, pero su evaluación completa queda fuera del alcance principal de esta entrega. Sin embargo, tal y como veremos en el apartado de Resultados, ha sido posible lanzar par de pruebas pese a su coste elevado.
 	
-	\item[Datos:] los puzzles utilizados provienen exclusivamente del benchmark
-	\textsc{Linguini} \citep{sanchez2024linguini}, cuya descarga requiere aceptar los
-	términos de uso del corpus de la IOL (licencia CC-BY-SA~4.0). No se utilizan puzzles
-	de elaboración propia para mantener la comparabilidad con la literatura.
+	\item[Datos de preentrenamiento desconocidos:] no es posible conocer con precisión todos los textos utilizados durante el entrenamiento de los modelos evaluados. Por este motivo, no puede garantizarse que las lenguas analizadas sean completamente desconocidas para el modelo o que no haya visto información relacionada con ellas. Para controlar este problema de forma más estricta, algunos trabajos utilizan la encriptación de los caracteres, evitando así que el modelo pueda apoyarse directamente en conocimiento previo. Aun así, aplicar este tipo de control requeriría diseñar e implementar un proceso adicional de transformación y validación de los datos, por lo que queda fuera del alcance de este trabajo. En este caso, el control de verificación (M0) se utiliza únicamente para detectar posibles indicios de conocimiento previo, no para demostrar la ausencia total de contaminación en los datos de entrenamiento.
 	
-	\item[Datos de preentrenamiento desconocidos:] no es posible conocer con precisión
-	todos los textos utilizados durante el entrenamiento de los modelos evaluados. Por
-	este motivo, no puede garantizarse que las lenguas analizadas sean completamente
-	desconocidas para el modelo. El control M0 se utiliza únicamente para detectar
-	posibles indicios de conocimiento previo.
-	
-	\item[Ausencia de reentrenamiento:] no se realiza ningún tipo de \textit{fine-tuning}
-	ni adaptación de los modelos. Todas las estrategias operan mediante prompting, sin
-	modificar los pesos del modelo.
-	
-	\item[Variabilidad de las respuestas:] todos los experimentos se ejecutan con
-	temperatura cero (\texttt{temperature=0}) para reducir la variabilidad entre
-	ejecuciones. No obstante, no puede garantizarse un determinismo absoluto, ya que los
-	proveedores externos pueden modificar internamente los modelos o su infraestructura
-	de inferencia.
+	\item[Alcance experimental:] aunque el sistema permite trabajar con puzzles en ambas direcciones de traducción, el análisis principal de resultados se centra en la dirección lengua desconocida $\rightarrow$ inglés. La investigación más detallada sobre la dirección inversa, inglés $\rightarrow$ lengua desconocida, se reserva como línea de ampliación futura debido al aumento de complejidad experimental y al tiempo disponible.
 	
 \end{description}

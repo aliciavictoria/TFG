@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T23:02:53.625099",
+    "puzzle_id": "linguini_012023050100",
+    "language": "Supyire",
+    "task_type": "text_to_num",
+    "model_key": "llama-3.3-70b-sambanova"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.45,
+        "corpus_ter": 18600.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.45
+        ],
+        "sentence_ter": [
+          18600.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "A challenge!\n\nAfter researching the Supyire language, I found that it is a language spoken in Burkina Faso and Mali. Although I couldn't find a comprehensive dictionary or grammar guide, I was able to gather some information on the language's numerals and basic phrases.\n\nBreaking down the expression \"kampwɔhii shuunni na kɛ\", I'm going to take a guess:\n\n* \"kampwɔhii\" might be related to the word for \"ten\" (similar to \"kam\" or \"kamp\" in other West African languages).\n* \"shuunni\" could be the word for \"four\" (similar to \"sun\" or \"su\" in other languages).\n* \"na\" might be a conjunction or a word for \"and\".\n* \"kɛ\" could be a word for \"one\" (similar to \"ke\" or \"kɛ\" in other languages).\n\nWith these assumptions, my best guess for the numerical value of the expression is:\n\n10 + 4 + 1 = 15\n\nSo, my answer is: 15\n\nPlease keep in mind that this is a highly uncertain guess, and I may be completely off the mark. If you have more context or information about the Supyire language, I'd be happy to try and improve my answer."
+        ],
+        "references": [
+          "810"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 9.26,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          15.62,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "7001",
+          "130"
+        ],
+        "references": [
+          "810",
+          "88"
+        ],
+        "num_evaluated": 2,
+        "num_expected": 2,
+        "missing_indices": [],
+        "complete": true,
+        "exact_match_strict": 0.0
+      },
+      "hypotheses": [
+        "7001",
+        "130"
+      ],
+      "references": [
+        "810",
+        "88"
+      ],
+      "latency_s": 5.03
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T23:02:15.741510",
+    "puzzle_id": "linguini_012023010100",
+    "language": "Guazacapán Xinka",
+    "task_type": "fill_blanks",
+    "model_key": "gpt-oss-120b-openrouter"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.31,
+        "corpus_ter": 11100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.31
+        ],
+        "sentence_ter": [
+          11100.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Guazacapán Xinka** uses the stem **netk‑** for the idea “to push.”  \nThe form that is most commonly cited in the literature is the infinitive‑like verb **netkayʼ** (the final ‑ʼ marks the verb’s basic, non‑finite shape).  \n\nThe most plausible alternate morphological form of this verb is the **imperative** (the “push!” command). In Xinka, the imperative is typically formed by dropping the final glottal stop and adding the vowel **‑a** to the stem. Thus the imperative of *netkayʼ* would be:\n\n**netkaya** ‘push!’ (imperative)\n\nSo, if *netkayʼ* is the infinitive/neutral form “to push,” the corresponding imperative form is likely **netkaya**. (This is a best‑guess reconstruction based on the regular pattern of Xinka verb morphology.)"
+        ],
+        "references": [
+          "ɨnnetakʼa"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 47.81,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 25.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          100.0
+        ],
+        "sentence_chrfpp": [
+          40.29,
+          16.51,
+          41.68,
+          100.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          0.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "hypotheses": [
+          "ɨnnetkʼa",
+          "ɨŋkɨrɨʼa",
+          "ɨmpʼuhruʼa",
+          "ɨnherʼo"
+        ],
+        "references": [
+          "ɨnnetakʼa",
+          "ɨŋɡɨrʼɨ",
+          "ɨmpʼuhurʼu",
+          "ɨnherʼo"
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true,
+        "exact_match_strict": 25.0
+      },
+      "hypotheses": [
+        "ɨnnetkʼa",
+        "ɨŋkɨrɨʼa",
+        "ɨmpʼuhruʼa",
+        "ɨnherʼo"
+      ],
+      "references": [
+        "ɨnnetakʼa",
+        "ɨŋɡɨrʼɨ",
+        "ɨmpʼuhurʼu",
+        "ɨnherʼo"
+      ],
+      "latency_s": 96.48
+    }
+  }
+}

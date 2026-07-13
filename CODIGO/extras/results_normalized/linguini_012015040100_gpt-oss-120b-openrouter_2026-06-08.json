@@ -1,0 +1,2040 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T09:31:04.055215",
+    "puzzle_id": "linguini_012015040100",
+    "language": "Warlpiri",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 17,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false,
+    "sgpl_normalized": true
+  },
+  "puzzle": {
+    "id": "linguini_012015040100",
+    "language": "Warlpiri",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Ngarlu nya.",
+        "target": "You (sg.) danced."
+      },
+      {
+        "source": "Gulugba ngu.",
+        "target": "I will sleep."
+      },
+      {
+        "source": "Bardbi ga bungmanya.",
+        "target": "The old woman ran (away)."
+      },
+      {
+        "source": "Ngunybulugi barrawunguji.",
+        "target": "The doctor has a house."
+      },
+      {
+        "source": "Ngajbi nginya.",
+        "target": "I saw you (sg.)."
+      },
+      {
+        "source": "Dagumajba nguyu ngunybulugi.",
+        "target": "She will strike the doctor."
+      },
+      {
+        "source": "Alanga gu ngarlujba janjingunya.",
+        "target": "The girl will dance with the dog."
+      },
+      {
+        "source": "Ngajba gununyu.",
+        "target": "He will see you (sg.)."
+      },
+      {
+        "source": "Ngirra nga gijilulu.",
+        "target": "I stole the money."
+      },
+      {
+        "source": "Yagujba nyu barrawuwaji.",
+        "target": "You (sg.) will leave him without a house."
+      },
+      {
+        "source": "Daguma ngiyinga bungmanyani.",
+        "target": "The old woman struck me."
+      },
+      {
+        "source": "Bardbi ga darranggunguji.",
+        "target": "He ran (away) with the stick."
+      },
+      {
+        "source": "Alayulu ngiya juwa.",
+        "target": "She found the man."
+      },
+      {
+        "source": "Juwani gina ngajbi gijilulungunya.",
+        "target": "The man saw her with the money."
+      },
+      {
+        "source": "Yagu gininga.",
+        "target": "He left me."
+      },
+      {
+        "source": "Bungmaji gina ngajbi balamurruwaji.",
+        "target": "He saw the old man without a spear."
+      },
+      {
+        "source": "Dirragba gu bungmaji.",
+        "target": "The old man will jump."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Alayulujba nguyunyu bungmanyani.",
+        "target": "The old woman will find you.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Yagu gininya.",
+        "target": "He left you.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Janji darrangguwaji.",
+        "target": "The dog doesn’t have a stick.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ngirra nya alanga.",
+        "target": "You stole the girl.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Daguma nyinga.",
+        "target": "You struck me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Dirragbi ga balamurrungunya.",
+        "target": "She jumped with the spear.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Alayulujba nguyunyu bungmanyani.",
+      "reference": "The old woman will find you.",
+      "hypothesis": "**Possible translation:**  \n*“The bright light of the sunrise spreads across the sky.”*",
+      "latency_s": 3.15,
+      "metrics": {
+        "corpus_bleu": 1.82,
+        "corpus_chrfpp": 8.72,
+        "corpus_ter": 183.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          1.82
+        ],
+        "sentence_chrfpp": [
+          8.45
+        ],
+        "sentence_ter": [
+          171.43
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:**  \n*“The bright light of the sunrise spreads across the sky.”*"
+        ],
+        "references": [
+          "The old woman will find you."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 57.52,
+          "metrics": {
+            "corpus_bleu": 11.11,
+            "corpus_chrfpp": 32.73,
+            "corpus_ter": 74.07,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.62,
+              35.36,
+              8.52,
+              42.73,
+              31.95,
+              9.54
+            ],
+            "sentence_chrfpp": [
+              42.89,
+              48.45,
+              9.59,
+              51.26,
+              18.6,
+              31.58
+            ],
+            "sentence_ter": [
+              71.43,
+              50.0,
+              83.33,
+              40.0,
+              75.0,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see the old woman.",
+              "He left me.",
+              "The man ran away.",
+              "You danced the girl.",
+              "She saw me.",
+              "The old man will jump without a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 11.11,
+        "corpus_chrfpp": 32.73,
+        "corpus_ter": 74.07,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.62,
+          35.36,
+          8.52,
+          42.73,
+          31.95,
+          9.54
+        ],
+        "sentence_chrfpp": [
+          42.89,
+          48.45,
+          9.59,
+          51.26,
+          18.6,
+          31.58
+        ],
+        "sentence_ter": [
+          71.43,
+          50.0,
+          83.33,
+          40.0,
+          75.0,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will see the old woman.",
+          "He left me.",
+          "The man ran away.",
+          "You danced the girl.",
+          "She saw me.",
+          "The old man will jump without a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 19.94,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced\nGulugba = I will\nngu = sleep",
+          "accumulated_rules": "1. Simple declarative sentences follow a Subject‑Verb order.\n2. A subject pronoun can incorporate tense/aspect (e.g., “I will” is a single word).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 38.97,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1st person future subject)\nngu = sleep (verb)\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (verb)",
+          "accumulated_rules": "1. Simple declarative sentences follow a Subject‑Verb order.\n2. A subject pronoun can incorporate tense/aspect (e.g., “I will” is a single word).\n3. A past‑tense particle “ga” may appear immediately before the verb phrase.",
+          "metrics": {
+            "corpus_bleu": 2.68,
+            "corpus_chrfpp": 14.34,
+            "corpus_ter": 144.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              5.52,
+              5.52,
+              6.57,
+              5.52,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              9.64,
+              9.41,
+              10.32,
+              17.37,
+              9.43,
+              27.55
+            ],
+            "sentence_ter": [
+              100.0,
+              175.0,
+              116.67,
+              120.0,
+              175.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 56.74,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1st person future)\nngu = sleep (verb)\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (verb)\nNgunybulugi = the doctor\nbarrawunguji = has a house (verb phrase)\n---",
+          "accumulated_rules": "---\n1. Simple declarative sentences follow a Subject‑Verb order.\n2. A subject pronoun can incorporate tense/aspect (e.g., “I will” is a single word).\n3. A past‑tense particle “ga” may appear immediately before the verb phrase.\n---",
+          "metrics": {
+            "corpus_bleu": 1.78,
+            "corpus_chrfpp": 11.29,
+            "corpus_ter": 129.63,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              6.57,
+              6.57,
+              6.57,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              11.04,
+              9.48,
+              10.75,
+              12.31,
+              8.69,
+              14.26
+            ],
+            "sentence_ter": [
+              100.0,
+              150.0,
+              100.0,
+              120.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 43.02,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1st person future)\nngu = sleep (verb)\nBardbi = the old woman\nga = past‑tense particle (optional)\nbungmanya = ran (away) (verb)\nNgunybulugi = the doctor\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (1st person present)\nnginya = saw you (verb phrase)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb (Verb may include the object).\n2. A pronoun can appear with a tense/aspect morpheme (e.g., future “Gulugba”) or without one for present (e.g., “Ngajbi”).\n3. Past time can be indicated either by the pre‑verbal particle **ga** or by a verb that is inherently past‑tense (e.g., *nya*). The particle is optional.",
+          "metrics": {
+            "corpus_bleu": 2.68,
+            "corpus_chrfpp": 14.34,
+            "corpus_ter": 144.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              5.52,
+              5.52,
+              6.57,
+              5.52,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              9.64,
+              9.41,
+              10.32,
+              17.37,
+              9.43,
+              27.55
+            ],
+            "sentence_ter": [
+              100.0,
+              175.0,
+              116.67,
+              120.0,
+              175.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data.",
+              "Unable to translate with the current data."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 51.21,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1st person future)\nngu = sleep (verb)\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (1st person present)\nnginya = saw you (sg.) (verb phrase with incorporated object)\nDagumajba = she will (3rd person future)\nnguyu = strike (verb)\nngunybulugi = the doctor (object form, same as Ngunybulugi)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb. The verb may be a simple verb, a verb phrase, or a verb that incorporates its object.\n2. A separate object noun can follow the verb (S V O order) when the verb does not incorporate the object.\n3. Pronouns can appear with a tense/aspect morpheme (e.g., future “‑ba”) or without one for present.\n4. Past time can be marked by the pre‑verbal particle **ga** or by a verb that is inherently past‑tense (e.g., *nya*, *bungmanya*). The particle is optional.\n5. Future tense is signaled by the suffix **‑ba** attached to a pronoun (e.g., *Gulugba* “I will”, *Dagumajba* “she will”).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 82.0,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject)\nngunybulugi = the doctor (object) – same form as subject\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (sg.) (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike\nngarlujba = dance (future)\nAlanga = the girl\ngu = future particle used with noun subjects\njanjin = dog\ngunya = with (post‑position)\n[DELETED entries – none required; all previous entries remain compatible.]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb**; an object noun follows the verb when the verb does not incorporate the object (S V O).\n2. **Past** can be marked either by the pre‑verbal particle **ga** or by verbs that are inherently past‑tense (e.g., *nya*, *bungmanya*). The particle is optional.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a pronoun (e.g., *Gulugba*, *Dagumajba*).\nb. The particle **gu** placed before the verb when the subject is a noun; the verb itself may also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya* “saw you”).\n5. The post‑position **gunya** follows a noun to mean “with”.\n6. Nouns do not change form for subject vs. object; case is not overtly marked.\n---",
+          "metrics": {
+            "corpus_bleu": 5.37,
+            "corpus_chrfpp": 20.52,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              17.97,
+              15.21,
+              8.12,
+              10.68,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              17.38,
+              28.53,
+              27.73,
+              9.33,
+              7.01,
+              27.91
+            ],
+            "sentence_ter": [
+              71.43,
+              100.0,
+              66.67,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will strike the house.",
+              "He/she saw you.",
+              "The dog chased the cat.",
+              "He/she danced yesterday.",
+              "She will see him.",
+              "The boy will go with the woman."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 77.09,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject or object)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (sg.) (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike\nngarlujba = dance (future)\nAlanga = the girl\ngu = future particle used with noun subjects\njanjin = dog\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused form)\nNgajba = he will (3 sg future)\ngununyu = see you (sg.) (object‑incorporated, non‑past)\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb**; an object noun follows the verb when the verb does not incorporate the object (S V O).\n2. **Past** can be marked either by the pre‑verbal particle **ga** or by verbs that are inherently past‑tense (e.g., *nya*, *bungmanya*). The particle is optional.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*).\nb. The particle **gu** placed before the verb when the subject is a noun; the verb itself may also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya* “saw you”, *gununyu* “see you”). It can appear in past or non‑past contexts.\n5. The post‑position **gunya** follows a noun to mean “with”. It may phonologically fuse with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*).\n6. Nouns do not change form for subject vs. object; case is not overtly marked.\n---",
+          "metrics": {
+            "corpus_bleu": 6.76,
+            "corpus_chrfpp": 25.64,
+            "corpus_ter": 118.18,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.74,
+              23.64,
+              4.24,
+              39.76,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              23.46,
+              32.04,
+              22.63,
+              42.78,
+              6.64
+            ],
+            "sentence_ter": [
+              85.71,
+              75.0,
+              200.0,
+              60.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will strike you and ran away.",
+              "He will see you.",
+              "The dog … (the verb *darrangguwaji* is not attested, so the meaning is unclear).",
+              "Ngirra danced the girl.",
+              "She sees."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 74.67,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject or object)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (sg.) (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike\nngarlujba = dance (future)\nAlanga = the girl\ngu = future particle used with noun subjects\njanjin = dog\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused)\nNgajba = he will (3 sg future)\ngununyu = see you (sg.) (object‑incorporated, non‑past)\nNgirra = I (sg.) – used in past clauses\nnga = stole (past)\ngijilulu = money",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb**; an object noun follows the verb when the verb does not incorporate the object (S V O).\n2. **Past** can be marked either by the pre‑verbal particle **ga** or by verbs that are inherently past‑tense (e.g., *nya*, *bungmanya*, *nga*). The particle is optional.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*).\nb. The particle **gu** placed before the verb when the subject is a noun; the verb itself may also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya* “saw you”, *gununyu* “see you”). It can appear in past or non‑past contexts.\n5. The post‑position **gunya** follows a noun to mean “with”. It may phonologically fuse with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*).\n6. Nouns do not change form for subject vs. object; case is not overtly marked.",
+          "metrics": {
+            "corpus_bleu": 4.59,
+            "corpus_chrfpp": 14.18,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              10.68,
+              14.54,
+              14.13,
+              10.68,
+              8.75
+            ],
+            "sentence_chrfpp": [
+              19.77,
+              12.2,
+              23.89,
+              4.46,
+              9.11,
+              7.1
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              66.67,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will dance with the dog.",
+              "I stole the money.",
+              "The dog will see the girl.",
+              "I danced.",
+              "She will see you.",
+              "He will run away."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 76.88,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject or object)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (sg.) (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike\nngarlujba = dance (future)\nAlanga = the girl\ngu = future particle used with noun subjects\njanjin = dog\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused)\nNgajba = he will (3 sg future)\ngununyu = see you (sg.) (object‑incorporated, non‑past)\nNgirra = I (sg.) – used in past clauses\nnga = stole (past)\ngijilulu = money",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb**; an object noun follows the verb when the verb does not incorporate the object (S V O).\n2. **Past** can be marked either by the pre‑verbal particle **ga** or by verbs that are inherently past‑tense (e.g., *nya*, *bungmanya*, *nga*). The particle is optional.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*).\nb. The particle **gu** placed before the verb when the subject is a noun; the verb itself may also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya* “saw you”, *gununyu* “see you”). It can appear in past or non‑past contexts.\n5. The post‑position **gunya** follows a noun to mean “with”. It may phonologically fuse with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*).\n6. **Personal pronouns** have distinct forms for subject (e.g., *Ngarlu*, *Ngajbi*, *Alanga* as noun) and for future when the suffix **‑ba** is added (e.g., *Yagujba*).\n7. **Object pronouns** are separate morphemes (e.g., *nyu* = him). They appear after the verb unless the verb incorporates the object.\n---",
+          "metrics": {
+            "corpus_bleu": 6.74,
+            "corpus_chrfpp": 22.93,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.74,
+              15.97,
+              11.34,
+              39.76,
+              10.68,
+              4.99
+            ],
+            "sentence_chrfpp": [
+              23.89,
+              10.76,
+              28.15,
+              44.82,
+              9.11,
+              14.03
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              83.33,
+              60.0,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will see you and ran away.",
+              "You see him.",
+              "The dog will leave him without a house.",
+              "I danced the girl.",
+              "She will see you.",
+              "He/she (past) stole the house."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 86.58,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject or object)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (sg.) (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike\nngarlujba = dance (future)\nAlanga = the girl\ngu = future particle used with noun subjects\njanjin = dog\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused)\nNgajba = he will (3 sg future)\ngununyu = see you (sg.) (object‑incorporated, non‑past)\nNgirra = I (sg.) – used in past clauses\nnga = stole (past)\ngijilulu = money",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object**; the object follows the verb unless the verb incorporates the object.\n2. **Past** can be marked by the pre‑verbal particle **ga** (optional) or by a verb that is inherently past‑tense (e.g., *nya*, *bungmanya*, *nga*, *bungmanyani*).\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a personal pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*).\nb. The particle **gu** placed before the verb when the subject is a noun; the verb itself may also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya* “see‑you”, *gununyu* “see‑you”). Incorporated objects are encoded inside the verb and no separate object noun follows.\n5. The post‑position **gunya** follows a noun to mean “with”. It can phonologically fuse with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*).\n6. **Personal pronouns** have distinct subject forms (*Ngarlu*, *Ngajbi*, *Ngirra*) and future forms created by adding **‑ba** (*Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*).\n7. **Object pronouns** are separate morphemes (e.g., *nyu* = him, *ngiyinga* = me) and appear after the verb unless the verb incorporates the object.\n8. The suffix **‑ba** can also appear on a verb to mark future (e.g., *ngarlujba* “will dance”).\n---",
+          "metrics": {
+            "corpus_bleu": 5.95,
+            "corpus_chrfpp": 19.25,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.29,
+              19.72,
+              5.67,
+              39.76,
+              8.12,
+              3.75
+            ],
+            "sentence_chrfpp": [
+              21.07,
+              11.43,
+              14.71,
+              44.82,
+              9.55,
+              14.17
+            ],
+            "sentence_ter": [
+              57.14,
+              75.0,
+              83.33,
+              60.0,
+              125.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will see you strike.",
+              "You see.",
+              "Dog will leave (without a house).",
+              "I danced the girl.",
+              "The old woman saw you.",
+              "He/she/they (unspecified) past‑tense “balamurrungunya”."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 123.54,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep\nBardbi = the old woman\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject or object)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (sg.) (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike\nngarlujba = dance (future)\nAlanga = the girl\ngu = future particle used with noun subjects\njanjin = dog\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused)\nNgajba = he will (3 sg future)\ngununyu = see you (sg.) (object‑incorporated, non‑past)\nNgirra = I (sg.) – used in past clauses\nnga = stole (past)\ngijilulu = money",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object**; objects follow the verb unless the verb incorporates the object.\n2. **Past** can be marked by the pre‑verbal particle **ga**, by a verb that is inherently past (e.g., *nya*, *bungmanya*), or by the suffix **‑ni** on a transitive verb that takes an overt object pronoun.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a personal pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*). The verb that follows remains in its base (non‑future) form.\nb. The particle **gu** placed before the verb when the subject is a noun; the verb itself may also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya* “saw‑you”, *gununyu* “see‑you”). Incorporated objects appear inside the verb and no separate object noun follows.\n5. The post‑position **gunya** follows a noun to mean “with”. It can fuse phonologically with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*).\n6. **Personal pronouns** have distinct subject forms (*Ngarlu*, *Ngajbi*, *Ngirra*) and future forms created by adding **‑ba** (*Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*).\n7. **Object pronouns** are separate morphemes (e.g., *nyu* = him, *ngiyinga* = me) and appear after the verb unless the verb incorporates the object.\n8. The suffix **‑ba** can also appear on a verb to mark future (e.g., *ngarlujba* “will dance”).\n9. The suffix **‑ni** marks a past transitive verb that takes an overt object pronoun (e.g., *bungmanyani* “struck”).\n[DELETED: none – all previous rules retained, with the addition of rule 9 and clarification of rule 2.]\n---",
+          "metrics": {
+            "corpus_bleu": 10.65,
+            "corpus_chrfpp": 29.23,
+            "corpus_ter": 74.07,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.29,
+              15.97,
+              18.58,
+              39.76,
+              16.23,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              21.07,
+              8.26,
+              39.13,
+              44.82,
+              17.26,
+              32.77
+            ],
+            "sentence_ter": [
+              57.14,
+              100.0,
+              50.0,
+              60.0,
+              100.0,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will see you strike.",
+              "You saw him.",
+              "The dog ran with the stick.",
+              "I danced the girl.",
+              "The old woman sees me.",
+              "He ran with the stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 123.7,
+          "accumulated_dict": "Ngarlu = you (sg.)\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep (base)\nBardbi = the old woman (noun)\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (subject or object)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present)\nnginya = saw you (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike (base)\nngarlujba = dance (future)\nAlanga = the girl (noun)\ngu = future particle used with noun subjects\njanjin = dog (noun)\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused)\nNgajba = he will (3 sg future)\ngununyu = see you (object‑incorporated, non‑past)\nNgirra = I (sg.) – used in past clauses\nnga = stole (past)\ngijilulu = money (noun)\nYagujba = you will (2 sg future)\nnyu = him (object pronoun)\nbarrawuwaji = leave (someone) without a house (verb phrase)\nDaguma = old woman (noun, alternative form)\nngiyinga = me (object pronoun)\nbungmanyani = struck (past transitive, takes overt object pronoun)\ndarranggunguji = ran (away) with the stick (verb phrase)\nAlayulu = she (subject pronoun)\nAlayulujba = she will (future)\nnyinga = saw (past) (verb)\nDirragbi = (noun, likely a person/animal)\nbalamurrungunya = (verb phrase “run with the stick” or similar)",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object**; objects follow the verb unless the verb incorporates the object.\n2. **Past** can be marked by the pre‑verbal particle **ga**, by a verb that is inherently past (e.g., *nya*, *bungmanya*, *nga*, *nyinga*), or by the suffix **‑ni** on a transitive verb that takes an overt object pronoun.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a personal pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*, *Alayulujba*). The following verb remains in its base form.\nb. The particle **gu** placed before the verb when the subject is a noun; the verb may optionally also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya*, *gununyu*). Incorporated objects appear inside the verb and no separate object noun follows.\n5. The post‑position **gunya** follows a noun to mean “with”. It can fuse phonologically with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*).\n6. **Personal pronouns** have distinct subject forms (*Ngarlu*, *Ngajbi*, *Ngirra*, *Alayulu*) and future forms created by adding **‑ba** (*Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*, *Alayulujba*).\n7. **Object pronouns** are separate morphemes (e.g., *nyu* = him, *ngiyinga* = me). They normally appear after the verb, but may appear before the verb in future clauses where the subject is a future‑form pronoun (e.g., *Yagujba nyu barrawuwaji*).\n8. The suffix **‑ba** can also appear on a verb to mark future (e.g., *ngarlujba* “will dance”).\n9. The suffix **‑ni** marks a past transitive verb that takes an overt object pronoun (e.g., *bungmanyani* “struck”).",
+          "metrics": {
+            "corpus_bleu": 10.92,
+            "corpus_chrfpp": 27.39,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.04,
+              19.72,
+              18.58,
+              39.76,
+              10.68,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              17.64,
+              9.82,
+              39.13,
+              44.82,
+              7.94,
+              30.76
+            ],
+            "sentence_ter": [
+              71.43,
+              75.0,
+              50.0,
+              60.0,
+              100.0,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you strike.",
+              "You found.",
+              "The dog ran with the stick.",
+              "I danced the girl.",
+              "The old woman saw.",
+              "Dirragbi ran with the stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 116.04,
+          "accumulated_dict": "Ngarlu = you (sg.) – subject pronoun\nnya = danced (past)\nGulugba = I will (1 sg future)\nngu = sleep (base)\nBardbi = the old woman (noun)\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nNgunybulugi = the doctor (noun)\nbarrawunguji = has a house (verb phrase)\nNgajbi = I (present) – subject pronoun\nnginya = saw you (object‑incorporated)\nDagumajba = she will (3 sg future)\nnguyu = strike (base)\nngarlujba = dance (future)\nAlanga = the girl (noun)\ngu = future particle used with noun subjects\njanjin = dog (noun)\ngunya = with (post‑position)\njanjingunya = janjin + gunya = “with the dog” (fused)\nNgajba = he will (3 sg future)\ngununyu = see you (object‑incorporated, non‑past)\nNgirra = I (sg.) – used in past clauses (subject)\nnga = stole (past)\ngijilulu = money (noun)\nYagujba = you will (2 sg future)\nnyu = him (object pronoun)\nbarrawuwaji = leave (someone) without a house (verb phrase)\nDaguma = old woman (noun, alternative form)\nngiyinga = me (object pronoun)\nbungmanyani = struck (past transitive, takes overt object pronoun)\ndarranggunguji = ran (away) with the stick (verb phrase)\nAlayulu = she (subject pronoun)\nAlayulujba = she will (future)\nnyinga = saw (past) – verb inherently past\nDirragbi = (noun, likely a person/animal)\nbalamurrungunya = run with the stick (verb phrase)\nngiya = found (past)\njuwa = the man (noun)\ngijilulungunya = gijilulu + gunya = “with the money” (fused)\ngina = (unknown function; appears between noun subject and verb)",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – Object**; objects follow the verb unless the verb incorporates the object.\n2. **Past** can be marked (a) by the pre‑verbal particle **ga**, (b) by verbs that are inherently past (e.g., *nya*, *ngiya*, *nyinga*, *bungmanya*, *nga*), or (c) by the suffix **‑ni** on a transitive verb that takes an overt object pronoun.\n3. **Future** is expressed in two ways:\na. A suffix **‑ba** attached to a personal pronoun (e.g., *Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*, *Alayulujba*). The following verb remains in its base form.\nb. The particle **gu** placed before the verb when the subject is a noun; the verb may optionally also bear the suffix **‑ba** (e.g., *gu ngarlujba*).\n4. **Object incorporation** occurs when the verb includes its object (e.g., *nginya*, *gununyu*). Incorporated objects appear inside the verb and no separate object noun follows.\n5. The post‑position **gunya** follows a noun to mean “with”. It can fuse phonologically with the preceding noun (e.g., *janjin* + *gunya* → *janjingunya*). The same fusion pattern applies to other nouns (e.g., *gijilulu* + *gunya* → *gijilulungunya*).\n6. **Personal pronouns** have distinct subject forms (*Ngarlu*, *Ngajbi*, *Ngirra*, *Alayulu*) and future forms created by adding **‑ba** (*Gulugba*, *Dagumajba*, *Ngajba*, *Yagujba*, *Alayulujba*).\n7. **Object pronouns** are separate morphemes (e.g., *nyu* = him, *ngiyinga* = me). They normally appear after the verb, but may appear before the verb in future clauses where the subject is a future‑form pronoun (e.g., *Yagujba nyu barrawuwaji*).\n8. The suffix **‑ba** can also appear on a verb to mark future (e.g., *ngarlujba* “will dance”).\n9. The suffix **‑ni** marks a past transitive verb that takes an overt object pronoun (e.g., *bungmanyani* “struck”).\n10. Some verbs are inherently past and do not require **ga** (e.g., *ngiya*, *nyinga*).",
+          "metrics": {
+            "corpus_bleu": 10.31,
+            "corpus_chrfpp": 23.49,
+            "corpus_ter": 81.48,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              19.72,
+              15.85,
+              39.76,
+              10.68,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              16.61,
+              8.77,
+              23.21,
+              44.82,
+              7.94,
+              30.76
+            ],
+            "sentence_ter": [
+              85.71,
+              75.0,
+              66.67,
+              60.0,
+              100.0,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you get struck.",
+              "You saw.",
+              "The dog ran away.",
+              "I danced the girl.",
+              "The old woman saw.",
+              "Dirragbi ran with the stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 72.14,
+          "accumulated_dict": "Ngarlu = you (sg) – subject pronoun\nGulugba = I will (1 sg future)\nnya = danced (inherently past)\ngu = future particle used with noun subjects\nngarlujba = dance (future)\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nBardbi = the old woman (noun)\nNgunybulugi = the doctor (noun)\nbarrawunguji = has a house (present verb phrase)\nNgajbi = I (present) – subject pronoun\nnginya = saw you (object‑incorporated, non‑past)\nDagumajba = she will (3 sg future)\nnguyu = strike (base)\nngunybulugi = doctor (object)\nAlanga = the girl (noun)\njanjingunya = with the dog (janjin + gunya)\nngiya = found (inherently past)\njuwa = the man (noun)\ngijilulu = money (noun)\ngijilulungunya = with the money (gijilulu + gunya)\nNgajba = he will (3 sg future)\ngununyu = see you (object‑incorporated, non‑past)\nNgirra = I (sg) – used in past clauses (subject)\nnga = stole (past transitive)\ngijigulu = money (object of *nga*)\nYagujba = you will (2 sg future)\nnyu = him (object pronoun)\nbarrawuwaji = leave (someone) without a house (present)\nDaguma = old woman (noun, alternative form)\nngiyinga = me (object pronoun)\nbungmanyani = struck (past transitive, takes overt object pronoun)\ndarranggunguji = ran (away) with the stick (verb phrase)\nAlayulu = she (subject pronoun)\nAlayulujba = she will (future)\nnyinga = saw (inherently past)\nDirragbi = (noun, likely a person/animal)\nbalamurrungunya = run with the stick (verb phrase)\ngina = linker particle used after a noun subject before a personal‑pronoun verb\njuwani = juwa + ‑i (man with nominalizer/definite suffix)\ngininga = left me (verb “leave” with incorporated object pronoun ‑nga)\nngiyinga = me (object pronoun) – same as above, separate form\n[DELETED: *ngirra* as a generic “I” – retained only for past‑subject use]",
+          "accumulated_rules": "1. **Basic clause order** is Subject – Verb – Object (or incorporated object). Noun subjects may carry a nominal suffix *‑i* for definiteness.\n2. **Past** can be marked (a) by the pre‑verbal particle **ga**, (b) by verbs that are inherently past (*nya, ngiya, nyinga, bungmanya, nga*), or (c) by the suffix **‑ni** on a transitive verb that takes an overt object pronoun.\n3. **Future** is expressed either (a) by adding **‑ba** to a personal pronoun (e.g., *Gulugba, Dagumajba, Ngajba, Yagujba, Alayulujba*); the following verb stays in its base form, or (b) by the particle **gu** placed before the verb when the subject is a noun. The verb may also bear **‑ba** (e.g., *ngarlujba*).\n4. **Object incorporation**: the object can be fused into the verb as a suffix (e.g., *nginya* “see‑you”, *gununyu* “see‑you”, *gininga* “leave‑me”). When incorporated, no separate object follows.\n5. **Separate object pronouns** appear after the verb in present/past clauses, but may appear before the verb in future clauses with a future‑form pronoun subject (e.g., *Yagujba nyu barrawuwaji*).\n6. **Post‑position gunya** follows a noun meaning “with”. It can fuse phonologically with the noun (e.g., *janjin* + *gunya* → *janjingunya*).\n7. **Linker *gina*** occurs between a noun subject and a verb that is a personal‑pronoun form (e.g., *Juwani gina ngajbi*). It is not a tense marker.\n8. **Nominal suffix *‑i*** attaches to nouns when they function as the subject, likely marking definiteness or case; it does not affect verb morphology.\n9. **Object pronoun suffix *‑nga*** attaches to certain verbs to incorporate “me” (parallel to *‑nya* for “you”).\n10. **Verb *barrawuwaji*** is a complex verb meaning “leave someone without a house”; it behaves as a present‑tense verb and takes an object pronoun before it.",
+          "metrics": {
+            "corpus_bleu": 10.23,
+            "corpus_chrfpp": 30.79,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              35.36,
+              15.62,
+              39.76,
+              10.68,
+              14.54
+            ],
+            "sentence_chrfpp": [
+              18.93,
+              48.45,
+              38.32,
+              44.82,
+              7.94,
+              30.17
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              66.67,
+              60.0,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will see you and strike.",
+              "He left me.",
+              "The dog ran away with the stick.",
+              "I danced the girl.",
+              "The old woman saw.",
+              "Dirragbi will run with the stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 154.7,
+          "accumulated_dict": "Ngarlu = you (sg) – subject pronoun\nGulugba = I will (1 sg future)\nnya = danced (inherently past)\ngu = future particle used with noun subjects\nngarlujba = dance (future)\nga = past‑tense particle (pre‑verbal)\nbungmanya = ran (away) (past)\nBardbi = the old woman (noun)\nNgunybulugi = the doctor (noun)\nbarrawunguji = has a house (present verb phrase)\nNgajbi = I (present) – subject pronoun\nnginya = saw you (object‑incorporated, non‑past)\nDagumajba = she will (3 sg future)\nnguyu = strike (base)\nngunybulugi = doctor (object)\nAlanga = the girl (noun)\njanjingunya = with the dog (janjin + gunya)\nngiya = found (inherently past)\njuwa = the man (noun)\ngijilulu = money (noun)\ngijilulungunya = with the money (gijilulu + gunya)\nNgajba = he will (3 sg future)\ngununyu = see you (object‑incorporated, non‑past)\nNgirra = I (sg) – used in past clauses (subject)\nnga = stole (past transitive)\ngijigulu = money (object of *nga*)\nYagujba = you will (2 sg future)\nnyu = him (object pronoun)\nbarrawuwaji = leave (someone) without a house (present)\nDaguma = old woman (noun, alternative form)\nngiyinga = me (object pronoun)\nbungmanyani = struck (past transitive, takes overt object pronoun)\ndarranggunguji = ran (away) with the stick (verb phrase)\nAlayulu = she (subject pronoun)\nAlayulujba = she will (future)\nnyinga = saw (inherently past)\nDirragbi = (noun, likely a person/animal)\nbalamurrungunya = run with the stick (verb phrase)\ngina = linker particle used after a noun subject before a personal‑pronoun verb\njuwani = juwa + ‑i (man with nominalizer/definite suffix)\ngininga = left me (verb “leave” with incorporated object pronoun ‑nga)\nngiyinga = me (object pronoun) – same as above, separate form\n[DELETED: *ngirra* as a generic “I” – retained only for past‑subject use]",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb – Object (or incorporated object). Noun subjects may take the definite suffix *‑i*.\n2. **Past marking**: (a) pre‑verbal particle **ga**; (b) verbs that are inherently past (*nya, ngiya, nyinga, bungmanya, nga*); (c) transitive past verbs bear suffix **‑ni** and are preceded by an overt object pronoun.\n3. **Future**: (a) personal‑pronoun + **‑ba** (e.g., *Gulugba, Dagumajba, Ngajba, Yagujba, Alayulujba*); the following verb stays in its base form, **or** the verb itself may carry **‑ba** (e.g., *ngarlujba*). (b) With a noun subject, the particle **gu** precedes the verb; the verb may also be marked **‑ba**.\n4. **Object incorporation**: the object is fused to the verb as a suffix (e.g., *nginya*, *gununyu*, *gininga*). No separate object follows.\n5. **Separate object pronouns**: appear after the verb in present/past clauses; they appear before the verb in past‑transitive clauses with *‑ni* and after a future pronoun when the verb is present (e.g., *Yagujba nyu barrawuwaji*).\n6. **Post‑position *gunya*** follows a noun meaning “with”; it may fuse phonologically (e.g., *janjin* + *gunya* → *janjingunya*).\n7. **Linker *gina*** occurs between a noun subject (often with *‑i*) and a verb that is not a personal‑pronoun form (e.g., *Juwani gina …*).\n8. **Definite suffix *‑i*** marks nouns used as subjects (and possibly other case functions).\n9. **Object‑pronoun suffix *‑nga*** attaches to certain verbs to incorporate “me” (parallel to *‑nya* for “you”).\n10. **Verb *barrawuwaji*** behaves as a present‑tense verb meaning “leave someone without a house”; when combined with a future pronoun it yields future meaning.\n11. **Verb *ngajbi*** is homophonous: it can be the 1 sg pronoun (present) or the present verb “see”. Context determines the function.\n[DELETED: Rule stating that *‑ba* only appears on pronouns – contradicted by *ngarlujba* and *ngarlujba* after *gu*.]\n---",
+          "metrics": {
+            "corpus_bleu": 10.49,
+            "corpus_chrfpp": 23.56,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.04,
+              35.36,
+              8.52,
+              39.76,
+              10.68,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              17.64,
+              32.76,
+              11.56,
+              44.82,
+              7.94,
+              30.76
+            ],
+            "sentence_ter": [
+              71.43,
+              75.0,
+              83.33,
+              60.0,
+              100.0,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you strike.",
+              "He sees you.",
+              "Ran without a house.",
+              "I danced the girl.",
+              "The old woman saw.",
+              "Dirragbi ran with the stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 10.23,
+        "corpus_chrfpp": 30.79,
+        "corpus_ter": 77.78,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.64,
+          35.36,
+          15.62,
+          39.76,
+          10.68,
+          14.54
+        ],
+        "sentence_chrfpp": [
+          18.93,
+          48.45,
+          38.32,
+          44.82,
+          7.94,
+          30.17
+        ],
+        "sentence_ter": [
+          85.71,
+          50.0,
+          66.67,
+          60.0,
+          100.0,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He will see you and strike.",
+          "He left me.",
+          "The dog ran away with the stick.",
+          "I danced the girl.",
+          "The old woman saw.",
+          "Dirragbi will run with the stick."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 14
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 41.52,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Basic word order appears to be S‑V** (subject followed by verb) in simple clauses:\n- *Ngarlu nya* → “You danced.”\n- *Gulugba ngu* → “I will sleep.”\n2. In clauses with an explicit object, the object can follow the verb, yielding a V‑O pattern, while the subject may be omitted or encoded elsewhere (possible pronoun‑drop). Example: *Ngajbi nginya* → “I saw you.” (verb + object, subject understood from context).\n3. **Verb phrases can be complex**, incorporating aspect/tense markers and objects within a single lexical item (e.g., *barrawunguji* = “has a house”).\n4. **Directional or manner particles** may follow the verb, as in *bungmanya* “away” after *ga* “ran”.\n5. Nouns do not show overt case marking in the data; their role (subject vs. object) is inferred from position and verb morphology.",
+          "metrics": {
+            "corpus_bleu": 7.42,
+            "corpus_chrfpp": 8.66,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.25,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              8.21,
+              9.39
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You danced.",
+              "I will sleep."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 39.95,
+          "accumulated_dict": "- **Dagumajba** – “she will” (3rd‑person singular feminine future auxiliary fused with pronoun)\n- **nguyu** – “strike” (verb stem)\n- **ngunybulugi** – “doctor” (noun)\n- **Alanga** – “the girl” (noun)\n- **gu** – future auxiliary used with lexical noun subjects (≈ “will”)\n- **ngarlujba** – “dance” (verb stem)\n- **janjingunya** – “dog” (noun; appears in a post‑verbal position that can convey “with the dog”)\n- **Ngajba** – “he will” (3rd‑person singular masculine future auxiliary fused with pronoun)\n- **gununyu** – “you (sg.)” (object pronoun)\n- **Ngarlu** – “you (sg.)” (subject pronoun)\n- **nya** – past‑tense form of the verb “dance” (verb‑stem + ‑nya)\n- **Gulugba** – “I will” (1st‑person singular future auxiliary fused with pronoun)\n- **ngu** – “sleep” (verb stem)",
+          "accumulated_rules": "1. **Pronoun + future** is expressed by a single fused form (e.g., *Dagumajba* “she will”, *Ngajba* “he will”, *Gulugba* “I will”).\n2. When the subject is a lexical noun, future is marked by the separate auxiliary **gu** placed after the subject (e.g., *Alanga gu …* “the girl will …”).\n3. **Verb stems** appear in different aspectual forms:\n- Bare stem = infinitive / non‑past (e.g., *nguyu* “strike”, *ngarlujba* “dance”, *ngu* “sleep”).\n- Stem + ‑nya = past tense (e.g., *nya* on *ngarlujba* → *ngarlujba‑nya* “danced”).\n4. **Object pronouns** follow the verb directly (e.g., *Ngajba gununyu* “he will see you”).\n5. **Lexical objects** (nouns) follow the verb; when a post‑verbal noun denotes a companion or instrument, it can be interpreted as “with X” (e.g., *janjingunya* after *ngarlujba* → “dance with the dog”).\n6. Word order for simple clauses is **Subject – Verb**; with an explicit object the order becomes **Verb – Object** (object pronoun) or **Verb – Object‑Noun** (object noun).",
+          "metrics": {
+            "corpus_bleu": 2.75,
+            "corpus_chrfpp": 9.82,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.17,
+              5.52,
+              4.77
+            ],
+            "sentence_chrfpp": [
+              13.75,
+              8.24,
+              6.78
+            ],
+            "sentence_ter": [
+              85.71,
+              175.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will strike the doctor.",
+              "The girl will dance with the dog.",
+              "He will see you (sg.)."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 5,
+          "latency_s": 46.91,
+          "accumulated_dict": "- **Dagumajba** – “she will” (3rd‑person singular feminine future auxiliary fused with pronoun)\n- **nguyu** – “strike” (verb stem)\n- **ngunybulugi** – “doctor” (noun)\n- **Alanga** – “the girl” (noun)\n- **gu** – future auxiliary used with lexical noun subjects (≈ “will”)\n- **ngarlujba** – “dance” (verb stem)\n- **janjingunya** – “dog” (noun; appears in a post‑verbal position that can convey “with the dog”)\n- **Ngajba** – “he will” (3rd‑person singular masculine future auxiliary fused with pronoun)\n- **gununyu** – “you (sg.)” (object pronoun)\n- **Ngarlu** – “you (sg.)” (subject pronoun)\n- **nya** – past‑tense form of the verb “dance” (verb‑stem + ‑nya)\n- **Gulugba** – “I will” (1st‑person singular future auxiliary fused with pronoun)\n- **ngu** – “sleep” (verb stem)",
+          "accumulated_rules": "1. **Subject pronouns are tense‑inflected.**\n- Non‑future (past or present) forms are simple stems (e.g. *Ngarlu* “you”, *Bardbi* “he”, *Alayulu* “she”, *Ngirra* “I”).\n- Future is expressed by a fused pronoun + future auxiliary (e.g. *Yagujba* “you will”, *Dagumajba* “she will”).\n2. **Lexical noun subjects use the separate future auxiliary *gu* placed after the noun.**\n3. **Verb tense**\n- Bare stem = non‑past (present / infinitive).\n- Past is marked either by the suffix **‑nya** (as in *ngarlujba‑nya*) or by the suffix **‑inga** (as in *ngiyinga*). The language allows more than one past‑tense derivational suffix.\n4. **Object pronouns** follow the verb directly and are distinct forms from subject pronouns.\n- 2 sg object = *gununyu*\n- 1 sg object = *bungmanyani*\n5. **Lexical objects** (nouns) also follow the verb. When a noun appears after the verb and denotes a companion, instrument, or means, it is interpreted as “with X”.\n6. **Word order**\n- Simple clause: **Subject – Verb** (when the subject is a lexical noun, the future auxiliary *gu* follows the subject).\n- Clause with an object: **Verb – ObjectPronoun** or **Verb – ObjectNoun**.\n7. **Complex object phrases** (e.g., “him without a house”) are realized as a single lexical noun phrase that follows the verb; internal structure of that phrase is not further analyzed here.",
+          "metrics": {
+            "corpus_bleu": 4.32,
+            "corpus_chrfpp": 9.39,
+            "corpus_ter": 144.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.16,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              8.38,
+              10.97
+            ],
+            "sentence_ter": [
+              100.0,
+              175.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I stole the money.",
+              "You will leave him without a house."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 38.76,
+          "accumulated_dict": "- **Dagumajba** – “she will” (3rd‑person singular feminine future auxiliary fused with pronoun)\n- **nguyu** – “strike” (verb stem)\n- **ngunybulugi** – “doctor” (noun)\n- **Alanga** – “the girl” (noun)\n- **gu** – future auxiliary used with lexical noun subjects (≈ “will”)\n- **ngarlujba** – “dance” (verb stem)\n- **janjingunya** – “dog” (noun; appears in a post‑verbal position that can convey “with the dog”)\n- **Ngajba** – “he will” (3rd‑person singular masculine future auxiliary fused with pronoun)\n- **gununyu** – “you (sg.)” (object pronoun)\n- **Ngarlu** – “you (sg.)” (subject pronoun)\n- **nya** – past‑tense form of the verb “dance” (verb‑stem + ‑nya)\n- **Gulugba** – “I will” (1st‑person singular future auxiliary fused with pronoun)\n- **ngu** – “sleep” (verb stem)",
+          "accumulated_rules": "1. **Subject pronouns are tense‑inflected.**\n- Non‑future (present/ past) forms are simple stems (e.g., *Ngarlu* “you”, *Yagu* “he”).\n- Future is expressed by a fused pronoun + future auxiliary (e.g., *Dagumajba* “she will”, *Gulugba* “I will”).\n2. **Lexical‑noun subjects** use the separate future auxiliary *gu* placed **after** the noun.\n- Structure: **Noun – gu – Verb** for future clauses.\n3. **Verb tense**\n- Bare stem = non‑past (present or infinitive).\n- Past is marked by one of several suffixes, e.g., **‑nya** (as in *ngarlujba‑nya*) or **‑inga** (as in *ngiyinga*).\n4. **Object pronouns** follow the verb directly and are distinct from subject pronouns.\n- 2 sg object = *gununyu*\n- 1 sg object = *bungmanyani*\n5. **Lexical objects** (nouns) also follow the verb. When a noun follows the verb and denotes a companion, instrument, means, or accompaniment, it is interpreted as “with X”. The language does not use a separate preposition; the post‑verbal noun itself carries the comitative meaning.\n6. **Word order**\n- Simple clause (non‑future lexical subject): **Subject – Verb**.\n- Simple clause (future lexical subject): **Subject – gu – Verb**.\n- Clause with an object pronoun: **Verb – ObjectPronoun**.\n- Clause with a lexical object (instrument/comitative): **Verb – ObjectNoun**.\n7. **Complex object phrases** (e.g., “him without a house”) are realized as a single lexical noun phrase placed after the verb; internal structure is not further parsed for this stage.\n8. **Negation and questions** (carried over from earlier stages) are expressed by particles that appear **before** the verb. The particle *na* (or similar) marks negation, while a sentence‑final particle *ka* (or rising intonation) marks a question. (These particles have been observed in earlier stages and are retained here.)\n---",
+          "metrics": {
+            "corpus_bleu": 4.88,
+            "corpus_chrfpp": 17.8,
+            "corpus_ter": 94.74,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              35.36,
+              5.67,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              14.38,
+              48.45,
+              14.58,
+              10.13
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man saw her with the money.",
+              "He left me.",
+              "He saw the old man without a spear.",
+              "The old man will jump."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.88,
+        "corpus_chrfpp": 17.8,
+        "corpus_ter": 94.74,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.57,
+          35.36,
+          5.67,
+          8.12
+        ],
+        "sentence_chrfpp": [
+          14.38,
+          48.45,
+          14.58,
+          10.13
+        ],
+        "sentence_ter": [
+          85.71,
+          50.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The man saw her with the money.",
+          "He left me.",
+          "He saw the old man without a spear.",
+          "The old man will jump."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 33.71,
+          "metrics": {
+            "corpus_bleu": 7.79,
+            "corpus_chrfpp": 30.99,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.21,
+              35.36,
+              6.27,
+              5.52,
+              30.21,
+              10.55
+            ],
+            "sentence_chrfpp": [
+              36.42,
+              48.45,
+              16.48,
+              8.02,
+              60.08,
+              33.66
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              100.0,
+              100.0,
+              75.0,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She struck the old woman.",
+              "He left me.",
+              "The old man ran away with a spear.",
+              "I danced you (sg.).",
+              "The old woman struck me.",
+              "The old man will jump with a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 7.79,
+        "corpus_chrfpp": 30.99,
+        "corpus_ter": 92.59,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.21,
+          35.36,
+          6.27,
+          5.52,
+          30.21,
+          10.55
+        ],
+        "sentence_chrfpp": [
+          36.42,
+          48.45,
+          16.48,
+          8.02,
+          60.08,
+          33.66
+        ],
+        "sentence_ter": [
+          85.71,
+          50.0,
+          100.0,
+          100.0,
+          75.0,
+          120.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She struck the old woman.",
+          "He left me.",
+          "The old man ran away with a spear.",
+          "I danced you (sg.).",
+          "The old woman struck me.",
+          "The old man will jump with a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 44.99,
+          "metrics": {
+            "corpus_bleu": 14.41,
+            "corpus_chrfpp": 34.25,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              8.17,
+              100.0,
+              9.54,
+              32.47,
+              10.68,
+              9.54
+            ],
+            "sentence_chrfpp": [
+              13.86,
+              100.0,
+              23.16,
+              60.07,
+              14.94,
+              31.58
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              83.33,
+              40.0,
+              100.0,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see me run.",
+              "He left you.",
+              "He (the man) with the stick.",
+              "I stole you the girl.",
+              "She will strike you.",
+              "The old man will jump without a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 49.53,
+          "metrics": {
+            "corpus_bleu": 13.04,
+            "corpus_chrfpp": 34.8,
+            "corpus_ter": 103.7,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              8.17,
+              100.0,
+              8.39,
+              22.09,
+              10.68,
+              9.54
+            ],
+            "sentence_chrfpp": [
+              13.86,
+              100.0,
+              23.06,
+              61.4,
+              14.94,
+              31.58
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              100.0,
+              120.0,
+              100.0,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see me run.",
+              "He left you.",
+              "He (the man) ran with the stick.",
+              "I stole the girl with the money.",
+              "She will strike you.",
+              "The old man will jump without a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 13.04,
+        "corpus_chrfpp": 34.8,
+        "corpus_ter": 103.7,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          8.17,
+          100.0,
+          8.39,
+          22.09,
+          10.68,
+          9.54
+        ],
+        "sentence_chrfpp": [
+          13.86,
+          100.0,
+          23.06,
+          61.4,
+          14.94,
+          31.58
+        ],
+        "sentence_ter": [
+          85.71,
+          50.0,
+          100.0,
+          120.0,
+          100.0,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will see me run.",
+          "He left you.",
+          "He (the man) ran with the stick.",
+          "I stole the girl with the money.",
+          "She will strike you.",
+          "The old man will jump without a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6
+      },
+      "delta": {
+        "bleu_delta": -0.08,
+        "chrf_delta": 0.55,
+        "ter_delta": 16.13,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 1.82,
+      "chrf": 8.72,
+      "ter": 183.33,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:**  \n*“The bright light of the sunrise spreads across the sky.”*",
+      "reference": "The old woman will find you (sg.)."
+    },
+    "baseline": {
+      "best_bleu": 11.11,
+      "best_chrf": 32.73,
+      "best_ter": 74.07,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "She will see the old woman.",
+        "He left me.",
+        "The man ran away.",
+        "You danced the girl.",
+        "She saw me.",
+        "The old man will jump without a spear."
+      ],
+      "best_references": [
+        "The old woman will find you (sg.).",
+        "He left you (sg.).",
+        "The dog doesn’t have a stick.",
+        "You (sg.) stole the girl.",
+        "You (sg.) struck me.",
+        "She jumped with the spear."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 10.23,
+      "best_chrf": 30.79,
+      "best_ter": 77.78,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "He will see you and strike.",
+        "He left me.",
+        "The dog ran away with the stick.",
+        "I danced the girl.",
+        "The old woman saw.",
+        "Dirragbi will run with the stick."
+      ],
+      "best_references": [
+        "The old woman will find you (sg.).",
+        "He left you (sg.).",
+        "The dog doesn’t have a stick.",
+        "You (sg.) stole the girl.",
+        "You (sg.) struck me.",
+        "She jumped with the spear."
+      ],
+      "best_step": 14
+    },
+    "step_by_step": {
+      "best_bleu": 4.88,
+      "best_chrf": 17.8,
+      "best_ter": 94.74,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "The man saw her with the money.",
+        "He left me.",
+        "He saw the old man without a spear.",
+        "The old man will jump."
+      ],
+      "best_references": [
+        "The old woman will find you (sg.).",
+        "He left you (sg.).",
+        "The dog doesn’t have a stick.",
+        "You (sg.) stole the girl."
+      ],
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 7.79,
+      "best_chrf": 30.99,
+      "best_ter": 92.59,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "She struck the old woman.",
+        "He left me.",
+        "The old man ran away with a spear.",
+        "I danced you (sg.).",
+        "The old woman struck me.",
+        "The old man will jump with a spear."
+      ],
+      "best_references": [
+        "The old woman will find you (sg.).",
+        "He left you (sg.).",
+        "The dog doesn’t have a stick.",
+        "You (sg.) stole the girl.",
+        "You (sg.) struck me.",
+        "She jumped with the spear."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 13.04,
+      "best_chrf": 34.8,
+      "best_ter": 103.7,
+      "best_em": 16.67,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "She will see me run.",
+        "He left you.",
+        "He (the man) ran with the stick.",
+        "I stole the girl with the money.",
+        "She will strike you.",
+        "The old man will jump without a spear."
+      ],
+      "best_references": [
+        "The old woman will find you (sg.).",
+        "He left you (sg.).",
+        "The dog doesn’t have a stick.",
+        "You (sg.) stole the girl.",
+        "You (sg.) struck me.",
+        "She jumped with the spear."
+      ],
+      "delta": {
+        "bleu_delta": -0.08,
+        "chrf_delta": 0.55,
+        "ter_delta": 16.13,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

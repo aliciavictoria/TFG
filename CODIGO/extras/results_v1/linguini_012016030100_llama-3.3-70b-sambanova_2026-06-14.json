@@ -1,0 +1,1197 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-14T19:11:52.147090",
+    "puzzle_id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-sambanova",
+    "model_tier": "medium",
+    "num_train_pairs": 10,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ar kanarriːcciːg kamiːg jaːnticcirsu.",
+        "target": "We bought the camels for the neighbours."
+      },
+      {
+        "source": "tirt kadeːg allesu.",
+        "target": "The owner repaired the dress."
+      },
+      {
+        "source": "jahali waliːg darbadki biticcirra.",
+        "target": "The young men will give the chicken to the dogs."
+      },
+      {
+        "source": "man jahalgi kadeːcciːg maːgtirsu.",
+        "target": "He stole the dresses for the young man."
+      },
+      {
+        "source": "ay beyyeːcciːg ajaːnirri.",
+        "target": "I am buying the necklaces."
+      },
+      {
+        "source": "wal aygi baːbiːg eldeːnsu.",
+        "target": "The dog found the doors for me."
+      },
+      {
+        "source": "magas ikki waliːg ticcirsu.",
+        "target": "The thief gave you (pl.) the dogs."
+      },
+      {
+        "source": "iːdi magaski kamiːg tirsa.",
+        "target": "The men gave the camels to the thief."
+      },
+      {
+        "source": "ay hanuːg bijomri.",
+        "target": "I will strike the donkey."
+      },
+      {
+        "source": "sarkaːyi aygi beyyeːcciːg adeːnda.",
+        "target": "The cowards are giving me the necklaces."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "magasi argi ajomirra.",
+        "target": "The thieves are striking us.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay kanarriːg baːbki alletirsi.",
+        "target": "I repaired the door for the neighbour.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "hanu tirtiːg elirsu.",
+        "target": "The donkey found the owners.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tirti argi kamgi deːccirsa.",
+        "target": "The owners gave us the camel.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay darbadki bijaːndi.",
+        "target": "I will buy the chicken.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "magasi argi ajomirra.",
+      "reference": "The thieves are striking us.",
+      "hypothesis": "I'll do my best to translate the sentence, but please note that I'm not familiar with the language.\n\nBased on my analysis, it appears to be a language with a non-Latin script, possibly from the Niger-Congo language family. Here's my attempt at translation:\n\n\"Magasi\" could be a noun, possibly meaning \"house\" or \"store\".\n\"Argi\" might be an adjective or verb, potentially meaning \"good\", \"beautiful\", or \"to shine\".\n\"Ajomirra\" seems to be a noun or phrase, possibly meaning \"friend\" or \"companion\".\n\nWith these assumptions, a possible translation of the sentence could be:\n\n\"The good house of my friend\" or \"The beautiful store of companions\".\n\nPlease keep in mind that this is a very rough translation, and I may be entirely off the mark. If you provide more context or information about the language, I'd be happy to try again.",
+      "latency_s": 3.15,
+      "metrics": {
+        "corpus_bleu": 0.23,
+        "corpus_chrfpp": 4.58,
+        "corpus_ter": 2740.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.23
+        ],
+        "sentence_chrfpp": [
+          4.58
+        ],
+        "sentence_ter": [
+          2740.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence, but please note that I'm not familiar with the language.\n\nBased on my analysis, it appears to be a language with a non-Latin script, possibly from the Niger-Congo language family. Here's my attempt at translation:\n\n\"Magasi\" could be a noun, possibly meaning \"house\" or \"store\".\n\"Argi\" might be an adjective or verb, potentially meaning \"good\", \"beautiful\", or \"to shine\".\n\"Ajomirra\" seems to be a noun or phrase, possibly meaning \"friend\" or \"companion\".\n\nWith these assumptions, a possible translation of the sentence could be:\n\n\"The good house of my friend\" or \"The beautiful store of companions\".\n\nPlease keep in mind that this is a very rough translation, and I may be entirely off the mark. If you provide more context or information about the language, I'd be happy to try again."
+        ],
+        "references": [
+          "The thieves are striking us."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 2.89,
+          "metrics": {
+            "corpus_bleu": 21.57,
+            "corpus_chrfpp": 55.72,
+            "corpus_ter": 46.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              24.08,
+              53.73,
+              8.26,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              37.42,
+              52.06,
+              72.59,
+              53.2,
+              66.25
+            ],
+            "sentence_ter": [
+              60.0,
+              42.86,
+              20.0,
+              83.33,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will strike us.",
+              "I repaired the doors for you.",
+              "The donkey found the doors.",
+              "The owner gave the camels for us.",
+              "I will give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 21.57,
+        "corpus_chrfpp": 55.72,
+        "corpus_ter": 46.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.97,
+          24.08,
+          53.73,
+          8.26,
+          37.99
+        ],
+        "sentence_chrfpp": [
+          37.42,
+          52.06,
+          72.59,
+          53.2,
+          66.25
+        ],
+        "sentence_ter": [
+          60.0,
+          42.86,
+          20.0,
+          83.33,
+          20.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will strike us.",
+          "I repaired the doors for you.",
+          "The donkey found the doors.",
+          "The owner gave the camels for us.",
+          "I will give the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 2.82,
+          "accumulated_dict": "kanarriː = buy/action related to buying (provisional)\ncciːg = subject/object affix (provisional)\nkamiːg = camels (provisional)\njaːnticcirsu = for the neighbours (provisional)\ntirt = owner (provisional)\nkadeːg = repair/action related to repairing (provisional)\nallesu = dress (provisional)\nar = unknown function (provisional)",
+          "accumulated_rules": "1. The language might use suffixes to indicate grammatical functions (provisional, based on \"cciːg\" and \"kadeːg\").\n2. Word order could be Subject-Object-Verb (SOV), given the structure of the examples (provisional).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 4.33,
+          "accumulated_dict": "kanarriː = buy/action related to buying (provisional)\ncciːg = subject/object affix, possibly related to actions (provisional)\nkamiːg = camels (provisional)\njaːnti- = related to neighbours (new)\n-cirsu = beneficiary or direction of action (new)\ntirt = owner (provisional)\nkadeːg = repair/action related to repairing (provisional)\nallesu = dress (provisional)\nar = unknown function, possibly a marker for the beginning of a sentence or an aspect of the action (provisional)\njahali = young (new)\nwaliːg = men (new)\ndarbadki = chicken (new)\nbi- = related to giving (new)\n-ticcirra = action of giving to someone or something (new)",
+          "accumulated_rules": "1. The language might use suffixes to indicate grammatical functions (provisional, based on \"cciːg\" and \"kadeːg\").\n2. Word order could be Subject-Object-Verb (SOV), given the structure of the examples (provisional).\n3. Affixes might be used to indicate the direction or beneficiary of an action (new, based on \"-cirsu\" and \"-ticcirra\").",
+          "metrics": {
+            "corpus_bleu": 8.69,
+            "corpus_chrfpp": 32.04,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              12.22,
+              9.65,
+              11.99,
+              24.45
+            ],
+            "sentence_chrfpp": [
+              14.53,
+              23.91,
+              25.37,
+              50.57,
+              47.16
+            ],
+            "sentence_ter": [
+              80.0,
+              71.43,
+              80.0,
+              83.33,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The market is open.",
+              "They bought a horse for the child.",
+              "The owner's dog is happy.",
+              "The owner gave the camel to the neighbour.",
+              "The dog is eating the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 4.58,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing\nallesu = dress\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person (derived from jahali)\nmaːgtirsu = unknown, possibly beneficiary or direction (requires more data)\nman = he (introduced as a pronoun)",
+          "accumulated_rules": "1. The language might use suffixes to indicate grammatical functions.\n2. Word order could be Subject-Object-Verb (SOV).\n3. Affixes might be used to indicate the direction or beneficiary of an action.\n[No rules were directly contradicted, but the understanding of \"cciːg\" and the introduction of new affixes like \"bi-\" and \"-ticcirra\" refine the language's morphological patterns.]",
+          "metrics": {
+            "corpus_bleu": 3.81,
+            "corpus_chrfpp": 32.35,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              11.34,
+              7.27,
+              6.74,
+              9.29
+            ],
+            "sentence_chrfpp": [
+              20.34,
+              27.41,
+              29.39,
+              49.4,
+              37.35
+            ],
+            "sentence_ter": [
+              140.0,
+              71.43,
+              100.0,
+              83.33,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They are selling the goods to the dogs.",
+              "The mother bought the dresses for the child.",
+              "The owner is giving to the worker.",
+              "The owner gave the camels to the guest.",
+              "The mother is giving the chicken to the child."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 3.12,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing (possibly also steal/take in certain contexts)\nallesu = dress\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person\nmaːgtirsu = beneficiary or direction (possibly related to the young man)\nman = he\nay = I\nbeyyeː = necklaces\najaːnirri = unknown, possibly a verb or aspect marker",
+          "accumulated_rules": "1. The language might use suffixes to indicate grammatical functions.\n2. Word order could be Subject-Object-Verb (SOV).\n3. Affixes might be used to indicate the direction or beneficiary of an action.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 8.34,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing or stealing/taking\nallesu = dress (object)\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person\nmaːgtirsu = beneficiary or direction related to the young man\nman = he\nay = I\nbeyyeː = necklaces\najaːnirri = unknown, possibly a verb or aspect marker\nwal = dog\nbaːbiːg = doors\neldeːnsu = action of finding\naygi = for me or my",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical functions, including direction or beneficiary.\n2. Word order could be Subject-Object-Verb (SOV), but more examples are needed for confirmation.\n3. Affixes are used to indicate the direction or beneficiary of an action, with \"-cirsu\" and \"-su\" suffixes indicating direction or beneficiary.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 3.31,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing or stealing/taking\nallesu = dress (object)\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person\nmaːgtirsu = beneficiary or direction related to the young man\nman = he\nay = I\nbeyyeː = necklaces\najaːnirri = unknown, possibly a verb or aspect marker\nwal = dog\nbaːbiːg = doors\neldeːnsu = action of finding\naygi = for me or my\nmagas = thief\nikki = you (plural)",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical functions, including direction or beneficiary.\n2. Word order could be Subject-Object-Verb (SOV), but more examples are needed for confirmation.\n3. Affixes are used to indicate the direction or beneficiary of an action, with \"-cirsu\" and \"-su\" suffixes indicating direction or beneficiary.",
+          "metrics": {
+            "corpus_bleu": 14.51,
+            "corpus_chrfpp": 42.89,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              33.03,
+              11.51,
+              6.27,
+              32.47
+            ],
+            "sentence_chrfpp": [
+              26.12,
+              53.8,
+              34.85,
+              44.43,
+              52.42
+            ],
+            "sentence_ter": [
+              100.0,
+              42.86,
+              60.0,
+              100.0,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief is buying for me.",
+              "I am repairing the door for the dress.",
+              "The owner found it.",
+              "The owner is giving the camels to you.",
+              "I am giving the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 7.28,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing or stealing/taking\nallesu = dress (object) with unclear suffix\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person\nmaːgtirsu = beneficiary or direction related to the young man\nman = he\nay = I\nbeyyeː = necklaces\najaːnirri = unknown, possibly a verb or aspect marker\nwal = dog\nbaːbiːg = doors\neldeːnsu = action of finding\naygi = for me\nmagas = thief\nikki = you (plural)\n[DELETED: tir - reason: unclear suffix and potential contradiction]",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical functions, including direction or beneficiary.\n2. Word order appears to be Subject-Object-Verb (SOV), with more examples supporting this hypothesis.\n3. Affixes are used to indicate the direction or beneficiary of an action, with \"-cirsu\" and \"-su\" suffixes indicating direction or beneficiary.",
+          "metrics": {
+            "corpus_bleu": 15.65,
+            "corpus_chrfpp": 41.76,
+            "corpus_ter": 60.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              33.03,
+              11.51,
+              8.64,
+              32.47
+            ],
+            "sentence_chrfpp": [
+              26.34,
+              53.8,
+              27.81,
+              45.44,
+              52.42
+            ],
+            "sentence_ter": [
+              100.0,
+              42.86,
+              60.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief is giving to me.",
+              "I am repairing the door for the dress.",
+              "The dog found something.",
+              "The owner is giving the camels.",
+              "I am giving the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 3.92,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing or stealing/taking\nallesu = dress (object) with unclear suffix\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person\nmaːgtirsu = beneficiary or direction related to the young man\nman = he\nay = I\nbeyyeː = necklaces\najaːnirri = unknown, possibly a verb or aspect marker\nwal = dog\nbaːbiːg = doors\neldeːnsu = action of finding\naygi = for me\nmagas = thief\nikki = you (plural)\nhanuːg = donkey\nbijomri = action related to striking\niːdi = men\nmagaski = thief (with possible suffix)\ntirsa = related to giving",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical functions, including direction or beneficiary.\n2. Word order appears to be Subject-Object-Verb (SOV), with more examples supporting this hypothesis.\n3. Affixes are used to indicate the direction or beneficiary of an action, with \"-cirsu\" and \"-su\" suffixes indicating direction or beneficiary.",
+          "metrics": {
+            "corpus_bleu": 19.14,
+            "corpus_chrfpp": 52.65,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              33.03,
+              53.73,
+              6.74,
+              12.55
+            ],
+            "sentence_chrfpp": [
+              30.59,
+              46.02,
+              87.07,
+              48.42,
+              53.83
+            ],
+            "sentence_ter": [
+              80.0,
+              42.86,
+              20.0,
+              83.33,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will strike me.",
+              "I will buy the door for the dress.",
+              "The donkey found the owner.",
+              "The owner gave the camels to the thief.",
+              "I will give the chicken to the young man."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 4.52,
+          "accumulated_dict": "kanarriː = buy/action related to buying\ncciːg = action-related affix\nkamiːg = camels\njaːnti- = related to neighbours\n-cirsu = beneficiary or direction of action\ntirt = owner\nkadeːg = repair/action related to repairing or stealing/taking\nallesu = dress (object) with unclear suffix\nar = sentence or aspect marker\njahali = young\nwaliːg = men\ndarbadki = chicken\nbi- = related to giving\n-ticcirra = action of giving to someone or something\njahalgi = young man/person\nmaːgtirsu = beneficiary or direction related to the young man\nman = he\nay = I\nbeyyeː = necklaces\najaːnirri = possibly a verb or aspect marker related to buying\nwal = dog\nbaːbiːg = doors\neldeːnsu = action of finding\naygi = for me\nmagas = thief\nikki = you (plural)\nhanuːg = donkey\nbijomri = action related to striking\niːdi = men\nmagaski = thief (with possible suffix)\ntirsa = related to giving\nsarkaːyi = cowards\nadeːnda = unknown, possibly related to giving or action",
+          "accumulated_rules": "1. The language uses suffixes to indicate grammatical functions, including direction or beneficiary.\n2. Word order appears to be Subject-Object-Verb (SOV), with more examples supporting this hypothesis.\n3. Affixes are used to indicate the direction or beneficiary of an action, with \"-cirsu\" and \"-su\" suffixes indicating direction or beneficiary.",
+          "metrics": {
+            "corpus_bleu": 24.76,
+            "corpus_chrfpp": 59.35,
+            "corpus_ter": 53.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              26.27,
+              33.03,
+              53.73,
+              5.52,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              54.08,
+              53.8,
+              87.07,
+              42.69,
+              65.19
+            ],
+            "sentence_ter": [
+              60.0,
+              42.86,
+              20.0,
+              116.67,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thieves are giving to me.",
+              "I am repairing the door for the dress.",
+              "The donkey found the owner.",
+              "The owner is giving the camels to the thief.",
+              "I will strike the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 24.76,
+        "corpus_chrfpp": 59.35,
+        "corpus_ter": 53.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          26.27,
+          33.03,
+          53.73,
+          5.52,
+          37.99
+        ],
+        "sentence_chrfpp": [
+          54.08,
+          53.8,
+          87.07,
+          42.69,
+          65.19
+        ],
+        "sentence_ter": [
+          60.0,
+          42.86,
+          20.0,
+          116.67,
+          20.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thieves are giving to me.",
+          "I am repairing the door for the dress.",
+          "The donkey found the owner.",
+          "The owner is giving the camels to the thief.",
+          "I will strike the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 6.12,
+          "accumulated_dict": "kanarriːcciːg = camels\nkamiːg = we\njaːnticcirsu = for the neighbours\nkadeːg = owner, dress (possibly a noun with multiple meanings or a noun and a verb)\nallesu = repaired\njahali = young men\nwaliːg = will give\ndarbadki = chicken\nbiticcirra = to the dogs",
+          "accumulated_rules": "- The language may have a subject-object-verb (SOV) word order, as suggested by the sentence \"ar kanarriːcciːg kamiːg jaːnticcirsu\" where \"kamiːg\" (we) appears to be the subject, \"kanarriːcciːg\" (camels) the object, and the verb is not clearly identified but could be implied at the beginning (\"ar\").\n- There might be a pattern of suffixation or affixation to indicate grammatical relationships, as seen with \"jaːnticcirsu\" which could imply a dative or benefactive case.\n- The verb \"allesu\" seems to follow the subject \"kadeːg\", which could support the SOV hypothesis or indicate a specific verb conjugation pattern.",
+          "metrics": {
+            "corpus_bleu": 4.78,
+            "corpus_chrfpp": 24.64,
+            "corpus_ter": 111.76,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              12.87,
+              4.93
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              36.11,
+              23.4
+            ],
+            "sentence_ter": [
+              120.0,
+              71.43,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "The young men will give the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 2.11,
+          "accumulated_dict": "kanarriːcciːg = camels\nkamiːg = we\njaːnticcirsu = for the neighbours\nkadeːg = owner, dress (possibly a noun with multiple meanings or a noun and a verb)\nallesu = repaired\njahali = young men\nwaliːg = will give\ndarbadki = chicken\nbiticcirra = to the dogs\njahalgi = young man (singular)\nmaːgtirsu = for the young man (possibly a dative or benefactive case marker similar to \"jaːnticcirsu\")\nbeyyeːcciːg = necklaces\najaːnirri = I am buying (possibly a first-person singular verb conjugation)",
+          "accumulated_rules": "- The language may have a subject-object-verb (SOV) word order, as suggested by the sentence \"ar kanarriːcciːg kamiːg jaːnticcirsu\" where \"kamiːg\" (we) appears to be the subject, \"kanarriːcciːg\" (camels) the object, and the verb is not clearly identified but could be implied at the beginning (\"ar\").\n- There might be a pattern of suffixation or affixation to indicate grammatical relationships, as seen with \"jaːnticcirsu\" which could imply a dative or benefactive case.\n- The verb \"allesu\" seems to follow the subject \"kadeːg\", which could support the SOV hypothesis or indicate a specific verb conjugation pattern.\n- The suffix \"-gi\" might be a singular marker, as seen in \"jahalgi\" (young man) compared to \"jahali\" (young men).\n- The language may use a specific conjugation pattern for first-person singular verbs, as suggested by \"ajaːnirri\" (I am buying).\n- The suffix \"-ccir-\" or \"-cir-\" might be related to the formation of nouns or the indication of grammatical case, as seen in \"jaːnticcirsu\", \"biticcirra\", and \"maːgtirsu\".",
+          "metrics": {
+            "corpus_bleu": 4.24,
+            "corpus_chrfpp": 15.51,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              7.65
+            ],
+            "sentence_chrfpp": [
+              16.34,
+              14.83
+            ],
+            "sentence_ter": [
+              140.0,
+              71.43
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 8.3,
+          "accumulated_dict": "kanarriːcciːg = camels\nkamiːg = we\njaːnticcirsu = for the neighbours\nkadeːg = owner, dress (possibly a noun with multiple meanings or a noun and a verb)\nallesu = repaired\njahali = young men\nwaliːg = will give\ndarbadki = chicken\nbiticcirra = to the dogs\njahalgi = young man (singular)\nmaːgtirsu = for the young man (possibly a dative or benefactive case marker similar to \"jaːnticcirsu\")\nbeyyeːcciːg = necklaces\najaːnirri = I am buying (possibly a first-person singular verb conjugation)\nwal = dog\naygi = found\nbaːbiːg = doors\neldeːnsu = for me\nmagas = thief\nikki = you (plural)\nticcirsu = the dogs (object form, possibly with a case marker)\niːdi = men\nmagaski = thief (possibly a different case form, e.g., dative or accusative)\ntirsa = to the thief (possibly a dative or benefactive case marker)",
+          "accumulated_rules": "- The language may have a subject-object-verb (SOV) word order, as suggested by the sentence \"ar kanarriːcciːg kamiːg jaːnticcirsu\" where \"kamiːg\" (we) appears to be the subject, \"kanarriːcciːg\" (camels) the object, and the verb is not clearly identified but could be implied at the beginning (\"ar\").\n- There might be a pattern of suffixation or affixation to indicate grammatical relationships, as seen with \"jaːnticcirsu\" which could imply a dative or benefactive case.\n- The verb \"allesu\" seems to follow the subject \"kadeːg\", which could support the SOV hypothesis or indicate a specific verb conjugation pattern.\n- The suffix \"-gi\" might be a singular marker, as seen in \"jahalgi\" (young man) compared to \"jahali\" (young men).\n- The language may use a specific conjugation pattern for first-person singular verbs, as suggested by \"ajaːnirri\" (I am buying).\n- The suffix \"-ccir-\" or \"-cir-\" might be related to the formation of nouns or the indication of grammatical case, as seen in \"jaːnticcirsu\", \"biticcirra\", and \"maːgtirsu\".\n- The word order in \"wal aygi baːbiːg eldeːnsu\" suggests that the verb \"aygi\" (found) follows the subject \"wal\" (dog), supporting the SOV hypothesis.\n- The use of \"ikki\" in \"magas ikki waliːg ticcirsu\" may indicate a plural form of the second-person pronoun (you), and \"waliːg\" could be a verb form indicating an action towards the plural subject.\n- The sentence \"iːdi magaski kamiːg tirsa\" implies that \"kamiːg\" (we) is the subject performing the action of giving, and \"tirsa\" might indicate the direction or recipient of the action (to the thief).",
+          "metrics": {
+            "corpus_bleu": 3.16,
+            "corpus_chrfpp": 14.98,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              13.35,
+              16.21
+            ],
+            "sentence_ter": [
+              120.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog found the doors for me.",
+              "The thief gave you (pl.) the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 2.81,
+          "accumulated_dict": "kanarriːcciːg = camels\nkamiːg = we\njaːnticcirsu = for the neighbours\nkadeːg = owner, dress (possibly a noun with multiple meanings or a noun and a verb)\nallesu = repaired\njahali = young men\nwaliːg = will give\ndarbadki = chicken\nbiticcirra = to the dogs\njahalgi = young man (singular)\nmaːgtirsu = for the young man (possibly a dative or benefactive case marker)\nbeyyeːcciːg = necklaces\najaːnirri = I am buying (possibly a first-person singular verb conjugation)\nwal = dog\naygi = found\nbaːbiːg = doors\neldeːnsu = for me\nmagas = thief\nikki = you (plural)\nticcirsu = the dogs (object form, possibly with a case marker)\niːdi = men\nmagaski = thief (possibly a different case form, e.g., dative or accusative)\ntirsa = to the thief (possibly a dative or benefactive case marker)\nhanuːg = donkey\nbijomri = the donkey (possibly with a case marker or definite article)\nsarkaːyi = cowards\nadeːnda = to me (possibly a dative or benefactive case marker similar to \"eldeːnsu\")",
+          "accumulated_rules": "- The language appears to follow a subject-object-verb (SOV) word order, as seen in several examples where the subject precedes the object and the verb comes last.\n- There is evidence of suffixation or affixation to indicate grammatical relationships, such as the use of \"-su\" and \"-nda\" in \"jaːnticcirsu\" and \"adeːnda\", which may mark dative or benefactive cases.\n- The verb conjugation pattern may involve specific suffixes or prefixes for different persons and numbers, as suggested by \"ajaːnirri\" (I am buying) and potentially \"ay hanuːg bijomri\" (I will strike the donkey), where \"ay\" could be a first-person singular marker.\n- The language may use a system of case markers to indicate the grammatical function of nouns, with different suffixes for different cases (e.g., dative/benefactive \"-su\", \"-nda\", possibly accusative \"-ri\" as in \"bijomri\").\n- The word order and use of specific markers like \"ikki\" for plural subjects and potentially different verb forms (e.g., \"waliːg\") suggest a complex system of agreement between subjects and verbs.",
+          "metrics": {
+            "corpus_bleu": 4.32,
+            "corpus_chrfpp": 15.86,
+            "corpus_ter": 91.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              17.15,
+              14.98
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will strike the donkey.",
+              "The cowards are giving me the necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour."
+            ],
+            "num_evaluated": 2
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.78,
+        "corpus_chrfpp": 24.64,
+        "corpus_ter": 111.76,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.52,
+          12.87,
+          4.93
+        ],
+        "sentence_chrfpp": [
+          12.11,
+          36.11,
+          23.4
+        ],
+        "sentence_ter": [
+          120.0,
+          71.43,
+          160.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We bought the camels for the neighbours.",
+          "The owner repaired the dress.",
+          "The young men will give the chicken to the dogs."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners."
+        ],
+        "num_evaluated": 3
+      },
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 2.37,
+          "metrics": {
+            "corpus_bleu": 11.91,
+            "corpus_chrfpp": 55.19,
+            "corpus_ter": 57.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              22.96,
+              13.54,
+              20.41,
+              7.81,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              52.1,
+              46.3,
+              66.96,
+              49.35,
+              66.25
+            ],
+            "sentence_ter": [
+              40.0,
+              71.43,
+              40.0,
+              100.0,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thieves will strike us.",
+              "I bought and repaired the doors.",
+              "The owner found the donkey.",
+              "The owner stole the camels from us.",
+              "I will give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 11.91,
+        "corpus_chrfpp": 55.19,
+        "corpus_ter": 57.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          22.96,
+          13.54,
+          20.41,
+          7.81,
+          37.99
+        ],
+        "sentence_chrfpp": [
+          52.1,
+          46.3,
+          66.96,
+          49.35,
+          66.25
+        ],
+        "sentence_ter": [
+          40.0,
+          71.43,
+          40.0,
+          100.0,
+          20.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thieves will strike us.",
+          "I bought and repaired the doors.",
+          "The owner found the donkey.",
+          "The owner stole the camels from us.",
+          "I will give the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.23,
+      "chrf": 4.58,
+      "ter": 2740.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence, but please note that I'm not familiar with the language.\n\nBased on my analysi",
+      "reference": "The thieves are striking us."
+    },
+    "baseline": {
+      "best_bleu": 21.57,
+      "best_chrf": 55.72,
+      "best_ter": 46.43,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The thief will strike us.",
+        "I repaired the doors for you.",
+        "The donkey found the doors.",
+        "The owner gave the camels for us.",
+        "I will give the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 24.76,
+      "best_chrf": 59.35,
+      "best_ter": 53.57,
+      "best_em": 0.0,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "The thieves are giving to me.",
+        "I am repairing the door for the dress.",
+        "The donkey found the owner.",
+        "The owner is giving the camels to the thief.",
+        "I will strike the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 4.78,
+      "best_chrf": 24.64,
+      "best_ter": 111.76,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "We bought the camels for the neighbours.",
+        "The owner repaired the dress.",
+        "The young men will give the chicken to the dogs."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners."
+      ],
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "best_bleu": 11.91,
+      "best_chrf": 55.19,
+      "best_ter": 57.14,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The thieves will strike us.",
+        "I bought and repaired the doors.",
+        "The owner found the donkey.",
+        "The owner stole the camels from us.",
+        "I will give the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

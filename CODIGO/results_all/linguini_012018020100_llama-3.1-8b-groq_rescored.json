@@ -1,0 +1,1681 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-25T15:22:34.809623",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "num_test_pairs": 6,
+    "source_raw_log": "raw_logs/linguini_012018020100_llama-3.1-8b-groq.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "Do you(sg) sleep?",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that without more context or information about the language, it's difficult to provide an accurate translation.\n\nThe sentence \"nɤ ʒip ku ne\" appears to be written in a non-standard orthography, possibly using the International Phonetic Alphabet (IPA) or a similar system. Based on this, I'll attempt a translation.\n\nBreaking down the sentence:\n\n- \"nɤ\" could be a word or a prefix, but without more context, it's hard to determine its meaning.\n- \"ʒip\" might be a word or a verb, possibly meaning \"to eat\" or \"to drink,\" but this is highly speculative.\n- \"ku\" could be a word or a particle, possibly indicating a location or a direction.\n- \"ne\" might be a word or a suffix, possibly indicating a question or a negation.\n\nGiven these possibilities, a rough translation of the sentence could be:\n\n\"What are you eating/drinking?\" or \"Where are you eating/drinking?\"\n\nPlease note that this is a highly speculative translation, and without more context or information about the language, it's difficult to provide a more accurate translation.",
+      "metrics": {
+        "corpus_bleu": 0.22,
+        "corpus_chrfpp": 1.55,
+        "corpus_ter": 6000.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.22
+        ],
+        "sentence_chrfpp": [
+          1.55
+        ],
+        "sentence_ter": [
+          6000.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that without more context or information about the language, it's difficult to provide an accurate translation.\n\nThe sentence \"nɤ ʒip ku ne\" appears to be written in a non-standard orthography, possibly using the International Phonetic Alphabet (IPA) or a similar system. Based on this, I'll attempt a translation.\n\nBreaking down the sentence:\n\n- \"nɤ\" could be a word or a prefix, but without more context, it's hard to determine its meaning.\n- \"ʒip\" might be a word or a verb, possibly meaning \"to eat\" or \"to drink,\" but this is highly speculative.\n- \"ku\" could be a word or a particle, possibly indicating a location or a direction.\n- \"ne\" might be a word or a suffix, possibly indicating a question or a negation.\n\nGiven these possibilities, a rough translation of the sentence could be:\n\n\"What are you eating/drinking?\" or \"Where are you eating/drinking?\"\n\nPlease note that this is a highly speculative translation, and without more context or information about the language, it's difficult to provide a more accurate translation."
+        ],
+        "references": [
+          "Do you(sg) sleep?"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 10.3,
+            "corpus_chrfpp": 19.62,
+            "corpus_ter": 218.18,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              3.75,
+              17.78,
+              3.75,
+              26.58,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              4.86,
+              8.75,
+              23.49,
+              15.07,
+              46.13,
+              2.36
+            ],
+            "sentence_ter": [
+              233.33,
+              225.0,
+              225.0,
+              225.0,
+              200.0,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip ku ne → You know.",
+              "ati kəmə nirum lapkʰi tʰi ne → He saw us.",
+              "tarum kəmə nuʔrum cʰam ran ne → They beat you(pl).",
+              "nirum kəmə tarum lan ki ne → We know them.",
+              "nirum kəmə nɤ cʰam tiʔ ne → We know you(sg).",
+              "nirum ka tiʔ ne → We sleep."
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 10.3,
+        "corpus_chrfpp": 19.62,
+        "corpus_ter": 218.18,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          3.75,
+          17.78,
+          3.75,
+          26.58,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          4.86,
+          8.75,
+          23.49,
+          15.07,
+          46.13,
+          2.36
+        ],
+        "sentence_ter": [
+          233.33,
+          225.0,
+          225.0,
+          225.0,
+          200.0,
+          200.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nɤ ʒip ku ne → You know.",
+          "ati kəmə nirum lapkʰi tʰi ne → He saw us.",
+          "tarum kəmə nuʔrum cʰam ran ne → They beat you(pl).",
+          "nirum kəmə tarum lan ki ne → We know them.",
+          "nirum kəmə nɤ cʰam tiʔ ne → We know you(sg).",
+          "nirum ka tiʔ ne → We sleep."
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 10.3,
+        "corpus_chrfpp": 19.62,
+        "corpus_ter": 218.18,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          3.75,
+          17.78,
+          3.75,
+          26.58,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          4.86,
+          8.75,
+          23.49,
+          15.07,
+          46.13,
+          2.36
+        ],
+        "sentence_ter": [
+          233.33,
+          225.0,
+          225.0,
+          225.0,
+          200.0,
+          200.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nɤ ʒip ku ne → You know.",
+          "ati kəmə nirum lapkʰi tʰi ne → He saw us.",
+          "tarum kəmə nuʔrum cʰam ran ne → They beat you(pl).",
+          "nirum kəmə tarum lan ki ne → We know them.",
+          "nirum kəmə nɤ cʰam tiʔ ne → We know you(sg).",
+          "nirum ka tiʔ ne → We sleep."
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 5.93,
+            "corpus_chrfpp": 13.5,
+            "corpus_ter": 95.45,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.97,
+              0.0,
+              6.57,
+              0.0,
+              21.65,
+              13.13
+            ],
+            "sentence_chrfpp": [
+              11.12,
+              7.15,
+              11.07,
+              11.36,
+              19.04,
+              20.62
+            ],
+            "sentence_ter": [
+              66.67,
+              100.0,
+              100.0,
+              125.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do I go?",
+              "You(sg) ate the food.",
+              "You(sg) drank the water.",
+              "You(sg) went to the store.",
+              "You(sg) slept.",
+              "Do you(sg) go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 19.97,
+            "corpus_chrfpp": 22.51,
+            "corpus_ter": 90.91,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              80.91,
+              0.0,
+              5.86,
+              10.68,
+              6.97,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              81.98,
+              3.61,
+              5.56,
+              9.54,
+              12.42,
+              10.42
+            ],
+            "sentence_ter": [
+              33.33,
+              100.0,
+              100.0,
+              100.0,
+              75.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you(sg) sleep?",
+              "I saw him.",
+              "Did I see him?",
+              "Did I see him?",
+              "Did I see him?",
+              "Do I see him?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 23.05,
+            "corpus_chrfpp": 33.29,
+            "corpus_ter": 72.73,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              14.06,
+              70.71,
+              5.52,
+              25.85,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              24.37,
+              65.99,
+              7.18,
+              36.64,
+              8.36
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              25.0,
+              100.0,
+              75.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Did I see him?",
+              "Do we know you(pl)?",
+              "Did I know you(pl)?",
+              "Do I know you(pl)?",
+              "Do I know you(pl)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 6.98,
+            "corpus_chrfpp": 23.59,
+            "corpus_ter": 63.64,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              21.34,
+              12.44,
+              7.72,
+              23.64,
+              7.72,
+              31.95
+            ],
+            "sentence_chrfpp": [
+              47.13,
+              12.77,
+              13.64,
+              22.28,
+              20.46,
+              23.1
+            ],
+            "sentence_ter": [
+              33.33,
+              75.0,
+              75.0,
+              50.0,
+              75.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "I see him.",
+              "Do you see me?",
+              "Do we know you?",
+              "Do you know him?",
+              "Do I go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 10.94,
+            "corpus_chrfpp": 17.64,
+            "corpus_ter": 81.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.97,
+              7.81,
+              5.86,
+              12.22,
+              36.56,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              11.12,
+              19.14,
+              5.56,
+              21.58,
+              28.62,
+              19.2
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              100.0,
+              50.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do I go?",
+              "Did you(sg) sleep?",
+              "Did I see him?",
+              "Do we know you(pl)?",
+              "Do you(sg) see me?",
+              "Did they beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 4.61,
+            "corpus_chrfpp": 17.09,
+            "corpus_ter": 86.36,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.04,
+              14.06,
+              7.72,
+              23.64,
+              6.97,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              14.61,
+              24.37,
+              18.6,
+              22.28,
+              11.48,
+              10.09
+            ],
+            "sentence_ter": [
+              133.33,
+              50.0,
+              75.0,
+              50.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do I go with you?",
+              "Did I see him?",
+              "Did they beat you?",
+              "Do we know you?",
+              "Do you see me?",
+              "Do you see him?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 7.09,
+            "corpus_chrfpp": 26.51,
+            "corpus_ter": 59.09,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              21.34,
+              12.7,
+              7.72,
+              23.64,
+              8.29,
+              31.95
+            ],
+            "sentence_chrfpp": [
+              47.13,
+              18.97,
+              18.6,
+              22.28,
+              26.0,
+              23.1
+            ],
+            "sentence_ter": [
+              33.33,
+              75.0,
+              75.0,
+              50.0,
+              50.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "Do you see him?",
+              "Did they beat you?",
+              "Do we know you?",
+              "Did you know him?",
+              "Do I go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 27.25,
+            "corpus_chrfpp": 36.76,
+            "corpus_ter": 63.64,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              80.91,
+              6.57,
+              12.98,
+              12.22,
+              39.76,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              81.98,
+              16.69,
+              29.85,
+              21.58,
+              42.49,
+              10.42
+            ],
+            "sentence_ter": [
+              33.33,
+              75.0,
+              50.0,
+              50.0,
+              50.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you(sg) sleep?",
+              "Do you(pl) see him?",
+              "Do they see us?",
+              "Do we know you(pl)?",
+              "Did you(sg) know him?",
+              "Do I see him?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 18.28,
+            "corpus_chrfpp": 40.74,
+            "corpus_ter": 54.55,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              21.34,
+              42.73,
+              38.81,
+              12.7,
+              8.29,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              47.13,
+              63.67,
+              70.42,
+              13.96,
+              26.0,
+              8.67
+            ],
+            "sentence_ter": [
+              33.33,
+              25.0,
+              25.0,
+              75.0,
+              50.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "Did he see him?",
+              "Do they know you?",
+              "Do you see him?",
+              "Did you know him?",
+              "Do they see us?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 18.28,
+        "corpus_chrfpp": 40.74,
+        "corpus_ter": 54.55,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          21.34,
+          42.73,
+          38.81,
+          12.7,
+          8.29,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          47.13,
+          63.67,
+          70.42,
+          13.96,
+          26.0,
+          8.67
+        ],
+        "sentence_ter": [
+          33.33,
+          25.0,
+          25.0,
+          75.0,
+          50.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Do you sleep?",
+          "Did he see him?",
+          "Do they know you?",
+          "Do you see him?",
+          "Did you know him?",
+          "Do they see us?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 9,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 18.28,
+        "corpus_chrfpp": 40.74,
+        "corpus_ter": 54.55,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          21.34,
+          42.73,
+          38.81,
+          12.7,
+          8.29,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          47.13,
+          63.67,
+          70.42,
+          13.96,
+          26.0,
+          8.67
+        ],
+        "sentence_ter": [
+          33.33,
+          25.0,
+          25.0,
+          75.0,
+          50.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Do you sleep?",
+          "Did he see him?",
+          "Do they know you?",
+          "Do you see him?",
+          "Did you know him?",
+          "Do they see us?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 9,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 2.91,
+            "corpus_chrfpp": 8.35,
+            "corpus_ter": 231.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.97,
+              11.16,
+              5.86,
+              0.0,
+              7.54,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              11.12,
+              12.2,
+              5.56,
+              5.09,
+              13.11,
+              3.12
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              100.0,
+              350.0,
+              325.0,
+              500.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do I go?",
+              "Did you",
+              "Did I see him?",
+              "I go. (ŋa ka kɤ) - assuming 'ne' is not present in declarative sentences",
+              "You(sg) sleep. (tuʔ ʒip) - assuming 'ne' is not present in declarative sentences",
+              "I see him. (ŋa ati lapkʰi) - assuming 'ne' is not present in declarative sentences"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 20.05,
+            "corpus_chrfpp": 27.35,
+            "corpus_ter": 81.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.54,
+              6.57,
+              70.71,
+              6.57,
+              36.56,
+              3.75
+            ],
+            "sentence_chrfpp": [
+              13.33,
+              16.89,
+              65.99,
+              12.31,
+              29.76,
+              8.88
+            ],
+            "sentence_ter": [
+              100.0,
+              75.0,
+              25.0,
+              75.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We know you(pl).",
+              "Do you(sg) see me?",
+              "Do we know you(pl)?",
+              "Do you(sg) know me?",
+              "Do you(sg) do it?",
+              "Do you(sg) know you(pl)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 10.41,
+            "corpus_chrfpp": 17.89,
+            "corpus_ter": 95.45,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              36.56,
+              6.57,
+              13.89,
+              5.52,
+              5.86,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              30.23,
+              16.69,
+              22.37,
+              9.72,
+              7.92,
+              17.65
+            ],
+            "sentence_ter": [
+              133.33,
+              75.0,
+              75.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did they beat you(sg)?",
+              "Do you(pl) see him?",
+              "Did you(sg) know him?",
+              "Did you(sg) see him?",
+              "Do they see him?",
+              "Did they see him?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 2.19,
+            "corpus_chrfpp": 8.29,
+            "corpus_ter": 90.91,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              5.86,
+              12.7,
+              0.0,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              4.4,
+              4.94,
+              6.36,
+              17.15,
+              2.47,
+              18.42
+            ],
+            "sentence_ter": [
+              100.0,
+              75.0,
+              100.0,
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They know us.",
+              "He saw me.",
+              "Did he see me?",
+              "Do they see us?",
+              "I see him.",
+              "Did I see him?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 2.19,
+        "corpus_chrfpp": 8.29,
+        "corpus_ter": 90.91,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          5.86,
+          12.7,
+          0.0,
+          12.7
+        ],
+        "sentence_chrfpp": [
+          4.4,
+          4.94,
+          6.36,
+          17.15,
+          2.47,
+          18.42
+        ],
+        "sentence_ter": [
+          100.0,
+          75.0,
+          100.0,
+          75.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "They know us.",
+          "He saw me.",
+          "Did he see me?",
+          "Do they see us?",
+          "I see him.",
+          "Did I see him?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 20.05,
+        "corpus_chrfpp": 27.35,
+        "corpus_ter": 81.82,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.54,
+          6.57,
+          70.71,
+          6.57,
+          36.56,
+          3.75
+        ],
+        "sentence_chrfpp": [
+          13.33,
+          16.89,
+          65.99,
+          12.31,
+          29.76,
+          8.88
+        ],
+        "sentence_ter": [
+          100.0,
+          75.0,
+          25.0,
+          75.0,
+          100.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We know you(pl).",
+          "Do you(sg) see me?",
+          "Do we know you(pl)?",
+          "Do you(sg) know me?",
+          "Do you(sg) do it?",
+          "Do you(sg) know you(pl)?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "phonology",
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 2.86,
+            "corpus_chrfpp": 9.78,
+            "corpus_ter": 231.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              3.75,
+              4.2,
+              2.84,
+              12.36,
+              2.84
+            ],
+            "sentence_chrfpp": [
+              5.74,
+              8.6,
+              7.79,
+              7.64,
+              19.97,
+              6.08
+            ],
+            "sentence_ter": [
+              233.33,
+              175.0,
+              225.0,
+              225.0,
+              225.0,
+              333.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋa ka kɤ ne → I go?",
+              "nɤ ʒip tuʔ ne → You(sg) slept?",
+              "ŋabə ati lapkʰi tɤʔ ne → I saw him?",
+              "nirum kəmə nuʔrum cʰam ki ne → We know you(pl)?",
+              "nɤbə ŋa lapkʰi rɤ ne → You(sg) see me?",
+              "tarum kəmə nɤ lan tʰu ne → They beat you(sg)?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 6.93,
+            "corpus_chrfpp": 13.81,
+            "corpus_ter": 177.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.31,
+              0.0,
+              0.0,
+              2.29,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              39.93,
+              0.0,
+              0.0,
+              14.34,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              400.0,
+              100.0,
+              100.0,
+              300.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+              "",
+              "",
+              "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+              "",
+              ""
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 2,
+            "num_expected": 6,
+            "missing_indices": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 4.17,
+            "corpus_chrfpp": 13.62,
+            "corpus_ter": 331.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.31,
+              0.0,
+              3.38,
+              0.0,
+              10.57,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              39.93,
+              6.25,
+              8.04,
+              5.49,
+              15.69,
+              3.09
+            ],
+            "sentence_ter": [
+              400.0,
+              350.0,
+              300.0,
+              275.0,
+              300.0,
+              400.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+              "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+              "nɤbə ati lapkʰi tɤʔ ne → You (sg) see him question marker",
+              "nirum kəmə nuʔrum cʰam ki ne → We know you(pl) question marker",
+              "nɤbə ŋa lapkʰi rɤ ne → You (sg) see me question marker",
+              "tarum kəmə nɤ lan tʰu ne → They beat you(sg) question marker"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 4.17,
+        "corpus_chrfpp": 13.62,
+        "corpus_ter": 331.82,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.31,
+          0.0,
+          3.38,
+          0.0,
+          10.57,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          39.93,
+          6.25,
+          8.04,
+          5.49,
+          15.69,
+          3.09
+        ],
+        "sentence_ter": [
+          400.0,
+          350.0,
+          300.0,
+          275.0,
+          300.0,
+          400.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+          "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+          "nɤbə ati lapkʰi tɤʔ ne → You (sg) see him question marker",
+          "nirum kəmə nuʔrum cʰam ki ne → We know you(pl) question marker",
+          "nɤbə ŋa lapkʰi rɤ ne → You (sg) see me question marker",
+          "tarum kəmə nɤ lan tʰu ne → They beat you(sg) question marker"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 6.93,
+        "corpus_chrfpp": 13.81,
+        "corpus_ter": 177.27,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.31,
+          0.0,
+          0.0,
+          2.29,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          39.93,
+          0.0,
+          0.0,
+          14.34,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          400.0,
+          100.0,
+          100.0,
+          300.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+          "",
+          "",
+          "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+          "",
+          ""
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 2,
+        "num_expected": 6,
+        "missing_indices": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      "best_step": "initial_draft",
+      "all_steps_complete": false
+    }
+  }
+}

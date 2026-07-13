@@ -1,0 +1,1998 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T12:41:28.665964",
+    "puzzle_id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 12,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Qingmivit takujaatit.",
+        "target": "Your dog saw you."
+      },
+      {
+        "source": "Inuuhuktuup iluaqhaiji qukiqtanga.",
+        "target": "The boy shot the doctor."
+      },
+      {
+        "source": "Aanniqtutit.",
+        "target": "You hurt yourself."
+      },
+      {
+        "source": "Iluaqhaijiup aarqijaatit.",
+        "target": "The doctor cured you."
+      },
+      {
+        "source": "Qingmiq iputujait.",
+        "target": "You speared the dog."
+      },
+      {
+        "source": "Angatkuq iluaqhaijimik aarqisijuq.",
+        "target": "The shaman cured a doctor."
+      },
+      {
+        "source": "Nanuq qaijuq.",
+        "target": "The polar bear came."
+      },
+      {
+        "source": "Iluaqhaijivit inuuhuktuit aarqijanga.",
+        "target": "Your doctor cured your boy."
+      },
+      {
+        "source": "Angunahuktiup amaruq iputujanga.",
+        "target": "The hunter speared the wolf."
+      },
+      {
+        "source": "Qingmiup ilinniaqtitsijiit aanniqtanga.",
+        "target": "The dog hurt your teacher."
+      },
+      {
+        "source": "Ukiakhaqtutit.",
+        "target": "You fell."
+      },
+      {
+        "source": "Angunahukti nanurmik qukiqsijuq.",
+        "target": "The hunter shot a polar bear."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Amaruup angatkuit takujanga.",
+        "target": "The wolf saw your shaman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Nanuit inuuhukturmik aanniqsijuq.",
+        "target": "Your polar bear hurt a boy.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktiit aarqijuq.",
+        "target": "Your hunter cured himself.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ilinniaqtitsiji qukiqtait.",
+        "target": "You shot the teacher.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Qaijutit.",
+        "target": "You came.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktimik aarqisijutit.",
+        "target": "You cured a hunter.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Amaruup angatkuit takujanga.",
+      "reference": "The wolf saw your shaman.",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I may not be 100% accurate as the sentence appears to be in an indigenous language, possibly from the Amazon region or Papua New Guinea.\n\nAfter analyzing the sentence, I'm going to take a guess that it might be from the Ashaninka language, which is spoken by the Ashaninka people in Peru. Here's my translation:\n\n\"Amaruup\" might be a name or a word with a specific meaning, but I couldn't find any direct translation. \"Angatkuit\" could be a verb or a phrase meaning \"to be\" or \"to exist.\" \"Takujanga\" might be a noun or an adjective, but I couldn't find any direct translation.\n\nWith these assumptions, my translation of the sentence would be:\n\n\"Amaruup exists\" or \"Amaruup is.\"\n\nPlease note that this is just a rough translation, and I may be incorrect. If you have more context or information about the sentence, I'd be happy to try and provide a more accurate translation.",
+      "latency_s": 30.71,
+      "metrics": {
+        "corpus_bleu": 0.18,
+        "corpus_chrfpp": 3.06,
+        "corpus_ter": 3280.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.18
+        ],
+        "sentence_chrfpp": [
+          3.06
+        ],
+        "sentence_ter": [
+          3280.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that I may not be 100% accurate as the sentence appears to be in an indigenous language, possibly from the Amazon region or Papua New Guinea.\n\nAfter analyzing the sentence, I'm going to take a guess that it might be from the Ashaninka language, which is spoken by the Ashaninka people in Peru. Here's my translation:\n\n\"Amaruup\" might be a name or a word with a specific meaning, but I couldn't find any direct translation. \"Angatkuit\" could be a verb or a phrase meaning \"to be\" or \"to exist.\" \"Takujanga\" might be a noun or an adjective, but I couldn't find any direct translation.\n\nWith these assumptions, my translation of the sentence would be:\n\n\"Amaruup exists\" or \"Amaruup is.\"\n\nPlease note that this is just a rough translation, and I may be incorrect. If you have more context or information about the sentence, I'd be happy to try and provide a more accurate translation."
+        ],
+        "references": [
+          "The wolf saw your shaman."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 12,
+          "latency_s": 4.29,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 91.44,
+          "accumulated_dict": "Qingmiv- = ? (possibly a prefix or a root)\ntakujanga = ? (possibly a verb)\n-it = ? (possibly a marker for the verb or the subject)\nInuuhuk- = ? (possibly a root)\n-tuup = ? (possibly a marker for the subject or the noun)\niluaqhaiji = ? (possibly a noun or an adjective)\nqukiqtanga = ? (possibly a verb)\n[DELETED: none]",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n[DELETED: none]",
+          "metrics": {
+            "corpus_bleu": 2.66,
+            "corpus_chrfpp": 12.28,
+            "corpus_ter": 104.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              8.17,
+              10.68,
+              7.81,
+              15.97,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              15.87,
+              11.32,
+              7.74,
+              19.01,
+              8.27,
+              8.67
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              100.0,
+              125.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Your friend saw the dog.",
+              "The boy shot the doctor.",
+              "The woman is happy.",
+              "The doctor is shooting the boy.",
+              "He is eating.",
+              "The woman is eating."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 4.42,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly a prefix)\n2. takujanga = Verb (notes: possibly without a suffix)\n3. -it = Marker for verb or subject (notes: possibly a suffix)\n4. Inuuhuk- = Root (notes: possibly a noun or an adjective)\n5. -tuup = Marker for subject or noun (notes: possibly a suffix)\n6. iluaqhaiji = Noun or adjective (notes: possibly a root)\n7. qukiqtanga = Verb (notes: possibly without a suffix)\n8. Aanniq- = Root (notes: possibly a verb)\n9. angatku- = Root (notes: possibly a verb)\n10. nanu- = Root (notes: possibly a noun)\n11. aarqisiju- = Root (notes: possibly a verb)\n12. aarqiju- = Root (notes: possibly a verb)\n13. ilinniaqti- = Root (notes: possibly a verb)\n14. qaiju- = Root (notes: possibly a verb)\n15. angunahuk- = Root (notes: possibly a noun or an adjective)\n16. aanniqsi- = Root (notes: possibly a verb)\n17. aanniq- = Root (notes: possibly a verb)\n18. qaiju- = Root (notes: possibly a verb)\n19. angunahukti- = Root (notes: possibly a verb)\n20. aarqisiju- = Root (notes: possibly a verb)\n21. aarqiju- = Root (notes: possibly a verb)\n22. ilinniaqti- = Root (notes: possibly a verb)\n23. qaiju- = Root (notes: possibly a verb)\n24. angunahuk- = Root (notes: possibly a noun or an adjective)\n25. aanniqsi- = Root (notes: possibly a verb)\n26. aanniq- = Root (notes: possibly a verb)\n27. qaiju- = Root (notes: possibly a verb)\n28. angunahukti- = Root (notes: possibly a verb)\n29. aarqisiju- = Root (notes: possibly a verb)\n30. aarqiju- = Root (notes: possibly a verb)\n31. ilinniaqti- = Root (notes: possibly a verb)\n32. qaiju- = Root (notes: possibly a verb)\n33. angunahuk- = Root (notes: possibly a noun or an adjective)\n34. aanniqsi- = Root (notes: possibly a verb)\n35. aanniq- = Root (notes: possibly a verb)\n36. qaiju- = Root (notes: possibly a verb)\n37. angunahukti- = Root (notes: possibly a verb)\n38. aarqisiju- = Root (notes: possibly a verb)\n39. aarqiju- = Root (notes: possibly a verb)\n40. ilinniaqti- = Root (notes: possibly a verb)\n41. qaiju- = Root (notes: possibly a verb)\n42. angunahuk- = Root (notes: possibly a noun or an adjective)\n43. aanniqsi- = Root (notes: possibly a verb)\n44. aanniq- = Root (notes: possibly a verb)\n45. qaiju- = Root (notes: possibly a verb)\n46. angunahukti- = Root (notes: possibly a verb)\n47. aarqisiju- = Root (notes: possibly a verb)\n48. aarqiju- = Root (notes: possibly a verb)\n49. ilinniaqti- = Root (notes: possibly a verb)\n50. qaiju- = Root (notes: possibly a verb)\n51. angunahuk- = Root (notes: possibly a noun or an adjective)\n52. aanniqsi- = Root (notes: possibly a verb)\n53. aanniq- = Root (notes: possibly a verb)\n54. qaiju- = Root (notes: possibly a verb)\n55. angunahukti- = Root (notes: possibly a verb)\n56. aarqisiju- = Root (notes: possibly a verb)\n57. aarqiju- = Root (notes: possibly a verb)\n58. ilinniaqti- = Root (notes: possibly a verb)\n59. qaiju- = Root (notes: possibly a verb)\n60. angunahuk- = Root (notes: possibly a noun or an adjective)\n61. aanniqsi- = Root (notes: possibly a verb)\n62. aanniq- = Root (notes: possibly a verb)\n63. qaiju- = Root (notes: possibly a verb)\n64. angunahukti- = Root (notes: possibly a verb)\n65. aarqisiju- = Root (notes: possibly a verb)\n66. aarqiju- = Root (notes: possibly a verb)\n67. ilinniaqti- = Root (notes: possibly a verb)\n68. qaiju- = Root (notes: possibly a verb)\n69. angunahuk- = Root (notes: possibly a noun or an adjective)\n70. aanniqsi- = Root (notes: possibly a verb)\n71. aanniq- = Root (notes: possibly a verb)\n72. qaiju- = Root (notes: possibly a verb)\n73. angunahukti- = Root (notes: possibly a verb)\n74. aarqisiju- = Root (notes: possibly a verb)\n75. aarqiju- = Root (notes: possibly a verb)\n76. ilinniaqti- = Root (notes: possibly a verb)\n77. qaiju- = Root (notes: possibly a verb)\n78. angunahuk- = Root (notes: possibly a noun or an adjective)\n79. aanniqsi- = Root (notes: possibly a verb)\n80. aanniq- = Root (notes: possibly a verb)\n81. qaiju- = Root (notes: possibly a verb)\n82. angunahukti- = Root (notes: possibly a verb)\n83. aarqisiju- = Root (notes: possibly a verb)\n84. aarqiju- = Root (notes: possibly a verb)\n85. ilinniaqti- = Root (notes: possibly a verb)\n86. qaiju- = Root (notes: possibly a verb)\n87. angunahuk- = Root (notes: possibly a noun or an adjective)\n88. aanniqsi- = Root (notes: possibly a verb)\n89. aanniq- = Root (notes: possibly a verb)\n90. qaiju- = Root (notes: possibly a verb)\n91. angunahukti- = Root (notes: possibly a verb)\n92. aarqisiju- = Root (notes: possibly a verb)\n93. aarqiju- = Root (notes: possibly a verb)\n94. ilinniaqti- = Root (notes: possibly a verb)\n95. qaiju- = Root (notes: possibly a verb)\n96. angunahuk- = Root (notes: possibly a noun or an adjective)\n97. aanniqsi- = Root (notes: possibly a verb)\n98. aanniq- = Root (notes: possibly a verb)\n99. qaiju- = Root (notes: possibly a verb)\n100. angunahukti- = Root (notes: possibly a verb)\n101. aarqisiju- = Root (notes: possibly a verb)\n102. aarqiju- = Root (notes: possibly a verb)\n103. ilinniaqti- = Root (notes: possibly a verb)\n104. qaiju- = Root (notes: possibly a verb)\n105. angunahuk- = Root (notes: possibly a noun or an adjective)\n106. aanniqsi- = Root (notes: possibly a verb)\n107. aanniq- = Root (notes: possibly a verb)\n108. qaiju- = Root (notes: possibly a verb)\n109. angunahukti- = Root (notes: possibly a verb)\n110. aarqisiju- = Root (notes: possibly a verb)\n111. aarqiju- = Root (notes: possibly a verb)\n112. ilinniaqti- = Root (notes: possibly a verb)\n113. qaiju- = Root (notes: possibly a verb)\n114. angunahuk- = Root (notes: possibly a noun or an adjective)\n115. aanniqsi- = Root (notes: possibly a verb)\n116. aanniq- = Root (notes: possibly a verb)\n117. qaiju- = Root (notes: possibly a verb)\n118. angunahukti- = Root (notes: possibly a verb)\n119. aarqisiju- = Root (notes: possibly a verb)\n120. aarqiju- = Root (notes: possibly a verb)\n121. ilinniaqti- = Root (notes: possibly a verb)\n122. qaiju- = Root (notes: possibly a verb)\n123. angunahuk- = Root (notes: possibly a noun or an adjective)\n124. aanniqsi- = Root (notes: possibly a verb)\n125. aanniq- = Root (notes: possibly a verb)\n126. qaiju- = Root (notes: possibly a verb)\n127. angunahukti- = Root (notes: possibly a verb)\n128. aarqisiju- = Root (notes: possibly a verb)\n129. aarqiju- = Root (notes: possibly a verb)\n130. ilinniaqti- = Root (notes: possibly a verb)\n131. qaiju- = Root (notes: possibly a verb)\n132. angunahuk- = Root (notes: possibly a noun or an adjective)\n133. aanniqsi- = Root (notes: possibly a verb)\n134. aanniq- = Root (notes: possibly a verb)\n135. qaiju- = Root (notes: possibly a verb)\n136. angunahukti- = Root (notes: possibly a verb)\n137. aarqisiju- = Root (notes: possibly a verb)\n138. aarqiju- = Root (notes: possibly a verb)\n139. ilinniaqti- = Root (notes: possibly a verb)\n140. qaiju- = Root (notes: possibly a verb)\n141. angunahuk- = Root (notes: possibly a noun or an adjective)\n142. aanniqsi- = Root (notes: possibly a verb)\n143. aanniq- = Root (notes: possibly a verb)\n144. qaiju- = Root (notes: possibly a verb)\n145. angunahukti- = Root (notes: possibly a verb)\n146. aarqisiju- = Root (notes: possibly a verb)\n147. aarqiju- = Root (notes: possibly a verb)\n148. ilinniaqti- = Root (notes: possibly a verb)\n149. qaiju- = Root (notes: possibly a verb)\n150. angunahuk- = Root (notes: possibly a noun or an adjective)\n151. aanniqsi- = Root (notes: possibly a verb)\n152. aanniq- = Root (notes: possibly a verb)\n153. qaiju- = Root (notes: possibly a verb)\n154. angunahukti- = Root (notes: possibly a verb)\n155. aarqisiju- = Root (notes: possibly a verb)\n156. aarqiju- = Root (notes: possibly a verb)\n157. ilinniaqti- = Root (notes: possibly a verb)\n158. qaiju- = Root (notes: possibly a verb)\n159. angunahuk- = Root (notes: possibly a noun or an adjective)\n160. aanniqsi- = Root (notes: possibly a verb)\n161. aanniq- = Root (notes: possibly a verb)\n162. qaiju- = Root (notes: possibly a verb)\n163. angunahukti- = Root (notes: possibly a verb)\n164. aarqisiju- = Root (notes: possibly a verb)\n165. aarqiju- = Root (notes: possibly a verb)\n166. ilinniaqti- = Root (notes: possibly a verb)\n167. qaiju- = Root (notes: possibly a verb)\n168. angunahuk- = Root (notes: possibly a noun or an adjective)\n169. aanniqsi- = Root (notes: possibly a verb)\n170. aanniq- = Root (notes: possibly a verb)\n171. qaiju- = Root (notes: possibly a verb)\n172. angunahukti- = Root (notes: possibly a verb)\n173. aarqisiju- = Root (notes: possibly a verb)\n174. aarqiju- = Root (notes: possibly a verb)\n175. ilinniaqti- = Root (notes: possibly a verb)\n176. qaiju- = Root (notes: possibly a verb)\n177. angunahuk- = Root (notes: possibly a noun or an adjective)\n178. aanniqsi- = Root (notes: possibly a verb)\n179. aanniq- = Root (notes: possibly a verb)\n180. qaiju- = Root (notes: possibly a verb)\n181. angunahukti- = Root (notes: possibly a verb)\n182. aarqisiju- = Root (notes: possibly a verb)\n183. aarqiju- = Root (notes: possibly a verb)\n184. ilinniaqti- = Root (notes: possibly a verb)\n185. qaiju- = Root (notes: possibly a verb)\n186. angunahuk- = Root (notes: possibly a noun or an adjective)\n187. aanniqsi- = Root (notes: possibly a verb)\n188. aanniq- = Root (notes: possibly a verb)\n189. qaiju- = Root (notes: possibly a verb)\n190. angunahukti- = Root (notes: possibly a verb)\n191. aarqisiju- = Root (notes: possibly a verb)\n192. aarqiju- = Root (notes: possibly a verb)\n193. ilinniaqti- = Root (notes: possibly a verb)\n194. qaiju- = Root (notes: possibly a verb)\n195. angunahuk- = Root (notes: possibly a noun or an adjective)\n196. aanniqsi- = Root (notes: possibly a verb)\n197. aanniq- = Root (notes: possibly a verb)\n198. qaiju- = Root (notes: possibly a verb)\n199. angunahukti- = Root (notes: possibly a verb)\n200. aarqisiju- = Root (notes: possibly a verb)\n201. aarqiju- = Root (notes: possibly a verb)\n202. ilinniaqti- = Root (notes: possibly a verb)\n203. qaiju- = Root (notes: possibly a verb)\n204. angunahuk- = Root (notes: possibly a noun or an adjective)\n205. aanniqsi- = Root (notes: possibly a verb)\n206. aanniq- = Root (notes: possibly a verb)\n207. qaiju- = Root (notes: possibly a verb)\n208. angunahukti- = Root (notes: possibly a verb)\n209. aarqisiju- = Root (notes: possibly a verb)\n210. aarqiju- = Root (notes: possibly a verb)\n211. ilinniaqti- = Root (notes: possibly a verb)\n212. qaiju- = Root (notes: possibly a verb)\n213. angunahuk- = Root (notes: possibly a noun or an adjective)\n214. aanniqsi- = Root (notes: possibly a verb)\n215. aanniq- = Root (notes: possibly a verb)\n216. qaiju- = Root (notes: possibly a verb)\n217. angunahukti- = Root (notes: possibly a verb)\n218. aarqisiju- = Root (notes: possibly a verb)\n219. aarqiju- = Root (notes: possibly a verb)\n220. ilinniaqti- = Root (notes: possibly a verb)\n221. qaiju- = Root (notes: possibly a verb)\n222. angunahuk- = Root (notes: possibly a noun or an adjective)\n223.",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n[DELETED: none]",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 91.72,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly a prefix)\n2. -it = Marker for verb or subject (notes: possibly a suffix)\n3. -tuup = Marker for subject or noun (notes: possibly a suffix)\n4. takujanga = Verb (notes: possibly without a suffix)\n5. qukiqtanga = Verb (notes: possibly without a suffix)\n6. Aanniqtutit = Verb (notes: possibly without a suffix)\n7. Iluaqhaijiup = Subject or noun (notes: possibly with a suffix -tuup)\n8. aarqijaatit = Verb (notes: possibly with a suffix -it)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. [DELETED: Verbs might be marked with a suffix (-it)] -> confirmed by the presence of -it in Qingmivit takujaatit and Aanniqtutit.\n4. [DELETED: Subjects might be marked with a suffix (-tuup)] -> confirmed by the presence of -tuup in Inuuhuktuup and Iluaqhaijiup.",
+          "metrics": {
+            "corpus_bleu": 2.58,
+            "corpus_chrfpp": 14.43,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              8.17,
+              12.44,
+              10.68,
+              5.52,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              22.39,
+              11.32,
+              21.42,
+              10.92,
+              7.82,
+              6.51
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Your dog saw you.",
+              "The boy shot the doctor.",
+              "You hurt yourself.",
+              "The doctor cured you.",
+              "He/She/It is happy.",
+              "The man is happy."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 91.6,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -it = Marker for verb or subject (notes: possibly a suffix)\n3. -tuup = Marker for subject or noun (notes: possibly a suffix)\n4. [DELETED: takujanga = Verb (notes: possibly without a suffix) -> confirmed by the presence of -it in Qingmivit takujaatit]\n5. [DELETED: qukiqtanga = Verb (notes: possibly without a suffix) -> confirmed by the presence of -it in Qingmivit takujaatit]\n6. [DELETED: Aanniqtutit = Verb (notes: possibly without a suffix) -> confirmed by the presence of -it in Qingmivit takujaatit]\n7. Qingmiq = Subject marker or possessive marker (notes: possibly without a suffix)\n8. Iluaqhaiji = Subject or noun (notes: possibly with a suffix -tuup)\n9. aarqijaatit = Verb (notes: possibly with a suffix -it)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. [DELETED: Verbs might be marked with a suffix (-it)] -> confirmed by the presence of -it in Qingmivit takujaatit and Aanniqtutit.\n4. [DELETED: Subjects might be marked with a suffix (-tuup)] -> confirmed by the presence of -tuup in Inuuhuktuup and Iluaqhaijiup.",
+          "metrics": {
+            "corpus_bleu": 2.31,
+            "corpus_chrfpp": 13.53,
+            "corpus_ter": 108.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              5.52,
+              8.12,
+              7.81,
+              19.0,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              17.95,
+              8.28,
+              11.76,
+              17.85,
+              21.4,
+              7.81
+            ],
+            "sentence_ter": [
+              60.0,
+              116.67,
+              125.0,
+              125.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter saw the bear.",
+              "The woman is looking for the man.",
+              "The old man is tired.",
+              "The fisherman is catching the fish.",
+              "You are happy.",
+              "The old man is happy."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 1.3,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -it = Marker for verb or subject (notes: possibly a suffix)\n3. -tuup = Marker for subject or noun (notes: possibly a suffix)\n4. Qingmiq = Subject marker or possessive marker (notes: possibly with a suffix)\n5. [DELETED: takujanga = Verb (notes: possibly without a suffix) -> confirmed by the presence of -it in Qingmivit takujaatit]\n6. [DELETED: qukiqtanga = Verb (notes: possibly without a suffix) -> confirmed by the presence of -it in Qingmivit takujaatit]\n7. [DELETED: Aanniqtutit = Verb (notes: possibly without a suffix) -> confirmed by the presence of -it in Qingmivit takujaatit]\n8. Iluaqhaiji = Subject or noun (notes: possibly with a suffix -tuup)\n9. aarqijaatit = Verb (notes: possibly with a suffix -it)\n10. -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. [DELETED: Verbs might be marked with a suffix (-it)] -> confirmed by the presence of -it in Qingmivit takujaatit and Aanniqtutit.\n4. [DELETED: Subjects might be marked with a suffix (-tuup)] -> confirmed by the presence of -tuup in Inuuhuktuup and Iluaqhaijiup.\n5. Verbs might be marked with a suffix (-it).\n6. Subjects might be marked with a suffix (-tuup).\n7. The language has a suffix '-kuq' for a specific type of subject or noun.",
+          "metrics": {
+            "corpus_bleu": 4.7,
+            "corpus_chrfpp": 16.66,
+            "corpus_ter": 96.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              13.74,
+              10.68,
+              9.65,
+              19.0,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              26.61,
+              16.48,
+              7.74,
+              17.24,
+              21.72,
+              11.64
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              100.0,
+              100.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman cured the dog.",
+              "The woman healed the boy.",
+              "The shaman is sick.",
+              "The doctor cured the patient.",
+              "You are hurt.",
+              "The shaman healed the doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 1.4,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -it = Marker for verb or subject (notes: possibly a suffix)\n3. -tuup = Marker for subject or noun (notes: possibly a suffix)\n4. Qingmiq = Subject marker or possessive marker (notes: possibly without a suffix)\n5. [DELETED: -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)] -> confirmed by the presence of -kuq in Angatkuq iluaqhaijimik aarqisijuq\n6. [DELETED: -up = Marker for subject or noun (notes: possibly a suffix)] -> confirmed by the presence of -up in Iluaqhaijiup aarqijaatit\n7. [NEW: -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)]\n8. [NEW: -up = Marker for subject or noun (notes: possibly a suffix)]",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n5. [DELETED: The language has a suffix '-kuq' for a specific type of subject or noun.] -> confirmed by the presence of -kuq in Angatkuq iluaqhaijimik aarqisijuq\n6. [DELETED: The language has a suffix '-up' for a specific type of subject or noun.] -> confirmed by the presence of -up in Iluaqhaijiup aarqijaatit\n7. The language has a suffix '-kuq' for a specific type of subject or noun.\n8. The language has a suffix '-up' for a specific type of subject or noun.",
+          "metrics": {
+            "corpus_bleu": 7.53,
+            "corpus_chrfpp": 33.77,
+            "corpus_ter": 72.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.37,
+              15.62,
+              12.7,
+              17.97,
+              31.95,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              41.99,
+              37.27,
+              18.12,
+              38.64,
+              39.53,
+              30.2
+            ],
+            "sentence_ter": [
+              60.0,
+              50.0,
+              100.0,
+              75.0,
+              100.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman saw you.",
+              "The polar bear cured a man.",
+              "The shaman was cured.",
+              "The fisherman shot the hunter.",
+              "The bear came.",
+              "The shaman cured a shaman."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 31.26,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -it = Marker for verb or subject (notes: possibly a suffix)\n3. -tuup = Marker for subject or noun (notes: possibly a suffix)\n4. Qingmiq = Subject marker (notes: possibly without a suffix)\n5. -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)\n6. -up = Marker for subject or noun (notes: possibly a suffix)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n5. The language has a suffix '-kuq' for a specific type of subject or noun.\n6. The language has a suffix '-up' for a specific type of subject or noun.",
+          "metrics": {
+            "corpus_bleu": 6.28,
+            "corpus_chrfpp": 32.53,
+            "corpus_ter": 88.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.48,
+              13.49,
+              12.7,
+              9.65,
+              21.36,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              32.9,
+              44.92,
+              18.12,
+              18.92,
+              36.82,
+              44.27
+            ],
+            "sentence_ter": [
+              60.0,
+              83.33,
+              100.0,
+              100.0,
+              150.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman cured your dog.",
+              "The polar bear was cured by your boy.",
+              "The shaman was cured.",
+              "The hunter speared the dog.",
+              "The polar bear came.",
+              "The shaman cured the hunter."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 1.96,
+          "accumulated_dict": "1. Qingmiv- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -it = Verb marker (notes: possibly a suffix)\n3. -tuup = Subject marker (notes: possibly a suffix)\n4. Qingmiq = Subject marker (notes: possibly without a suffix)\n5. -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)\n6. -up = Subject marker (notes: possibly a suffix)\n7. -mik = Marker for a specific type of object (notes: possibly a suffix)\n8. -q = Marker for a specific type of verb or object (notes: possibly a suffix)\n9. -vit = Marker for a specific type of subject (notes: possibly a suffix)\n10. -tuit = Marker for a specific type of object (notes: possibly a suffix)\n11. -anga = Verb marker (notes: possibly a suffix)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n5. The language has a suffix '-kuq' for a specific type of subject or noun.\n6. The language has a suffix '-up' for a specific type of subject or noun.\n7. The language has a suffix '-mik' for a specific type of object.\n8. The language has a suffix '-q' for a specific type of verb or object.\n9. The language has a suffix '-vit' for a specific type of subject.\n10. The language has a suffix '-tuit' for a specific type of object.\n11. The language has a suffix '-anga' for a specific type of verb.",
+          "metrics": {
+            "corpus_bleu": 12.13,
+            "corpus_chrfpp": 41.64,
+            "corpus_ter": 104.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              17.54,
+              34.57,
+              6.57,
+              39.76,
+              6.27
+            ],
+            "sentence_chrfpp": [
+              19.88,
+              51.28,
+              68.11,
+              18.93,
+              78.03,
+              32.35
+            ],
+            "sentence_ter": [
+              120.0,
+              83.33,
+              75.0,
+              125.0,
+              50.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga. Your wolf cured your dog.",
+              "Nanuit inuuhukturmik aanniqsijuq. Your polar bear cured your boy.",
+              "Angunahuktiit aarqijuq. The hunter cured himself.",
+              "Ilinniaqtitsiji qukiqtait. The fisherman shot you.",
+              "Qaijutit. You came.",
+              "Angunahuktimik aarqisijutit. The hunter cured your doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 2.11,
+          "accumulated_dict": "1. Qingmi- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -vit = Marker for a specific type of subject (notes: possibly a suffix)\n3. -tuup = Subject marker (notes: possibly a suffix)\n4. Qingmiq = Subject marker (notes: possibly without a suffix)\n5. -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)\n6. -up = Subject marker (notes: possibly a suffix)\n7. -mik = Marker for a specific type of object (notes: possibly a suffix)\n8. -q = Marker for a specific type of verb or object (notes: possibly a suffix)\n9. -vit = Marker for a specific type of subject (notes: possibly a suffix)\n10. -tuit = Marker for a specific type of object (notes: possibly a suffix)\n11. -anga = Verb marker (notes: possibly a suffix)\n12. -it = Verb marker (notes: possibly a suffix)\n13. -ji = Marker for a specific type of object (notes: possibly a suffix)\n14. -siji = Marker for a specific type of object (notes: possibly a suffix)\n15. -t = Marker for a specific type of verb or object (notes: possibly a suffix)\n16. -a- = Linking vowel (notes: possibly a suffix)\n17. -u- = Linking vowel (notes: possibly a suffix)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n5. The language has a suffix '-kuq' for a specific type of subject or noun.\n6. The language has a suffix '-up' for a specific type of subject or noun.\n7. The language has a suffix '-mik' for a specific type of object.\n8. The language has a suffix '-q' for a specific type of verb or object.\n9. The language has a suffix '-vit' for a specific type of subject.\n10. The language has a suffix '-tuit' for a specific type of object.\n11. The language has a suffix '-anga' for a specific type of verb.\n12. The language has a linking vowel '-a-'.\n13. The language has a linking vowel '-u-'.",
+          "metrics": {
+            "corpus_bleu": 9.47,
+            "corpus_chrfpp": 32.49,
+            "corpus_ter": 92.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              18.58,
+              8.12,
+              30.21,
+              21.36,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              25.2,
+              43.59,
+              10.05,
+              59.09,
+              36.82,
+              24.32
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              125.0,
+              75.0,
+              150.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter cured the wolf.",
+              "The polar bear saw the boy.",
+              "The shaman shot the doctor.",
+              "The dog hurt the teacher.",
+              "The polar bear came.",
+              "The hunter shot the wolf."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 32.62,
+          "accumulated_dict": "1. Qingmi- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -vit = Marker for a specific type of subject\n3. -tuup = Subject marker (notes: possibly a suffix)\n4. Qingmiq = Subject marker (notes: possibly without a suffix)\n5. -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)\n6. -up = Subject marker (notes: possibly a suffix)\n7. -mik = Marker for a specific type of object (notes: possibly a suffix)\n8. -q = Marker for a specific type of verb or object (notes: possibly a suffix)\n9. -vit = Marker for a specific type of subject (notes: possibly a suffix)\n10. -tuit = Marker for a specific type of object (notes: possibly a suffix)\n11. -anga = Verb marker (notes: possibly a suffix)\n12. -it = Verb marker (notes: possibly a suffix)\n13. -ji = Marker for a specific type of object (notes: possibly a suffix)\n14. -siji = Marker for a specific type of object (notes: possibly a suffix)\n15. -t = Marker for a specific type of verb or object (notes: possibly a suffix)\n16. -a- = Linking vowel (notes: possibly a suffix)\n17. -u- = Linking vowel (notes: possibly a suffix)\n18. -juq = Verb marker (notes: new entry)\n19. -sijuq = Verb marker (notes: new entry)\n[DELETED: none]",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n5. The language has a suffix '-kuq' for a specific type of subject or noun.\n6. The language has a suffix '-up' for a specific type of subject or noun.\n7. The language has a suffix '-mik' for a specific type of object.\n8. The language has a suffix '-q' for a specific type of verb or object.\n9. The language has a suffix '-vit' for a specific type of subject.\n10. The language has a suffix '-tuit' for a specific type of object.\n11. The language has a suffix '-anga' for a specific type of verb.\n12. The language has a linking vowel '-a-'.\n13. The language has a linking vowel '-u-'.\n14. The language has a suffix '-juq' for a specific type of verb.\n15. The language has a suffix '-sijuq' for a specific type of verb.\n[DELETED: none]",
+          "metrics": {
+            "corpus_bleu": 5.17,
+            "corpus_chrfpp": 30.34,
+            "corpus_ter": 88.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              9.04,
+              10.68,
+              16.23,
+              34.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              25.99,
+              20.62,
+              33.89,
+              38.6,
+              21.8,
+              37.7
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              100.0,
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter speared the wolf.",
+              "Your boy cured your doctor.",
+              "The doctor cured the hunter.",
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter cured the doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 32.53,
+          "accumulated_dict": "1. Qingmi- = Possessive marker or subject marker (notes: possibly without a suffix)\n2. -vit = Marker for a specific type of subject (notes: possibly a suffix)\n3. -tuup = Subject marker (notes: possibly a suffix)\n4. Qingmiq = Subject marker (notes: possibly without a suffix)\n5. -kuq = Marker for a specific type of subject or noun (notes: possibly a suffix)\n6. -up = Subject marker (notes: possibly a suffix)\n7. -mik = Marker for a specific type of object (notes: possibly a suffix)\n8. -q = Marker for a specific type of verb or object (notes: possibly a suffix)\n9. -vit = Marker for a specific type of subject (notes: possibly a suffix)\n10. -tuit = Marker for a specific type of object (notes: possibly a suffix)\n11. -anga = Verb marker (notes: possibly a suffix)\n12. -it = Verb marker (notes: possibly a suffix)\n13. -ji = Marker for a specific type of object (notes: possibly a suffix)\n14. -siji = Marker for a specific type of object (notes: possibly a suffix)\n15. -t = Marker for a specific type of verb or object (notes: possibly a suffix)\n16. -a- = Linking vowel (notes: possibly a suffix)\n17. -u- = Linking vowel (notes: possibly a suffix)\n18. -juq = Verb marker (notes: new entry)\n19. -sijuq = Verb marker (notes: new entry)\n20. -vit = Marker for a specific type of subject (notes: possibly a suffix, confirmed)\n21. -ti = Marker for a specific type of subject (notes: possibly a suffix, new entry)",
+          "accumulated_rules": "1. Word order is Subject-Object-Verb (SOV).\n2. The language might have a consistent word order.\n3. Verbs might be marked with a suffix (-it).\n4. Subjects might be marked with a suffix (-tuup).\n5. The language has a suffix '-kuq' for a specific type of subject or noun.\n6. The language has a suffix '-up' for a specific type of subject or noun.\n7. The language has a suffix '-mik' for a specific type of object.\n8. The language has a suffix '-q' for a specific type of verb or object.\n9. The language has a suffix '-vit' for a specific type of subject.\n10. The language has a suffix '-tuit' for a specific type of object.\n11. The language has a suffix '-anga' for a specific type of verb.\n12. The language has a linking vowel '-a-'.\n13. The language has a linking vowel '-u-'.\n14. The language has a suffix '-juq' for a specific type of verb.\n15. The language has a suffix '-sijuq' for a specific type of verb.\n16. The language has a suffix '-ti' for a specific type of subject.",
+          "metrics": {
+            "corpus_bleu": 14.84,
+            "corpus_chrfpp": 38.02,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              9.04,
+              66.87,
+              16.23,
+              34.67,
+              8.64
+            ],
+            "sentence_chrfpp": [
+              25.99,
+              20.62,
+              80.24,
+              38.6,
+              21.8,
+              27.9
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              25.0,
+              100.0,
+              50.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter speared the wolf.",
+              "Your boy cured your doctor.",
+              "The hunter cured himself.",
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter shot a polar bear."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 12.13,
+        "corpus_chrfpp": 41.64,
+        "corpus_ter": 104.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.52,
+          17.54,
+          34.57,
+          6.57,
+          39.76,
+          6.27
+        ],
+        "sentence_chrfpp": [
+          19.88,
+          51.28,
+          68.11,
+          18.93,
+          78.03,
+          32.35
+        ],
+        "sentence_ter": [
+          120.0,
+          83.33,
+          75.0,
+          125.0,
+          50.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Amaruup angatkuit takujanga. Your wolf cured your dog.",
+          "Nanuit inuuhukturmik aanniqsijuq. Your polar bear cured your boy.",
+          "Angunahuktiit aarqijuq. The hunter cured himself.",
+          "Ilinniaqtitsiji qukiqtait. The fisherman shot you.",
+          "Qaijutit. You came.",
+          "Angunahuktimik aarqisijutit. The hunter cured your doctor."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 8
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 4,
+          "latency_s": 0.84,
+          "accumulated_dict": "- qingmivit: dog\n- takujaatit: saw you\n- inuuhuktuup: boy\n- iluaqhaiji: doctor\n- qukiqtanga: shot\n- aanniqtutit: hurt yourself\n- iluaqhaijiup: cured you\n- aarqijaatit: cured you (alternative form)\n- takujaatit: saw you (alternative form)\n- qukiqtanga: shot (alternative form)",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- The language may have a system of suffixes or prefixes to indicate grammatical relationships, but it's not immediately clear.\n- The word \"qukiqtanga\" seems to be a verb, and it's used in the sentence \"Inuuhuktuup iluaqhaiji qukiqtanga\" which translates to \"The boy shot the doctor\". This suggests that the verb may be in a position that indicates the action performed by the subject.\n- The word \"iluaqhaijiup\" seems to be a verb as well, and it's used in the sentence \"Iluaqhaijiup aarqijaatit\" which translates to \"The doctor cured you\". This suggests that the verb may be in a position that indicates the action performed on the subject.",
+          "metrics": {
+            "corpus_bleu": 1.87,
+            "corpus_chrfpp": 13.46,
+            "corpus_ter": 128.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              4.46,
+              6.57,
+              4.77,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              20.52,
+              13.16,
+              20.05,
+              10.93,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              120.0,
+              150.0,
+              125.0,
+              150.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Qingmivit takujaatit. → Your dog saw you.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+              "Aanniqtutit. → You hurt yourself.",
+              "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 6,
+            "missing_indices": [
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 0.94,
+          "accumulated_dict": "- qingmiq: dog\n- iputujait: spear\n- angatkuq: shaman\n- iluaqhaijimik: doctor\n- aarqisijuq: cured\n- aarqijaatit: cured you (alternative form)\n- iluaqhaijiup: cured you\n- qukiqtanga: shot\n- inuuhuktuup: boy\n- iluaqhaiji: doctor\n- aanniqtutit: hurt yourself\n- takujaatit: saw you\n- iluaqhaijimik: doctor\n- aarqisijuq: cured",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- The language may have a system of suffixes or prefixes to indicate grammatical relationships, but it's not immediately clear.\n- The word \"qukiqtanga\" seems to be a verb, and it's used in the sentence \"Inuuhuktuup iluaqhaiji qukiqtanga\" which translates to \"The boy shot the doctor\". This suggests that the verb may be in a position that indicates the action performed by the subject.\n- The word \"iluaqhaijiup\" seems to be a verb as well, and it's used in the sentence \"Iluaqhaijiup aarqijaatit\" which translates to \"The doctor cured you\". This suggests that the verb may be in a position that indicates the action performed on the subject.\n- The suffix \"-mik\" seems to be used to indicate a specific type of object, possibly a person or a doctor, as seen in the words \"iluaqhaijimik\" and \"angatkuq iluaqhaijimik\".\n- The suffix \"-suq\" seems to be used to indicate a specific type of action, possibly a curing or healing action, as seen in the word \"aarqisijuq\".",
+          "metrics": {
+            "corpus_bleu": 1.25,
+            "corpus_chrfpp": 10.83,
+            "corpus_ter": 168.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              4.46,
+              3.75,
+              4.77,
+              6.57,
+              4.77
+            ],
+            "sentence_chrfpp": [
+              9.3,
+              10.78,
+              10.24,
+              10.93,
+              14.76,
+              10.67
+            ],
+            "sentence_ter": [
+              140.0,
+              133.33,
+              225.0,
+              150.0,
+              250.0,
+              175.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Qingmiq iputujait. → You speared the dog.",
+              "Angatkuq iluaqhaijimik aarqisijuq. → The shaman cured a doctor.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+              "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+              "Aarqijaatit aanniqtutit. → You hurt yourself.",
+              "Iluaqhaijiup takujaatit. → The doctor saw you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.02,
+          "accumulated_dict": "- qingmiq: dog\n- iputujait: spear\n- angatkuq: shaman\n- iluaqhaijimik: doctor\n- aarqisijuq: cured\n- aarqijaatit: cured you (alternative form)\n- iluaqhaijiup: cured you\n- qukiqtanga: shot\n- inuuhuktuup: boy\n- iluaqhaiji: doctor\n- aanniqtutit: hurt yourself\n- takujaatit: saw you\n- iluaqhaijimik: doctor\n- aarqisijuq: cured\n- qaijuq: came\n- amaruq: wolf\n- angunahuktiup: hunter\n- aarqijanga: cured (action performed on subject)",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- The language may have a system of suffixes or prefixes to indicate grammatical relationships, but it's not immediately clear.\n- The word \"qukiqtanga\" seems to be a verb, and it's used in the sentence \"Inuuhuktuup iluaqhaiji qukiqtanga\" which translates to \"The boy shot the doctor\". This suggests that the verb may be in a position that indicates the action performed by the subject.\n- The word \"iluaqhaijiup\" seems to be a verb as well, and it's used in the sentence \"Iluaqhaijiup aarqijaatit\" which translates to \"The doctor cured you\". This suggests that the verb may be in a position that indicates the action performed on the subject.\n- The suffix \"-mik\" seems to be used to indicate a specific type of object, possibly a person or a doctor, as seen in the words \"iluaqhaijimik\" and \"angatkuq iluaqhaijimik\".\n- The suffix \"-suq\" seems to be used to indicate a specific type of action, possibly a curing or healing action, as seen in the word \"aarqisijuq\".\n- The suffix \"-anga\" seems to be used to indicate a specific type of action performed on the subject, possibly a curing or healing action, as seen in the word \"aarqijanga\".\n- The word \"qaijuq\" seems to be a verb, and it's used in the sentence \"Nanuq qaijuq\" which translates to \"The polar bear came\". This suggests that the verb may be in a position that indicates the action performed by the subject.",
+          "metrics": {
+            "corpus_bleu": 2.55,
+            "corpus_chrfpp": 21.18,
+            "corpus_ter": 184.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              8.3,
+              4.46,
+              8.3,
+              4.77,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              14.38,
+              23.09,
+              22.59,
+              28.82,
+              9.05,
+              23.19
+            ],
+            "sentence_ter": [
+              140.0,
+              133.33,
+              200.0,
+              175.0,
+              350.0,
+              225.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nanuq qaijuq. → The polar bear came.",
+              "Iluaqhaijivit inuuhuktuit aarqijanga. → Your doctor cured your boy.",
+              "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+              "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+              "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 31.08,
+          "accumulated_dict": "- ilinniaqtitsijiit: teacher\n- aanniqtanga: hurt (action performed on subject)\n- ukiakhaqtutit: fell\n- nanurmik: polar bear\n- qukiqsijuq: shot (action performed by subject)",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- The language may have a system of suffixes or prefixes to indicate grammatical relationships, but it's not immediately clear.\n- The word \"qukiqtanga\" seems to be a verb, and it's used in the sentence \"Inuuhuktuup iluaqhaiji qukiqtanga\" which translates to \"The boy shot the doctor\". This suggests that the verb may be in a position that indicates the action performed by the subject.\n- The word \"iluaqhaijiup\" seems to be a verb as well, and it's used in the sentence \"Iluaqhaijiup aarqijaatit\" which translates to \"The doctor cured you\". This suggests that the verb may be in a position that indicates the action performed on the subject.\n- The suffix \"-mik\" seems to be used to indicate a specific type of object, possibly a person or a doctor, as seen in the words \"iluaqhaijimik\" and \"angatkuq iluaqhaijimik\".\n- The suffix \"-suq\" seems to be used to indicate a specific type of action, possibly a curing or healing action, as seen in the word \"aarqisijuq\".\n- The suffix \"-anga\" seems to be used to indicate a specific type of action performed on the subject, possibly a curing or healing action, as seen in the word \"aarqijanga\".\n- The suffix \"-tanga\" seems to be used to indicate a specific type of action performed on the subject, possibly a hurting or injuring action, as seen in the word \"aanniqtanga\".\n- The suffix \"-tutit\" seems to be used to indicate a specific type of action performed on the subject, possibly a falling or dropping action, as seen in the word \"ukiakhaqtutit\".\n- The word \"qaijuq\" seems to be a verb, and it's used in the sentence \"Nanuq qaijuq\" which translates to \"The polar bear came\". This suggests that the verb may be in a position that indicates the action performed by the subject.",
+          "metrics": {
+            "corpus_bleu": 4.93,
+            "corpus_chrfpp": 18.42,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              7.25,
+              7.81,
+              17.97,
+              10.68,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              18.47,
+              8.03,
+              21.78,
+              36.98,
+              11.37,
+              9.45
+            ],
+            "sentence_ter": [
+              60.0,
+              100.0,
+              125.0,
+              75.0,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter shot a polar bear.",
+              "The boy shot the doctor.",
+              "The doctor cured you.",
+              "The polar bear came."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.55,
+        "corpus_chrfpp": 21.18,
+        "corpus_ter": 184.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.67,
+          8.3,
+          4.46,
+          8.3,
+          4.77,
+          4.46
+        ],
+        "sentence_chrfpp": [
+          14.38,
+          23.09,
+          22.59,
+          28.82,
+          9.05,
+          23.19
+        ],
+        "sentence_ter": [
+          140.0,
+          133.33,
+          200.0,
+          175.0,
+          350.0,
+          225.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Nanuq qaijuq. → The polar bear came.",
+          "Iluaqhaijivit inuuhuktuit aarqijanga. → Your doctor cured your boy.",
+          "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf.",
+          "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+          "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+          "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 12,
+          "latency_s": 35.63,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 91.67,
+          "metrics": {
+            "corpus_bleu": 8.0,
+            "corpus_chrfpp": 41.51,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.54,
+              15.85,
+              12.22,
+              7.27,
+              10.68,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              53.68,
+              50.98,
+              39.19,
+              38.29,
+              20.17,
+              27.33
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              150.0,
+              125.0,
+              100.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+              "Nanuit inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+              "Angunahuktiit aarqijuq. → The hunter cured.",
+              "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+              "Qaijutit. → Came.",
+              "Angunahuktimik aarqisijutit. → The hunter cures."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 1.65,
+          "metrics": {
+            "corpus_bleu": 8.0,
+            "corpus_chrfpp": 41.55,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.54,
+              15.85,
+              12.22,
+              7.27,
+              10.68,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              53.68,
+              50.51,
+              39.19,
+              38.29,
+              20.98,
+              27.53
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              150.0,
+              125.0,
+              100.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+              "Nanurmik inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+              "Angunahuktiup aarqijuq. → The hunter cured.",
+              "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+              "Qaijuq. → Came.",
+              "Angunahuktiup aarqisijutit. → The hunter cures."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.0,
+        "corpus_chrfpp": 41.55,
+        "corpus_ter": 120.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.54,
+          15.85,
+          12.22,
+          7.27,
+          10.68,
+          6.57
+        ],
+        "sentence_chrfpp": [
+          53.68,
+          50.51,
+          39.19,
+          38.29,
+          20.98,
+          27.53
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          150.0,
+          125.0,
+          100.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+          "Nanurmik inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+          "Angunahuktiup aarqijuq. → The hunter cured.",
+          "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+          "Qaijuq. → Came.",
+          "Angunahuktiup aarqisijutit. → The hunter cures."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.04,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.18,
+      "chrf": 3.06,
+      "ter": 3280.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I may not be 100% accurate as the sentence appears ",
+      "reference": "The wolf saw your shaman."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 12.13,
+      "best_chrf": 41.64,
+      "best_ter": 104.0,
+      "best_em": 0.0,
+      "num_steps": 11,
+      "best_hypotheses": [
+        "Amaruup angatkuit takujanga. Your wolf cured your dog.",
+        "Nanuit inuuhukturmik aanniqsijuq. Your polar bear cured your boy.",
+        "Angunahuktiit aarqijuq. The hunter cured himself.",
+        "Ilinniaqtitsiji qukiqtait. The fisherman shot you.",
+        "Qaijutit. You came.",
+        "Angunahuktimik aarqisijutit. The hunter cured your doctor."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "best_step": 8
+    },
+    "step_by_step": {
+      "best_bleu": 2.55,
+      "best_chrf": 21.18,
+      "best_ter": 184.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "Nanuq qaijuq. → The polar bear came.",
+        "Iluaqhaijivit inuuhuktuit aarqijanga. → Your doctor cured your boy.",
+        "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf.",
+        "Inuuhuktuup iluaqhaiji qukiqtanga. → The boy shot the doctor.",
+        "Iluaqhaijiup aarqijaatit. → The doctor cured you.",
+        "Angunahuktiup amaruq iputujanga. → The hunter speared the wolf."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 8.0,
+      "best_chrf": 41.55,
+      "best_ter": 120.0,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Amaruup angatkuit takujanga. → The wolf saw the shaman.",
+        "Nanurmik inuuhukturmik aanniqsijuq. → The polar bear hurt your boy.",
+        "Angunahuktiup aarqijuq. → The hunter cured.",
+        "Ilinniaqtitsiji qukiqtait. → The teacher shot.",
+        "Qaijuq. → Came.",
+        "Angunahuktiup aarqisijutit. → The hunter cures."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.04,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

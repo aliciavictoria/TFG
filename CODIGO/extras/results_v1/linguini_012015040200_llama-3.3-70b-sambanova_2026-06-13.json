@@ -1,0 +1,1610 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-13T09:10:05.598850",
+    "puzzle_id": "linguini_012015040200",
+    "language": "Wambaya",
+    "language_family": "Mirndi (Australia)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.3-70b-sambanova",
+    "model_tier": "medium",
+    "num_train_pairs": 17,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012015040200",
+    "language": "Wambaya",
+    "language_family": "Mirndi (Australia)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Ngarlu nya.",
+        "target": "You (sg.) danced."
+      },
+      {
+        "source": "Gulugba ngu.",
+        "target": "I will sleep."
+      },
+      {
+        "source": "Bardbi ga bungmanya.",
+        "target": "The old woman ran (away)."
+      },
+      {
+        "source": "Ngunybulugi barrawunguji.",
+        "target": "The doctor has a house."
+      },
+      {
+        "source": "Ngajbi nginya.",
+        "target": "I saw you (sg.)."
+      },
+      {
+        "source": "Dagumajba nguyu ngunybulugi.",
+        "target": "She will strike the doctor."
+      },
+      {
+        "source": "Alanga gu ngarlujba janjingunya.",
+        "target": "The girl will dance with the dog."
+      },
+      {
+        "source": "Ngajba gununyu.",
+        "target": "He will see you (sg.)."
+      },
+      {
+        "source": "Ngirra nga gijilulu.",
+        "target": "I stole the money."
+      },
+      {
+        "source": "Yagujba nyu barrawuwaji.",
+        "target": "You (sg.) will leave him without a house."
+      },
+      {
+        "source": "Daguma ngiyinga bungmanyani.",
+        "target": "The old woman struck me."
+      },
+      {
+        "source": "Bardbi ga darranggunguji.",
+        "target": "He ran (away) with the stick."
+      },
+      {
+        "source": "Alayulu ngiya juwa.",
+        "target": "She found the man."
+      },
+      {
+        "source": "Juwani gina ngajbi gijilulungunya.",
+        "target": "The man saw her with the money."
+      },
+      {
+        "source": "Yagu gininga.",
+        "target": "He left me."
+      },
+      {
+        "source": "Bungmaji gina ngajbi balamurruwaji.",
+        "target": "He saw the old man without a spear."
+      },
+      {
+        "source": "Dirragba gu bungmaji.",
+        "target": "The old man will jump."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "You (sg.) will leave me.",
+        "target": "Yagujba nyungu.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The doctor slept.",
+        "target": "Gulugbi ga ngunybulugi.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The man will run (away) with the money.",
+        "target": "Juwa gu bardba gijilulunguji.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He will steal the dog.",
+        "target": "Ngirrajba gunu janji.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "The girl saw you (sg.).",
+        "target": "Ngajbi ngiyinya alangani.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "You (sg.) will leave me.",
+      "reference": "Yagujba nyungu.",
+      "hypothesis": "I'll do my best to translate the sentence into Wambaya, an Australian Aboriginal language. Please note that Wambaya is a complex language with its own grammar and syntax, and my translation may not be perfect.\n\nIn Wambaya, the sentence \"You (sg.) will leave me\" could be translated to:\n\n\"Ngaji nganya ngarni\"\n\nBreakdown:\n- \"Ngaji\" is the second-person singular pronoun, meaning \"you\" (singular).\n- \"Nganya\" is a verb meaning \"to leave\" or \"to go away\".\n- \"Ngarni\" is a first-person singular pronoun in the accusative case, meaning \"me\".\n\nSo, \"Ngaji nganya ngarni\" is my attempt to translate the sentence \"You (sg.) will leave me\" into Wambaya. Keep in mind that Wambaya language resources are limited, and this translation may require verification from a native speaker or a qualified linguist.",
+      "latency_s": 4.83,
+      "metrics": {
+        "corpus_bleu": 0.2,
+        "corpus_chrfpp": 2.46,
+        "corpus_ter": 6400.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.2
+        ],
+        "sentence_chrfpp": [
+          2.46
+        ],
+        "sentence_ter": [
+          6400.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence into Wambaya, an Australian Aboriginal language. Please note that Wambaya is a complex language with its own grammar and syntax, and my translation may not be perfect.\n\nIn Wambaya, the sentence \"You (sg.) will leave me\" could be translated to:\n\n\"Ngaji nganya ngarni\"\n\nBreakdown:\n- \"Ngaji\" is the second-person singular pronoun, meaning \"you\" (singular).\n- \"Nganya\" is a verb meaning \"to leave\" or \"to go away\".\n- \"Ngarni\" is a first-person singular pronoun in the accusative case, meaning \"me\".\n\nSo, \"Ngaji nganya ngarni\" is my attempt to translate the sentence \"You (sg.) will leave me\" into Wambaya. Keep in mind that Wambaya language resources are limited, and this translation may require verification from a native speaker or a qualified linguist."
+        ],
+        "references": [
+          "Yagujba nyungu."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 3.0,
+          "metrics": {
+            "corpus_bleu": 4.32,
+            "corpus_chrfpp": 41.61,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              15.97,
+              9.65,
+              10.68,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              40.63,
+              48.51,
+              46.62,
+              25.96,
+              42.44
+            ],
+            "sentence_ter": [
+              50.0,
+              100.0,
+              100.0,
+              133.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba gininga.",
+              "Ngunybulugi gulugba ngu.",
+              "Juwani gu bardbi ga gijilulu.",
+              "Ngirra nga alanga gu.",
+              "Alanga ngajbi nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.32,
+        "corpus_chrfpp": 41.61,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          34.67,
+          15.97,
+          9.65,
+          10.68,
+          15.97
+        ],
+        "sentence_chrfpp": [
+          40.63,
+          48.51,
+          46.62,
+          25.96,
+          42.44
+        ],
+        "sentence_ter": [
+          50.0,
+          100.0,
+          100.0,
+          133.33,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Yagujba gininga.",
+          "Ngunybulugi gulugba ngu.",
+          "Juwani gu bardbi ga gijilulu.",
+          "Ngirra nga alanga gu.",
+          "Alanga ngajbi nginya."
+        ],
+        "references": [
+          "Yagujba nyungu.",
+          "Gulugbi ga ngunybulugi.",
+          "Juwa gu bardba gijilulunguji.",
+          "Ngirrajba gunu janji.",
+          "Ngajbi ngiyinya alangani."
+        ],
+        "num_evaluated": 5
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 2.62,
+          "accumulated_dict": "Ngarlu = dance (possibly a verb)\nnya = you (sg.) (possibly a pronoun or subject marker)\nGulugba = sleep (possibly a verb)\nngu = I (possibly a pronoun) or will (possibly a future marker)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.",
+          "metrics": {
+            "corpus_bleu": 6.07,
+            "corpus_chrfpp": 16.56,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.52,
+              18.39,
+              12.44,
+              19.72,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              16.71,
+              20.74,
+              19.27,
+              9.91,
+              14.91
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nya gulugba.",
+              "Gulugba.",
+              "Ngarlu ngu gulugba.",
+              "Nya ngarlu.",
+              "Ngarlu nya ngu."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 2.58,
+          "accumulated_dict": "Ngarlu = dance (possibly a verb)\nnya = you (sg.) (possibly a pronoun or subject marker)\nGulugba = sleep (possibly a verb)\nngu = I (possibly a pronoun) or will (possibly a future marker)\nBardbi = old woman (possibly a noun)\nga = determiner or subject marker (possibly)\nbungmanya = ran (away) (possibly a verb)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.",
+          "metrics": {
+            "corpus_bleu": 3.97,
+            "corpus_chrfpp": 13.55,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              19.72,
+              8.12,
+              15.97,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              16.55,
+              19.32,
+              9.96,
+              11.72,
+              12.13
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0,
+              125.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nya ngu bula.",
+              "Gulugba doctor.",
+              "Ga man bungmanya ngu money.",
+              "Ngu bardbi dog.",
+              "Nya girl nya saw."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 3.5,
+          "accumulated_dict": "Ngarlu = dance (possibly a verb)\nnya = you (sg.) (possibly a pronoun or subject marker)\nGulugba = sleep (possibly a verb)\nngu = I (possibly a pronoun) or will (possibly a future marker)\nBardbi = old woman (possibly a noun)\nga = determiner or subject marker (possibly)\nbungmanya = ran (away) (possibly a verb)\nNgunybulugi = doctor (possibly a noun)\nbarrawunguji = has a house (possibly a verb or a noun phrase)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.\n4. The language might use a specific word order to indicate grammatical relationships, such as subject-verb-object.",
+          "metrics": {
+            "corpus_bleu": 13.13,
+            "corpus_chrfpp": 40.36,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              21.16,
+              52.73
+            ],
+            "sentence_ter": [
+              150.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nya ngu bungmanya.",
+              "Gulugba Ngunybulugi."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 3.07,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (pronoun or subject marker)\nGulugba = sleep (verb)\nngu = I (first person singular pronoun) or will (future marker)\nBardbi = old woman (noun)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form or specific marker)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.\n4. The language might use a specific word order to indicate grammatical relationships, such as subject-verb-object.\n5. The language may differentiate between subject and object forms of pronouns.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 24.82,
+            "corpus_ter": 122.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              17.66,
+              45.74,
+              11.86
+            ],
+            "sentence_ter": [
+              200.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nya ngu bungmanya ngu",
+              "Gulugba Ngunybulugi",
+              "Ngajbi nginya Bardbi ga"
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 3.01,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb)\nngu = I (first person singular pronoun) or will (future marker)\nBardbi = old woman (noun)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb)\nnguyu = she (subject marker or pronoun), possibly future marker",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.\n4. The language might use a specific word order to indicate grammatical relationships, such as subject-verb-object.\n5. The language may differentiate between subject and object forms of pronouns.",
+          "metrics": {
+            "corpus_bleu": 4.69,
+            "corpus_chrfpp": 28.56,
+            "corpus_ter": 111.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              19.72,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              24.84,
+              52.73,
+              10.99
+            ],
+            "sentence_ter": [
+              200.0,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nya ngu bungmanya ngu.",
+              "Gulugba Ngunybulugi.",
+              "Ngajbi nginya [girl] ga."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 4.22,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form) - potentially flexible or multiple functions\nGulugba = sleep (verb)\nngu = I (first person singular pronoun) or will (future marker)\nBardbi = old woman (noun)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb)\nnguyu = she (subject marker or pronoun), possibly future marker\nAlanga = girl (noun)\ngu = future marker or another grammatical function (provisional)\njanjingunya = with the dog (provisional, possibly involving a preposition and noun)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.\n4. The language might use a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist.\n5. The language may differentiate between subject and object forms of pronouns.",
+          "metrics": {
+            "corpus_bleu": 4.71,
+            "corpus_chrfpp": 31.14,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              19.72,
+              12.7,
+              15.97,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              19.53,
+              52.73,
+              18.51,
+              18.53,
+              45.58
+            ],
+            "sentence_ter": [
+              200.0,
+              66.67,
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Nya ngu bungmanya nginya.",
+              "Gulugba Ngunybulugi.",
+              "Alanga gu bungmanya janjingunya.",
+              "Nguyu Dagumajba Alanga.",
+              "Alanga Ngajbi nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 6.36,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb)\nngu = I (first person singular pronoun) or will (future marker)\nBardbi = old woman (noun)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb)\nnguyu = she (subject marker or pronoun), possibly future marker\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (verb) [related to Ngajbi, possibly a variant or future form]\nnunyu = he (subject marker or pronoun)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.\n4. The language might use a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist.\n5. The language may differentiate between subject and object forms of pronouns.",
+          "metrics": {
+            "corpus_bleu": 4.8,
+            "corpus_chrfpp": 24.5,
+            "corpus_ter": 108.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              12.44,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              28.75,
+              45.74,
+              14.77,
+              12.23
+            ],
+            "sentence_ter": [
+              200.0,
+              100.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nya gu ngarlujba ngu",
+              "Gulugba Ngunybulugi",
+              "nguyu gu Dagumajba janjingunya",
+              "Alanga Ngajbi nginya"
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 3.81,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb)\nngu = I (first person singular pronoun) or future marker (needs clarification)\nBardbi = old woman (noun)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb)\nnguyu = she (subject marker or pronoun), possibly future marker (contradicts hypothesis, needs clarification)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (verb) [related to Ngajbi, possibly a variant or future form]\nnunyu = he (subject marker or pronoun)\nNgirra = stole (verb)\nnga = I (first person singular marker) or determiner (needs clarification)\ngijilulu = money (noun)",
+          "accumulated_rules": "1. The language may use a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs might be marked for tense or aspect, possibly using particles or suffixes.\n3. Nouns might be marked with determiners or specific markers to indicate their grammatical function.\n4. The language might use a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist.\n5. The language may differentiate between subject and object forms of pronouns.\n[DELETED: None, but rules 2 and 5 need refinement based on new examples.]",
+          "metrics": {
+            "corpus_bleu": 4.8,
+            "corpus_chrfpp": 22.78,
+            "corpus_ter": 108.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              12.44,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              19.82,
+              45.74,
+              14.0,
+              12.23
+            ],
+            "sentence_ter": [
+              200.0,
+              100.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nya gu bungmanya ngu",
+              "Gulugba Ngunybulugi",
+              "nunyu gu Ngirra janjingunya",
+              "Alanga Ngajbi nginya"
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 4.03,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb)\nngu = I (first person singular pronoun)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (verb, possibly future form)\nnunyu = he (subject or object marker)\nNgirra = stole (verb)\nnga = I (first person singular marker)\ngijilulu = money (noun)\nYagujba = leave (verb)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs are marked for tense or aspect, possibly using particles or suffixes, with \"gu\" indicating future.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist.\n5. The language differentiates between subject and object forms of pronouns.",
+          "metrics": {
+            "corpus_bleu": 6.45,
+            "corpus_chrfpp": 31.68,
+            "corpus_ter": 91.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.0,
+              19.72,
+              12.44,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              56.09,
+              52.73,
+              13.6,
+              15.89
+            ],
+            "sentence_ter": [
+              100.0,
+              66.67,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngu nyu.",
+              "Gulugba Ngunybulugi.",
+              "Ngirra nunyu janjingunya.",
+              "Ngajbi Alanga nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 9.72,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb)\nngu = I (first person singular pronoun or subject marker)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (verb, possibly future form)\nnunyu = he (subject or object marker) or you (sg.) (object form in future context)\nNgirra = stole (verb)\nnga = I (first person singular marker)\ngijilulu = money (noun)\nYagujba = leave (verb)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)\n[DELETED: None — However, nuances in \"nungu\" and \"nunyu\" usage are noted for future clarification]\nDaguma = strike (verb, possibly variant of Dagumajba)\nngiyinga = me (first person singular object form)\nbungmanyani = ran (away) (possibly variant of bungmanya)",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence.\n2. Verbs are marked for tense or aspect, possibly using particles or suffixes, with \"gu\" indicating future.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist.\n5. The language differentiates between subject and object forms of pronouns.\n[DELETED: None — Refinements are needed regarding future tense and object forms]",
+          "metrics": {
+            "corpus_bleu": 4.47,
+            "corpus_chrfpp": 42.65,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.0,
+              19.72,
+              7.81,
+              15.97,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              51.01,
+              52.73,
+              38.41,
+              34.45,
+              40.83
+            ],
+            "sentence_ter": [
+              100.0,
+              66.67,
+              125.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngu nginya.",
+              "Gulugba Ngunybulugi.",
+              "Bardbi ga gu bungmanya gijilulu janjingunya.",
+              "Ngirra nga janjingunya.",
+              "Ngajbi Alanga nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 4.93,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb, possibly future form)\nngu = I (first person singular pronoun or subject marker, notes: might be specific to certain verb forms)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb, possibly future form)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (verb, possibly future form)\nnunyu = you (sg.) (object form in future context, notes: usage seems context-dependent)\nNgirra = stole (verb)\nnga = I (first person singular marker, notes: might be used in specific contexts or verb forms)\ngijilulu = money (noun)\nYagujba = leave (verb, possibly future form)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)\nDaguma = strike (verb, possibly variant of Dagumajba)\nngiyinga = me (first person singular object form)\nbungmanyani = ran (away) (possibly variant of bungmanya)\nBardbi = old woman (noun)\ndarranggunguji = ran away with the stick (verb or noun phrase)",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence, with possible variations based on context or verb form.\n2. Verbs are marked for tense or aspect, with \"gu\" indicating future, and possible suffixes or particles for other tenses.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function, including possession.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist, especially in future tense or with certain verb forms.\n5. The language differentiates between subject and object forms of pronouns, with context-dependent usage.",
+          "metrics": {
+            "corpus_bleu": 5.37,
+            "corpus_chrfpp": 42.18,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              19.72,
+              9.65,
+              15.97,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              46.57,
+              52.73,
+              38.65,
+              34.45,
+              40.83
+            ],
+            "sentence_ter": [
+              50.0,
+              66.67,
+              100.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngiyinga.",
+              "Gulugba Ngunybulugi.",
+              "Bardbi ga gu bungmanya gijilulu.",
+              "Ngirra nga janjingunya.",
+              "Ngajbi Alanga nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 4.62,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (verb, future form)\nngu = I (first person singular pronoun or subject marker, notes: might be specific to certain verb forms)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (verb, future form)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (verb, future form)\nnunyu = you (sg.) (object form in future context, notes: usage seems context-dependent)\nNgirra = stole (verb)\nnga = I (first person singular marker, notes: might be used in specific contexts or verb forms)\ngijilulu = money (noun)\nYagujba = leave (verb, future form)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)\nDaguma = strike (verb, possibly variant of Dagumajba)\nngiyinga = me (first person singular object form)\nbungmanyani = ran (away) (possibly variant of bungmanya)\nBardbi = old woman (noun)\ndarranggunguji = ran away with the stick (verb or noun phrase)\nAlayulu = found (verb)\nngiya = she (possibly another pronoun form)\njuwa = man (noun)",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence, with possible variations based on context or verb form.\n2. Verbs are marked for tense or aspect, with \"gu\" indicating future, and possible suffixes or particles for other tenses.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function, including possession.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist, especially in future tense or with certain verb forms.\n5. The language differentiates between subject and object forms of pronouns, with context-dependent usage.",
+          "metrics": {
+            "corpus_bleu": 5.2,
+            "corpus_chrfpp": 38.68,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              19.72,
+              10.68,
+              10.68,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              46.57,
+              40.39,
+              32.79,
+              36.95,
+              40.83
+            ],
+            "sentence_ter": [
+              50.0,
+              66.67,
+              100.0,
+              133.33,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngiyinga.",
+              "Ngirra Ngunybulugi.",
+              "Gu bungmanya gijilulu juwa.",
+              "Ngirra nga nyu janjingunya.",
+              "Ngajbi Alanga nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 7.4,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (future form)\nngu = I (first person singular pronoun or subject marker)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (future form)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (future form)\nnunyu = you (sg.) (object form in future context)\nNgirra = stole (verb)\nnga = I (first person singular marker)\ngijilulu = money (noun)\nYagujba = leave (verb, future form)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)\nDaguma = strike (verb, possibly variant of Dagumajba)\nngiyinga = me (first person singular object form)\nbungmanyani = ran (away) (possibly variant of bungmanya)\nBardbi = old woman (noun)\ndarranggunguji = ran away with the stick (verb or noun phrase)\nAlayulu = found (verb)\nngiya = she (possibly another pronoun form)\njuwa = man (noun)\nJuwani = man (possibly genitive or possessive form)\ngina = unknown (possibly a marker or pronoun)\ngijilulungunya = with the money (preposition and noun)",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence, with possible variations based on context or verb form.\n2. Verbs are marked for tense or aspect, with \"gu\" indicating future, and possible suffixes or particles for other tenses.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function, including possession.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist, especially in future tense or with certain verb forms.\n5. The language differentiates between subject and object forms of pronouns, with context-dependent usage.",
+          "metrics": {
+            "corpus_bleu": 5.52,
+            "corpus_chrfpp": 41.14,
+            "corpus_ter": 86.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              19.72,
+              12.44,
+              10.68,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              46.57,
+              52.73,
+              32.49,
+              36.95,
+              40.83
+            ],
+            "sentence_ter": [
+              50.0,
+              66.67,
+              100.0,
+              133.33,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngiyinga.",
+              "Gulugba Ngunybulugi.",
+              "Bungmanya juwa gijilulu.",
+              "Ngirra nga nyu janjingunya.",
+              "Ngajbi Alanga nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 9.13,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (future form)\nngu = I (first person singular pronoun or subject marker)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (future form)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (future form)\nnunyu = you (sg.) (object form in future context)\nNgirra = stole (verb)\nnga = I (first person singular marker)\ngijilulu = money (noun)\nYagujba = leave (verb, future form)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)\nDaguma = strike (verb, possibly variant of Dagumajba)\nngiyinga = me (first person singular object form)\nbungmanyani = ran (away) (possibly variant of bungmanya)\nBardbi = old woman (noun)\ndarranggunguji = ran away with the stick (verb or noun phrase)\nAlayulu = found (verb)\nngiya = she (possibly another pronoun form)\njuwa = man (noun)\nJuwani = man (possibly genitive or possessive form)\ngina = unknown (possibly a marker or pronoun)\ngijilulungunya = with the money (preposition and noun)\nngarlujba = dance (future form, related to Ngarlu)\nYagu = leave (verb)\ngininga = me (object form, related to ngiyinga)",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence, with possible variations based on context or verb form.\n2. Verbs are marked for tense or aspect, with \"gu\" indicating future, and possible suffixes or particles for other tenses.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function, including possession.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist, especially in future tense or with certain verb forms.\n5. The language differentiates between subject and object forms of pronouns, with context-dependent usage.\n6. Verb forms may vary, with possible suffixes or internal changes to indicate tense or aspect.",
+          "metrics": {
+            "corpus_bleu": 9.88,
+            "corpus_chrfpp": 46.36,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              19.72,
+              23.64,
+              15.97,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              46.57,
+              52.73,
+              54.27,
+              34.45,
+              40.83
+            ],
+            "sentence_ter": [
+              50.0,
+              66.67,
+              50.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngiyinga.",
+              "Gulugba Ngunybulugi.",
+              "Juwa gu bungmanya gijilulungunya.",
+              "Ngirra nga janjingunya.",
+              "Ngajbi Alanga nginya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 4.94,
+          "accumulated_dict": "Ngarlu = dance (verb)\nnya = you (sg.) (subject form)\nGulugba = sleep (future form)\nngu = I (first person singular pronoun or subject marker)\nga = determiner or subject marker\nbungmanya = ran (away) (verb)\nNgunybulugi = doctor (noun)\nbarrawunguji = has a house (verb or noun phrase)\nNgajbi = see (verb)\nnginya = you (sg.) (object form)\nDagumajba = strike (future form)\nnguyu = she (subject marker or pronoun)\nAlanga = girl (noun)\ngu = future marker\njanjingunya = with the dog (preposition and noun)\nNgajba = see (future form)\nnunyu = you (sg.) (object form in future context)\nNgirra = stole (verb)\nnga = I (first person singular marker)\ngijilulu = money (noun)\nYagujba = leave (verb, future form)\nnyu = him (object form)\nbarrawuwaji = without a house (verb or noun phrase)\nDaguma = strike (verb, possibly variant of Dagumajba)\nngiyinga = me (first person singular object form)\nbungmanyani = ran (away) (possibly variant of bungmanya)\nBardbi = old woman (noun)\ndarranggunguji = ran away with the stick (verb or noun phrase)\nAlayulu = found (verb)\nngiya = she (possibly another pronoun form)\njuwa = man (noun)\nJuwani = man (possibly genitive or possessive form)\ngina = unknown (possibly a marker or pronoun)\ngijilulungunya = with the money (preposition and noun)\nngarlujba = dance (future form, related to Ngarlu)\nYagu = leave (verb)\ngininga = me (object form, related to ngiyinga)\n[DELETED: None — All entries are consistent with new examples or provide additional information.]",
+          "accumulated_rules": "1. The language uses a subject-marker or pronoun to indicate the subject of the sentence, with possible variations based on context or verb form.\n2. Verbs are marked for tense or aspect, with \"gu\" indicating future, and possible suffixes or particles for other tenses.\n3. Nouns are marked with determiners or specific markers to indicate their grammatical function, including possession.\n4. The language uses a specific word order to indicate grammatical relationships, such as subject-verb-object, but flexibility or exceptions exist, especially in future tense or with certain verb forms.\n5. The language differentiates between subject and object forms of pronouns, with context-dependent usage.\n6. Verb forms may vary, with possible suffixes or internal changes to indicate tense or aspect.\n[DELETED: None — The rules are supported or refined by the new examples.]",
+          "metrics": {
+            "corpus_bleu": 10.65,
+            "corpus_chrfpp": 44.93,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.67,
+              19.72,
+              23.64,
+              15.97,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              46.57,
+              52.73,
+              54.27,
+              37.61,
+              30.37
+            ],
+            "sentence_ter": [
+              50.0,
+              66.67,
+              50.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yagujba ngiyinga.",
+              "Gulugba Ngunybulugi.",
+              "Juwa gu bungmanya gijilulungunya.",
+              "Nga Ngirra janjingunya.",
+              "Ngajbi nya."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji.",
+              "Ngajbi ngiyinya alangani."
+            ],
+            "num_evaluated": 5
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 9.88,
+        "corpus_chrfpp": 46.36,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          34.67,
+          19.72,
+          23.64,
+          15.97,
+          19.0
+        ],
+        "sentence_chrfpp": [
+          46.57,
+          52.73,
+          54.27,
+          34.45,
+          40.83
+        ],
+        "sentence_ter": [
+          50.0,
+          66.67,
+          50.0,
+          100.0,
+          66.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Yagujba ngiyinga.",
+          "Gulugba Ngunybulugi.",
+          "Juwa gu bungmanya gijilulungunya.",
+          "Ngirra nga janjingunya.",
+          "Ngajbi Alanga nginya."
+        ],
+        "references": [
+          "Yagujba nyungu.",
+          "Gulugbi ga ngunybulugi.",
+          "Juwa gu bardba gijilulunguji.",
+          "Ngirrajba gunu janji.",
+          "Ngajbi ngiyinya alangani."
+        ],
+        "num_evaluated": 5
+      },
+      "best_step": 14
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 2.12,
+          "accumulated_dict": "- Ngarlu: dance\n- nya: you (sg.)\n- Gulugba: sleep\n- ngu: I (will)\n- Bardbi: old woman\n- ga: the\n- bungmanya: run (away)\n- Ngunybulugi: doctor\n- barrawunguji: has a house\n- Ngajbi: see\n- nginya: I saw you (sg.)",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, as suggested by \"Ngarlu nya\" (You danced) and \"Gulugba ngu\" (I will sleep), where the subject pronoun seems to follow the verb.\n- However, the word order is not consistent across all examples, indicating possible flexibility or context-dependent word order.\n- The presence of \"ga\" in \"Bardbi ga bungmanya\" could indicate a determiner or article, suggesting that \"ga\" might mean \"the\".\n- The verb \"bungmanya\" seems to be in a specific form when associated with \"Bardbi ga\", potentially indicating a verb conjugation or agreement system.\n- The phrase \"Ngunybulugi barrawunguji\" implies a possessive or attributive relationship, possibly using a specific grammatical construction to indicate \"has a house\".",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 7.08,
+            "corpus_ter": 260.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.66,
+              7.35
+            ],
+            "sentence_ter": [
+              300.0,
+              233.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Gulugba is not directly related to",
+              "Combining elements, a possible translation could be"
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 6.11,
+          "accumulated_dict": "- Ngarlu: dance\n- nya: you (sg.)\n- Gulugba: sleep\n- ngu: I (will)\n- Bardbi: old woman\n- ga: the\n- bungmanya: run (away)\n- Ngunybulugi: doctor\n- barrawunguji: has a house\n- Ngajbi: see\n- nginya: I saw you (sg.)\n- Dagumajba: strike\n- nguyu: she (will)\n- Alanga: girl\n- gu: the (alternative form or context-dependent)\n- ngarlujba: dance (alternative form or context-dependent)\n- janjingunya: with the dog\n- Ngajba: see (he will)\n- gununyu: you (sg.) (alternative form or object pronoun)",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, as suggested by \"Ngarlu nya\" (You danced) and \"Gulugba ngu\" (I will sleep), where the subject pronoun seems to follow the verb.\n- However, the word order is not consistent across all examples, indicating possible flexibility or context-dependent word order.\n- The presence of \"ga\" in \"Bardbi ga bungmanya\" could indicate a determiner or article, suggesting that \"ga\" might mean \"the\". Additionally, \"gu\" might be an alternative form or used in specific contexts.\n- The verb \"bungmanya\" seems to be in a specific form when associated with \"Bardbi ga\", potentially indicating a verb conjugation or agreement system.\n- The phrase \"Ngunybulugi barrawunguji\" implies a possessive or attributive relationship, possibly using a specific grammatical construction to indicate \"has a house\".\n- The use of \"ngarlujba\" instead of \"Ngarlu\" and \"Ngajba\" instead of \"Ngajbi\" might suggest a system of verb conjugation or context-dependent verb forms.\n- The language might use suffixes or prefixes to indicate grammatical relationships, as hinted by the variations in verb forms and the presence of \"gununyu\" as an object pronoun.",
+          "metrics": {
+            "corpus_bleu": 1.53,
+            "corpus_chrfpp": 15.15,
+            "corpus_ter": 275.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              5.52,
+              3.75,
+              2.84
+            ],
+            "sentence_chrfpp": [
+              4.27,
+              8.92,
+              18.56,
+              22.6
+            ],
+            "sentence_ter": [
+              250.0,
+              233.33,
+              225.0,
+              400.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will strike the doctor.",
+              "The girl will dance with the dog.",
+              "Dagumajba nguyu ngunybulugi. → She will strike the doctor.",
+              "Alanga gu ngarlujba janjingunya. → The girl will dance with the dog."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 5,
+          "latency_s": 5.81,
+          "accumulated_dict": "- Ngarlu: dance\n- nya: you (sg.)\n- Gulugba: sleep\n- ngu: I (will)\n- Bardbi: old woman\n- ga: the\n- bungmanya: run (away)\n- Ngunybulugi: doctor\n- barrawunguji: has a house\n- Ngajbi: see\n- nginya: I saw you (sg.)\n- Dagumajba: strike\n- nguyu: she (will)\n- Alanga: girl\n- gu: the (alternative form or context-dependent)\n- ngarlujba: dance (alternative form or context-dependent)\n- janjingunya: with the dog\n- Ngajba: see (he will)\n- gununyu: you (sg.) (alternative form or object pronoun)\n- Ngirra: money\n- nga: I (past tense marker or pronoun)\n- gijilulu: stole\n- Yagujba: leave\n- nyu: him\n- barrawuwaji: without a house\n- Daguma: struck\n- ngiyinga: me\n- bungmanyani: me (object form)\n- darranggunguji: ran (away) with the stick\n- Alayulu: found\n- ngiya: she\n- juwa: man",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, as suggested by \"Ngarlu nya\" (You danced) and \"Gulugba ngu\" (I will sleep), where the subject pronoun seems to follow the verb.\n- However, the word order is not consistent across all examples, indicating possible flexibility or context-dependent word order.\n- The presence of \"ga\" in \"Bardbi ga bungmanya\" could indicate a determiner or article, suggesting that \"ga\" might mean \"the\". Additionally, \"gu\" might be an alternative form or used in specific contexts.\n- The verb \"bungmanya\" seems to be in a specific form when associated with \"Bardbi ga\", potentially indicating a verb conjugation or agreement system.\n- The phrase \"Ngunybulugi barrawunguji\" implies a possessive or attributive relationship, possibly using a specific grammatical construction to indicate \"has a house\".\n- The use of \"ngarlujba\" instead of \"Ngarlu\" and \"Ngajba\" instead of \"Ngajbi\" might suggest a system of verb conjugation or context-dependent verb forms.\n- The language might use suffixes or prefixes to indicate grammatical relationships, as hinted by the variations in verb forms and the presence of \"gununyu\" as an object pronoun.\n- The verb \"gijilulu\" seems to be in the past tense, as indicated by the phrase \"Ngirra nga gijilulu\" (I stole the money), suggesting a possible tense marking system.\n- The phrase \"Yagujba nyu barrawuwaji\" implies a future tense marker \"Yagujba\" and a possible object pronoun \"nyu\" for \"him\".\n- The language may have a system of object agreement, as suggested by the phrase \"Daguma ngiyinga bungmanyani\" (The old woman struck me), where \"ngiyinga\" and \"bungmanyani\" seem to be object forms.",
+          "metrics": {
+            "corpus_bleu": 9.5,
+            "corpus_chrfpp": 13.36,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              15.13,
+              12.09
+            ],
+            "sentence_ter": [
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ngirra nga gijilulu.",
+              "Yagujba nyu barrawuwaji."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 2.53,
+          "accumulated_dict": "- Ngarlu: dance\n- nya: you (sg.)\n- Gulugba: sleep\n- ngu: I (will)\n- Bardbi: old woman\n- ga: the\n- bungmanya: run (away)\n- Ngunybulugi: doctor\n- barrawunguji: has a house\n- Ngajbi: see\n- nginya: I saw you (sg.)\n- Dagumajba: strike\n- nguyu: she (will)\n- Alanga: girl\n- gu: the (alternative form or context-dependent)\n- ngarlujba: dance (alternative form or context-dependent)\n- janjingunya: with the dog\n- Ngajba: see (he will)\n- gununyu: you (sg.) (alternative form or object pronoun)\n- Ngirra: money\n- nga: I (past tense marker or pronoun)\n- gijilulu: stole\n- Yagujba: leave\n- nyu: him\n- barrawuwaji: without a house\n- Daguma: struck\n- ngiyinga: me\n- bungmanyani: me (object form)\n- darranggunguji: ran (away) with the stick\n- Alayulu: found\n- ngiya: she\n- juwa: man\n- gina: her\n- gijilulungunya: with the money\n- balamurruwaji: without a spear\n- Dirragba: jump\n- bungmaji: old man",
+          "accumulated_rules": "- The language appears to have a flexible word order, but often follows a subject-verb-object (SVO) pattern, as seen in \"Ngarlu nya\" and \"Gulugba ngu\".\n- The use of \"ga\" and \"gu\" as determiners or articles suggests that they might be used to specify or emphasize the noun they precede.\n- Verb conjugation or agreement seems to be present, as indicated by variations in verb forms like \"bungmanya\", \"Ngajba\", and \"ngarlujba\".\n- The language likely uses suffixes or prefixes to indicate grammatical relationships, such as the possible object agreement system hinted at by \"ngiyinga\" and \"bungmanyani\".\n- Tense marking is probable, with \"nga\" potentially indicating past tense and \"Yagujba\" possibly marking future tense.\n- Object pronouns like \"nyu\" for \"him\" and \"gununyu\" for \"you (sg.)\" are used in specific contexts.\n- The phrase \"Juwani gina ngajbi gijilulungunya\" suggests that the language may use a system of case marking or adpositional phrases to indicate relationships between nouns.",
+          "metrics": {
+            "corpus_bleu": 2.22,
+            "corpus_chrfpp": 12.28,
+            "corpus_ter": 191.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              8.12,
+              5.52,
+              3.75
+            ],
+            "sentence_chrfpp": [
+              4.94,
+              7.87,
+              10.41,
+              22.25
+            ],
+            "sentence_ter": [
+              150.0,
+              166.67,
+              150.0,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He left me.",
+              "The old man will jump.",
+              "Yagu gininga. → He left me.",
+              "Dirragba gu bungmaji. → The old man will jump."
+            ],
+            "references": [
+              "Yagujba nyungu.",
+              "Gulugbi ga ngunybulugi.",
+              "Juwa gu bardba gijilulunguji.",
+              "Ngirrajba gunu janji."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.53,
+        "corpus_chrfpp": 15.15,
+        "corpus_ter": 275.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.12,
+          5.52,
+          3.75,
+          2.84
+        ],
+        "sentence_chrfpp": [
+          4.27,
+          8.92,
+          18.56,
+          22.6
+        ],
+        "sentence_ter": [
+          250.0,
+          233.33,
+          225.0,
+          400.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will strike the doctor.",
+          "The girl will dance with the dog.",
+          "Dagumajba nguyu ngunybulugi. → She will strike the doctor.",
+          "Alanga gu ngarlujba janjingunya. → The girl will dance with the dog."
+        ],
+        "references": [
+          "Yagujba nyungu.",
+          "Gulugbi ga ngunybulugi.",
+          "Juwa gu bardba gijilulunguji.",
+          "Ngirrajba gunu janji."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.2,
+      "chrf": 2.46,
+      "ter": 6400.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence into Wambaya, an Australian Aboriginal language. Please note that Wambaya is a",
+      "reference": "Yagujba nyungu."
+    },
+    "baseline": {
+      "best_bleu": 4.32,
+      "best_chrf": 41.61,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Yagujba gininga.",
+        "Ngunybulugi gulugba ngu.",
+        "Juwani gu bardbi ga gijilulu.",
+        "Ngirra nga alanga gu.",
+        "Alanga ngajbi nginya."
+      ],
+      "best_references": [
+        "Yagujba nyungu.",
+        "Gulugbi ga ngunybulugi.",
+        "Juwa gu bardba gijilulunguji.",
+        "Ngirrajba gunu janji.",
+        "Ngajbi ngiyinya alangani."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 9.88,
+      "best_chrf": 46.36,
+      "best_ter": 66.67,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "Yagujba ngiyinga.",
+        "Gulugba Ngunybulugi.",
+        "Juwa gu bungmanya gijilulungunya.",
+        "Ngirra nga janjingunya.",
+        "Ngajbi Alanga nginya."
+      ],
+      "best_references": [
+        "Yagujba nyungu.",
+        "Gulugbi ga ngunybulugi.",
+        "Juwa gu bardba gijilulunguji.",
+        "Ngirrajba gunu janji.",
+        "Ngajbi ngiyinya alangani."
+      ],
+      "best_step": 14
+    },
+    "step_by_step": {
+      "best_bleu": 1.53,
+      "best_chrf": 15.15,
+      "best_ter": 275.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "She will strike the doctor.",
+        "The girl will dance with the dog.",
+        "Dagumajba nguyu ngunybulugi. → She will strike the doctor.",
+        "Alanga gu ngarlujba janjingunya. → The girl will dance with the dog."
+      ],
+      "best_references": [
+        "Yagujba nyungu.",
+        "Gulugbi ga ngunybulugi.",
+        "Juwa gu bardba gijilulunguji.",
+        "Ngirrajba gunu janji."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

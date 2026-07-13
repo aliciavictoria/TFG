@@ -1,0 +1,1537 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T14:09:58.719531",
+    "puzzle_id": "linguini_012012010200",
+    "language": "Dyirbal",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 3,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false,
+    "sgpl_normalized": true
+  },
+  "puzzle": {
+    "id": "linguini_012012010200",
+    "language": "Dyirbal",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "bayi yaɽa ɳunɟaymuɳa baɳgu gurugugu biɳgunman.",
+        "target": "Booze is making the man that is always being blamed tired."
+      },
+      {
+        "source": "balan yabu bimabanɟalɳaymuɳa baɳgul yaɽaɳgu guliɳgu ɳunɟaɲu.",
+        "target": "The strong man is blaming the mother that is always following death adders."
+      },
+      {
+        "source": "balan waymin bambun baɳgu ɟugaɳgu ɟamiman.",
+        "target": "Sugar is making the healthy mother-in-law fat."
+      },
+      {
+        "source": "bala yila wura baɳgul bargandu biɳgundu guniɲu.",
+        "target": "The tired wallaby is searching for the little feather."
+      },
+      {
+        "source": "balan malayigara baɳgu garandu biɳgunman.",
+        "target": "The smoke is making the scorpion tired."
+      },
+      {
+        "source": "bala gurugu baɳgul ɳumaɳgu munduɳgu dimbaɲu.",
+        "target": "The offended father is carrying the booze."
+      },
+      {
+        "source": "bayi midin baɳgun bimaɳgu malayigaraguninaymuɳagu banɟan.",
+        "target": "The death adder that is always searching for scorpions is following the possum."
+      },
+      {
+        "source": "bayi gubimbulu biɳgun baɳgu gurugugu ɟagunman.",
+        "target": "Booze is making the tired doctor fall asleep."
+      },
+      {
+        "source": "bala garan baɳgul biɲɟiriɲɟu banɟan.",
+        "target": "The lizard is following the smoke."
+      },
+      {
+        "source": "balan duɳan baɳgul yiriɲɟilagu guniɲu.",
+        "target": "The dragonfly is searching for the stinging tree."
+      },
+      {
+        "source": "bala ɟuga baɳgun yabuɳgu ɳaɟilmuɳagu dimbaɲu.",
+        "target": "The mother that is always being ignored is carrying the sugar."
+      },
+      {
+        "source": "bala diban ɟagiɲ baɳgul gubimbulugu ɟamiɳgu bilmban.",
+        "target": "The fat doctor is pushing the big stone."
+      },
+      {
+        "source": "bala garan baɳgun waymindu dibanbilmbalɳaymuɳagu buɽan.",
+        "target": "The mother-in-law that is always pushing stones is looking at the smoke."
+      },
+      {
+        "source": "balan baNgay waɽu baNgun bundiɲɟu ɟagiɲɟu guniɲu.",
+        "target": "The big grasshopper is searching for the bent spear."
+      },
+      {
+        "source": "bayi biɲɟiriɲ biɳgun baɳgul ɲalɳgaɳgu mugurugu buɽan.",
+        "target": "The quiet boy is looking at the tired lizard."
+      },
+      {
+        "source": "bayi ɳuma guli baɳgul yaɽaɳgu banɟalmuɳagu munduman.",
+        "target": "The man that is always being followed is offending the strong father."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "balan ɲalɳga baɳgul ɳumaɳgu guniymuɳagu bambunman.",
+        "target": "The father that is always being searched for is healing the girl.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bala diban bilmbalmuɳa baɳgun biɲɟiriɲɟu guniɲu.",
+        "target": "The lizard is searching for the stone that is always being pushed.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bayi bargan baɳgul yaɽaɳgu gubimbuluɳunɟanaymuɳagu banɟan.",
+        "target": "The man that is always blaming doctors is following the wallaby",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "balan ɲalɳga baɳgul ɳumaɳgu guniymuɳagu bambunman.",
+      "reference": "The father that is always being searched for is healing the girl.",
+      "hypothesis": "**Possible translation:**  \n*“The shining moonlight spreads over the quiet forest.”*  \n\n*(This is a best‑guess rendering based on the phonetic patterns of the original sentence.)*",
+      "latency_s": 2.86,
+      "metrics": {
+        "corpus_bleu": 1.28,
+        "corpus_chrfpp": 17.85,
+        "corpus_ter": 175.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          1.28
+        ],
+        "sentence_chrfpp": [
+          17.85
+        ],
+        "sentence_ter": [
+          175.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:**  \n*“The shining moonlight spreads over the quiet forest.”*  \n\n*(This is a best‑guess rendering based on the phonetic patterns of the original sentence.)*"
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 149.73,
+          "metrics": {
+            "corpus_bleu": 2.01,
+            "corpus_chrfpp": 18.7,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.57,
+              4.4,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              23.26,
+              14.67,
+              18.01
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong man is offending the tired father.",
+              "The fat doctor is looking at the quiet boy.",
+              "Booze is making the offended smoke follow the lizard."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.01,
+        "corpus_chrfpp": 18.7,
+        "corpus_ter": 82.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.57,
+          4.4,
+          4.52
+        ],
+        "sentence_chrfpp": [
+          23.26,
+          14.67,
+          18.01
+        ],
+        "sentence_ter": [
+          83.33,
+          83.33,
+          81.82
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong man is offending the tired father.",
+          "The fat doctor is looking at the quiet boy.",
+          "Booze is making the offended smoke follow the lizard."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 54.45,
+          "accumulated_dict": "bayi = booze\nbalan = strong\nbaɳgu = man\nbaɳgul = mother\nyaɽa = copular/auxiliary “is/are”\nɳunɟa = blame (verb root)\nguliɳgu = death\nɳunɟaɲu = adders (snakes)\ngurugugu = tired\nbiɳgu = make / causative verb root\n‑aymuɳa = “always” + relative/participle marker (as in “always being …”)\n‑ɳa = nominaliser / relative‑clause suffix (observed in **bimabanɟalɳaymuɳa**)\nɲalɳga = UNKNOWN (appears before a noun)\nɳumaɳgu = UNKNOWN (appears after a noun)\nguniymuɳagu = UNKNOWN (verb‑like form)\nbambunman = UNKNOWN (verb‑like form)\n---",
+          "accumulated_rules": "1. Basic word order appears to be **S A V O Adj** (Subject – Copula/Aux – Verb – Object – Adjective) as seen in “bayi yaɽa … biɳgunman … gurugugu”.\n2. Nouns take a stem *baɳg‑* with suffixes to indicate specific referents (‑u = man, ‑ul = mother).\n3. The copular/auxiliary **yaɽa** follows the subject and precedes the main verb or relative clause.\n4. The sequence **‑aymuɳa** attaches to a verb root to form a relative clause meaning “always …”.\n5. A causative construction uses the verb root **biɳgu‑** plus the suffix **‑nman** to mean “make …”.\n6. Compound nouns (e.g., “death adders”) are formed by juxtaposing two nouns without an overt linker.\n[No rules have been deleted at this stage.]\n---",
+          "metrics": {
+            "corpus_bleu": 2.56,
+            "corpus_chrfpp": 10.61,
+            "corpus_ter": 88.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.75,
+              3.13,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              20.43,
+              7.32,
+              3.24
+            ],
+            "sentence_ter": [
+              75.0,
+              91.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is always … ??? … ???.",
+              "The strong … ??? … ??? … ???.",
+              "Booze … mother … ??? … ???."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 93.9,
+          "accumulated_dict": "bayi = booze\nbalan = strong\nbaɳgu = man\nbaɳgul = mother\nyaɽa = copular/auxiliary “is/are”\nɳunɟa = blame (verb root)\nguliɳgu = death\nɳunɟaɲu = adders (snakes)\ngurugugu = tired\nbiɳgu = make / causative verb root\n‑aymuɳa = “always” + relative/participle marker (as in “always being …”)\n‑ɳa = nominaliser / relative‑clause suffix (observed in **bimabanɟalɳaymuɳa**)\nɲalɳga = UNKNOWN (appears before a noun)\nɳumaɳgu = UNKNOWN (appears after a noun)\nguniymuɳagu = UNKNOWN (verb‑like form)\nbambunman = UNKNOWN (verb‑like form)\n---",
+          "accumulated_rules": "1. **Basic clause order** is **S A (Rel‑clause) O Adj V** (e.g., “bayi yaɽa ɳunɟa‑aymuɳa baɳgu gurugugu biɳgu‑nman”).\n2. The copular/auxiliary *yaɽa*, *yabu* or *waymin* follows the subject and precedes any relative clause or main verb.\n3. A relative clause is formed by attaching *‑aymuɳa* to a verb root; the whole clause precedes the noun it modifies.\n4. Causative constructions use a verb root plus the suffix *‑nman* or *‑man* (two productive causative patterns).\n5. Simple adjectives follow the noun they modify; adjectives that appear before a noun use the prefixal element *ɲalɳga*; adjectives that appear after a noun use the suffix *ɳumaɳgu*.\n6. Noun compounds are formed by simple juxtaposition (e.g., *guliɳgu ɳunɟa‑ɲu* “death adders”).\n7. The noun “mother‑in‑law” is *baɳgu*; “mother” is *baɳgul*.\n---",
+          "metrics": {
+            "corpus_bleu": 3.93,
+            "corpus_chrfpp": 26.0,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.86,
+              3.71,
+              8.3
+            ],
+            "sentence_chrfpp": [
+              29.8,
+              18.92,
+              29.63
+            ],
+            "sentence_ter": [
+              83.33,
+              91.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong old mother is always making the healthy one.",
+              "Sugar follows the strong, always‑healthy man and makes the snakes.",
+              "Booze follows the mother‑in‑law, is always making the adders."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 72.16,
+          "accumulated_dict": "bayi = booze\nbalan = strong\nbaɳgu = man\nbaɳgul = mother\nyaɽa = copular/auxiliary “is/are”\nɳunɟa = blame (verb root)\nguliɳgu = death\nɳunɟaɲu = adders (snakes)\ngurugugu = tired\nbiɳgu = make / causative verb root\n‑aymuɳa = “always” + relative/participle marker (as in “always being …”)\n‑ɳa = nominaliser / relative‑clause suffix (observed in **bimabanɟalɳaymuɳa**)\nɲalɳga = UNKNOWN (appears before a noun)\nɳumaɳgu = UNKNOWN (appears after a noun)\nguniymuɳagu = UNKNOWN (verb‑like form)\nbambunman = UNKNOWN (verb‑like form)\n---",
+          "accumulated_rules": "1. Basic clause order is flexible; a typical pattern is **S [Aux] V O Adj Adj**, but adjectives may also precede the noun.\n2. The copular/auxiliary *yaɽa* (or its variant *yabu*) follows the subject. When combined with the progressive suffix *‑ɳgu* it yields *yaɽa‑ɳgu* “is …‑ing”.\n3. A relative clause is formed by a verb root + *‑ɳa* + *‑aymuɳa* (“always …‑ing”). The whole relative clause precedes the noun it modifies.\n4. Causative constructions use a verb root plus the suffix *‑nman* (or *‑man*), e.g., *biɳgu‑nman* “make …”.\n5. Simple adjectives can appear either **before** the noun (e.g., *bala yila wura* “tired wallaby”) or **after** the noun (e.g., *baɳgul ɟugaɳgu* “mother healthy”). No obligatory prefix *ɲalɳga* or suffix *‑ɳuma* is required.\n6. Noun compounds are formed by juxtaposition (e.g., *guliɳgu ɳunɟa‑ɲu* “death adders”).\n7. The noun “mother‑in‑law” is *baɳgu*; “mother” is *baɳgul*.\n---",
+          "metrics": {
+            "corpus_bleu": 13.62,
+            "corpus_chrfpp": 37.46,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.82,
+              21.54,
+              16.59
+            ],
+            "sentence_chrfpp": [
+              29.88,
+              39.99,
+              42.69
+            ],
+            "sentence_ter": [
+              75.0,
+              66.67,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is always following the tired sugar.",
+              "The tired wallaby is searching for the little feather.",
+              "Booze is always blaming the mother that is healthy and tired."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 80.17,
+          "accumulated_dict": "bayi = booze\nbalan = strong\nbaɳgu = man\nbaɳgul = mother\nyaɽa = copular/auxiliary “is/are”\nɳunɟa = blame (verb root)\nguliɳgu = death\nɳunɟaɲu = adders (snakes)\ngurugugu = tired\nbiɳgu = make / causative verb root\n‑aymuɳa = “always” + relative/participle marker (as in “always being …”)\n‑ɳa = nominaliser / relative‑clause suffix (observed in **bimabanɟalɳaymuɳa**)\nɲalɳga = UNKNOWN (appears before a noun)\nɳumaɳgu = UNKNOWN (appears after a noun)\nguniymuɳagu = UNKNOWN (verb‑like form)\nbambunman = UNKNOWN (verb‑like form)\n---",
+          "accumulated_rules": "1. **Clause order** is relatively free; a common pattern is **Subject [Copula] Verb Object [Adj] [Adj]**.\n2. The copular *yaɽa* (or variant *yabu*) follows the subject. When combined with the progressive suffix **‑ɳgu**, it forms *yaɽa‑ɳgu* / *yaɽaɳgu* “is …‑ing”.\n3. A relative clause is built as **VerbRoot ‑ɳa ‑aymuɳa** (“always …‑ing”). The **‑ɳa** may be omitted when the “always” marker attaches directly to the verb root. The whole relative clause precedes the noun it modifies.\n4. Causative constructions use a verb root plus the suffix **‑nman** (or **‑man**). Two distinct causative verbs are attested: *biɳgu‑nman* and the lexical verb *bambun*.\n5. Simple adjectives can appear **before** the noun (*bala yila wura* “tired wallaby”) or **after** the noun (*baɽul ɟugaɳgu* “mother healthy”). No obligatory prefix *ɲalɳga* or suffix *‑ɳuma* is required.\n6. Noun compounds are formed by juxtaposition, e.g., *balan waymin* “sugar”, *guliɳgu ɳunɟa‑ɲu* “death adders”.\n7. The particle **guniɩu** marks the object of a searching verb, roughly “for”.\n---",
+          "metrics": {
+            "corpus_bleu": 6.64,
+            "corpus_chrfpp": 32.41,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.66,
+              4.67,
+              12.87
+            ],
+            "sentence_chrfpp": [
+              27.83,
+              21.4,
+              47.91
+            ],
+            "sentence_ter": [
+              75.0,
+              91.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother‑in‑law always following death adders is searching for sugar.",
+              "The tired little feather is being made by the smoke.",
+              "Booze is always blaming the mother that is healthy, making the adders follow."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 101.46,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Clause order** is flexible; a common neutral order is **Subject [Copula] Verb Object [Adj] [Adj]**.\n2. The copula appears after the subject; *yaɽa* and its variant *yabu* are interchangeable.\n3. The progressive suffix **‑ɳgu** attaches to verbs (including the copula) to form “‑ing” meanings.\n4. **Relative clauses** are built as **VerbRoot (‑ɳa/‑lɳa) ‑aymuɳa** meaning “always …‑ing”. The nominaliser may be omitted when *‑aymuɳa* attaches directly to the verb root.\n5. Two causative constructions exist:\n- lexical causative **bambun** (or its extended form **bambunman**) = “make …”.\n- derived causative **biɳgu‑nman** (or **biɳgunman**) = “make …”.\n6. Adjectives can appear **before** or **after** the noun they modify; multiple adjectives may stack (e.g., *bala gurugu baɳgul*).\n7. **Object case** is marked by **‑ɲu** on the noun; the post‑position **guniɲu** means “for” and follows the verb of searching.\n8. The particle **ɲalɳga** functions as a determiner placed before a noun.\n9. Noun compounds are formed by simple juxtaposition (e.g., *guliɳgu ɳunɟa‑ɲu* “death adders”).\n10. The suffix **‑ɳa** may surface as **‑lɳa** after certain consonants for phonotactic reasons.",
+          "metrics": {
+            "corpus_bleu": 10.96,
+            "corpus_chrfpp": 32.24,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.01,
+              21.54,
+              7.35
+            ],
+            "sentence_chrfpp": [
+              31.6,
+              38.04,
+              27.05
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is always searching.",
+              "The tired little feather is searching for the men.",
+              "Booze is always being blamed while the offended mother is carrying it."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 155.78,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Clause order** is flexible; a neutral order is **Subject [Copula] Verb Object [Adj] [Adj]**, but adjectives may appear before or after the noun they modify, and multiple adjectives can stack.\n2. The copula appears after the subject; *yaɽa* and *yabu* are interchangeable.\n3. The progressive suffix **‑ɳgu** attaches to verbs (including the copula) to form “‑ing” meanings.\n4. **Relative clauses** are formed by a verb root plus the “always” participial marker **‑aymuɳa** (or the variant **‑naymuɳa**). A nominaliser **‑ɳa/‑lɳa** may optionally appear before the participial marker but is not required.\n5. **Causatives**:\na. Lexical causative *bambun* (or *bambun‑man*) = “make …”.\nb. Derived causative *biɳgu‑nman* (or *biɳgun‑man*) = “make …”.\n6. **Object case** is marked by **‑ɲu** on the noun. The post‑position **guniɲu** means “for” and follows verbs of searching.\n7. The particle **ɲalɳga** functions as a determiner placed before a noun, but its use is optional.\n8. Noun compounds are formed by simple juxtaposition (e.g., *guliɳgu ɳunɟa‑ɲu* “death adders”).\n9. The suffix **‑ɳa** may surface as **‑lɳa** after certain consonants for phonotactic reasons.\n10. Lexical synonyms may exist for the same concept (e.g., *bayi* / *dimba* “booze”, *midin baɳgun* / *ɳunɟaɲu* “adder”).\n[DELETED: Rule 4 that required a nominaliser for every relative clause – contradicted by examples 1 and 2.]\n---",
+          "metrics": {
+            "corpus_bleu": 14.44,
+            "corpus_chrfpp": 39.76,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.5,
+              21.65,
+              16.26
+            ],
+            "sentence_chrfpp": [
+              34.25,
+              39.38,
+              45.58
+            ],
+            "sentence_ter": [
+              58.33,
+              75.0,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is always looking for the father.",
+              "The tired little wallaby is searching for the little feather.",
+              "Booze is always searching for the scorpion that is following the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 99.85,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Clause order** is flexible; a neutral order is **Subject [Copula] Verb Object [Adj] [Adj]**. Adjectives may appear before or after the noun they modify; multiple adjectives can stack.\n2. The copula follows the subject; *yaɽa* and *yabu* are interchangeable.\n3. The progressive suffix **‑ɳgu** attaches to verbs (including the copula) to form “‑ing” meanings.\n4. **Relative clauses** are formed by a verb root + optional nominaliser (**‑ɳa / ‑lɳa / ‑ɟalɳa**) + the “always” participial marker (**‑aymuɳa** or **‑naymuɳa**). The nominaliser is not obligatory.\n5. **Causatives**:\na. Lexical causative *bambun* (or *bambun‑man*) = “make …”.\nb. Derived causative *biɳgu* + **‑nman** (or fused *‑nman*) = “make …”.\n6. **Object case** is marked by **‑ɲu** on the noun.\n7. The post‑position **guniɲu** means “for” and follows verbs of searching.\n8. The particle **ɲalɳga** functions as a determiner placed before a noun; its use is optional.\n9. Noun compounds are formed by simple juxtaposition (e.g., *midin baɳgun* “death adder”).\n10. The suffix **‑ɳa** may surface as **‑lɳa** after certain consonants; **‑ɟalɳa** is a second variant used after the verb root *bimaban*.\n[DELETED: Rule 4 that required a nominaliser for every relative clause – contradicted by examples 1 and 2.]\n---",
+          "metrics": {
+            "corpus_bleu": 4.34,
+            "corpus_chrfpp": 28.32,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.55,
+              7.84,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              35.53,
+              23.75,
+              25.42
+            ],
+            "sentence_ter": [
+              66.67,
+              83.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother’s father is always searching for the scorpion.",
+              "The tired doctor is making the little feather for the possum.",
+              "Booze is making the tired doctor always searching for the possum."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 135.9,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Clause order** is flexible; a neutral order is **Subject [Copula] Verb Object [Adj] [Adj]**. Adjectives may appear before or after the noun they modify; multiple adjectives can stack.\n2. The copula follows the subject; *yaɽa* and *yabu* are interchangeable.\n3. The progressive suffix **‑ɳgu** attaches to verbs (including the copula) to form “‑ing” meanings.\n4. **Relative clauses** are formed by a verb root + optional nominaliser (**‑ɳa / ‑lɳa / ‑ɟalɳa**) + the “always” participial marker (**‑aymuɳa** or **‑naymuɳa**). The nominaliser is optional.\n5. **Causatives**:\na. Lexical causative *bambun* (or *bambun‑man*) = “make …”.\nb. Derived causative *biɳgu* + **‑nman** (or fused *‑nman*) = “make …”.\n6. **Object case** is marked by **‑ɲu** on the noun.\n7. The post‑position **guniɲu** means “for” and follows verbs of searching.\n8. The particle **ɲalɳga** functions as a determiner placed before a noun; its use is optional.\n9. Noun compounds are formed by simple juxtaposition (e.g., *midin baɳgun* “death adder scorpions”).\n10. The suffix **‑ɟalɳa** is a nominaliser that appears after certain verb roots (e.g., *bimaban*).\n11. The variant **‑naymuɳa** functions like **‑aymuɳa** as the “always” participial marker.\n[DELETED: Rule 4 that required a nominaliser for every relative clause – already removed in the current hypothesis.]\n---",
+          "metrics": {
+            "corpus_bleu": 5.94,
+            "corpus_chrfpp": 30.44,
+            "corpus_ter": 91.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.32,
+              4.65,
+              11.36
+            ],
+            "sentence_chrfpp": [
+              28.23,
+              22.99,
+              39.96
+            ],
+            "sentence_ter": [
+              83.33,
+              91.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother’s father always searches, making.",
+              "The tired quick … always … scorpions lizard for.",
+              "Booze … mother is being … doctor that is always being blamed follow."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 120.46,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Basic clause order** is flexible; a neutral order is **Subject [Copula] Verb Object [Adj] [Adj]**.\n2. The copula (*yaɽa*, *yabu*) follows the subject and can take the progressive suffix *‑ɳgu*.\n3. **Progressive**: suffix *‑ɳgu* attaches to any verb (including the copula) to form “‑ing”.\n4. **Relative clauses**: verb + (optional nominaliser *‑ɳa / ‑lɳa / ‑ɟalɳa*) + always‑marker (*‑aymuɳa* or *‑naymuɳa*). The nominaliser is optional.\n5. **Causatives**:\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + *‑nman* (or fused *‑man*) = “make …”.\nc. The causative verb appears clause‑final after its object and any object‑adjuncts.\n6. **Object case**: noun takes suffix *‑ɲu* when it is the direct object of a transitive verb.\n7. **Post‑position *guniɲu*** means “for” and follows verbs of searching or looking for.\n8. **Determiner *ɲalɳga*** precedes a noun; it is optional and does not affect case.\n9. **Noun compounds** are formed by simple juxtaposition (e.g., *midin baɳgun* “death scorpion”).\n10. **Adjective placement**: adjectives may appear before or after the noun they modify; post‑nominal adjectives often end in *‑gu* (e.g., *ɟugaɳgu*, *garandu*).\n11. **Verb synonyms**: *biɳgundu*, *yiriɲɟilagu* and *biɲɟiriɞ* are interchangeable meanings “search” / “follow” depending on context.\n[DELETED: Rule 4 that required a nominaliser for every relative clause – removed because the nominaliser is now optional.]\n---",
+          "metrics": {
+            "corpus_bleu": 3.48,
+            "corpus_chrfpp": 26.33,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.5,
+              3.94,
+              4.54
+            ],
+            "sentence_chrfpp": [
+              38.77,
+              18.27,
+              21.11
+            ],
+            "sentence_ter": [
+              58.33,
+              83.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is always searching for the father.",
+              "The tired lizard follows the smoke.",
+              "Booze makes the tired doctor always fall asleep."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 178.51,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Clause order** is flexible; a neutral order is **Subject [Copula] Relative‑Clause Object [Adj] Verb**.\n2. **Copula** *yaɽa* / *yabu* follows the subject. It can take the progressive suffix ‑ɳgu (yaɽaɳgu).\n3. **Progressive**: suffix ‑ɳgu attaches to any verb (including the copula) to mean “‑ing”.\n4. **Always‑marker**: ‑aymuɳa attaches directly to a verb root (or to a verb + nominaliser) to mean “always V‑ing”.\n5. **Relative clauses**:\na. Verb + (optional nominaliser ‑ɳa / ‑lɳa / ‑ɟalɳa) + ‑aymuɳa.\nb. The nominaliser is optional; when present it precedes ‑aymuɳa.\n6. **Causatives**:\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + ‑nman / ‑man = “make …”.\nc. The causative verb appears clause‑final after its object and any object‑adjuncts; the object of a causative does **not** take the accusative ‑ɲu.\n7. **Object case**: a noun that is the direct object of a simple transitive verb takes the suffix ‑ɳu. The marker is absent with objects of causative verbs.\n8. **Post‑position** *guniɲu* = “for”; it follows verbs of searching or looking for.\n9. **Determiner** *ɲalɳga* precedes a noun; it is optional and does not affect case.\n10. **Noun compounds** are formed by simple juxtaposition (e.g., *midin baɳgun* “death scorpion”).\n11. **Adjective placement**: adjectives may appear before the noun (pre‑nominal) or after (post‑nominal). Post‑nominal adjectives often end in ‑gu (e.g., *ɟugaɳgu*, *garandu*).\n12. **Verb synonyms**: *bimaban*, *biɲɟiriɘɟu*, *banɟan* all mean “follow”. *biɳgundu*, *yiriɲɟilagu*, *biɲɟiriɞ* are synonyms for “search / look for”.\n[DELETED: Rule 4 that required a nominaliser for every relative clause – removed because the nominaliser is now optional.]\n---",
+          "metrics": {
+            "corpus_bleu": 4.29,
+            "corpus_chrfpp": 27.2,
+            "corpus_ter": 82.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.82,
+              8.18,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              27.55,
+              26.27,
+              27.53
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother‑in‑law is always making the smoke follow.",
+              "The tired possum is always following the doctor for.",
+              "Booze is making the tired doctor always being ignored fall asleep."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 122.64,
+          "accumulated_dict": "bayi = booze (noun)\nbalan = strong (adjective)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nyaɽa = copula “is/are”\nyabu = copula variant “is/are”\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = “always being blamed” (ɳunɟa + aymuɳa)\nɳunɟaɲu = adders, death adders (noun)\nguliɳgu = death (noun)\ngurugugu = tired (adjective)\ngurugu = offended (adjective)\nbala = tired (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbiɳgu = make / causative verb root\n‑nman / ‑man = causative suffix (e.g., *biɳgunman*, *bambunman*)\nbambun = make (lexical causative verb)\n‑ɳa = relative‑clause nominaliser (appears as ‑ɳa or ‑lɳa)\n‑aymuɳa = “always” + participial marker (forms relative clauses)\n‑ɳgu = progressive/continuous suffix (e.g., *yaɽaɳgu*, *munduɳgu*)\n‑ɲu = accusative/object marker (e.g., *dimbaɲu*)\nguniɲu = “for” (post‑position used with searching verbs)\nbiɳgundu = search (verb)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniymuɳagu = always search / always look for (verb)\nɲalɳga = determiner/particle placed before a noun",
+          "accumulated_rules": "1. **Clause order** is flexible; a neutral order is **Subject [Copula] Relative‑Clause Object [Adj] Verb**.\n2. **Copula** *yaɽa* / *yabu* follows the subject. It may appear before a relative clause when the clause modifies the subject.\n3. **Progressive**: suffix **‑ɳgu** attaches to any verb (including the copula) to mean “‑ing”.\n4. **Always‑marker**: **‑aymuɳa** attaches directly to a verb (or to a verb + optional nominaliser) to mean “always V‑ing”.\n5. **Relative clauses**:\na. Verb + (optional nominaliser **‑ɳa**, **‑lɳa**, **‑ɟalɳa**) + **‑aymuɳa**.\nb. The nominaliser is optional; when present it precedes **‑aymuɳa**.\n6. **Causatives**:\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + **‑nman / ‑man** = “make …”.\nc. The causative verb appears clause‑final after its object and any object‑adjuncts; the object of a causative does **not** take the accusative **‑ɲu**.\n7. **Object case**: a noun that is the direct object of a simple transitive verb takes the suffix **‑ɲu**. The marker is absent with objects of causative verbs.\n8. **Post‑position** *guniɲu* = “for”; it follows verbs of searching or looking for.\n9. **Determiner** *ɲalɳga* precedes a noun; it is optional and does not affect case.\n10. **Noun compounds** are formed by simple juxtaposition (e.g., *midin baɳgun* “death scorpion”).\n11. **Adjective placement**: adjectives may appear before the noun (pre‑nominal) or after (post‑nominal). Post‑nominal adjectives often end in **‑gu** (e.g., *ɟugaɳgu*, *garandu*).\n12. **Verb synonyms**: *bimaban*, *biɲɟiriɘɟu*, *banɟan* all mean “follow”. *biɳgundu*, *yiriɲɟilagu*, *biɲɟiriɞ* are synonyms for “search / look for”.\n[DELETED: Rule 4 that required a nominaliser for every relative clause – removed because the nominaliser is now optional.]\n---",
+          "metrics": {
+            "corpus_bleu": 3.6,
+            "corpus_chrfpp": 27.16,
+            "corpus_ter": 88.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.57,
+              4.57,
+              6.25
+            ],
+            "sentence_chrfpp": [
+              30.32,
+              22.35,
+              28.72
+            ],
+            "sentence_ter": [
+              91.67,
+              83.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother makes the father always search.",
+              "The tired doctor always follows the big stone.",
+              "The tired mother is always being ignored while the sugar makes the possum follow."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 132.27,
+          "accumulated_dict": "* **bayi** is used for “booze” (sentences 1, 6) but also appears in a compound that translates as “death adder” (sentence 7). I treat the first morpheme of that compound as *bayi* = “death” and keep *bayi* = “booze” as a homophonous, separate lexical item.\n* **dimba** functions as “booze” in sentence 6, giving a second synonym for that noun.\n* **baɳgu** is used for “man / scorpion” (sentences 1, 2, 5) and, in sentence 3, for “mother‑in‑law”. I therefore keep the original meaning and note that the sentence likely contains a typo; the intended form for “mother‑in‑law” is *baɽul*.\n* **midin** and **baɳgun** together form “death adder” (sentence 7). I add them as separate lexical items.\n* **gubimbulu / gubimbulugu** appear as “doctor” (sentence 8) and “tired doctor” (sentence 8). I record the base *gubimbulu* = “doctor”.\n* **garan** appears as “lizard” (sentence 9) and as part of a compound meaning “stones” (sentence 12). I keep *garan* = “lizard”.\n* **duɳan** = “dragonfly”, **duɳan** appears only once.\n* **ɟuga** appears in a clause that translates “mother”; I treat it as a noun “mother” (alternative to *baɳgul*).\nNo contradictions were found for the suffixes **‑ɳgu**, **‑ɲu**, **‑aymuɳa**, the determiners, or the word order patterns.\n---\n**DICTIONARY**\nbayi = booze (noun)\nbayi = death (noun, only in the compound *bayi midin baɳgun*)\nbalan = strong (adjective)\nbala = tired (adjective)\ngurugugu = tired (adjective, post‑nominal)\ngurugu = offended (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = always being blamed (ɳunɟa + ‑aymuɳa)\nɳunɟaɲu = blame + accusative (object)\nguliɳgu = death (noun)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniɲu = for (post‑position)\nguniymuɳagu = always search / always look for (guni + ‑aymuɳa)\nbiɳgu = make (causative verb root)\n‑man / ‑nman = causative suffix (e.g. *biɳgunman*)\nbambun = make (lexical causative verb)\nbiɳgundu = search (verb)\nbimaban = follow (verb)\nbiɲɟiriɘɟu, biɲɟiriɞ, banɟan = follow (synonyms)\nbiɲɟiriɲɟu = follow (synonym used in sentence 9)\nyiriɲɟilagu = search / look for (synonym)\nɲalɳga = determiner/particle (pre‑noun)\n‑ɳgu = progressive/continuous suffix (attaches to any verb)\n‑aymuɳa = “always V‑ing” (adverbial/participle)\n‑ɳa / ‑lɳa / ‑ɟalɳa = relative‑clause nominaliser (optional)\n‑ɲu = accusative/object marker (on direct objects of simple transitive verbs)\ndimba = booze (noun, synonym of *bayi*)\nmidin = adder (noun)\nbaɳgun = scorpion (noun, used in compounds)\ngubimbulu = doctor (noun)\ngubimbulugu = tired doctor (post‑nominal adjective)\ngaran = lizard (noun)\nduɳan = dragonfly (noun)\nbiman = ??? (not attested)\nbimaɳgu = ??? (part of “death adder” compound)\nmalayigaraguni = “smoke‑for” (compound with *guni* “for”) – kept as lexical piece for analysis only\n[DELETED: baɽul = mother‑in‑law — retained (no contradiction); no entries removed.]\n---",
+          "accumulated_rules": "1. **Clause order (neutral):**\n*Subject [Copula] Relative‑Clause Object [Adj] Verb*\nThe order can vary, but the copula follows the subject; a relative clause may appear before or after the copula.\n2. **Copula:** *yaɽa* and *yabu* mean “is/are”. They may take the progressive suffix **‑ɳgu** (*yaɽaɳgu* = “is being”).\n3. **Progressive:** suffix **‑ɳgu** attaches to any verb (including the copula) to mark an ongoing action.\n4. **Always‑marker:** **‑aymuɳa** attaches to a verb (or verb + optional nominaliser) and means “always V‑ing”.\n5. **Relative clauses:**\na. Formed by *Verb* + (optional nominaliser **‑ɳa**, **‑lɳa**, **‑ɟalɳa**) + **‑aymuɳa**.\nb. The nominaliser is optional; when present it precedes **‑aymuɳa**.\nc. The whole relative clause precedes the noun it modifies.\n6. **Causatives:**\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + **‑man / ‑nman** = “make …”.\nc. The causative verb appears clause‑final, after its object and any object‑adjuncts.\nd. Objects of causatives do **not** take the accusative **‑ɲu**.\n7. **Object case:** Direct objects of simple transitive verbs take **‑ɲu**. The marker is absent with objects of causative verbs.\n8. **Post‑position *guniɲu* = “for”** follows verbs of searching/looking for. When combined with **‑aymuɳa**, *guniymuɳa* means “always look for”.\n9. **Determiner *ɲalɳga*** precedes a noun; it is optional and does not affect case.\n10. **Noun compounds** are simple juxtaposition (e.g., *midin baɳgun* “death adder”).\n11. **Adjective placement:**\na. Pre‑nominal adjectives appear before the noun (e.g., *balan* “strong”).\nb. Post‑nominal adjectives often end in **‑gu** (e.g., *gurugugu*, *ɟugaɳgu*).\n12. **Synonyms for “follow”**: *bimaban*, *biɲɟiriɘɟu*, *banɟan*, *biɲɟiriɲɟu* etc.\n**Synonyms for “search / look for”**: *biɳgundu*, *yiriɲɟilagu*, *biɲɟiriɞ*.\n[DELETED: Rule 4 that required a nominaliser for every relative clause – removed because the nominaliser is now optional.]\n---",
+          "metrics": {
+            "corpus_bleu": 5.1,
+            "corpus_chrfpp": 28.23,
+            "corpus_ter": 74.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.82,
+              9.57,
+              8.3
+            ],
+            "sentence_chrfpp": [
+              28.98,
+              31.13,
+              24.41
+            ],
+            "sentence_ter": [
+              75.0,
+              75.0,
+              72.73
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong sugar is always making the mother‑in‑law follow.",
+              "The fat doctor is always following the stone.",
+              "Booze is always making the tired mother ignore the sugar."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 155.09,
+          "accumulated_dict": "* **bayi** is used for “booze” (sentences 1, 6) but also appears in a compound that translates as “death adder” (sentence 7). I treat the first morpheme of that compound as *bayi* = “death” and keep *bayi* = “booze” as a homophonous, separate lexical item.\n* **dimba** functions as “booze” in sentence 6, giving a second synonym for that noun.\n* **baɳgu** is used for “man / scorpion” (sentences 1, 2, 5) and, in sentence 3, for “mother‑in‑law”. I therefore keep the original meaning and note that the sentence likely contains a typo; the intended form for “mother‑in‑law” is *baɽul*.\n* **midin** and **baɳgun** together form “death adder” (sentence 7). I add them as separate lexical items.\n* **gubimbulu / gubimbulugu** appear as “doctor” (sentence 8) and “tired doctor” (sentence 8). I record the base *gubimbulu* = “doctor”.\n* **garan** appears as “lizard” (sentence 9) and as part of a compound meaning “stones” (sentence 12). I keep *garan* = “lizard”.\n* **duɳan** = “dragonfly”, **duɳan** appears only once.\n* **ɟuga** appears in a clause that translates “mother”; I treat it as a noun “mother” (alternative to *baɳgul*).\nNo contradictions were found for the suffixes **‑ɳgu**, **‑ɲu**, **‑aymuɳa**, the determiners, or the word order patterns.\n---\n**DICTIONARY**\nbayi = booze (noun)\nbayi = death (noun, only in the compound *bayi midin baɳgun*)\nbalan = strong (adjective)\nbala = tired (adjective)\ngurugugu = tired (adjective, post‑nominal)\ngurugu = offended (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = always being blamed (ɳunɟa + ‑aymuɳa)\nɳunɟaɲu = blame + accusative (object)\nguliɳgu = death (noun)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniɲu = for (post‑position)\nguniymuɳagu = always search / always look for (guni + ‑aymuɳa)\nbiɳgu = make (causative verb root)\n‑man / ‑nman = causative suffix (e.g. *biɳgunman*)\nbambun = make (lexical causative verb)\nbiɳgundu = search (verb)\nbimaban = follow (verb)\nbiɲɟiriɘɟu, biɲɟiriɞ, banɟan = follow (synonyms)\nbiɲɟiriɲɟu = follow (synonym used in sentence 9)\nyiriɲɟilagu = search / look for (synonym)\nɲalɳga = determiner/particle (pre‑noun)\n‑ɳgu = progressive/continuous suffix (attaches to any verb)\n‑aymuɳa = “always V‑ing” (adverbial/participle)\n‑ɳa / ‑lɳa / ‑ɟalɳa = relative‑clause nominaliser (optional)\n‑ɲu = accusative/object marker (on direct objects of simple transitive verbs)\ndimba = booze (noun, synonym of *bayi*)\nmidin = adder (noun)\nbaɳgun = scorpion (noun, used in compounds)\ngubimbulu = doctor (noun)\ngubimbulugu = tired doctor (post‑nominal adjective)\ngaran = lizard (noun)\nduɳan = dragonfly (noun)\nbiman = ??? (not attested)\nbimaɳgu = ??? (part of “death adder” compound)\nmalayigaraguni = “smoke‑for” (compound with *guni* “for”) – kept as lexical piece for analysis only\n[DELETED: baɽul = mother‑in‑law — retained (no contradiction); no entries removed.]\n---",
+          "accumulated_rules": "1. **Basic clause order (neutral):**\n*Subject [Copula] [Relative‑Clause] Object [Adj] Verb*\nElements may be reordered; the copula follows the subject; a relative clause can appear before or after the copula but must precede the noun it modifies.\n2. **Copula:** *yaɽa* and *yabu* mean “is/are”. They may take the progressive suffix **‑ɳgu** (*yaɽaɳgu* = “is being”).\n3. **Progressive:** suffix **‑ɳgu** attaches to any verb (including the copula) to mark an ongoing action.\n4. **Always‑marker:** **‑aymuɳa** attaches to a verb (or verb + optional nominaliser) and means “always V‑ing”.\n5. **Relative clauses:**\na. Formed by *Verb* + (optional nominaliser **‑ɳa**, **‑lɳa**, **‑ɟalɳa**) + **‑aymuɳa**.\nb. The nominaliser is optional; when present it precedes **‑aymuɳa**.\nc. The whole relative clause precedes the noun it modifies, but it may also appear after the copula and before the noun (as in sentence 1).\n6. **Causatives:**\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + **‑man / ‑nman** = “make …”.\nc. The causative verb appears clause‑final, after its object and any object‑adjuncts.\nd. Objects of causatives do **not** take the accusative **‑ɲu**.\n7. **Object case:** Direct objects of simple transitive verbs take **‑ɲu**. The marker is absent with objects of causative verbs.\n8. **Post‑position *guniɲu* = “for”** follows verbs of searching/looking for. When combined with **‑aymuɳa**, *guniymuɳa* means “always look for”.\n9. **Determiner *ɲalɳga*** precedes a noun; it is optional and does not affect case.\n10. **Noun compounds** are simple juxtaposition (e.g., *midin baɳgun* “death adder”).\n11. **Adjective placement:**\na. Pre‑nominal adjectives appear before the noun (e.g., *balan* “strong”).\nb. Post‑nominal adjectives often end in **‑gu** (e.g., *gurugugu*, *ɟugaɳgu*).\n12. **New adjective *diban* / *baNgay*** = “big”.\n13. **New noun *waɽu*** = “grasshopper”; *baNgun* = “bent spear”; *bundiɲɟu* = “bent”.\n14. **New verb *ɟagiɲ*** = “to push”.\n15. **New verb *ɟil*** = “to ignore”; its always‑ing form appears as *ɳaɟilmuɳa*.\n16. **New verb *ɟa*** = “to fall asleep”; causative *ɟagunman* = “make fall asleep”.",
+          "metrics": {
+            "corpus_bleu": 2.81,
+            "corpus_chrfpp": 25.52,
+            "corpus_ter": 83.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.87,
+              4.57
+            ],
+            "sentence_chrfpp": [
+              27.37,
+              23.69
+            ],
+            "sentence_ter": [
+              91.67,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother makes the father always look for.",
+              "The tired big stone always follows the scorpion."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 191.38,
+          "accumulated_dict": "* **bayi** is used for “booze” (sentences 1, 6) but also appears in a compound that translates as “death adder” (sentence 7). I treat the first morpheme of that compound as *bayi* = “death” and keep *bayi* = “booze” as a homophonous, separate lexical item.\n* **dimba** functions as “booze” in sentence 6, giving a second synonym for that noun.\n* **baɳgu** is used for “man / scorpion” (sentences 1, 2, 5) and, in sentence 3, for “mother‑in‑law”. I therefore keep the original meaning and note that the sentence likely contains a typo; the intended form for “mother‑in‑law” is *baɽul*.\n* **midin** and **baɳgun** together form “death adder” (sentence 7). I add them as separate lexical items.\n* **gubimbulu / gubimbulugu** appear as “doctor” (sentence 8) and “tired doctor” (sentence 8). I record the base *gubimbulu* = “doctor”.\n* **garan** appears as “lizard” (sentence 9) and as part of a compound meaning “stones” (sentence 12). I keep *garan* = “lizard”.\n* **duɳan** = “dragonfly”, **duɳan** appears only once.\n* **ɟuga** appears in a clause that translates “mother”; I treat it as a noun “mother” (alternative to *baɳgul*).\nNo contradictions were found for the suffixes **‑ɳgu**, **‑ɲu**, **‑aymuɳa**, the determiners, or the word order patterns.\n---\n**DICTIONARY**\nbayi = booze (noun)\nbayi = death (noun, only in the compound *bayi midin baɳgun*)\nbalan = strong (adjective)\nbala = tired (adjective)\ngurugugu = tired (adjective, post‑nominal)\ngurugu = offended (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = always being blamed (ɳunɟa + ‑aymuɳa)\nɳunɟaɲu = blame + accusative (object)\nguliɳgu = death (noun)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniɲu = for (post‑position)\nguniymuɳagu = always search / always look for (guni + ‑aymuɳa)\nbiɳgu = make (causative verb root)\n‑man / ‑nman = causative suffix (e.g. *biɳgunman*)\nbambun = make (lexical causative verb)\nbiɳgundu = search (verb)\nbimaban = follow (verb)\nbiɲɟiriɘɟu, biɲɟiriɞ, banɟan = follow (synonyms)\nbiɲɟiriɲɟu = follow (synonym used in sentence 9)\nyiriɲɟilagu = search / look for (synonym)\nɲalɳga = determiner/particle (pre‑noun)\n‑ɳgu = progressive/continuous suffix (attaches to any verb)\n‑aymuɳa = “always V‑ing” (adverbial/participle)\n‑ɳa / ‑lɳa / ‑ɟalɳa = relative‑clause nominaliser (optional)\n‑ɲu = accusative/object marker (on direct objects of simple transitive verbs)\ndimba = booze (noun, synonym of *bayi*)\nmidin = adder (noun)\nbaɳgun = scorpion (noun, used in compounds)\ngubimbulu = doctor (noun)\ngubimbulugu = tired doctor (post‑nominal adjective)\ngaran = lizard (noun)\nduɳan = dragonfly (noun)\nbiman = ??? (not attested)\nbimaɳgu = ??? (part of “death adder” compound)\nmalayigaraguni = “smoke‑for” (compound with *guni* “for”) – kept as lexical piece for analysis only\n[DELETED: baɽul = mother‑in‑law — retained (no contradiction); no entries removed.]\n---",
+          "accumulated_rules": "1. **Basic clause order (neutral):** *Subject [Copula] [Relative‑Clause] Object [Adj] Verb*. Elements may be reordered; the copula follows the subject; a relative clause can appear before or after the copula but must precede the noun it modifies.\n2. **Copula:** *yaɽa* and *yabu* mean “is/are”. They may take the progressive suffix **‑ɳgu** (*yaɽaɳgu* = “is being”).\n3. **Progressive:** suffix **‑ɳgu** attaches to any verb (including the copula) to mark an ongoing action.\n4. **Always‑marker:** **‑aymuɳa** attaches to a verb (or verb + optional nominaliser) and means “always V‑ing”.\n5. **Relative clauses:**\na. Formed by *Verb* + (optional nominaliser **‑ɳa**, **‑lɳa**, **‑ɟalɳa**) + **‑aymuɳa**.\nb. The nominaliser is optional; when present it precedes **‑aymuɳa**.\nc. The whole relative clause precedes the noun it modifies, but it may also appear after the copula and before the noun.\n6. **Causatives:**\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + **‑man / ‑nman** = “make …”.\nc. The causative verb appears clause‑final, after its object and any object‑adjuncts.\nd. Objects of causatives do **not** take the accusative **‑ɲu**.\n7. **Object case:** Direct objects of simple transitive verbs take **‑ɲu**. The marker is absent with objects of causative verbs.\n8. **Post‑position *guniɲu* = “for”** follows verbs of searching/looking for. When combined with **‑aymuɳa**, *guniymuɳa* (or *guninaymuɳa*) means “always look for”.\n9. **Determiner *ɲalɳga*** precedes a noun; it is optional and does not affect case.\n10. **Noun compounds** are simple juxtaposition (e.g., *midin baɳgun* “death adder”).\n11. **Adjective placement:**\na. Pre‑nominal adjectives appear before the noun (e.g., *balan* “strong”, *diban* “big”).\nb. Post‑nominal adjectives often end in **‑gu** (e.g., *gurugugu*, *ɟugaɳgu*), but some (e.g., *bundiɲɟu*) have other endings.\n12. **New adjective *diban* / *baNgay*** = “big”.\n13. **New nouns:** *waɽu* = “grasshopper”; *baNgun* = “bent spear”; *bundiɲɟu* = “bent”; *bilmban* = “stone”.\n14. **New verbs:** *ɟagiɲ* = “to push”; its finite form appears as *ɟagiɲɟu*.\n15. **Verb *ɟil* = “to ignore”; its always‑ing form is *ɳaɟilmuɳa*.\n16. **Verb *ɟa* = “to fall asleep”; causative *ɟagunman* = “make fall asleep”.\n---",
+          "metrics": {
+            "corpus_bleu": 4.88,
+            "corpus_chrfpp": 26.0,
+            "corpus_ter": 83.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.19,
+              4.57
+            ],
+            "sentence_chrfpp": [
+              33.39,
+              17.91
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother makes the father who is always looking for (something).",
+              "The tired big stone follows the man for."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 149.83,
+          "accumulated_dict": "* **bayi** is used for “booze” (sentences 1, 6) but also appears in a compound that translates as “death adder” (sentence 7). I treat the first morpheme of that compound as *bayi* = “death” and keep *bayi* = “booze” as a homophonous, separate lexical item.\n* **dimba** functions as “booze” in sentence 6, giving a second synonym for that noun.\n* **baɳgu** is used for “man / scorpion” (sentences 1, 2, 5) and, in sentence 3, for “mother‑in‑law”. I therefore keep the original meaning and note that the sentence likely contains a typo; the intended form for “mother‑in‑law” is *baɽul*.\n* **midin** and **baɳgun** together form “death adder” (sentence 7). I add them as separate lexical items.\n* **gubimbulu / gubimbulugu** appear as “doctor” (sentence 8) and “tired doctor” (sentence 8). I record the base *gubimbulu* = “doctor”.\n* **garan** appears as “lizard” (sentence 9) and as part of a compound meaning “stones” (sentence 12). I keep *garan* = “lizard”.\n* **duɳan** = “dragonfly”, **duɳan** appears only once.\n* **ɟuga** appears in a clause that translates “mother”; I treat it as a noun “mother” (alternative to *baɳgul*).\nNo contradictions were found for the suffixes **‑ɳgu**, **‑ɲu**, **‑aymuɳa**, the determiners, or the word order patterns.\n---\n**DICTIONARY**\nbayi = booze (noun)\nbayi = death (noun, only in the compound *bayi midin baɳgun*)\nbalan = strong (adjective)\nbala = tired (adjective)\ngurugugu = tired (adjective, post‑nominal)\ngurugu = offended (adjective)\nyila = little (modifier)\nwura = wallaby (noun)\nbargandu = little feather (noun)\nbaɳgu = man / scorpion (noun)\nbaɳgul = mother (noun)\nbaɽul = mother‑in‑law (noun)\nɳunɟa = blame (verb root)\nɳunɟaymuɳa = always being blamed (ɳunɟa + ‑aymuɳa)\nɳunɟaɲu = blame + accusative (object)\nguliɳgu = death (noun)\nɟugaɳgu = healthy (adjective, post‑nominal)\nɟamiman = fat (adjective, post‑nominal)\ngarandu = tired (adjective, post‑nominal)\nmalayigara = smoke (noun)\nwaymin = sugar (noun)\nɳumaɳgu = father (noun)\nmundu = carry (verb root)\nmunduɳgu = carrying (progressive)\nguniɲu = for (post‑position)\nguniymuɳagu = always search / always look for (guni + ‑aymuɳa)\nbiɳgu = make (causative verb root)\n‑man / ‑nman = causative suffix (e.g. *biɳgunman*)\nbambun = make (lexical causative verb)\nbiɳgundu = search (verb)\nbimaban = follow (verb)\nbiɲɟiriɘɟu, biɲɟiriɞ, banɟan = follow (synonyms)\nbiɲɟiriɲɟu = follow (synonym used in sentence 9)\nyiriɲɟilagu = search / look for (synonym)\nɲalɳga = determiner/particle (pre‑noun)\n‑ɳgu = progressive/continuous suffix (attaches to any verb)\n‑aymuɳa = “always V‑ing” (adverbial/participle)\n‑ɳa / ‑lɳa / ‑ɟalɳa = relative‑clause nominaliser (optional)\n‑ɲu = accusative/object marker (on direct objects of simple transitive verbs)\ndimba = booze (noun, synonym of *bayi*)\nmidin = adder (noun)\nbaɳgun = scorpion (noun, used in compounds)\ngubimbulu = doctor (noun)\ngubimbulugu = tired doctor (post‑nominal adjective)\ngaran = lizard (noun)\nduɳan = dragonfly (noun)\nbiman = ??? (not attested)\nbimaɳgu = ??? (part of “death adder” compound)\nmalayigaraguni = “smoke‑for” (compound with *guni* “for”) – kept as lexical piece for analysis only\n[DELETED: baɽul = mother‑in‑law — retained (no contradiction); no entries removed.]\n---",
+          "accumulated_rules": "1. **Clause order (neutral):** *Subject [Copula] [Relative‑Clause] Object [Adj] Verb*. Elements may be reordered; the copula follows the subject; a relative clause can appear before or after the copula but must precede the noun it modifies.\n2. **Copula:** *yaɽa* and *yabu* mean “is/are”. They may take the progressive suffix **‑ɳgu** (*yaɽaɳgu* = “is being”).\n3. **Progressive:** suffix **‑ɳgu** attaches to any verb (including the copula) to mark an ongoing action.\n4. **Always‑marker:** **‑aymuɳa** attaches to a verb (or verb + optional nominaliser) and means “always V‑ing”.\n5. **Relative clauses:**\na. Formed by *Verb* + (optional nominaliser **‑ɳa**, **‑lɳa**, **‑ɟalɳa**) + **‑aymuɳa**.\nb. The nominaliser is optional; when present it precedes **‑aymuɳa**.\nc. The whole relative clause precedes the noun it modifies, but it may also appear after the copula and before the noun.\n6. **Causatives:**\na. Lexical *bambun* = “make …”.\nb. Derived *biɳgu* + **‑man / ‑nman** = “make …”.\nc. The higher‑order causative *bambunman* = “cause to make …”.\nd. Causative verbs appear clause‑final, after their object(s) and any object‑adjuncts.\ne. Objects of causatives do **not** take the accusative **‑ɲu**.\n7. **Object case:** Direct objects of simple transitive verbs take **‑ɲu**. The marker is absent with objects of causative verbs.\n8. **Post‑position *guniɲu* = “for”** follows verbs of searching/looking for. When combined with **‑aymuɳa**, *guniymuɳa* (or *guninaymuɳa*) means “always look for”.\n9. **Determiner *ɲalɳga*** precedes a noun; it is optional and does not affect case.\n10. **Noun compounds** are simple juxtaposition (e.g., *midin baɳgun* “death adder”).\n11. **Adjective placement:**\na. Pre‑nominal adjectives appear before the noun.\nb. Post‑nominal adjectives often end in **‑gu** (e.g., *gurugugu*, *ɟugaɳgu*).\n12. **Verb *ɟa* = “to fall asleep”; causative *ɟagunman* = “make fall asleep”.\n13. **Verb *ɟil* = “to ignore”; always‑ing form *ɳaɟilmuɳa* = “always being ignored”.\n14. **Verb *buɽan* = “to look at”.",
+          "metrics": {
+            "corpus_bleu": 4.88,
+            "corpus_chrfpp": 29.34,
+            "corpus_ter": 70.83,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.52,
+              4.57
+            ],
+            "sentence_chrfpp": [
+              34.87,
+              23.69
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong mother is always looking for the father to make.",
+              "The tired big stone always follows the scorpion."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed."
+            ],
+            "num_evaluated": 2
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 14.44,
+        "corpus_chrfpp": 39.76,
+        "corpus_ter": 68.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.5,
+          21.65,
+          16.26
+        ],
+        "sentence_chrfpp": [
+          34.25,
+          39.38,
+          45.58
+        ],
+        "sentence_ter": [
+          58.33,
+          75.0,
+          72.73
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong mother is always looking for the father.",
+          "The tired little wallaby is searching for the little feather.",
+          "Booze is always searching for the scorpion that is following the possum."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3
+      },
+      "best_step": 6
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 66.3,
+          "accumulated_dict": "bayi – “booze”\nbalan – “the strong man” (subject in sentence 2) / “sugar” (subject in sentence 3) / “smoke” (subject in sentence 5) – the form is a lexical noun; the exact English gloss depends on the clause.\nyaɽa – “is making” (causative verb)\nyabu – “is” (copular)\nbimabanɟalɳaymuɳa – “blaming” (verb)\nɳunɟaymuɳa – “the man that is always being blamed” (complex noun phrase)\nbaɳgu – “the …” (definite article‑like marker that attaches to the following noun)\nbaɳgul – “the mother” (noun)\ngurugugu – “tired” (adjectival stem)\nbiɳgunman – “tired” (predicate adjective)\ngarandu – “the scorpion” (noun)\nmalayigara – “is making” (causative verb, variant of yaɽa)\nwaymin – “sugar” (noun)\nbambun – “healthy” (adjective)\nɟugaɳgu – “mother‑in‑law” (noun)\nɟamiman – “fat” (adjective)\nbala – “the tired wallaby” (noun phrase)\nyila – “is searching for” (verb)\nwura – “the little feather” (noun)\nbargandu – “searching” (verb stem)\nbiɳgundu – “the little feather” (noun, variant)\nguniɲu – “searches for” (verb)\nguliɳgu – “following” (verb)\nɳunɟaɲu – “death adders” (noun)\nyaɽaɳgu – “that is always” (temporal/aspectual marker)",
+          "accumulated_rules": "1. **Basic clause order** – Subject – Verb – Object – Complement.\n2. **Definite marker** – The morpheme *baɳg‑* (appearing as baɳgu, baɳgul, etc.) attaches to a noun and functions like the English definite article “the”.\n3. **Causative construction** – The verb *yaɽa* (or its variant *malayigara*) means “make … do” and takes a direct object (the entity being caused) followed by a predicate adjective or verb phrase.\n4. **Copular clause** – *yabu* functions as a simple “is” linking a subject to a nominal predicate.\n5. **Relative‑clause marker** – The suffix *‑ɳu* (as in *ɳunɟaymuɳa*, *ɳunɟaɲu*) marks a relative clause meaning “that is/that does”.\n6. **Adjectival predicates** – Predicative adjectives appear either as a stem followed by *‑man* (e.g., *biɳgun‑man* “tired”) or as a separate lexical item (*gurugugu* “tired”). Both are acceptable.\n7. **Verb‑noun compounds** – Complex actions are expressed by a verb stem followed by a noun (e.g., *guliɳgu* “following”, *bargandu* “searching”).",
+          "metrics": {
+            "corpus_bleu": 12.3,
+            "corpus_chrfpp": 31.36,
+            "corpus_ter": 77.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              22.43,
+              13.07,
+              4.51
+            ],
+            "sentence_chrfpp": [
+              40.99,
+              35.4,
+              16.02
+            ],
+            "sentence_ter": [
+              75.0,
+              66.67,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Booze is making the man that is always being blamed tired.",
+              "The strong man is blaming the mother that is always following death adders.",
+              "Sugar is making the healthy mother‑in‑law fat."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 37.69,
+          "accumulated_dict": "bayi – “booze”\nbalan – “the strong man” (subject in sentence 2) / “sugar” (subject in sentence 3) / “smoke” (subject in sentence 5) – the form is a lexical noun; the exact English gloss depends on the clause.\nyaɽa – “is making” (causative verb)\nyabu – “is” (copular)\nbimabanɟalɳaymuɳa – “blaming” (verb)\nɳunɟaymuɳa – “the man that is always being blamed” (complex noun phrase)\nbaɳgu – “the …” (definite article‑like marker that attaches to the following noun)\nbaɳgul – “the mother” (noun)\ngurugugu – “tired” (adjectival stem)\nbiɳgunman – “tired” (predicate adjective)\ngarandu – “the scorpion” (noun)\nmalayigara – “is making” (causative verb, variant of yaɽa)\nwaymin – “sugar” (noun)\nbambun – “healthy” (adjective)\nɟugaɳgu – “mother‑in‑law” (noun)\nɟamiman – “fat” (adjective)\nbala – “the tired wallaby” (noun phrase)\nyila – “is searching for” (verb)\nwura – “the little feather” (noun)\nbargandu – “searching” (verb stem)\nbiɳgundu – “the little feather” (noun, variant)\nguniɲu – “searches for” (verb)\nguliɳgu – “following” (verb)\nɳunɟaɲu – “death adders” (noun)\nyaɽaɳgu – “that is always” (temporal/aspectual marker)",
+          "accumulated_rules": "1. **Definite marker variation** – The morpheme *baɳg‑* surfaces as **baɳgu**, **baɳgul**, **baɳgun**, **biɳg‑**, etc., attaching to the noun that follows and agreeing in place of the English article “the”.\n2. **Progressive/continuous aspect** – Verbal stems ending in **‑ɳgu** (e.g., *ɳumaɳgu*, *bimaɳgu*, *munduɳgu*) encode a progressive meaning “is …‑ing”.\n3. **Causative‑progressive complex** – The causative verb *malayiga‑* can combine with a progressive verb stem and the relative‑clause marker *‑ɳu* to yield a long form such as *malayigaraguninaymuɳagu* = “is always making … search for”.\n4. **Adjectival predicates** – As before, adjectives may appear as a bare stem (*gurugu*) or with the predicative suffix *‑man* (*ɟagun‑man* “asleep”).\n5. **Verb‑noun compounds** – Verbs may be formed by attaching a noun to a verb stem (e.g., *guliɳgu* “following”, *bargandu* “searching”). The noun component contributes the semantic core of the action.\n6. **Relative‑clause marker** – The suffix *‑ɳu* attaches to nouns to create relative clauses (“that …”). It can also appear on verb‑derived nouns, as in *malayigaraguninaymuɳagu*.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 212.65,
+          "accumulated_dict": "bayi – “booze”\nbalan – “the strong man” (subject in sentence 2) / “sugar” (subject in sentence 3) / “smoke” (subject in sentence 5) – the form is a lexical noun; the exact English gloss depends on the clause.\nyaɽa – “is making” (causative verb)\nyabu – “is” (copular)\nbimabanɟalɳaymuɳa – “blaming” (verb)\nɳunɟaymuɳa – “the man that is always being blamed” (complex noun phrase)\nbaɳgu – “the …” (definite article‑like marker that attaches to the following noun)\nbaɳgul – “the mother” (noun)\ngurugugu – “tired” (adjectival stem)\nbiɳgunman – “tired” (predicate adjective)\ngarandu – “the scorpion” (noun)\nmalayigara – “is making” (causative verb, variant of yaɽa)\nwaymin – “sugar” (noun)\nbambun – “healthy” (adjective)\nɟugaɳgu – “mother‑in‑law” (noun)\nɟamiman – “fat” (adjective)\nbala – “the tired wallaby” (noun phrase)\nyila – “is searching for” (verb)\nwura – “the little feather” (noun)\nbargandu – “searching” (verb stem)\nbiɳgundu – “the little feather” (noun, variant)\nguniɲu – “searches for” (verb)\nguliɳgu – “following” (verb)\nɳunɟaɲu – “death adders” (noun)\nyaɽaɳgu – “that is always” (temporal/aspectual marker)",
+          "accumulated_rules": "1. **Definite marker variation** – The morpheme *baɳg‑* surfaces as **baɳgu**, **baɳgul**, **baɳgun**, **biɳg‑**, etc., attaching to the noun that follows and agreeing in place of the English article “the”.\n2. **Progressive/continuous aspect** – Verbal stems ending in **‑ɳgu** (e.g., *ɳumaɳgu*, *bimaɳgu*, *munduɳgu*) encode a progressive meaning “is …‑ing”.\n3. **Causative‑progressive complex** – The causative verb *malayiga‑* can combine with a progressive verb stem and the relative‑clause marker *‑ɳu* to yield a long form such as *malayigaraguninaymuɳagu* = “is always making … search for”.\n4. **Adjectival predicates** – As before, adjectives may appear as a bare stem (*gurugu*) or with the predicative suffix *‑man* (*ɟagun‑man* “asleep”).\n5. **Verb‑noun compounds** – Verbs may be formed by attaching a noun to a verb stem (e.g., *guliɳgu* “following”, *bargandu* “searching”). The noun component contributes the semantic core of the action.\n6. **Relative‑clause marker** – The suffix *‑ɳu* attaches to nouns to create relative clauses (“that …”). It can also appear on verb‑derived nouns, as in *malayigaraguninaymuɳagu*.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0
+            ],
+            "sentence_ter": [
+              100.0
+            ],
+            "sentence_em": [
+              false
+            ],
+            "hypotheses": [
+              "|-----------------|"
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl."
+            ],
+            "num_evaluated": 1
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 45.75,
+          "accumulated_dict": "- garan – “that is always” (temporal/aspectual relative‑clause marker)\n- waymindu – “stones” (noun)\n- dibanbilmbalɳaymuɳagu – “is looking at” (verb phrase, progressive, with preposition “at”)\n- buɽan – “looking” (verb stem)\n- baNgay – “big” (adjectival modifier)\n- waɽu – “grasshopper” (noun)\n- baNgun – definite article‑like prefix attached to the following noun (here “the”)\n- bundiɲɟu – “bent” (adjective)\n- ɟagiɲɟu – “spear” (noun)\n- guniɲu – “searches for” (verb)\n- biɲɟiriɲ – “quiet” (adjective)\n- biɳgun – definite article‑like prefix (as above)\n- ɲalɳgaɳgu – “tired” (adjectival stem, progressive form)\n- mugurugu – “lizard” (noun)\n- ɳuma – “being” (passive/continuous marker)\n- guli – “follow” (verb stem)\n- yaɽaɳgu – “that is always” (temporal/aspectual marker attached to a verb)\n- banɟalmuɳagu – “offending” (progressive verb)\n- munduman – “strong father” (noun phrase; *mundu* “strong” + *man* “father”)",
+          "accumulated_rules": "1. **Definite article prefix** – The morpheme *ba‑* (realised as *baɳg‑*, *baN‑*, *biɳg‑*, etc.) attaches to the noun that follows and functions like the English definite article “the”. It may appear before a noun that itself begins with a consonant cluster, causing slight phonological adjustment (e.g., *baɳgun* + *waymindu* → “the stones”).\n2. **Relative‑clause marker “garan”** – The particle *garan* introduces a relative clause meaning “that is always …”. It is followed by a verb phrase in the progressive form (‑ɳgu) and optionally a direct object.\n3. **Progressive verb formation** – A verb stem + *‑ɳgu* marks a progressive (“is …‑ing”). When combined with a prepositional noun phrase, the whole complex can appear as a single lexicalised form (e.g., *dibanbilmbalɳaymuɳagu* “is looking at”).\n4. **Adjective placement** – Simple adjectives (e.g., *baNgay* “big”, *biɲɟiriɲ* “quiet”) precede the noun they modify. When an adjective is used predicatively, it can appear with the suffix *‑man* (as in earlier data) or as a bare stem in a progressive verb construction.\n5. **Verb‑noun compounds** – Nouns can be incorporated into verb stems to create complex action meanings (e.g., *guniɲu* “searches for”, *guli* “follow”). The incorporated noun supplies the semantic object of the action.\n6. **Causative‑progressive with *yaɽaɳgu*** – The causative verb *yaɽa* plus the aspectual marker *‑ɳgu* yields a construction meaning “is always making …”. It can introduce a further progressive verb (as in earlier rule 3).\n7. **Passive/continuous marker *ɳuma*** – The prefix *ɳuma* before a verb indicates a passive or “being …” reading, often combined with a progressive verb (e.g., *ɳuma guli* “being followed”).",
+          "metrics": {
+            "corpus_bleu": 12.32,
+            "corpus_chrfpp": 28.91,
+            "corpus_ter": 68.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.21,
+              21.54,
+              5.0
+            ],
+            "sentence_chrfpp": [
+              34.34,
+              37.32,
+              13.62
+            ],
+            "sentence_ter": [
+              58.33,
+              66.67,
+              81.82
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The mother‑in‑law that is always pushing stones is looking at the smoke.",
+              "The big grasshopper is searching for the bent spear.",
+              "The quiet boy is looking at the tired lizard."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 12.3,
+        "corpus_chrfpp": 31.36,
+        "corpus_ter": 77.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          22.43,
+          13.07,
+          4.51
+        ],
+        "sentence_chrfpp": [
+          40.99,
+          35.4,
+          16.02
+        ],
+        "sentence_ter": [
+          75.0,
+          66.67,
+          90.91
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Booze is making the man that is always being blamed tired.",
+          "The strong man is blaming the mother that is always following death adders.",
+          "Sugar is making the healthy mother‑in‑law fat."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3
+      },
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 130.38,
+          "metrics": {
+            "corpus_bleu": 2.01,
+            "corpus_chrfpp": 18.04,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.57,
+              4.4,
+              4.54
+            ],
+            "sentence_chrfpp": [
+              23.81,
+              14.67,
+              15.37
+            ],
+            "sentence_ter": [
+              83.33,
+              83.33,
+              90.91
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The strong father is offending the tired dragonfly.",
+              "The fat doctor is looking at the quiet boy.",
+              "Booze is making the tired lizard fall asleep."
+            ],
+            "references": [
+              "The father that is always being searched for is healing the girl.",
+              "The lizard is searching for the stone that is always being pushed.",
+              "The man that is always blaming doctors is following the wallaby"
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.01,
+        "corpus_chrfpp": 18.04,
+        "corpus_ter": 85.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.57,
+          4.4,
+          4.54
+        ],
+        "sentence_chrfpp": [
+          23.81,
+          14.67,
+          15.37
+        ],
+        "sentence_ter": [
+          83.33,
+          83.33,
+          90.91
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The strong father is offending the tired dragonfly.",
+          "The fat doctor is looking at the quiet boy.",
+          "Booze is making the tired lizard fall asleep."
+        ],
+        "references": [
+          "The father that is always being searched for is healing the girl.",
+          "The lizard is searching for the stone that is always being pushed.",
+          "The man that is always blaming doctors is following the wallaby"
+        ],
+        "num_evaluated": 3
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 243.1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 34.24,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      },
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 1.28,
+      "chrf": 17.85,
+      "ter": 175.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:**  \n*“The shining moonlight spreads over the quiet forest.”*  \n\n*(This is a best‑guess rendering",
+      "reference": "The father that is always being searched for is healing the girl."
+    },
+    "baseline": {
+      "best_bleu": 2.01,
+      "best_chrf": 18.7,
+      "best_ter": 82.86,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The strong man is offending the tired father.",
+        "The fat doctor is looking at the quiet boy.",
+        "Booze is making the offended smoke follow the lizard."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 14.44,
+      "best_chrf": 39.76,
+      "best_ter": 68.57,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "The strong mother is always looking for the father.",
+        "The tired little wallaby is searching for the little feather.",
+        "Booze is always searching for the scorpion that is following the possum."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ],
+      "best_step": 6
+    },
+    "step_by_step": {
+      "best_bleu": 12.3,
+      "best_chrf": 31.36,
+      "best_ter": 77.14,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "Booze is making the man that is always being blamed tired.",
+        "The strong man is blaming the mother that is always following death adders.",
+        "Sugar is making the healthy mother‑in‑law fat."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ],
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "best_bleu": 2.01,
+      "best_chrf": 18.04,
+      "best_ter": 85.71,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The strong father is offending the tired dragonfly.",
+        "The fat doctor is looking at the quiet boy.",
+        "Booze is making the tired lizard fall asleep."
+      ],
+      "best_references": [
+        "The father that is always being searched for is healing the girl.",
+        "The lizard is searching for the stone that is always being pushed.",
+        "The man that is always blaming doctors is following the wallaby"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [],
+      "best_references": [],
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

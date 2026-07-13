@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-23T04:35:20.549827",
+    "puzzle_id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 16,
+    "num_test_pairs": 3,
+    "strategies_run": [
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "nuta sykaru nykanawate uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "nykanawate nysykaru uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "pita ãtary ĩpurãã",
+        "target": "You_{sg} drank the water."
+      },
+      {
+        "source": "kyky mynaru nyherẽka sytumukary",
+        "target": "The man brought my blood to the woman."
+      },
+      {
+        "source": "herẽkatxi uãtary sytu",
+        "target": "The woman drank the blood."
+      },
+      {
+        "source": "nhiximakyte pixinhikary",
+        "target": "You_{sg} remembered my fish (sg)."
+      },
+      {
+        "source": "pitxiparyte umynary kykymukary",
+        "target": "She brought your_{sg} banana to the man."
+      },
+      {
+        "source": "hãtakuru xinhikary naikute",
+        "target": "The girl remembered my house."
+      },
+      {
+        "source": "sytu apy ysykanu nutamukary kyky",
+        "target": "The man gave the woman’s bone to me."
+      },
+      {
+        "source": "nhĩpurããte nãtary",
+        "target": "I drank my water."
+      },
+      {
+        "source": "kywĩtxi apukary",
+        "target": "He found the head."
+      },
+      {
+        "source": "ywa mynanu kyky uky nutamukary",
+        "target": "He brought the man’s eye to me."
+      },
+      {
+        "source": "ximaky nhikary apĩtxi",
+        "target": "The fish (sg) ate the bone."
+      },
+      {
+        "source": "hãtakuru txiparyte napukary",
+        "target": "I found the girl’s banana."
+      },
+      {
+        "source": "ximaky kywy inhikary",
+        "target": "He ate the fish’s (sg) head."
+      },
+      {
+        "source": "hãtakuru uapukaru",
+        "target": "She found the girl."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "uwa xinhikaru sytu",
+        "target": "She remembered the woman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "txipary nhinhikary",
+        "target": "I ate the banana.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kyky aikute pysykary ywamukary",
+        "target": "You_{sg} gave the man’s house to him.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 31.41,
+          "metrics": {
+            "corpus_bleu": 6.19,
+            "corpus_chrfpp": 20.15,
+            "corpus_ter": 160.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              6.57,
+              11.36
+            ],
+            "sentence_chrfpp": [
+              8.94,
+              14.68,
+              29.36
+            ],
+            "sentence_ter": [
+              200.0,
+              150.0,
+              142.86
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu → He found my house.",
+              "txipary nhinhikary → I found my water.",
+              "kyky aikute pysykary ywamukary → The man remembered the woman’s bone to him."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 1.48,
+          "metrics": {
+            "corpus_bleu": 6.16,
+            "corpus_chrfpp": 24.38,
+            "corpus_ter": 160.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.99,
+              6.57,
+              11.36
+            ],
+            "sentence_chrfpp": [
+              27.43,
+              14.68,
+              26.54
+            ],
+            "sentence_ter": [
+              200.0,
+              150.0,
+              142.86
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "uwa xinhikaru sytu → He found the woman's house.",
+              "txipary nhinhikary → I found my water.",
+              "kyky aikute pysykary ywamukary → The man remembered the woman's bone to him."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 6.16,
+        "corpus_chrfpp": 24.38,
+        "corpus_ter": 160.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.99,
+          6.57,
+          11.36
+        ],
+        "sentence_chrfpp": [
+          27.43,
+          14.68,
+          26.54
+        ],
+        "sentence_ter": [
+          200.0,
+          150.0,
+          142.86
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "uwa xinhikaru sytu → He found the woman's house.",
+          "txipary nhinhikary → I found my water.",
+          "kyky aikute pysykary ywamukary → The man remembered the woman's bone to him."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": -0.03,
+        "chrf_delta": 4.23,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "self_correction": {
+      "best_bleu": 6.16,
+      "best_chrf": 24.38,
+      "best_ter": 160.0,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "uwa xinhikaru sytu → He found the woman's house.",
+        "txipary nhinhikary → I found my water.",
+        "kyky aikute pysykary ywamukary → The man remembered the woman's bone to him."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "delta": {
+        "bleu_delta": -0.03,
+        "chrf_delta": 4.23,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

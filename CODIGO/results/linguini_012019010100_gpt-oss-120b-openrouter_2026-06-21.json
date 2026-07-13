@@ -1,0 +1,1902 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T19:56:32.775632",
+    "puzzle_id": "linguini_012019010100",
+    "language": "Desconocida",
+    "language_family": "Unknown",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 11,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010100",
+    "language": "Desconocida",
+    "language_family": "Unknown",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Om benu aneen.",
+        "target": "She took the bread and ate it.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Munuuna wunuub.",
+        "target": "She comes and we go away.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Wingkiiwa wengamburuun.",
+        "target": "They sing and she hears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Anon ye weng wengamberenib yeedaraniib.",
+        "target": "They will hear the dog and will get up.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Oon wedmaniina karub wedmaneeb.",
+        "target": "I will see the fish and you(sg) will see theman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ok wedmeena aniin.",
+        "target": "He sees the water and I drink it.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Om benu aneen.",
+      "reference": "She took the bread and ate it.",
+      "hypothesis": "**Translation:** “I am fine.”",
+      "latency_s": 6.75,
+      "metrics": {
+        "corpus_bleu": 3.75,
+        "corpus_chrfpp": 6.19,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.75
+        ],
+        "sentence_chrfpp": [
+          6.19
+        ],
+        "sentence_ter": [
+          100.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Translation:** “I am fine.”"
+        ],
+        "references": [
+          "She took the bread and ate it."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 272.93,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 65.52,
+          "accumulated_dict": "Meneni = I (1st‑person singular pronoun)\nkaruwa = came (verb, past, 1st‑person)\nanona = and (conjunction linking verbs)\nwedmaan = saw the man and the dog (verb complex, past, 1st‑person)\nWingkeewa = you sing (verb, present, 2nd‑person singular)\nye = and (conjunction linking clauses)\nediriin = I get up (verb, present, 1st‑person)",
+          "accumulated_rules": "1. Subject pronouns can be expressed as independent words (e.g., Meneni) or incorporated as verbal suffixes (e.g., –in for 1st‑person present, –wa for 1st‑person past).\n2. Verbs take person‑specific suffixes: –wa (1st‑sg past), –in (1st‑sg present), –ewa (2nd‑sg present).\n3. The conjunction “and” appears as an independent morpheme placed between coordinated verbs: anona (verb‑verb) or ye (clause‑clause).\n4. Objects may be incorporated into the verb stem, as seen in wedmaan (“saw the man and the dog”).",
+          "metrics": {
+            "corpus_bleu": 2.57,
+            "corpus_chrfpp": 14.4,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.88,
+              7.16,
+              17.97,
+              5.09,
+              3.7,
+              5.44
+            ],
+            "sentence_chrfpp": [
+              6.62,
+              6.87,
+              33.26,
+              13.84,
+              18.65,
+              5.37
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              60.0,
+              100.0,
+              80.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I am here.",
+              "He/she runs.",
+              "You sing and they dance.",
+              "I and you both work together.",
+              "He/she saw the man and the dog.",
+              "I will go."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 107.92,
+          "accumulated_dict": "Meneni = I (1st‑sg pronoun)\nAmbib = he (3rd‑sg pronoun)\nkaruwa = came (verb, past, 1st‑sg)\nwedmaan = saw the man and the dog (verb, past, 1st‑sg)\nwedmoona = saw the house (verb, past, 1st‑sg)\nWingkeewa = you sing (verb, present, 2nd‑sg)\nediriin = I get up (verb, present, 1st‑sg)\nbaan = I took the pig (verb, past, 1st‑sg)\nanona = and (conjunction linking verbs)\nye = and (conjunction linking clauses; can appear as a free word or as a proclitic)\naw = and (alternative form of *ye* used before a verb)\non = I (pronoun element used before a verb when the verb already carries a subject suffix)\n[DELETED: *ye* as only a free word — reason: new data show it can also be proclitic]",
+          "accumulated_rules": "1. Subject pronouns may appear as independent words (e.g., *Meneni*, *Ambib*) or be encoded in verbal suffixes.\n2. Verbal person‑suffixes: –wa (1st‑sg past), –in (1st‑sg present), –ewa (2nd‑sg present).\n3. The conjunction “and” for verbs is *anona*; for clauses it is *ye* (free) or *aw* (free) and may attach as a proclitic to the following verb (ye + verb).\n4. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) of the verb (e.g., *‑aan* = “man and dog”, *‑ona* = “house”).\n5. When a verb already bears a subject suffix, an additional pronoun element (*on*) can appear before the verb for emphasis or disambiguation.",
+          "metrics": {
+            "corpus_bleu": 2.45,
+            "corpus_chrfpp": 14.36,
+            "corpus_ter": 82.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.77,
+              3.75,
+              9.65,
+              4.46,
+              4.05,
+              9.43
+            ],
+            "sentence_chrfpp": [
+              11.09,
+              7.48,
+              14.34,
+              11.17,
+              17.86,
+              21.31
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              80.0,
+              88.89,
+              80.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I sing and (something).",
+              "He/she/they (unsure) ...",
+              "You sing (something).",
+              "And (something) and (something) ...",
+              "He/she saw the man and I came ...",
+              "He/she saw the house and I ..."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 96.03,
+          "accumulated_dict": "Meneni = I (independent pronoun)\nAmbib = he (independent pronoun)\nom = she (independent pronoun)\non = I (pronoun element placed before a verb)\nkaruwa = come + past (‑wa)\nwedmaan = see + object “man and dog” + past (‑a)\nwedmoona = see + object “house” + past (‑a)\nwingkeewa = sing + 2sg present (‑ewa)\nediriin = get up + present (‑in)\nbaan = take + object “pig” + past (‑a)\nbanuun = take + object “bread” + future (‑un)\nederenu = get up + future (‑enu)\nanona = and (verb‑linking)\nye = and (clausal); can be free or proclitic attached to following verb\naw = and (clausal) used before a verb\non = I (pronoun element before a verb)\n‑a = past tense suffix (attached to verb stem)\n‑in = present tense suffix (1st sg)\n‑ewa = present tense suffix (2nd sg)\n‑un / ‑enu = future tense suffix\n‑aan = incorporated object “man and dog”\n‑ona = incorporated object “house”\n‑u = incorporated object “bread”",
+          "accumulated_rules": "1. Independent pronouns (*Meneni*, *Ambib*, *om*) may appear before a verb; if the verb already carries a tense suffix, a pronoun element (*on*) can be inserted before the verb for emphasis or to mark 1st sg.\n2. Verbal tense is marked by suffixes: **‑a** (past), **‑in** (present, 1st sg), **‑ewa** (present, 2nd sg), **‑un / ‑enu** (future). Person is not encoded in the suffix.\n3. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) of the verb (e.g., **‑aan**, **‑ona**, **‑u**).\n4. The conjunction **anona** links two verbs within the same clause.\n5. The clausal conjunction **ye** can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n6. The clausal conjunction **aw** appears only before a verb; when followed by the pronoun element *on*, they fuse as **awon** = “and I”.\n7. The pronoun element **on** always means “I” and precedes a verb regardless of the verb’s tense marking.\n8. Future tense may appear as **‑un** after consonant‑initial roots or **‑enu** after vowel‑initial roots.",
+          "metrics": {
+            "corpus_bleu": 2.55,
+            "corpus_chrfpp": 13.67,
+            "corpus_ter": 84.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.97,
+              6.87,
+              11.04,
+              3.56,
+              3.69,
+              2.91
+            ],
+            "sentence_chrfpp": [
+              13.76,
+              7.98,
+              29.01,
+              4.83,
+              16.37,
+              11.26
+            ],
+            "sentence_ter": [
+              71.43,
+              100.0,
+              80.0,
+              88.89,
+              70.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will take and …",
+              "I will get up and …",
+              "You sing and they (unspecified) …",
+              "And … and …",
+              "I saw the man and I came.",
+              "He/she (unspecified) took and … === END ==="
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 133.08,
+          "accumulated_dict": "Meneni = I (independent pronoun)\nAmbib = he (independent pronoun)\nom = she (independent pronoun)\nwen = we (independent pronoun)\non = I (pronoun element placed before a verb)\nkaruwa = come + past (‑wa)\nwedmaan = see + object “man and dog” + past (‑a)\nwedmoona = see + object “house” + past (‑a)\nwingkeewa = sing + 2sg present (‑ewa)\nwingk = sing (verb root)\nediriin = get up + present (‑in)\nederenu = get up + future (‑enu)\nbaan = take + object “pig” + past (‑a)\nbanuun = take + object “bread” + future (‑un)\nbenu = take + object “bread” + present (default, no overt tense suffix)\nanona = and (verb‑linking)\nye = and (clausal); can be free or proclitic attached to following verb\naw = and (clausal) used before a verb\nawon = aw + on = “and I” (fusion)\n‑a = past tense suffix\n‑in = present tense suffix (1st sg)\n‑ewa = present tense suffix (2nd sg)\n‑un / ‑enu = future tense suffix (‑un after consonant‑initial roots, ‑enu after vowel‑initial roots)\n‑aan = incorporated object “man and dog”\n‑ona = incorporated object “house”\n‑u = incorporated object “bread”\nen = go away (verb root)",
+          "accumulated_rules": "1. Independent pronouns (Meneni, Ambib, om, wen) may appear before a verb; they are not inflected for tense.\n2. The pronoun element **on** means “I” and must precede a verb, regardless of tense marking.\n3. Verbal tense is marked by suffixes: **‑a** (past), **‑in** (present, 1st sg), **‑ewa** (present, 2nd sg), **‑un / ‑enu** (future). Person is not encoded in the suffix.\n4. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) of the verb (‑aan, ‑ona, ‑u, etc.).\n5. The conjunction **anona** links two verbs within the same clause.\n6. The clausal conjunction **ye** can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n7. The clausal conjunction **aw** appears only before a verb; when followed by the pronoun element **on**, they fuse as **awon** = “and I”.\n8. Future tense appears as **‑un** after consonant‑initial roots and **‑enu** after vowel‑initial roots; the suffix attaches directly to the verb root (or to the root + incorporated‑object segment).\n9. When a verb already carries a tense suffix, an independent pronoun may still be inserted before the verb for emphasis (e.g., **Ambib on wedmoona**).",
+          "metrics": {
+            "corpus_bleu": 11.29,
+            "corpus_chrfpp": 32.4,
+            "corpus_ter": 62.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.26,
+              15.21,
+              19.36,
+              29.07,
+              3.69,
+              10.9
+            ],
+            "sentence_chrfpp": [
+              48.13,
+              28.12,
+              35.59,
+              49.61,
+              16.37,
+              19.33
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              60.0,
+              44.44,
+              70.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread and …",
+              "We will go away and …",
+              "They will sing and …",
+              "And they will sing and they will get up.",
+              "I saw the man and I came.",
+              "He saw them and I …"
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 105.9,
+          "accumulated_dict": "Meneni = I (independent pronoun)\nAmbib = he (independent pronoun)\nom = she (independent pronoun)\nwen = we (independent pronoun)\noma = they (independent pronoun) – new\non = I (pronoun element placed before a verb)\naw = and (clausal) used before a verb\nawon = aw + on = “and I” (fusion)\nkaruwa = come + past (‑wa)\nwedmaan = see + object “man‑dog” + past (‑a)\nwedmoona = see + object “house” + past (‑a)\nwingkeewa = sing + 2sg present (‑ewa)\nwingk = sing (verb root)\nediriin = get‑up + present (‑in)\nederenu = get‑up + future (‑enu)\nbaan = take + object “pig” + past (‑a)\nbanuun = take + object “bread” + future (‑un)\nbenu = take + object “bread” + present (default)\nanona = and (verb‑linking)\nye = and (clausal); can be free or proclitic attached to following verb\n‑a = past tense suffix\n‑in = present tense suffix (1st sg)\n‑ewa = present tense suffix (2nd sg)\n‑un = future suffix after consonant‑initial roots (also appears with a final‑b buffer in 1st‑pl)\n‑enu = future suffix after vowel‑initial roots\n‑aan = incorporated object “man‑dog”\n‑ona = incorporated object “house”\n‑u = incorporated object “bread”\nen = go away (verb root)\noka = eat + object “bread” (present default) – new\naniib = drink + object “water” (present default) – new\n‑b = 1st‑pl future buffer (observed in *wenenub*, *wingkanuub*) – new",
+          "accumulated_rules": "1. Independent pronouns (Meneni, Ambib, om, wen, oma) may appear before a verb; they are not inflected for tense.\n2. The pronoun element **on** means “I” and must precede a verb, regardless of tense marking.\n3. The pronoun element **wen** (derived from the independent pronoun *wen*) can also precede a verb; in 1st‑pl future forms it fuses with the verb and takes the buffer **‑b** (e.g., *wenenub*).\n4. Verbal tense is marked by suffixes: **‑a** (past), **‑in** (present, 1st sg), **‑ewa** (present, 2nd sg), **‑un** (future after consonant‑initial roots, with optional **‑b** in 1st‑pl), **‑enu** (future after vowel‑initial roots). Person is not encoded in the suffix.\n5. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) of the verb (‑aan, ‑ona, ‑u, etc.). New incorporated forms: *oka* (eat‑bread), *aniib* (drink‑water).\n6. The conjunction **anona** links two verbs within the same clause.\n7. The clausal conjunction **ye** can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n8. The clausal conjunction **aw** appears only before a verb; when followed by the pronoun element **on**, they fuse as **awon** = “and I”.\n9. Future tense appears as **‑un** after consonant‑initial roots and **‑enu** after vowel‑initial roots; the suffix attaches directly to the verb root (or to the root + incorporated‑object segment). In 1st‑pl, a final **‑b** is added after the future suffix.\n10. When a verb already carries a tense suffix, an independent pronoun may still be inserted before the verb for emphasis (e.g., **Ambib on wedmoona**).",
+          "metrics": {
+            "corpus_bleu": 6.2,
+            "corpus_chrfpp": 23.22,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.94,
+              7.55,
+              8.3,
+              14.99,
+              3.69,
+              12.26
+            ],
+            "sentence_chrfpp": [
+              36.86,
+              5.43,
+              26.82,
+              27.87,
+              16.37,
+              24.49
+            ],
+            "sentence_ter": [
+              71.43,
+              83.33,
+              120.0,
+              66.67,
+              70.0,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread.",
+              "We will eat.",
+              "You (sg) will sing and we will drink.",
+              "And they eat and they drink and we get up.",
+              "I saw the man and I came.",
+              "He saw the house and I take."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 146.94,
+          "accumulated_dict": "- *ye* can be a proclitic attached to a verb that already carries a tense suffix.\n- The 1st‑pl future suffix is **‑un‑b**; an epenthetic vowel (often *a*) may appear before **‑un‑b** for phonotactic reasons.\n- The verb‑linking conjunction may appear as **anona** or the shortened **anon**.\nMeneni = I (independent pronoun)\nAmbib = he (independent pronoun)\nom = she (independent pronoun)\nwen = we (independent pronoun)\noma = they (independent pronoun)\non = I (pronoun element placed before a verb)\naw = and (clausal) used before a verb\nawon = aw + on = “and I” (fusion)\nkaruwa = come + past (‑a)\nwedmaan = see + object “man‑dog” + past (‑a)\nwedmoona = see + object “house” + past (‑a)\nwingkeewa = sing + 2sg present (‑ewa)\nwingk = sing (verb root)\nediriin = get‑up + present (‑in)\nederenu = get‑up + future (‑enu)\nbaan = take + object “pig” + past (‑a)\nbanuun = take + object “bread” + future (‑un + ‑b)\nbenu = take + object “bread” + present (default)\nanona = and (verb‑linking)\nanon = shortened form of *anona* (verb‑linking)\nye = and (clausal); can be free or proclitic attached to following verb\n‑a = past tense suffix\n‑in = present tense suffix (1st sg)\n‑ewa = present tense suffix (2nd sg)\n‑un = future suffix after consonant‑initial roots (‑un; 1st pl adds ‑b)\n‑enu = future suffix after vowel‑initial roots\n‑b = 1st‑pl future buffer (appears after ‑un)\n‑aan = incorporated object “man‑dog”\n‑ona = incorporated object “house”\n‑u = incorporated object “bread”\nen = go away (verb root)\noka = eat + object “bread” (present default)\naniib = drink + object “water” (present default)\nweng = hear (verb root)\n‑un‑b = 1st‑pl future suffix (‑un plus buffer ‑b)\n‑a‑‑nu‑b = variant 1st‑pl future with epenthetic vowel *a* before ‑un‑b",
+          "accumulated_rules": "1. Independent pronouns (Meneni, Ambib, om, wen, oma) may appear before a verb; they are not inflected for tense.\n2. The pronoun element **on** means “I” and must precede a verb, regardless of tense marking.\n3. The pronoun element **wen** (derived from the independent pronoun *wen*) can also precede a verb; in 1st‑pl future forms it fuses with the verb and takes the buffer **‑b** (e.g., *wenenub*).\n4. Verbal tense is marked by suffixes: **‑a** (past), **‑in** (present, 1st sg), **‑ewa** (present, 2nd sg), **‑un** (future after consonant‑initial roots), **‑enu** (future after vowel‑initial roots). Person is not encoded in the suffix.\n5. In 1st‑pl future the suffix is **‑un‑b**; an epenthetic vowel (often *a*) may be inserted before **‑un‑b** for phonotactic reasons (e.g., *wingkanuub*).\n6. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) of the verb (‑aan, ‑ona, ‑u, etc.). New incorporated forms: *oka* (eat‑bread), *aniib* (drink‑water), *weng* + object markers for “dog” and “pig” (as seen in *wengambaranuuwa*, *wengambaraneen*).\n7. The conjunction **anona** (or its shortened form **anon**) links two verbs within the same clause.\n8. The clausal conjunction **ye** can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n9. The clausal conjunction **aw** appears only before a verb; when followed by the pronoun element **on**, they fuse as **awon** = “and I”.\n10. When a verb already carries a tense suffix, an independent pronoun may still be inserted before the verb for emphasis (e.g., **Ambib on wedmoona**).\n11. A clause may contain two verbs sharing the same subject without an overt conjunction (e.g., *Oma oka aniib*).",
+          "metrics": {
+            "corpus_bleu": 16.22,
+            "corpus_chrfpp": 39.91,
+            "corpus_ter": 68.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.26,
+              15.21,
+              8.3,
+              34.48,
+              8.17,
+              12.36
+            ],
+            "sentence_chrfpp": [
+              48.13,
+              28.12,
+              33.65,
+              57.65,
+              34.35,
+              32.03
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              120.0,
+              55.56,
+              60.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread and …",
+              "We will go away and …",
+              "You (sg) will sing and hear the dog.",
+              "We will hear the dog and he will hear the pig.",
+              "I will come and see the man.",
+              "He sees the house and … === END ==="
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 90.1,
+          "accumulated_dict": "- ye = clausal “and”; can be a free word or proclitic attached to the following verb\n- anona = verb‑linking “and”\n- anon = shortened form of *anona*\n- anaana = verb‑linking “and” (variant)\n- on = pronoun element “I” placed before a verb\n- aw = clausal “and” used before a verb\n- awon = aw + on = “and I”\n- oon = pronoun element “she” placed before a verb\n- ok = independent pronoun “I” (short form of *Meneni*)\n- Meneni = independent pronoun “I”\n- Ambib = independent pronoun “he”\n- om = independent pronoun “she”\n- wen = independent pronoun “we”\n- oma = independent pronoun “they”\n- karuwa = come‑past (‑a)\n- wedmaan = see‑man‑dog‑past (‑a)\n- wedmoona = see‑house‑past (‑a)\n- wingkeewa = sing‑2sg‑present (‑ewa)\n- wingk = sing (verb root)\n- ediriin = get‑up‑present (‑in, 1st sg)\n- ederenu = get‑up‑future (‑enu)\n- en = go‑away (verb root)\n- banuun = take‑bread‑future (‑un‑b)\n- benu = take‑bread‑present (default)\n- baan = take‑pig‑past (‑a)\n- oka = eat‑bread (present default)\n- aniib = drink‑water (present default)\n- weng = hear (verb root)\n- wengambaranuuwa = hear‑dog‑future\n- wengambaraneen = hear‑pig‑future\n- wedmeen = see‑fish‑past (‑a)\n- aneen = clausal “and” (variant of *ye*)\n- munuuna = pronoun element “we” (used before vowel‑initial verbs)\n- wunuub = go‑away‑future (‑un‑b with epenthetic vowel)",
+          "accumulated_rules": "1. Independent pronouns (Meneni, Ambib, om, wen, oma, ok) may appear before a verb; they are not inflected for tense.\n2. Pronoun elements (*on*, *oon*, *munuuna*) are clitic‑like forms placed immediately before a verb to indicate the subject; they fuse with the verb in 1st‑pl future (*wen* + verb + ‑un‑b) and may appear with other persons (*on* = I, *oon* = she, *munuuna* = we).\n3. Tense is marked by suffixes: **‑a** (past), **‑in** (present 1st sg), **‑ewa** (present 2nd sg), **‑un** (future after consonant‑initial roots), **‑enu** (future after vowel‑initial roots). Person is not encoded in the suffix.\n4. 1st‑pl future uses the composite suffix **‑un‑b**; an epenthetic vowel (often *a*) may be inserted before **‑un‑b** (e.g., *wingkanuub*).\n5. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) (‑aan, ‑ona, ‑u, ‑een, etc.). New incorporated forms: *‑een* = “fish”, *‑u* = “bread”, *‑aan* = “man‑dog”, *‑ona* = “house”, *‑ambaranuu* = “dog” (future), *‑ambarane* = “pig” (future).\n6. The verb‑linking conjunctions **anona**, **anon**, and **anaana** connect two verbs within the same clause.\n7. The clausal conjunction **ye** (or its variant **aneen**) can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n8. The clausal conjunction **aw** appears only before a verb; when followed by a pronoun element it fuses (e.g., *awon* = “and I”).\n9. Two verbs may share the same subject without an overt conjunction; they are simply juxtaposed (e.g., *Wenenub wingkanuub*).\n10. When a verb already carries a tense suffix, an independent pronoun may still be inserted before the verb for emphasis (e.g., *Ambib on wedmoona*).",
+          "metrics": {
+            "corpus_bleu": 15.11,
+            "corpus_chrfpp": 35.36,
+            "corpus_ter": 71.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.94,
+              26.65,
+              9.65,
+              31.46,
+              7.07,
+              11.99
+            ],
+            "sentence_chrfpp": [
+              36.86,
+              31.86,
+              21.96,
+              57.31,
+              23.85,
+              34.91
+            ],
+            "sentence_ter": [
+              71.43,
+              66.67,
+              80.0,
+              66.67,
+              70.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread.",
+              "We will go away.",
+              "They will hear the dog.",
+              "And we will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "I ate the bread and drank the water."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 134.02,
+          "accumulated_dict": "ye = clausal “and”; can be a free word or proclitic attached to the following verb\nanona = verb‑linking “and” (within a clause)\nanon = shortened form of *anona* (verb‑linking)\nanaana = verb‑linking “and” (variant)\non = pronoun element “I” placed before a verb (clitic)\noon = pronoun element “she” placed before a verb (clitic)\nmunuuna = pronoun element “we” (used before vowel‑initial verbs)\naw = clausal “and” used before a verb; may fuse with a pronoun element (e.g., *awon* = aw + on)\nawon = aw + on = “and I” (or more generally “and” + pronoun element)\nok = independent pronoun “I” (short form of *Meneni*)\nMeneni = independent pronoun “I”\nAmbib = independent pronoun “he”\nom = independent pronoun “she”\nwen = independent pronoun “we”\noma = independent pronoun “they”\nkaruwa = come‑past (‑a)\nwedmaan = see‑man‑dog‑past (‑a)\nwedmoona = see‑house‑past (‑a)\nwingk = sing (verb root)\nwingkeewa = sing‑2sg‑present (‑ewa)\nwingkanuub = sing‑future (‑ub)\nediriin = get‑up‑present (‑in, 1st sg)\nederenu = get‑up‑future (‑un/‑en)\nen = go‑away (verb root)\nwunuub = go‑away‑future (‑ub)\nbanuun = take‑bread‑future (‑un)\nbenu = take‑bread‑present (default)\nbaan = take‑pig‑past (‑a)\noka = eat‑bread (present default)\naniib = drink‑water (present default)\nweng = hear (verb root)\nwengambaranuuwa = hear‑dog‑future (‑ambaranuuwa)\nwengambaraneen = hear‑pig‑future (‑ambaraneen)\nwedmeen = see‑fish‑past (‑a)\naneen = clausal “and” (variant of *ye*)\nminiib = come‑present (‑ib)",
+          "accumulated_rules": "1. Independent pronouns (Meneni, Ambib, om, wen, oma, ok) appear before a verb and are not inflected for tense.\n2. Pronoun elements (*on*, *oon*, *munuuna*) are clitic‑like forms placed immediately before a verb to mark the subject; they do not carry tense.\n3. Tense is marked by suffixes attached to the verb stem: **‑a** (past), **‑in** (present 1st sg), **‑ewa** (present 2nd sg), **‑un / ‑en / ‑ub** (future). The exact shape depends on the phonological environment (consonant‑ vs vowel‑initial root).\n4. The future suffix does **not** encode person; any subject pronoun (independent or clitic) can precede a future‑marked verb.\n5. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) (e.g., ‑aan = “man‑dog”, ‑ona = “house”, ‑u = “bread”, ‑een = “fish”, ‑ambaranuuwa = “dog‑future”, ‑ambaraneen = “pig‑future”).\n6. Verb‑linking conjunctions **anona**, **anon**, and **anaana** connect two verbs within the same clause.\n7. The clausal conjunction **ye** (or its variant **aneen**) can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n8. The clausal conjunction **aw** appears only before a verb; when followed by a pronoun element it fuses (e.g., *awon* = aw + on). It can combine with any pronoun element, not only *on*.\n9. Two verbs may share the same subject without an overt conjunction; they are simply juxtaposed (e.g., *Wenenub wingkanuub*).\n10. When a verb already carries a tense suffix, an independent pronoun may still be inserted before the verb for emphasis (e.g., *Ambib on wedmoona*).",
+          "metrics": {
+            "corpus_bleu": 15.96,
+            "corpus_chrfpp": 35.21,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              26.65,
+              9.29,
+              31.46,
+              11.9,
+              11.99
+            ],
+            "sentence_chrfpp": [
+              11.74,
+              31.86,
+              35.21,
+              58.63,
+              29.76,
+              35.59
+            ],
+            "sentence_ter": [
+              85.71,
+              66.67,
+              80.0,
+              66.67,
+              70.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and come.",
+              "We will go away.",
+              "You(sg) sing and hear the dog.",
+              "And we will hear the dog and we will hear the pig.",
+              "She saw the fish and I ate the bread.",
+              "I saw the fish and drank the water."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 145.89,
+          "accumulated_dict": "1. Explicit recognition that *ye* can attach as a proclitic to a verb (e.g., *yeediriin*).\n2. A third‑person singular present suffix *‑enu* on verbs (e.g., *wingkenu*).\n3. The possibility of a subject‑pronoun‑only clause when the verb is recoverable from context (as in *Ok anaana oon wedmeen*).\n4. Clarify that *ok* is primarily an independent pronoun “I”; the apparent “drink‑water” reading is likely a contextual ellipsis rather than a separate lexical item.\nye = clausal “and”; can be a free word or proclitic attached to the following verb\nanona = verb‑linking “and” (within a clause)\nanon = shortened form of *anona* (verb‑linking)\nanaana = verb‑linking “and” (variant)\non = pronoun element “I” placed before a verb (clitic)\noon = pronoun element “she” placed before a verb (clitic)\nmunuuna = pronoun element “we” (used before vowel‑initial verbs)\naw = clausal “and” used before a verb; may fuse with a pronoun element (e.g., *awon* = aw + on)\nawon = aw + on = “and I” (or more generally “and” + pronoun element)\nok = independent pronoun “I” (short form of *Meneni*)\nMeneni = independent pronoun “I”\nAmbib = independent pronoun “he”\nom = independent pronoun “she”\nwen = independent pronoun “we”\noma = independent pronoun “they”\nkaruwa = come‑past (‑a)\nwedmaan = see‑man‑dog‑past (‑a)\nwedmoona = see‑house‑past (‑a)\nwingk = sing (verb root)\nwingkeewa = sing‑2sg‑present (‑ewa)\nwingkanuub = sing‑future (‑ub)\nwingkenu = sing‑present‑3sg (‑enu)\nediriin = get‑up‑present (‑in, 1st sg)\nederenu = get‑up‑future (‑un/‑en)\nen = go‑away (verb root)\nwunuub = go‑away‑future (‑ub)\nenub = go‑away‑future (‑ub) when attached to independent pronoun *wen* (as in *Wenenub*)\nbanuun = take‑bread‑future (‑un)\nbenu = take‑bread‑present (default)\nbaan = take‑pig‑past (‑a)\noka = eat‑bread (present default)\naniib = drink‑water (present default)\nweng = hear (verb root)\nwengambaranuuwa = hear‑dog‑future\nwengambaraneen = hear‑pig‑future\nwedmeen = see‑fish‑past (‑a)\naneen = clausal “and” (variant of *ye*)\nminiib = come‑present (‑ib)\n[DELETED: None]",
+          "accumulated_rules": "1. Independent pronouns (Meneni, Ambib, om, wen, oma, ok) appear before a verb and are not inflected for tense.\n2. Pronoun elements (*on*, *oon*, *munuuna*) are clitic‑like forms placed immediately before a verb to mark the subject; they do not carry tense.\n3. Tense is marked by suffixes attached to the verb stem: **‑a** (past), **‑in** (present 1st sg), **‑ewa** (present 2sg), **‑enu** (present 3sg), **‑un / ‑en / ‑ub** (future). The exact shape depends on phonological environment.\n4. The future suffix does not encode person; any subject pronoun (independent or clitic) can precede a future‑marked verb.\n5. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) (e.g., ‑aan = “man‑dog”, ‑ona = “house”, ‑u = “bread”, ‑een = “fish”, ‑ambaranuuwa = “dog‑future”, ‑ambaraneen = “pig‑future”).\n6. Verb‑linking conjunctions **anona**, **anon**, and **anaana** connect two verbs within the same clause.\n7. The clausal conjunction **ye** (or its variant **aneen**) can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n8. The clausal conjunction **aw** appears only before a verb; when followed by a pronoun element it fuses (e.g., *awon* = aw + on). It can combine with any pronoun element, not only *on*.\n9. Two verbs may share the same subject without an overt conjunction; they are simply juxtaposed (e.g., *Wenenub wingkanuub*).\n10. When a verb already carries a tense suffix, an independent pronoun may still be inserted before the verb for emphasis (e.g., *Ambib on wedmoona*).\n11. A clause may consist of only an independent pronoun when the verb is recoverable from discourse (e.g., *Ok anaana oon wedmeen*).\n12. The third‑person singular present suffix is **‑enu** (e.g., *wingkenu*).\n[DELETED: None]",
+          "metrics": {
+            "corpus_bleu": 13.44,
+            "corpus_chrfpp": 30.32,
+            "corpus_ter": 77.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.65,
+              26.65,
+              8.64,
+              34.48,
+              7.07,
+              3.72
+            ],
+            "sentence_chrfpp": [
+              15.01,
+              31.86,
+              30.9,
+              57.65,
+              23.85,
+              17.38
+            ],
+            "sentence_ter": [
+              85.71,
+              66.67,
+              100.0,
+              55.56,
+              70.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She and I get up.",
+              "We will go away.",
+              "She sings and hears the dog.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "I saw the fish and they ate. === END ==="
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 157.22,
+          "accumulated_dict": "Meneni = I (independent pronoun)\nok = I (short form of Meneni)\nAmbib = he (3sg independent pronoun)\nom = he/she (3sg independent pronoun)\nwen = we (independent pronoun)\noma = they (3pl independent pronoun)\non = I (subject‑clitic)\noon = she (subject‑clitic)\nmunuuna = we (subject‑clitic, used before vowel‑initial verbs)\naw = clausal “and” (used before a verb)\nawon = aw + on = “and I” (or aw fused with a pronoun element)\nye / aneen = clausal “and” (free word or proclitic)\nanona / anaana / anon = verb‑linking “and” (connects verbs within the same clause)\nkaruwa / karub = come‑past (‑a)\nwingkeewa = sing‑2sg‑present (‑ewa)\nwingkenu = sing‑3sg‑present (‑enu)\nwingkiiwa = sing‑3pl‑present (‑i‑wa)\nwingkanuub = sing‑future (‑ub)\neediriin = get‑up‑1sg‑present (‑in)\nederenu = get‑up‑future (‑un/‑en)\nyeederenu = ye + ederenu = “and get‑up‑future”\nwunuub = go‑away‑future (‑ub)\nenub = go‑away‑future attached to independent pronoun *wen* (as in *Wenenub*)\nbanuun = take‑bread‑future (‑un)\nbenu / bene = take‑bread‑present (default)\nbaan = take‑pig‑past (‑a)\noka = eat‑bread‑present (default)\naniib = drink‑water‑present (default)\nwedmaan = see‑man‑dog‑past (‑a)\nwedmoona = see‑house‑past (‑a)\nwedmeen = see‑fish‑past (‑a)\nwedmaniina = see‑man‑dog‑present (‑i‑na) [inferred]\nwedmaneeb = see‑man‑dog‑present/past variant (‑eeb) [inferred]\nweng = hear (verb root)\nwengambaranuuwa = hear‑dog‑future\nwengambaraneen = hear‑pig‑future\nminiib = come‑present (‑ib)\nyeederenib = ye + ederenu + ‑ib = “and get‑up‑present‑3pl” (inferred)",
+          "accumulated_rules": "1. Independent pronouns (Meneni, ok, Ambib, om, wen, oma) appear before a verb and are not inflected for tense.\n2. Subject‑clitic elements (*on*, *oon*, *munuuna*) attach directly before a verb and do not carry tense.\n3. Tense is marked by suffixes on the verb stem: **‑a** (past), **‑in** (present 1sg), **‑ewa** (present 2sg), **‑enu** (present 3sg), **‑i‑wa** (present 3pl), **‑un / ‑en / ‑ub** (future, shape varies phonologically).\n4. Future suffixes are person‑neutral; any subject pronoun (independent or clitic) may precede a future‑marked verb, or the subject may be omitted when shared.\n5. Objects are incorporated into the verb stem; the incorporated noun determines the final vowel(s) (e.g., **‑u** “bread”, **‑aan** “man‑dog”, **‑ona** “house”, **‑een** “fish”, **‑ambaranuuwa** “dog‑future”, **‑ambaraneen** “pig‑future”).\n6. Verb‑linking conjunctions **anona**, **anaana**, **anon** connect two verbs within the same clause.\n7. The clausal conjunction **ye** (or variant **aneen**) can appear as a free word or as a proclitic attached to the following verb; it means “and”.\n8. The clausal conjunction **aw** appears only before a verb; when followed by a pronoun element it may fuse (e.g., **awon** = aw + on). It can also appear alone as a simple “and”.\n9. Two verbs may share the same subject without an overt conjunction; they are simply juxtaposed (e.g., *Wenenub wingkanuub*).\n10. An independent pronoun may be inserted before a verb that already carries a tense suffix for emphasis or contrast.\n11. A clause may consist of only an independent pronoun when the verb is recoverable from discourse.\n12. The third‑person singular present suffix is **‑enu**; the third‑person plural present suffix appears as **‑i‑wa** (as in *wingkiiwa*) or **‑enib** (as in *yeederenib*).",
+          "metrics": {
+            "corpus_bleu": 13.36,
+            "corpus_chrfpp": 35.63,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.26,
+              26.65,
+              22.09,
+              29.0,
+              3.74,
+              5.93
+            ],
+            "sentence_chrfpp": [
+              44.99,
+              31.86,
+              54.78,
+              50.44,
+              20.89,
+              20.25
+            ],
+            "sentence_ter": [
+              71.43,
+              66.67,
+              80.0,
+              66.67,
+              100.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and.",
+              "We will go away.",
+              "They sing and will hear the dog.",
+              "We hear the dog and they get up and come.",
+              "She sees the man and dog, comes, and saw the man.",
+              "I ate the bread and she saw the fish."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 16.22,
+        "corpus_chrfpp": 39.91,
+        "corpus_ter": 68.89,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          23.26,
+          15.21,
+          8.3,
+          34.48,
+          8.17,
+          12.36
+        ],
+        "sentence_chrfpp": [
+          48.13,
+          28.12,
+          33.65,
+          57.65,
+          34.35,
+          32.03
+        ],
+        "sentence_ter": [
+          42.86,
+          100.0,
+          120.0,
+          55.56,
+          60.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She takes the bread and …",
+          "We will go away and …",
+          "You (sg) will sing and hear the dog.",
+          "We will hear the dog and he will hear the pig.",
+          "I will come and see the man.",
+          "He sees the house and … === END ==="
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 6
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 15.5,
+          "accumulated_dict": "I – meneni\nyou (sg) – wingkeewa\nhe – ambib\ncame – karuwa\nsaw – anona / wedmoona (context‑dependent, likely same verb “see”)\nand – (conjunction not overt, inferred from sentence structure)\nthe man – ??? (not directly attested)\nthe dog – ??? (not directly attested)\nsing – yeediriin\nget up – ??? (verb form “I get up” appears in second example)\nthe house – ??? (object in third example)\nthe pig – baan",
+          "accumulated_rules": "1. Basic clause order appears to be Subject – Verb – Object(s).\n2. When two actions are linked (“and”), the same subject is understood for both verbs; the second verb follows the first without an explicit conjunction.\n3. Pronouns (I, you, he) are separate words placed before the verb.\n4. Objects follow the verb directly; when two objects are coordinated, they appear in the same order as in English (“X and Y”).\n5. Verbal morphology does not overtly mark person; person is indicated by the preceding pronoun.",
+          "metrics": {
+            "corpus_bleu": 0.95,
+            "corpus_chrfpp": 6.95,
+            "corpus_ter": 104.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              7.81,
+              4.99,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              16.38,
+              10.81,
+              17.29,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              83.33,
+              160.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man and the dog.",
+              "You sing and I get up.",
+              "He saw the house and I took the pig.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 21.52,
+          "accumulated_dict": "meneni – I\nwingkeewa – you (sg)\nambib – he\nkaruwa – came\nanona / wedmoona – saw\nyeediriin – sing\nbanuun – bread\nom – will (future auxiliary)\nyeederenu – get up (future form)\nwenenu – go away (future form)\nwingkanuub – will sing (future form)\nbanuun – bread (object)\nbanuun – bread (object)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object(s).\n2. Future tense is marked by a preverbal particle “om” or by verb‑stem modifications (e.g., yeederenu, wenenub).\n3. When two coordinated actions share the same subject, the subject appears once before the first verb; the second verb follows directly without a conjunction.\n4. Pronouns are independent words placed before the verb and do not inflect for tense.\n5. Objects follow the verb directly; when multiple objects are coordinated they appear in the same order as in English (“X and Y”).\n6. Verbal morphology does not overtly mark person; person is indicated by the preceding pronoun or by the null pronoun (third person).",
+          "metrics": {
+            "corpus_bleu": 3.63,
+            "corpus_chrfpp": 17.25,
+            "corpus_ter": 95.56,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.55,
+              13.13,
+              10.12,
+              8.7,
+              0.7,
+              5.87
+            ],
+            "sentence_chrfpp": [
+              36.63,
+              30.91,
+              4.52,
+              17.82,
+              3.93,
+              11.17
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              88.89,
+              100.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will get up and will take the bread.",
+              "We will go away and will sing.",
+              "I came.",
+              "You saw the dog.",
+              "He sang.",
+              "The pig is in the house."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 27.99,
+          "accumulated_dict": "meneni – I\nwingkeewa – you (sg)\nambib – he\nkaruwa – came\nanona / wedmoona – saw\nyeediriin – sing\nbanuun – bread\nom – will (future auxiliary)\nyeederenu – get up (future form)\nwenenu – go away (future form)\nwingkanuub – will sing (future form)\noka – eat\naniib – water\nweng – dog\nwengambaranuuwa – hear (future, 1st pl)\nwengambaraneen – hear (future, 3rd sg)\nanaana – drank\noon – fish\nwedmeen – saw (past, 3rd sg)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object(s).\n2. Future tense is marked by the preverbal particle **om** or by verb‑stem modifications (e.g., *yeederenu*, *wenenu*, *wingkanuub*, *wengambaranuuwa*, *wengambaraneen*). The modified stem itself encodes the future and the person.\n3. When two coordinated actions share the same subject, the subject appears once before the first verb; the second verb follows directly without a conjunction.\n4. Pronouns are independent words placed before the verb and do not inflect for tense; third‑person subjects are often null (implicit).\n5. Objects follow the verb directly; when multiple objects are coordinated they appear in the same order as in English (“X and Y”).\n6. Verbal morphology does not overtly mark person in the simple past; person is indicated by the preceding pronoun or by the null pronoun (third person). Future‑tense verb forms may contain person‑specific suffixes (e.g., *‑nuuwa* for 1st plural, *‑neen* for 3rd singular).\n7. Coordination of two verbs sharing a subject is signalled simply by juxtaposition of the verbs; no overt conjunction is required.",
+          "metrics": {
+            "corpus_bleu": 3.47,
+            "corpus_chrfpp": 13.96,
+            "corpus_ter": 108.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.07,
+              4.03,
+              9.29,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              45.49,
+              12.95,
+              27.91,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              71.43,
+              166.67,
+              140.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They eat the bread and drink the water.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 18.65,
+          "accumulated_dict": "meneni – I\nwingkeewa – you (sg)\nambib – he\nkaruwa – came\nanona – saw (past)\nwedmoona – saw (past, alternative form)\nyeediriin – sing\nbanuun – bread\nom – will (future auxiliary)\nyeederenu – get up (future, 1st pl)\nwenenu – go away (future, 1st pl)\nwingkanuub – will sing (future, 1st pl)\noka – eat\naniib – water\nweng – dog\nwengambaranuuwa – hear (future, 1st pl)\nwengambaraneen – hear (future, 3rd sg)\nanaana – drank\noon – fish\nwedmeen – saw (past, 3rd sg)\nminiib – come (future, 3rd pl)\nwunuun – go away (future, 3rd pl)\naneen – eat (future, 3rd sg)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object(s).\n2. Future tense is marked either by the preverbal particle **om** preceding the verb phrase or by a verb‑stem that incorporates future meaning; such stems may also encode the person (e.g., *‑nuuwa* for 1st plural, *‑neen* for 3rd singular).\n3. When two coordinated actions share the same subject, the subject appears once before the first verb; the second verb follows directly without a conjunction.\n4. Pronouns are independent words placed before the verb and do not inflect for tense; third‑person subjects are often null (implicit).\n5. Objects follow the verb directly; when multiple objects are coordinated they appear in the same order as in English (“X and Y”).\n6. Simple past verbs do not show person; person is supplied by the preceding pronoun or by a null third‑person subject.\n7. Coordination of two verbs sharing a subject is signalled simply by juxtaposition of the verbs; no overt conjunction is required.\n8. Negation, question formation and complex clause embedding follow the patterns established in earlier stages (not repeated here).",
+          "metrics": {
+            "corpus_bleu": 1.21,
+            "corpus_chrfpp": 9.01,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              16.34,
+              6.57,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              11.74,
+              34.0,
+              15.43,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              120.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and come.",
+              "She sings and goes away.",
+              "He takes the bread and eats it.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.63,
+        "corpus_chrfpp": 17.25,
+        "corpus_ter": 95.56,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.55,
+          13.13,
+          10.12,
+          8.7,
+          0.7,
+          5.87
+        ],
+        "sentence_chrfpp": [
+          36.63,
+          30.91,
+          4.52,
+          17.82,
+          3.93,
+          11.17
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          88.89,
+          100.0,
+          87.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will get up and will take the bread.",
+          "We will go away and will sing.",
+          "I came.",
+          "You saw the dog.",
+          "He sang.",
+          "The pig is in the house."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 92.7,
+          "metrics": {
+            "corpus_bleu": 18.02,
+            "corpus_chrfpp": 41.36,
+            "corpus_ter": 62.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              25.85,
+              16.34,
+              14.54,
+              34.48,
+              11.03,
+              12.01
+            ],
+            "sentence_chrfpp": [
+              49.63,
+              34.5,
+              36.04,
+              57.65,
+              28.42,
+              40.17
+            ],
+            "sentence_ter": [
+              42.86,
+              66.67,
+              80.0,
+              55.56,
+              70.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and eats it.",
+              "We go away and sing.",
+              "You sing and hear the pig.",
+              "We will hear the dog and he will hear the pig.",
+              "She saw the fish and I came.",
+              "I drank the water and ate.=== END ==="
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 18.02,
+        "corpus_chrfpp": 41.36,
+        "corpus_ter": 62.22,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          16.34,
+          14.54,
+          34.48,
+          11.03,
+          12.01
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          34.5,
+          36.04,
+          57.65,
+          28.42,
+          40.17
+        ],
+        "sentence_ter": [
+          42.86,
+          66.67,
+          80.0,
+          55.56,
+          70.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We go away and sing.",
+          "You sing and hear the pig.",
+          "We will hear the dog and he will hear the pig.",
+          "She saw the fish and I came.",
+          "I drank the water and ate.=== END ==="
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 43.6,
+          "metrics": {
+            "corpus_bleu": 13.42,
+            "corpus_chrfpp": 31.41,
+            "corpus_ter": 75.56,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.6,
+              15.62,
+              12.22,
+              34.48,
+              6.2,
+              6.32
+            ],
+            "sentence_chrfpp": [
+              19.97,
+              30.03,
+              35.64,
+              57.65,
+              22.28,
+              17.79
+            ],
+            "sentence_ter": [
+              71.43,
+              100.0,
+              60.0,
+              55.56,
+              80.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes it and eats it.",
+              "We will go away and sing.",
+              "You(sg) sing and hear.",
+              "We will hear the dog and he will hear the pig.",
+              "He saw the water and the fish.",
+              "I drank and ate."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 55.53,
+          "metrics": {
+            "corpus_bleu": 17.18,
+            "corpus_chrfpp": 40.2,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              25.85,
+              13.13,
+              12.22,
+              34.48,
+              6.2,
+              20.16
+            ],
+            "sentence_chrfpp": [
+              49.63,
+              30.91,
+              35.07,
+              59.81,
+              22.28,
+              42.97
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              60.0,
+              55.56,
+              80.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and eats it.",
+              "We will go away and will sing.",
+              "You sing and (you) hear.",
+              "We will hear the dog and we will hear the pig.",
+              "He saw the water and the fish.",
+              "I drank the water and ate the bread."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 17.18,
+        "corpus_chrfpp": 40.2,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          13.13,
+          12.22,
+          34.48,
+          6.2,
+          20.16
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          30.91,
+          35.07,
+          59.81,
+          22.28,
+          42.97
+        ],
+        "sentence_ter": [
+          42.86,
+          100.0,
+          60.0,
+          55.56,
+          80.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We will go away and will sing.",
+          "You sing and (you) hear.",
+          "We will hear the dog and we will hear the pig.",
+          "He saw the water and the fish.",
+          "I drank the water and ate the bread."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 3.76,
+        "chrf_delta": 8.79,
+        "ter_delta": -8.89,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 3.75,
+      "chrf": 6.19,
+      "ter": 100.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Translation:** “I am fine.”",
+      "reference": "She took the bread and ate it."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 16.22,
+      "best_chrf": 39.91,
+      "best_ter": 68.89,
+      "best_em": 0.0,
+      "num_steps": 10,
+      "best_hypotheses": [
+        "She takes the bread and …",
+        "We will go away and …",
+        "You (sg) will sing and hear the dog.",
+        "We will hear the dog and he will hear the pig.",
+        "I will come and see the man.",
+        "He sees the house and … === END ==="
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ],
+      "best_step": 6
+    },
+    "step_by_step": {
+      "best_bleu": 3.63,
+      "best_chrf": 17.25,
+      "best_ter": 95.56,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "She will get up and will take the bread.",
+        "We will go away and will sing.",
+        "I came.",
+        "You saw the dog.",
+        "He sang.",
+        "The pig is in the house."
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 18.02,
+      "best_chrf": 41.36,
+      "best_ter": 62.22,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "He takes the bread and eats it.",
+        "We go away and sing.",
+        "You sing and hear the pig.",
+        "We will hear the dog and he will hear the pig.",
+        "She saw the fish and I came.",
+        "I drank the water and ate.=== END ==="
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 17.18,
+      "best_chrf": 40.2,
+      "best_ter": 66.67,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "He takes the bread and eats it.",
+        "We will go away and will sing.",
+        "You sing and (you) hear.",
+        "We will hear the dog and we will hear the pig.",
+        "He saw the water and the fish.",
+        "I drank the water and ate the bread."
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ],
+      "delta": {
+        "bleu_delta": 3.76,
+        "chrf_delta": 8.79,
+        "ter_delta": -8.89,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

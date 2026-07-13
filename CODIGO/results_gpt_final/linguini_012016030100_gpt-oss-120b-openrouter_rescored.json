@@ -1,0 +1,1571 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-29T22:13:11.700071",
+    "puzzle_id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "num_test_pairs": 5,
+    "source_raw_log": "raw_logs/linguini_012016030100_gpt-oss-120b-openrouter.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "The thieves are striking us.",
+      "hypothesis": "**Possible translation:** “My light is shining.”",
+      "metrics": {
+        "corpus_bleu": 3.09,
+        "corpus_chrfpp": 10.01,
+        "corpus_ter": 120.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.09
+        ],
+        "sentence_chrfpp": [
+          10.01
+        ],
+        "sentence_ter": [
+          120.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “My light is shining.”"
+        ],
+        "references": [
+          "The thieves are striking us."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 4.71,
+            "corpus_chrfpp": 31.28,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              7.49,
+              10.68,
+              8.64,
+              19.3
+            ],
+            "sentence_chrfpp": [
+              24.71,
+              34.8,
+              30.28,
+              34.39,
+              29.83
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              80.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will give the neighbour.",
+              "I will buy the neighbour’s doors.",
+              "He will strike the donkey.",
+              "He gave the neighbour the camels.",
+              "I will strike the donkey."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 4.71,
+        "corpus_chrfpp": 31.28,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.81,
+          7.49,
+          10.68,
+          8.64,
+          19.3
+        ],
+        "sentence_chrfpp": [
+          24.71,
+          34.8,
+          30.28,
+          34.39,
+          29.83
+        ],
+        "sentence_ter": [
+          100.0,
+          85.71,
+          80.0,
+          66.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will give the neighbour.",
+          "I will buy the neighbour’s doors.",
+          "He will strike the donkey.",
+          "He gave the neighbour the camels.",
+          "I will strike the donkey."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 4.71,
+        "corpus_chrfpp": 31.28,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.81,
+          7.49,
+          10.68,
+          8.64,
+          19.3
+        ],
+        "sentence_chrfpp": [
+          24.71,
+          34.8,
+          30.28,
+          34.39,
+          29.83
+        ],
+        "sentence_ter": [
+          100.0,
+          85.71,
+          80.0,
+          66.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will give the neighbour.",
+          "I will buy the neighbour’s doors.",
+          "He will strike the donkey.",
+          "He gave the neighbour the camels.",
+          "I will strike the donkey."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 8.83,
+            "corpus_chrfpp": 31.76,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.75,
+              25.75,
+              10.68,
+              9.04,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              12.85,
+              59.74,
+              30.11,
+              29.91,
+              13.35
+            ],
+            "sentence_ter": [
+              100.0,
+              57.14,
+              60.0,
+              66.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the dress.",
+              "The camels repaired the neighbour.",
+              "The owner bought the camels.",
+              "The owner bought the neighbours.",
+              "The neighbour repaired the dress."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 2.61,
+            "corpus_chrfpp": 14.1,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.75,
+              6.57,
+              10.68,
+              7.81,
+              11.52
+            ],
+            "sentence_chrfpp": [
+              7.03,
+              9.24,
+              18.26,
+              12.98,
+              28.36
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              60.0,
+              83.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Magasi argi will ajomi.",
+              "Ay will sell the camel to baːbki.",
+              "The child bit the dog.",
+              "The dog and argi will deːccir.",
+              "Ay chicken eats."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 3.53,
+            "corpus_chrfpp": 23.17,
+            "corpus_ter": 92.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              8.91,
+              6.27,
+              8.17,
+              7.27
+            ],
+            "sentence_chrfpp": [
+              11.46,
+              42.21,
+              20.49,
+              12.32,
+              19.77
+            ],
+            "sentence_ter": [
+              100.0,
+              71.43,
+              120.0,
+              83.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will eat the fish.",
+              "He/she will buy the camels for the neighbours.",
+              "The man gave the chicken to the dogs.",
+              "He will repair the dress.",
+              "He will give the dog a bone."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 4.9,
+            "corpus_chrfpp": 24.89,
+            "corpus_ter": 92.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2,
+              7.65,
+              10.4,
+              9.04,
+              14.26
+            ],
+            "sentence_chrfpp": [
+              14.8,
+              14.83,
+              16.11,
+              30.49,
+              54.14
+            ],
+            "sentence_ter": [
+              160.0,
+              71.43,
+              80.0,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will steal the dresses for the young man.",
+              "I am buying the necklaces.",
+              "He repaired the dress.",
+              "The owner repaired the dress.",
+              "I will give the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 8.76,
+            "corpus_chrfpp": 36.46,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              11.99,
+              19.3,
+              5.52,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              16.96,
+              33.13,
+              42.9,
+              31.17,
+              66.25
+            ],
+            "sentence_ter": [
+              100.0,
+              57.14,
+              40.0,
+              116.67,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The owner will repair the dress.",
+              "I am buying the camels for the doors.",
+              "The dog found the doors.",
+              "The owner will give the dress to the man.",
+              "I will give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 8.22,
+            "corpus_chrfpp": 27.51,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              8.05,
+              11.51,
+              8.64,
+              34.98
+            ],
+            "sentence_chrfpp": [
+              24.92,
+              24.87,
+              21.71,
+              18.29,
+              54.2
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              60.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will give the owner.",
+              "I am repairing the camel’s door.",
+              "The thief found it.",
+              "The man will give the door.",
+              "I gave the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 4.35,
+            "corpus_chrfpp": 30.76,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.99,
+              7.65,
+              13.13,
+              6.74,
+              13.13
+            ],
+            "sentence_chrfpp": [
+              26.25,
+              14.83,
+              40.22,
+              35.84,
+              42.74
+            ],
+            "sentence_ter": [
+              160.0,
+              71.43,
+              80.0,
+              83.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief stole the dresses for the young man.",
+              "I am buying the necklaces.",
+              "The dog found the doors for me.",
+              "The men gave the camels to the thief.",
+              "I gave the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 16.18,
+            "corpus_chrfpp": 40.72,
+            "corpus_ter": 64.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              8.05,
+              53.73,
+              6.74,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              29.35,
+              24.87,
+              72.59,
+              22.15,
+              66.25
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              20.0,
+              83.33,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will strike the donkey.",
+              "I am repairing the camel’s door.",
+              "The donkey found the doors.",
+              "The donkey gave the argi to the man.",
+              "I will give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 18.4,
+            "corpus_chrfpp": 41.93,
+            "corpus_ter": 53.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              17.29,
+              53.73,
+              9.04,
+              34.98
+            ],
+            "sentence_chrfpp": [
+              24.07,
+              46.42,
+              69.87,
+              17.08,
+              53.9
+            ],
+            "sentence_ter": [
+              100.0,
+              42.86,
+              20.0,
+              66.67,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will ajom the argi.",
+              "I repair the camels for the door.",
+              "The donkey found the tirti.",
+              "tirti argi gave the deːc.",
+              "I strike the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 18.4,
+        "corpus_chrfpp": 41.93,
+        "corpus_ter": 53.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.81,
+          17.29,
+          53.73,
+          9.04,
+          34.98
+        ],
+        "sentence_chrfpp": [
+          24.07,
+          46.42,
+          69.87,
+          17.08,
+          53.9
+        ],
+        "sentence_ter": [
+          100.0,
+          42.86,
+          20.0,
+          66.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will ajom the argi.",
+          "I repair the camels for the door.",
+          "The donkey found the tirti.",
+          "tirti argi gave the deːc.",
+          "I strike the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 9,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 18.4,
+        "corpus_chrfpp": 41.93,
+        "corpus_ter": 53.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.81,
+          17.29,
+          53.73,
+          9.04,
+          34.98
+        ],
+        "sentence_chrfpp": [
+          24.07,
+          46.42,
+          69.87,
+          17.08,
+          53.9
+        ],
+        "sentence_ter": [
+          100.0,
+          42.86,
+          20.0,
+          66.67,
+          40.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will ajom the argi.",
+          "I repair the camels for the door.",
+          "The donkey found the tirti.",
+          "tirti argi gave the deːc.",
+          "I strike the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 9,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 3.97,
+            "corpus_chrfpp": 17.16,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              12.87,
+              4.93,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              36.11,
+              23.4,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              120.0,
+              71.43,
+              160.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "The young men will give the chicken to the dogs.",
+              "???",
+              "???"
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 2.15,
+            "corpus_chrfpp": 17.97,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              7.65,
+              5.67,
+              9.04,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              16.34,
+              14.83,
+              15.45,
+              31.24,
+              11.96
+            ],
+            "sentence_ter": [
+              140.0,
+              71.43,
+              120.0,
+              66.67,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces.",
+              "We will give the camels to the neighbours.",
+              "The owner repaired the chicken.",
+              "The dogs were given to the owner."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 1.84,
+            "corpus_chrfpp": 15.18,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              4.03,
+              6.27,
+              5.67,
+              10.4
+            ],
+            "sentence_chrfpp": [
+              13.35,
+              15.8,
+              15.3,
+              15.15,
+              16.39
+            ],
+            "sentence_ter": [
+              120.0,
+              100.0,
+              120.0,
+              116.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog found the doors for me.",
+              "The thief will give you (pl.) the dogs.",
+              "The men gave the camels to the thief.",
+              "We repaired the dress for the young men.",
+              "I am buying necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 2.1,
+            "corpus_chrfpp": 17.07,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              6.57,
+              6.57,
+              6.27,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              17.15,
+              14.98,
+              20.08,
+              19.21,
+              13.2
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will strike the donkey.",
+              "The cowards are giving me the necklaces.",
+              "We repaired the dress for the neighbours.",
+              "The thief stole the chicken from the dogs.",
+              "I am buying camels for me."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 2.1,
+        "corpus_chrfpp": 17.07,
+        "corpus_ter": 96.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.12,
+          6.57,
+          6.57,
+          6.27,
+          7.81
+        ],
+        "sentence_chrfpp": [
+          17.15,
+          14.98,
+          20.08,
+          19.21,
+          13.2
+        ],
+        "sentence_ter": [
+          100.0,
+          85.71,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I will strike the donkey.",
+          "The cowards are giving me the necklaces.",
+          "We repaired the dress for the neighbours.",
+          "The thief stole the chicken from the dogs.",
+          "I am buying camels for me."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 2.15,
+        "corpus_chrfpp": 17.97,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.77,
+          7.65,
+          5.67,
+          9.04,
+          6.57
+        ],
+        "sentence_chrfpp": [
+          16.34,
+          14.83,
+          15.45,
+          31.24,
+          11.96
+        ],
+        "sentence_ter": [
+          140.0,
+          71.43,
+          120.0,
+          66.67,
+          120.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He stole the dresses for the young man.",
+          "I am buying the necklaces.",
+          "We will give the camels to the neighbours.",
+          "The owner repaired the chicken.",
+          "The dogs were given to the owner."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "phonology",
+      "all_steps_complete": true
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 9.27,
+            "corpus_chrfpp": 39.12,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.54,
+              13.89,
+              10.68,
+              5.67,
+              37.99
+            ],
+            "sentence_chrfpp": [
+              37.46,
+              38.56,
+              29.98,
+              29.27,
+              66.25
+            ],
+            "sentence_ter": [
+              80.0,
+              42.86,
+              80.0,
+              116.67,
+              20.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thieves will buy the men.",
+              "I bought the necklaces for the doors.",
+              "I will strike the donkey.",
+              "They will give the men to the camels.",
+              "I will give the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 9.27,
+        "corpus_chrfpp": 39.12,
+        "corpus_ter": 67.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.54,
+          13.89,
+          10.68,
+          5.67,
+          37.99
+        ],
+        "sentence_chrfpp": [
+          37.46,
+          38.56,
+          29.98,
+          29.27,
+          66.25
+        ],
+        "sentence_ter": [
+          80.0,
+          42.86,
+          80.0,
+          116.67,
+          20.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thieves will buy the men.",
+          "I bought the necklaces for the doors.",
+          "I will strike the donkey.",
+          "They will give the men to the camels.",
+          "I will give the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 9.27,
+        "corpus_chrfpp": 39.12,
+        "corpus_ter": 67.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.54,
+          13.89,
+          10.68,
+          5.67,
+          37.99
+        ],
+        "sentence_chrfpp": [
+          37.46,
+          38.56,
+          29.98,
+          29.27,
+          66.25
+        ],
+        "sentence_ter": [
+          80.0,
+          42.86,
+          80.0,
+          116.67,
+          20.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thieves will buy the men.",
+          "I bought the necklaces for the doors.",
+          "I will strike the donkey.",
+          "They will give the men to the camels.",
+          "I will give the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 5,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 3.46,
+            "corpus_chrfpp": 22.4,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              12.87,
+              4.93,
+              5.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              36.11,
+              23.4,
+              15.22,
+              21.96
+            ],
+            "sentence_ter": [
+              120.0,
+              71.43,
+              160.0,
+              116.67,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "The young men will give the chicken to the dogs.",
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 3.46,
+        "corpus_chrfpp": 22.4,
+        "corpus_ter": 103.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.52,
+          12.87,
+          4.93,
+          5.67,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          12.11,
+          36.11,
+          23.4,
+          15.22,
+          21.96
+        ],
+        "sentence_ter": [
+          120.0,
+          71.43,
+          160.0,
+          116.67,
+          60.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We bought the camels for the neighbours.",
+          "The owner repaired the dress.",
+          "The young men will give the chicken to the dogs.",
+          "He stole the dresses for the young man.",
+          "I am buying the necklaces."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 3.46,
+        "corpus_chrfpp": 22.4,
+        "corpus_ter": 103.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.52,
+          12.87,
+          4.93,
+          5.67,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          12.11,
+          36.11,
+          23.4,
+          15.22,
+          21.96
+        ],
+        "sentence_ter": [
+          120.0,
+          71.43,
+          160.0,
+          116.67,
+          60.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We bought the camels for the neighbours.",
+          "The owner repaired the dress.",
+          "The young men will give the chicken to the dogs.",
+          "He stole the dresses for the young man.",
+          "I am buying the necklaces."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "self_correction",
+      "all_steps_complete": false
+    }
+  }
+}

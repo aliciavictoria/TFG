@@ -1,0 +1,44 @@
+\chapter{Trabajos futuros}
+\label{cap:trabajos_futuros}
+
+Los resultados obtenidos en este trabajo abren varias líneas de continuación. Algunas están relacionadas con ampliar el conjunto experimental y otras con mejorar las estrategias de \textit{prompting}, estudiar nuevas direcciones de traducción o incorporar señales externas de revisión. En esta sección se recogen las principales ampliaciones que podrían desarrollarse a partir del sistema implementado.
+
+\section{Ampliación del conjunto de puzzles}
+\label{sec:futuro_puzzles}
+
+En este trabajo se han evaluado 11 puzzles de traducción en dirección lengua desconocida $\rightarrow$ inglés, pertenecientes a 10 familias lingüísticas distintas. Aunque esta selección permite cubrir cierta diversidad tipológica, el benchmark \textsc{Linguini} contiene 114 problemas de traducción, por lo que una ampliación natural sería ejecutar el sistema sobre un conjunto mucho mayor. Adicionalmente, una evaluación más amplia permitiría estudiar si las tendencias observadas se mantienen al variar la familia lingüística, el número de frases de entrenamiento o la complejidad morfológica del puzzle. En particular, sería interesante analizar puzzles con más de 20 frases de entrenamiento, ya que estrategias como M2 podrían beneficiarse especialmente de disponer de más pasos para construir y revisar el diccionario acumulado.
+
+\section{Ampliación de evaluación de la dirección inversa y exploración combinatoria de ejemplos}
+\label{sec:futuro_inversa}
+
+En cuanto a la dirección inversa, los experimentos en dirección inglés $\rightarrow$ lengua desconocida realizados en esta memoria son exploratorios: se limitan a tres puzzles y a la estrategia M1. Aun así, los resultados muestran una degradación clara respecto a la dirección lengua desconocida $\rightarrow$ inglés, lo que confirma que producir formas en una lengua no familiar es una tarea especialmente difícil. Una línea futura sería evaluar de forma sistemática el conjunto completo de puzzles \texttt{en2lang}, aplicando todas las metodologías M1--M5. Esto permitiría cuantificar con mayor rigor la brecha entre comprensión y producción, y comprobar si estrategias como M4, basada en inspiración humana, pueden reducir esa asimetría cuando el modelo debe generar morfología en la lengua desconocida.
+
+\vspace{0.5cm}
+
+En cuanto a la exploración combinatoria, la estrategia M2.2 se ha implementado como una prueba exploratoria sobre el puzzle de Hakhun. Los resultados muestran que la selección de ejemplos iniciales tiene un impacto muy alto cuando el subconjunto es pequeño: con $k=2$, la diferencia entre la mejor y la peor combinación pasa de chrF++=71.6 a chrF++=8.5. Al aumentar a $k=3$, la desviación típica baja de forma clara, lo que sugiere que el aprendizaje se estabiliza con una mínima variedad de ejemplos. Como trabajo futuro, M2.2 podría extenderse al conjunto completo de puzzles, utilizando valores de \texttt{MAX\_K}=4 o \texttt{MAX\_K}=5 cuando el coste computacional lo permita. Además, esta estrategia podría combinarse con técnicas de selección activa de ejemplos, de forma que el sistema no evalúe todas las combinaciones posibles, sino que priorice aquellas con mayor diversidad léxica, morfológica o sintáctica. Esto convertiría M2.2 en una herramienta más práctica para escenarios con presupuesto limitado de tokens.
+
+\section{Mejora de las estrategias de revisión}
+\label{sec:futuro_revision}
+
+Los resultados de M5 muestran que la autocorrección sin retroalimentación externa puede empeorar respuestas que inicialmente eran buenas. El modelo revisa sus propias hipótesis, pero si esas hipótesis son incorrectas, la segunda vuelta puede reforzar el error en lugar de corregirlo. Esto ocurre especialmente en Llama-3.3-70B, donde varios primeros borradores de alta calidad se degradan de forma importante durante la revisión.
+
+Una posible mejora sería incorporar una señal externa de validación. Por ejemplo, se podría diseñar un verificador de cobertura de morfemas que comprobara si cada elemento de la frase de entrada está justificado por alguna entrada del diccionario o regla gramatical. Otra posibilidad sería separar los roles de generador y revisor, usando un modelo para producir la primera respuesta y otro distinto para evaluarla. Estas variantes seguirían la idea general de \textit{Self-Refine}, pero evitando que la única fuente de crítica sea el propio modelo que cometió el error.
+
+\section{Más protocolos de razonamiento humano}
+\label{sec:futuro_humano}
+
+La estrategia M4 utiliza únicamente el razonamiento humano del puzzle de Hakhun como ejemplo de proceso. Aunque esta guía mejora algunos resultados, especialmente en Llama-3.3-70B, su utilidad puede depender de la similitud entre el puzzle guía y el puzzle objetivo. Un único protocolo humano no tiene por qué representar todas las formas posibles de resolver problemas lingüísticos.
+
+Una línea futura interesante sería recopilar más razonamientos humanos sobre puzzles de distintas familias y tipologías: por ejemplo, una lengua aglutinante, una polisintética, una tonal o una con sistema de casos complejo. Con varios protocolos disponibles, el sistema podría seleccionar automáticamente el razonamiento-guía más parecido al puzzle objetivo, o incluso comparar si ciertos estilos de explicación humana ayudan más que otros.
+
+\section{Evaluación con nuevos modelos}
+\label{sec:futuro_modelos}
+
+Durante el desarrollo del trabajo han aparecido nuevos modelos relevantes que no han podido incluirse por limitaciones de tiempo y acceso. La evaluación de modelos más recientes, especialmente aquellos ajustados para tareas de razonamiento, permitiría comprobar si las tendencias observadas se mantienen o cambian con nuevas arquitecturas.
+
+Sería especialmente interesante comprobar si el patrón observado en este trabajo, donde Llama-3.3-70B supera globalmente a GPT-OSS-120B, se reproduce con otros modelos de tamaño medio y grande. También podría realizarse una prueba preliminar con modelos accesibles en Google Colab, como Gemma \citep{gemma2024}, aprovechando que el sistema experimental ya está preparado para cargar puzzles, generar prompts y recalcular métricas sin modificar su estructura principal.
+
+\section{Uso de salidas estructuradas}
+\label{sec:salidas_estructuradas}
+
+Una posible mejora del sistema sería sustituir parte del filtrado heurístico por mecanismos de \textit{structured outputs}. Este enfoque consiste en pedir o forzar al modelo a generar la respuesta siguiendo un esquema predefinido, por ejemplo un objeto JSON con campos separados para el diccionario, las reglas gramaticales y las traducciones finales. De esta forma, el sistema no tendría que extraer las traducciones a partir de texto libre, sino leerlas directamente de un campo concreto. Esto reduciría la dependencia de filtros diseñados manualmente y haría el proceso más robusto frente a diferencias entre modelos. Sin embargo, su implementación requeriría adaptar las llamadas a las APIs y rediseñar los prompts para que todos los modelos produzcan una salida validable, por lo que se deja como línea de mejora futura.

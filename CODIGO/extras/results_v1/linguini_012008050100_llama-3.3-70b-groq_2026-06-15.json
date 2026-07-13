@@ -1,0 +1,1775 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-15T21:49:17.589984",
+    "puzzle_id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 12,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Qingmivit takujaatit.",
+        "target": "Your dog saw you."
+      },
+      {
+        "source": "Inuuhuktuup iluaqhaiji qukiqtanga.",
+        "target": "The boy shot the doctor."
+      },
+      {
+        "source": "Aanniqtutit.",
+        "target": "You hurt yourself."
+      },
+      {
+        "source": "Iluaqhaijiup aarqijaatit.",
+        "target": "The doctor cured you."
+      },
+      {
+        "source": "Qingmiq iputujait.",
+        "target": "You speared the dog."
+      },
+      {
+        "source": "Angatkuq iluaqhaijimik aarqisijuq.",
+        "target": "The shaman cured a doctor."
+      },
+      {
+        "source": "Nanuq qaijuq.",
+        "target": "The polar bear came."
+      },
+      {
+        "source": "Iluaqhaijivit inuuhuktuit aarqijanga.",
+        "target": "Your doctor cured your boy."
+      },
+      {
+        "source": "Angunahuktiup amaruq iputujanga.",
+        "target": "The hunter speared the wolf."
+      },
+      {
+        "source": "Qingmiup ilinniaqtitsijiit aanniqtanga.",
+        "target": "The dog hurt your teacher."
+      },
+      {
+        "source": "Ukiakhaqtutit.",
+        "target": "You fell."
+      },
+      {
+        "source": "Angunahukti nanurmik qukiqsijuq.",
+        "target": "The hunter shot a polar bear."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Amaruup angatkuit takujanga.",
+        "target": "The wolf saw your shaman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Nanuit inuuhukturmik aanniqsijuq.",
+        "target": "Your polar bear hurt a boy.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktiit aarqijuq.",
+        "target": "Your hunter cured himself.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ilinniaqtitsiji qukiqtait.",
+        "target": "You shot the teacher.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Qaijutit.",
+        "target": "You came.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktimik aarqisijutit.",
+        "target": "You cured a hunter.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Amaruup angatkuit takujanga.",
+      "reference": "The wolf saw your shaman.",
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language, and my translation may not be accurate.\n\nBased on my research, it appears that the sentence might be in Inuktitut, an indigenous language spoken in Canada. If that's the case, here's my attempt at translation:\n\n\"Amaruup angatkuit takujanga\" could possibly mean \"The wolves are eating the caribou\" or \"Wolves are hunting the caribou\".\n\nBreakdown:\n- \"Amaruup\" might mean \"wolves\"\n- \"Angatkuit\" could mean \"they are eating\" or \"they are hunting\"\n- \"Takujanga\" might mean \"caribou\"",
+      "latency_s": 0.62,
+      "metrics": {
+        "corpus_bleu": 0.34,
+        "corpus_chrfpp": 5.75,
+        "corpus_ter": 1840.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.34
+        ],
+        "sentence_chrfpp": [
+          5.75
+        ],
+        "sentence_ter": [
+          1840.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language, and my translation may not be accurate.\n\nBased on my research, it appears that the sentence might be in Inuktitut, an indigenous language spoken in Canada. If that's the case, here's my attempt at translation:\n\n\"Amaruup angatkuit takujanga\" could possibly mean \"The wolves are eating the caribou\" or \"Wolves are hunting the caribou\".\n\nBreakdown:\n- \"Amaruup\" might mean \"wolves\"\n- \"Angatkuit\" could mean \"they are eating\" or \"they are hunting\"\n- \"Takujanga\" might mean \"caribou\""
+        ],
+        "references": [
+          "The wolf saw your shaman."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 12,
+          "latency_s": 1.78,
+          "metrics": {
+            "corpus_bleu": 35.69,
+            "corpus_chrfpp": 57.83,
+            "corpus_ter": 48.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              37.99,
+              80.91,
+              14.06,
+              16.37,
+              100.0,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              66.21,
+              81.25,
+              31.92,
+              48.34,
+              100.0,
+              42.52
+            ],
+            "sentence_ter": [
+              20.0,
+              16.67,
+              75.0,
+              100.0,
+              0.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw the shaman.",
+              "The polar bear hurt a boy.",
+              "The hunter was cured.",
+              "The teacher shot.",
+              "You came.",
+              "The shaman/doctor cured the hunter."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 35.69,
+        "corpus_chrfpp": 57.83,
+        "corpus_ter": 48.0,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          37.99,
+          80.91,
+          14.06,
+          16.37,
+          100.0,
+          12.22
+        ],
+        "sentence_chrfpp": [
+          66.21,
+          81.25,
+          31.92,
+          48.34,
+          100.0,
+          42.52
+        ],
+        "sentence_ter": [
+          20.0,
+          16.67,
+          75.0,
+          100.0,
+          0.0,
+          75.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "hypotheses": [
+          "The wolf saw the shaman.",
+          "The polar bear hurt a boy.",
+          "The hunter was cured.",
+          "The teacher shot.",
+          "You came.",
+          "The shaman/doctor cured the hunter."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 31.92,
+          "accumulated_dict": "Qingmivit = unknown\ntakujaatit = unknown\nInuuhuktuup = unknown\niluaqhaiji = unknown\nqukiqtanga = unknown",
+          "accumulated_rules": "1. The language may use a subject-object-verb (SOV) word order, given the structure of the second example, but this is highly speculative at this point.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships.",
+          "metrics": {
+            "corpus_bleu": 3.84,
+            "corpus_chrfpp": 8.87,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.69,
+              7.55,
+              14.13,
+              14.13,
+              30.33,
+              14.13
+            ],
+            "sentence_chrfpp": [
+              8.07,
+              7.98,
+              8.86,
+              7.42,
+              9.13,
+              12.29
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga.",
+              "Nanuit inuuhukturmik aanniqsijuq.",
+              "Angunahuktiit aarqijuq.",
+              "Ilinniaqtitsiji qukiqtait.",
+              "Qaijutit.",
+              "Angunahuktimik aarqisijutit."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 3.26,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\ntakujaatit = saw you (possibly a verb or a noun with a verb marker)\nInuuhuktuup = boy (speculative, could be a noun)\niluaqhaiji = doctor (speculative, could be a noun)\nqukiqtanga = shot (speculative, could be a verb)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)",
+          "accumulated_rules": "1. The language may use a subject-object-verb (SOV) word order, given the structure of the examples, but this remains speculative.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions.\n[DELETED: None at this stage, as the new examples refine rather than contradict the existing hypothesis.]",
+          "metrics": {
+            "corpus_bleu": 3.84,
+            "corpus_chrfpp": 8.87,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.69,
+              7.55,
+              14.13,
+              14.13,
+              30.33,
+              14.13
+            ],
+            "sentence_chrfpp": [
+              8.07,
+              7.98,
+              8.86,
+              7.42,
+              9.13,
+              12.29
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga.",
+              "Nanuit inuuhukturmik aanniqsijuq.",
+              "Angunahuktiit aarqijuq.",
+              "Ilinniaqtitsiji qukiqtait.",
+              "Qaijutit.",
+              "Angunahuktimik aarqisijutit."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 2.18,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\ntakujaatit = saw you (possibly a verb or a noun with a verb marker)\nInuuhuktuup = boy (speculative, could be a noun)\niluaqhaiji = doctor (speculative, could be a noun)\nqukiqtanga = shot (speculative, could be a verb)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\niluaqhaijiup = doctor (with a grammatical marker, possibly possessive or agentive)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)",
+          "accumulated_rules": "1. The language may use a subject-object-verb (SOV) word order, given the structure of the examples, but this remains speculative.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession or agency.",
+          "metrics": {
+            "corpus_bleu": 3.84,
+            "corpus_chrfpp": 8.87,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.69,
+              7.55,
+              14.13,
+              14.13,
+              30.33,
+              14.13
+            ],
+            "sentence_chrfpp": [
+              8.07,
+              7.98,
+              8.86,
+              7.42,
+              9.13,
+              12.29
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Amaruup angatkuit takujanga.",
+              "Nanuit inuuhukturmik aanniqsijuq.",
+              "Angunahuktiit aarqijuq.",
+              "Ilinniaqtitsiji qukiqtait.",
+              "Qaijutit.",
+              "Angunahuktimik aarqisijutit."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 3.07,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\ntakujaatit = saw you (possibly a verb or a noun with a verb marker)\nInuuhuktuup = the boy (speculative, could be a noun with a grammatical marker)\niluaqhaiji = doctor (speculative, could be a noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\nqukiqtanga = shot (speculative, could be a verb)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\nQingmiq = you (possibly a variant or related form of Qingmivit)\niputujait = speared (speculative, could be a verb)\n[DELETED: takujaatit as saw you, refined to consider it part of a larger verb form]\n[DELETED: Inuuhuktuup as the boy without a marker, considering it now as the boy with a grammatical marker]",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function.\n4. [NEW] The language may use specific morphemes or affixes to indicate the subject performing the action, as seen with \"Qingmiq\" and \"iluaqhaijiup.\"",
+          "metrics": {
+            "corpus_bleu": 20.77,
+            "corpus_chrfpp": 37.34,
+            "corpus_ter": 68.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.52,
+              30.74,
+              14.79,
+              50.81,
+              34.67,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              11.7,
+              60.8,
+              17.98,
+              74.55,
+              21.16,
+              21.16
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              50.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog hunted.",
+              "The polar bear hurt the boy.",
+              "The man cured.",
+              "The student shot the teacher.",
+              "You hunted.",
+              "The man cured himself."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 2.6,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker)\niluaqhaiji = doctor (speculative, could be a noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\nqukiqtanga = shot (speculative, could be a verb)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\nQingmiq = you (possibly a variant or related form of Qingmivit)\niputujait = speared (speculative, could be a verb)\nAngatkuq = the shaman\niluaqhaijimik = a doctor (with a grammatical marker, possibly object or specific function)\naarqisijuq = cured (speculative, could be a verb form)",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. [NEW] Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".",
+          "metrics": {
+            "corpus_bleu": 22.53,
+            "corpus_chrfpp": 40.36,
+            "corpus_ter": 76.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              43.47,
+              14.79,
+              50.81,
+              12.7,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              31.56,
+              59.29,
+              17.98,
+              74.55,
+              20.3,
+              22.23
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              50.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The wolf's owner saw it.",
+              "The polar bear hurt a child.",
+              "The man cured.",
+              "The student shot the teacher.",
+              "You are a hunter.",
+              "The man cured the woman."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 2.37,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker)\niluaqhaiji = doctor (speculative, could be a noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\nqukiqtanga = shot (speculative, could be a verb)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\nQingmiq = you (possibly a variant or related form of Qingmivit)\niputujait = speared (speculative, could be a verb)\nAngatkuq = the shaman\niluaqhaijimik = a doctor (with a grammatical marker, possibly object or specific function)\naarqisijuq = cured (speculative, could be a verb form)\nNanuq = the polar bear\nqaijuq = came (speculative, could be a verb)",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".",
+          "metrics": {
+            "corpus_bleu": 11.11,
+            "corpus_chrfpp": 35.54,
+            "corpus_ter": 72.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.54,
+              30.74,
+              12.7,
+              12.7,
+              55.03,
+              14.54
+            ],
+            "sentence_chrfpp": [
+              46.36,
+              51.37,
+              18.73,
+              20.67,
+              44.97,
+              31.99
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              75.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The wolf's owner is a shaman.",
+              "A polar bear cured a boy.",
+              "The man is cured.",
+              "The doctor shot something.",
+              "It came.",
+              "The man cured a polar bear."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 2.89,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\nQingmiq = you (possibly a variant or related form of Qingmivit)\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker)\niluaqhaiji = doctor (noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\niluaqhaijimik = a doctor (with a grammatical marker, possibly object or specific function)\nqukiqtanga = shot (verb form)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\naarqisijuq = cured (verb form)\nAngatkuq = the shaman\nNanuq = the polar bear\nqaijuq = came (verb)\niputujait = speared (verb form)\n[DELETED: iluaqhaiji - speculative, could be a noun — reason: confirmed as a noun]\n[DELETED: qukiqtanga - speculative, could be a verb — reason: confirmed as a verb form]\n[DELETED: aarqisijuq - speculative, could be a verb form — reason: confirmed as a verb form]",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".\n[No rules were deleted, but the understanding of the suffixes and their functions has been refined.]",
+          "metrics": {
+            "corpus_bleu": 13.81,
+            "corpus_chrfpp": 35.16,
+            "corpus_ter": 76.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              7.81,
+              30.74,
+              14.79,
+              17.97,
+              100.0,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              24.78,
+              51.2,
+              17.98,
+              36.66,
+              100.0,
+              20.95
+            ],
+            "sentence_ter": [
+              100.0,
+              33.33,
+              100.0,
+              75.0,
+              0.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The shaman's helper shot the dog.",
+              "The polar bear cured a boy.",
+              "The man cured.",
+              "The girl shot the doctor.",
+              "You came.",
+              "The man's helper cured himself."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 3.19,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\nQingmiq = you (possibly a variant or related form of Qingmivit)\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker)\niluaqhaiji = doctor (noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\niluaqhaijimik = a doctor (with a grammatical marker, possibly object or specific function)\nqukiqtanga = shot (verb form)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\naarqisijuq = cured (verb form)\nAngatkuq = the shaman\nNanuq = the polar bear\nqaijuq = came (verb)\niputujait = speared (verb form)\nIluaqhaijivit = your doctor (possibly with a possessive marker)\ninuuhuktuit = your boy (possibly with a possessive marker)\naarqijanga = cured (verb form, possibly with a subject or object marker)\nAngunahuktiup = the hunter (with a grammatical marker)\namaruq = wolf\niputujanga = speared (verb form, possibly with a subject or object marker)",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".",
+          "metrics": {
+            "corpus_bleu": 11.19,
+            "corpus_chrfpp": 41.73,
+            "corpus_ter": 68.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              9.29,
+              17.29,
+              14.06,
+              17.97,
+              100.0,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              30.55,
+              49.4,
+              31.92,
+              35.95,
+              100.0,
+              42.09
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67,
+              75.0,
+              75.0,
+              0.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The hunter's dog saw the wolf.",
+              "Your boy cured a polar bear.",
+              "The hunter was cured.",
+              "The doctor shot the wolf.",
+              "You came.",
+              "A hunter cured you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 2.89,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\nQingmiq = you (possibly a variant or related form of Qingmivit)\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker)\niluaqhaiji = doctor (noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\niluaqhaijimik = a doctor (with a grammatical marker, possibly object or specific function)\nqukiqtanga = shot (verb form)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\naarqisijuq = cured (verb form)\nAngatkuq = the shaman\nNanuq = the polar bear\nqaijuq = came (verb)\niputujait = speared (verb form)\nIluaqhaijivit = your doctor (possibly with a possessive marker)\ninuuhuktuit = your boy (possibly with a possessive marker)\naarqijanga = cured (verb form, possibly with a subject or object marker)\nAngunahuktiup = the hunter (with a grammatical marker)\namaruq = wolf\niputujanga = speared (verb form, possibly with a subject or object marker)\nilinniaqtitsijiit = your teacher (possibly with a possessive marker)\nQingmiup = the dog (possibly with a grammatical marker)",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".\n[No rules were deleted or added, but the existing rules were refined and supported by the new examples.]",
+          "metrics": {
+            "corpus_bleu": 41.52,
+            "corpus_chrfpp": 58.44,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.48,
+              80.91,
+              27.53,
+              16.37,
+              55.03,
+              50.81
+            ],
+            "sentence_chrfpp": [
+              44.04,
+              81.25,
+              46.32,
+              48.34,
+              44.97,
+              74.09
+            ],
+            "sentence_ter": [
+              80.0,
+              16.67,
+              75.0,
+              100.0,
+              50.0,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The wolf's shaman saw it.",
+              "The polar bear hurt a boy.",
+              "The hunter cured.",
+              "The teacher shot.",
+              "It came.",
+              "A hunter cured a hunter."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 3.2,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\nQingmiq = you (possibly a variant or related form of Qingmivit)\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker)\niluaqhaiji = doctor (noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly possessive or agentive)\niluaqhaijimik = a doctor (with a grammatical marker, possibly object or specific function)\nqukiqtanga = shot (verb form)\nAanniqtutit = hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\naarqisijuq = cured (verb form)\nAngatkuq = the shaman\nNanuq = the polar bear\nqaijuq = came (verb)\niputujait = speared (verb form)\nIluaqhaijivit = your doctor (possibly with a possessive marker)\ninuuhuktuit = your boy (possibly with a possessive marker)\naarqijanga = cured (verb form, possibly with a subject or object marker)\nAngunahuktiup = the hunter (with a grammatical marker)\namaruq = wolf\niputujanga = speared (verb form, possibly with a subject or object marker)\nilinniaqtitsijiit = your teacher (possibly with a possessive marker)\nQingmiup = the dog (possibly with a grammatical marker)\nUkiakhaqtutit = you fell (possibly a verb form)",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".",
+          "metrics": {
+            "corpus_bleu": 14.57,
+            "corpus_chrfpp": 43.48,
+            "corpus_ter": 72.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              11.51,
+              30.74,
+              14.06,
+              16.37,
+              100.0,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              33.29,
+              51.2,
+              31.92,
+              42.19,
+              100.0,
+              38.94
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              75.0,
+              100.0,
+              0.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf's hunter saw.",
+              "The polar bear cured a boy.",
+              "The hunter was cured.",
+              "Your teacher shot.",
+              "You came.",
+              "The hunter was cured by a doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 3.19,
+          "accumulated_dict": "Qingmivit = you (possibly a pronoun or a marker for \"you\")\nQingmiq = you (possibly a variant or related form of Qingmivit)\ntakujaatit = your dog saw you (possibly a verb form indicating the subject's dog as the actor)\nInuuhuktuup = the boy (with a grammatical marker, possibly subject)\niluaqhaiji = doctor (noun)\niluaqhaijiup = the doctor (with a grammatical marker, possibly subject)\niluaqhaijimik = a doctor (with a grammatical marker, possibly object)\nqukiqtanga = shot (verb form)\nAanniqtutit = you hurt yourself (possibly a reflexive verb form)\naarqijaatit = cured you (possibly a verb or a noun with a verb marker)\naarqisijuq = cured (verb form)\nAngatkuq = the shaman\nNanuq = the polar bear\nqaijuq = came (verb)\niputujait = speared (verb form)\nIluaqhaijivit = your doctor (possibly with a possessive marker)\ninuuhuktuit = your boy (possibly with a possessive marker)\naarqijanga = cured (verb form, possibly with a subject or object marker)\nAngunahuktiup = the hunter (with a grammatical marker, possibly subject)\namaruq = wolf\niputujanga = speared (verb form, possibly with a subject or object marker)\nilinniaqtitsijiit = your teacher (possibly with a possessive marker)\nQingmiup = the dog (possibly with a grammatical marker)\nUkiakhaqtutit = you fell (possibly a verb form)\nnanurmik = a polar bear (with a grammatical marker, possibly object)\nqukiqsijuq = shot (verb form)",
+          "accumulated_rules": "1. The language appears to use a subject-object-verb (SOV) word order, given the structure of the examples.\n2. Morphemes may be combined to form words, possibly using affixes to indicate grammatical relationships, such as reflexive actions or possession/agency.\n3. The suffix \"-up\" might indicate a grammatical relationship, such as possession, agency, or possibly marking the noun as having a specific grammatical function, like the subject.\n4. The suffix \"-mik\" might indicate the object or a specific grammatical function.\n5. Verb forms may incorporate information about the subject performing the action, as seen with \"takujaatit\" and \"aarqijaatit\".",
+          "metrics": {
+            "corpus_bleu": 11.59,
+            "corpus_chrfpp": 40.63,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              10.68,
+              20.56,
+              14.06,
+              16.37,
+              100.0,
+              8.64
+            ],
+            "sentence_chrfpp": [
+              18.68,
+              53.07,
+              31.92,
+              42.19,
+              100.0,
+              36.96
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67,
+              75.0,
+              100.0,
+              0.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The dog's owner saw it.",
+              "The boy hurt a polar bear.",
+              "The hunter was cured.",
+              "Your teacher shot.",
+              "You came.",
+              "A hunter was cured by someone."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 41.52,
+        "corpus_chrfpp": 58.44,
+        "corpus_ter": 60.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.48,
+          80.91,
+          27.53,
+          16.37,
+          55.03,
+          50.81
+        ],
+        "sentence_chrfpp": [
+          44.04,
+          81.25,
+          46.32,
+          48.34,
+          44.97,
+          74.09
+        ],
+        "sentence_ter": [
+          80.0,
+          16.67,
+          75.0,
+          100.0,
+          50.0,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The wolf's shaman saw it.",
+          "The polar bear hurt a boy.",
+          "The hunter cured.",
+          "The teacher shot.",
+          "It came.",
+          "A hunter cured a hunter."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 4,
+          "latency_s": 1.15,
+          "accumulated_dict": "Qingmivit - dog, takujaatit - saw you, Inuuhuktuup - boy, iluaqhaiji - doctor, qukiqtanga - shot, Aanniqtutit - hurt yourself, aarqijaatit - cured you, iluaqhaijiup - doctor (possibly with a case marker or suffix indicating the subject performing the action)",
+          "accumulated_rules": "1. The language may have a subject-object-verb (SOV) word order, as seen in \"Inuuhuktuup iluaqhaiji qukiqtanga\" where 'boy' and 'doctor' precede the verb 'shot'.\n2. There might be a system of suffixes or case markers to indicate grammatical roles, as hinted by the difference between \"iluaqhaiji\" and \"iluaqhaijiup\".\n3. Verbs may agree with the object or have specific forms for certain pronouns, given the variations in verb forms like \"takujaatit\", \"qukiqtanga\", and \"aarqijaatit\".",
+          "metrics": {
+            "corpus_bleu": 4.57,
+            "corpus_chrfpp": 19.16,
+            "corpus_ter": 121.05,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              8.17,
+              6.57,
+              9.29
+            ],
+            "sentence_chrfpp": [
+              22.39,
+              11.32,
+              14.11,
+              29.38
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              150.0,
+              175.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Your dog saw you.",
+              "The boy shot the doctor.",
+              "Qingmivit takujaatit - Your dog saw you.",
+              "Inuuhuktuup iluaqhaiji qukiqtanga - The boy shot the doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 1.02,
+          "accumulated_dict": "Qingmivit - dog, takujaatit - saw you, Inuuhuktuup - boy, iluaqhaiji - doctor, qukiqtanga - shot, Aanniqtutit - hurt yourself, aarqijaatit - cured you, iluaqhaijiup - doctor (possibly with a case marker or suffix indicating the subject performing the action), iputujait - speared, angatkuq - shaman, iluaqhaijimik - doctor (possibly in a specific case or with a suffix indicating the object), aarqisijuq - cured",
+          "accumulated_rules": "1. The language may have a subject-object-verb (SOV) word order, as seen in \"Inuuhuktuup iluaqhaiji qukiqtanga\" where 'boy' and 'doctor' precede the verb 'shot'.\n2. There might be a system of suffixes or case markers to indicate grammatical roles, as hinted by the difference between \"iluaqhaiji\" and \"iluaqhaijiup\", and possibly between \"iluaqhaiji\" and \"iluaqhaijimik\".\n3. Verbs may agree with the object or have specific forms for certain pronouns, given the variations in verb forms like \"takujaatit\", \"qukiqtanga\", and \"aarqijaatit\".\n4. The suffix \"-mik\" might indicate an object or a specific grammatical role, as seen in \"iluaqhaijimik\".\n5. The verb \"aarqisijuq\" seems to be in a form similar to \"aarqijaatit\", suggesting a possible pattern in verb conjugation related to the subject or object.",
+          "metrics": {
+            "corpus_bleu": 5.43,
+            "corpus_chrfpp": 19.85,
+            "corpus_ter": 90.91,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              7.16
+            ],
+            "sentence_chrfpp": [
+              27.59,
+              12.26
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The shaman cured a doctor.",
+              "You speared the dog."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.14,
+          "accumulated_dict": "Qingmivit - dog, takujaatit - saw you, Inuuhuktuup - boy, iluaqhaiji - doctor, qukiqtanga - shot, Aanniqtutit - hurt yourself, aarqijaatit - cured you, iluaqhaijiup - doctor (possibly with a case marker or suffix indicating the subject performing the action), iputujait - speared, angatkuq - shaman, iluaqhaijimik - doctor (possibly in a specific case or with a suffix indicating the object), aarqisijuq - cured, Nanuq - polar bear, qaijuq - came, inuuhuktuit - your boy, aarqijanga - cured, angunahuktiup - hunter, amaruq - wolf, iputujanga - speared",
+          "accumulated_rules": "1. The language may have a subject-object-verb (SOV) word order, as seen in \"Inuuhuktuup iluaqhaiji qukiqtanga\" where 'boy' and 'doctor' precede the verb 'shot'.\n2. There might be a system of suffixes or case markers to indicate grammatical roles, as hinted by the difference between \"iluaqhaiji\" and \"iluaqhaijiup\", and possibly between \"iluaqhaiji\" and \"iluaqhaijimik\".\n3. Verbs may agree with the object or have specific forms for certain pronouns, given the variations in verb forms like \"takujaatit\", \"qukiqtanga\", and \"aarqijaatit\".\n4. The suffix \"-mik\" might indicate an object or a specific grammatical role, as seen in \"iluaqhaijimik\".\n5. The verb \"aarqisijuq\" seems to be in a form similar to \"aarqijaatit\", suggesting a possible pattern in verb conjugation related to the subject or object.\n6. The suffix \"-it\" might be related to a second person singular object, as seen in \"takujaatit\" and \"aarqijaatit\".\n7. The suffix \"-nga\" might be related to a third person singular object, as seen in \"qukiqtanga\" and \"aarqijanga\".\n8. The suffix \"-up\" might indicate the subject performing the action, as seen in \"iluaqhaijiup\" and \"angunahuktiup\".",
+          "metrics": {
+            "corpus_bleu": 9.66,
+            "corpus_chrfpp": 19.84,
+            "corpus_ter": 72.73,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              15.21
+            ],
+            "sentence_chrfpp": [
+              14.41,
+              24.65
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The polar bear came.",
+              "Your doctor cured your boy."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.9,
+          "accumulated_dict": "Qingmivit - dog, takujaatit - saw you, Inuuhuktuup - boy, iluaqhaiji - doctor, qukiqtanga - shot, Aanniqtutit - hurt yourself, aarqijaatit - cured you, iluaqhaijiup - doctor (possibly with a case marker or suffix indicating the subject performing the action), iputujait - speared, angatkuq - shaman, iluaqhaijimik - doctor (possibly in a specific case or with a suffix indicating the object), aarqisijuq - cured, Nanuq - polar bear, qaijuq - came, inuuhuktuit - your boy, aarqijanga - cured, angunahuktiup - hunter, amaruq - wolf, iputujanga - speared, Qingmiup - dog (possibly with a case marker or suffix indicating the subject performing the action), ilinniaqtitsijiit - teacher, ukiakhaqtutit - you fell, nanurmik - polar bear (possibly in a specific case or with a suffix indicating the object), qukiqsijuq - shot",
+          "accumulated_rules": "1. The language may have a subject-object-verb (SOV) word order, as seen in \"Inuuhuktuup iluaqhaiji qukiqtanga\" where 'boy' and 'doctor' precede the verb 'shot'.\n2. There might be a system of suffixes or case markers to indicate grammatical roles, as hinted by the difference between \"iluaqhaiji\" and \"iluaqhaijiup\", and possibly between \"iluaqhaiji\" and \"iluaqhaijimik\".\n3. Verbs may agree with the object or have specific forms for certain pronouns, given the variations in verb forms like \"takujaatit\", \"qukiqtanga\", and \"aarqijaatit\".\n4. The suffix \"-mik\" might indicate an object or a specific grammatical role, as seen in \"iluaqhaijimik\" and \"nanurmik\".\n5. The verb \"aarqisijuq\" seems to be in a form similar to \"aarqijaatit\", suggesting a possible pattern in verb conjugation related to the subject or object.\n6. The suffix \"-it\" might be related to a second person singular object, as seen in \"takujaatit\" and \"aarqijaatit\".\n7. The suffix \"-nga\" might be related to a third person singular object, as seen in \"qukiqtanga\" and \"aarqijanga\".\n8. The suffix \"-up\" might indicate the subject performing the action, as seen in \"iluaqhaijiup\" and \"angunahuktiup\".\n9. The language may use a specific suffix or case marker to indicate the subject of a sentence, as seen in \"Qingmiup\" and \"angunahuktiup\".\n10. The suffix \"-tutit\" might be related to a reflexive or second person singular subject, as seen in \"Aanniqtutit\" and \"Ukiakhaqtutit\".",
+          "metrics": {
+            "corpus_bleu": 4.45,
+            "corpus_chrfpp": 16.42,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              7.25,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              18.47,
+              8.03,
+              21.78
+            ],
+            "sentence_ter": [
+              60.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter shot a polar bear."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.43,
+        "corpus_chrfpp": 19.85,
+        "corpus_ter": 90.91,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          7.16
+        ],
+        "sentence_chrfpp": [
+          27.59,
+          12.26
+        ],
+        "sentence_ter": [
+          80.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The shaman cured a doctor.",
+          "You speared the dog."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy."
+        ],
+        "num_evaluated": 2
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 12,
+          "latency_s": 1.38,
+          "metrics": {
+            "corpus_bleu": 10.37,
+            "corpus_chrfpp": 46.42,
+            "corpus_ter": 76.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.62,
+              30.74,
+              14.06,
+              19.3,
+              34.67,
+              7.27
+            ],
+            "sentence_chrfpp": [
+              48.45,
+              60.8,
+              31.92,
+              60.96,
+              21.8,
+              36.02
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              75.0,
+              75.0,
+              50.0,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The wolf was seen by the shaman.",
+              "The polar bear hurt the boy.",
+              "The hunter was cured.",
+              "The teacher shot the doctor.",
+              "You fell.",
+              "The hunter was cured by the doctor."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 10.37,
+        "corpus_chrfpp": 46.42,
+        "corpus_ter": 76.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.62,
+          30.74,
+          14.06,
+          19.3,
+          34.67,
+          7.27
+        ],
+        "sentence_chrfpp": [
+          48.45,
+          60.8,
+          31.92,
+          60.96,
+          21.8,
+          36.02
+        ],
+        "sentence_ter": [
+          80.0,
+          33.33,
+          75.0,
+          75.0,
+          50.0,
+          150.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The wolf was seen by the shaman.",
+          "The polar bear hurt the boy.",
+          "The hunter was cured.",
+          "The teacher shot the doctor.",
+          "You fell.",
+          "The hunter was cured by the doctor."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 1.92,
+          "metrics": {
+            "corpus_bleu": 39.27,
+            "corpus_chrfpp": 58.35,
+            "corpus_ter": 48.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              37.99,
+              80.91,
+              14.06,
+              16.37,
+              100.0,
+              17.97
+            ],
+            "sentence_chrfpp": [
+              66.21,
+              81.25,
+              31.92,
+              48.34,
+              100.0,
+              44.27
+            ],
+            "sentence_ter": [
+              20.0,
+              16.67,
+              75.0,
+              100.0,
+              0.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw the shaman.",
+              "The polar bear hurt a boy.",
+              "The hunter was cured.",
+              "The teacher shot.",
+              "You came.",
+              "The shaman cured the hunter."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 1.89,
+          "metrics": {
+            "corpus_bleu": 2.95,
+            "corpus_chrfpp": 15.49,
+            "corpus_ter": 236.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              3.67,
+              3.09,
+              3.09,
+              3.09,
+              100.0,
+              3.09
+            ],
+            "sentence_chrfpp": [
+              13.64,
+              9.09,
+              12.3,
+              12.05,
+              100.0,
+              10.4
+            ],
+            "sentence_ter": [
+              220.0,
+              200.0,
+              300.0,
+              300.0,
+              0.0,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The provided examples do not contain enough information to translate this sentence.",
+              "The provided examples do not contain enough information to translate this sentence.",
+              "The provided examples do not contain enough information to translate this sentence.",
+              "The provided examples do not contain enough information to translate this sentence.",
+              "You came.",
+              "The provided examples do not contain enough information to translate this sentence."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 39.27,
+        "corpus_chrfpp": 58.35,
+        "corpus_ter": 48.0,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          37.99,
+          80.91,
+          14.06,
+          16.37,
+          100.0,
+          17.97
+        ],
+        "sentence_chrfpp": [
+          66.21,
+          81.25,
+          31.92,
+          48.34,
+          100.0,
+          44.27
+        ],
+        "sentence_ter": [
+          20.0,
+          16.67,
+          75.0,
+          100.0,
+          0.0,
+          75.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "hypotheses": [
+          "The wolf saw the shaman.",
+          "The polar bear hurt a boy.",
+          "The hunter was cured.",
+          "The teacher shot.",
+          "You came.",
+          "The shaman cured the hunter."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6
+      },
+      "delta": {
+        "bleu_delta": -36.32,
+        "chrf_delta": -42.86,
+        "ter_delta": 188.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.34,
+      "chrf": 5.75,
+      "ter": 1840.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence. However, please note that I'm not familiar with the language, and my translat",
+      "reference": "The wolf saw your shaman."
+    },
+    "baseline": {
+      "best_bleu": 35.69,
+      "best_chrf": 57.83,
+      "best_ter": 48.0,
+      "best_em": 16.67,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The wolf saw the shaman.",
+        "The polar bear hurt a boy.",
+        "The hunter was cured.",
+        "The teacher shot.",
+        "You came.",
+        "The shaman/doctor cured the hunter."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 41.52,
+      "best_chrf": 58.44,
+      "best_ter": 60.0,
+      "best_em": 0.0,
+      "num_steps": 11,
+      "best_hypotheses": [
+        "The wolf's shaman saw it.",
+        "The polar bear hurt a boy.",
+        "The hunter cured.",
+        "The teacher shot.",
+        "It came.",
+        "A hunter cured a hunter."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 5.43,
+      "best_chrf": 19.85,
+      "best_ter": 90.91,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "The shaman cured a doctor.",
+        "You speared the dog."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 10.37,
+      "best_chrf": 46.42,
+      "best_ter": 76.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The wolf was seen by the shaman.",
+        "The polar bear hurt the boy.",
+        "The hunter was cured.",
+        "The teacher shot the doctor.",
+        "You fell.",
+        "The hunter was cured by the doctor."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 39.27,
+      "best_chrf": 58.35,
+      "best_ter": 48.0,
+      "best_em": 16.67,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "The wolf saw the shaman.",
+        "The polar bear hurt a boy.",
+        "The hunter was cured.",
+        "The teacher shot.",
+        "You came.",
+        "The shaman cured the hunter."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "delta": {
+        "bleu_delta": -36.32,
+        "chrf_delta": -42.86,
+        "ter_delta": 188.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

@@ -1,103 +1,62 @@
 \chapter{Metodología y datos}
 \label{cap:metodologia}
 
-Este capítulo describe el diseño experimental del trabajo: el dataset utilizado, los modelos
-evaluados, las estrategias de prompting implementadas, el sistema de evaluación automática
-y el protocolo de análisis cualitativo.
+Este capítulo describe cómo se ha planteado la parte experimental del trabajo. En primer lugar, se presenta el conjunto de datos utilizado y los criterios seguidos para seleccionar los puzles. A continuación, se describen los modelos evaluados, las estrategias de prompting, las métricas empleadas y el análisis cualitativo realizado sobre un caso representativo.
 
 % ─────────────────────────────────────────────────────────────
 \section{Dataset: Linguini}
 \label{sec:dataset}
 % ─────────────────────────────────────────────────────────────
 
-Los experimentos utilizan puzzles extraídos del benchmark \textsc{Linguini}
-\citep{sanchez2024linguini}, que provienen del corpus de la Olimpiada Internacional de
-Lingüística (IOL). Se seleccionaron exclusivamente puzzles de tipo
-\textit{sequence transduction} (traducción), que es la categoría más adecuada para evaluar
-razonamiento metalingüístico inductivo y la única que permite comparación directa con los
-trabajos de referencia \citep{sanchez2024linguini,zhu2025evaluating}.
+Los experimentos se realizan sobre puzles extraídos del benchmark Linguini, construido a partir del corpus de la Olimpiada Internacional de Lingüística (IOL). Dentro de este benchmark se seleccionaron principalmente problemas de tipo \textit{sequence transduction}, ya que son los que mejor se ajustan al objetivo de este trabajo, que consiste en evaluar si un modelo puede deducir correspondencias entre una lengua poco conocida y el inglés a partir de un conjunto reducido de ejemplos. Esta categoría incluye tareas de traducción y permite comparar los resultados con trabajos previos que también utilizan Linguini como referencia \citep{sanchez2024linguini,zhu2025evaluating}.
 
 \subsection{Criterios de selección}
 
-Los criterios de selección de los puzzles fueron los siguientes:
-(1)~pertenecer a familias lingüísticas distintas entre sí, para maximizar la diversidad
-tipológica;
-(2)~disponer de al menos ocho pares de entrenamiento, para que la estrategia incremental
-tenga margen suficiente para construir conocimiento progresivo;
-(3)~disponer de al menos tres pares de test, para evitar que las métricas dependan de una
-única respuesta; y
-(4)~no presentar indicios claros de conocimiento previo por parte de los modelos evaluados,
-según el control exploratorio M0 (véase la Sección~\ref{subsec:m0}).
+La selección de puzles no se realizó de forma aleatoria, sino siguiendo varios criterios prácticos y lingüísticos. En primer lugar, se priorizaron lenguas pertenecientes a familias distintas, con el fin de aumentar la diversidad tipológica del conjunto. Como se ha señalado en la sección~\ref{sec:dificultades}, el rendimiento de los modelos puede variar según las propiedades lingüísticas del puzle y el tipo de problema que se le presenta. En segundo lugar, se seleccionaron los puzles que tuvieran al menos ocho pares de entrenamiento, ya que las estrategias incrementales necesitan varios pasos para poder construir y revisar hipótesis. En tercer lugar, se mantuvieron únicamente los puzles con al menos tres frases de test, para evitar que las métricas dependieran de una sola respuesta. Por último, se descartaron o revisaron los casos en los que el control exploratorio (verificación de contaminación de datos) indicaba posibles señales de conocimiento previo por parte del modelo (véase la sección~\ref{subsec:m0}).
 
-Se seleccionaron puzzles en ambas direcciones de traducción: de la lengua desconocida al
-inglés (\textit{lang2en}) y del inglés a la lengua desconocida (\textit{en2lang}). Esta doble
-dirección permite analizar si las estrategias de prompting son igualmente eficaces cuando el
-modelo debe producir morfología de una lengua que no conoce, en lugar de interpretar
-significado.
+El sistema experimental permite trabajar con puzles en dos direcciones: de la lengua desconocida al inglés (\textit{lang2en}) y del inglés a la lengua desconocida (\textit{en2lang}). Esta segunda dirección es especialmente interesante porque obliga al modelo a producir formas en una lengua que no conoce, no solo a interpretar su significado. No obstante, por razones de alcance y tiempo, el análisis principal de resultados se centra en la dirección \textit{lang2en}. Los puzles en dirección inversa se conservaron durante la preparación del conjunto de datos y quedan como base para una ampliación del trabajo.
 
-\subsection{Puzzles seleccionados}
+\subsection{Puzles seleccionados}
 
-El conjunto final comprende 16 puzzles en 11 lenguas y 10 familias lingüísticas distintas,
-cubriendo regiones geográficas de Asia, Oceanía, América y África. La
-Tabla~\ref{tab:puzzles} recoge las características de cada puzzle.
+El conjunto final comprende 11 puzles de traducción en dirección lengua desconocida~$\rightarrow$~inglés, correspondientes a 11 lenguas y 10 familias lingüísticas distintas Esta selección cubre regiones geográficas diversas, incluyendo Asia, Oceanía, América, África y América del Norte.
 
-\begin{table}[h]
+La Tabla~\ref{tab:puzzles_seleccionados} recoge las características principales de cada puzle. La columna ID corresponde al identificador original del problema dentro del dataset \textsc{Linguini}. Las columnas Train y Test indican, respectivamente, el número de frases de entrenamiento y de prueba utilizadas en cada puzle. Cabe mencionar que en la mayoría de los casos se utiliza el nombre de la lengua en español, y en el caso de que no exista o no se conozca una forma española asentada, se conserva el nombre original o el nombre empleado en el dataset.
+
+\begin{table}[ht]
 	\centering
-	\caption{Puzzles utilizados en los experimentos. Dir.: dirección de traducción
-		($\rightarrow$EN = lengua desconocida al inglés; EN$\rightarrow$ = inglés a lengua
-		desconocida).}
-	\label{tab:puzzles}
-	\resizebox{\textwidth}{!}{%
-		\begin{tabular}{llllccc}
-			\toprule
-			\textbf{ID} & \textbf{Lengua} & \textbf{Familia} & \textbf{Región} &
-			\textbf{Dir.} & \textbf{Train} & \textbf{Test} \\
-			\midrule
-			\texttt{012018020100} & Hakhun         & Sino-Tibetana    & India          & $\rightarrow$EN  & 10 & 6 \\
-			\texttt{012018020200} & Hakhun         & Sino-Tibetana    & India          & EN$\rightarrow$  & 10 & 4 \\
-			\texttt{012022030100} & N|uuki         & Tuu              & Sudáfrica      & $\rightarrow$EN  & 16 & 6 \\
-			\texttt{012022030200} & N|uuki         & Tuu              & Sudáfrica      & EN$\rightarrow$  & 16 & 6 \\
-			\texttt{012019010100} & Yonggom        & Trans-New Guinea & Papua-NG       & $\rightarrow$EN  & 11 & 6 \\
-			\texttt{012019010200} & Yonggom        & Trans-New Guinea & Papua-NG       & EN$\rightarrow$  & 11 & 4 \\
-			\texttt{012015040100} & Wambaya        & Mirndi           & Australia      & $\rightarrow$EN  & 17 & 6 \\
-			\texttt{012015040200} & Wambaya        & Mirndi           & Australia      & EN$\rightarrow$  & 17 & 5 \\
-			\texttt{012023020100} & Apurinã        & Arawakan         & Brasil         & $\rightarrow$EN  & 16 & 3 \\
-			\texttt{012023020300} & Apurinã        & Arawakan         & Brasil         & EN$\rightarrow$  & 16 & 6 \\
-			\texttt{012023030100} & Coastal Marind & Trans-New Guinea & Indonesia      & $\rightarrow$EN  & 17 & 5 \\
-			\texttt{012012010200} & Dyirbal        & Pama-Nyungan     & Australia      & $\rightarrow$EN  & 16 & 3 \\
-			\texttt{012016030100} & Kunuz Nubian   & Nilo-Saharan     & Egipto/Sudán   & $\rightarrow$EN  & 10 & 5 \\
-			\texttt{012008050100} & Inuktitut      & Eskimo-Aleut     & Canadá         & $\rightarrow$EN  & 12 & 6 \\
-			\texttt{012005010100} & Tzotzil        & Maya             & México         & $\rightarrow$EN  & 15 & 4 \\
-			\texttt{012006010100} & Lakhota        & Sioux            & EE.UU.         & $\rightarrow$EN  & 13 & 4 \\
-			\bottomrule
-		\end{tabular}%
-	}
+	\caption{Puzles utilizados en los experimentos. Benchmark \textsc{Linguini}.}
+	\label{tab:puzzles_seleccionados}
+	\begin{tabular}{l l l l c c}
+		\toprule
+		\textbf{ID} & \textbf{Lengua} & \textbf{Familia} & \textbf{Región} & \textbf{Train} & \textbf{Test} \\
+		\midrule
+		012018020100 & Hankun & Sino-Tibetana & India & 10 & 6 \\
+		012022030100 & Ngemba & Níger-Congo & Camerún & 16 & 6 \\
+		012019010100 & Yonggom & Trans-Nueva Guinea & Papúa-NG & 11 & 6 \\
+		012015040100 & Warlpiri & Pama-Ñungana & Australia & 17 & 6 \\
+		012023020100 & Apurinã & Arawak & Brasil & 16 & 3 \\
+		012023030100 & Marind costero & Anim & Indonesia & 17 & 5 \\
+		012012010200 & Dyirbal & Pama-Ñungana & Australia & 11 & 3 \\
+		012016030100 & Nubio kunuz & Nilo-Sahariana & Egipto/Sudán & 10 & 5 \\
+		012008050100 & Inuktitut & Eskaleut & Canadá & 12 & 6 \\
+		012005010100 & Tzeltal & Maya & México & 15 & 4 \\
+		012006010100 & Lakota & Siouan & EE.~UU. & 13 & 4 \\
+		\bottomrule
+	\end{tabular}
 \end{table}
-
-Cinco lenguas están representadas en ambas direcciones (Hakhun, N|uuki, Yonggom, Wambaya
-y Apurinã), lo que permite comparar directamente el rendimiento de cada estrategia en
-función de la dirección de traducción. Las lenguas restantes, con sus correspondientes
-familias, permiten analizar si los patrones observados dependen de la tipología lingüística o
-son generalizables.
 
 \subsection{Formato de los datos}
 
-Los puzzles de \textsc{Linguini} se distribuyen en formato JSONL. Para este trabajo se
-implementó un conversor que transforma cada problema al formato JSON del sistema
-experimental, con los campos \texttt{id}, \texttt{language}, \texttt{language\_family},
-\texttt{translation\_direction}, \texttt{train\_pairs} y \texttt{test\_pairs}. Este formato
-estandarizado permite añadir nuevos puzzles de forma sencilla y facilita la reproducibilidad
-de los experimentos.
+Los puzles de Linguini se distribuyen originalmente en formato JSONL (\textit{JSON Lines}), un formato en el que cada línea del archivo contiene un objeto JSON independiente. Para facilitar la ejecución de los experimentos, se implementó un conversor que transforma cada problema seleccionado en un archivo JSON independiente con una estructura homogénea. Cada archivo contiene los campos \texttt{id}, \texttt{language}, \texttt{language\_family}, \texttt{translation\_direction}, \texttt{train\_pairs} y \texttt{test\_pairs}. Esta conversión permite separar claramente los ejemplos que se incluyen en el prompt de las frases reservadas para evaluación, y facilita añadir nuevos puzles sin modificar el resto del sistema.
 
 % ─────────────────────────────────────────────────────────────
 \section{Modelos evaluados}
 \label{sec:modelos}
 % ─────────────────────────────────────────────────────────────
 
-Se evaluaron tres modelos de lenguaje de gran escala de distintos tamaños, todos accesibles
-mediante APIs gratuitas. Esta elección reduce el coste computacional y facilita la
-reproducibilidad del trabajo. La Tabla~\ref{tab:modelos} recoge sus características
-principales.
+Se evaluaron tres modelos de lenguaje de gran escala accesibles mediante APIs externas gratuitas. La elección de estos modelos responde a dos criterios: disponer de sistemas de distinto tamaño y mantener un coste computacional asumible durante el desarrollo del trabajo. La Tabla~\ref{tab:modelos} resume sus características principales.
+
+Los dos primeros modelos pertenecen a la familia Llama y permiten comparar el efecto del tamaño manteniendo una familia de modelos similar. El modelo GPT-OSS-120B se incorpora como modelo de mayor tamaño y de una familia diferente, además de ser un modelo de razonamiento, con el objetivo de comprobar si los patrones observados se mantienen más allá de los modelos Llama, que son modelos de lenguaje, no entrenados explícitamente para el razonamiento. No se proporcionan ejemplos adicionales de resolución fuera de los incluidos en cada estrategia, salvo en aquellas metodologías en las que esta información forma parte explícita del diseño experimental.
 
 \begin{table}[h]
 	\centering
@@ -106,8 +65,7 @@ principales.
 	\resizebox{\textwidth}{!}{%
 		\begin{tabular}{lllcll}
 			\toprule
-			\textbf{Denominación} & \textbf{Modelo} & \textbf{Organización} &
-			\textbf{Parámetros} & \textbf{Tier} & \textbf{API} \\
+			\textbf{Denominación} & \textbf{Modelo} & \textbf{Organización} & \textbf{Parámetros} & \textbf{Nivel} & \textbf{API} \\
 			\midrule
 			Llama-8B     & Llama 3.1 8B Instant     & Meta   & 8B   & Débil  & Groq \\
 			Llama-70B    & Llama 3.3 70B Versatile  & Meta   & 70B  & Medio  & Groq \\
@@ -117,80 +75,31 @@ principales.
 	}
 \end{table}
 
-Los tres modelos son transformers \textit{decoder-only}, por lo que la diferencia principal
-entre ellos es el tamaño (número de parámetros) y el proceso de preentrenamiento. La
-elección de dos modelos de la familia Llama en tamaños diferentes (8B y 70B) permite
-estudiar el efecto del tamaño manteniendo una arquitectura comparable. El tercer modelo
-(GPT-OSS-120B) pertenece a una organización distinta y tiene un proceso de
-preentrenamiento diferente, lo que añade diversidad a la comparación y permite analizar si
-los patrones observados son específicos de los modelos Llama o generalizables.
-
-Todos los modelos se emplean con temperatura cero (\texttt{temperature=0}) para reducir
-la variabilidad entre ejecuciones, y sin ejemplos adicionales del formato de respuesta
-esperado más allá de los propios del puzzle.
-
 % ─────────────────────────────────────────────────────────────
 \section{Estrategias de prompting}
 \label{sec:estrategias}
 % ─────────────────────────────────────────────────────────────
 
-Se diseñó un control exploratorio previo, identificado como M0, y cinco estrategias de
-traducción, identificadas como M1 a M5. Las cinco estrategias de traducción comparten una
-instrucción metalingüística base. Además, se plantea una extensión futura de M2 basada en
-la exploración exhaustiva de combinaciones de ejemplos.
+Se diseñó un control exploratorio previo, que vamos a identificar como M0, y cinco estrategias principales de traducción, identificadas como M1 a M5. Todas las estrategias de traducción comparten una misma instrucción metalingüística base, pero se diferencian en la forma de presentar los ejemplos al modelo y en el tipo de razonamiento que se le solicita.
 
 \subsection{Instrucción metalingüística base}
 
-Las estrategias M1 a M5 parten de una instrucción común que establece el marco de
-razonamiento del modelo: actuar como analista lingüístico que nunca ha visto la lengua
-objetivo, razonar exclusivamente a partir de los ejemplos proporcionados y tratar todas las
-hipótesis como provisionales y revisables. Específicamente, se le indica que no utilice
-conocimiento previo sobre la lengua o su familia, que construya explícitamente un
-diccionario y reglas gramaticales, y que muestre su razonamiento antes de llegar a ninguna
-conclusión. Este enfoque se inspira en el prompting metalingüístico de
-\citet{zhu2025evaluating} y en los principios del \textit{chain-of-thought}
-\citep{wei2022chain}.
+Las estrategias M1 a M5 parten de una instrucción común que define el papel del modelo durante la resolución. Se le pide que actúe como un analista lingüístico que nunca ha visto la lengua del puzle, que razone únicamente a partir de los ejemplos proporcionados y que trate sus hipótesis como provisionales. También se le indica que no utilice conocimiento previo sobre la lengua ni sobre su familia lingüística, y que construya explícitamente un diccionario y un conjunto de reglas gramaticales antes de producir las traducciones finales.
+
+Esta instrucción busca forzar un comportamiento más cercano al concepto de razonamiento metalingüístico: observar ejemplos, identificar patrones, proponer reglas y aplicarlas de forma sistemática. El planteamiento se inspira en el prompting metalingüístico de \citet{zhu2025evaluating} y en los principios del \textit{chain-of-thought} \citep{wei2022chain}, aunque en este trabajo se adapta al formato concreto de los puzles de Linguini.
 
 \subsection{M0: Control exploratorio previo}
 \label{subsec:m0}
 
-Antes de ejecutar las estrategias de traducción, M0 intenta detectar posibles indicios de
-conocimiento previo de la lengua del puzzle. Se presenta al modelo una única frase del
-conjunto de test sin ningún contexto y se le pide que intente traducirla. Si el modelo produce
-una traducción con chrF++ igual o superior a 20, se considera que podría existir conocimiento
-previo y el experimento se marca para revisión manual.
+Antes de ejecutar las estrategias de traducción, se aplica un control exploratorio previo para detectar posibles indicios de conocimiento de la lengua por parte del modelo. En esta prueba, el modelo recibe una única frase del conjunto de test sin ningún ejemplo de entrenamiento y se le pide que intente traducirla. El objetivo no es evaluar todavía la capacidad de aprendizaje in-context, sino comprobar si el modelo parece conocer la respuesta antes de recibir los pares de traducción del puzle. Para dicha comprobación se utiliza chrF++, que es una métrica automática que compara la respuesta generada con la referencia esperada a partir de coincidencias de caracteres y palabras. Esta métrica resulta adecuada en este caso porque permite detectar similitudes parciales entre dos frases, incluso cuando no coinciden exactamente. Por ejemplo, si la traducción esperada fuera \textit{the man sees the dog} y el modelo respondiera \textit{a man sees a dog}, la respuesta no sería una coincidencia exacta, pero sí compartiría buena parte de sus caracteres y palabras. Por este motivo, chrF++ puede servir como una señal aproximada de cercanía entre la traducción generada y la solución esperada.
 
-Este control no permite demostrar que el modelo desconozca completamente la lengua. Su
-objetivo es detectar casos potencialmente problemáticos antes de interpretar los resultados
-de M1--M5.
+Por ello, si la traducción obtenida alcanza una puntuación chrF++ igual o superior a 20, el caso se marca para revisión manual, ya que podría indicar que el modelo posee algún conocimiento de la lengua (como claramente es el caso del ejemplo mencionado anteriormente) y, por lo tanto, podría existir contaminación de datos. No interpretaremos ese umbral como una prueba definitiva, sino como una señal de alerta. Es importante mencionar que en muchos casos, una traducción generada al azar puede compartir algunas palabras o caracteres con la referencia, especialmente en frases cortas o con palabras frecuentes como artículos, pronombres o nombres propios. Por este motivo, una puntuación inferior a 20 se considera compatible con una respuesta poco informada, mientras que una puntuación igual o superior merece ser revisada manualmente antes de incluir el puzle en los experimentos principales.
 
-\begin{figure}[ht]
+El funcionamiento general de este control exploratorio se resume en la Figura~\ref{fig:metodologia-m0}.
+
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=2cm, auto]
-		\node (titulo) [text width=12cm, align=center]
-		{\textbf{M0 --- Control exploratorio previo}\\
-			\small ¿Existen indicios de conocimiento previo de la lengua?};
-		
-		\node (entrada) [rectverde, below of=titulo, yshift=-0.4cm, text width=4.4cm]
-		{\textbf{Una frase de test}\\sin contexto de entrenamiento};
-		
-		\node (modelo) [rectvioleta, right of=entrada, xshift=4.8cm, text width=3cm]
-		{\textbf{Modelo}\\traducción libre};
-		
-		\node (salida) [rectamarillo, right of=modelo, xshift=5cm, text width=5cm]
-		{\textbf{chrF++ inferior a 20}\\
-			no se detectan indicios claros\\
-			$\rightarrow$ continuar con M1--M5};
-		
-		\node (nota) [rectnaranja, below of=modelo, yshift=-1.4cm, text width=9.5cm]
-		{Si chrF++ es igual o superior a 20, el caso se marca para revisión manual.
-			El control es heurístico.};
-		
-		\draw[arrow] (entrada) -- (modelo);
-		\draw[arrow] (modelo) -- (salida);
-		\end{tikzpicture}%
-	}
+	\includegraphics[width=0.9\textwidth]{figuras_png/M0_control_exploratorio.png}
 	\caption{Funcionamiento del control exploratorio previo M0.}
 	\label{fig:metodologia-m0}
 \end{figure}
@@ -198,139 +107,47 @@ de M1--M5.
 \subsection{M1: Baseline}
 \label{subsec:baseline}
 
-La estrategia baseline proporciona al modelo todos los pares de entrenamiento del puzzle
-en un único prompt y le pide que genere directamente el diccionario, las reglas gramaticales
-y las traducciones de las frases de test. Esta estrategia replica el prompting directo
-utilizado como referencia en \citet{sanchez2024linguini} y sirve como punto de comparación
-para las demás estrategias.
+M1 es la estrategia de referencia. En ella, el modelo recibe todos los pares de entrenamiento del puzle en un único prompt y debe producir directamente tres elementos: un diccionario, un conjunto de reglas gramaticales y las traducciones de las frases de test.
 
-\begin{figure}[ht]
+Esta estrategia permite medir el rendimiento del modelo en una configuración sencilla, equivalente al prompting directo utilizado como punto de partida en trabajos previos como \citet{sanchez2024linguini}. Su función dentro del experimento es servir como baseline frente al que comparar las demás metodologías. El funcionamiento general de esta estrategia se resume en la Figura~\ref{fig:metodologia-m1}.
+
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=2cm, auto]
-		\node (titulo) [text width=12cm, align=center]
-		{\textbf{M1 --- Baseline}\\
-			\small Todos los ejemplos de entrenamiento se presentan en un único prompt};
-		
-		\node (entrada) [rectverde, below of=titulo, yshift=-0.4cm, text width=5cm]
-		{\textbf{$n$ pares de entrenamiento}\\
-			$f_1 \rightarrow t_1$\\
-			$f_2 \rightarrow t_2$\\
-			$\cdots$\\
-			$f_n \rightarrow t_n$\\[1mm]
-			+ instrucción metalingüística\\
-			+ frases de test sin respuesta};
-		
-		\node (modelo) [rectvioleta, right of=entrada, xshift=5cm, text width=3cm]
-		{\textbf{Modelo}\\una llamada a la API};
-		
-		\node (salida) [rectamarillo, right of=modelo, xshift=5cm, text width=5.2cm]
-		{\textbf{Respuesta única}\\
-			\texttt{DICTIONARY: ...}\\
-			\texttt{GRAMMAR RULES: ...}\\
-			\texttt{TRANSLATIONS: ...}};
-		
-		\draw[arrow] (entrada) -- (modelo);
-		\draw[arrow] (modelo) -- (salida);
-		\end{tikzpicture}%
-	}
+	\includegraphics[width=0.9\textwidth]{figuras_png/M1_baseline.png}
 	\caption{Funcionamiento de la estrategia baseline M1.}
 	\label{fig:metodologia-m1}
 \end{figure}
 
+Los prompts completos utilizados para esta estrategia, así como para el resto de metodologías evaluadas, se presentan en el Capítulo~\ref{cap:desarrollo}.
+
 \subsection{M2: Presentación incremental acumulativa}
 \label{subsec:incremental}
 
-La estrategia incremental constituye la aportación metodológica principal de este trabajo.
-En lugar de presentar todos los ejemplos de golpe, se presentan prefijos de tamaño
-creciente: primero las dos primeras frases, luego las tres primeras y así sucesivamente hasta
-presentar las $n$ frases de entrenamiento, para un total de $\min(n-1, 15)$ pasos.
+M2 es la estrategia incremental del trabajo. A diferencia de M1, no presenta todos los ejemplos de entrenamiento desde el principio. En su lugar, los ejemplos se incorporan progresivamente mediante prefijos de tamaño creciente: primero las dos primeras frases, después las tres primeras, y así sucesivamente hasta llegar al conjunto completo de entrenamiento. Para evitar ejecuciones excesivamente largas en puzles con muchos ejemplos, además de la limitación de tokens diarios, el número máximo de pasos se limita a $\min(n-1, 15)$.
 
-En cada paso, el modelo recibe el subconjunto de frases junto con su hipótesis acumulada
-del paso anterior (diccionario y reglas) y debe realizar cuatro operaciones en orden:
+En cada paso, el modelo recibe los nuevos ejemplos junto con la hipótesis acumulada del paso anterior, formada por el diccionario y las reglas gramaticales ya inferidas. A partir de esa información debe revisar su análisis y producir una versión actualizada de sus hipótesis.
+
+El prompt de M2 obliga al modelo a seguir cuatro fases:
 
 \begin{enumerate}
-	\item \textbf{Análisis} (\textsc{step~a}): razonar explícitamente sobre los nuevos
-	ejemplos antes de actualizar ninguna hipótesis, identificando morfemas y detectando
-	contradicciones con el conocimiento previo.
+	\item \textbf{Análisis} (\textsc{step~a}): razonar sobre los nuevos ejemplos antes de actualizar ninguna hipótesis, identificando posibles morfemas, correspondencias léxicas y contradicciones con reglas anteriores.
 	
-	\item \textbf{Diccionario revisado} (\textsc{step~b}): actualizar el diccionario añadiendo
-	entradas nuevas, corrigiendo entradas imprecisas y eliminando entradas refutadas
-	(marcadas como \texttt{[DELETED: razón]}).
+	\item \textbf{Diccionario revisado} (\textsc{step~b}): añadir nuevas entradas, corregir entradas imprecisas y eliminar aquellas que hayan quedado refutadas por los nuevos ejemplos. Las eliminaciones se marcan explícitamente con el formato \texttt{[DELETED: razón]}.
 	
-	\item \textbf{Reglas revisadas} (\textsc{step~c}): actualizar el conjunto de reglas
-	gramaticales con la misma lógica.
+	\item \textbf{Reglas revisadas} (\textsc{step~c}): actualizar las reglas gramaticales con la misma lógica, manteniendo solo aquellas que sean compatibles con la evidencia disponible.
 	
-	\item \textbf{Traducciones} (\textsc{step~d}): traducir las frases de test usando el
-	diccionario y las reglas actualizados.
+	\item \textbf{Traducciones} (\textsc{step~d}): traducir las frases de test utilizando el diccionario y las reglas actualizadas.
 \end{enumerate}
 
-La posibilidad explícita de eliminar hipótesis erróneas es un elemento diferencial respecto
-a otras estrategias incrementales, en las que el conocimiento acumulado tiende únicamente
-a crecer. Se fundamenta en la observación de que los modelos pueden mantener hipótesis
-incorrectas incluso cuando reciben evidencia contradictoria si el prompt no les obliga
-explícitamente a revisarlas \citep{zhu2025evaluating}.
+La parte más importante de M2 no es solo que el modelo reciba los ejemplos poco a poco, sino que se le obliga a revisar lo que ya había formulado. Esta decisión se toma porque, durante las pruebas iniciales, los modelos tendían a mantener reglas incorrectas incluso cuando aparecían ejemplos que las contradecían. Por ello, el prompt no plantea el conocimiento acumulado como definitivo, sino como una hipótesis revisable.
 
-Para la comparación principal entre metodologías se utiliza el último paso de M2, en el que
-el modelo ha recibido todos los ejemplos. El mejor paso observado según chrF++ se conserva
-como información diagnóstica para analizar la evolución y la estabilidad del aprendizaje
-incremental.
+Para la comparación principal entre metodologías se utiliza el último paso de M2, es decir, aquel en el que el modelo ya ha recibido todos los ejemplos de entrenamiento. El mejor paso observado según chrF++ se conserva únicamente como información diagnóstica, útil para estudiar si el rendimiento mejora de forma progresiva o si se degrada al añadir más contexto, caso que, como veremos, suele ocurrir con frecuencia.
 
-\begin{figure}[ht]
+El funcionamiento general de la estrategia incremental acumulativa se muestra en la Figura~\ref{fig:metodologia-m2}.
+
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=1.5cm, auto]
-		\node (titulo) [text width=13cm, align=center]
-		{\textbf{M2 --- Presentación incremental acumulativa}\\
-			\small En cada paso se añade una frase nueva y se revisa el conocimiento acumulado};
-		
-		\node (entrada1) [rectverde, below of=titulo, yshift=-0.5cm, text width=4.7cm]
-		{\textbf{Paso 1}\\
-			$f_1$, $f_2$};
-		
-		\node (modelo1) [rectvioleta, right of=entrada1, xshift=4.3cm, text width=3cm]
-		{\textbf{Modelo}\\analiza e infiere};
-		
-		\node (salida1) [rectamarillo, right of=modelo1, xshift=5cm, text width=5.5cm]
-		{\textbf{Diccionario v1 + reglas v1}\\
-			traducciones de test};
-		
-		\node (entrada2) [rectverde, below of=entrada1, yshift=-1.1cm, text width=4.7cm]
-		{\textbf{Paso 2}\\
-			$f_1$, $f_2$, $f_3$\\
-			+ diccionario v1 + reglas v1};
-		
-		\node (modelo2) [rectvioleta, right of=entrada2, xshift=4.3cm, text width=3cm]
-		{\textbf{Modelo}\\analiza y revisa};
-		
-		\node (salida2) [rectamarillo, right of=modelo2, xshift=5cm, text width=5.5cm]
-		{\textbf{Diccionario v2 + reglas v2}\\
-			confirma, corrige o elimina hipótesis\\
-			+ traducciones de test};
-		
-		\node (puntos) [below of=entrada2, yshift=-0.7cm]
-		{\Large $\vdots$};
-		
-		\node (entradan) [rectverde, below of=puntos, yshift=-0.7cm, text width=4.7cm]
-		{\textbf{Paso final}\\
-			$f_1$, $f_2$, \ldots, $f_n$\\
-			+ conocimiento acumulado};
-		
-		\node (modelon) [rectvioleta, right of=entradan, xshift=4.3cm, text width=3cm]
-		{\textbf{Modelo}\\revisión final};
-		
-		\node (salidan) [rectamarillo, right of=modelon, xshift=5cm, text width=5.5cm]
-		{\textbf{Diccionario final + reglas finales}\\
-			traducciones de test del último paso};
-		
-		\draw[arrow] (entrada1) -- (modelo1);
-		\draw[arrow] (modelo1) -- (salida1);
-		\draw[arrow] (entrada2) -- (modelo2);
-		\draw[arrow] (modelo2) -- (salida2);
-		\draw[arrow] (entradan) -- (modelon);
-		\draw[arrow] (modelon) -- (salidan);
-		\end{tikzpicture}%
-	}
+	\includegraphics[width=\textwidth]{figuras_png/M2_incremental_acumulativa.png}
 	\caption{Funcionamiento de la estrategia incremental acumulativa M2.}
 	\label{fig:metodologia-m2}
 \end{figure}
@@ -338,178 +155,58 @@ incremental.
 \subsection{M2.2: Exploración combinatoria por tamaños crecientes}
 \label{subsec:incremental-combinatoria}
 
-Como ampliación de M2, se plantea una variante que recorre todas las combinaciones posibles
-de frases de entrenamiento. Primero se evalúan todas las parejas, después todas las ternas y
-así sucesivamente hasta llegar al conjunto completo. Esta variante permitirá estudiar si el
-resultado depende del orden concreto en el que aparecen los ejemplos.
+M2.2 se plantea como una extensión de la estrategia incremental. Mientras que M2 utiliza siempre prefijos del conjunto de entrenamiento, M2.2 evaluaría todas las combinaciones posibles de ejemplos para cada tamaño de subconjunto: primero todas las parejas, después todas las ternas, y así sucesivamente hasta llegar al conjunto completo. El objetivo de esta variante sería estudiar si el rendimiento depende del orden y de la selección concreta de los ejemplos. En M2, una hipótesis inicial puede quedar condicionada por las primeras frases del puzle. Con M2.2 sería posible comprobar si otros subconjuntos iniciales conducen a reglas más estables o a mejores traducciones finales.
 
-La implementación y evaluación completa de esta estrategia se incorporará en una fase
-posterior del trabajo.
+Sin embargo, como ya se ha indicado en las limitaciones del trabajo, el coste computacional de esta variante crece rápidamente con el número de ejemplos de entrenamiento. Por este motivo, en este trabajo se deja planteada como ampliación metodológica, pero su evaluación completa para todos los puzles seleccionados queda fuera del alcance principal de la entrega. La Figura~\ref{fig:metodologia-m22} muestra de forma esquemática cómo crecería el número de combinaciones en un caso reducido con cuatro frases de entrenamiento.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=1.1cm, auto]
-		\node (titulo) [text width=14cm, align=center]
-		{\textbf{M2.2 --- Exploración combinatoria por tamaños crecientes}\\
-			\small Ejemplo con $n=4$ frases de entrenamiento};
-		
-		\node (k2) [rectverde, below of=titulo, yshift=-0.5cm, text width=4.8cm]
-		{\textbf{$k=2$: $\binom{4}{2}=6$ combinaciones}\\
-			$(f_1,f_2)$ \quad $(f_1,f_3)$ \quad $(f_1,f_4)$\\
-			$(f_2,f_3)$ \quad $(f_2,f_4)$ \quad $(f_3,f_4)$};
-		
-		\node (k3) [rectverde, below of=k2, yshift=-0.7cm, text width=4.8cm]
-		{\textbf{$k=3$: $\binom{4}{3}=4$ combinaciones}\\
-			$(f_1,f_2,f_3)$ \quad $(f_1,f_2,f_4)$\\
-			$(f_1,f_3,f_4)$ \quad $(f_2,f_3,f_4)$};
-		
-		\node (k4) [rectverde, below of=k3, yshift=-0.7cm, text width=4.8cm]
-		{\textbf{$k=4$: $\binom{4}{4}=1$ combinación}\\
-			$(f_1,f_2,f_3,f_4)$};
-		
-		\node (modelo) [rectvioleta, right of=k3, xshift=5.1cm, text width=3.2cm]
-		{\textbf{Modelo}\\
-			una llamada por combinación};
-		
-		\node (salida) [rectamarillo, right of=modelo, xshift=5cm, text width=5.2cm]
-		{\textbf{Resultado por iteración}\\
-			diccionario + reglas\\
-			+ traducciones de test};
-		
-		\node (coste) [rectnaranja, below of=salida, yshift=-1cm, text width=6.3cm]
-		{\textbf{Coste computacional}\\
-			Con $n=10$: $\sum_{k=2}^{10}\binom{10}{k}=1013$ iteraciones};
-		
-		\draw[arrow] (k2.east) -- (modelo.north west);
-		\draw[arrow] (k3) -- (modelo);
-		\draw[arrow] (k4.east) -- (modelo.south west);
-		\draw[arrow] (modelo) -- (salida);
-		\end{tikzpicture}%
-	}
-	\caption{Extensión planificada de M2 mediante la exploración exhaustiva de
-		combinaciones de ejemplos.}
+	\includegraphics[width=\textwidth]{figuras_png/M2_2_exploracion_combinatoria.png}
+	\caption{Extensión planificada de M2 mediante la exploración exhaustiva de combinaciones de ejemplos.}
 	\label{fig:metodologia-m22}
 \end{figure}
 
 \subsection{M3: Step-by-step lingüístico}
 \label{subsec:stepbystep}
 
-La estrategia step-by-step está inspirada en \citet{zhu2025evaluating} y organiza la
-presentación de los ejemplos según una jerarquía lingüística de cuatro etapas:
+M3 está inspirada en la estrategia de descomposición lingüística propuesta por \citet{zhu2025evaluating}. En lugar de introducir los ejemplos mediante prefijos crecientes, como en M2, esta metodología organiza el proceso de resolución en cuatro etapas asociadas a niveles de análisis lingüístico: léxico, fonología, morfosintaxis y sintaxis.
+
+La división utilizada por \citet{zhu2025evaluating} es la siguiente:
 
 \begin{enumerate}
-	\item \textbf{Léxico} (35\,\% de los ejemplos): frases simples para identificar
-	vocabulario básico y orden de palabras fundamental.
-	\item \textbf{Fonología} (15\,\% de los ejemplos): frases que exhiben variaciones
-	fonológicas (alternancias vocálicas, alófonos, asimilaciones).
-	\item \textbf{Morfosintaxis} (30\,\% de los ejemplos): frases con concordancia de
-	persona, número, tiempo y aspecto.
-	\item \textbf{Sintaxis} (20\,\% de los ejemplos): frases con estructuras complejas
-	(negación, interrogación, subordinación).
+	\item \textbf{Léxico} (35\,\% de los ejemplos): se presentan ejemplos orientados a identificar vocabulario básico y patrones generales de orden de palabras.
+	
+	\item \textbf{Fonología} (15\,\% de los ejemplos): se introducen ejemplos que podrían ayudar a detectar variaciones fonológicas, como alternancias vocálicas, cambios consonánticos o formas relacionadas de un mismo morfema.
+	
+	\item \textbf{Morfosintaxis} (30\,\% de los ejemplos): se añaden ejemplos dirigidos a identificar marcas de persona, número, tiempo, aspecto, caso, concordancia u otros rasgos gramaticales.
+	
+	\item \textbf{Sintaxis} (20\,\% de los ejemplos): se incorporan los ejemplos restantes para integrar las reglas anteriores y resolver estructuras más complejas.
 \end{enumerate}
 
-Esta partición es heurística cuando los puzzles carecen de anotación lingüística explícita,
-como ocurre en \textsc{Linguini}. La asignación de los ejemplos a cada etapa se realiza según
-su posición en el conjunto de entrenamiento y no garantiza que cada bloque contenga
-exclusivamente el fenómeno indicado. Al igual que en M2, el modelo acumula diccionario y
-reglas entre etapas y puede corregir hipótesis previas.
+En cada etapa, el modelo recibe los ejemplos correspondientes junto con el diccionario y las reglas acumuladas en las etapas anteriores. A partir de esa información debe revisar sus hipótesis y traducir las frases de test usando todo el conocimiento disponible hasta ese momento.
 
-\begin{figure}[ht]
+Es importante señalar que esta partición es heurística. Los puzles de \textsc{Linguini} no incluyen una anotación explícita que indique qué ejemplos corresponden a léxico, fonología, morfosintaxis o sintaxis. Por ello, la asignación se realiza según la posición de los ejemplos en el conjunto de entrenamiento y no garantiza que cada bloque contenga exactamente el fenómeno lingüístico indicado. M3 debe interpretarse, por tanto, como una aproximación guiada lingüísticamente, no como una descomposición perfecta de cada puzle.
+El funcionamiento general de esta estrategia se resume en la Figura~\ref{fig:metodologia-m3}.
+
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=2cm, auto]
-		\node (titulo) [text width=13cm, align=center]
-		{\textbf{M3 --- Step-by-step lingüístico}\\
-			\small Cuatro etapas en orden fijo con acumulación de conocimiento};
-		
-		\node (lexico) [rectverde, below of=titulo, yshift=-0.5cm, text width=3cm]
-		{\textbf{1. Léxico}\\35\,\%};
-		
-		\node (fonologia) [rectvioleta, right of=lexico, xshift=3cm, text width=3cm]
-		{\textbf{2. Fonología}\\15\,\%};
-		
-		\node (morfosintaxis) [rectamarillo, right of=fonologia, xshift=3cm, text width=3cm]
-		{\textbf{3. Morfosintaxis}\\30\,\%};
-		
-		\node (sintaxis) [rectnaranja, right of=morfosintaxis, xshift=3cm, text width=3cm]
-		{\textbf{4. Sintaxis}\\20\,\%};
-		
-		\node (salida) [rectamarillo, below of=fonologia, xshift=3cm, yshift=-1.2cm,
-		text width=9.5cm]
-		{\textbf{En cada etapa, el modelo recibe:}\\
-			ejemplos de la etapa actual + diccionario y reglas acumulados\\
-			$\rightarrow$ genera conocimiento revisado y traducciones de test};
-		
-		\node (nota) [rectnaranja, below of=salida, yshift=-1cm, text width=9.5cm]
-		{\textbf{Limitación:} la partición es heurística y no está curada manualmente
-			según el nivel lingüístico real.};
-		
-		\draw[arrow] (lexico) -- (fonologia);
-		\draw[arrow] (fonologia) -- (morfosintaxis);
-		\draw[arrow] (morfosintaxis) -- (sintaxis);
-		\draw[arrow] (morfosintaxis) -- (salida);
-		\end{tikzpicture}%
-	}
-	\caption{Funcionamiento de la estrategia step-by-step lingüística M3.}
+	\includegraphics[width=\textwidth]{figuras_png/M3_step_by_step.png}
+	\caption{Funcionamiento de la estrategia paso a paso lingüística M3.}
 	\label{fig:metodologia-m3}
 \end{figure}
 
 \subsection{M4: Inspiración humana}
 \label{subsec:humana}
 
-La estrategia de inspiración humana proporciona al modelo el razonamiento explícito de una
-persona resolviendo un puzzle diferente, para guiar el proceso inductivo. El razonamiento
-utilizado como ejemplo es la resolución detallada del puzzle de Hakhun (véase la
-Sección~\ref{sec:cualitativo}), que incluye los patrones identificados en cada frase, las
-hipótesis provisionales formuladas y cómo se corrigen o confirman.
+M4 introduce una guía basada en una resolución humana. La idea es proporcionar al modelo el razonamiento explícito de una persona resolviendo un puzle diferente, para que pueda imitar el proceso de análisis sin copiar el contenido lingüístico. Esta estrategia se relaciona con los \textit{think-aloud protocols}, una técnica de análisis cognitivo en la que una persona verbaliza sus pensamientos mientras resuelve una tarea \citep{ericsson1993protocol}. El ejemplo utilizado se construyó a partir de una resolución propia y detallada del puzle de Hankun (véase la Sección~\ref{sec:cualitativo}). En esa resolución se muestran los pasos seguidos para identificar elementos invariantes, aislar posibles morfemas, formular hipótesis provisionales y corregirlas a medida que aparecen nuevos datos.
 
-El modelo recibe este razonamiento como referencia de proceso, no de contenido: se le indica
-explícitamente que no transfiera vocabulario ni reglas del ejemplo. El objetivo es que el
-modelo imite la estrategia de análisis (identificar invariantes, aislar morfemas y revisar
-hipótesis progresivamente) aplicándola a una nueva lengua.
+El modelo recibe este razonamiento como referencia de proceso, no como fuente de reglas aplicables al nuevo puzle. Por ello, el prompt indica explícitamente que no debe transferir vocabulario ni reglas del ejemplo humano a la lengua que debe resolver. El objetivo es que reproduzca una forma de analizar: comparar ejemplos, detectar regularidades y revisar hipótesis.
 
-Para evitar una fuga directa de información, M4 no se ejecuta sobre ningún puzzle de
-Hakhun, independientemente de la dirección de traducción.
+Cabe mencionar que para evitar una fuga directa de información, M4 no se ejecuta sobre ningún puzle de Hankun. De esta manera, el puzle usado como ejemplo humano no coincide con ninguno de los casos evaluados bajo esta estrategia. El funcionamiento general de M4 se resume en la Figura~\ref{fig:metodologia-m4}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=2cm, auto]
-		\node (titulo) [text width=13cm, align=center]
-		{\textbf{M4 --- Inspiración humana}\\
-			\small Una resolución humana guía el proceso inductivo aplicado a otra lengua};
-		
-		\node (humano) [rectamarillo, below of=titulo, yshift=-0.5cm, text width=4.7cm]
-		{\textbf{Resolución humana de Hakhun}\\
-			análisis paso a paso\\
-			identificación de patrones\\
-			revisión de hipótesis};
-		
-		\node (nuevo) [rectverde, below of=humano, yshift=-0.8cm, text width=4.7cm]
-		{\textbf{Puzzle nuevo}\\
-			pares de entrenamiento\\
-			+ frases de test};
-		
-		\node (modelo) [rectvioleta, right of=nuevo, xshift=5cm, text width=3.4cm]
-		{\textbf{Modelo}\\
-			imita el proceso,\\
-			no el contenido};
-		
-		\node (salida) [rectamarillo, right of=modelo, xshift=5cm, text width=5.3cm]
-		{\textbf{Respuesta final}\\
-			diccionario + reglas\\
-			+ traducciones de test};
-		
-		\node (nota) [rectnaranja, below of=modelo, yshift=-1.5cm, text width=8.8cm]
-		{M4 no se ejecuta sobre ningún puzzle de Hakhun para evitar fuga de
-			información.};
-		
-		\draw[arrow] (humano.east) -- (modelo.north west);
-		\draw[arrow] (nuevo) -- (modelo);
-		\draw[arrow] (modelo) -- (salida);
-		\end{tikzpicture}%
-	}
+	\includegraphics[width=\textwidth]{figuras_png/M4_inspiracion_humana.png}
 	\caption{Funcionamiento de la estrategia de inspiración humana M4.}
 	\label{fig:metodologia-m4}
 \end{figure}
@@ -517,62 +214,13 @@ Hakhun, independientemente de la dirección de traducción.
 \subsection{M5: Autocorrección iterativa}
 \label{subsec:autocorreccion}
 
-La estrategia de autocorrección iterativa está inspirada en el paradigma
-\textit{Self-Refine} \citep{madaan2023selfrefine} y opera en dos turnos. En el primer turno,
-el modelo realiza una traducción completa siguiendo el mismo prompt que M1. En el segundo
-turno, recibe sus propias traducciones y el diccionario y reglas que infirió, y se le pide que
-identifique contradicciones internas explícitas antes de producir una versión corregida. La
-instrucción es deliberadamente precisa: debe citar la regla o entrada de diccionario que cada
-traducción viola o que no está cubierta, y solo entonces producir las traducciones finales.
+M5 incorpora una segunda fase de revisión inspirada en el paradigma \textit{Self-Refine} \citep{madaan2023selfrefine}. En el primer turno, el modelo resuelve el puzle con un prompt equivalente al de M1. Es decir, recibe todos los pares de entrenamiento y genera un diccionario, unas reglas gramaticales y unas traducciones iniciales. En el segundo turno, el modelo recibe su propia respuesta anterior y se le pide que actúe como revisor. La instrucción no se limita a pedir una nueva traducción, sino que obliga al modelo a buscar contradicciones internas entre sus traducciones, su diccionario y las reglas que ha formulado. Para cada posible problema, debe indicar qué regla o entrada de diccionario está siendo violada o no está suficientemente justificada.
 
-Esta estrategia evalúa si el razonamiento metalingüístico del propio modelo es suficiente
-para detectar y corregir errores de coherencia sin recibir información adicional sobre la
-lengua.
+La hipótesis detrás de esta estrategia es que algunos errores no se deben a falta de información, sino a incoherencias dentro del propio razonamiento del modelo. Si el modelo ha identificado una regla correctamente pero no la ha aplicado en una traducción concreta, una fase de revisión podría ayudar a corregir el fallo. Al mismo tiempo, esta estrategia permite estudiar una limitación importante: cuando la primera hipótesis es incorrecta, el modelo puede usarla como criterio de revisión y reforzar el error en lugar de corregirlo. El funcionamiento general de M5 se resume en la Figura~\ref{fig:metodologia-m5}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
-	\resizebox{\textwidth}{!}{%
-		\begin{tikzpicture}[node distance=1.7cm, auto]
-		\node (titulo) [text width=13cm, align=center]
-		{\textbf{M5 --- Autocorrección iterativa}\\
-			\small Dos turnos: el modelo revisa su propio borrador buscando contradicciones};
-		
-		\node (entrada1) [rectverde, below of=titulo, yshift=-0.5cm, text width=4.7cm]
-		{\textbf{Turno 1}\\
-			pares de entrenamiento\\
-			+ frases de test\\
-			+ instrucción metalingüística};
-		
-		\node (modelo1) [rectvioleta, right of=entrada1, xshift=4.5cm, text width=3cm]
-		{\textbf{Modelo}\\turno 1};
-		
-		\node (borrador) [rectamarillo, right of=modelo1, xshift=5cm, text width=5cm]
-		{\textbf{Borrador inicial}\\
-			diccionario + reglas\\
-			+ traducciones};
-		
-		\node (entrada2) [rectverde, below of=entrada1, yshift=-1.1cm, text width=4.7cm]
-		{\textbf{Turno 2}\\
-			mismos ejemplos\\
-			+ borrador inicial\\
-			+ solicitud de crítica};
-		
-		\node (modelo2) [rectvioleta, right of=entrada2, xshift=4.5cm, text width=3cm]
-		{\textbf{Modelo}\\turno 2};
-		
-		\node (final) [rectamarillo, right of=modelo2, xshift=5cm, text width=5cm]
-		{\textbf{Respuesta revisada}\\
-			crítica explícita\\
-			+ diccionario y reglas revisados\\
-			+ traducciones finales};
-		
-		\draw[arrow] (entrada1) -- (modelo1);
-		\draw[arrow] (modelo1) -- (borrador);
-		\draw[arrow] (borrador.south) |- (entrada2.east);
-		\draw[arrow] (entrada2) -- (modelo2);
-		\draw[arrow] (modelo2) -- (final);
-		\end{tikzpicture}%
-	}
+	\includegraphics[width=\textwidth]{figuras_png/M5_autocorreccion_iterativa.png}
 	\caption{Funcionamiento de la estrategia de autocorrección iterativa M5.}
 	\label{fig:metodologia-m5}
 \end{figure}
@@ -584,113 +232,188 @@ lengua.
 \label{sec:sistema}
 % ─────────────────────────────────────────────────────────────
 
-Se implementó un sistema experimental en Python (\texttt{experiment\_runner.py}) que
-automatiza la ejecución de los experimentos, el cálculo de métricas y el registro de
-resultados. Dado un puzzle y un modelo, el sistema ejecuta el control M0 y las estrategias
-M1--M5, calcula las métricas en cada paso y guarda un log completo en formato JSON con las
-hipótesis extraídas, las métricas calculadas, el diccionario y las reglas acumulados en cada
-paso, y opcionalmente el prompt y la respuesta completa del modelo.
+Para ejecutar los experimentos se desarrolló un sistema experimental en Python, organizado en torno al script \texttt{experiment\_runner.py}. Su función principal es automatizar el proceso de evaluación: cargar un puzle, generar el prompt correspondiente a cada estrategia, enviar la petición al modelo, extraer las traducciones producidas, calcular las métricas de evaluación descritas en la Sección~\ref{sec:metricas} y guardar los resultados en un archivo estructurado. El sistema permite ejecutar de forma homogénea el control M0 y las estrategias M1--M5 sobre los distintos puzles seleccionados. En las estrategias iterativas, como M2 y M3, también registra los pasos intermedios, incluyendo el diccionario y las reglas que el modelo va formulando. Esto permite analizar no solo el resultado final, sino también la evolución del razonamiento durante la resolución. Cada experimento genera un log en formato JSON con la información necesaria para reproducir y revisar los resultados: modelo utilizado, puzle evaluado, estrategia aplicada, traducciones extraídas, métricas obtenidas y, cuando corresponde, hipótesis acumuladas en cada paso. Esta estructura facilita la comparación entre metodologías y permite auditar manualmente casos concretos sin repetir las llamadas a las APIs.
 
-\subsection{Extracción de traducciones}
-
-Un aspecto técnico relevante es la extracción de las traducciones de la respuesta libre del
-modelo. Los modelos no siempre siguen el formato solicitado: algunos utilizan comillas
-tipográficas (\texttt{\textquotedblleft\textquotedblright}), cursivas en Markdown
-(\texttt{*texto*}), flechas unicode (\texttt{→}) u otros formatos. Se implementó un
-extractor multicapa con expresiones regulares que cubre los patrones de salida observados
-empíricamente, con filtros explícitos para descartar entradas de diccionario, instrucciones
-de revisión y meta-análisis lingüístico que los modelos a veces incluyen en la sección de
-traducciones. Este extractor fue validado de forma independiente comparando las métricas
-calculadas contra un recálculo manual sobre los mismos datos.
-
-\subsection{Parámetros de ejecución}
-
-Las llamadas a los modelos se realizan con temperatura cero y un límite de 4096 tokens de
-salida. Para respetar los límites de tasa de las APIs gratuitas, se introduce un retardo de
-10 segundos entre los pasos consecutivos de M2 y de 20 segundos entre los dos turnos de M5.
-El tiempo de espera máximo por llamada es de 150 segundos, configurado especialmente para
-OpenRouter, cuya latencia con el modelo de 120B parámetros es significativamente mayor.
+Los detalles de implementación del sistema, incluyendo el formato de entrada, el diseño de los prompts, el extractor de traducciones y los problemas técnicos encontrados durante el desarrollo, se describen de forma más detallada en el Capítulo~\ref{cap:desarrollo}.
 
 % ─────────────────────────────────────────────────────────────
 \section{Métricas de evaluación}
 \label{sec:metricas}
 % ─────────────────────────────────────────────────────────────
 
-Se utilizan cuatro métricas automáticas de evaluación, calculadas con la biblioteca
-\texttt{sacrebleu} \citep{post2018sacrebleu}:
+La evaluación automática se realiza mediante cuatro métricas: BLEU, chrF++, TER y Exact Match. Todas ellas se calculan comparando las traducciones generadas por el modelo con las referencias correctas del benchmark. El uso conjunto de varias métricas permite observar distintos tipos de error, ya que una única medida puede ser insuficiente en frases cortas o en lenguas con morfología compleja.
 
-\textbf{BLEU} \citep{papineni2002bleu} calcula la precisión de n-gramas compartidos entre
-la hipótesis del modelo y la referencia, con una penalización por brevedad. Su principal
-limitación en este contexto es que requiere coincidencia exacta de palabras, lo que la hace
-excesivamente estricta para lenguas con morfología compleja. Se incluye por compatibilidad
-con la literatura existente ($\uparrow$ mejor, rango 0--100).
+\textbf{BLEU} \citep{papineni2002bleu} mide la coincidencia de n-gramas entre la traducción generada y la referencia, incorporando una penalización por brevedad. De forma simplificada, BLEU puede expresarse como:
 
-\textbf{chrF++} \citep{popovic2017chrf} es la métrica principal de este trabajo. Opera a
-nivel de n-gramas de caracteres y de palabras (\texttt{word\_order=2}), lo que la hace más
-tolerante con variaciones morfológicas y más adecuada para lenguas aglutinantes. Es la
-métrica secundaria del propio benchmark \textsc{Linguini} \citep{sanchez2024linguini} y
-la utilizada para analizar la evolución de las estrategias iterativas
-($\uparrow$ mejor, rango 0--100).
+\[
+BLEU = BP \cdot \exp\left(\sum_{n=1}^{N} w_n \log p_n\right)
+\]
 
-\textbf{TER} \citep{snover2006ter} (\textit{Translation Edit Rate}) mide el número mínimo
-de ediciones por palabra necesarias para transformar la hipótesis en la referencia. A
-diferencia de BLEU y chrF++, es una métrica de error: un valor de 0 indica traducción
-perfecta, y valores superiores a 100 indican que se necesitan más ediciones que palabras hay
-en la referencia ($\downarrow$ mejor).
+donde \(p_n\) representa la precisión de los n-gramas de tamaño \(n\), \(w_n\) es el peso asignado a cada tamaño de n-grama y \(BP\) es la penalización por brevedad. Esta penalización evita que una traducción demasiado corta obtenga una puntuación alta solo por contener algunas palabras correctas. Por ejemplo, si la referencia es \textit{the boy eats rice} y el modelo responde únicamente \textit{the boy}, hay coincidencias parciales, pero la respuesta es incompleta y BLEU debe penalizarla. Es una métrica muy utilizada en traducción automática, pero en este trabajo tiene una limitación clara: las frases de test suelen ser cortas y pequeñas diferencias morfológicas o léxicas pueden producir puntuaciones muy bajas. Se mantiene principalmente por compatibilidad con la literatura previa (\(\uparrow\) mejor, rango 0--100).
 
-\textbf{Exact Match} (EM) cuenta el porcentaje de traducciones exactamente correctas,
-ignorando mayúsculas y puntuación. Con pocos pares de test por puzzle (entre 3 y 6), cada
-acierto representa entre un 17 y un 33\,\% del score, lo que hace esta métrica discreta pero
-muy directamente interpretable ($\uparrow$ mejor, rango 0--100\,\%).
+Como aclaración, la flecha hacia arriba en las métricas (\(\uparrow\)) significa que cuanto más alto es el valor, más acertado es el resultado. En caso contrario, es decir, una flecha hacia abajo (\(\downarrow\)) significa que cuanto más bajo, mejor.
+
+\textbf{chrF++} \citep{popovic2017chrf} es la métrica principal del trabajo. A diferencia de BLEU, opera principalmente a nivel de n-gramas de caracteres e incorpora también información de palabras mediante \texttt{word\_order=2}. Este parámetro indica que, además de comparar fragmentos de caracteres, la métrica también tiene en cuenta n-gramas de palabras hasta orden 2, es decir, palabras individuales y pares de palabras consecutivas. Por ejemplo, entre \textit{the big dog} y \textit{the dog big} habría muchas coincidencias de caracteres y de palabras individuales, pero no coincidirían igual los pares de palabras consecutivas. De esta forma, \texttt{word\_order=2} permite reflejar parcialmente diferencias en el orden de las palabras. La métrica se basa en una media \(F\), que combina precisión y cobertura:
+
+\[
+F_{\beta} = (1+\beta^2)\cdot \frac{precision \cdot recall}{\beta^2 \cdot precision + recall}
+\]
+
+En este contexto, la precisión mide qué parte de los fragmentos generados por el modelo aparece también en la referencia, mientras que la cobertura mide qué parte de la referencia ha sido recuperada por la traducción generada. Esto la hace más adecuada para este tipo de tarea, ya que puede reflejar similitudes parciales incluso cuando la traducción no coincide exactamente con la referencia. Por ejemplo, si la referencia contiene \textit{the children} y el modelo genera \textit{the child}, Exact Match marcaría la respuesta como incorrecta, pero chrF++ todavía captaría una similitud alta entre ambas formas. Resulta especialmente útil en lenguas con morfología rica o cuando los errores afectan a partes pequeñas de una palabra (\(\uparrow\) mejor, rango 0--100).
+
+\textbf{TER} \citep{snover2006ter} (\textit{Translation Edit Rate}) mide el número de ediciones necesarias para transformar la hipótesis del modelo en la referencia. De forma general, se calcula como:
+
+\[
+TER = \frac{\text{número de ediciones}}{\text{número de palabras de la referencia}}
+\]
+
+Las ediciones pueden incluir inserciones, eliminaciones, sustituciones o desplazamientos de palabras. A diferencia de BLEU y chrF++, es una métrica de error: cuanto menor es el valor, mejor es la traducción. Un valor de 0 indica coincidencia perfecta con la referencia, mientras que valores altos indican que la respuesta requiere muchas modificaciones. Por ejemplo, si la referencia es \textit{the woman sees the dog} y el modelo responde \textit{the man sees the dog}, bastaría una sustitución para acercar la hipótesis a la referencia, por lo que el error sería relativamente bajo. En cambio, una traducción completamente distinta requeriría muchas más ediciones (\(\downarrow\) mejor).
+
+\textbf{Exact Match} (EM) mide el porcentaje de traducciones exactamente correctas después de una normalización básica, como pasar a minúsculas y eliminar puntuación final. En este trabajo se calcula como:
+
+\[
+EM = \frac{\text{número de respuestas exactamente correctas}}{\text{número total de respuestas}} \cdot 100
+\]
+
+Es una métrica estricta, pero fácil de interpretar: una respuesta cuenta como correcta solo si coincide con la referencia. Por ejemplo, si la referencia es \textit{the dog sleeps} y el modelo responde exactamente \textit{the dog sleeps}, la respuesta cuenta como correcta. En cambio, si responde \textit{a dog sleeps}, se considera incorrecta aunque el significado sea muy parecido. En este trabajo debe interpretarse con cautela, porque cada puzle contiene pocas frases de test; por tanto, una sola respuesta correcta o incorrecta puede cambiar bastante el porcentaje final (\(\uparrow\) mejor, rango 0--100\,\%).
+
+En el análisis de resultados se toma chrF++ como métrica principal, ya que ofrece un equilibrio razonable entre coincidencia exacta y similitud parcial. BLEU, TER y Exact Match se utilizan como métricas complementarias para interpretar mejor los resultados y detectar casos en los que una traducción es parcialmente correcta, pero no coincide completamente con la referencia.
 
 % ─────────────────────────────────────────────────────────────
 \section{Análisis cualitativo}
 \label{sec:cualitativo}
 % ─────────────────────────────────────────────────────────────
 
-Además de la evaluación automática, se realizó un análisis cualitativo comparando el proceso
-de resolución humana con el del modelo en el puzzle de Hakhun (Sino-Tibetana, India;
-10 frases de entrenamiento, 6 de test). El objetivo es identificar en qué aspectos del
-razonamiento metalingüístico los modelos divergen de los humanos, más allá de lo que
-capturan las métricas automáticas.
+Además de la evaluación automática, se realiza un análisis cualitativo sobre el puzle de Hankun. El objetivo es comparar el proceso de resolución humana con el razonamiento generado por el modelo, prestando atención a aspectos que las métricas automáticas no capturan bien, como la formulación de hipótesis, la identificación de morfemas o la aplicación coherente de reglas gramaticales.
 
-\subsection{Protocolo de resolución humana}
+El puzle fue resuelto manualmente por mí, como autora de este trabajo, anotando de forma explícita el razonamiento seguido durante la deducción. Esta resolución propia se utiliza como referencia cualitativa para observar en qué puntos el comportamiento del modelo se aproxima al razonamiento humano y en cuáles aparecen divergencias.
 
-El protocolo consistió en resolver el puzzle anotando explícitamente cada paso del
-razonamiento: qué patrones se identificaron primero, qué hipótesis se formularon, cuándo y
-por qué se corrigieron, y cómo se aplicaron a las frases de test.
+\subsection{Proceso de resolución humana}
 
-\subsection{Proceso de resolución observado}
+El protocolo consistió en resolver el personalmente puzle, anotando explícitamente cada paso del razonamiento: qué patrones se identificaron primero, qué hipótesis se formularon, cuándo y por qué se corrigieron, y cómo se aplicaron a las frases de test.
 
-El proceso humano siguió el siguiente orden: primero se identificaron los elementos
-invariantes (\texttt{ne} como marcador de pregunta, presente en todas las frases), luego los
-pronombres de sujeto (\texttt{ŋa}=I, \texttt{nɤ}=you(sg), \texttt{nirum}=we,
-\texttt{tarum}=they), después los verbos (\texttt{lapkʰi}=see, \texttt{cʰam}=know,
-\texttt{lan}=beat, \texttt{ka}=go, \texttt{ʒip}=sleep), y finalmente el sistema aspectual:
-las terminaciones con \texttt{ʔ} o \texttt{tʰ-} marcan pasado, mientras que las demás
-marcan presente. El marcador \texttt{kəmə} se identificó como marcador de transitividad sin
-traducción directa al inglés. Con este protocolo se obtuvieron las seis traducciones de test
-correctas.
+El proceso siguió el siguiente orden: primero se identifican los elementos invariantes
+(\ipainline{ne} como marcador de pregunta, presente en todas las frases), luego los pronombres
+de sujeto (\ipainline{ŋa}=I, \ipainline{nɤ}=you(sg), \ipainline{nirum}=we, \ipainline{tarum}=they), después los
+verbos (\ipainline{lapkʰi}=see, \ipainline{cʰam}=know, \ipainline{lan}=beat, \ipainline{ka}=go, \ipainline{ʒip}=sleep),
+y finalmente el sistema aspectual: las terminaciones con \ipa{ʔ} o \ipainline{tʰ-} marcan pasado,
+mientras que las demás marcan presente. El marcador \ipainline{kəmə} se identificó como marcador
+de transitividad sin traducción directa al inglés. Aquí muestro mi proceso de resolución, con mi propio razonamiento y mis palabras:
+
+\begin{table}[H]
+	\centering
+	\caption{Pares de entrenamiento del puzle de Hankun.}
+	\label{tab:hankun-train-pairs}
+	\begin{tabular*}{1.00\textwidth}{@{\extracolsep{\fill}} c l l}
+		\toprule
+		\textbf{N.º} & \textbf{Hankun} & \textbf{English} \\
+		\midrule
+		1  & {\footnotesize\ipa{ŋa ka kɤ ne}}                   & Do I go? \\
+		2  & {\footnotesize\ipa{nɤ ʒip tuʔ ne}}                 & Did you sleep? \\
+		3  & {\footnotesize\ipa{ŋabə ati lapkʰi tɤʔ ne}}        & Did I see him? \\
+		4  & {\footnotesize\ipa{nirum kəmə nuʔrum cʰam ki ne}}  & Do we know you? \\
+		5  & {\footnotesize\ipa{nɤbə ŋa lapkʰi rɤ ne}}          & Do you see me? \\
+		6  & {\footnotesize\ipa{tarum kəmə nɤ lan tʰu ne}}      & Did they beat you? \\
+		7  & {\footnotesize\ipa{nuʔrum kəmə ati lapkʰi kan ne}} & Do you see him? \\
+		8  & {\footnotesize\ipa{nɤbə ati cʰam tuʔ ne}}          & Did you know him? \\
+		9  & {\footnotesize\ipa{tarum kəmə nirum lapkʰi ri ne}} & Do they see us? \\
+		10 & {\footnotesize\ipa{ati kəmə ŋa lapkʰi tʰɤ ne}}     & Did he see me? \\
+		\bottomrule
+	\end{tabular*}
+\end{table}
+
+\subsubsection*{Frase 1: \footnotesize\ipa{nɤ ʒip ku ne}}
+
+\begin{itemize}
+	\item Puedo observar que \ipainline{ne} se utiliza en todas las frases al final, lo que me hace pensar que puede ser la propia pregunta \textit{Do} o \textit{Did}, o una forma de interpretar el signo de interrogación.
+	
+	\item También hay un patrón con \ipainline{ŋa}, ya que siempre lo usa en referencia a la primera persona (yo, a mí...), igual que \ipainline{nɤ} en segunda persona singular.
+	
+	\item Por ahora, la estructura sería algo similar a: ``Did you ...?''.
+	
+	\item \ipainline{ʒip} solo aparece una vez en las traducciones, por lo que seguramente sea dormir (\textit{sleep}).
+	
+	\item Falta interpretar \ipainline{ku}, que por la similitud que observo con la segunda frase, deduzco que este símbolo (\ipainline{ʔ}) hace referencia al pasado (\textit{did}), mientras que el resto están en presente.
+	
+	\item \textbf{Mi conclusión:} Do you(sg) sleep?
+\end{itemize}
+
+\subsubsection*{Frase 2: \footnotesize\ipa{ati kəmə nirum lapkʰi tʰi ne}}
+
+\begin{itemize}
+	\item Observando frases con \ipainline{ati}, probablemente se traduzca como \textit{he/him}, dependiendo del contexto.
+	
+	\item \ipainline{kəmə} aparece en varias frases, pero no tiene un patrón claro; parece más un marcador de objeto, por ahora lo obviamos.
+	
+	\item \ipainline{nirum} es la primera persona en plural.
+	
+	\item \ipainline{lapkʰi} es claramente el verbo ver (\textit{see}).
+	
+	\item \ipainline{tʰi} seguramente apunte al pasado, ya que en todas las frases referentes a acciones pasadas aparece el símbolo.
+	
+	\item \textbf{Mi conclusión:} Did he see us?
+\end{itemize}
+
+\subsubsection*{Frase 3: \footnotesize\ipa{tarum kəmə nuʔrum cʰam ran ne}}
+
+\begin{itemize}
+	\item \ipainline{tarum} hace referencia clara a ellos (\textit{they}); \ipainline{kəmə} lo vamos a dejar como marcador sin traducción directa.
+	
+	\item He visto que la primera persona en plural es \ipainline{nirum}; \ipainline{nuʔrum} parece ser la segunda persona en plural, aunque este símbolo me hace dudar de la estructura: \ipainline{ʔ}.
+	
+	\item \ipainline{cʰam} es claramente el verbo saber (\textit{know}).
+	
+	\item \ipainline{ran} no está en ninguna parte, pero sí \ipainline{kan}; por lo que seguramente deba apuntar al presente. No es pasado.
+	
+	\item \textbf{Mi conclusión:} Do they know you(pl)?
+\end{itemize}
+
+\subsubsection*{Frase 4: \footnotesize\ipa{nirum kəmə tarum lan ki ne}}
+
+\begin{itemize}
+	\item \ipainline{nirum} es primera persona en plural claramente.
+	
+	\item \ipainline{tarum} es ellos.
+	
+	\item \ipainline{kəmə} es un marcador.
+	
+	\item \ipainline{lan} seguramente sea el verbo; aparece una sola vez para traducir \textit{beat}.
+	
+	\item Con lo que he visto, \ipainline{ki} debe ser el tiempo presente.
+	
+	\item \textbf{Mi conclusión:} Do we beat them?
+\end{itemize}
+
+\subsubsection*{Frase 5: \footnotesize\ipa{nirum kəmə nɤ cʰam tiʔ ne}}
+
+\begin{itemize}
+	\item \ipainline{nirum} = nosotros (\textit{we}).
+	
+	\item \ipainline{nɤ} = tú (\textit{you sg}).
+	
+	\item \ipainline{cʰam} = saber (\textit{know}).
+	
+	\item Aquí aparece \ipainline{tiʔ}, por lo que es pasado seguro.
+	
+	\item \textbf{Mi conclusión:} Did we know you(sg)?
+\end{itemize}
+
+\subsubsection*{Frase 6: \footnotesize\ipa{nirum ka tiʔ ne}}
+
+\begin{itemize}
+	\item Aquí tenemos dos cosas claras:
+	
+	\item \ipainline{nirum} = we.
+	
+	\item \ipainline{tiʔ} = tiempo pasado.
+	
+	\item No tengo marcador de objeto \ipainline{kəmə}, supongo que nadie realiza la acción hacia nadie.
+	
+	\item \ipainline{ka} aparece una vez para referirse al verbo ir (\textit{go}).
+	
+	\item \textbf{Mi conclusión:} Did we go?
+\end{itemize}
 
 \subsection{Comparación con el modelo}
 
-La comparación con la respuesta del modelo en M1 revela un patrón consistente: el modelo
-identifica correctamente el léxico básico (verbos y pronombres de sujeto), pero falla
-sistemáticamente en el sistema aspectual (pasado frente a presente). El modelo menciona en
-su razonamiento la posibilidad de que \texttt{ʔ} marque pasado, pero no lo aplica de forma
-consistente a todas las formas verbales. Este resultado está en línea con el hallazgo de
-\citet{zhu2025evaluating} de que los modelos rinden peor en puzzles con mayor complejidad
-morfológica, ya que la concordancia de tiempo, aspecto y objeto en Hakhun es precisamente
-el elemento más complejo del puzzle.
-
-En M2, el modelo con subconjuntos pequeños produce traducciones degradadas por
-insuficiencia de evidencia para deducir el sistema pronominal de objeto. El rendimiento
-mejora en pasos intermedios, pero puede decaer en los pasos finales en los modelos más
-débiles, posiblemente por sobrecarga del contexto del prompt. El humano mostró el patrón
-opuesto: con solo dos frases ya identificó los elementos invariantes, y cada par adicional
-refinó hipótesis previas sin degradar las ya establecidas.
-
-Este contraste sugiere que la ventaja de los modelos grandes en tareas de traducción
-metalingüística podría estar relacionada con una mayor capacidad para mantener coherencia
-en contextos largos y con una base de conocimiento tipológico más amplia sobre la que
-apoyar las inferencias.
+Como se ha comentado, además de la evaluación automática, se plantea una comparación cualitativa entre la resolución humana utilizada como guía en M4 y las respuestas generadas por los modelos. El puzle de Hankun fue resuelto manualmente por mí, como autora de este trabajo, anotando de forma explícita los pasos seguidos durante la deducción. Esta resolución propia se utiliza como referencia cualitativa para analizar en qué puntos el razonamiento del modelo se aproxima al proceso humano y en cuáles aparecen divergencias. El análisis detallado se presenta junto con los resultados de M4, en la sección~\ref{subsec:m4-comparacion-humana}.

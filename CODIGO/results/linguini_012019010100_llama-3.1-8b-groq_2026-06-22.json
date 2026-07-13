@@ -1,0 +1,853 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T09:43:36.737289",
+    "puzzle_id": "linguini_012019010100",
+    "language": "Desconocida",
+    "language_family": "Unknown",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 11,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010100",
+    "language": "Desconocida",
+    "language_family": "Unknown",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Om benu aneen.",
+        "target": "She took the bread and ate it.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Munuuna wunuub.",
+        "target": "She comes and we go away.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Wingkiiwa wengamburuun.",
+        "target": "They sing and she hears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Anon ye weng wengamberenib yeedaraniib.",
+        "target": "They will hear the dog and will get up.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Oon wedmaniina karub wedmaneeb.",
+        "target": "I will see the fish and you(sg) will see theman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ok wedmeena aniin.",
+        "target": "He sees the water and I drink it.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Om benu aneen.",
+      "reference": "She took the bread and ate it.",
+      "hypothesis": "I'm not sure about the translation of the sentence \"Om benu aneen.\" It appears to be in a language that I'm not familiar with. However, I can try to break it down and provide a possible interpretation.\n\n\"Om\" is a common prefix in many Indian languages, including Sanskrit and Hindi, which means \"I\" or \"me.\" \"Benu\" could be a variant of \"bana,\" which means \"to do\" or \"to make.\" \"Anee\" could be a variant of \"aane,\" which means \"to come\" or \"to arrive.\"\n\nWith this in mind, a possible translation of the sentence \"Om benu aneen\" could be:\n\n\"I am coming to do something\" or \"I am making my way to do something.\"\n\nHowever, please note that this is just a rough interpretation, and the actual meaning of the sentence may be different depending on the context and the language it is spoken in.",
+      "latency_s": 30.59,
+      "metrics": {
+        "corpus_bleu": 0.26,
+        "corpus_chrfpp": 5.11,
+        "corpus_ter": 2028.57,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.26
+        ],
+        "sentence_chrfpp": [
+          5.11
+        ],
+        "sentence_ter": [
+          2028.57
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'm not sure about the translation of the sentence \"Om benu aneen.\" It appears to be in a language that I'm not familiar with. However, I can try to break it down and provide a possible interpretation.\n\n\"Om\" is a common prefix in many Indian languages, including Sanskrit and Hindi, which means \"I\" or \"me.\" \"Benu\" could be a variant of \"bana,\" which means \"to do\" or \"to make.\" \"Anee\" could be a variant of \"aane,\" which means \"to come\" or \"to arrive.\"\n\nWith this in mind, a possible translation of the sentence \"Om benu aneen\" could be:\n\n\"I am coming to do something\" or \"I am making my way to do something.\"\n\nHowever, please note that this is just a rough interpretation, and the actual meaning of the sentence may be different depending on the context and the language it is spoken in."
+        ],
+        "references": [
+          "She took the bread and ate it."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 65.27,
+          "metrics": {
+            "corpus_bleu": 16.96,
+            "corpus_chrfpp": 37.45,
+            "corpus_ter": 84.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              25.85,
+              6.87,
+              7.5,
+              33.68,
+              3.76,
+              11.42
+            ],
+            "sentence_chrfpp": [
+              49.63,
+              7.67,
+              33.38,
+              69.88,
+              18.32,
+              34.41
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              120.0,
+              88.89,
+              80.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and eats it.",
+              "We will hear the pig.",
+              "You(sg) sing and I will hear the dog.",
+              "We will hear the dog and he will hear the pig, and I will get up.",
+              "And she saw the man and the dog the pig.",
+              "I drank the water."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 16.96,
+        "corpus_chrfpp": 37.45,
+        "corpus_ter": 84.44,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          6.87,
+          7.5,
+          33.68,
+          3.76,
+          11.42
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          7.67,
+          33.38,
+          69.88,
+          18.32,
+          34.41
+        ],
+        "sentence_ter": [
+          42.86,
+          100.0,
+          120.0,
+          88.89,
+          80.0,
+          87.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We will hear the pig.",
+          "You(sg) sing and I will hear the dog.",
+          "We will hear the dog and he will hear the pig, and I will get up.",
+          "And she saw the man and the dog the pig.",
+          "I drank the water."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 4.09,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: and the dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: sing\n- ambib: saw\n- awon: I (1st person singular) (update: also means 'I' in this context)\n- baan: pig (update: also means 'took the pig')\n- meneni: I (1st person singular) (update: also means 'I' in this context)\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you sing')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- awon: I (1st person singular) (update: also means 'I')\n- baan: pig (update: also means 'took the pig')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- ambib: saw (update: also means 'he saw')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wingkeewa: you (2nd person singular) (update: also means 'you')\n- yeediriin: sing (update: also means 'I get up')\n- karuwa: came (update: also means 'and came')\n- meneni: I (1st person singular) (update: also means 'I')\n- wedmaan: and the dog (update: also means 'and the dog')\n- wedmoona: house (update: also means 'house')\n- wing",
+          "accumulated_rules": "",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 30.95,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig, took the pig\n- karuwa: came, and came\n- meneni: I (1st person singular), I\n- wedmaan: and the dog, and the dog\n- wedmoona: house, house\n- wingkeewa: you (2nd person singular), you, you sing\n- yeediriin: sing, I get up\n- ambib: saw, he saw\n- om: will get up\n- banuun: bread\n- weenenub: we will go away\n- wingkanuub: we will sing",
+          "accumulated_rules": "- The language appears to have a system of polysemy, where a single word can have multiple related meanings.\n- The language may have a system of allomorphs, where a single morpheme can have different forms depending on its position in the word.\n- The language may have a system of vowel harmony, where vowels in a word tend to harmonize with each other.\n- The language may have a system of consonant alternations, where consonants in a word change depending on its position or grammatical function.",
+          "metrics": {
+            "corpus_bleu": 1.89,
+            "corpus_chrfpp": 11.06,
+            "corpus_ter": 113.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.61,
+              8.05,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              32.34,
+              27.47,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              157.14,
+              133.33,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Yeederenu om banuun. → She will get up and will take the bread.",
+              "Wenenub wingkanuub. → We will go away and will sing.",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 2,
+            "num_expected": 6,
+            "missing_indices": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.04,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: get up\n- ambib: saw\n- om: will get up\n- banuun: bread\n- weenenub: we will go away\n- wingkanuub: we will sing\n- weng: the\n- anaana: drank\n- oon: she\n- oka: eat\n- aniib: the bread and drink the water\n- wengambaranuuwa: the dog\n- wengambaraneen: the pig\n- wengambaranuuwa awon: the dog and he\n- wengambaraneen awon: the pig and he\n- oon: she (also possibly a marker for third person singular feminine)",
+          "accumulated_rules": "- The language appears to have a system of polysemy, where a single word can have multiple related meanings.\n- The language may have a system of allomorphs, where a single morpheme can have different forms depending on its position in the word.\n- The language may have a system of vowel harmony, where vowels in a word tend to harmonize with each other.\n- The language may have a system of consonant alternations, where consonants in a word change depending on its position or grammatical function.\n- The language appears to have a system of agreement, where the verb agrees with the subject in person and number.\n- The language appears to have a system of tense, where the verb can indicate future tense using the suffix -nuub.\n- The language appears to have a system of number, where the verb can indicate plural number using the suffix -n.\n- The language appears to have a system of person, where the verb can indicate first person singular using the suffix -eni.\n- The language appears to have a system of gender markings, where the verb can indicate third person singular feminine using the marker oon.",
+          "metrics": {
+            "corpus_bleu": 4.62,
+            "corpus_chrfpp": 25.75,
+            "corpus_ter": 182.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.36,
+              2.05,
+              5.41,
+              13.79,
+              2.86,
+              3.22
+            ],
+            "sentence_chrfpp": [
+              41.71,
+              11.63,
+              23.47,
+              42.52,
+              20.9,
+              14.9
+            ],
+            "sentence_ter": [
+              128.57,
+              316.67,
+              240.0,
+              144.44,
+              160.0,
+              162.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They eat the bread and drink the water. → Oma oka aniib.",
+              "We will hear the dog and he will hear the pig. → Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+              "I drank the water and she saw the fish. → Ok anaana oon wedmeen.",
+              "The dog will hear the pig and the pig will hear the dog. → Wengambaranuuwa awon wengambaraneen awon.",
+              "The man will get up and the woman will get up. → Anon om wengambaranuuwa awon om wengambaraneen.",
+              "The dog and the pig will hear each other. → Wengambaranuuwa awon wengambaraneen awon."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 1.05,
+          "accumulated_dict": "- anona: man\n- awon: I (1st person singular)\n- baan: pig\n- karuwa: came\n- meneni: I (1st person singular)\n- wedmaan: dog\n- wedmoona: house\n- wingkeewa: you (2nd person singular)\n- yeediriin: get up\n- ambib: saw\n- om: will get up\n- banuun: bread\n- weenenub: we will go away\n- wingkanuub: we will sing\n- weng: the\n- anaana: drank\n- oon: she (also possibly a marker for third person singular feminine)\n- miniib: and (deduced from the example Yeederenib miniib)\n- yeederenib: they (deduced from the example Yeederenib miniib)\n- wunuun: goes away (deduced from the example Wingkenu wunuun)\n- bene: takes (deduced from the example Om bene aneen)\n- aneen: eats (deduced from the example Om bene aneen)\n- wingkenu: she (deduced from the example Wingkenu wunuun)",
+          "accumulated_rules": "- The language appears to have a system of polysemy, where a single word can have multiple related meanings.\n- The language may have a system of allomorphs, where a single morpheme can have different forms depending on its position in the word.\n- The language may have a system of vowel harmony, where vowels in a word tend to harmonize with each other.\n- The language may have a system of consonant alternations, where consonants in a word change depending on its position or grammatical function.\n- The language appears to have a system of agreement, where the verb agrees with the subject in person and number.\n- The language appears to have a system of tense, where the verb can indicate future tense using the suffix -nuub.\n- The language appears to have a system of number, where the verb can indicate plural number using the suffix -n.\n- The language appears to have a system of person, where the verb can indicate first person singular using the suffix -eni.\n- The language appears to have a system of gender markings, where the verb can indicate third person singular feminine using the marker oon.\n- The language appears to have a system of coordination, where the conjunction \"miniib\" is used to connect two clauses.\n- The language appears to have a system of subject-verb-object word order, where the subject typically comes before the verb and the object comes after the verb.",
+          "metrics": {
+            "corpus_bleu": 5.62,
+            "corpus_chrfpp": 19.81,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              16.34,
+              6.57,
+              20.02,
+              2.87,
+              5.85
+            ],
+            "sentence_chrfpp": [
+              11.74,
+              34.0,
+              15.43,
+              39.63,
+              9.85,
+              10.39
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              120.0,
+              44.44,
+              80.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and come.",
+              "She sings and goes away.",
+              "He takes the bread and eats it.",
+              "The dog and he get up.",
+              "The pig and she go away.",
+              "The dog and he came."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.62,
+        "corpus_chrfpp": 25.75,
+        "corpus_ter": 182.22,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.36,
+          2.05,
+          5.41,
+          13.79,
+          2.86,
+          3.22
+        ],
+        "sentence_chrfpp": [
+          41.71,
+          11.63,
+          23.47,
+          42.52,
+          20.9,
+          14.9
+        ],
+        "sentence_ter": [
+          128.57,
+          316.67,
+          240.0,
+          144.44,
+          160.0,
+          162.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "They eat the bread and drink the water. → Oma oka aniib.",
+          "We will hear the dog and he will hear the pig. → Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+          "I drank the water and she saw the fish. → Ok anaana oon wedmeen.",
+          "The dog will hear the pig and the pig will hear the dog. → Wengambaranuuwa awon wengambaraneen awon.",
+          "The man will get up and the woman will get up. → Anon om wengambaranuuwa awon om wengambaraneen.",
+          "The dog and the pig will hear each other. → Wengambaranuuwa awon wengambaraneen awon."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 34.92,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      }
+    },
+    "self_correction": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.26,
+      "chrf": 5.11,
+      "ter": 2028.57,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'm not sure about the translation of the sentence \"Om benu aneen.\" It appears to be in a language that I'm not familiar",
+      "reference": "She took the bread and ate it."
+    },
+    "baseline": {
+      "best_bleu": 16.96,
+      "best_chrf": 37.45,
+      "best_ter": 84.44,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "He takes the bread and eats it.",
+        "We will hear the pig.",
+        "You(sg) sing and I will hear the dog.",
+        "We will hear the dog and he will hear the pig, and I will get up.",
+        "And she saw the man and the dog the pig.",
+        "I drank the water."
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ]
+    },
+    "incremental_combinations": {
+      "error": "413 Client Error: Payload Too Large for url: https://api.groq.com/openai/v1/chat/completions"
+    },
+    "step_by_step": {
+      "best_bleu": 4.62,
+      "best_chrf": 25.75,
+      "best_ter": 182.22,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "They eat the bread and drink the water. → Oma oka aniib.",
+        "We will hear the dog and he will hear the pig. → Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "I drank the water and she saw the fish. → Ok anaana oon wedmeen.",
+        "The dog will hear the pig and the pig will hear the dog. → Wengambaranuuwa awon wengambaraneen awon.",
+        "The man will get up and the woman will get up. → Anon om wengambaranuuwa awon om wengambaraneen.",
+        "The dog and the pig will hear each other. → Wengambaranuuwa awon wengambaraneen awon."
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "She took the bread and ate it.",
+        "She comes and we go away.",
+        "They sing and she hears.",
+        "They will hear the dog and will get up.",
+        "I will see the fish and you(sg) will see theman.",
+        "He sees the water and I drink it."
+      ]
+    },
+    "self_correction": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    }
+  }
+}

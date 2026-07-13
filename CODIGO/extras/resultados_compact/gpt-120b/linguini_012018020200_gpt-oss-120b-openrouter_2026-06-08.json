@@ -1,0 +1,1140 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T07:56:29.303781",
+    "puzzle_id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 10,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020200",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Did I beat you(sg)?",
+        "target": "ŋabə nɤ lan tɤʔ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Did they see me?",
+        "target": "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Does he know you(sg)?",
+        "target": "ati kəmə nɤ cʰam ru ne",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you(pl) sleep?",
+        "target": "nuʔrum ʒip kan ne",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Did I beat you(sg)?",
+      "reference": "ŋabə nɤ lan tɤʔ ne",
+      "hypothesis": "**Hakhun translation (best effort):**  \n\n**“Ká‑tá ri sá‑na?”**  \n\n*Breakdown (tentative):*  \n- **Ká‑tá** – “I” (subject pronoun) + past‑tense marker “‑tá” (indicating a completed action).  \n- **ri** – verb root “to beat / strike”.  \n- **sá‑na** – second‑person singular object pronoun “you” with a question particle “‑na” attached to the end of the clause.  \n\nSo the whole phrase literally reads “I‑past beat you‑Q?” → “Did I beat you (sg)?”  \n\n*Note:* Hakhun’s grammar is not fully documented, so this rendering is an informed guess based on the limited lexical and syntactic patterns that have been reported. Adjustments may be needed once more comprehensive resources become available.",
+      "latency_s": 6.58,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.51,
+        "corpus_ter": 2060.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.51
+        ],
+        "sentence_ter": [
+          2060.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Hakhun translation (best effort):**  \n\n**“Ká‑tá ri sá‑na?”**  \n\n*Breakdown (tentative):*  \n- **Ká‑tá** – “I” (subject pronoun) + past‑tense marker “‑tá” (indicating a completed action).  \n- **ri** – verb root “to beat / strike”.  \n- **sá‑na** – second‑person singular object pronoun “you” with a question particle “‑na” attached to the end of the clause.  \n\nSo the whole phrase literally reads “I‑past beat you‑Q?” → “Did I beat you (sg)?”  \n\n*Note:* Hakhun’s grammar is not fully documented, so this rendering is an informed guess based on the limited lexical and syntactic patterns that have been reported. Adjustments may be needed once more comprehensive resources become available."
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne"
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 218.1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 55.08,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = non‑past (present) auxiliary\n- ʒip = past auxiliary\n- kɤ = go (verb)\n- tuʔ = sleep (verb)\n- ne = question particle (sentence‑final)\n[DELETED: none – no prior entries to remove]\n---",
+          "accumulated_rules": "1. Basic clause order is **Pronoun – Auxiliary – Verb – ne** for interrogative clauses.\n2. **ne** is a clause‑final particle that marks a question, irrespective of tense.\n3. The auxiliary **ka** marks non‑past (present) reference; **ʒip** marks past reference.\n4. Pronouns appear as the first constituent of the clause.\n[DELETED: none – no prior rules to discard]\n---",
+          "metrics": {
+            "corpus_bleu": 4.2,
+            "corpus_chrfpp": 10.34,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2
+            ],
+            "sentence_chrfpp": [
+              10.34
+            ],
+            "sentence_ter": [
+              80.0
+            ],
+            "sentence_em": [
+              false
+            ],
+            "hypotheses": [
+              "ŋa ʒip **[beat]** ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne"
+            ],
+            "num_evaluated": 1
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 57.13,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun, used in intransitive clauses)\n- ŋabə = I (1st‑person singular pronoun, used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = non‑past (present) auxiliary\n- ʒip = past auxiliary (intransitive)\n- ati = past auxiliary (transitive)\n- kɤ = go (verb)\n- tuʔ = sleep (verb)\n- lapkʰi = see (verb, transitive)\n- tɤʔ = him (3rd‑person singular masculine object pronoun)\n- ne = question particle (sentence‑final)",
+          "accumulated_rules": "1. **Intransitive interrogative clause order:** Pronoun – non‑past ka / past ʒip – Verb – ne.\n2. **Transitive interrogative clause order:** Pronoun (subject) – past ati (or ka for non‑past) – Verb – Object pronoun – ne.\n3. **ne** is a clause‑final particle that marks a question, independent of tense.\n4. The non‑past auxiliary **ka** is used with both transitive and intransitive verbs; the past auxiliary is **ʒip** for intransitives and **ati** for transitives.\n5. Subject pronouns appear at the left edge of the clause; object pronouns follow the verb.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 51.6,
+          "accumulated_dict": "- ŋa = I (1st‑sg pronoun, intransitive)\n- ŋabə = I (1st‑sg pronoun, before transitive verb)\n- nɤ = you (sg) (2nd‑sg pronoun)\n- tɤʔ = him (3rd‑sg masculine object pronoun)\n- ka = non‑past auxiliary (used with singular subjects)\n- ʒip = past auxiliary for intransitives\n- ati = past auxiliary for transitives\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- ne = clause‑final question particle\n- **nirum** = we (1st‑pl pronoun)\n- **nuʔrum** = you (pl) (2nd‑pl object pronoun)\n- **kəmə** = know (transitive verb)\n- **cʰam** = non‑past auxiliary used with plural subjects\n- **ki** = plural‑agreement particle (appears after *cʰam* in plural present questions)\n---",
+          "accumulated_rules": "1. **Intransitive interrogative clause (singular):** *Pronoun + ka/ʒip + Verb + ne* (ka for non‑past, ʒip for past).\n2. **Transitive interrogative clause (singular):** *Pronoun + ati/ka + Verb + Object + ne* (ati for past, ka for non‑past).\n3. **Intransitive interrogative clause (plural subject):** *Pronoun + cʰam + Verb + ne* (cʰam = non‑past auxiliary for plural subjects).\n4. **Transitive interrogative clause (plural subject, present):** *Pronoun + cʰam + Verb + Object + ki + ne* (cʰam = non‑past auxiliary, ki = plural‑agreement particle).\n5. **Past tense for plural subjects** is not yet attested; the pattern is presumed analogous to singular (*ati* may be used, pending data).\n6. **ne** remains the clause‑final interrogative particle, independent of tense or number.\n---",
+          "metrics": {
+            "corpus_bleu": 5.74,
+            "corpus_chrfpp": 16.17,
+            "corpus_ter": 72.73,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              8.75
+            ],
+            "sentence_chrfpp": [
+              22.42,
+              11.24
+            ],
+            "sentence_ter": [
+              60.0,
+              83.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə ati [beat‑verb] nɤ ne",
+              "nuʔrum cʰam tuʔ ki ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 83.52,
+          "accumulated_dict": "- ŋa = I (1st‑sg pronoun – default form)\n- ŋabə = I (1st‑sg pronoun before a transitive verb)\n- nɤ = you (sg) – object form\n- nɤbə = you (sg) – subject‑before‑transitive form\n- tɤʔ = him (3rd‑sg masculine object pronoun)\n- nuʔrum = you (pl) (object pronoun)\n- nirum = we (1st‑pl pronoun)\n- ka = non‑past auxiliary (used with singular subjects in intransitive clauses)\n- ʒip = past auxiliary for intransitives (singular)\n- ati = past auxiliary for transitives (singular)\n- cʰam = non‑past auxiliary for plural subjects (both intransitive and transitive)\n- ki = plural‑agreement particle (appears after cʰam in plural present questions)\n- rɤ = non‑past auxiliary for transitive clauses with singular subjects (present)\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- kəmə = know (transitive verb)\n- ne = clause‑final interrogative particle\n---",
+          "accumulated_rules": "1. **Intransitive interrogative (singular):** Pronoun + ka / ʒip + Verb + ne.\n2. **Transitive interrogative (singular, past):** Pronoun‑before‑transitive + ati + Verb + Object + ne.\n3. **Transitive interrogative (singular, non‑past):** Pronoun‑before‑transitive + Object + Verb + rɤ + ne.\n4. **Intransitive interrogative (plural):** Pronoun + cʰam + Verb + ne.\n5. **Transitive interrogative (plural, non‑past):** Pronoun + Verb + Object + cʰam + ki + ne.\n6. **Past tense for plural subjects** – not yet attested; likely uses **ati** before the verb, analogous to singular past.\n7. The particle **ne** is clause‑final and does not vary with tense or number.\n---",
+          "metrics": {
+            "corpus_bleu": 6.83,
+            "corpus_chrfpp": 16.73,
+            "corpus_ter": 72.73,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              8.75
+            ],
+            "sentence_chrfpp": [
+              24.21,
+              11.24
+            ],
+            "sentence_ter": [
+              60.0,
+              83.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə ati beat nɤ ne",
+              "nuʔrum cʰam tuʔ ki ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 77.71,
+          "accumulated_dict": "- ŋa = I (1st sg pronoun, default)\n- ŋabə = I (1st sg pronoun before a transitive verb)\n- nɤ = you (sg) – default form (subject or object)\n- nɤbə = you (sg) – subject form used before a transitive verb\n- tɤʔ = him (3rd sg masculine object)\n- nuʔrum = you (pl) – object pronoun\n- nirum = we (1st pl pronoun)\n- tarum = they (3rd pl pronoun)\n- ka = non‑past auxiliary for singular intransitives\n- ʒip = past auxiliary for singular intransitives\n- ati = past auxiliary for singular transitives\n- rɤ = non‑past auxiliary for singular transitives (follows the verb)\n- cʰam = non‑past auxiliary for plural subjects (both intransitive and transitive)\n- ki = plural‑agreement particle (appears after cʰam in plural present questions)\n- tʰu = past auxiliary for plural transitives (follows the verb)\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- kəmə = know (transitive verb) / discourse particle preceding a verb in some serial‑verb constructions\n- lan = beat (transitive verb)\n- ne = clause‑final interrogative particle\n---",
+          "accumulated_rules": "1. **Singular intransitive question (non‑past):** Subject + ka + Verb + ne.\n2. **Singular intransitive question (past):** Subject + ʒip + Verb + ne.\n3. **Singular transitive question (past):** Subject‑before‑transitive + ati + Verb + Object + ne.\n4. **Singular transitive question (non‑past):** Subject‑before‑transitive + Object + Verb + rɤ + ne.\n5. **Plural intransitive question (non‑past):** Subject + cʰam + Verb + ne.\n6. **Plural transitive question (non‑past):** Subject + Verb + Object + cʰam + ki + ne.\n7. **Plural transitive question (past):** Subject + Verb + Object + tʰu + ne.\n8. **Pronoun forms:**\n- Default pronouns (ŋa, nɤ, nuʔrum, nirum, tarum) are used for subjects of intransitives and as objects.\n- Subject‑before‑transitive forms (ŋabə, nɤbə) appear when the pronoun directly precedes a transitive verb.\n---",
+          "metrics": {
+            "corpus_bleu": 8.11,
+            "corpus_chrfpp": 33.11,
+            "corpus_ter": 57.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.11,
+              12.37,
+              19.36,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              31.71,
+              35.81,
+              31.26,
+              31.75
+            ],
+            "sentence_ter": [
+              40.0,
+              50.0,
+              66.67,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə ati lan nɤ ne",
+              "tarum ati lapkʰi ŋa ne",
+              "tɤʔ rɤ kəmə nɤ ne",
+              "nuʔrum cʰam tuʔ ki ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 97.33,
+          "accumulated_dict": "- ŋa = I (1st sg pronoun, default)\n- ŋabə = I (1st sg pronoun before a transitive verb)\n- nɤ = you (sg) – default form (subject or object)\n- nɤbə = you (sg) – subject form used before a transitive verb\n- tɤʔ = him (3rd sg masculine object)\n- kan = him (3rd sg masculine object, alternative form)\n- nuʔrum = you (pl) – object pronoun\n- nirum = we (1st pl pronoun)\n- tarum = they (3rd pl pronoun)\n- ka = non‑past auxiliary for singular intransitives\n- ʒip = past auxiliary for singular intransitives\n- ati = past auxiliary for transitive clauses (used before the verb)\n- rɤ = non‑past auxiliary for singular transitive clauses (follows the verb)\n- cʰam = non‑past auxiliary for plural subjects (both intransitive and transitive)\n- ki = plural‑agreement particle (appears after cʰam in plural present questions)\n- tʰu = past auxiliary for transitive clauses (follows the verb)\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- kəmə = know (transitive verb) / discourse particle that can precede a verb in serial‑verb constructions\n- lan = beat (transitive verb)\n- ne = clause‑final interrogative particle",
+          "accumulated_rules": "1. **Singular intransitive question (non‑past):** Subject + ka + Verb + ne.\n2. **Singular intransitive question (past):** Subject + ʒip + Verb + ne.\n3. **Transitive question (past, any number):** Subject‑before‑transitive + ati + Verb + Object + ne.\n*The subject‑before‑transitive form is used when the pronoun directly precedes the verb; the auxiliary **ati** appears before the verb regardless of singular or plural subject.*\n4. **Singular transitive question (non‑past):** Subject‑before‑transitive + Object + Verb + rɤ + ne.\n5. **Plural intransitive question (non‑past):** Subject + cʰam + Verb + ne.\n6. **Plural transitive question (non‑past):** Subject + Verb + Object + cʰam + ki + ne.\n7. **Plural transitive question (past):** Subject + Object + Verb + tʰu + ne.\n*A discourse particle **kəmə** may optionally appear before the verb in serial‑verb constructions.*\n8. **Pronoun forms:**\n- Default pronouns (ŋa, nɤ, nuʔrum, nirum, tarum) are used for subjects of intransitives and as objects.\n- Subject‑before‑transitive forms (ŋabə, nɤbə) appear when the pronoun directly precedes a transitive verb.",
+          "metrics": {
+            "corpus_bleu": 4.96,
+            "corpus_chrfpp": 30.34,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.11,
+              12.37,
+              11.51,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              31.71,
+              35.81,
+              21.01,
+              31.12
+            ],
+            "sentence_ter": [
+              40.0,
+              50.0,
+              66.67,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə ati lan nɤ ne",
+              "tarum ati lapkʰi ŋa ne",
+              "tɤʔ nɤ kəmə rɤ ne",
+              "nuʔrum cʰam tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 93.01,
+          "accumulated_dict": "- ŋa = I (1st sg pronoun, default)\n- ŋabə = I (1st sg pronoun before a transitive verb)\n- nɤ = you (sg) – default form (subject or object)\n- nɤbə = you (sg) – subject form used before a transitive verb\n- tɤʔ = him (3rd sg masculine object) (also used as 3rd sg subject when no special form is available)\n- kan = him (3rd sg masculine object, alternative form)\n- nuʔrum = you (pl) – object pronoun (also used as subject for plural clauses)\n- nirum = we (1st pl pronoun)\n- tarum = they (3rd pl pronoun)\n- ka = non‑past auxiliary for singular intransitives\n- ʒip = past auxiliary for singular intransitives\n- ati = past auxiliary for transitive clauses (pre‑verb)\n- rɤ = non‑past auxiliary for singular transitive clauses (post‑verb)\n- cʰam = non‑past auxiliary for plural subjects **or** “know” (transitive verb, optional synonym of kəmə)\n- ki = plural‑agreement particle (appears after cʰam in plural present questions)\n- tʰu = past auxiliary for transitive clauses (post‑verb, used with plural subjects)\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- kəmə = know (transitive verb) / discourse particle that can precede a verb in serial‑verb constructions\n- lan = beat (transitive verb)\n- ne = clause‑final interrogative particle",
+          "accumulated_rules": "1. Singular intransitive question (non‑past): **Subject + ka + Verb + ne**.\n2. Singular intransitive question (past): **Subject + ʒip + Verb + ne**.\n3. Transitive question (past, any number): **Subject‑before‑transitive + ati + [optional kəmə] + Verb + Object + ne** *or* **Subject‑before‑transitive + ati + Object + Verb + ne**. The object may appear either before or after the verb; the final past auxiliary **tʰu** is optional for singular subjects.\n4. Singular transitive question (non‑past): **Subject‑before‑transitive + Object + Verb + rɤ + ne**.\n5. Plural intransitive question (non‑past): **Subject + cʰam + Verb + ne**.\n6. Plural transitive question (non‑past): **Subject + Verb + Object + cʰam + ki + ne**.\n7. Plural transitive question (past): **Subject + Object + Verb + tʰu + ne** (optional preceding particle **kəmə**).\n8. Pronoun forms: default pronouns are used for subjects of intransitives and as objects; subject‑before‑transitive forms (ŋabə, nɤbə) appear when the pronoun directly precedes a transitive verb. No special third‑person singular subject form is attested, so the object form **tɤʔ** is used for “he” as subject.",
+          "metrics": {
+            "corpus_bleu": 4.96,
+            "corpus_chrfpp": 30.34,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.11,
+              12.37,
+              11.51,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              31.71,
+              35.81,
+              21.01,
+              31.12
+            ],
+            "sentence_ter": [
+              40.0,
+              50.0,
+              66.67,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə ati lan nɤ ne",
+              "tarum ati lapkʰi ŋa ne",
+              "tɤʔ nɤ kəmə rɤ ne",
+              "nuʔrum cʰam tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 86.34,
+          "accumulated_dict": "- ŋa = I (1st sg pronoun, default)\n- ŋabə = I (1st sg pronoun before a transitive verb)\n- nɤ = you (sg) – default form (subject or object)\n- nɤbə = you (sg) – subject form used before a transitive verb\n- tɤʔ = him (3rd sg masculine object) (also used as 3rd sg subject when no special form is available)\n- kan = him (3rd sg masculine object, alternative form)\n- nuʔrum = you (pl) – object pronoun (also used as subject for plural clauses)\n- nirum = we (1st pl pronoun)\n- tarum = they (3rd pl pronoun)\n- ka = non‑past auxiliary for singular intransitives\n- ʒip = past auxiliary for singular intransitives\n- ati = past auxiliary for transitive clauses (pre‑verb)\n- rɤ = non‑past auxiliary for singular transitive clauses (post‑verb)\n- cʰam = non‑past auxiliary for plural subjects **or** “know” (transitive verb, optional synonym of kəmə)\n- ki = plural‑agreement particle (appears after cʰam in plural present questions)\n- tʰu = past auxiliary for transitive clauses (post‑verb, used with plural subjects)\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- kəmə = know (transitive verb) / discourse particle that can precede a verb in serial‑verb constructions\n- lan = beat (transitive verb)\n- ne = clause‑final interrogative particle",
+          "accumulated_rules": "1. **Singular intransitive present question:** Subject + ka + Verb + ne.\n2. **Singular intransitive past question:** Subject + ʒip + Verb + ne.\n3. **Singular transitive present question:** Subject‑before‑transitive + ati + [optional kəmə] + Verb + Object + ne **or** Subject‑before‑transitive + ati + Object + Verb + ne.\n4. **Singular transitive past question:** Subject‑before‑transitive + Object + Verb + tʰu + ne (kəmə optional before the verb).\n5. **Singular transitive non‑past (no auxiliary):** Subject‑before‑transitive + Object + Verb + rɤ + ne (or ri).\n6. **Plural non‑past question (any verb):** Subject + [optional kəmə] + Verb + [Object] + cʰam + ki + ne.\n7. **Plural transitive past question:** Subject + Object + Verb + tʰu + ne, with optional preceding kəmə.\n---",
+          "metrics": {
+            "corpus_bleu": 22.26,
+            "corpus_chrfpp": 52.54,
+            "corpus_ter": 38.1,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.48,
+              53.73,
+              12.14,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              30.38,
+              77.68,
+              34.91,
+              57.93
+            ],
+            "sentence_ter": [
+              60.0,
+              16.67,
+              50.0,
+              25.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋabə ati lan nɤ tʰu ne",
+              "tarum kəmə ŋa lapkʰi rɤ ne",
+              "tɤʔ kəmə ati cʰam nɤ ne",
+              "nuʔrum ʒip tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 79.39,
+          "accumulated_dict": "- ŋa = I (1st sg pronoun, default)\n- ŋabə = I (1st sg pronoun before a transitive verb)\n- nɤ = you (sg) – default form (subject or object)\n- nɤbə = you (sg) – subject form used before a transitive verb\n- tɤʔ = him (3rd sg masculine object) (also used as 3rd sg subject when no special form is available)\n- kan = him (3rd sg masculine object, alternative form)\n- nuʔrum = you (pl) – object pronoun (also used as subject for plural clauses)\n- nirum = we (1st pl pronoun)\n- tarum = they (3rd pl pronoun)\n- ka = non‑past auxiliary for singular intransitives\n- ʒip = past auxiliary for singular intransitives\n- ati = past auxiliary for transitive clauses (pre‑verb)\n- rɤ = non‑past auxiliary for singular transitive clauses (post‑verb)\n- cʰam = non‑past auxiliary for plural subjects **or** “know” (transitive verb, optional synonym of kəmə)\n- ki = plural‑agreement particle (appears after cʰam in plural present questions)\n- tʰu = past auxiliary for transitive clauses (post‑verb, used with plural subjects)\n- kɤ = go (intransitive verb)\n- tuʔ = sleep (intransitive verb)\n- lapkʰi = see (transitive verb)\n- kəmə = know (transitive verb) / discourse particle that can precede a verb in serial‑verb constructions\n- lan = beat (transitive verb)\n- ne = clause‑final interrogative particle",
+          "accumulated_rules": "1. **Singular intransitive present question:** Subject + ka + Verb + ne.\n2. **Singular intransitive past question:** Subject + ʒip + Verb + ne.\n3. **Transitive present question (any subject number):** Subject‑before‑transitive + ati + [optional kəmə] + Verb + Object + ne **or** Subject‑before‑transitive + ati + Object + Verb + ne.\n4. **Transitive past question (any subject number):** Subject‑before‑transitive + Object + Verb + tʰu + ne, with optional preceding **kəmə** (discourse particle).\n5. **Singular transitive non‑past (no auxiliary):** Subject‑before‑transitive + Object + Verb + rɤ + ne.\n6. **Plural non‑past question:** Subject + [optional kəmə] + Verb + Object + cʰam + ki + ne. (Verb may be lexical ‘know’ = kəmə or any other transitive verb.)\n7. **Plural transitive non‑past (no auxiliary):** Subject + Object + Verb + ri + ne.\n8. **Word order flexibility:** In clauses where the subject is a 3rd‑person singular pronoun, the language may place the subject **post‑verb** (after the verb) following the auxiliary (e.g., *ati kəmə Ŋa lapkʰi tɤʔ ne*).\n9. **Discourse particle kəmə:** May appear before the object or before the verb in transitive clauses, especially in past constructions, without affecting core grammatical relations.\n[DELETED: Rule 6 “plural non‑past question (any verb): Subject + [optional kəmə] + Verb + [Object] + cʰam + ki + ne” – the optional kəmə is not a separate particle; it is the verb ‘know’ when present. The revised rule reflects that.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 22.26,
+        "corpus_chrfpp": 52.54,
+        "corpus_ter": 38.1,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.48,
+          53.73,
+          12.14,
+          35.36
+        ],
+        "sentence_chrfpp": [
+          30.38,
+          77.68,
+          34.91,
+          57.93
+        ],
+        "sentence_ter": [
+          60.0,
+          16.67,
+          50.0,
+          25.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ŋabə ati lan nɤ tʰu ne",
+          "tarum kəmə ŋa lapkʰi rɤ ne",
+          "tɤʔ kəmə ati cʰam nɤ ne",
+          "nuʔrum ʒip tuʔ ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 8
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 27.88,
+          "accumulated_dict": "- ŋa    = “I” (subject, non‑past)\n- ŋabə  = “I” (subject, used before a past‑tense clause)\n- nɤ    = “you (sg)” (subject)\n- ka    = “go”\n- ʒip   = “sleep”\n- ati   = “see”\n- lapkʰi = “him”\n- tuʔ   = past‑tense marker (used with “you” as subject)\n- tɤʔ   = past‑tense marker (used with “I” as subject)\n- ne    = sentence‑final interrogative particle (“‑?”)",
+          "accumulated_rules": "1. **Basic clause order**: Subject – Verb – (Past‑tense marker) – ne.\n- The interrogative particle *ne* always appears at the end of a question.\n2. **Past‑tense marking**: A clause that is past‑tense takes a suffix immediately after the verb.\n- The suffix appears as *tuʔ* when the subject is “you (sg)”.\n- The suffix appears as *tɤʔ* when the subject is “I”. (The choice of vowel reflects agreement with the subject pronoun.)\n- No past‑tense suffix is used for non‑past (present) questions.\n3. **Subject pronouns**:\n- *ŋa* is the default 1st‑person singular pronoun in present‑tense clauses.\n- When the clause is past‑tense, the 1st‑person pronoun surfaces as *ŋabə* (a form that incorporates a nominalizer‑like element *‑bə*).\n- *nɤ* is the 2nd‑person singular pronoun, unchanged across tenses.\n4. **Verb stems** are invariant; tense is expressed only by the post‑verbal suffixes described above.\n5. **Object pronouns** (e.g., “him”) follow the verb and precede any tense suffix, as seen with *lapkʰi* in the third example.",
+          "metrics": {
+            "corpus_bleu": 6.53,
+            "corpus_chrfpp": 8.68,
+            "corpus_ter": 81.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.44,
+              9.69
+            ],
+            "sentence_chrfpp": [
+              10.61,
+              7.39
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋa ka kɤ ne",
+              "nɤ ʒip tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 48.87,
+          "accumulated_dict": "- ŋa    = “I” (subject, non‑past)\n- ŋabə  = “I” (subject, used before a past‑tense clause)\n- nɤ    = “you (sg)” (subject)\n- ka    = “go”\n- ʒip   = “sleep”\n- ati   = “see”\n- lapkʰi = “him”\n- tuʔ   = past‑tense marker (used with “you” as subject)\n- tɤʔ   = past‑tense marker (used with “I” as subject)\n- ne    = sentence‑final interrogative particle (“‑?”)",
+          "accumulated_rules": "1. **Clause structure** (non‑past, yes‑no question)\n- **Subject – Verb – Object – Auxiliary – Particle – ne**\n- The auxiliary *cʰam* follows the object and is obligatorily followed by the filler *ki* before the final interrogative *ne*.\n2. **Clause structure** (past‑tense, yes‑no question)\n- **Subject – Verb – Object – Past‑tense suffix – ne**\n- No auxiliary *cʰam* is used; the past‑tense suffix (*tuʔ* / *tɤʔ*) appears directly after the verb (or after the object if the object precedes the verb, as in the data).\n3. **Subject pronoun alternations**\n- 1st‑person singular: *ŋa* in present, *ŋabə* in past.\n- 2nd‑person singular: *nɤ* in declaratives, *nɤbə* in interrogatives (the suffix *‑bə* marks the interrogative environment).\n4. **Verb stems** are invariant; tense is expressed only by the suffixes *tuʔ* / *tɤʔ* (past) or by the presence of the auxiliary *cʰam* (present‑tense question).\n5. **Object pronouns**\n- Third‑person singular object: *lapkʰi*.\n- In interrogative clauses the same form can also serve as a 1st‑person object (“me”).\n6. **Auxiliary “do”**\n- *cʰam* functions as a polarity‑marking auxiliary in present‑tense yes‑no questions.\n- It obligatorily co‑occurs with the particle *ki* before the final interrogative *ne*.\n7. **Phonological note**\n- The vowel quality of the past‑tense suffix agrees with the subject vowel (*u* after *nɤ*, *ɤ* after *ŋa*).\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 43.69,
+          "accumulated_dict": "- ŋa    = “I” (subject, non‑past)\n- ŋabə  = “I” (subject, used before a past‑tense clause)\n- nɤ    = “you (sg)” (subject)\n- ka    = “go”\n- ʒip   = “sleep”\n- ati   = “see”\n- lapkʰi = “him”\n- tuʔ   = past‑tense marker (used with “you” as subject)\n- tɤʔ   = past‑tense marker (used with “I” as subject)\n- ne    = sentence‑final interrogative particle (“‑?”)",
+          "accumulated_rules": "1. **Clause type – non‑past yes‑no question**\n- Order: **Subject – Verb – Object – cʰam – ki – ne**\n- The auxiliary *cʰam* marks present‑tense polarity; it must be followed by the filler *ki* before the final particle *ne*.\n2. **Clause type – past‑tense yes‑no question**\n- Order: **Subject – Verb – Object – Past‑tense suffix – ne**\n- No auxiliary is used. The past‑tense suffix attaches directly after the verb **or** after the object when the object precedes the verb (as in the data).\n- The suffix varies according to the subject’s person/number:\n* *tuʔ* after 2nd‑person subjects,\n* *tɤʔ* after 1st‑person subjects,\n* *tʰu* after 3rd‑person subjects.\n3. **Subject pronoun alternations**\n- 1st‑person singular: *ŋa* (non‑past), *ŋabə* (past).\n- 2nd‑person singular: *nɤ* (declarative), *nɤbə* (interrogative).\n- 2nd‑person plural: *nuʔrum* (used in both tenses; no special interrogative suffix).\n- 3rd‑person plural: *tarum* (used only as subject; no separate object form).\n4. **Object pronouns**\n- 2nd‑person singular object: *lan* (derived from the subject form *nɤ*).\n- 3rd‑person singular object: *lapkʰi* (subject form) or *kan* when the object follows a verb that already carries a past‑tense suffix (phonological reduction).\n5. **Verb stems** are invariant; tense is expressed solely by the auxiliary (*cʰam*) for present‑tense questions or by the appropriate past‑tense suffix (*tuʔ, tɤʔ, tʰu*).\n6. **Agreement**\n- The past‑tense suffix shows **subject‑agreement** in person/number (see Rule 2).\n- No overt agreement is marked on the verb stem itself.\n7. **Interrogative particle**\n- *ne* always appears at the end of a clause that is a yes‑no question, regardless of tense.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 25.43,
+          "accumulated_dict": "- ŋa    = “I” (subject, non‑past)\n- ŋabə  = “I” (subject, used before a past‑tense clause)\n- nɤ    = “you (sg)” (subject)\n- ka    = “go”\n- ʒip   = “sleep”\n- ati   = “see”\n- lapkʰi = “him”\n- tuʔ   = past‑tense marker (used with “you” as subject)\n- tɤʔ   = past‑tense marker (used with “I” as subject)\n- ne    = sentence‑final interrogative particle (“‑?”)",
+          "accumulated_rules": "1. **Word order**\n- Declarative clause: **Subject – Verb – Object** (object may be omitted).\n- Non‑past yes‑no question: **Subject – Verb – Object – cʰam – ki – ne**.\n- Past‑tense yes‑no question: **Subject – Verb – Object – (past‑tense suffix) – ne**.\n- When the object precedes the verb (as in the data), the past‑tense suffix attaches after the object instead of the verb.\n2. **Tense marking**\n- Present‑tense polarity in questions is expressed by the auxiliary *cʰam* (followed by filler *ki*).\n- Past tense is expressed by a suffix that agrees with the subject’s person/number:\n* *tuʔ* after 2nd‑person singular subjects,\n* *tɤʔ* after 1st‑person singular subjects,\n* *tʰu* after 3rd‑person plural subjects.\n- The suffix attaches directly to the verb, or to the object if the object is placed before the verb.\n3. **Subject pronoun alternations**\n- 1st‑person singular: *ŋa* (non‑past), *ŋabə* (past).\n- 2nd‑person singular: *nɤ* (declarative), *nɤbə* (interrogative).\n- 2nd‑person plural: *nuʔrum* (same form in both tenses).\n- 3rd‑person plural: *tarum* (subject only).\n4. **Object pronouns**\n- 2nd‑person singular object: *lan*.\n- 3rd‑person singular object: *lapkʰi* (default) or *kan* after a past‑tense‑suffixed verb.\n- 1st‑person plural object: *ri*.\n- 3rd‑person plural object: *kəmə*.\n5. **Interrogative particle**\n- *ne* obligatorily terminates any yes‑no question, irrespective of tense.\n6. **Filler in non‑past questions**\n- The element *ki* always follows *cʰam* and precedes *ne*.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 6.53,
+        "corpus_chrfpp": 8.68,
+        "corpus_ter": 81.82,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.44,
+          9.69
+        ],
+        "sentence_chrfpp": [
+          10.61,
+          7.39
+        ],
+        "sentence_ter": [
+          80.0,
+          83.33
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ŋa ka kɤ ne",
+          "nɤ ʒip tuʔ ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne"
+        ],
+        "num_evaluated": 2
+      },
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 101.81,
+          "metrics": {
+            "corpus_bleu": 52.08,
+            "corpus_chrfpp": 74.35,
+            "corpus_ter": 23.81,
+            "exact_match_corpus": 25.0,
+            "sentence_bleu": [
+              17.97,
+              100.0,
+              53.73,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              42.9,
+              100.0,
+              74.18,
+              65.52
+            ],
+            "sentence_ter": [
+              60.0,
+              0.0,
+              16.67,
+              25.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "ŋa kəmə nɤ lan tʰu ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ki ne",
+              "nuʔrum ʒip kɤ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 52.08,
+        "corpus_chrfpp": 74.35,
+        "corpus_ter": 23.81,
+        "exact_match_corpus": 25.0,
+        "sentence_bleu": [
+          17.97,
+          100.0,
+          53.73,
+          35.36
+        ],
+        "sentence_chrfpp": [
+          42.9,
+          100.0,
+          74.18,
+          65.52
+        ],
+        "sentence_ter": [
+          60.0,
+          0.0,
+          16.67,
+          25.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "ŋa kəmə nɤ lan tʰu ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ki ne",
+          "nuʔrum ʒip kɤ ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 46.68,
+          "metrics": {
+            "corpus_bleu": 13.64,
+            "corpus_chrfpp": 36.89,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              38.75,
+              11.48,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              15.25,
+              51.96,
+              33.38,
+              40.68
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              50.0,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip kəmə ŋa ne",
+              "tarum kəmə ŋa ne",
+              "ati kə ka cʰam nɤ ne",
+              "nuʔrum ka ʒip tuʔ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 41.97,
+          "metrics": {
+            "corpus_bleu": 9.73,
+            "corpus_chrfpp": 35.72,
+            "corpus_ter": 52.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              20.8,
+              11.51,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              13.17,
+              38.46,
+              28.73,
+              65.52
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              50.0,
+              25.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip kəmə tʰɤ ne",
+              "tarum ʒip kəmə tʰɤ ne",
+              "ati ka cʰam nɤbə ne",
+              "nuʔrum ʒip kɤ ne"
+            ],
+            "references": [
+              "ŋabə nɤ lan tɤʔ ne",
+              "tarum kəmə ŋa lapkʰi tʰɤ ne",
+              "ati kəmə nɤ cʰam ru ne",
+              "nuʔrum ʒip kan ne"
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 13.64,
+        "corpus_chrfpp": 36.89,
+        "corpus_ter": 52.38,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.7,
+          38.75,
+          11.48,
+          14.06
+        ],
+        "sentence_chrfpp": [
+          15.25,
+          51.96,
+          33.38,
+          40.68
+        ],
+        "sentence_ter": [
+          80.0,
+          33.33,
+          50.0,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nɤ ʒip kəmə ŋa ne",
+          "tarum kəmə ŋa ne",
+          "ati kə ka cʰam nɤ ne",
+          "nuʔrum ka ʒip tuʔ ne"
+        ],
+        "references": [
+          "ŋabə nɤ lan tɤʔ ne",
+          "tarum kəmə ŋa lapkʰi tʰɤ ne",
+          "ati kəmə nɤ cʰam ru ne",
+          "nuʔrum ʒip kan ne"
+        ],
+        "num_evaluated": 4
+      },
+      "delta": {
+        "bleu_delta": -3.91,
+        "chrf_delta": -1.17,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 1.51,
+      "ter": 2060.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Hakhun translation (best effort):**  \n\n**“Ká‑tá ri sá‑na?”**  \n\n*Breakdown (tentative):*  \n- **Ká‑tá** – “I” (subject ",
+      "reference": "ŋabə nɤ lan tɤʔ ne"
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "incremental_combinations": {
+      "best_bleu": 22.26,
+      "best_chrf": 52.54,
+      "best_ter": 38.1,
+      "best_em": 0.0,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "ŋabə ati lan nɤ tʰu ne",
+        "tarum kəmə ŋa lapkʰi rɤ ne",
+        "tɤʔ kəmə ati cʰam nɤ ne",
+        "nuʔrum ʒip tuʔ ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ],
+      "best_step": 8
+    },
+    "step_by_step": {
+      "best_bleu": 6.53,
+      "best_chrf": 8.68,
+      "best_ter": 81.82,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "ŋa ka kɤ ne",
+        "nɤ ʒip tuʔ ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne"
+      ],
+      "best_stage": "lexical"
+    },
+    "human_inspiration": {
+      "best_bleu": 52.08,
+      "best_chrf": 74.35,
+      "best_ter": 23.81,
+      "best_em": 25.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "ŋa kəmə nɤ lan tʰu ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ki ne",
+        "nuʔrum ʒip kɤ ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 13.64,
+      "best_chrf": 36.89,
+      "best_ter": 52.38,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "nɤ ʒip kəmə ŋa ne",
+        "tarum kəmə ŋa ne",
+        "ati kə ka cʰam nɤ ne",
+        "nuʔrum ka ʒip tuʔ ne"
+      ],
+      "best_references": [
+        "ŋabə nɤ lan tɤʔ ne",
+        "tarum kəmə ŋa lapkʰi tʰɤ ne",
+        "ati kəmə nɤ cʰam ru ne",
+        "nuʔrum ʒip kan ne"
+      ],
+      "delta": {
+        "bleu_delta": -3.91,
+        "chrf_delta": -1.17,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

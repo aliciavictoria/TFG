@@ -1,0 +1,1874 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-25T15:22:35.209692",
+    "puzzle_id": "linguini_012019010100",
+    "language": "Desconocida",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "num_test_pairs": 6,
+    "source_raw_log": "raw_logs/linguini_012019010100_gpt-oss-120b-openrouter.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "She took the bread and ate it.",
+      "hypothesis": "**Translation:** “I am fine.”",
+      "metrics": {
+        "corpus_bleu": 3.75,
+        "corpus_chrfpp": 6.19,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.75
+        ],
+        "sentence_chrfpp": [
+          6.19
+        ],
+        "sentence_ter": [
+          100.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Translation:** “I am fine.”"
+        ],
+        "references": [
+          "She took the bread and ate it."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 15.96,
+            "corpus_chrfpp": 35.83,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.13,
+              15.62,
+              8.12,
+              34.48,
+              11.41,
+              20.16
+            ],
+            "sentence_chrfpp": [
+              23.62,
+              30.03,
+              12.69,
+              57.65,
+              33.79,
+              42.97
+            ],
+            "sentence_ter": [
+              57.14,
+              100.0,
+              100.0,
+              55.56,
+              80.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the pig and eats it.",
+              "We will go away and sing.",
+              "You will hear the cat.",
+              "We will hear the dog and he will hear the pig.",
+              "She saw the fish and the man saw the house.",
+              "I drank the water and ate the bread."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 15.96,
+        "corpus_chrfpp": 35.83,
+        "corpus_ter": 73.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.13,
+          15.62,
+          8.12,
+          34.48,
+          11.41,
+          20.16
+        ],
+        "sentence_chrfpp": [
+          23.62,
+          30.03,
+          12.69,
+          57.65,
+          33.79,
+          42.97
+        ],
+        "sentence_ter": [
+          57.14,
+          100.0,
+          100.0,
+          55.56,
+          80.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the pig and eats it.",
+          "We will go away and sing.",
+          "You will hear the cat.",
+          "We will hear the dog and he will hear the pig.",
+          "She saw the fish and the man saw the house.",
+          "I drank the water and ate the bread."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 15.96,
+        "corpus_chrfpp": 35.83,
+        "corpus_ter": 73.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          13.13,
+          15.62,
+          8.12,
+          34.48,
+          11.41,
+          20.16
+        ],
+        "sentence_chrfpp": [
+          23.62,
+          30.03,
+          12.69,
+          57.65,
+          33.79,
+          42.97
+        ],
+        "sentence_ter": [
+          57.14,
+          100.0,
+          100.0,
+          55.56,
+          80.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the pig and eats it.",
+          "We will go away and sing.",
+          "You will hear the cat.",
+          "We will hear the dog and he will hear the pig.",
+          "She saw the fish and the man saw the house.",
+          "I drank the water and ate the bread."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": false
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 2.57,
+            "corpus_chrfpp": 14.4,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.88,
+              7.16,
+              17.97,
+              5.09,
+              3.7,
+              5.44
+            ],
+            "sentence_chrfpp": [
+              6.62,
+              6.87,
+              33.26,
+              13.84,
+              18.65,
+              5.37
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              60.0,
+              100.0,
+              80.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I am here.",
+              "He/she runs.",
+              "You sing and they dance.",
+              "I and you both work together.",
+              "He/she saw the man and the dog.",
+              "I will go."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 2.45,
+            "corpus_chrfpp": 14.36,
+            "corpus_ter": 82.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.77,
+              3.75,
+              9.65,
+              4.46,
+              4.05,
+              9.43
+            ],
+            "sentence_chrfpp": [
+              11.09,
+              7.48,
+              14.34,
+              11.17,
+              17.86,
+              21.31
+            ],
+            "sentence_ter": [
+              85.71,
+              100.0,
+              80.0,
+              88.89,
+              80.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I sing and (something).",
+              "He/she/they (unsure) ...",
+              "You sing (something).",
+              "And (something) and (something) ...",
+              "He/she saw the man and I came ...",
+              "He/she saw the house and I ..."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 2.58,
+            "corpus_chrfpp": 13.86,
+            "corpus_ter": 82.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.97,
+              6.87,
+              11.04,
+              3.56,
+              3.69,
+              5.67
+            ],
+            "sentence_chrfpp": [
+              13.76,
+              7.98,
+              29.01,
+              4.83,
+              16.37,
+              12.14
+            ],
+            "sentence_ter": [
+              71.43,
+              100.0,
+              80.0,
+              88.89,
+              70.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will take and …",
+              "I will get up and …",
+              "You sing and they (unspecified) …",
+              "And … and …",
+              "I saw the man and I came.",
+              "He/she (unspecified) took and …"
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 11.29,
+            "corpus_chrfpp": 32.4,
+            "corpus_ter": 62.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.26,
+              15.21,
+              19.36,
+              29.07,
+              3.69,
+              10.9
+            ],
+            "sentence_chrfpp": [
+              48.13,
+              28.12,
+              35.59,
+              49.61,
+              16.37,
+              19.33
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              60.0,
+              44.44,
+              70.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread and …",
+              "We will go away and …",
+              "They will sing and …",
+              "And they will sing and they will get up.",
+              "I saw the man and I came.",
+              "He saw them and I …"
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 6.2,
+            "corpus_chrfpp": 23.22,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.94,
+              7.55,
+              8.3,
+              14.99,
+              3.69,
+              12.26
+            ],
+            "sentence_chrfpp": [
+              36.86,
+              5.43,
+              26.82,
+              27.87,
+              16.37,
+              24.49
+            ],
+            "sentence_ter": [
+              71.43,
+              83.33,
+              120.0,
+              66.67,
+              70.0,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread.",
+              "We will eat.",
+              "You (sg) will sing and we will drink.",
+              "And they eat and they drink and we get up.",
+              "I saw the man and I came.",
+              "He saw the house and I take."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 17.28,
+            "corpus_chrfpp": 40.48,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.26,
+              15.21,
+              8.3,
+              34.48,
+              8.17,
+              19.69
+            ],
+            "sentence_chrfpp": [
+              48.13,
+              28.12,
+              33.65,
+              57.65,
+              34.35,
+              34.95
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              120.0,
+              55.56,
+              60.0,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread and …",
+              "We will go away and …",
+              "You (sg) will sing and hear the dog.",
+              "We will hear the dog and he will hear the pig.",
+              "I will come and see the man.",
+              "He sees the house and …"
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 15.11,
+            "corpus_chrfpp": 35.36,
+            "corpus_ter": 71.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.94,
+              26.65,
+              9.65,
+              31.46,
+              7.07,
+              11.99
+            ],
+            "sentence_chrfpp": [
+              36.86,
+              31.86,
+              21.96,
+              57.31,
+              23.85,
+              34.91
+            ],
+            "sentence_ter": [
+              71.43,
+              66.67,
+              80.0,
+              66.67,
+              70.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She takes the bread.",
+              "We will go away.",
+              "They will hear the dog.",
+              "And we will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "I ate the bread and drank the water."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 15.96,
+            "corpus_chrfpp": 35.21,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              26.65,
+              9.29,
+              31.46,
+              11.9,
+              11.99
+            ],
+            "sentence_chrfpp": [
+              11.74,
+              31.86,
+              35.21,
+              58.63,
+              29.76,
+              35.59
+            ],
+            "sentence_ter": [
+              85.71,
+              66.67,
+              80.0,
+              66.67,
+              70.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and come.",
+              "We will go away.",
+              "You(sg) sing and hear the dog.",
+              "And we will hear the dog and we will hear the pig.",
+              "She saw the fish and I ate the bread.",
+              "I saw the fish and drank the water."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 14.05,
+            "corpus_chrfpp": 30.75,
+            "corpus_ter": 73.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.65,
+              26.65,
+              8.64,
+              34.48,
+              7.07,
+              6.89
+            ],
+            "sentence_chrfpp": [
+              15.01,
+              31.86,
+              30.9,
+              57.65,
+              23.85,
+              18.83
+            ],
+            "sentence_ter": [
+              85.71,
+              66.67,
+              100.0,
+              55.56,
+              70.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She and I get up.",
+              "We will go away.",
+              "She sings and hears the dog.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "I saw the fish and they ate."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 13.36,
+            "corpus_chrfpp": 35.63,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              23.26,
+              26.65,
+              22.09,
+              29.0,
+              3.74,
+              5.93
+            ],
+            "sentence_chrfpp": [
+              44.99,
+              31.86,
+              54.78,
+              50.44,
+              20.89,
+              20.25
+            ],
+            "sentence_ter": [
+              71.43,
+              66.67,
+              80.0,
+              66.67,
+              100.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and.",
+              "We will go away.",
+              "They sing and will hear the dog.",
+              "We hear the dog and they get up and come.",
+              "She sees the man and dog, comes, and saw the man.",
+              "I ate the bread and she saw the fish."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 13.36,
+        "corpus_chrfpp": 35.63,
+        "corpus_ter": 80.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          23.26,
+          26.65,
+          22.09,
+          29.0,
+          3.74,
+          5.93
+        ],
+        "sentence_chrfpp": [
+          44.99,
+          31.86,
+          54.78,
+          50.44,
+          20.89,
+          20.25
+        ],
+        "sentence_ter": [
+          71.43,
+          66.67,
+          80.0,
+          66.67,
+          100.0,
+          87.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and.",
+          "We will go away.",
+          "They sing and will hear the dog.",
+          "We hear the dog and they get up and come.",
+          "She sees the man and dog, comes, and saw the man.",
+          "I ate the bread and she saw the fish."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 10,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 17.28,
+        "corpus_chrfpp": 40.48,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          23.26,
+          15.21,
+          8.3,
+          34.48,
+          8.17,
+          19.69
+        ],
+        "sentence_chrfpp": [
+          48.13,
+          28.12,
+          33.65,
+          57.65,
+          34.35,
+          34.95
+        ],
+        "sentence_ter": [
+          42.86,
+          100.0,
+          120.0,
+          55.56,
+          60.0,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She takes the bread and …",
+          "We will go away and …",
+          "You (sg) will sing and hear the dog.",
+          "We will hear the dog and he will hear the pig.",
+          "I will come and see the man.",
+          "He sees the house and …"
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 6,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 0.95,
+            "corpus_chrfpp": 6.95,
+            "corpus_ter": 104.44,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              7.81,
+              4.99,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              16.38,
+              10.81,
+              17.29,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              83.33,
+              160.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I came and saw the man and the dog.",
+              "You sing and I get up.",
+              "He saw the house and I took the pig.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 3.63,
+            "corpus_chrfpp": 17.25,
+            "corpus_ter": 95.56,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.55,
+              13.13,
+              10.12,
+              8.7,
+              0.7,
+              5.87
+            ],
+            "sentence_chrfpp": [
+              36.63,
+              30.91,
+              4.52,
+              17.82,
+              3.93,
+              11.17
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              88.89,
+              100.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will get up and will take the bread.",
+              "We will go away and will sing.",
+              "I came.",
+              "You saw the dog.",
+              "He sang.",
+              "The pig is in the house."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 3.47,
+            "corpus_chrfpp": 13.96,
+            "corpus_ter": 108.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.07,
+              4.03,
+              9.29,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              45.49,
+              12.95,
+              27.91,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              71.43,
+              166.67,
+              140.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They eat the bread and drink the water.",
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 1.21,
+            "corpus_chrfpp": 9.01,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.92,
+              16.34,
+              6.57,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              11.74,
+              34.0,
+              15.43,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              85.71,
+              50.0,
+              120.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They get up and come.",
+              "She sings and goes away.",
+              "He takes the bread and eats it.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 1.21,
+        "corpus_chrfpp": 9.01,
+        "corpus_ter": 93.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.92,
+          16.34,
+          6.57,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          11.74,
+          34.0,
+          15.43,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          85.71,
+          50.0,
+          120.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "They get up and come.",
+          "She sings and goes away.",
+          "He takes the bread and eats it.",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 6,
+        "missing_indices": [
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 3.63,
+        "corpus_chrfpp": 17.25,
+        "corpus_ter": 95.56,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.55,
+          13.13,
+          10.12,
+          8.7,
+          0.7,
+          5.87
+        ],
+        "sentence_chrfpp": [
+          36.63,
+          30.91,
+          4.52,
+          17.82,
+          3.93,
+          11.17
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          88.89,
+          100.0,
+          87.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will get up and will take the bread.",
+          "We will go away and will sing.",
+          "I came.",
+          "You saw the dog.",
+          "He sang.",
+          "The pig is in the house."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "phonology",
+      "all_steps_complete": false
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 18.84,
+            "corpus_chrfpp": 42.12,
+            "corpus_ter": 62.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              25.85,
+              16.34,
+              14.54,
+              34.48,
+              11.03,
+              20.87
+            ],
+            "sentence_chrfpp": [
+              49.63,
+              34.5,
+              36.04,
+              57.65,
+              28.42,
+              44.73
+            ],
+            "sentence_ter": [
+              42.86,
+              66.67,
+              80.0,
+              55.56,
+              70.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and eats it.",
+              "We go away and sing.",
+              "You sing and hear the pig.",
+              "We will hear the dog and he will hear the pig.",
+              "She saw the fish and I came.",
+              "I drank the water and ate."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 18.84,
+        "corpus_chrfpp": 42.12,
+        "corpus_ter": 62.22,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          16.34,
+          14.54,
+          34.48,
+          11.03,
+          20.87
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          34.5,
+          36.04,
+          57.65,
+          28.42,
+          44.73
+        ],
+        "sentence_ter": [
+          42.86,
+          66.67,
+          80.0,
+          55.56,
+          70.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We go away and sing.",
+          "You sing and hear the pig.",
+          "We will hear the dog and he will hear the pig.",
+          "She saw the fish and I came.",
+          "I drank the water and ate."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 18.84,
+        "corpus_chrfpp": 42.12,
+        "corpus_ter": 62.22,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          16.34,
+          14.54,
+          34.48,
+          11.03,
+          20.87
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          34.5,
+          36.04,
+          57.65,
+          28.42,
+          44.73
+        ],
+        "sentence_ter": [
+          42.86,
+          66.67,
+          80.0,
+          55.56,
+          70.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We go away and sing.",
+          "You sing and hear the pig.",
+          "We will hear the dog and he will hear the pig.",
+          "She saw the fish and I came.",
+          "I drank the water and ate."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 13.42,
+            "corpus_chrfpp": 31.41,
+            "corpus_ter": 75.56,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.6,
+              15.62,
+              12.22,
+              34.48,
+              6.2,
+              6.32
+            ],
+            "sentence_chrfpp": [
+              19.97,
+              30.03,
+              35.64,
+              57.65,
+              22.28,
+              17.79
+            ],
+            "sentence_ter": [
+              71.43,
+              100.0,
+              60.0,
+              55.56,
+              80.0,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes it and eats it.",
+              "We will go away and sing.",
+              "You(sg) sing and hear.",
+              "We will hear the dog and he will hear the pig.",
+              "He saw the water and the fish.",
+              "I drank and ate."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 17.18,
+            "corpus_chrfpp": 40.2,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              25.85,
+              13.13,
+              12.22,
+              34.48,
+              6.2,
+              20.16
+            ],
+            "sentence_chrfpp": [
+              49.63,
+              30.91,
+              35.07,
+              59.81,
+              22.28,
+              42.97
+            ],
+            "sentence_ter": [
+              42.86,
+              100.0,
+              60.0,
+              55.56,
+              80.0,
+              62.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He takes the bread and eats it.",
+              "We will go away and will sing.",
+              "You sing and (you) hear.",
+              "We will hear the dog and we will hear the pig.",
+              "He saw the water and the fish.",
+              "I drank the water and ate the bread."
+            ],
+            "references": [
+              "She took the bread and ate it.",
+              "She comes and we go away.",
+              "They sing and she hears.",
+              "They will hear the dog and will get up.",
+              "I will see the fish and you(sg) will see theman.",
+              "He sees the water and I drink it."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 17.18,
+        "corpus_chrfpp": 40.2,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          13.13,
+          12.22,
+          34.48,
+          6.2,
+          20.16
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          30.91,
+          35.07,
+          59.81,
+          22.28,
+          42.97
+        ],
+        "sentence_ter": [
+          42.86,
+          100.0,
+          60.0,
+          55.56,
+          80.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We will go away and will sing.",
+          "You sing and (you) hear.",
+          "We will hear the dog and we will hear the pig.",
+          "He saw the water and the fish.",
+          "I drank the water and ate the bread."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 17.18,
+        "corpus_chrfpp": 40.2,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          25.85,
+          13.13,
+          12.22,
+          34.48,
+          6.2,
+          20.16
+        ],
+        "sentence_chrfpp": [
+          49.63,
+          30.91,
+          35.07,
+          59.81,
+          22.28,
+          42.97
+        ],
+        "sentence_ter": [
+          42.86,
+          100.0,
+          60.0,
+          55.56,
+          80.0,
+          62.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He takes the bread and eats it.",
+          "We will go away and will sing.",
+          "You sing and (you) hear.",
+          "We will hear the dog and we will hear the pig.",
+          "He saw the water and the fish.",
+          "I drank the water and ate the bread."
+        ],
+        "references": [
+          "She took the bread and ate it.",
+          "She comes and we go away.",
+          "They sing and she hears.",
+          "They will hear the dog and will get up.",
+          "I will see the fish and you(sg) will see theman.",
+          "He sees the water and I drink it."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "self_correction",
+      "all_steps_complete": true
+    }
+  }
+}

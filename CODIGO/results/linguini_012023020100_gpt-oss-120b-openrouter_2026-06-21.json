@@ -1,0 +1,1761 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T21:06:50.953387",
+    "puzzle_id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 3,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023020100",
+    "language": "Apurinã",
+    "language_family": "Maipurean (Brasil)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "nuta sykaru nykanawate uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "nykanawate nysykaru uwamukary",
+        "target": "I gave my canoe to her."
+      },
+      {
+        "source": "pita ãtary ĩpurãã",
+        "target": "You_{sg} drank the water."
+      },
+      {
+        "source": "kyky mynaru nyherẽka sytumukary",
+        "target": "The man brought my blood to the woman."
+      },
+      {
+        "source": "herẽkatxi uãtary sytu",
+        "target": "The woman drank the blood."
+      },
+      {
+        "source": "nhiximakyte pixinhikary",
+        "target": "You_{sg} remembered my fish (sg)."
+      },
+      {
+        "source": "pitxiparyte umynary kykymukary",
+        "target": "She brought your_{sg} banana to the man."
+      },
+      {
+        "source": "hãtakuru xinhikary naikute",
+        "target": "The girl remembered my house."
+      },
+      {
+        "source": "sytu apy ysykanu nutamukary kyky",
+        "target": "The man gave the woman’s bone to me."
+      },
+      {
+        "source": "nhĩpurããte nãtary",
+        "target": "I drank my water."
+      },
+      {
+        "source": "kywĩtxi apukary",
+        "target": "He found the head."
+      },
+      {
+        "source": "ywa mynanu kyky uky nutamukary",
+        "target": "He brought the man’s eye to me."
+      },
+      {
+        "source": "ximaky nhikary apĩtxi",
+        "target": "The fish (sg) ate the bone."
+      },
+      {
+        "source": "hãtakuru txiparyte napukary",
+        "target": "I found the girl’s banana."
+      },
+      {
+        "source": "ximaky kywy inhikary",
+        "target": "He ate the fish’s (sg) head."
+      },
+      {
+        "source": "hãtakuru uapukaru",
+        "target": "She found the girl."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "uwa xinhikaru sytu",
+        "target": "She remembered the woman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "txipary nhinhikary",
+        "target": "I ate the banana.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "kyky aikute pysykary ywamukary",
+        "target": "You_{sg} gave the man’s house to him.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "uwa xinhikaru sytu",
+      "reference": "She remembered the woman.",
+      "hypothesis": "**Translation (best guess):** “You are beautiful, thank you.”",
+      "latency_s": 3.99,
+      "metrics": {
+        "corpus_bleu": 2.15,
+        "corpus_chrfpp": 7.55,
+        "corpus_ter": 200.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.15
+        ],
+        "sentence_chrfpp": [
+          7.55
+        ],
+        "sentence_ter": [
+          200.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Translation (best guess):** “You are beautiful, thank you.”"
+        ],
+        "references": [
+          "She remembered the woman."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 200.81,
+          "metrics": {
+            "corpus_bleu": 7.04,
+            "corpus_chrfpp": 25.66,
+            "corpus_ter": 113.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.56,
+              12.7,
+              3.42
+            ],
+            "sentence_chrfpp": [
+              41.04,
+              13.96,
+              21.27
+            ],
+            "sentence_ter": [
+              125.0,
+              75.0,
+              128.57
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He gave the head to the woman.",
+              "She found the head.",
+              "He remembered the house and gave it to me.=== END ==="
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 7.04,
+        "corpus_chrfpp": 25.66,
+        "corpus_ter": 113.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          20.56,
+          12.7,
+          3.42
+        ],
+        "sentence_chrfpp": [
+          41.04,
+          13.96,
+          21.27
+        ],
+        "sentence_ter": [
+          125.0,
+          75.0,
+          128.57
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He gave the head to the woman.",
+          "She found the head.",
+          "He remembered the house and gave it to me.=== END ==="
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 67.89,
+          "accumulated_dict": "nuta = I (subject pronoun)\nny‑ = my / I‑ (possessor or subject prefix)\nkanawate = canoe\nsykaru = gave (past)\nuw‑ = her (dative base)\n‑kary = to (dative case marker)\nxinhikaru = <verb> (unknown)\nsytu = <noun> (unknown)\ntxipary = <noun> (unknown)\nnhinhikary = <verb‑dative> (unknown)\nkyky = <noun> (unknown)\naikute = <noun> (unknown)\npysykary = to them (dative)\nywamukary = to her (dative)",
+          "accumulated_rules": "1. Word order appears to be Subject – Verb – Object – Dative (S‑V‑O‑D).\n2. Possessor prefixes attach directly to nouns (ny‑kanawate = my canoe).\n3. The dative case is marked by the suffix **‑kary** attached to the dative noun phrase.\n4. A first‑person subject can be expressed either as a separate pronoun (**nuta**) or as a prefix (**ny‑**) on the verb (nysykaru).\n5. Verbs in the past tense end in **‑karu** (e.g., sykaru, xinhikaru).",
+          "metrics": {
+            "corpus_bleu": 2.99,
+            "corpus_chrfpp": 18.54,
+            "corpus_ter": 120.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              6.57,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              14.08,
+              15.63,
+              22.93
+            ],
+            "sentence_ter": [
+              125.0,
+              125.0,
+              114.29
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Give the sytu to her.",
+              "Give the txipary to him/her.",
+              "Give the kyky aikute to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 82.03,
+          "accumulated_dict": "nuta = I (subject pronoun)\nny‑ = my / I‑ (possessor or first‑person subject prefix)\nkanawate = canoe\nsykaru = gave (past)\nuw‑ = her (dative base)\n‑kary = dative case suffix\nxinhikaru = <verb, past, unknown meaning>\nsytu = <noun, unknown>\ntxipary = <noun, unknown>\nnhinhikary = <verb‑dative, unknown>\nkyky = <noun, unknown>\naikute = <noun, unknown>\npysykary = to them (dative)\nywamukary = to her (dative)\npita = you (sg) (subject pronoun)\nãtary = water (noun)\nĩpurãã = drank (past)",
+          "accumulated_rules": "1. The dative case is marked by the suffix **‑kary** attached to a noun phrase (e.g., uw‑kary = to her).\n2. A first‑person subject can be expressed either as a separate pronoun (**nuta**) or as the prefix **ny‑** on the verb (e.g., nysykaru = I gave).\n3. The possessor prefix **ny‑** attaches directly to nouns to indicate “my” (ny‑kanawate = my canoe).\n4. Basic clause order is Subject – Verb – Object – Dative (S‑V‑O‑D). When the subject is encoded as a verb prefix, the object may precede the verb, yielding Object – Verb – Dative (O‑V‑D).\n5. Many past‑tense verbs end in **‑karu** (sykaru, xinhikaru), but other verbs form the past with different morphology (e.g., ĩpurãã).",
+          "metrics": {
+            "corpus_bleu": 3.56,
+            "corpus_chrfpp": 17.45,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              12.44,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              16.95,
+              8.94,
+              21.97
+            ],
+            "sentence_ter": [
+              50.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She gave the sytu.",
+              "txipary gave to.",
+              "kyky gave aikute to them and her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 131.15,
+          "accumulated_dict": "nuta = I (subject pronoun)\nny‑ = my / first‑person possessor prefix; also first‑person subject prefix on verbs\nkanawate = canoe\nsykaru = gave (past)\nxinhikaru = <verb, past, unknown>\nuwamukary = to her (dative)\nywamukary = to her (dative)\npysykary = to them (dative)\npita = you (sg) (subject pronoun)\nãtary = water\nĩpurãã = drank (past)\nkyky = man\nmynaru = brought (past)\nherẽka = blood\nnyherẽka = my blood\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnysykaru = I gave (verb with ny‑ prefix)\n‑kary = dative suffix (variant)\n‑mukary = dative suffix (variant)",
+          "accumulated_rules": "1. The dative case is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase (e.g., uwamukary, sytumukary).\n2. A first‑person subject can be expressed either as a separate pronoun (**nuta**) or as the prefix **ny‑** on the verb (e.g., nysykaru).\n3. The possessor prefix **ny‑** attaches directly to nouns to indicate “my” (ny‑kanawate, ny‑herẽka).\n4. Basic clause order is Subject – Verb – Object – Dative (S‑V‑O‑D). When the subject is encoded as a verb prefix, the object may precede the verb, yielding Object – Verb – Dative (O‑V‑D).\n5. Many past‑tense verbs end in **‑karu** (sykaru, xinhikaru); other past verbs may use different stems (ĩpurãã, mynaru).",
+          "metrics": {
+            "corpus_bleu": 5.36,
+            "corpus_chrfpp": 20.18,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.53,
+              0.0,
+              3.21
+            ],
+            "sentence_chrfpp": [
+              36.45,
+              5.83,
+              16.85
+            ],
+            "sentence_ter": [
+              50.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She xinhikaru the woman",
+              "txipary to nhinhikary",
+              "The man aikute to them to her"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 100.73,
+          "accumulated_dict": "nuta = I (subject pronoun)\nny‑ = first‑person possessor prefix; also first‑person subject prefix on verbs\nkanawate = canoe\nsykaru = gave (past)\nxinhikaru = <verb, past, meaning unknown>\nuãtary = drank (past)\nuwamukary = to her (dative)\nywamukary = to her (dative)\npysykary = to them (dative)\npita = you (sg) (subject pronoun)\nãtary = water\nĩpurãã = drank (past)\nkyky = man\nmynaru = brought (past)\nherẽka = blood\nnyherẽka = my blood\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnysykaru = I gave (verb with ny‑ prefix)\n‑kary = dative suffix (variant)\n‑mukary = dative suffix (variant)\n‑txi = object (accusative) suffix (appears on nouns that precede the verb)",
+          "accumulated_rules": "1. The dative case is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase (e.g., uwamukary, sytumukary).\n2. A first‑person subject can be expressed either as a separate pronoun (**nuta**) or as the prefix **ny‑** on the verb (e.g., nysykaru).\n3. The possessor prefix **ny‑** attaches directly to nouns to indicate “my” (ny‑kanawate, ny‑herẽka).\n4. Word order is flexible; the verb may appear in second position (V2) or final position. Common patterns observed:\n- S‑V‑O‑D (nuta sykaru nykanawate uwamukary)\n- O‑V‑D (nykanawate nysykaru uwamukary)\n- S‑O‑V (pita ãtary ĩpurãã)\n- O‑V‑S (herẽkatxi uãtary sytu)\nThe choice of order does not change core grammatical relations.\n5. When a noun precedes the verb as the object, it may take the accusative suffix **‑txi** (e.g., herẽkatxi).",
+          "metrics": {
+            "corpus_bleu": 3.16,
+            "corpus_chrfpp": 23.04,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              14.79,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              27.33,
+              12.05,
+              24.18
+            ],
+            "sentence_ter": [
+              150.0,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman gave (something) to her.",
+              "To the child.",
+              "The man gave something to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 96.89,
+          "accumulated_dict": "nuta = I (subject pronoun)\nny‑ = first‑person possessor prefix; also first‑person subject prefix on verbs\nkanawate = canoe\nsykaru = gave (past)\nxinhikaru = remembered (past) [tentative]\nuãtary = drank (past)\nuwamukary = to her (dative)\nywamukary = to her (dative)\npysykary = to them (dative)\npita = you (sg) (subject pronoun)\nãtary = water\nĩpurãã = drank (past)\nkyky = man\nmynaru = brought (past)\nherẽka = blood\nnyherẽka = my blood\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnysykaru = I gave (verb with ny‑ prefix)\n‑kary = dative suffix (variant)\n‑mukary = dative suffix (variant)\n‑txi = accusative/object suffix (on nouns that precede the verb)\nnhiximakyte = you remembered (past)\npixinhikary = my fish (sg) [possessor marking unclear]",
+          "accumulated_rules": "1. The dative case is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase (e.g., uwamukary, sytumukary).\n2. A first‑person subject can be expressed either as a separate pronoun (**nuta**) or as the prefix **ny‑** on the verb (e.g., nysykaru).\n3. The possessor prefix **ny‑** attaches directly to nouns to indicate “my” (ny‑kanawate, ny‑herẽka). Some nouns may show a different possessor morphology (e.g., pixinhikary).\n4. Word order is flexible; the verb may appear in second position (V2) or final position. Common patterns observed:\n- S‑V‑O‑D (nuta sykaru nykanawate uwamukary)\n- O‑V‑D (nykanawate nysykaru uwamukary)\n- S‑O‑V (pita ãtary ĩpurãã)\n- O‑V‑S (herẽkatxi uãtary sytu)\nThe choice of order does not change core grammatical relations.\n5. When a noun precedes the verb as the object, it may take the accusative suffix **‑txi** (e.g., herẽkatxi).",
+          "metrics": {
+            "corpus_bleu": 3.48,
+            "corpus_chrfpp": 30.7,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              12.44,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              6.93,
+              24.18
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "Remembered my fish.",
+              "The man gave something to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 112.14,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nny‑ = 1st‑person possessor prefix; also 1st‑person subject prefix on verbs\nkanawate = canoe\nsykaru = gave (past)\nxinhikaru = remembered (past)\nuãtary = drank (past)\nuwamukary = to her (dative)\nywamukary = to her (dative)\npysykary = to them (dative)\nãtary = water\nĩpurãã = drank (past) (verb form used with 2sg subject)\nkyky = man\nmynaru = brought (past)\nherẽka = blood\nnyherẽka = my blood\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnysykaru = I gave (verb with ny‑ prefix)\n‑kary = dative suffix (variant)\n‑mukary = dative suffix (variant)\n‑txi = accusative/object suffix (on nouns that precede the verb)\nnhiximakyte = you remembered (past)\npixinhikary = my fish (sg) (possessed noun; note the ‑kary ending)\npitxiparyte = she (3sg feminine pronoun) [provisional]\nu‑ = 2nd‑person possessor prefix (as in umynary) [provisional]\naikute = banana (noun) [provisional]\npysykary = to them (dative)\nkykymukary = to the man (dative)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase (e.g., uwamukary, sytumukary, kykymukary).\n2. **First‑person possession** is expressed by the prefix **ny‑** on the possessed noun (ny‑kanawate, ny‑herẽka).\n3. **First‑person subjects** can be a free pronoun (**nuta**) or the prefix **ny‑** on the verb (nysykaru).\n4. **Second‑person subjects** are a free pronoun (**pita**) or are encoded in the verb morphology (e.g., nhiximakyte).\n5. **Third‑person feminine subjects** appear as the independent pronoun **pitxiparyte** (provisional).\n6. **Accusative** is optionally marked by **‑txi** on nouns that appear before the verb as objects (herẽkatxi). The suffix is not obligatory for all objects.\n7. **Word order** is flexible; common patterns include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, and V‑S‑O. Core grammatical relations are signaled by the case/agreement morphology, not by position.\n8. **Verb stems** for past actions end in **‑karu**, **‑naru**, or **‑ary**; the exact shape varies by lexical verb.\n9. **Second‑person possession** may be marked by the prefix **u‑** on the possessed noun (umynary “your …”) (provisional).",
+          "metrics": {
+            "corpus_bleu": 6.06,
+            "corpus_chrfpp": 33.64,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              14.13,
+              8.14
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              8.21,
+              28.97
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "She remembered.",
+              "The man gave the banana to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 82.46,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nny‑ = 1st‑person possessor prefix; also 1st‑person subject prefix on verbs\nu‑ = 2nd‑person possessor prefix\nkanawate = canoe\nsykaru = gave (past)\nnysykaru = I gave (verb with ny‑ prefix)\nxinhikaru = remembered (past)\nxinhikary = remembered (past, variant)\nuãtary = drank (past) (used when subject follows verb)\nĩpurãã = drank (past) (verb form used with 2sg subject)\nuwamukary = to her (dative)\nywamukary = to her (dative)\npysykary = to them (dative)\nkyky = man\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnyherẽka = my blood\nherẽka = blood\nherẽkatxi = blood‑ACC (object)\nny‑kary = my … (1st‑person possessive suffix on certain nouns, e.g., pixinhikary)\npixinhikary = my fish (sg)\npitxiparyte = she (3sg feminine pronoun)\nkykymukary = to the man (dative)\nmynaru = brought (past)\nnhiximakyte = you remembered (past)\naikute = banana\nnaikute = my house (house with 1st‑person possessor prefix **na‑**)\nhãtakuru = girl (3sg feminine noun)\n‑kary = dative suffix (also 1st‑person possessive suffix on some nouns)\n‑mukary = dative suffix (variant)\n‑txi = accusative/object suffix (optional, on pre‑verbal objects)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase (e.g., uwamukary, sytumukary, kykymukary).\n2. **First‑person possession** can be expressed either by the prefix **ny‑** (nykanawate, nyherẽka) or by the suffix **‑kary** on certain nouns (pixinhikary). Both are grammatical.\n3. **Second‑person possession** is expressed by the prefix **u‑** on the possessed noun (umynary “your banana”).\n4. **First‑person subjects** appear as the free pronoun **nuta** or as the prefix **ny‑** on the verb (nysykaru).\n5. **Second‑person subjects** appear as the free pronoun **pita** or are encoded in the verb morphology (nhiximakyte, ĩpurãã).\n6. **Third‑person feminine subjects** appear as the independent pronoun **pitxiparyte**.\n7. **Accusative** is optionally marked by **‑txi** on nouns that precede the verb as objects (herẽkatxi). The suffix is not obligatory.\n8. **Verb stems** for past actions end in **‑karu**, **‑naru**, or **‑ary**; the exact shape varies by lexical verb.\n9. **Word order** is flexible; core grammatical relations are signaled by the case/agreement morphology rather than position. Common orders observed: S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O.",
+          "metrics": {
+            "corpus_bleu": 15.17,
+            "corpus_chrfpp": 35.17,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              50.81,
+              0.0,
+              3.82
+            ],
+            "sentence_chrfpp": [
+              81.08,
+              4.23,
+              17.57
+            ],
+            "sentence_ter": [
+              50.0,
+              100.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl remembered the woman.",
+              "she remembered my fish",
+              "the man banana to them to her"
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 110.6,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nny‑ = 1st‑person possessor prefix; also 1st‑person subject prefix on verbs\nu‑ = 2nd‑person possessor prefix\nkanawate = canoe\nsykaru = gave (past)\nnysykaru = I gave (verb with ny‑ prefix)\nxinhikaru = remembered (past)\nxinhikary = remembered (past, variant)\nuãtary = drank (past) (used when subject follows verb)\nĩpurãã = drank (past) (verb form used with 2sg subject)\nuwamukary = to her (dative)\nywamukary = to her (dative)\npysykary = to them (dative)\nkyky = man\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnyherẽka = my blood\nherẽka = blood\nherẽkatxi = blood‑ACC (object)\n‑kary = dative suffix (also 1st‑person possessive suffix on some nouns)\n‑mukary = dative suffix (variant)\n‑txi = accusative/object suffix (optional)\npixinhikary = my fish (sg)\npitxiparyte = she (3sg feminine pronoun)\nkykymukary = to the man (dative)\nmynaru = brought (past)\nnhiximakyte = you remembered (past)\naikute = banana\nnaikute = my house (house with 1st‑person possessor prefix na‑)\nhãtakuru = girl (3sg feminine noun)\nãtary = water\numynary = your banana (2sg possessor)\napy = bone\nysykanu = gave (past, variant)\nnutamukary = to me (dative)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase (e.g., uwamukary, sytumukary, kykymukary, nutamukary).\n2. **First‑person possession** can be expressed either by the prefix **ny‑** (nykanawate, nyherẽka) or by the suffix **‑kary** on certain nouns (pixinhikary). Both are grammatical.\n3. **Second‑person possession** is expressed by the prefix **u‑** on the possessed noun (umynary, umynary).\n4. **First‑person subjects** appear as the free pronoun **nuta** or as the prefix **ny‑** on the verb (nysykaru).\n5. **Second‑person subjects** appear as the free pronoun **pita** or are encoded in the verb morphology (nhiximakyte, ĩpurãã).\n6. **Third‑person feminine subjects** appear as the independent pronoun **pitxiparyte**.\n7. **Accusative** is optionally marked by **‑txi** on nouns that precede the verb as objects (herẽkatxi). The suffix is not obligatory.\n8. **Verb stems** for past actions end in **‑karu**, **‑naru**, or **‑ary**; the exact shape varies by lexical verb (sykaru, nysykaru, xinhikaru, nhiximakyte, ysykanu).\n9. **Word order** is flexible; core grammatical relations are signaled by case/agreement morphology rather than position. Observed orders include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O.",
+          "metrics": {
+            "corpus_bleu": 6.06,
+            "corpus_chrfpp": 33.64,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              14.13,
+              8.14
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              8.21,
+              28.97
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "She remembered.",
+              "The man gave the banana to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 139.49,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nny‑ = 1st‑person possessor prefix; also 1st‑person subject prefix on some verbs\nna‑ = 1st‑person possessor prefix (alternative)\nn‑ = 1st‑person subject prefix on some verbs (e.g., nhĩpurããte)\nu‑ = 2nd‑person possessor prefix\n‑kary = dative suffix; also 1st‑person possessor suffix on certain nouns\n‑mukary = dative suffix (variant)\n‑txi = accusative/object suffix (optional)\nkanawate = canoe\nsykaru = gave (past)\nnysykaru = I gave (verb with ny‑ prefix)\nxinhikaru = remembered (past)\nxinhikary = remembered (past, variant)\nuãtary = drank (past) (used when subject follows verb)\nĩpurãã = drank (past) (verb form used with 2sg subject)\nnhĩpurããte = I drank (past) (verb with n‑ prefix)\nuwamukary = to her (dative)\nywamukary = to her (dative, variant)\npysykary = to them (dative)\nkyky = man\nsytu = woman\nsytumukary = to the woman (dative)\nnykanawate = my canoe\nnyherẽka = my blood\nherẽka = blood\nherẽkatxi = blood‑ACC (object)\npixinhikary = my fish (sg) (1st‑possessor suffix)\npitxiparyte = she (3sg feminine pronoun)\nkykymukary = to the man (dative)\nmynaru = brought (past) (3rd‑person)\nnhiximakyte = you remembered (past)\naikute = banana\nnaikute = my house (house with 1st‑person possessor prefix na‑)\nhãtakuru = girl (3sg feminine noun)\nãtary = water\numynary = your banana (2sg possessor)\napy = bone\nysykanu = gave (past, variant)\nnutamukary = to me (dative)\nuw = her (3sg feminine pronoun, dative base)\nuwa = her (3sg feminine pronoun, possibly dative without suffix)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase or pronoun (e.g., uwamukary, nutamukary).\n2. **First‑person possession** can be expressed by the prefix **ny‑** or **na‑**, or by the suffix **‑kary** on certain nouns (e.g., nykanawate, na‑kute, pixinhikary).\n3. **Second‑person possession** is expressed by the prefix **u‑** on the possessed noun (umynary).\n4. **First‑person subjects** appear either as the free pronoun **nuta** or as a subject prefix on the verb: **ny‑** (e.g., nysykaru) or **n‑** (e.g., nhĩpurããte).\n5. **Second‑person subjects** appear as the free pronoun **pita** or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n6. **Third‑person subjects** appear as independent pronouns (pitxiparyte) or are unmarked on the verb (default 3rd‑person).\n7. **Accusative** may be marked by **‑txi** on nouns that precede the verb as objects, but the suffix is optional.\n8. **Verb stems** for past actions end in **‑karu**, **‑naru**, **‑ary**, or **‑anu**; person is indicated by the subject prefix (ny‑, n‑, or none).\n9. **Word order** is flexible; grammatical relations are signaled by case/agreement morphology rather than position. Observed orders include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O, and sentences may omit an overt verb when context is clear.\n10. **3rd‑person possession** can be expressed by simple noun‑noun juxtaposition with the possessor preceding the possessed noun (sytu apy = woman’s bone).",
+          "metrics": {
+            "corpus_bleu": 6.13,
+            "corpus_chrfpp": 33.3,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              14.13,
+              8.17
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              8.21,
+              28.17
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "She remembered.",
+              "The man gave the banana to them and her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 120.85,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nny‑ / n‑ = 1st‑person possessor prefix (allomorph)\nna‑ = 1st‑person possessor prefix (alternative form)\nu‑ = 2nd‑person possessor prefix\n‑kary = dative suffix; also 1st‑person possessor suffix on some nouns\n‑mukary = dative suffix (variant)\n‑txi = accusative/object suffix (optional)\nkyky = man\nsytu = woman\nherẽka = blood\nherẽkatxi = blood‑ACC\nkanawate = canoe\nnykanawate = my canoe\nnyherẽka = my blood\npixinhikary = my fish (sg) (1st‑possessor suffix)\nnaikute = my house (na‑ + kute)\numynary = your banana (2sg possessor)\naikute = banana\nãtary = water\nnãtary = my water (ny‑/n‑ + ãtary)\nsykaru = gave (past, 3sg)\nnysykaru = gave (past, 1sg)\nysykanu = gave (past, variant)\nxinhikary = remembered (past, variant)\nnhiximakyte = you remembered (past)\nuãtary = drank (past, used when subject follows verb)\nĩpurãã = drank (past, 2sg form)\nnhĩpurããte = I drank (past) (n‑ + ĩpurãã)\nmynaru = brought (past, 3sg)\nhãtakuru = girl (3sg fem)\nuwamukary = to her (dative)\nywamukary = to her (dative, variant)\npysykary = to them (dative)\nnutamukary = to me (dative)\napukary = found (past)\nkywĩtxi = head‑ACC\npitxiparyte = she (3sg fem pronoun)\nuw = her (3sg fem pronoun, dative base)\nuwa = her (3sg fem pronoun, possibly dative without suffix)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑kary** or **‑mukary** attached to a noun phrase or pronoun (e.g., uwamukary, nutamukary).\n2. **Accusative** is marked by the suffix **‑txi** on nouns that function as objects; the suffix is optional (e.g., herẽkatxi, kywĩtxi).\n3. **First‑person possession** is expressed by the prefix **ny‑** (or its allomorph **n‑** before vowels) or **na‑**, or by the suffix **‑kary** on certain nouns (e.g., nykanawate, na‑kute, pixinhikary).\n4. **Second‑person possession** is expressed by the prefix **u‑** on the possessed noun (e.g., umynary).\n5. **First‑person subjects** appear either as the free pronoun **nuta** or as a subject prefix on the verb: **ny‑** / **n‑** (e.g., nysykaru, nhĩpurããte).\n6. **Second‑person subjects** appear as the free pronoun **pita** or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n7. **Third‑person subjects** appear as independent pronouns (e.g., pitxiparyte) or are unmarked on the verb (default 3rd‑person).\n8. **Verb stems** for past actions end in **‑karu**, **‑naru**, **‑ary**, or **‑anu**; person is indicated by the subject prefix (ny‑/n‑ for 1st, none for 2nd/3rd).\n9. **Word order** is flexible; grammatical relations are signaled by case/agreement morphology rather than position. Observed orders include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O, and sentences may omit an overt verb when context is clear.\n10. **3rd‑person possession** can be expressed by simple noun‑noun juxtaposition with the possessor preceding the possessed noun (e.g., sytu apy = woman’s bone).",
+          "metrics": {
+            "corpus_bleu": 6.06,
+            "corpus_chrfpp": 33.64,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              14.13,
+              8.14
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              8.21,
+              28.97
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "She remembered.",
+              "The man gave the banana to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 99.96,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nny‑ / n‑ = 1st‑person possessor prefix (allomorph)\nna‑ = 1st‑person possessor prefix (alternative form)\nu‑ = 2nd‑person possessor prefix\n‑kary = dative suffix **or** 1st‑person possessor suffix on certain nouns (context‑dependent)\n‑mukary = dative suffix (productive)\n‑txi = accusative/object suffix (optional)\nkyky = man\nsytu = woman\nherẽka = blood\nherẽkatxi = blood‑ACC\nkanawate = canoe\nnykanawate = my canoe\nnyherẽka = my blood\npixinhikary = my fish (sg) (1st‑possessor suffix)\nnaikute = my house (na‑ + kute)\numynary = your banana (2sg possessor)\naikute = banana\nãtary = water\nnãtary = my water (ny‑/n‑ + ãtary)\nsykaru = gave (past, 3sg)\nnysykaru = gave (past, 1sg) (ny‑ + sykaru)\nysykanu = gave (past, variant)\nxinhikary = remembered (past, variant)\nnhiximakyte = you remembered (past)\nĩpurãã = drank (past, 2sg)\nnhĩpurããte = I drank (past) (n‑ + ĩpurãã)\nmynaru = brought (past, 3sg)\nmynanu = brought (past, variant)\nhãtakuru = girl (3sg fem)\nuwamukary = to her (dative)\nywamukary = to her (dative, variant)\npysykary = to them (dative)\nnutamukary = to me (dative)\napukary = found (past)\nkywĩtxi = head‑ACC\npitxiparyte = she (3sg fem pronoun)\nuw = her (3sg fem pronoun, dative base)\nuwa = her (3sg fem pronoun, possibly dative without suffix)\napy = bone\nysykanu = gave (past, variant)\nywa = he (3sg pronoun)\nuky = eye",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑mukary** attached to a noun phrase or pronoun (e.g., uwamukary, nutamukary, kykymukary). The suffix **‑kary** can also serve as a dative marker in a limited set of lexicalised forms, but its primary function is as a 1st‑person possessor suffix on certain nouns.\n2. **Accusative** is marked by the suffix **‑txi** on nouns functioning as objects; the suffix is optional (e.g., herẽkatxi, kywĩtxi).\n3. **First‑person possession** is expressed by the prefix **ny‑/n‑** (allomorph before vowels) or **na‑**, or by the suffix **‑kary** on specific nouns (e.g., nykanawate, na‑kute, pixinhikary).\n4. **Second‑person possession** is expressed by the prefix **u‑** on the possessed noun (e.g., umynary).\n5. **First‑person subjects** appear either as the free pronoun **nuta** or as a subject prefix on the verb: **ny‑/n‑** (e.g., nysykaru, nhĩpurããte). The prefix may appear before a verb stem that already ends in a past‑tense marker.\n6. **Second‑person subjects** appear as the free pronoun **pita** or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n7. **Third‑person subjects** appear as independent pronouns (e.g., pitxiparyte, ywa) or are unmarked on the verb (default 3rd‑person).\n8. **Verb stems** for past actions show several shapes (‑karu, ‑naru, ‑kary, ‑anu, ‑kanu). Person is indicated by a subject prefix (ny‑/n‑ for 1st) or by the verb’s inherent morphology for 2nd/3rd.\n9. **Word order** is highly flexible; grammatical relations are signaled by case/agreement morphology rather than position. Common orders observed include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O, and sentences may omit an overt verb when context supplies it.\n10. **Possessor‑possessed noun order** for 3rd‑person possession is possessor‑preceding‑possessed (e.g., sytu apy “woman’s bone”).",
+          "metrics": {
+            "corpus_bleu": 3.6,
+            "corpus_chrfpp": 31.13,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              14.13,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              8.21,
+              23.53
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              71.43
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "She remembered.",
+              "The man’s banana to them to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 137.84,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nywa = he (3sg pronoun)\npitxiparyte = she (3sg fem pronoun)\nsytu = woman\nkyky = man\nhãtakuru = girl (3sg fem)\nuw = her (3sg fem, dative base)\nuwa = her (3sg fem, possibly nominative)\nuwamukary = to her (dative)\nywamukary = to her (dative, variant)\npysykary = to them (dative)\nnutamukary = to me (dative)\nkykymukary = to the man (dative)\nny‑ / n‑ = 1st‑person possessor prefix (allomorph)\nna‑ = 1st‑person possessor prefix (alternative)\nu‑ = 2nd‑person possessor prefix\n‑kary = 1st‑person possessor suffix on certain nouns (e.g., pixinhikary) **or** lexicalised dative in a few forms\n‑mukary = dative suffix (productive)\n‑txi = accusative/object suffix (optional)\nkyky = man\nkanawate = canoe\nnykanawate = my canoe (ny‑ + kanawate)\nherẽka = blood\nherẽkatxi = blood‑ACC (herẽka+txi)\nnyherẽka = my blood (ny‑ + herẽka)\naikute = banana\numynary = your banana (u‑ + mynary)\nãtary = water\nnãtary = my water (ny‑ + ãtary)\nkute = house\nnaikute = my house (na‑ + kute)\npixinhikary = my fish (possessor suffix ‑kary)\nkywĩtxi = head‑ACC (kywĩ + txi)\napy = bone\napĩtxi = bone‑ACC (apy+txi)\nuky = eye\nximaky = fish (sg)\nnhikary = ate (past)\nsykaru = gave (past, 3sg)\nnysykaru = gave (past, 1sg) (ny‑ + sykaru)\nysykanu = gave (past, variant)\nxinhikary = remembered (past, variant)\nnhiximakyte = you remembered (past, 2sg)\nĩpurãã = drank (past, 2sg)\nnhĩpurããte = I drank (past, 1sg) (n‑ + ĩpurãã)\nuãtary = drank (past, 3sg) – newly observed\nmynaru = brought (past, 3sg)\nmynanu = brought (past, variant)\napukary = found (past)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix **‑mukary** attached to a noun phrase or pronoun (e.g., uwamukary, nutamukary, kykymukary). The suffix **‑kary** can function as a dative only in a few lexicalised forms; its primary function is a 1st‑person possessor suffix on certain nouns.\n2. **Accusative** is marked by the suffix **‑txi** on nouns functioning as objects; the suffix is optional (e.g., herẽkatxi, kywĩtxi, apĩtxi).\n3. **First‑person possession** is expressed by the prefix **ny‑/n‑** (allomorph before vowels) or **na‑**, or by the suffix **‑kary** on specific nouns (e.g., nykanawate, na‑kute, pixinhikary).\n4. **Second‑person possession** is expressed by the prefix **u‑** on the possessed noun (e.g., umynary).\n5. **First‑person subjects** appear either as the free pronoun **nuta** or as a subject prefix on the verb: **ny‑/n‑** (e.g., nysykaru, nhĩpurããte). The prefix may appear before a verb stem that already ends in a past‑tense marker.\n6. **Second‑person subjects** appear as the free pronoun **pita** or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n7. **Third‑person subjects** appear as independent pronouns (e.g., pitxiparyte, ywa) or are unmarked on the verb (default 3rd‑person).\n8. **Verb stems** for past actions show several shapes (‑karu, ‑naru, ‑kary, ‑anu, ‑kanu). Person is indicated by a subject prefix (ny‑/n‑ for 1st) or by the verb’s inherent morphology for 2nd/3rd.\n9. **Word order** is highly flexible; grammatical relations are signaled by case/agreement morphology rather than position. Common orders observed include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O, and sentences may omit an overt verb when context supplies it.\n10. **Possessor‑possessed noun order** for 3rd‑person possession is possessor‑preceding‑possessed (e.g., sytu apy “woman’s bone”). For 1st‑ and 2nd‑person possession the possessor is a prefix on the noun.",
+          "metrics": {
+            "corpus_bleu": 6.24,
+            "corpus_chrfpp": 35.73,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              17.8,
+              8.14
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              15.82,
+              28.97
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "She ate.",
+              "The man gave the banana to them and to her."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 96.09,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nywa = he (3sg pronoun)\npitxiparyte = she (3sg fem pronoun)\nsytu = woman\nkyky = man\nhãtakuru = girl (3sg fem)\nuw = her (3sg fem, dative base)\nuwa = her (3sg fem, nominative)\nuwamukary = to her (dative)\nywamukary = to him (dative)\nnutamukary = to me (dative)\nkykymukary = to the man (dative)\nsytumukary = to the woman (dative)\npysykary = to them (dative)\nny‑ / n‑ = 1st‑person possessor prefix (allomorph)\nna‑ = 1st‑person possessor prefix (alternative)\nu‑ = 2nd‑person possessor prefix\n‑kary = 1st‑person possessor suffix on certain nouns (e.g., pixinhikary) **or** lexicalised dative in a few forms\n‑mukary = dative suffix (productive)\n‑txi = accusative/object suffix (optional)\nkanawate = canoe\nnykanawate = my canoe\nherẽka = blood\nherẽkatxi = blood‑ACC\nnyherẽka = my blood\naikute = house (bare)\nnaikute = my house\nkute = house (root)\npixinhikary = my fish (possessor suffix)\nkywĩtxi = head‑ACC\napy = bone\napĩtxi = bone‑ACC\nuky = eye\nximaky = fish (sg)\ntxipary = banana (root)\ntxiparyte = banana (with nominalizer)\nny‑ / n‑ + verb = 1st‑person subject prefix (e.g., nysykaru, nhĩpurããte, napukary)\nsykaru = gave (past, 3sg)\nnysykaru = gave (past, 1sg)\nysykanu = gave (past, variant)\nxinhikary = remembered (past, 3sg)\nnhiximakyte = you remembered (past, 2sg)\nnhinhikary = I remembered (past, 1sg)\nĩpurãã = drank (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nuãtary = drank (past, 3sg)\nmynaru = brought (past, 3sg)\nmynanu = brought (past, variant)\napukary = found (past, 3sg)\nnapukary = I found (past, 1sg)\nnhikary = ate (past, 3sg)\nsykaru‑variant ‑anu/‑kanu = past verb stems with variant endings",
+          "accumulated_rules": "1. **Dative** is marked by the suffix ‑mukary attached to a noun phrase or pronoun (e.g., uwamukary, nutamukary, kykymukary). The suffix ‑kary can be dative only in a few lexicalised forms; its primary function is a 1st‑person possessor suffix on certain nouns.\n2. **Accusative** is marked by the suffix ‑txi on nouns functioning as objects; the suffix is optional (e.g., herẽkatxi, kywĩtxi, apĩtxi).\n3. **First‑person possession** is expressed by the prefix ny‑/n‑ (allomorph before vowels) or na‑, or by the suffix ‑kary on specific nouns (e.g., nykanawate, na‑kute, pixinhikary).\n4. **Second‑person possession** is expressed by the prefix u‑ on the possessed noun (e.g., umynary, u‑ + noun).\n5. **First‑person subjects** appear either as the free pronoun nuta or as a subject prefix ny‑/n‑ on the verb (e.g., nysykaru, nhĩpurããte, napukary). The prefix may appear before a verb stem that already ends in a past‑tense marker.\n6. **Second‑person subjects** appear as the free pronoun pita or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n7. **Third‑person subjects** appear as independent pronouns (e.g., pitxiparyte, ywa) or are unmarked on the verb (default 3rd person).\n8. **Verb stems** for past actions show several shapes (‑karu, ‑naru, ‑kary, ‑anu, ‑kanu). Person is indicated by a subject prefix (ny‑/n‑ for 1st) or by the verb’s inherent morphology for 2nd/3rd.\n9. **Word order** is highly flexible; grammatical relations are signaled by case/agreement morphology rather than position. Common orders include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O, and sentences may omit an overt verb when context supplies it.\n10. **Possessor‑possessed noun order**: for 3rd‑person possession the possessor precedes the possessed noun (e.g., sytu apy “woman’s bone”). For 1st/2nd‑person possession the possessor is a prefix on the noun.\n11. **Verb omission** is permissible when the verb is recoverable from context (e.g., pitxiparyte umynary kykymukary “She brought your banana to the man”).\n12. **Subject pronouns** can co‑occur with a verb that already marks person; in such cases the pronoun is redundant but permissible (e.g., nuta sykaru “I gave…”).",
+          "metrics": {
+            "corpus_bleu": 17.54,
+            "corpus_chrfpp": 55.45,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              42.73,
+              18.01
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              61.46,
+              51.33
+            ],
+            "sentence_ter": [
+              75.0,
+              25.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "I remembered the banana.",
+              "The man gave the house to them and to him."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 268.62,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nywa = he (3sg pronoun)\npitxiparyte = she (3sg fem pronoun)\nsytu = woman\nkyky = man\nhãtakuru = girl (3sg fem)\nuw = her (3sg fem, nominative)\nuwamukary = to her (dative)\nuwa = her (3sg fem, accusative/neutral)\nywamukary = to him (dative)\nnutamukary = to me (dative)\nkykymukary = to the man (dative)\nsytumukary = to the woman (dative)\npysykary = them (dative)  [DELETED: not attested – placeholder removed]\nny‑ / n‑ = 1st‑person possessor prefix (before consonant / before vowel)\nna‑ = 1st‑person possessor prefix (alternative form)\nu‑ = 2nd‑person possessor prefix\n‑kary = 1st‑person possessor suffix on certain nouns (e.g., *pixinhikary*)\n‑mukary = dative case suffix (productive)\n‑txi = accusative/object suffix (optional)\nkanawate = canoe (root)\nnykanawate = my canoe\nherẽka = blood (root)\nherẽkatxi = blood‑ACC\nnyherẽka = my blood\naikute = house (root)\nnaikute = my house\naikate = house (variant)\nkute = house (root)\npixinhikary = my fish (possessor suffix)\nximaky = fish (sg) (root)\ntxipary = banana (root)\ntxiparyte = banana (with nominalizer)\nkywĩ = head (root)\nkywĩtxi = head‑ACC\nkywy = head (nom.)\napy = bone (root)\napĩtxi = bone‑ACC\nuky = eye (root)\nny‑ + verb = 1st‑person subject prefix (e.g., *nysykaru*)\nsykaru = gave (past, 3sg)\nnysykaru = gave (past, 1sg)\nysykanu = gave (past, 3sg variant)\nxinhikary = remembered (past, 3sg)\nnhiximakyte = you remembered (past, 2sg)\npixinhikary = my fish (possessor suffix)\nnhĩpurããte = I drank (past, 1sg)\nĩpurãã = drank (past, 2sg)\nuãtary = drank (past, 3sg)\nmynaru = brought (past, 3sg)\nmynanu = brought (past, 3sg variant)\napukary = found (past, 3sg)\nnapukary = I found (past, 1sg)\nnhikary = ate (past, 3sg)\ninhikary = ate (past, 3sg variant)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nnhiximakyte = you remembered",
+          "accumulated_rules": "1. **Dative** is marked by the suffix ‑mukary attached to a noun phrase or pronoun (e.g., uwamukary, nutamukary, kykymukary). The suffix ‑kary can be dative only in a few lexicalised forms; its primary function is a 1st‑person possessor suffix on certain nouns.\n2. **Accusative** is marked by the suffix ‑txi on nouns functioning as objects; the suffix is optional (e.g., herẽkatxi, kywĩtxi, apĩtxi).\n3. **First‑person possession** is expressed by the prefix ny‑/n‑ (allomorph before vowels) or na‑, or by the suffix ‑kary on specific nouns (e.g., nykanawate, na‑kute, pixinhikary).\n4. **Second‑person possession** is expressed by the prefix u‑ on the possessed noun (e.g., umynary, u‑ + noun).\n5. **First‑person subjects** appear either as the free pronoun nuta or as a subject prefix ny‑/n‑ on the verb (e.g., nysykaru, nhĩpurããte, napukary). The prefix may appear before a verb stem that already ends in a past‑tense marker.\n6. **Second‑person subjects** appear as the free pronoun pita or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n7. **Third‑person subjects** appear as independent pronouns (e.g., pitxiparyte, ywa) or are unmarked on the verb (default 3rd person).\n8. **Verb stems** for past actions show several shapes (‑karu, ‑naru, ‑kary, ‑anu, ‑kanu). Person is indicated by a subject prefix (ny‑/n‑ for 1st) or by the verb’s inherent morphology for 2nd/3rd.\n9. **Word order** is highly flexible; grammatical relations are signaled by case/agreement morphology rather than position. Common orders include S‑V‑O‑D, O‑V‑D, S‑O‑V, O‑V‑S, V‑S‑O, and sentences may omit an overt verb when context supplies it.\n10. **Possessor‑possessed noun order**: for 3rd‑person possession the possessor precedes the possessed noun (e.g., sytu apy “woman’s bone”). For 1st/2nd‑person possession the possessor is a prefix on the noun.\n11. **Verb omission** is permissible when the verb is recoverable from context (e.g., pitxiparyte umynary kykymukary “She brought your banana to the man”).\n12. **Subject pronouns** can co‑occur with a verb that already marks person; in such cases the pronoun is redundant but permissible (e.g., nuta sykaru “I gave…”).",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 3,
+            "missing_indices": [
+              0,
+              1,
+              2
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 253.08,
+          "accumulated_dict": "nuta = I (subject pronoun)\npita = you (sg) (subject pronoun)\nywa = he (3sg pronoun)\npitxiparyte = she (3sg fem pronoun)\nsytu = woman\nkyky = man\nhãtakuru = girl (3sg fem)\nuw = her (3sg fem, nominative)\nuwamukary = to her (dative)\nuwa = her (3sg fem, accusative/neutral)\nywamukary = to him (dative)\nnutamukary = to me (dative)\nkykymukary = to the man (dative)\nsytumukary = to the woman (dative)\nny‑ / n‑ = 1st‑person possessor prefix before consonant\nna‑ = 1st‑person possessor prefix before vowel\nn‑ = 1st‑person possessor prefix before vowel (variant)\nu‑ = 2nd‑person possessor prefix on noun\n‑kary = 1st‑person possessor suffix on certain nouns (e.g., pixinhikary)\n‑mukary = dative case suffix (productive)\n‑txi = accusative/object suffix (optional)\nkanawate = canoe (root)\nnykanawate = my canoe\nherẽka = blood (root)\nherẽkatxi = blood‑ACC\nnyherẽka = my blood\naikute = house (root)\nnaikute = my house (possessor prefix)\nkute = house (root)\npixinhikary = my fish (possessor suffix)\nximaky = fish (sg) (root)\ntxipary = banana (root)\ntxiparyte = banana (with nominalizer)\nmynary = banana (sg) (used with 2nd‑person possessor)\nkywĩ = head (root)\nkywĩtxi = head‑ACC\nkywy = head (nom.)\napy = bone (root)\napĩtxi = bone‑ACC\nuky = eye (root)\nsykaru = gave (past, 3sg)\nnysykaru = gave (past, 1sg)\nysykanu = gave (past, 3sg variant)\nxinhikary = remembered (past, 3sg)\nnhiximakyte = you remembered (past, 2sg)\nnhĩpurãã = you drank (past, 2sg)\nnhĩpurããte = I drank (past, 1sg)\nuãtary = drank (past, 3sg)\nmynaru = brought (past, 3sg)\nmynanu = brought (past, 3sg variant)\napukary = found (past, 3sg)\nuapukaru = found (past, 3sg variant)\nnapukary = I found (past, 1sg)\nnhikary = ate (past, 3sg)\ninhikary = ate (past, 3sg variant)\nãtary = water (root)\nnãtary = my water (1sg possessor prefix)",
+          "accumulated_rules": "1. **Dative** is marked by the suffix ‑mukary attached to a noun or pronoun (e.g., uwamukary, nutamukary, kykymukary).\n2. **Accusative** is marked by the suffix ‑txi on nouns functioning as objects; the suffix is optional (e.g., herẽkatxi, kywĩtxi, apĩtxi).\n3. **First‑person possession** is expressed by the prefix ny‑/n‑ before consonant, na‑ or n‑ before vowel, or by the suffix ‑kary on certain nouns (e.g., nykanawate, na‑kute, pixinhikary).\n4. **Second‑person possession** is expressed by the prefix u‑ on the possessed noun (e.g., umynary “your banana”).\n5. **First‑person subjects** appear either as the free pronoun nuta or as a subject prefix ny‑/n‑ on the verb (e.g., nysykaru, napukary). The pronoun may co‑occur with the verb.\n6. **Second‑person subjects** appear as the free pronoun pita or are encoded in the verb morphology without an overt prefix (e.g., ĩpurãã, nhiximakyte).\n7. **Third‑person subjects** appear as independent pronouns (e.g., pitxiparyte, ywa) or are unmarked on the verb (default 3rd person).\n8. **Verb stems** for past actions show several shapes (‑karu, ‑naru, ‑kary, ‑anu, ‑kanu). Person is indicated by a subject prefix (ny‑/n‑ for 1st) or by the verb’s inherent morphology for 2nd/3rd. Allomorphs such as uapukaru are permissible.\n9. **Word order** is highly flexible; grammatical relations are signaled by case/agreement morphology rather than position. Common orders include S‑V‑O‑D, O‑V‑S, V‑S‑O, etc.\n10. **Possessor‑possessed noun order**: for 3rd‑person possession the possessor precedes the possessed noun (e.g., sytu apy “woman’s bone”). For 1st/2nd‑person possession the possessor is a prefix on the noun.\n11. **Verb omission** is permissible when the verb is recoverable from context.\n12. **Pronoun redundancy**: subject pronouns may appear together with a verb that already marks person without affecting meaning.",
+          "metrics": {
+            "corpus_bleu": 19.39,
+            "corpus_chrfpp": 55.14,
+            "corpus_ter": 66.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.06,
+              16.37,
+              24.94
+            ],
+            "sentence_chrfpp": [
+              56.37,
+              50.06,
+              55.86
+            ],
+            "sentence_ter": [
+              75.0,
+              100.0,
+              42.86
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman remembered her.",
+              "The banana ate.",
+              "The man gave the house to him."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 17.54,
+        "corpus_chrfpp": 55.45,
+        "corpus_ter": 66.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.06,
+          42.73,
+          18.01
+        ],
+        "sentence_chrfpp": [
+          56.37,
+          61.46,
+          51.33
+        ],
+        "sentence_ter": [
+          75.0,
+          25.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The woman remembered her.",
+          "I remembered the banana.",
+          "The man gave the house to them and to him."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 13
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 36.56,
+          "accumulated_dict": "nuta = I\npita = you (sg)\nkyky = the man\nherẽkatxi = the woman\nnykanawate = canoe\nuwamukary = to her\nsytumukary = to the woman\nsykaru / nysykaru = gave\nmynaru = my\nnyherẽka = blood\nsytu = blood\nãtary = drank (2nd‑person form)\nuãtary = drank (3rd‑person form)\nĩpurãã = water",
+          "accumulated_rules": "- Basic clause order is **Subject – Verb – Object – Dative phrase**.\n- Possessive adjectives (e.g., *my*) precede the noun they modify.\n- The dative (indirect‑object) phrase is a noun plus the suffix **‑mukary**, whose initial segment (e.g., *uwa‑*, *sytu‑*) indexes the recipient.\n- Verbs show limited subject agreement through an initial vowel change (e.g., *ã‑* for 2nd person, *uã‑* for 3rd person, *sy‑* for 1st person).",
+          "metrics": {
+            "corpus_bleu": 3.24,
+            "corpus_chrfpp": 13.36,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              12.7,
+              3.55
+            ],
+            "sentence_chrfpp": [
+              12.01,
+              19.31,
+              11.23
+            ],
+            "sentence_ter": [
+              150.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I gave my canoe to her.",
+              "You drank the water.",
+              "The woman drank the blood."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 65.01,
+          "accumulated_dict": "nuta = I\npita = you (sg)\nkyky = the man\nherẽkatxi = the woman\nnykanawate = canoe\nuwamukary = to her (dative)\nsytumukary = to the woman (dative)\nsykaru / nysykaru = gave (1st‑person)\nmynaru = my (possessive adjective)\numynary = your (possessive adjective)\nnyherẽka = blood\nsytu = blood\nãtary = drank (2nd‑person)\nuãtary = drank (3rd‑person)\nĩpurãã = water\npixinhi = fish\nxinhik = house\nnaikute = girl\npitxiparyte = brought (3rd‑person verb form)\nnhiximakyte = remembered (2nd‑person verb form)\nhãtakuru = remembered (3rd‑person verb form)\n‑kary = 1st‑person possessive suffix attached to a noun (e.g., *pixinhikary* “my fish”)\n‑mukary = dative suffix; the preceding segment indexes the recipient (e.g., *kykymukary* “to the man”)",
+          "accumulated_rules": "1. Basic clause order: **Subject – Verb – Object – Dative phrase**.\n2. Possessive adjectives (e.g., *mynaru*, *umynary*) precede the noun they modify.\n3. A noun can also take the suffix **‑kary** to encode a 1st‑person possessor directly on the noun.\n4. The dative (indirect‑object) phrase is a noun plus the suffix **‑mukary**; the initial segment of the suffix (e.g., *uwa‑*, *sytu‑*, *kyky‑*) indexes the recipient.\n5. Verbs show limited subject agreement through an initial vowel change:\n- **ã‑** = 2nd‑person subject\n- **uã‑** = 3rd‑person subject\n- **sy‑** = 1st‑person subject\nThe remainder of the verb stem conveys the lexical meaning; the final **‑te** appears to mark past tense.",
+          "metrics": {
+            "corpus_bleu": 3.48,
+            "corpus_chrfpp": 25.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.7,
+              7.27,
+              3.55
+            ],
+            "sentence_chrfpp": [
+              36.4,
+              34.08,
+              13.81
+            ],
+            "sentence_ter": [
+              75.0,
+              150.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You remembered my fish.",
+              "She brought your banana to the man.",
+              "The girl remembered my house."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 32.82,
+          "accumulated_dict": "nuta = I\npita = you (sg)\nkyky = the man\nherẽkatxi = the woman\nnykanawate = canoe\nuwamukary = to her (dative)\nsytumukary = to the woman (dative)\nsykaru / nysykaru = gave (1st‑person)\nmynaru = my (possessive adjective)\numynary = your (possessive adjective)\nnyherẽka = blood\nsytu = blood\nãtary = drank (2nd‑person)\nuãtary = drank (3rd‑person)\nĩpurãã = water\npixinhi = fish\nxinhik = house\nnaikute = girl\npitxiparyte = brought (3rd‑person verb form)\nnhiximakyte = remembered (2nd‑person verb form)\nhãtakuru = remembered (3rd‑person verb form)\n‑kary = 1st‑person possessive suffix on a noun\n‑mukary = dative suffix; prefix indexes recipient\napy = bone\nysykanu = woman’s (genitive/possessive form)\nnutamukary = to me (dative)\nkywĩtxi = he found (3rd‑person verb)\napukary = head\nnhĩpurããte = drank (1st‑person past)\nnãtary = my water (possessive construction)",
+          "accumulated_rules": "1. Clause order: Subject – Verb – Object – Dative phrase.\n2. Possessive adjectives (mynaru, umynary) precede the noun they modify; a noun can also take the suffix ‑kary to encode a 1st‑person possessor directly.\n3. Dative phrase: noun + ‑mukary; the segment before ‑mukary indexes the recipient (e.g., *uwa‑* = to her, *nut‑* = to me, *kyky‑* = to the man).\n4. Verbs show limited subject agreement via an initial vowel (or consonant) change:\n- **ã‑** = 2nd‑person subject\n- **uã‑** = 3rd‑person subject\n- **sy‑** = 1st‑person subject\n- **n‑** (as in *nhĩ‑*) appears to mark 1st‑person subject in some lexicalized verbs.\nThe stem conveys lexical meaning; final **‑te** marks past tense.\n5. Genitive/possessive marking on nouns can appear as a dedicated morpheme (e.g., *ysykanu* “woman’s”) placed before the possessed noun.",
+          "metrics": {
+            "corpus_bleu": 3.35,
+            "corpus_chrfpp": 18.37,
+            "corpus_ter": 106.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              12.7,
+              3.13
+            ],
+            "sentence_chrfpp": [
+              30.22,
+              15.18,
+              9.88
+            ],
+            "sentence_ter": [
+              175.0,
+              75.0,
+              85.71
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man gave the woman’s bone to me.",
+              "I drank my water.",
+              "He found the head."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 7.33,
+          "accumulated_dict": "(no additional vocabulary can be identified without the target sentences)",
+          "accumulated_rules": "- No new syntactic patterns can be confirmed without the target sentences.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 6.03,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.16,
+              11.16,
+              0.34
+            ],
+            "sentence_chrfpp": [
+              7.23,
+              7.94,
+              4.33
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "1.",
+              "2.",
+              "3."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.48,
+        "corpus_chrfpp": 25.84,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.7,
+          7.27,
+          3.55
+        ],
+        "sentence_chrfpp": [
+          36.4,
+          34.08,
+          13.81
+        ],
+        "sentence_ter": [
+          75.0,
+          150.0,
+          85.71
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You remembered my fish.",
+          "She brought your banana to the man.",
+          "The girl remembered my house."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 52.79,
+          "metrics": {
+            "corpus_bleu": 25.78,
+            "corpus_chrfpp": 46.62,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              100.0,
+              12.44,
+              7.97
+            ],
+            "sentence_chrfpp": [
+              100.0,
+              6.89,
+              29.25
+            ],
+            "sentence_ter": [
+              0.0,
+              100.0,
+              71.43
+            ],
+            "sentence_em": [
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She remembered the woman.",
+              "He found remembered.",
+              "The man gave the eye to me."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 25.78,
+        "corpus_chrfpp": 46.62,
+        "corpus_ter": 60.0,
+        "exact_match_corpus": 33.33,
+        "sentence_bleu": [
+          100.0,
+          12.44,
+          7.97
+        ],
+        "sentence_chrfpp": [
+          100.0,
+          6.89,
+          29.25
+        ],
+        "sentence_ter": [
+          0.0,
+          100.0,
+          71.43
+        ],
+        "sentence_em": [
+          true,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She remembered the woman.",
+          "He found remembered.",
+          "The man gave the eye to me."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 63.26,
+          "metrics": {
+            "corpus_bleu": 23.99,
+            "corpus_chrfpp": 42.88,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              100.0,
+              14.13,
+              4.41
+            ],
+            "sentence_chrfpp": [
+              100.0,
+              7.16,
+              20.68
+            ],
+            "sentence_ter": [
+              0.0,
+              100.0,
+              71.43
+            ],
+            "sentence_em": [
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She remembered the woman.",
+              "Found remembered.",
+              "The man gave my bone to you."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 48.63,
+          "metrics": {
+            "corpus_bleu": 12.19,
+            "corpus_chrfpp": 38.19,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              42.73,
+              14.79,
+              7.97
+            ],
+            "sentence_chrfpp": [
+              69.11,
+              10.42,
+              30.19
+            ],
+            "sentence_ter": [
+              25.0,
+              75.0,
+              71.43
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She remembered the girl.",
+              "I found remembered.",
+              "The man gave the bone to you."
+            ],
+            "references": [
+              "She remembered the woman.",
+              "I ate the banana.",
+              "You_{sg} gave the man’s house to him."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 3,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 23.99,
+        "corpus_chrfpp": 42.88,
+        "corpus_ter": 60.0,
+        "exact_match_corpus": 33.33,
+        "sentence_bleu": [
+          100.0,
+          14.13,
+          4.41
+        ],
+        "sentence_chrfpp": [
+          100.0,
+          7.16,
+          20.68
+        ],
+        "sentence_ter": [
+          0.0,
+          100.0,
+          71.43
+        ],
+        "sentence_em": [
+          true,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She remembered the woman.",
+          "Found remembered.",
+          "The man gave my bone to you."
+        ],
+        "references": [
+          "She remembered the woman.",
+          "I ate the banana.",
+          "You_{sg} gave the man’s house to him."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 3,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": -11.8,
+        "chrf_delta": -4.69,
+        "ter_delta": 0.0,
+        "em_delta": -33.33
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 2.15,
+      "chrf": 7.55,
+      "ter": 200.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Translation (best guess):** “You are beautiful, thank you.”",
+      "reference": "She remembered the woman."
+    },
+    "baseline": {
+      "best_bleu": 7.04,
+      "best_chrf": 25.66,
+      "best_ter": 113.33,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "He gave the head to the woman.",
+        "She found the head.",
+        "He remembered the house and gave it to me.=== END ==="
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 17.54,
+      "best_chrf": 55.45,
+      "best_ter": 66.67,
+      "best_em": 0.0,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "The woman remembered her.",
+        "I remembered the banana.",
+        "The man gave the house to them and to him."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "best_step": 13
+    },
+    "step_by_step": {
+      "best_bleu": 3.48,
+      "best_chrf": 25.84,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "You remembered my fish.",
+        "She brought your banana to the man.",
+        "The girl remembered my house."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 25.78,
+      "best_chrf": 46.62,
+      "best_ter": 60.0,
+      "best_em": 33.33,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "She remembered the woman.",
+        "He found remembered.",
+        "The man gave the eye to me."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 23.99,
+      "best_chrf": 42.88,
+      "best_ter": 60.0,
+      "best_em": 33.33,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "She remembered the woman.",
+        "Found remembered.",
+        "The man gave my bone to you."
+      ],
+      "best_references": [
+        "She remembered the woman.",
+        "I ate the banana.",
+        "You_{sg} gave the man’s house to him."
+      ],
+      "delta": {
+        "bleu_delta": -11.8,
+        "chrf_delta": -4.69,
+        "ter_delta": 0.0,
+        "em_delta": -33.33
+      }
+    }
+  }
+}

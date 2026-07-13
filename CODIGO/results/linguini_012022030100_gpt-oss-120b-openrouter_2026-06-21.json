@@ -1,0 +1,2327 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T18:58:39.147073",
+    "puzzle_id": "linguini_012022030100",
+    "language": "Ngemba",
+    "language_family": "Grassfields Bantu (Camerún)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012022030100",
+    "language": "Ngemba",
+    "language_family": "Grassfields Bantu (Camerún)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ǂoo ŋǀii ŋ",
+        "target": "Does the man see me?"
+      },
+      {
+        "source": "ɡǀa ǃaukea ŋ ŋǀŋ",
+        "target": "Are you_{sg} afraid of me?"
+      },
+      {
+        "source": "cuu xae a ǂʔii ŋǁa",
+        "target": "Whom do you_{sg} think about?"
+      },
+      {
+        "source": "u ǁãu ke ǁu ǀqhõʕo",
+        "target": "Your_{pl} brother does not dance."
+      },
+      {
+        "source": "ɟanasa xae ǂqheeke",
+        "target": "Is it the thief who sings?"
+      },
+      {
+        "source": "ŋǀŋ si sĩisen ŋ ǃhaeke",
+        "target": "Will I work tomorrow?"
+      },
+      {
+        "source": "ǂhun ke ǃaukea ŋ ɡǀi",
+        "target": "The dog is afraid of us."
+      },
+      {
+        "source": "na ǁu ǂʔii ŋ ɡǀa xaŋki",
+        "target": "I do not think about your_{sg} mother."
+      },
+      {
+        "source": "ɡǀi aŋki si ǀqhõʕo ŋ ɡǃari",
+        "target": "Will our father dance in Upington?"
+      },
+      {
+        "source": "kiɟa xae ǂoo sĩisen ŋǁa",
+        "target": "Where does the man work?"
+      },
+      {
+        "source": "ɡǀa ŋǀii a ŋǁŋ",
+        "target": "Do you_{sg} see yoursg house?"
+      },
+      {
+        "source": "ŋǀŋ xae a ǃʔai",
+        "target": "Is it me whom you_{sg} call?"
+      },
+      {
+        "source": "u kee ǀeeki ǂʔii ŋǁa",
+        "target": "It is you_{pl} whom the woman thinks about."
+      },
+      {
+        "source": "a xaŋki ke kacuuʔi ŋ ɡǀa ts’aaʔa ŋ",
+        "target": "Your_{sg} mother asks if you_{sg} like me."
+      },
+      {
+        "source": "kama ɟa xae ŋ si ŋǀii u ŋǁa",
+        "target": "When will I see you_{pl}?"
+      },
+      {
+        "source": "ŋ ǃuu ke kacuuʔi ŋ ŋǀŋ si ǂqheeke ŋ ǃhaeke",
+        "target": "My grandfather asks if I will sing tomorrow."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "na kacuuʔi ŋ ɡǀu xae ŋ ǃuu ǃʔai",
+        "target": "I ask if it is you_{pl} whom my grandfather calls.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "na ǁu si sĩisen ŋ ɡǃari",
+        "target": "I will not work in Upington.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ǀeeki ke ǃaukea ŋ ŋǀŋ ǂhun",
+        "target": "The woman is afraid of my dog.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ŋ kee si ǃʔai a",
+        "target": "It is I who will call you_{sg}.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "cuu xae u ŋǀii",
+        "target": "Whom do you_{pl} see?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "cuu xae ts’aaʔa ŋ",
+        "target": "Who likes me?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "na kacuuʔi ŋ ɡǀu xae ŋ ǃuu ǃʔai",
+      "reference": "I ask if it is you_{pl} whom my grandfather calls.",
+      "hypothesis": "**Possible translation (with a high degree of uncertainty):**  \n\n*“I will go to the place where the water is and drink it.”*  \n\n*Note: The source sentence appears to be in a Khoisan language that uses click consonants (ǀ, ǃ, ʔ). Because the exact lexical items and grammar are not well‑documented here, the translation is only a best‑guess approximation.*",
+      "latency_s": 8.09,
+      "metrics": {
+        "corpus_bleu": 0.61,
+        "corpus_chrfpp": 9.89,
+        "corpus_ter": 560.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.61
+        ],
+        "sentence_chrfpp": [
+          9.89
+        ],
+        "sentence_ter": [
+          560.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation (with a high degree of uncertainty):**  \n\n*“I will go to the place where the water is and drink it.”*  \n\n*Note: The source sentence appears to be in a Khoisan language that uses click consonants (ǀ, ǃ, ʔ). Because the exact lexical items and grammar are not well‑documented here, the translation is only a best‑guess approximation.*"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 345.16,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 0,
+        "num_expected": 6,
+        "missing_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "complete": false
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 83.36,
+          "accumulated_dict": "ŋ = me (object pronoun)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg)\nǃaukea = afraid\nŋǀŋ = of",
+          "accumulated_rules": "1. Basic clause order appears to be Subject – Verb – Object (SVO).\n2. Prepositional phrases follow the object, with the preposition appearing after the object noun (Object Preposition).\n3. Personal pronouns are independent words (no affixation observed).\n4. Interrogative sentences are formed without an overt question particle in the given data.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 6.15,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.58,
+              8.58,
+              6.08,
+              5.87,
+              3.47,
+              5.04
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "translation unknown",
+              "translation unknown",
+              "translation unknown",
+              "translation unknown",
+              "translation unknown",
+              "translation unknown"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 84.51,
+          "accumulated_dict": "ŋ = me (object pronoun)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg) (declarative)\nǃaukea = afraid\nŋǀŋ = of\ncuu = whom (interrogative pronoun)\nxae = you (sg) (interrogative)\na = question‑link particle (marks wh‑question)\nǂʔii = think\nŋǁa = about",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Adjectival predicates (e.g., “afraid”) appear after the subject and can take a complement of the type Object + Preposition.\n3. Some prepositions (e.g., “of”) follow their object; other prepositions (e.g., “about”) follow the verb and introduce a complement that may be a wh‑phrase.\n4. Personal pronouns are independent words; a different pronoun form may appear in interrogative clauses (ɡǀa vs. xae).\n5. Wh‑questions are introduced by an interrogative pronoun followed by the particle **a**, without a separate question word.",
+          "metrics": {
+            "corpus_bleu": 6.2,
+            "corpus_chrfpp": 21.24,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.76,
+              15.21,
+              26.65,
+              3.55,
+              13.58,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              7.16,
+              21.68,
+              48.0,
+              9.64,
+              33.94,
+              15.91
+            ],
+            "sentence_ter": [
+              90.0,
+              66.67,
+              42.86,
+              85.71,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I do not know you now.",
+              "I will see you tomorrow.",
+              "He is afraid of the dog.",
+              "I am thinking about it.",
+              "Who do you see?",
+              "Who did you think?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 107.71,
+          "accumulated_dict": "ŋ = me (object pronoun)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg, declarative)\nǃaukea = afraid\nŋǀŋ = of\ncuu = whom (interrogative pronoun)\nxae = you (sg, interrogative)\na = question‑link particle\nǂʔii = think\nŋǁa = about\nu = your (pl, possessive)\nǁãu = brother\nke = not (negation particle)\nǁu = auxiliary/tense marker (used in negative clause)\nǀqhõʕo = dance\n[DELETED: none – all previous entries still supported]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Adjectival predicates follow the subject and may take an Object + Preposition complement; the preposition follows the object (e.g., “afraid of me”).\n3. The preposition “about” follows the verb and introduces a complement that can be a wh‑phrase.\n4. Personal pronouns are independent words; a distinct interrogative form is used in questions (ɡǀa vs. xae).\n5. Wh‑questions are introduced by an interrogative pronoun followed by the particle **a**; no additional question word is required.\n6. Possessor phrases consist of a possessive marker preceding the noun (e.g., u ǁãu “your brother”).\n7. Negation is expressed by the particle **ke** placed before the verb complex; an auxiliary element (**ǁu**) may appear between **ke** and the main verb.",
+          "metrics": {
+            "corpus_bleu": 5.88,
+            "corpus_chrfpp": 21.26,
+            "corpus_ter": 83.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.35,
+              12.22,
+              16.78,
+              3.13,
+              13.58,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              10.29,
+              22.61,
+              40.6,
+              10.04,
+              33.94,
+              15.17
+            ],
+            "sentence_ter": [
+              90.0,
+              83.33,
+              85.71,
+              85.71,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you both and you love me today.",
+              "I will give you a gift tomorrow.",
+              "He is afraid of me because of the storm.",
+              "I think about it.",
+              "Who do you see?",
+              "Who do you hear?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 81.89,
+          "accumulated_dict": "ŋ = me (object pronoun)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg, declarative)\nǃaukea = afraid\nŋǀŋ = of\ncuu = whom (interrogative pronoun)\nxae = you (sg, interrogative)\na = question‑link particle\nǂʔii = think\nŋǁa = about\nu = your (pl, possessive)\nǁãu = brother\nke = not (negation particle)\nǁu = auxiliary/tense marker (used in negative clause)\nǀqhõʕo = dance\nɟanasa = thief\nǂqheeke = sings",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Adjectival predicates follow the subject and may take an Object + Preposition complement; the preposition follows the object.\n3. The preposition “about” follows the verb and introduces a complement that can be a wh‑phrase.\n4. Personal pronouns are independent words; a distinct interrogative form is used in questions (ɡǀa vs. xae).\n5. Wh‑questions are introduced by an interrogative pronoun followed by the particle **a**; no additional question word is required.\n6. Possessor phrases consist of a possessive marker preceding the noun (e.g., u ǁãu “your brother”).\n7. Negation is expressed by the particle **ke** placed before the verb complex; an auxiliary element (**ǁu**) may appear between **ke** and the main verb.\n8. New nouns and verbs are introduced as needed (e.g., ɟanasa “thief”, ǂqheeke “sings”).",
+          "metrics": {
+            "corpus_bleu": 5.56,
+            "corpus_chrfpp": 21.45,
+            "corpus_ter": 81.08,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.35,
+              14.54,
+              13.13,
+              3.47,
+              19.2,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              10.48,
+              20.85,
+              36.39,
+              10.71,
+              44.62,
+              16.68
+            ],
+            "sentence_ter": [
+              90.0,
+              66.67,
+              71.43,
+              85.71,
+              50.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I do not understand you and me today now.",
+              "I will give you the book.",
+              "He is not afraid of me today.",
+              "I think you are.",
+              "Whom do you love?",
+              "Whom do you see?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 139.3,
+          "accumulated_dict": "ŋ = me / I (pronoun, case‑neutral)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg, declarative)\nǃaukea = afraid\nŋǀŋ = of (preposition, placed before its object)\ncuu = whom (interrogative pronoun)\nxae = copula “is/are” (question/identifying particle)\na = question‑link particle\nǂʔii = think\nŋǁa = about\nu = your (pl, possessive)\nǁãu = brother\nke = not (negation particle)\nǁu = auxiliary/tense marker used in negative clauses\nǀqhõʕo = dance\nɟanasa = thief\nǂqheeke = sings\nsi = future auxiliary “will”\nsĩisen = tomorrow\nǃhaeke = work (verb)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Adjectival predicates follow the subject and may take a prepositional complement; the preposition **of** (**ŋǀŋ**) precedes its object.\n3. The preposition **about** (**ŋǁa**) follows the verb and introduces a complement that can be a wh‑phrase.\n4. Personal pronouns are independent words; a distinct interrogative form is used in questions (e.g., **ɡǀa** vs. **cuu**).\n5. Wh‑questions are introduced by an interrogative pronoun followed by the particle **a**; no additional question word is required.\n6. Possessor phrases consist of a possessive marker preceding the noun (e.g., **u ǁãu** “your brother”).\n7. Negation is expressed by the particle **ke** placed before the verb complex; the auxiliary **ǁu** may appear between **ke** and the main verb.\n8. The copula **xae** links a noun phrase to a predicate in equative or identification clauses.\n9. Future tense is marked by the auxiliary **si** placed before the main verb.\n10. Temporal nouns such as **sĩisen** “tomorrow” follow the verb they modify.",
+          "metrics": {
+            "corpus_bleu": 5.93,
+            "corpus_chrfpp": 21.51,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.35,
+              17.03,
+              23.26,
+              3.13,
+              13.58,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              11.69,
+              27.76,
+              40.55,
+              7.34,
+              33.94,
+              15.17
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              57.14,
+              85.71,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will give you something you do not want.",
+              "I will work tomorrow.",
+              "He is afraid of you.",
+              "I am not sure.",
+              "Who do you see?",
+              "Who do you hear?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 159.24,
+          "accumulated_dict": "ŋ = me / I (object form)\nŋǀŋ = I (subject nominative) / of (post‑position)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg)\nǃaukea = afraid\ncuu = who / whom (interrogative pronoun)\nxae = copula “is/are” (identifying)\na = question‑link particle\nǂʔii = think\nŋǁa = about (post‑position)\nu = your (pl, possessive)\nǁãu = brother\nke = not (negation particle)\nǁu = auxiliary/tense marker used in negative clauses\nǀqhõʕo = dance\nɟanasa = thief\nǂqheeke = sings\nsi = future auxiliary “will”\nsĩisen = tomorrow\nǃhaeke = work (verb)\nɡǀi = you (pl) / us (object plural)\nǂhun = dog\n[DELETED: ǀqhõʕo = dance – unchanged]\n[DELETED: ǁãu = brother – unchanged]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **of** (**ŋǀŋ**) follows its object.\n3. The post‑position **about** (**ŋǁa**) follows the verb and introduces its complement.\n4. Personal pronouns have distinct subject (nominative) and object forms (e.g., **ŋǀŋ** vs. **ŋ**).\n5. Wh‑questions are formed with an interrogative pronoun followed by the particle **a**; the subject may be omitted if recoverable from context.\n6. Possessor phrases consist of a possessive marker preceding the noun (e.g., **u ǁãu** “your brother”).\n7. Negation is expressed by the particle **ke** placed before the verb complex; the auxiliary **ǁu** may appear between **ke** and the main verb.\n8. The copula **xae** links a noun phrase to a predicate in equative or identification clauses.\n9. Future tense is marked by the auxiliary **si** placed before the main verb.\n10. Temporal nouns such as **sĩisen** “tomorrow” follow the verb they modify.",
+          "metrics": {
+            "corpus_bleu": 8.94,
+            "corpus_chrfpp": 26.16,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.03,
+              45.48,
+              12.55,
+              3.93,
+              9.6,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              10.36,
+              53.06,
+              42.58,
+              13.85,
+              23.98,
+              18.12
+            ],
+            "sentence_ter": [
+              90.0,
+              33.33,
+              57.14,
+              85.71,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I think that you are me now.",
+              "I will not work tomorrow.",
+              "He is not afraid of me, the dog.",
+              "I will not be there.",
+              "Who is your see?",
+              "Who is ts’aaʔa me."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 189.44,
+          "accumulated_dict": "ŋ = me / I (object form)\nŋǀŋ = I (subject nominative) / of (post‑position)\nna = I (subject nominative, alternative to ŋǀŋ)\nǂoo = man\nŋǀii = see\nɡǀa = you (sg) / us (object plural)\nǃaukea = afraid\ncuu = who / whom (interrogative pronoun)\nxae = copula “is/are” (identifying)\na = question‑link particle\nǂʔii = think\nŋǁa = about (post‑position)\nu = your (pl, possessive)\nǁãu = brother\nke = not (negation particle)\nǁu = auxiliary/tense marker used in negative clauses\nǀqhõʕo = dance\nɟanasa = thief\nǂqheeke = sings\nsi = future auxiliary “will”\nsĩisen = tomorrow\nǃhaeke = work (verb)\nǂhun = dog\nxaŋki = mother\nɡǀi = you (pl) / us (object plural)\nɡǀu = you (pl) (possessive marker for pl)\nts’aaʔa = (unknown verb, likely “love/like”)\nǀeeki = (unknown, possibly “still”)\nkee = (variant of ke, negation)\nǃuu = (unknown verb)\nǃʔai = (unknown verb)\nkacuuʔi = (unknown verb)\nɡǃari = (unknown noun)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **of** (ŋǀŋ) follows its object.\n3. The post‑position **about** (ŋǁa) follows the verb and introduces its complement.\n4. Personal pronouns have distinct subject (nominative) and object forms (e.g., ŋǀŋ / na vs. ŋ).\n5. Wh‑questions are formed with an interrogative pronoun followed by the copula xae, the particle a, then the verb phrase; the subject may be omitted if recoverable.\n6. Possessor phrases can be expressed by a pronoun (e.g., ɡǀa “you sg”, ɡǀu “you pl”) placed before the noun (e.g., ɡǀa xaŋki “your mother”).\n7. Negation is expressed by the particle ke placed before the verb complex; the auxiliary ǁu may appear between ke and the main verb.\n8. The copula xae links a noun phrase to a predicate in equative or identification clauses.\n9. Future tense is marked by the auxiliary si placed before the temporal noun; the temporal noun (e.g., sĩisen “tomorrow”) precedes the verb.\n10. The object‑form pronoun ŋ can appear before a noun phrase to mark the complement of certain adjectives or verbs (e.g., ǃaukea ŋ X = afraid of X).",
+          "metrics": {
+            "corpus_bleu": 5.53,
+            "corpus_chrfpp": 24.04,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.22,
+              27.48,
+              14.54,
+              2.63,
+              4.58,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              10.58,
+              37.32,
+              43.68,
+              8.01,
+              16.77,
+              45.94
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              57.14,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I told you that I am not happy.",
+              "I will not go tomorrow.",
+              "The dog is not afraid of me.",
+              "Will I not go?",
+              "Who sees yours?",
+              "Who loves me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 117.67,
+          "accumulated_dict": "ŋ = me (object pronoun) / of / about / in (post‑position, context‑dependent)\nŋǀŋ = I (1st‑person nominative)\nna = I (1st‑person nominative, alternative to ŋǀŋ)\nɡǀa = you (sg) (subject) ; your (sg) (possessive)\nɡǀi = you (pl) (object) ; us (object plural) ; our (1st‑person plural possessive)\nu = your (pl) (possessive)\nǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid\nǀqhõʕo = dance\nǃhaeke = work\nɟanasa = thief\nǁãu = brother\nxaŋki = mother\naŋki = father\nɡǃari = Upington (place name)\ncuu = who / whom (interrogative pronoun)\nxae = copula “is/are” (identifying)\na = question‑link particle\nke = copular verb “be” (used in equative / predicative clauses)\nǁu = negation particle (used after **ke** or after a subject when the verb is not a copula)\nsi = future auxiliary “will” (pre‑verbal)\nsĩisen = tomorrow (temporal noun)\nŋǁa = about (post‑position)\nǀeeki = (unknown, possibly “still”)\nkee = variant of ke (negation) – [DELETED: entry — conflict with revised analysis]\nts’aaʔa = (unknown verb, likely “love/like”)\nkacuuʔi = (unknown verb)\nǂqheeke = sings (already listed)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **of/about** is expressed by **ŋ** and follows its complement (e.g., ǃaukea ŋ X = “afraid of X”).\n3. The locative post‑position **in** is also expressed by **ŋ** and follows the place noun.\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms are also used as possessive pronouns (e.g., ɡǀa, ɡǀi, u).\n5. Wh‑questions use the interrogative pronoun followed by the copula **xae**, the particle **a**, then the verb phrase (e.g., cuu xae a ǂʔii ŋǁa).\n6. Possessor phrases place the possessive pronoun before the noun (e.g., u ǁãu “your brother”, ɡǀi aŋki “our father”).\n7. The copula **ke** links a subject to a predicative adjective or noun; it is the default “be”.\n8. Negation is expressed by the particle **ǁu**. When the clause contains the copula **ke**, **ǁu** follows **ke** (ke ǁu verb). When the verb is not a copula, **ǁu** follows the subject (na ǁu ǂʔii …).\n9. Future tense is marked by the auxiliary **si**. It can appear before a temporal noun (si sĩisen …) or directly before the verb when no explicit temporal noun is present.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., si sĩisen ŋ ǃhaeke).\n11. The post‑position **about** as a complement of mental verbs is **ŋǁa** (e.g., ǂʔii ŋǁa).",
+          "metrics": {
+            "corpus_bleu": 8.29,
+            "corpus_chrfpp": 24.76,
+            "corpus_ter": 75.68,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.38,
+              45.48,
+              11.87,
+              3.93,
+              4.8,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              7.99,
+              53.06,
+              37.06,
+              14.69,
+              14.58,
+              31.52
+            ],
+            "sentence_ter": [
+              90.0,
+              33.33,
+              71.43,
+              85.71,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I do not like you.",
+              "I will not work tomorrow.",
+              "Still, I am not afraid of the dog.",
+              "I will not do it.",
+              "Who is your mother?",
+              "Who loves me."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 162.11,
+          "accumulated_dict": "ŋ = me (object pronoun) / of / about / in (post‑position, context‑dependent)\nŋǀŋ = I (1st‑person nominative)\nna = I (1st‑person nominative, alternative to ŋǀŋ)\nɡǀa = you (sg) (subject) ; your (sg) (possessive)\nɡǀi = you (pl) (object) ; us (object plural) ; our (1st‑person plural possessive)\nu = your (pl) (possessive)\nǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid\nǀqhõʕo = dance\nǃhaeke = work (general)\nsĩisen = work (verb used in future/locative contexts)\nɟanasa = thief\nǁãu = brother\nxaŋki = mother\naŋki = father\nɡǃari = Upington (place name)\ncuu = who / whom (interrogative pronoun)\nxae = copula “is/are” (identifying)\na = question‑link particle\nke = copular verb “be” (also used as dummy “do” in equative clauses)\nǁu = negation particle (follows ke in copular clauses, follows subject otherwise)\nsi = future auxiliary “will” (pre‑verbal)\nsĩisen = tomorrow (temporal noun)\nŋǁa = about (post‑position used with mental verbs)\nkiɟa = where (interrogative)\nkacuuʔi = like / love (verb) [inferred]\nɡǀu = you (pl) (subject) [inferred]\nǃuu = about / concerning (post‑position) [inferred]\nǃʔai = today (temporal noun) [inferred]\n[DELETED: kee – entry removed because it conflicted with the analysis of ke]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **of/about/in** is expressed by **ŋ** and follows its complement (e.g., ǃaukea ŋ X = “afraid of X”; ǂʔii ŋ X = “think about X”).\n3. The locative meaning “in” is also expressed by **ŋ** when it follows a place noun.\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns (e.g., ɡǀa, ɡǀi, u).\n5. Wh‑questions use the interrogative pronoun followed by the copula **xae**, the particle **a**, then the predicate (e.g., cuu xae a ǂʔii ŋǁa).\n6. Possessor phrases place the possessive pronoun before the noun (e.g., u ǁãu “your brother”, ɡǀi aŋki “our father”).\n7. The copula **ke** links a subject to a predicative adjective, noun or to a dummy “do” in equative clauses.\n8. Negation is expressed by the particle **ǁu**. When the clause contains the copula **ke**, **ǁu** follows **ke** (ke ǁu verb). When the verb is not a copula, **ǁu** follows the subject (na ǁu verb …).\n9. Future tense is marked by the auxiliary **si**. It can appear before a temporal noun (si sĩisen …) or directly before the main verb when no explicit temporal noun is present.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., si sĩisen ŋ ǃhaeke).\n11. The post‑position **about** as a complement of mental verbs is **ŋǁa** (e.g., ǂʔii ŋǁa).\n12. Interrogative locative **kiɟa** functions like “where” and appears at the clause-initial position, followed by the copula **xae** (kiɟa xae …).",
+          "metrics": {
+            "corpus_bleu": 3.71,
+            "corpus_chrfpp": 23.19,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.81,
+              16.52,
+              16.1,
+              3.93,
+              4.94,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              11.62,
+              46.72,
+              39.72,
+              15.02,
+              9.94,
+              15.2
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              57.14,
+              71.43,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I like you (pl) is about today.",
+              "I do not will tomorrow Upington.",
+              "Still be afraid of me dog.",
+              "He is will today a.",
+              "Who is you (sg).",
+              "Who is love."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 178.23,
+          "accumulated_dict": "ŋ = me (object pronoun) / of / about / in (post‑position, follows its complement)\nŋǀii = see (verb)\nŋǀŋ = I (1st‑person nominative)\nna = I (1st‑person nominative, alternative)\nɡǀa = you (sg) (subject) / your (sg) (possessive)\nɡǀi = you (pl) (object) / us (object plural) / our (1st‑person plural possessive)\nɡǀu = you (pl) (subject)\nu = your (pl) (possessive)\nǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid\nǀqhõʕo = dance\nǃhaeke = work (general)\nsĩisen = tomorrow (temporal noun)\nɟanasa = thief\nǁãu = brother\nxaŋki = mother\naŋki = father\nɡǃari = Upington (place name)\ncuu = who / whom (interrogative pronoun)\nxae = copula “is/are” (identifying)\na = question particle (marks yes/no and wh‑questions)\nke = copular verb “be”; also dummy “do” in equative clauses\nǁu = negation particle (follows ke in copular clauses, follows subject otherwise)\nsi = future auxiliary “will” (pre‑verbal)\nkacuuʔi = like / love (verb)\nǃuu = about / concerning (post‑position)\nǃʔai = today (temporal noun)\nkiɟa = where (interrogative)\nŋǁa = post‑position “about/in/where” (used with mental verbs and locative contexts)\nŋǁŋ = house (noun)\n[DELETED: kee – entry removed because it conflicted with the analysis of ke]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **of/about/in** is expressed by **ŋ** and follows its complement (e.g., ǃaukea ŋ X = “afraid of X”; ǂʔii ŋ X = “think about X”).\n3. The locative meaning “in” can also be expressed by **ŋ** after a place noun (e.g., ǀqhõʕo ŋ ɡǃari = “dance in Upington”).\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns (e.g., ɡǀa, ɡǀi, u).\n5. Wh‑questions use the interrogative pronoun followed by the copula **xae**, the particle **a**, then the predicate (e.g., cuu xae a ǂʔii ŋǁa).\n6. Possessor phrases place the possessive pronoun before the noun (e.g., u ǁãu “your brother”, ɡǀi aŋki “our father”).\n7. The copula **ke** links a subject to a predicative adjective, noun or to a dummy “do” in equative clauses.\n8. Negation is expressed by the particle **ǁu**. When the clause contains the copula **ke**, **ǁu** follows **ke** (ke ǁu verb). When the verb is not a copula, **ǁu** follows the subject (na ǁu verb …).\n9. Future tense is marked by the auxiliary **si**. It can appear before a temporal noun (si sĩisen …) or directly before the main verb when no explicit temporal noun is present.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., si sĩisen ŋ ǃhaeke).\n11. The post‑position **about/in/where** is expressed by **ŋǁa** (used with mental verbs and locative contexts).\n12. Interrogative locative **kiɟa** functions like “where” and appears at the clause‑initial position, followed by the copula **xae** (kiɟa xae …).\n13. Yes/no questions are formed by placing the question particle **a** after the verb (or after the copula when present) and before the complement (e.g., ɡǀa ŋǀii a ŋǁŋ).",
+          "metrics": {
+            "corpus_bleu": 7.93,
+            "corpus_chrfpp": 30.09,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              1.9,
+              27.05,
+              22.32,
+              3.47,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              7.67,
+              63.37,
+              49.8,
+              14.78,
+              17.14,
+              35.75
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              57.14,
+              71.43,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you today.",
+              "I will not be in Upington tomorrow.",
+              "ǀeeki is afraid of me and the dog.",
+              "I will be today.",
+              "Who sees you?",
+              "Who helps me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 162.74,
+          "accumulated_dict": "* The post‑position **ŋǁa** is used mainly with mental verbs (think, fear) and locative contexts, but some sentences show a direct object + noun without it (e.g., na ǁu ǂʔii ŋ ɡǀa xaŋki). This suggests that **ŋǁa** is optional when the complement is a noun phrase; the language can also use a simple object pronoun ŋ followed by the noun.\n* In future clauses a dummy object **ŋ** appears before the main verb (rule 10). This is confirmed in several examples.\n* The interrogative “who/whom” construction uses **cuu xae …** and may omit the particle **a** when the clause is not a yes/no question (as in example 5).\n- The sentence ɡǀa ǃaukea ŋ ŋǀŋ shows an extra pronoun **ŋǀŋ** after the adjective; this appears to be a *subject‑reiteration* required in equative‑type yes/no questions with adjectives. It does not affect the overall analysis.\nŋ = me (object pronoun) / of / about / in (post‑position, follows its complement)\nŋǀii = see (verb)\nŋǀŋ = I (1st‑person nominative)\nna = I (1st‑person nominative, alternative)\nɡǀa = you (sg) subject / your (sg) possessive\nɡǀi = you (pl) object / us (object plural) / our (1st‑person plural possessive)\nɡǀu = you (pl) subject\nu = your (pl) possessive\nǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid\nǀqhõʕo = dance\nǃhaeke = work (general)\nsĩisen = tomorrow (temporal noun)\nǃʔai = today (temporal noun)\nɟanasa = thief\nǁãu = brother\nxaŋki = mother\naŋki = father\nɡǃari = Upington (place name)\ncuu = who / whom (interrogative pronoun)\nxae = copula “is/are” (identifying)\na = question particle (marks yes/no and wh‑questions)\nke = copular verb “be”; also dummy “do” in equative clauses\nǁu = negation particle (follows ke in copular clauses, follows subject otherwise)\nsi = future auxiliary “will” (pre‑verbal)\nkacuuʔi = like / love (verb)\nǃuu = about / concerning (post‑position)\nŋǁa = post‑position “about / in / where” (used especially with mental verbs and locative contexts)\nkiɟa = where (interrogative)\nǀeeki = he / she (3rd‑person pronoun)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **of/about/in** is expressed by **ŋ** and follows its complement (e.g., ǃaukea ŋ X = “afraid of X”; ǂʔii ŋ X = “think about X”).\n3. The locative meaning “in” can also be expressed by **ŋ** after a place noun (e.g., ǀqhõʕo ŋ ɡǃari = “dance in Upington”).\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns (e.g., ɡǀa, ɡǀi, u).\n5. Wh‑questions use the interrogative pronoun followed by the copula **xae**, the particle **a** (optional when the clause is not a yes/no question), then the predicate (e.g., cuu xae a ǂʔii ŋǁa).\n6. Possessor phrases place the possessive pronoun before the noun (e.g., u ǁãu “your brother”, ɡǀi aŋki “our father”).\n7. The copula **ke** links a subject to a predicative adjective, noun or to a dummy “do” in equative clauses.\n8. Negation is expressed by the particle **ǁu**. When the clause contains the copula **ke**, **ǁu** follows **ke** (ke ǁu verb). When the verb is not a copula, **ǁu** follows the subject (na ǁu verb …).\n9. Future tense is marked by the auxiliary **si**. It can appear before a temporal noun (si sĩisen …) or directly before the main verb when no explicit temporal noun is present.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., si sĩisen ŋ ǃhaeke).\n11. The post‑position **ŋǁa** means “about / in / where” and is commonly used with mental verbs and locative contexts, but the language can also express the same relation with a simple object pronoun ŋ followed directly by the noun phrase.\n12. Interrogative locative **kiɟa** functions like “where” and appears at the clause‑initial position, followed by the copula **xae** (kiɟa xae …).\n13. Yes/no questions are formed by placing the question particle **a** after the verb (or after the copula when present) and before the complement (e.g., ɡǀa ŋǀii a ŋǁŋ).\n14. In equative‑type yes/no questions with adjectives, the subject pronoun may be repeated after the adjective (e.g., ɡǀa ǃaukea ŋ ŋǀŋ).",
+          "metrics": {
+            "corpus_bleu": 7.9,
+            "corpus_chrfpp": 28.19,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.16,
+              23.36,
+              22.32,
+              2.63,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              14.39,
+              52.66,
+              50.83,
+              7.88,
+              17.14,
+              29.63
+            ],
+            "sentence_ter": [
+              70.0,
+              66.67,
+              57.14,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you, it is about today.",
+              "I will not go to Upington tomorrow.",
+              "He is afraid of me and the dog.",
+              "Will I be today?",
+              "Who sees you?",
+              "Who … me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 175.22,
+          "accumulated_dict": "ǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid (adjective)\nǃhaeke = work (verb)\nǃʔai = call (verb)\nǀeeki = he/she (3rd‑person pronoun)\nǀqhõʕo = dance (verb)\nɟanasa = thief\nɡǀa = you (sg) subject / your (sg) possessive\nɡǀi = you (pl) object / our (1st pl) possessive\nɡǀu = you (pl) subject\nke = copula “be”; also dummy “do” in equative clauses\nkacuuʔi = like / love (verb)\nkiɟa = where (interrogative)\nna = I (sg) subject / alternative 1st sg pronoun\nŋ = me (object pronoun) / post‑position “of/about/in” (follows complement)\nŋǀii = see (verb)\nŋǀŋ = I (1st sg nominative, alternative form)\nŋǁa = post‑position “about / in / where” (used with mental verbs and locatives)\nŋǁŋ = house (noun)\nǁu = negation particle\nǁãu = brother\na = question particle (marks yes/no and wh‑questions)\naŋki = father\ncuu = who / whom (interrogative pronoun)\nxa = (not attested)\nxae = copula “is/are” (identifying)\nsi = future auxiliary “will”\nsĩisen = tomorrow (temporal noun)\nts’aaʔa = (unknown verb, assumed “eat”)\nu = definite article “the” / your (pl) possessive (context‑dependent)\nu kee = the woman (noun phrase)\nu ǁãu = your brother (possessive)\nu aŋki = your father (possessive)\nǃuu = post‑position “about / concerning”\nke ǁu = negated copular construction",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **ŋ** follows its complement and marks “of/about/in”.\n3. The post‑position **ŋǁa** also marks “about / in / where”, especially with mental verbs and locative meanings.\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns.\n5. Wh‑questions use **cuu xae [a] Verb …**; the particle **a** is optional when the clause is not a yes/no question.\n6. Possessor phrases place the possessive pronoun before the noun (e.g., *u ǁãu* “your brother”).\n7. The copula **ke** links a subject to a predicative adjective, noun or to a dummy “do” in equative clauses.\n8. Negation **ǁu** follows **ke** in copular clauses (*ke ǁu verb*) and follows the subject in non‑copular clauses (*Subject ǁu Verb*).\n9. Future tense is marked by the auxiliary **si**; it may appear before a temporal noun or directly before the main verb.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., *si sĩisen ŋ verb*).\n11. In equative‑type yes/no questions with adjectives, the subject pronoun may be repeated after the adjective (e.g., *ɡǀa ǃaukea ŋ ŋǀŋ*).\n12. Interrogative locative **kiɟa** appears clause‑initially, followed by the copula **xae** (e.g., *kiɟa xae …*).\n13. Yes/no questions place the particle **a** after the verb (or after **ke** when present) and before any complement (e.g., *ɡǀa ŋǀii a ŋǁŋ*).\n14. The definite article **u** can precede a noun to form “the …”; when attached to a pronoun it functions as a possessive (e.g., *u ǁãu* “your brother”).",
+          "metrics": {
+            "corpus_bleu": 7.91,
+            "corpus_chrfpp": 30.22,
+            "corpus_ter": 67.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.16,
+              27.05,
+              17.54,
+              3.55,
+              4.8,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              17.66,
+              63.37,
+              48.57,
+              14.76,
+              13.92,
+              17.94
+            ],
+            "sentence_ter": [
+              70.0,
+              50.0,
+              42.86,
+              85.71,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you, it is about calling.",
+              "I will not be in Upington tomorrow.",
+              "He/she is afraid of me, the dog.",
+              "Will I call the woman?",
+              "Who sees the woman?",
+              "Who eats?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 178.11,
+          "accumulated_dict": "ǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid (adjective)\nǃhaeke = work (verb)\nǃʔai = call (verb)\nǀeeki = 3rd‑person pronoun (he/she/it)\nǀqhõʕo = dance (verb)\nɟanasa = thief\nɡǀa = you (sg) subject / your (sg) possessive\nɡǀi = you (pl) object / our (1st pl) possessive\nɡǀu = you (pl) subject\nke = copula “be”; also dummy “do” in equative clauses\nkacuuʔi = like / love (verb)\nkiɟa = where (interrogative)\nna = I (sg) subject / alternative 1st sg pronoun\nŋ = me (object pronoun) / post‑position “of/about/in” (follows complement)\nŋǀii = see (verb)\nŋǀŋ = I (1st sg nominative, alternative form)\nŋǁa = post‑position “about / in / where” (used with mental verbs and locatives)\nŋǁŋ = house (noun)\nǁu = negation particle\nǁãu = brother\na = question particle (marks yes/no and wh‑questions)\naŋki = father\ncuu = who / whom (interrogative pronoun)\nxa = (not attested)\nxae = copula “is/are” (identifying)\nsi = future auxiliary “will”\nsĩisen = tomorrow (temporal noun) **or** work (verb) – polysemous\nts’aaʔa = (assumed “eat”)\nu = definite article “the” / your (pl) possessive (context‑dependent)\nu kee = the woman (noun phrase)\nu ǁãu = your brother (possessive)\nu aŋki = your father (possessive)\nxaŋki = mother (new noun)\nɡǃari = Upington (place name)\nǃuu = post‑position “about / concerning”",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **ŋ** follows its complement and marks “of/about/in/where”.\n3. The post‑position **ŋǁa** also marks “about / in / where”, especially with mental verbs and locative meanings.\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns.\n5. Wh‑questions use **cuu xae [a] Verb …**; the particle **a** is optional, and the subject pronoun may be omitted when it is second‑person.\n6. Possessor phrases place the possessive pronoun before the noun (e.g., *u ǁãu* “your brother”).\n7. The copula **ke** links a subject to a predicative adjective, noun or to a dummy “do” in equative clauses.\n8. Negation **ǁu** follows **ke** in copular clauses (*ke ǁu Verb*) and follows the subject in non‑copular clauses (*Subject ǁu Verb*).\n9. Future tense is marked by the auxiliary **si**; it may appear before a temporal noun or directly before the main verb.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., *si sĩisen ŋ verb*).\n11. In equative‑type yes/no questions with adjectives, the subject pronoun may be repeated after the adjective (e.g., *ɡǀa ǃaukea ŋ ŋǀŋ*).\n12. Interrogative locative **kiɟa** appears clause‑initially, followed by the copula **xae** (e.g., *kiɟa xae …*).\n13. Yes/no questions place the particle **a** after the verb (or after **ke** when present) and before any complement (e.g., *ɡǀa ŋǀii a ŋǁŋ*).\n14. The definite article **u** can precede a noun to form “the …”; when attached to a pronoun it functions as a possessive (e.g., *u ǁãu* “your brother”).\n15. The verb **sĩisen** can function as a temporal noun “tomorrow” or, by polysemy, as a verb meaning “work”.",
+          "metrics": {
+            "corpus_bleu": 7.61,
+            "corpus_chrfpp": 28.49,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.73,
+              23.36,
+              26.65,
+              3.55,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              13.17,
+              52.66,
+              48.0,
+              14.76,
+              17.14,
+              35.06
+            ],
+            "sentence_ter": [
+              90.0,
+              66.67,
+              42.86,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I like you (pl) that you call about me.",
+              "I will not go to Upington tomorrow.",
+              "He is afraid of the dog.",
+              "Will I call the woman?",
+              "Who sees you?",
+              "Who eats me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 243.44,
+          "accumulated_dict": "ǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid (adjective)\nǃhaeke = work (verb)\nǃʔai = call (verb)\nǀeeki = 3rd‑person pronoun (he/she/it)\nǀqhõʕo = dance (verb)\nɟanasa = thief\nɡǀa = you (sg) subject / your (sg) possessive\nɡǀi = you (pl) object / our (1st pl) possessive\nɡǀu = you (pl) subject\nke = copula “be”; dummy “do” in equative clauses\nkacuuʔi = like / love (verb)\nkiɟa = where (interrogative)\nna = I (sg) subject / alternative 1st sg pronoun\nŋ = me (object pronoun) **or** post‑position “of/about/in” (follows complement)\nŋǀii = see (verb)\nŋǀŋ = I (1st sg nominative, alternative form)\nŋǁa = post‑position “about / in / where” (used with mental verbs and locatives)\nŋǁŋ = house (noun)\nǁu = negation particle\nǁãu = brother\na = question particle (yes/no or wh)\na … = marks interrogative clause; optional after copula\ncuu = who / whom (interrogative pronoun)\nu = definite article “the”; also “your (pl)” when attached to a noun phrase\nu ǁãu = your brother (possessive)\nu aŋki = your father (possessive)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nǃuu = post‑position “about / concerning”\nsĩisen = tomorrow (temporal noun) **or** work (verb) – polysemous\nsi = future auxiliary “will”\nts’aaʔa = eat (verb)\nkama = when (interrogative)\n[DELETED: xa = (not attested) — no evidence]\n[DELETED: ɟa = (unidentified) — insufficient data]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **ŋ** follows its complement and marks “of/about/in/where”.\n3. The post‑position **ŋǁa** also marks “about / in / where”, especially with mental verbs and locative meanings.\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns.\n5. Wh‑questions use **cuu xae [a] Verb …**; the particle **a** is optional, and the subject pronoun may be omitted when it is second‑person.\n6. Possessor phrases place the possessive pronoun before the noun (e.g., *u ǁãu* “your brother”).\n7. The copula **ke** links a subject to a predicative adjective, noun or to a dummy “do” in equative clauses.\n8. Negation **ǁu** follows **ke** in copular clauses (*ke ǁu Verb*) and follows the subject in non‑copular clauses (*Subject ǁu Verb*).\n9. Future tense is marked by the auxiliary **si**; it may appear before a temporal noun or directly before the main verb.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., *si sĩisen ŋ verb*).\n11. In equative‑type yes/no questions with adjectives, the subject pronoun may be repeated after the adjective (e.g., *ɡǀa ǃaukea ŋ ŋǀŋ*).\n12. Interrogative locative **kiɟa** appears clause‑initially, followed by the copula **xae** (e.g., *kiɟa xae …*).\n13. Yes/no questions place the particle **a** after the verb (or after **ke** when present) and before any complement (e.g., *ɡǀa ŋǀii a ŋǁŋ*).\n14. The definite article **u** can precede a noun to form “the …”; when attached to a pronoun it functions as a possessive (e.g., *u ǁãu* “your brother”).\n15. The verb **sĩisen** can function as a temporal noun “tomorrow” or, by polysemy, as a verb meaning “work”.\n16. The post‑position **ǃuu** marks “about / concerning” and follows the complement.\n[DELETED: rule 12 “a” after copula in equative questions — not needed; the particle **a** can appear after the verb or after **ke** as shown in the data.]",
+          "metrics": {
+            "corpus_bleu": 7.91,
+            "corpus_chrfpp": 30.45,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.73,
+              27.05,
+              22.32,
+              2.63,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              13.57,
+              63.37,
+              49.97,
+              11.38,
+              17.14,
+              35.06
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              42.86,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I like you (pl) and you call about me.",
+              "I will not be in Upington tomorrow.",
+              "He is afraid of me, the dog.",
+              "Will I be called?",
+              "Who sees you?",
+              "Who eats me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 15,
+          "combo_size": 16,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "latency_s": 189.39,
+          "accumulated_dict": "ǂoo = man\nǂhun = dog\nǂqheeke = sings\nǂʔii = think\nǃaukea = afraid (adj.)\nǃhaeke = work (verb)\nǃʔai = call (verb)\nǀeeki = 3rd‑person pronoun (he/she/it)\nǀqhõʕo = dance (verb)\nɟanasa = thief\nɡǀa = you (sg) subject / your (sg) possessive\nɡǀi = you (pl) object / our (1st pl) possessive\nɡǀu = you (pl) subject\nke = copula “be”; dummy auxiliary in equative/negative clauses\nkacuuʔi = like / love (verb) – also used in “ask” contexts\nkiɟa = where (interrogative)\nna = I (sg) subject / alternative 1st sg pronoun\nŋ = 1st‑sg object “me”; also pre‑nominal possessive “your (sg)” in limited contexts\nŋǀii = see (verb)\nŋǀŋ = I (1st sg nominative, alternative form)\nŋǁa = post‑position “about / in / where” (especially with mental verbs)\nŋǁŋ = house (noun)\nǁu = negation particle\nǁãu = brother (noun)\na = question particle (yes/no or wh) – can appear after verb, after ke, or after xae\ncuu = who / whom (interrogative pronoun)\nu = definite article “the”; also “your (pl)” when attached to a noun phrase\nu ǁãu = your brother (possessive)\nu aŋki = your father (possessive)\nxaŋki = mother (noun)\nɡǃari = Upington (place name)\nǃuu = grandfather (noun) – newly identified\nkee = woman (noun) – newly identified\nsĩisen = tomorrow (temporal noun) / work (verb) – polysemous\nsi = future auxiliary “will”\nts’aaʔa = eat (verb)\nkama = when (interrogative)\nxa = (not attested) – [DELETED]\nɟa = (unidentified) – [DELETED]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. The post‑position **ŋ** follows its complement and marks “of/about/in/where”; it can also appear pre‑nominally as a possessive meaning “your (sg)”.\n3. The post‑position **ŋǁa** also marks “about / in / where”, especially with mental verbs and locative meanings.\n4. Personal pronouns have distinct subject (nominative) and object forms; some forms double as possessive pronouns.\n5. Wh‑questions use the pattern **cuu xae [a] Verb …**; the particle **a** is optional, and the subject pronoun may be omitted when it is second‑person.\n6. Possessor phrases place the possessive pronoun before the noun (e.g., *u ǁãu* “your brother”).\n7. The copula **ke** links a subject to a predicative adjective or noun; it can also serve as a dummy auxiliary preceding negation in negative clauses.\n8. Negation **ǁu** follows **ke** in copular clauses (*ke ǁu Verb*) and follows the subject in non‑copular clauses (*Subject ǁu Verb*).\n9. Future tense is marked by the auxiliary **si**; it may appear before a temporal noun and may be followed by a dummy object pronoun **ŋ** before the main verb.\n10. In future clauses a dummy object pronoun **ŋ** may appear before the main verb (e.g., *si sĩisen ŋ verb*).\n11. In equative‑type yes/no questions with adjectives, the subject pronoun may be repeated after the adjective (e.g., *ɡǀa ǃaukea ŋ ŋǀŋ*).\n12. Interrogative locative **kiɟa** appears clause‑initially, optionally followed by the dummy **xae**.\n13. Yes/no questions place the particle **a** after the verb (or after **ke** when present) and before any complement (e.g., *ɡǀa ŋǀii a ŋǁŋ*).\n14. The definite article **u** precedes a noun to form “the …”; when attached to a pronoun it functions as a possessive (e.g., *u ǁãu* “your brother”).\n15. The verb **sĩisen** can function as a temporal noun “tomorrow” or, by polysemy, as a verb meaning “work”.\n16. The post‑position **ǃuu** marks “about / concerning” and follows its complement.\n17. The dummy verb **xae** functions like English “do” in equative, wh‑ and yes/no questions.\n18. New nouns: **kee** = woman; **ǃuu** = grandfather.",
+          "metrics": {
+            "corpus_bleu": 20.27,
+            "corpus_chrfpp": 42.33,
+            "corpus_ter": 59.46,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              6.86,
+              100.0,
+              22.32,
+              3.55,
+              4.58,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              34.14,
+              100.0,
+              49.97,
+              14.76,
+              12.56,
+              35.06
+            ],
+            "sentence_ter": [
+              80.0,
+              0.0,
+              42.86,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you (pl) and call my grandfather.",
+              "I will not work in Upington.",
+              "He is afraid of me, the dog.",
+              "Will I call the woman?",
+              "Who sees it?",
+              "Who eats me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 20.27,
+        "corpus_chrfpp": 42.33,
+        "corpus_ter": 59.46,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          6.86,
+          100.0,
+          22.32,
+          3.55,
+          4.58,
+          35.36
+        ],
+        "sentence_chrfpp": [
+          34.14,
+          100.0,
+          49.97,
+          14.76,
+          12.56,
+          35.06
+        ],
+        "sentence_ter": [
+          80.0,
+          0.0,
+          42.86,
+          85.71,
+          100.0,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I love you (pl) and call my grandfather.",
+          "I will not work in Upington.",
+          "He is afraid of me, the dog.",
+          "Will I call the woman?",
+          "Who sees it?",
+          "Who eats me?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 15
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 87.74,
+          "accumulated_dict": "ǂoo = man\nŋǀii = see\nŋ = me\nɡǀa = you (sg)\nǃaukea = afraid\nŋǀŋ = of\ncuu = whom\nxae = you (sg) / thief (context‑dependent)\na = do (auxiliary for questions)\nǂʔii = think\nŋǁa = about\nu = your (pl)\nǁãu = brother\nke = not\nǁu = do (auxiliary)\nǀqhõʕo = dance\nɟanasa = is\nǂqheeke = sings",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (S V O).\n2. Possessor precedes the noun it modifies (e.g., u ǁãu “your brother”).\n3. Negation is expressed by the particle **ke** placed before the auxiliary verb (ke ǁu V).\n4. Interrogative pronouns (e.g., **cuu** “whom”) appear clause‑initially, followed by the subject and the verb.\n5. The auxiliary **a** marks yes‑no questions; it follows the subject.\n6. Prepositional meaning “of/about” is encoded by post‑positional particles **ŋǀŋ** “of” and **ŋǁa** “about”, which follow the noun/pronoun they govern.\n7. The copular verb “is/are” appears as a separate verb (e.g., **ɟanasa** “is”, **ŋǀŋ** can function as a copula in some contexts).\n8. Pronouns are invariant; the same form **xae** can serve as “you (sg)” or as a noun “thief” depending on context.",
+          "metrics": {
+            "corpus_bleu": 1.9,
+            "corpus_chrfpp": 6.86,
+            "corpus_ter": 108.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              2.99,
+              4.94,
+              16.23
+            ],
+            "sentence_chrfpp": [
+              4.91,
+              2.29,
+              6.51,
+              6.72,
+              6.76,
+              21.32
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Does the man see me?",
+              "Are you afraid of me?",
+              "Whom do you think about?",
+              "Your brother does not dance.",
+              "Is it the thief who sings?",
+              "Does the man see me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 3,
+          "latency_s": 52.9,
+          "accumulated_dict": "ǂhun = dog\nsi = will (future auxiliary)\nsíisen = work\nǃhaeke = tomorrow\nke = is / copula\nɡǀi = us\nna = I (subject pronoun)\nxaŋki = mother\nŋǀŋ = of / genitive particle (also appears as future marker in some contexts)\nǁu = do (auxiliary for negation/affirmation)\nǂʔii = think\nǁa = about (post‑positional particle)\nu = your (plural possessor)\nǁãu = brother\nǂoo = man\nŋǀii = see\nɟanasa = is (copular verb)\nǂqheeke = sings\nǃaukea = afraid\ncuu = whom\nxae = you (sg) / thief\nɡǀa = you (sg)\nǀqhõʕo = dance",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (S V O).\n2. Possessor precedes the noun it modifies (e.g., u ǁãu “your brother”).\n3. Negation is expressed by the particle **ke** placed before the auxiliary verb (ke ǁu V).\n4. Interrogative pronouns (e.g., **cuu** “whom”) appear clause‑initially, followed by the subject and the verb.\n5. The auxiliary **a** marks yes‑no questions; it follows the subject.\n6. The particle **si** functions as a future‑tense auxiliary and appears before the main verb.\n7. The particle **ke** can also serve as a copular verb “to be” in equative clauses.\n8. Post‑positional particles **ŋǀŋ** “of” and **ŋǁa** “about” follow the noun/pronoun they govern.\n9. The auxiliary **ǁu** is used with negation and with the verb **ǂʔii** “think”.\n10. The auxiliary **a** (question marker) follows the subject and precedes the main verb.",
+          "metrics": {
+            "corpus_bleu": 1.14,
+            "corpus_chrfpp": 6.22,
+            "corpus_ter": 108.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              1.45,
+              6.57,
+              5.52,
+              2.63,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.01,
+              5.73,
+              9.23,
+              5.71,
+              5.01,
+              4.81
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              85.71,
+              125.0,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will I work tomorrow?",
+              "The dog is afraid of us.",
+              "I do not think about your mother.",
+              "Who do you see?",
+              "You are not a thief.",
+              "The man sings. === END ==="
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 32.33,
+          "accumulated_dict": "ǂhun = dog\nsi = will (future auxiliary)\nsíisen = work\nǃhaeke = tomorrow\nke = is / copula / negation particle\nɡǀi = us\nna = I (subject pronoun)\nxaŋki = mother\nŋǀŋ = of / genitive particle (also appears as future marker in some contexts)\nǁu = do (auxiliary for negation/affirmation)\nǂʔii = think\nǁa = about (post‑positional particle)\nu = your (plural possessor)\nǁãu = brother\nǂoo = man\nŋǀii = see\nɟanasa = is (copular verb)\nǂqheeke = sings\nǃaukea = afraid\ncuu = whom\nxae = you (sg) / thief\nɡǀa = you (sg)\nǀqhõʕo = dance\na = yes‑no question marker (auxiliary)\nŋǁa = where / about (interrogative particle)\nǃʔai = call\nɡǃari = Upington (place name)\nŋǁŋ = house",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (S V O).\n2. Possessor precedes the noun it modifies (e.g., u ǁãu “your brother”).\n3. Negation is expressed by the particle **ke** placed before the auxiliary verb (ke ǁu V).\n4. Interrogative pronouns (e.g., **cuu** “whom”) appear clause‑initially, followed by the subject and the verb.\n5. The auxiliary **a** marks yes‑no questions; it follows the subject and precedes the main verb.\n6. The particle **si** functions as a future‑tense auxiliary and appears before the main verb.\n7. The particle **ke** can also serve as a copular verb “to be” in equative clauses.\n8. Post‑positional particles **ŋǀŋ** “of” and **ǁa** “about” follow the noun/pronoun they govern.\n9. The auxiliary **ǁu** is used with negation and with the verb **ǂʔii** “think”.\n10. The particle **a** (question marker) follows the subject and precedes the main verb.\n11. The particle **ŋǁa** introduces a location or “where” clause and follows the verb.\n12. The particle **ŋǀii** “see” takes a direct object; when the object is a pronoun, the pronoun follows the verb.\n13. The particle **ǃhaeke** “tomorrow” functions as a temporal adverb and appears clause‑finally.",
+          "metrics": {
+            "corpus_bleu": 1.13,
+            "corpus_chrfpp": 10.35,
+            "corpus_ter": 105.41,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              6.87,
+              0.0,
+              4.52,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              13.3,
+              9.37,
+              4.77,
+              16.82,
+              6.65,
+              5.86
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              85.71,
+              125.0,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will our father dance in Upington?",
+              "Where does the man work?",
+              "Do you (sg) see your house?",
+              "Is it me whom you (sg) call?",
+              "The dog will work tomorrow.",
+              "I think about my mother."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 4,
+          "latency_s": 84.31,
+          "accumulated_dict": "ǂhun = dog\nsi = will (future auxiliary)\nsíisen = work\nǃhaeke = tomorrow\nke = copula “to be” / negation particle (when before auxiliary)\nɡǀi = us\nna = I (subject pronoun)\nxaŋki = mother\nŋǀŋ = of / genitive particle (also future marker)\nǁu = do (auxiliary for negation/affirmation)\nǂʔii = think\nǁa = about (post‑positional particle)\nu = you (plural)\nǁãu = brother\nǂoo = man\nŋǀii = see\nɟanasa = is (copular verb)\nǂqheeke = sings\nǃaukea = afraid\ncuu = whom\nxae = you (sg) / thief\nɡǀa = you (sg)\nǀqhõʕo = dance\na = yes‑no question marker (auxiliary)\nŋǁa = where / about (interrogative particle)\nǃʔai = call\nɡǃari = Upington (place name)\nŋǁŋ = house\nkee = is (copular verb in equative clauses)\nǀeeki = woman\nkacuuʔi = ask\nts’aaʔa = like\nkama = when\nɟa = I (subject, alternative form)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (S V O).\n2. Possessor precedes the noun it modifies (e.g., u ǁãu “your brother”).\n3. Negation is expressed by the particle **ke** placed before the auxiliary verb (ke ǁu V).\n4. Interrogative pronouns (e.g., **cuu** “whom”) appear clause‑initially, followed by the subject and the verb.\n5. The auxiliary **a** marks yes‑no questions; it follows the subject and precedes the main verb.\n6. The particle **si** functions as a future‑tense auxiliary and appears before the main verb.\n7. The particle **ke** can also serve as a copular verb “to be” in equative clauses, placed between subject and predicate.\n8. Post‑positional particles **ŋǀŋ** “of” and **ǁa** “about” follow the noun/pronoun they govern.\n9. The auxiliary **ǁu** is used with negation and with the verb **ǂʔii** “think”.\n10. The particle **a** (question marker) follows the subject and precedes the main verb.\n11. The particle **ŋǁa** introduces a location or “where” clause and follows the verb.\n12. The particle **ŋǀii** “see” takes a direct object; when the object is a pronoun, the pronoun follows the verb.\n13. The particle **ǃhaeke** “tomorrow” functions as a temporal adverb and appears clause‑finally.\n14. In indirect‑question clauses the complementizer **ke** links the matrix verb (e.g., *ask*) to the embedded clause.\n15. The verb **kacuuʔi** “ask” takes a complement clause introduced by **ke**.",
+          "metrics": {
+            "corpus_bleu": 1.89,
+            "corpus_chrfpp": 13.18,
+            "corpus_ter": 127.03,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.66,
+              3.39,
+              4.2,
+              4.5,
+              3.67,
+              3.39
+            ],
+            "sentence_chrfpp": [
+              19.23,
+              7.76,
+              5.37,
+              16.24,
+              10.68,
+              16.47
+            ],
+            "sentence_ter": [
+              90.0,
+              133.33,
+              100.0,
+              100.0,
+              200.0,
+              266.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "It is you (pl.) whom the woman thinks about.",
+              "Your mother asks if you (sg.) like me.",
+              "When will I see you (pl.)?",
+              "My grandfather asks if I will sing tomorrow.",
+              "It is you (pl.) whom the woman thinks about.",
+              "Your mother asks if you (sg.) like me."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.89,
+        "corpus_chrfpp": 13.18,
+        "corpus_ter": 127.03,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.66,
+          3.39,
+          4.2,
+          4.5,
+          3.67,
+          3.39
+        ],
+        "sentence_chrfpp": [
+          19.23,
+          7.76,
+          5.37,
+          16.24,
+          10.68,
+          16.47
+        ],
+        "sentence_ter": [
+          90.0,
+          133.33,
+          100.0,
+          100.0,
+          200.0,
+          266.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "It is you (pl.) whom the woman thinks about.",
+          "Your mother asks if you (sg.) like me.",
+          "When will I see you (pl.)?",
+          "My grandfather asks if I will sing tomorrow.",
+          "It is you (pl.) whom the woman thinks about.",
+          "Your mother asks if you (sg.) like me."
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 55.41,
+          "metrics": {
+            "corpus_bleu": 18.65,
+            "corpus_chrfpp": 40.43,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.91,
+              45.48,
+              55.78,
+              6.27,
+              23.04,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              16.24,
+              53.06,
+              76.61,
+              30.86,
+              53.2,
+              25.22
+            ],
+            "sentence_ter": [
+              90.0,
+              33.33,
+              28.57,
+              85.71,
+              50.0,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I think that our father will not dance.",
+              "I will not work tomorrow.",
+              "The woman is afraid of me.",
+              "You sg will call.",
+              "Whom do you sg see?",
+              "Whom do you sg like?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 18.65,
+        "corpus_chrfpp": 40.43,
+        "corpus_ter": 70.27,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.91,
+          45.48,
+          55.78,
+          6.27,
+          23.04,
+          8.12
+        ],
+        "sentence_chrfpp": [
+          16.24,
+          53.06,
+          76.61,
+          30.86,
+          53.2,
+          25.22
+        ],
+        "sentence_ter": [
+          90.0,
+          33.33,
+          28.57,
+          85.71,
+          50.0,
+          166.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I think that our father will not dance.",
+          "I will not work tomorrow.",
+          "The woman is afraid of me.",
+          "You sg will call.",
+          "Whom do you sg see?",
+          "Whom do you sg like?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 293.35,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 51.55,
+          "metrics": {
+            "corpus_bleu": 1.05,
+            "corpus_chrfpp": 5.84,
+            "corpus_ter": 108.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              2.99,
+              4.94,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              4.91,
+              2.29,
+              6.51,
+              6.72,
+              6.76,
+              10.06
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Does the man see me?",
+              "Are you afraid of me?",
+              "Whom do you think about?",
+              "Your brother does not dance.",
+              "Is it the thief who sings?",
+              "Will I work tomorrow?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.05,
+        "corpus_chrfpp": 5.84,
+        "corpus_ter": 108.11,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          2.99,
+          4.94,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          4.91,
+          2.29,
+          6.51,
+          6.72,
+          6.76,
+          10.06
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          150.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Does the man see me?",
+          "Are you afraid of me?",
+          "Whom do you think about?",
+          "Your brother does not dance.",
+          "Is it the thief who sings?",
+          "Will I work tomorrow?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 1.05,
+        "chrf_delta": 5.84,
+        "ter_delta": 8.11,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.61,
+      "chrf": 9.89,
+      "ter": 560.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation (with a high degree of uncertainty):**  \n\n*“I will go to the place where the water is and drink i",
+      "reference": "I ask if it is you_{pl} whom my grandfather calls."
+    },
+    "baseline": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "best_references": [
+        "I ask if it is you_{pl} whom my grandfather calls.",
+        "I will not work in Upington.",
+        "The woman is afraid of my dog.",
+        "It is I who will call you_{sg}.",
+        "Whom do you_{pl} see?",
+        "Who likes me?"
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 20.27,
+      "best_chrf": 42.33,
+      "best_ter": 59.46,
+      "best_em": 16.67,
+      "num_steps": 15,
+      "best_hypotheses": [
+        "I love you (pl) and call my grandfather.",
+        "I will not work in Upington.",
+        "He is afraid of me, the dog.",
+        "Will I call the woman?",
+        "Who sees it?",
+        "Who eats me?"
+      ],
+      "best_references": [
+        "I ask if it is you_{pl} whom my grandfather calls.",
+        "I will not work in Upington.",
+        "The woman is afraid of my dog.",
+        "It is I who will call you_{sg}.",
+        "Whom do you_{pl} see?",
+        "Who likes me?"
+      ],
+      "best_step": 15
+    },
+    "step_by_step": {
+      "best_bleu": 1.89,
+      "best_chrf": 13.18,
+      "best_ter": 127.03,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "It is you (pl.) whom the woman thinks about.",
+        "Your mother asks if you (sg.) like me.",
+        "When will I see you (pl.)?",
+        "My grandfather asks if I will sing tomorrow.",
+        "It is you (pl.) whom the woman thinks about.",
+        "Your mother asks if you (sg.) like me."
+      ],
+      "best_references": [
+        "I ask if it is you_{pl} whom my grandfather calls.",
+        "I will not work in Upington.",
+        "The woman is afraid of my dog.",
+        "It is I who will call you_{sg}.",
+        "Whom do you_{pl} see?",
+        "Who likes me?"
+      ],
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 18.65,
+      "best_chrf": 40.43,
+      "best_ter": 70.27,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "I think that our father will not dance.",
+        "I will not work tomorrow.",
+        "The woman is afraid of me.",
+        "You sg will call.",
+        "Whom do you sg see?",
+        "Whom do you sg like?"
+      ],
+      "best_references": [
+        "I ask if it is you_{pl} whom my grandfather calls.",
+        "I will not work in Upington.",
+        "The woman is afraid of my dog.",
+        "It is I who will call you_{sg}.",
+        "Whom do you_{pl} see?",
+        "Who likes me?"
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 1.05,
+      "best_chrf": 5.84,
+      "best_ter": 108.11,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Does the man see me?",
+        "Are you afraid of me?",
+        "Whom do you think about?",
+        "Your brother does not dance.",
+        "Is it the thief who sings?",
+        "Will I work tomorrow?"
+      ],
+      "best_references": [
+        "I ask if it is you_{pl} whom my grandfather calls.",
+        "I will not work in Upington.",
+        "The woman is afraid of my dog.",
+        "It is I who will call you_{sg}.",
+        "Whom do you_{pl} see?",
+        "Who likes me?"
+      ],
+      "delta": {
+        "bleu_delta": 1.05,
+        "chrf_delta": 5.84,
+        "ter_delta": 8.11,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

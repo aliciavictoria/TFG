@@ -1,0 +1,2234 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-29T22:21:09.587130",
+    "puzzle_id": "linguini_012015040100",
+    "language": "Warlpiri",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "num_test_pairs": 6,
+    "source_raw_log": "raw_logs/linguini_012015040100_gpt-oss-120b-openrouter.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "The old woman will find you (sg.).",
+      "hypothesis": "**Possible translation:**  \n*“May the light guide you on your journey.”*  \n\n*Note: The source language is not identified, so this rendering is an educated guess based on the phonetic pattern of the sentence.*",
+      "metrics": {
+        "corpus_bleu": 1.05,
+        "corpus_chrfpp": 9.06,
+        "corpus_ter": 516.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          1.05
+        ],
+        "sentence_chrfpp": [
+          9.06
+        ],
+        "sentence_ter": [
+          516.67
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:**  \n*“May the light guide you on your journey.”*  \n\n*Note: The source language is not identified, so this rendering is an educated guess based on the phonetic pattern of the sentence.*"
+        ],
+        "references": [
+          "The old woman will find you."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 13.59,
+            "corpus_chrfpp": 36.78,
+            "corpus_ter": 81.48,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              26.27,
+              35.36,
+              26.27,
+              39.76,
+              8.12,
+              10.55
+            ],
+            "sentence_chrfpp": [
+              47.2,
+              48.45,
+              34.46,
+              44.82,
+              9.55,
+              33.66
+            ],
+            "sentence_ter": [
+              83.33,
+              33.33,
+              50.0,
+              50.0,
+              166.67,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will find you and run.",
+              "He left me.",
+              "The man ran with a stick.",
+              "I danced the girl.",
+              "The old woman saw you.",
+              "The old man will jump with a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 13.59,
+        "corpus_chrfpp": 36.78,
+        "corpus_ter": 81.48,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          26.27,
+          35.36,
+          26.27,
+          39.76,
+          8.12,
+          10.55
+        ],
+        "sentence_chrfpp": [
+          47.2,
+          48.45,
+          34.46,
+          44.82,
+          9.55,
+          33.66
+        ],
+        "sentence_ter": [
+          83.33,
+          33.33,
+          50.0,
+          50.0,
+          166.67,
+          120.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will find you and run.",
+          "He left me.",
+          "The man ran with a stick.",
+          "I danced the girl.",
+          "The old woman saw you.",
+          "The old man will jump with a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 13.59,
+        "corpus_chrfpp": 36.78,
+        "corpus_ter": 81.48,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          26.27,
+          35.36,
+          26.27,
+          39.76,
+          8.12,
+          10.55
+        ],
+        "sentence_chrfpp": [
+          47.2,
+          48.45,
+          34.46,
+          44.82,
+          9.55,
+          33.66
+        ],
+        "sentence_ter": [
+          83.33,
+          33.33,
+          50.0,
+          50.0,
+          166.67,
+          120.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will find you and run.",
+          "He left me.",
+          "The man ran with a stick.",
+          "I danced the girl.",
+          "The old woman saw you.",
+          "The old man will jump with a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 1.78,
+            "corpus_chrfpp": 11.29,
+            "corpus_ter": 129.63,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              6.57,
+              6.57,
+              6.57,
+              6.57,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              11.04,
+              9.48,
+              10.75,
+              12.31,
+              8.69,
+              14.26
+            ],
+            "sentence_ter": [
+              100.0,
+              200.0,
+              100.0,
+              150.0,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data.",
+              "Translation not possible with current data."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 2.71,
+            "corpus_chrfpp": 11.27,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.52,
+              19.72,
+              5.52,
+              14.79,
+              15.97,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              13.65,
+              13.8,
+              9.09,
+              13.35,
+              6.6,
+              10.77
+            ],
+            "sentence_ter": [
+              83.33,
+              100.0,
+              100.0,
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will run away.",
+              "You slept.",
+              "He/she/they ran away.",
+              "You danced again.",
+              "I am old.",
+              "The old woman will sleep."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 2.82,
+            "corpus_chrfpp": 14.66,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.52,
+              10.68,
+              9.04,
+              12.7,
+              15.97,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              16.93,
+              11.06,
+              20.77,
+              16.18,
+              8.17,
+              10.15
+            ],
+            "sentence_ter": [
+              83.33,
+              133.33,
+              66.67,
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will run away.",
+              "The old one slept.",
+              "The doctor has a house.",
+              "You sang a song.",
+              "Daguma will eat.",
+              "The old woman will arrive."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 2.92,
+            "corpus_chrfpp": 11.18,
+            "corpus_ter": 96.3,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.52,
+              10.68,
+              7.25,
+              12.7,
+              19.72,
+              8.75
+            ],
+            "sentence_chrfpp": [
+              16.93,
+              11.06,
+              5.88,
+              18.27,
+              9.86,
+              6.48
+            ],
+            "sentence_ter": [
+              83.33,
+              133.33,
+              100.0,
+              75.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will run away.",
+              "The old one slept.",
+              "Janji darrangguwaji.",
+              "Ngirra danced the old.",
+              "Daguma you.",
+              "Dirragbi is old balamurrungunya."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 2.95,
+            "corpus_chrfpp": 14.29,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.97,
+              24.84,
+              6.87,
+              12.44,
+              15.97,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              16.38,
+              17.3,
+              13.43,
+              10.12,
+              15.9,
+              13.38
+            ],
+            "sentence_ter": [
+              83.33,
+              66.67,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will run.",
+              "He slept.",
+              "She will see the doctor.",
+              "They were old.",
+              "He strikes you.",
+              "I see the old woman."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 2.79,
+            "corpus_chrfpp": 15.46,
+            "corpus_ter": 96.3,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.52,
+              19.72,
+              8.52,
+              14.13,
+              8.12,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              16.93,
+              10.96,
+              19.21,
+              10.28,
+              15.14,
+              15.86
+            ],
+            "sentence_ter": [
+              83.33,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will run away.",
+              "Yagu slept.",
+              "Janji struck the dog.",
+              "Ngirra dances.",
+              "He/she strikes you.",
+              "He/she saw the old house."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 7.72,
+            "corpus_chrfpp": 25.29,
+            "corpus_ter": 81.48,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              9.65,
+              15.21,
+              32.47,
+              9.65,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              19.77,
+              11.26,
+              26.46,
+              54.48,
+              35.39,
+              9.18
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              66.67,
+              50.0,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The girl will dance with the dog.",
+              "He/she will sleep.",
+              "The dog struck the girl.",
+              "You will dance the girl.",
+              "He/she struck you.",
+              "They will be old women."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 12.17,
+            "corpus_chrfpp": 30.65,
+            "corpus_ter": 85.19,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.21,
+              5.67,
+              15.21,
+              66.87,
+              9.65,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              25.88,
+              12.56,
+              26.46,
+              79.29,
+              35.39,
+              14.54
+            ],
+            "sentence_ter": [
+              83.33,
+              200.0,
+              66.67,
+              25.0,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will run with you.",
+              "He/she will be with the house.",
+              "The dog struck the girl.",
+              "I stole the girl.",
+              "He/she struck you.",
+              "We will see the old woman."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 15.2,
+            "corpus_chrfpp": 30.15,
+            "corpus_ter": 81.48,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.04,
+              19.72,
+              15.85,
+              66.87,
+              15.97,
+              9.29
+            ],
+            "sentence_chrfpp": [
+              20.83,
+              7.12,
+              23.61,
+              78.33,
+              15.9,
+              29.95
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              66.67,
+              25.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will see you ran.",
+              "Leave him.",
+              "The dog runs away.",
+              "He stole the girl.",
+              "He strikes you.",
+              "I old with the … (untranslatable fragment)."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 12.8,
+            "corpus_chrfpp": 33.52,
+            "corpus_ter": 81.48,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.99,
+              19.0,
+              7.81,
+              66.87,
+              15.97,
+              10.55
+            ],
+            "sentence_chrfpp": [
+              47.41,
+              14.94,
+              13.95,
+              79.29,
+              9.84,
+              28.7
+            ],
+            "sentence_ter": [
+              83.33,
+              66.67,
+              83.33,
+              25.0,
+              100.0,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will see you, the old woman.",
+              "He will leave.",
+              "The girl will strike the house.",
+              "I stole the girl.",
+              "He saw you.",
+              "The old woman will dance with the dog."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 8.43,
+            "corpus_chrfpp": 29.37,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.89,
+              6.57,
+              15.85,
+              46.31,
+              6.57,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              43.1,
+              11.04,
+              23.21,
+              69.28,
+              14.43,
+              12.14
+            ],
+            "sentence_ter": [
+              100.0,
+              166.67,
+              66.67,
+              25.0,
+              133.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will see you, old woman.",
+              "He/she will leave with him.",
+              "The dog ran away.",
+              "Stole the girl.",
+              "He/she will strike you.",
+              "I see the old stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 12,
+          "metrics": {
+            "corpus_bleu": 5.93,
+            "corpus_chrfpp": 31.27,
+            "corpus_ter": 81.48,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.89,
+              15.97,
+              15.62,
+              22.96,
+              19.0,
+              4.99
+            ],
+            "sentence_chrfpp": [
+              43.1,
+              8.03,
+              27.47,
+              54.94,
+              37.56,
+              14.43
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              50.0,
+              50.0,
+              66.67,
+              120.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They will see you, old woman.",
+              "Leave and go.",
+              "The dog ran without a house.",
+              "He stole the dancing girl.",
+              "He struck you.",
+              "I old … (uninterpretable with current data)."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 13,
+          "metrics": {
+            "corpus_bleu": 14.87,
+            "corpus_chrfpp": 39.12,
+            "corpus_ter": 74.07,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.89,
+              35.36,
+              7.81,
+              66.87,
+              19.0,
+              12.22
+            ],
+            "sentence_chrfpp": [
+              41.71,
+              47.51,
+              10.77,
+              78.33,
+              37.56,
+              37.72
+            ],
+            "sentence_ter": [
+              100.0,
+              33.33,
+              83.33,
+              25.0,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you, old woman.",
+              "He left him.",
+              "Janji ran away without a house.",
+              "He stole the girl.",
+              "He struck you.",
+              "The old woman danced with the stick."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 14,
+          "metrics": {
+            "corpus_bleu": 15.45,
+            "corpus_chrfpp": 36.52,
+            "corpus_ter": 62.96,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.85,
+              35.36,
+              13.13,
+              66.87,
+              19.0,
+              9.29
+            ],
+            "sentence_chrfpp": [
+              22.14,
+              48.45,
+              26.58,
+              78.33,
+              37.56,
+              27.84
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              66.67,
+              25.0,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you.",
+              "He left me.",
+              "The dog ran away without a house.",
+              "He stole the girl.",
+              "He struck you.",
+              "He ran (away) with the old woman."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 15,
+          "metrics": {
+            "corpus_bleu": 25.31,
+            "corpus_chrfpp": 40.78,
+            "corpus_ter": 62.96,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.85,
+              35.36,
+              7.81,
+              66.87,
+              19.0,
+              34.57
+            ],
+            "sentence_chrfpp": [
+              22.14,
+              48.45,
+              11.52,
+              79.29,
+              37.56,
+              61.14
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              83.33,
+              25.0,
+              66.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you.",
+              "He left me.",
+              "He ran away without a spear.",
+              "I stole the girl.",
+              "He struck you.",
+              "The old woman danced with the spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 25.31,
+        "corpus_chrfpp": 40.78,
+        "corpus_ter": 62.96,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.85,
+          35.36,
+          7.81,
+          66.87,
+          19.0,
+          34.57
+        ],
+        "sentence_chrfpp": [
+          22.14,
+          48.45,
+          11.52,
+          79.29,
+          37.56,
+          61.14
+        ],
+        "sentence_ter": [
+          66.67,
+          33.33,
+          83.33,
+          25.0,
+          66.67,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will see you.",
+          "He left me.",
+          "He ran away without a spear.",
+          "I stole the girl.",
+          "He struck you.",
+          "The old woman danced with the spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 15,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 25.31,
+        "corpus_chrfpp": 40.78,
+        "corpus_ter": 62.96,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.85,
+          35.36,
+          7.81,
+          66.87,
+          19.0,
+          34.57
+        ],
+        "sentence_chrfpp": [
+          22.14,
+          48.45,
+          11.52,
+          79.29,
+          37.56,
+          61.14
+        ],
+        "sentence_ter": [
+          66.67,
+          33.33,
+          83.33,
+          25.0,
+          66.67,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will see you.",
+          "He left me.",
+          "He ran away without a spear.",
+          "I stole the girl.",
+          "He struck you.",
+          "The old woman danced with the spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 15,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 2.83,
+            "corpus_chrfpp": 9.57,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.25,
+              15.97,
+              8.17,
+              8.12,
+              15.97,
+              10.12
+            ],
+            "sentence_chrfpp": [
+              8.21,
+              9.39,
+              10.85,
+              14.0,
+              8.86,
+              6.18
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              83.33,
+              125.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You danced.",
+              "I will sleep.",
+              "The old woman ran away.",
+              "The doctor has a house.",
+              "I saw you.",
+              "You danced."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 1.7,
+            "corpus_chrfpp": 5.69,
+            "corpus_ter": 111.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.17,
+              5.52,
+              7.16,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              13.75,
+              8.24,
+              5.92,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              83.33,
+              233.33,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will strike the doctor.",
+              "The girl will dance with the dog.",
+              "He will see you.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 2.44,
+            "corpus_chrfpp": 11.72,
+            "corpus_ter": 111.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.16,
+              5.52,
+              8.17,
+              9.65,
+              10.68,
+              10.4
+            ],
+            "sentence_chrfpp": [
+              8.38,
+              10.97,
+              14.06,
+              14.97,
+              10.01,
+              11.73
+            ],
+            "sentence_ter": [
+              100.0,
+              233.33,
+              83.33,
+              100.0,
+              133.33,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I stole the money.",
+              "You will leave him without a house.",
+              "The old woman struck me.",
+              "He ran with the stick.",
+              "She found the man.",
+              "I stole the money."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 4.07,
+            "corpus_chrfpp": 16.78,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              35.36,
+              5.67,
+              8.12,
+              19.0,
+              9.65
+            ],
+            "sentence_chrfpp": [
+              14.38,
+              48.45,
+              14.58,
+              10.13,
+              15.95,
+              13.57
+            ],
+            "sentence_ter": [
+              100.0,
+              33.33,
+              100.0,
+              125.0,
+              66.67,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man saw her with the money.",
+              "He left me.",
+              "He saw the old man without a spear.",
+              "The old man will jump.",
+              "You will leave.",
+              "The man stole the money."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 4.07,
+        "corpus_chrfpp": 16.78,
+        "corpus_ter": 88.89,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.57,
+          35.36,
+          5.67,
+          8.12,
+          19.0,
+          9.65
+        ],
+        "sentence_chrfpp": [
+          14.38,
+          48.45,
+          14.58,
+          10.13,
+          15.95,
+          13.57
+        ],
+        "sentence_ter": [
+          100.0,
+          33.33,
+          100.0,
+          125.0,
+          66.67,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The man saw her with the money.",
+          "He left me.",
+          "He saw the old man without a spear.",
+          "The old man will jump.",
+          "You will leave.",
+          "The man stole the money."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 4.07,
+        "corpus_chrfpp": 16.78,
+        "corpus_ter": 88.89,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.57,
+          35.36,
+          5.67,
+          8.12,
+          19.0,
+          9.65
+        ],
+        "sentence_chrfpp": [
+          14.38,
+          48.45,
+          14.58,
+          10.13,
+          15.95,
+          13.57
+        ],
+        "sentence_ter": [
+          100.0,
+          33.33,
+          100.0,
+          125.0,
+          66.67,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The man saw her with the money.",
+          "He left me.",
+          "He saw the old man without a spear.",
+          "The old man will jump.",
+          "You will leave.",
+          "The man stole the money."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "syntax",
+      "all_steps_complete": false
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 11.08,
+            "corpus_chrfpp": 39.45,
+            "corpus_ter": 88.89,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.62,
+              35.36,
+              10.55,
+              30.21,
+              30.21,
+              9.54
+            ],
+            "sentence_chrfpp": [
+              42.49,
+              48.45,
+              26.45,
+              45.25,
+              60.08,
+              31.58
+            ],
+            "sentence_ter": [
+              66.67,
+              33.33,
+              100.0,
+              75.0,
+              100.0,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will strike the old woman.",
+              "He left me.",
+              "The old man ran away with the stick.",
+              "I danced you the girl.",
+              "The old woman struck me.",
+              "The old man will jump without a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 11.08,
+        "corpus_chrfpp": 39.45,
+        "corpus_ter": 88.89,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.62,
+          35.36,
+          10.55,
+          30.21,
+          30.21,
+          9.54
+        ],
+        "sentence_chrfpp": [
+          42.49,
+          48.45,
+          26.45,
+          45.25,
+          60.08,
+          31.58
+        ],
+        "sentence_ter": [
+          66.67,
+          33.33,
+          100.0,
+          75.0,
+          100.0,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will strike the old woman.",
+          "He left me.",
+          "The old man ran away with the stick.",
+          "I danced you the girl.",
+          "The old woman struck me.",
+          "The old man will jump without a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 11.08,
+        "corpus_chrfpp": 39.45,
+        "corpus_ter": 88.89,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.62,
+          35.36,
+          10.55,
+          30.21,
+          30.21,
+          9.54
+        ],
+        "sentence_chrfpp": [
+          42.49,
+          48.45,
+          26.45,
+          45.25,
+          60.08,
+          31.58
+        ],
+        "sentence_ter": [
+          66.67,
+          33.33,
+          100.0,
+          75.0,
+          100.0,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will strike the old woman.",
+          "He left me.",
+          "The old man ran away with the stick.",
+          "I danced you the girl.",
+          "The old woman struck me.",
+          "The old man will jump without a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 24.54,
+            "corpus_chrfpp": 40.48,
+            "corpus_ter": 70.37,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              15.85,
+              100.0,
+              14.54,
+              66.87,
+              21.36,
+              9.54
+            ],
+            "sentence_chrfpp": [
+              22.14,
+              100.0,
+              27.03,
+              79.29,
+              23.25,
+              31.58
+            ],
+            "sentence_ter": [
+              66.67,
+              0.0,
+              66.67,
+              25.0,
+              100.0,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "She will see you.",
+              "He left you.",
+              "The man ran with the stick.",
+              "I stole the girl.",
+              "She will strike me.",
+              "The old man will jump without a spear."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 2.66,
+            "corpus_chrfpp": 7.06,
+            "corpus_ter": 103.7,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.16,
+              15.97,
+              7.55,
+              12.44,
+              10.68,
+              8.75
+            ],
+            "sentence_chrfpp": [
+              8.65,
+              6.46,
+              5.68,
+              9.08,
+              6.25,
+              6.4
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              133.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Alayulu gu gina nginya.",
+              "Yagu gininga nginya.",
+              "Juwani ga darranggunguji.",
+              "Ngirra nga Alanga.",
+              "Dagumajba gu ngunybulugi bungmanyani.",
+              "Dirragba gu bungmaji balamurruwaji."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 2.74,
+            "corpus_chrfpp": 12.22,
+            "corpus_ter": 92.59,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.25,
+              15.97,
+              6.57,
+              8.12,
+              15.97,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              8.21,
+              9.39,
+              10.72,
+              14.0,
+              8.86,
+              19.5
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              83.33,
+              125.0,
+              100.0,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You danced.",
+              "I will sleep.",
+              "The old woman ran (away).",
+              "The doctor has a house.",
+              "I saw you.",
+              "She will strike the doctor."
+            ],
+            "references": [
+              "The old woman will find you.",
+              "He left you.",
+              "The dog doesn’t have a stick.",
+              "You stole the girl.",
+              "You struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 2.74,
+        "corpus_chrfpp": 12.22,
+        "corpus_ter": 92.59,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.25,
+          15.97,
+          6.57,
+          8.12,
+          15.97,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          8.21,
+          9.39,
+          10.72,
+          14.0,
+          8.86,
+          19.5
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          83.33,
+          125.0,
+          100.0,
+          60.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You danced.",
+          "I will sleep.",
+          "The old woman ran (away).",
+          "The doctor has a house.",
+          "I saw you.",
+          "She will strike the doctor."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 24.54,
+        "corpus_chrfpp": 40.48,
+        "corpus_ter": 70.37,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          15.85,
+          100.0,
+          14.54,
+          66.87,
+          21.36,
+          9.54
+        ],
+        "sentence_chrfpp": [
+          22.14,
+          100.0,
+          27.03,
+          79.29,
+          23.25,
+          31.58
+        ],
+        "sentence_ter": [
+          66.67,
+          0.0,
+          66.67,
+          25.0,
+          100.0,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "She will see you.",
+          "He left you.",
+          "The man ran with the stick.",
+          "I stole the girl.",
+          "She will strike me.",
+          "The old man will jump without a spear."
+        ],
+        "references": [
+          "The old woman will find you.",
+          "He left you.",
+          "The dog doesn’t have a stick.",
+          "You stole the girl.",
+          "You struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "initial_draft",
+      "all_steps_complete": false
+    }
+  }
+}

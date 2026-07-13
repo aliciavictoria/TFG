@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-23T12:10:20.729661",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 91.78,
+          "metrics": {
+            "corpus_bleu": 6.93,
+            "corpus_chrfpp": 13.81,
+            "corpus_ter": 177.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.31,
+              0.0,
+              0.0,
+              2.29,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              39.93,
+              0.0,
+              0.0,
+              14.34,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              400.0,
+              100.0,
+              100.0,
+              300.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+              "",
+              "",
+              "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+              "",
+              ""
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 2,
+            "num_expected": 6,
+            "missing_indices": [
+              1,
+              2,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 1.75,
+          "metrics": {
+            "corpus_bleu": 4.17,
+            "corpus_chrfpp": 13.62,
+            "corpus_ter": 331.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.31,
+              0.0,
+              3.38,
+              0.0,
+              10.57,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              39.93,
+              6.25,
+              8.04,
+              5.49,
+              15.69,
+              3.09
+            ],
+            "sentence_ter": [
+              400.0,
+              350.0,
+              300.0,
+              275.0,
+              300.0,
+              400.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+              "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+              "nɤbə ati lapkʰi tɤʔ ne → You (sg) see him question marker",
+              "nirum kəmə nuʔrum cʰam ki ne → We know you(pl) question marker",
+              "nɤbə ŋa lapkʰi rɤ ne → You (sg) see me question marker",
+              "tarum kəmə nɤ lan tʰu ne → They beat you(sg) question marker"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 6.93,
+        "corpus_chrfpp": 13.81,
+        "corpus_ter": 177.27,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          15.31,
+          0.0,
+          0.0,
+          2.29,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          39.93,
+          0.0,
+          0.0,
+          14.34,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          400.0,
+          100.0,
+          100.0,
+          300.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+          "",
+          "",
+          "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+          "",
+          ""
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 2,
+        "num_expected": 6,
+        "missing_indices": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "complete": false
+      },
+      "delta": {
+        "bleu_delta": -2.76,
+        "chrf_delta": -0.19,
+        "ter_delta": 154.55,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "self_correction": {
+      "best_bleu": 6.93,
+      "best_chrf": 13.81,
+      "best_ter": 177.27,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "nɤ ʒip ku ne → You (sg) sleep I (emphatic) question marker",
+        "",
+        "",
+        "nirum kəmə tarum lan ki ne → We know they beat you(sg) question marker",
+        "",
+        ""
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ],
+      "delta": {
+        "bleu_delta": -2.76,
+        "chrf_delta": -0.19,
+        "ter_delta": 154.55,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

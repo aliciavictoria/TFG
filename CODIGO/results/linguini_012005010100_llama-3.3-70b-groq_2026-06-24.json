@@ -1,0 +1,1879 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-24T15:03:55.929422",
+    "puzzle_id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "language_family": "Mayan (México)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "model_tier": "medium",
+    "num_train_pairs": 15,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "language_family": "Mayan (México)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "'Oy 'ox 'ixim ta ana nax.",
+        "target": "You had corn at home today."
+      },
+      {
+        "source": "Bu 'oy 'ox li Romin e 'ok'ob?",
+        "target": "Where will Domingo be tomorrow?"
+      },
+      {
+        "source": "Ch'abal 'ox chenek' ta jp'in po'ot.",
+        "target": "Soon there will be no haricots in my pot."
+      },
+      {
+        "source": "Mi 'oy 'ox k'in ta Jobel 'ok'ob?",
+        "target": "Will there be a party in San Cristobal tomorrow?"
+      },
+      {
+        "source": "'Oy chan-vun ta batz'i k'op ta Jobel.",
+        "target": "There is a Tzotzil school in San Cristobal."
+      },
+      {
+        "source": "Mi 'oy sbatz'i chi'il li Xun e?",
+        "target": "Does Juan have a real friend?"
+      },
+      {
+        "source": "Muk' bu li Xunka e.",
+        "target": "Juana is nowhere."
+      },
+      {
+        "source": "\"Oy 'ox jlekil na po'ot.",
+        "target": "I will soon have a good house."
+      },
+      {
+        "source": "Mi 'oy 'ox chan-vun ta Jobel junabi?",
+        "target": "Was there a school in San Cristobal last year?"
+      },
+      {
+        "source": "Mi 'oy \"ixim ta p'in lavie?",
+        "target": "Is there corn in his pot?"
+      },
+      {
+        "source": "Ch'abal schenek' lavie.",
+        "target": "He has no haricots today."
+      },
+      {
+        "source": "'Oy 'ox lekil vob ta k'in lavie.",
+        "target": "There will be good music at the party today."
+      },
+      {
+        "source": "K'usi 'oy \"ox ta achan-vun volje?",
+        "target": "What did you have at school yesterday?"
+      },
+      {
+        "source": "Bu 'oy 'ox k'op nax?",
+        "target": "Where was the talk today?"
+      },
+      {
+        "source": "Ch'abal 'ox schi'il li Romin e junabi.",
+        "target": "Last year Domingo had no friend."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Ch'abal alekil 'ixim.",
+        "target": [
+          "You have no good corn."
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "Mi 'oy 'ox vob ta k'in?",
+        "target": [
+          "Was there music at the party?",
+          "Will there be music at the party?"
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "K'usi 'oy 'ox ta Mexico lavie?",
+        "target": [
+          "What will there be in Mexico today?"
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "\"Oy \"ox k'op ta batz'i k'op ta jna volje.",
+        "target": [
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Ch'abal alekil 'ixim.",
+      "reference": [
+        "You have no good corn."
+      ],
+      "hypothesis": "A attempt at translation. The sentence appears to be in a Mayan language, possibly K'iche' or a similar dialect. Here's my attempt at translation:\n\nCh'abal = cornfield or corn\nalekil = possibly related to the word for \"owner\" or \"one who has\"\n'ixim = corn\n\nSo, a possible translation of the sentence \"Ch'abal alekil 'ixim\" could be \"The owner of the cornfield\" or \"The one who has the corn\". However, please note that this is a rough attempt and the actual meaning may vary depending on the context and the specific dialect being used.",
+      "latency_s": 0.67,
+      "metrics": {
+        "corpus_bleu": 0.38,
+        "corpus_chrfpp": 4.74,
+        "corpus_ter": 1880.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.38
+        ],
+        "sentence_chrfpp": [
+          4.74
+        ],
+        "sentence_ter": [
+          1880.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "A attempt at translation. The sentence appears to be in a Mayan language, possibly K'iche' or a similar dialect. Here's my attempt at translation:\n\nCh'abal = cornfield or corn\nalekil = possibly related to the word for \"owner\" or \"one who has\"\n'ixim = corn\n\nSo, a possible translation of the sentence \"Ch'abal alekil 'ixim\" could be \"The owner of the cornfield\" or \"The one who has the corn\". However, please note that this is a rough attempt and the actual meaning may vary depending on the context and the specific dialect being used."
+        ],
+        "references": [
+          "You have no good corn."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 15,
+          "latency_s": 3.68,
+          "metrics": {
+            "corpus_bleu": 24.84,
+            "corpus_chrfpp": 48.7,
+            "corpus_ter": 64.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              41.11,
+              54.11,
+              13.54,
+              7.77
+            ],
+            "sentence_chrfpp": [
+              59.32,
+              75.62,
+              35.33,
+              37.52
+            ],
+            "sentence_ter": [
+              60.0,
+              33.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "There will be no good corn.",
+              "Will there be music at the party?",
+              "What did he have in Mexico?",
+              "I will have talk at the Tzotzil school of my mother yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 24.84,
+        "corpus_chrfpp": 48.7,
+        "corpus_ter": 64.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          41.11,
+          54.11,
+          13.54,
+          7.77
+        ],
+        "sentence_chrfpp": [
+          59.32,
+          75.62,
+          35.33,
+          37.52
+        ],
+        "sentence_ter": [
+          60.0,
+          33.33,
+          71.43,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "There will be no good corn.",
+          "Will there be music at the party?",
+          "What did he have in Mexico?",
+          "I will have talk at the Tzotzil school of my mother yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 3.41,
+          "accumulated_dict": "'Oy = unknown (possibly a verb or auxiliary)\n'ox = unknown (possibly a verb or tense marker)\n'ixim = unknown (possibly a noun, \"corn\" based on context)\nta = preposition or case marker (possibly indicating location)\nana = unknown (possibly an adverb, \"at home\")\nnax = unknown (possibly an adverb, \"today\")\nBu = interrogative particle or question marker\nli = possessive marker or proper noun marker\nRomin = proper noun (name)\ne = conjunction or tense marker\n'ok'ob = unknown (possibly an adverb, \"tomorrow\")",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' might be used to indicate location.\n3. 'Bu' could mark the beginning of a question.\n4. 'li' might be used before proper nouns.",
+          "metrics": {
+            "corpus_bleu": 3.78,
+            "corpus_chrfpp": 15.47,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              6.87,
+              12.6,
+              2.84
+            ],
+            "sentence_chrfpp": [
+              15.3,
+              12.06,
+              25.85,
+              10.37
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              71.43,
+              130.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The corn is spoiled.",
+              "Where will you be tomorrow?",
+              "Is Domingo happy in Mexico now?",
+              "The book is on the table and the dog is on the bed."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 4.01,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or tense marker\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, \"soon\"\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\"",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.",
+          "metrics": {
+            "corpus_bleu": 4.13,
+            "corpus_chrfpp": 18.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              9.29,
+              5.69,
+              3.67
+            ],
+            "sentence_chrfpp": [
+              30.26,
+              24.88,
+              17.46,
+              10.84
+            ],
+            "sentence_ter": [
+              80.0,
+              116.67,
+              85.71,
+              110.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon I will have corn.",
+              "Where did you have a snake at the sun?",
+              "Happy you had at Mexico life.",
+              "You had a head at the thread head at the rope head."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 7.09,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, \"soon\"\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\"\nMi = question marker or part of verb phrase\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.",
+          "metrics": {
+            "corpus_bleu": 3.32,
+            "corpus_chrfpp": 22.22,
+            "corpus_ter": 128.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              6.74,
+              13.13,
+              1.73
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              28.61,
+              32.82,
+              12.89
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              210.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Will there be a party in the town?",
+              "Is there happiness in Mexico in life?",
+              "The action or state is finished at the place of our ancestors at the place of the hill of our ancestors."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 2.47,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (broader function than initially thought)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = part of noun phrase, possibly \"Tzotzil\"",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n[No rules were deleted or added based on the new examples provided.]",
+          "metrics": {
+            "corpus_bleu": 5.96,
+            "corpus_chrfpp": 27.63,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              15.21,
+              12.6,
+              5.3
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              34.48,
+              26.35,
+              27.34
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              70.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Where will the party be?",
+              "Is it good in Mexico now?",
+              "There is a school in the Tzotzil school in the town."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 2.89,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (broader function than initially thought)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = part of noun phrase, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.",
+          "metrics": {
+            "corpus_bleu": 5.58,
+            "corpus_chrfpp": 26.58,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              15.85,
+              11.39,
+              4.11
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              34.5,
+              23.65,
+              26.59
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67,
+              85.71,
+              90.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Is there a party?",
+              "Happiness was in Mexico in life.",
+              "There is a Tzotzil school in the Tzotzil school in the place I want."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 3.32,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (broader function than initially thought)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = part of noun phrase, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = unknown (possibly indicating absence or negation)\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).",
+          "metrics": {
+            "corpus_bleu": 4.08,
+            "corpus_chrfpp": 26.08,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              6.74,
+              7.49,
+              4.83
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              28.7,
+              26.16,
+              26.22
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Will there be a party in the gathering?",
+              "Is there pleasure at Mexico City?",
+              "There is a Tzotzil school in the Tzotzil school in the town."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 3.17,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (broader function than initially thought)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = unknown, possibly indicating absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, possibly \"good\"\nna = unknown",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation.",
+          "metrics": {
+            "corpus_bleu": 9.32,
+            "corpus_chrfpp": 30.49,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              8.52,
+              13.83,
+              16.81
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              22.98,
+              33.95,
+              36.17
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Is there a gathering?",
+              "Is there happiness in Mexico?",
+              "I will have a Tzotzil school in my house."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 3.39,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, possibly \"good\"\nna = unknown, possibly related to future or positive state\njunabi = adverb, possibly \"last year\"",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"",
+          "metrics": {
+            "corpus_bleu": 2.02,
+            "corpus_chrfpp": 17.59,
+            "corpus_ter": 192.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.39,
+              6.84,
+              2.41,
+              1.65
+            ],
+            "sentence_chrfpp": [
+              18.89,
+              27.13,
+              16.9,
+              12.56
+            ],
+            "sentence_ter": [
+              140.0,
+              166.67,
+              242.86,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. Soon there will be corn.",
+              "Mi 'oy 'ox vob ta k'in? Will there be a party?",
+              "K'usi 'oy 'ox ta Mexico lavie? This translation is uncertain due to unknown morphemes 'K'usi' and 'lavie'.",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. This translation is uncertain due to unknown morphemes 'jna' and 'volje'."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 3.51,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, possibly \"good\"\nna = possibly related to future or positive state\njunabi = adverb, possibly \"last year\"\n[DELETED: None — All current entries are supported or refined by the new examples.]",
+          "accumulated_rules": "1. The language may use SVO or VSO word order.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"\n[DELETED: None — All current rules are supported or refined by the new examples.]",
+          "metrics": {
+            "corpus_bleu": 4.6,
+            "corpus_chrfpp": 28.37,
+            "corpus_ter": 150.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.95,
+              6.15,
+              7.35,
+              4.24
+            ],
+            "sentence_chrfpp": [
+              36.39,
+              30.32,
+              30.11,
+              22.03
+            ],
+            "sentence_ter": [
+              140.0,
+              183.33,
+              128.57,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. Soon there will be good corn.",
+              "Mi 'oy 'ox vob ta k'in? Will there be a party at the gathering?",
+              "K'usi 'oy 'ox ta Mexico lavie? Is there happiness in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. I will speak Tzotzil in the Tzotzil school."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 4.25,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, possibly \"good\"\nna = possibly related to future or positive state\njunabi = adverb, possibly \"last year\"\nlavie = possibly pronoun or indicator of possession\nschenek' = possibly variant of chenek' or related to absence",
+          "accumulated_rules": "1. The language may use SVO or VSO word order, with VSO appearing more prevalent in questions.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my), with 'p'in' possibly indicating a different type of possession or grammatical function.\n9. 'Muk'' might be used to indicate absence or negation in a broader sense.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"\n11. 'na' is possibly related to future or positive state.",
+          "metrics": {
+            "corpus_bleu": 9.9,
+            "corpus_chrfpp": 34.05,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              15.21,
+              13.83,
+              14.21
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              34.48,
+              35.73,
+              38.01
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Where will the party be?",
+              "Is there pleasure in Mexico?",
+              "I will have a book in the Tzotzil school in my house."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 4.0,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, \"good\"\nna = possibly related to future or positive state\njunabi = adverb, possibly \"last year\"\nlavie = possibly pronoun or indicator of possession\nschenek' = possibly variant of chenek' or related to absence\nlekil = adjective, \"good\"\nvob = possibly noun, \"music\"\n[DELETED: schenek' — reason: potentially a variant, but its distinct meaning or function isn't clear without more context]\n[DELETED: p'in — reason: seems to be part of a possessive or grammatical function similar to 'jp'in', but exact distinction not clear]",
+          "accumulated_rules": "1. The language may use SVO or VSO word order, with VSO appearing more prevalent in questions.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation in a broader sense.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"\n11. 'na' is possibly related to future or positive state.\n12. 'lekil' and 'jlekil' both mean \"good,\" possibly with different connotations or uses.",
+          "metrics": {
+            "corpus_bleu": 7.01,
+            "corpus_chrfpp": 31.55,
+            "corpus_ter": 232.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.95,
+              25.75,
+              3.44,
+              2.44
+            ],
+            "sentence_chrfpp": [
+              36.39,
+              64.37,
+              23.75,
+              20.67
+            ],
+            "sentence_ter": [
+              140.0,
+              133.33,
+              285.71,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. Soon there will be good corn.",
+              "Mi 'oy 'ox vob ta k'in? Will there be music at the party?",
+              "K'usi 'oy 'ox ta Mexico lavie? This translation is challenging without knowing 'K'usi', but it might mean \"Is there something in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. This translation is highly speculative due to unknown morphemes 'jna' and 'volje', but it might relate to \"Having Tzotzil in a place."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 4.28,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, \"good\"\nna = possibly related to future or positive state\njunabi = adverb, possibly \"last year\"\nlavie = possibly pronoun or indicator of possession\nschenek' = possibly variant of chenek' or related to absence\nlekil = adjective, \"good\"\nvob = possibly noun, \"music\"\nK'usi = possibly related to past actions or questions\nvolje = possibly past time frame\n[DELETED: schenek' — reason: potentially a variant, but its distinct meaning or function isn't clear without more context]\n[DELETED: p'in — reason: seems to be part of a possessive or grammatical function similar to 'jp'in', but exact distinction not clear]",
+          "accumulated_rules": "1. The language may use SVO or VSO word order, with VSO appearing more prevalent in questions.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation in a broader sense.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"\n11. 'na' is possibly related to future or positive state.\n12. 'lekil' and 'jlekil' both mean \"good,\" possibly with different connotations or uses.\n13. 'K'usi' might be related to past actions or questions.",
+          "metrics": {
+            "corpus_bleu": 20.78,
+            "corpus_chrfpp": 43.81,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              11.34,
+              9.03
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              31.59,
+              33.9
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What did you have at school in Mexico?",
+              "I had a book at the Tzotzil school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 4.63,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, \"good\"\nna = possibly related to future or positive state\njunabi = adverb, possibly \"last year\"\nlavie = possibly pronoun or indicator of possession\nschenek' = possibly variant of chenek' or related to absence\nlekil = adjective, \"good\"\nvob = possibly noun, \"music\"\nK'usi = possibly related to past actions or questions\nvolje = possibly past time frame\n[DELETED: p'in — reason: seems to be part of a possessive or grammatical function similar to 'jp'in', but exact distinction not clear]",
+          "accumulated_rules": "1. The language may use SVO or VSO word order, with VSO appearing more prevalent in questions.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation in a broader sense.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"\n11. 'na' is possibly related to future or positive state.\n12. 'lekil' and 'jlekil' both mean \"good,\" possibly with different connotations or uses.\n13. 'K'usi' might be related to past actions or questions.\n[DELETED: None at this step, but refinements are considered in the analysis]",
+          "metrics": {
+            "corpus_bleu": 21.54,
+            "corpus_chrfpp": 41.97,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              13.54,
+              5.02
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              35.09,
+              25.73
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What did you have in Mexico?",
+              "What was the talk at the school yesterday?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 4.57,
+          "accumulated_dict": "'Oy = verb or part of verb phrase (possibly indicating action or state)\n'ox = tense marker or part of verb phrase\n'ixim = noun, \"corn\"\nta = preposition indicating location\nana = adverb, \"at home\"\nnax = adverb, \"today\"\nBu = interrogative particle\nli = marker used before proper nouns\nRomin = proper noun, \"Domingo\"\ne = conjunction or possible tense marker (involved in questions about future states)\n'ok'ob = adverb, \"tomorrow\"\nCh'abal = adverb, indicating a future or imminent action\nchenek' = noun, possibly \"haricots\"\njp'in = possessive marker or part of noun phrase, \"my\"\npo'ot = noun, \"pot\" or possibly \"house\"\nMi = question marker or part of verb phrase indicating a question about an event or state\nk'in = noun, possibly \"party\" or \"gathering\"\nJobel = proper noun, \"San Cristobal\"\nchan-vun = part of noun phrase, possibly related to \"school\"\nbatz'i k'op = noun, possibly \"Tzotzil\"\nsbatz'i = noun, possibly \"friend\"\nchi'il = adjective, possibly \"real\"\nMuk' = indicates absence or negation\nXun = proper noun, \"Juan\"\nXunka = proper noun, \"Juana\"\njlekil = adjective, \"good\"\nna = possibly related to future or positive state\njunabi = adverb, possibly \"last year\"\nlavie = possibly pronoun or indicator of possession\nschenek' = possibly variant of chenek' or related to absence\nlekil = adjective, \"good\"\nvob = possibly noun, \"music\"\nK'usi = possibly related to past actions or questions\nvolje = possibly past time frame\np'in = possessive marker or part of noun phrase, \"his\"\n[DELETED: None]",
+          "accumulated_rules": "1. The language may use SVO or VSO word order, with VSO appearing more prevalent in questions.\n2. 'ta' is used to indicate location.\n3. 'Bu' marks the beginning of a question.\n4. 'li' is used before proper nouns.\n5. 'Ch'abal' might indicate a future or imminent action.\n6. 'Mi' could be an alternative question marker or part of the verb phrase indicating a question about an event or state.\n7. 'e' seems to be used in conjunction with other morphemes to indicate future tense or questions about future states.\n8. 'jp'in' is used to indicate possession (my).\n9. 'Muk'' might be used to indicate absence or negation in a broader sense.\n10. 'junabi' indicates a past time frame, possibly \"last year.\"\n11. 'na' is possibly related to future or positive state.\n12. 'lekil' and 'jlekil' both mean \"good,\" possibly with different connotations or uses.\n13. 'K'usi' might be related to past actions or questions.\n14. 'volje' is possibly related to past time frames.\n15. 'p'in' is similar to 'jp'in', possibly indicating possession (his).",
+          "metrics": {
+            "corpus_bleu": 22.09,
+            "corpus_chrfpp": 41.87,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              11.34,
+              8.4
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              31.59,
+              27.95
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What did you have at school in Mexico?",
+              "I had talk at the school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 20.78,
+        "corpus_chrfpp": 43.81,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          24.45,
+          54.11,
+          11.34,
+          9.03
+        ],
+        "sentence_chrfpp": [
+          42.86,
+          75.62,
+          31.59,
+          33.9
+        ],
+        "sentence_ter": [
+          80.0,
+          33.33,
+          100.0,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Soon there will be good corn.",
+          "Will there be music at the party?",
+          "What did you have at school in Mexico?",
+          "I had a book at the Tzotzil school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 12
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 5,
+          "latency_s": 3.56,
+          "accumulated_dict": "'oy - you, had, there is/are/will be\n'ox - (possibly a tense or aspect marker)\n'ixim - corn\nta - at, in\nana - home\nnax - today\nbu - where\nli - will be\nRomin - Domingo\ne - (possibly a case marker or preposition)\n'ok'ob - tomorrow\nch'abal - soon\nchenek' - no, not\njp'in - my\npo'ot - pot, haricots\nmi - (possibly a question marker or auxiliary verb)\nk'in - party\nJobel - San Cristobal\n'ok'ob - tomorrow\nchan-vun - school\nbatz'i - Tzotzil",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, but this is not certain and requires further analysis.\n- 'ox might be a tense or aspect marker, possibly indicating past or future tense.\n- ta could be a preposition indicating location.\n- The language may use a system of particles or auxiliaries to indicate grammatical functions, such as 'oy for existence or 'mi for questioning.",
+          "metrics": {
+            "corpus_bleu": 2.36,
+            "corpus_chrfpp": 19.14,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              6.87,
+              5.93,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              31.0,
+              10.72,
+              26.33,
+              13.46
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              85.71,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You had corn at home today.",
+              "Where will Domingo be tomorrow?",
+              "Soon there will be no haricots in my pot.",
+              "Will there be a party in San Cristobal tomorrow?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 2.25,
+          "accumulated_dict": "'oy - you, had, there is/are/will be\n'ox - (possibly a tense or aspect marker)\n'ixim - corn\nta - at, in\nana - home\nnax - today\nbu - where\nli - will be\nRomin - Domingo\ne - (possibly a case marker or preposition)\n'ok'ob - tomorrow\nch'abal - soon\nchenek' - no, not\njp'in - my\npo'ot - pot, haricots\nmi - (possibly a question marker or auxiliary verb)\nk'in - party\nJobel - San Cristobal\n'ok'ob - tomorrow\nchan-vun - school\nbatz'i - Tzotzil\nsbatz'i - Juan, possibly a personal name or title\nchi'il - real, true, friend\nXun - possibly a personal name\nXunka - possibly a personal name, Juana\nMuk' - possibly an indicator of absence or negation\nchi'il - friend",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, but this is not certain and requires further analysis.\n- 'ox might be a tense or aspect marker, possibly indicating past or future tense.\n- ta could be a preposition indicating location.\n- The language may use a system of particles or auxiliaries to indicate grammatical functions, such as 'oy for existence or 'mi for questioning.\n- 'mi might be used to form questions.\n- 'e could be a case marker or preposition indicating the object of a sentence or a location.\n- Muk' could indicate absence, negation, or a lack of something.",
+          "metrics": {
+            "corpus_bleu": 0.88,
+            "corpus_chrfpp": 10.75,
+            "corpus_ter": 167.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              3.38
+            ],
+            "sentence_chrfpp": [
+              6.22,
+              9.26,
+              12.9,
+              12.93
+            ],
+            "sentence_ter": [
+              300.0,
+              166.67,
+              128.57,
+              130.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Mi 'oy sbatz'i chi'il li Xun e? → Is Juan a true friend to Xun?",
+              "Muk' bu li Xunka e. → Xunka is not anywhere.",
+              "'oy 'ixim ta ana → There is corn at home.",
+              "'ox 'oy nax li Romin → Romin was or will be on today."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 5,
+          "latency_s": 5.65,
+          "accumulated_dict": "'oy - you, had, there is/are/will be, existence\n'ox - tense or aspect marker, possibly indicating future or past tense\n'ixim - corn\nta - at, in, preposition indicating location\nana - home\nnax - today\nbu - where\nli - will be, future marker\nRomin - Domingo\ne - case marker, preposition, object marker\n'ok'ob - tomorrow\nch'abal - soon\nchenek' - no, not, negation\njp'in - my, possessive marker\npo'ot - pot, haricots\nmi - question marker, auxiliary verb\nk'in - party\nJobel - San Cristobal\n'ok'ob - tomorrow\nchan-vun - school\nbatz'i - Tzotzil\nsbatz'i - Juan, personal name or title\nchi'il - real, true, friend\nXun - personal name\nXunka - personal name, Juana\nMuk' - absence, negation, lack\njlekil - good house\nlekil - good\nvob - music\njunabi - last year\nschenek' - has no, negation\nlavie - his, possessive marker",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, but this is not certain and requires further analysis.\n- 'ox might be a tense or aspect marker, possibly indicating past or future tense.\n- ta could be a preposition indicating location.\n- The language may use a system of particles or auxiliaries to indicate grammatical functions, such as 'oy for existence or 'mi for questioning.\n- 'mi might be used to form questions.\n- 'e could be a case marker or preposition indicating the object of a sentence or a location.\n- Muk' could indicate absence, negation, or a lack of something.\n- 'oy 'ox construction might indicate future tense.\n- The language may use a system of possessive markers, such as jp'in for \"my\" and lavie for \"his\".\n- chenek' and schenek' might be used to indicate negation or absence.",
+          "metrics": {
+            "corpus_bleu": 4.16,
+            "corpus_chrfpp": 19.47,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              9.29,
+              7.49,
+              3.53
+            ],
+            "sentence_chrfpp": [
+              24.23,
+              30.1,
+              17.67,
+              10.5
+            ],
+            "sentence_ter": [
+              100.0,
+              116.67,
+              71.43,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will soon have a good house.",
+              "Was there a school in San Cristobal last year?",
+              "Is there corn in his pot?",
+              "He has no haricots today."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 2.28,
+          "accumulated_dict": "'oy - you, had, there is/are/will be, existence\n'ox - tense or aspect marker, possibly indicating future or past tense\n'ixim - corn\nta - at, in, preposition indicating location\nana - home\nnax - today\nbu - where\nli - will be, future marker\nRomin - Domingo\ne - case marker, preposition, object marker\n'ok'ob - tomorrow\nch'abal - soon\nchenek' - no, not, negation\njp'in - my, possessive marker\npo'ot - pot, haricots\nmi - question marker, auxiliary verb\nk'in - party\nJobel - San Cristobal\n'ok'ob - tomorrow\nchan-vun - school\nbatz'i - Tzotzil\nsbatz'i - Juan, personal name or title\nchi'il - real, true, friend\nXun - personal name\nXunka - personal name, Juana\nMuk' - absence, negation, lack\njlekil - good house\nlekil - good\nvob - music\njunabi - last year\nschenek' - has no, negation\nlavie - his, possessive marker\nk'usi - what, something (possibly related to questioning or inquiry)\nk'op - talk, speech\nvolje - yesterday",
+          "accumulated_rules": "- The language may have a subject-verb-object (SVO) word order, but this is not certain and requires further analysis.\n- 'ox might be a tense or aspect marker, possibly indicating past or future tense.\n- ta could be a preposition indicating location.\n- The language may use a system of particles or auxiliaries to indicate grammatical functions, such as 'oy for existence or 'mi for questioning.\n- 'mi might be used to form questions.\n- 'e could be a case marker or preposition indicating the object of a sentence or a location.\n- Muk' could indicate absence, negation, or a lack of something.\n- 'oy 'ox construction might indicate future tense.\n- The language may use a system of possessive markers, such as jp'in for \"my\" and lavie for \"his\".\n- chenek' and schenek' might be used to indicate negation or absence.\n- The use of 'ox with 'oy could indicate a past tense or a completed action.\n- The word order in questions might be different from the word order in statements.",
+          "metrics": {
+            "corpus_bleu": 1.12,
+            "corpus_chrfpp": 10.89,
+            "corpus_ter": 164.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.29,
+              3.67,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              16.8,
+              19.87,
+              9.65,
+              0.0
+            ],
+            "sentence_ter": [
+              240.0,
+              166.67,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "K'usi 'oy \"ox ta achan-vun volje? → What did you have at school yesterday?",
+              "Bu 'oy 'ox k'op nax? → Where was the talk today?",
+              "Ch'abal 'ox schi'il li Romin e junabi. → Last year Domingo had no friend.",
+              ""
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 4,
+            "missing_indices": [
+              3
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.16,
+        "corpus_chrfpp": 19.47,
+        "corpus_ter": 96.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.27,
+          9.29,
+          7.49,
+          3.53
+        ],
+        "sentence_chrfpp": [
+          24.23,
+          30.1,
+          17.67,
+          10.5
+        ],
+        "sentence_ter": [
+          100.0,
+          116.67,
+          71.43,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I will soon have a good house.",
+          "Was there a school in San Cristobal last year?",
+          "Is there corn in his pot?",
+          "He has no haricots today."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 15,
+          "latency_s": 1.66,
+          "metrics": {
+            "corpus_bleu": 31.92,
+            "corpus_chrfpp": 50.99,
+            "corpus_ter": 64.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.57,
+              80.91,
+              13.54,
+              9.08
+            ],
+            "sentence_chrfpp": [
+              57.4,
+              89.76,
+              35.09,
+              36.12
+            ],
+            "sentence_ter": [
+              80.0,
+              16.67,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be no good corn.",
+              "Is there music at the party?",
+              "What did you have in Mexico?",
+              "I had talk at the Tzotzil school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 31.92,
+        "corpus_chrfpp": 50.99,
+        "corpus_ter": 64.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          34.57,
+          80.91,
+          13.54,
+          9.08
+        ],
+        "sentence_chrfpp": [
+          57.4,
+          89.76,
+          35.09,
+          36.12
+        ],
+        "sentence_ter": [
+          80.0,
+          16.67,
+          71.43,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Soon there will be no good corn.",
+          "Is there music at the party?",
+          "What did you have in Mexico?",
+          "I had talk at the Tzotzil school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 2.71,
+          "metrics": {
+            "corpus_bleu": 11.84,
+            "corpus_chrfpp": 42.69,
+            "corpus_ter": 153.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.5,
+              32.38,
+              6.25,
+              5.62
+            ],
+            "sentence_chrfpp": [
+              18.58,
+              75.11,
+              31.01,
+              43.39
+            ],
+            "sentence_ter": [
+              180.0,
+              133.33,
+              157.14,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim - Soon there will be much corn.",
+              "Mi 'oy 'ox vob ta k'in? - Is there music at the party?",
+              "K'usi 'oy 'ox ta Mexico lavie? - What did he have in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje - There was talk about Tzotzil language at my place yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 2.14,
+          "metrics": {
+            "corpus_bleu": 23.42,
+            "corpus_chrfpp": 45.48,
+            "corpus_ter": 60.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              80.91,
+              6.27,
+              12.19
+            ],
+            "sentence_chrfpp": [
+              16.89,
+              89.76,
+              21.72,
+              50.07
+            ],
+            "sentence_ter": [
+              100.0,
+              16.67,
+              85.71,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "There will be corn soon.",
+              "Is there music at the party?",
+              "What did he have in San Cristobal yesterday?",
+              "There was talk about Tzotzil language at my place yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 23.42,
+        "corpus_chrfpp": 45.48,
+        "corpus_ter": 60.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          9.65,
+          80.91,
+          6.27,
+          12.19
+        ],
+        "sentence_chrfpp": [
+          16.89,
+          89.76,
+          21.72,
+          50.07
+        ],
+        "sentence_ter": [
+          100.0,
+          16.67,
+          85.71,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "There will be corn soon.",
+          "Is there music at the party?",
+          "What did he have in San Cristobal yesterday?",
+          "There was talk about Tzotzil language at my place yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 11.58,
+        "chrf_delta": 2.79,
+        "ter_delta": -92.86,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.38,
+      "chrf": 4.74,
+      "ter": 1880.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "A attempt at translation. The sentence appears to be in a Mayan language, possibly K'iche' or a similar dialect. Here's ",
+      "reference": [
+        "You have no good corn."
+      ]
+    },
+    "baseline": {
+      "best_bleu": 24.84,
+      "best_chrf": 48.7,
+      "best_ter": 64.29,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "There will be no good corn.",
+        "Will there be music at the party?",
+        "What did he have in Mexico?",
+        "I will have talk at the Tzotzil school of my mother yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 20.78,
+      "best_chrf": 43.81,
+      "best_ter": 75.0,
+      "best_em": 0.0,
+      "num_steps": 14,
+      "best_hypotheses": [
+        "Soon there will be good corn.",
+        "Will there be music at the party?",
+        "What did you have at school in Mexico?",
+        "I had a book at the Tzotzil school yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "best_step": 12
+    },
+    "step_by_step": {
+      "best_bleu": 4.16,
+      "best_chrf": 19.47,
+      "best_ter": 96.43,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "I will soon have a good house.",
+        "Was there a school in San Cristobal last year?",
+        "Is there corn in his pot?",
+        "He has no haricots today."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 31.92,
+      "best_chrf": 50.99,
+      "best_ter": 64.29,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Soon there will be no good corn.",
+        "Is there music at the party?",
+        "What did you have in Mexico?",
+        "I had talk at the Tzotzil school yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 23.42,
+      "best_chrf": 45.48,
+      "best_ter": 60.71,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "There will be corn soon.",
+        "Is there music at the party?",
+        "What did he have in San Cristobal yesterday?",
+        "There was talk about Tzotzil language at my place yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "delta": {
+        "bleu_delta": 11.58,
+        "chrf_delta": 2.79,
+        "ter_delta": -92.86,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

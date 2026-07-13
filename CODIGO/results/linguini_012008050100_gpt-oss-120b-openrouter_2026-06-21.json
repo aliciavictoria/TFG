@@ -1,0 +1,1964 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T23:52:30.652008",
+    "puzzle_id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 12,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012008050100",
+    "language": "Inuktitut",
+    "language_family": "Eskimo-Aleut (Ártico canadiense)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Qingmivit takujaatit.",
+        "target": "Your dog saw you."
+      },
+      {
+        "source": "Inuuhuktuup iluaqhaiji qukiqtanga.",
+        "target": "The boy shot the doctor."
+      },
+      {
+        "source": "Aanniqtutit.",
+        "target": "You hurt yourself."
+      },
+      {
+        "source": "Iluaqhaijiup aarqijaatit.",
+        "target": "The doctor cured you."
+      },
+      {
+        "source": "Qingmiq iputujait.",
+        "target": "You speared the dog."
+      },
+      {
+        "source": "Angatkuq iluaqhaijimik aarqisijuq.",
+        "target": "The shaman cured a doctor."
+      },
+      {
+        "source": "Nanuq qaijuq.",
+        "target": "The polar bear came."
+      },
+      {
+        "source": "Iluaqhaijivit inuuhuktuit aarqijanga.",
+        "target": "Your doctor cured your boy."
+      },
+      {
+        "source": "Angunahuktiup amaruq iputujanga.",
+        "target": "The hunter speared the wolf."
+      },
+      {
+        "source": "Qingmiup ilinniaqtitsijiit aanniqtanga.",
+        "target": "The dog hurt your teacher."
+      },
+      {
+        "source": "Ukiakhaqtutit.",
+        "target": "You fell."
+      },
+      {
+        "source": "Angunahukti nanurmik qukiqsijuq.",
+        "target": "The hunter shot a polar bear."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Amaruup angatkuit takujanga.",
+        "target": "The wolf saw your shaman.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Nanuit inuuhukturmik aanniqsijuq.",
+        "target": "Your polar bear hurt a boy.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktiit aarqijuq.",
+        "target": "Your hunter cured himself.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ilinniaqtitsiji qukiqtait.",
+        "target": "You shot the teacher.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Qaijutit.",
+        "target": "You came.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Angunahuktimik aarqisijutit.",
+        "target": "You cured a hunter.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Amaruup angatkuit takujanga.",
+      "reference": "The wolf saw your shaman.",
+      "hypothesis": "**Possible translation:** “We will meet again tomorrow.”  \n\n*Note: The source language is not identified, so this rendering is an educated guess based on the structure and typical word order of similar phrases.*",
+      "latency_s": 5.22,
+      "metrics": {
+        "corpus_bleu": 0.99,
+        "corpus_chrfpp": 8.77,
+        "corpus_ter": 620.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.99
+        ],
+        "sentence_chrfpp": [
+          8.77
+        ],
+        "sentence_ter": [
+          620.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “We will meet again tomorrow.”  \n\n*Note: The source language is not identified, so this rendering is an educated guess based on the structure and typical word order of similar phrases.*"
+        ],
+        "references": [
+          "The wolf saw your shaman."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 12,
+          "latency_s": 34.79,
+          "metrics": {
+            "corpus_bleu": 5.79,
+            "corpus_chrfpp": 39.33,
+            "corpus_ter": 84.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.48,
+              16.52,
+              27.53,
+              14.79,
+              21.36,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              31.41,
+              45.34,
+              46.32,
+              39.26,
+              41.6,
+              32.04
+            ],
+            "sentence_ter": [
+              60.0,
+              83.33,
+              75.0,
+              100.0,
+              50.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The hunter saw the wolf.",
+              "The boy hurt the polar bear.",
+              "The hunter cured.",
+              "The teacher saw.",
+              "He/she came.",
+              "The hunter cured them.=== END ==="
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.79,
+        "corpus_chrfpp": 39.33,
+        "corpus_ter": 84.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.48,
+          16.52,
+          27.53,
+          14.79,
+          21.36,
+          4.46
+        ],
+        "sentence_chrfpp": [
+          31.41,
+          45.34,
+          46.32,
+          39.26,
+          41.6,
+          32.04
+        ],
+        "sentence_ter": [
+          60.0,
+          83.33,
+          75.0,
+          100.0,
+          50.0,
+          125.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The hunter saw the wolf.",
+          "The boy hurt the polar bear.",
+          "The hunter cured.",
+          "The teacher saw.",
+          "He/she came.",
+          "The hunter cured them.=== END ==="
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 69.74,
+          "accumulated_dict": "Qingmivit = your dog\ntakujaatit = saw you\nInuuhuktuup = the boy\nqukiq = doctor (root)\n‑up = definite noun suffix (subject)\n‑it = definite noun suffix (object)\n‑mik = 1st‑person subject verbal suffix\n‑kuit = 2nd‑person subject verbal suffix\n‑kuit = 3rd‑person subject verbal suffix (shared form)\n‑ang = 2nd‑person object verbal suffix (you)\n‑anga = 3rd‑person object verbal suffix (him/her)\n‑ait = 3rd‑person object verbal suffix (them)\n‑t = verb root marker (used in “qukiqt‑”)\n‑jaat‑ = root “see”\n‑q‑ = root “shoot”",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Nouns take a suffix **‑up** when they are the subject and **‑it** when they are the object; the suffix also carries definiteness.\n3. Possessive pronouns are incorporated into the noun as a prefix (e.g., *qing‑* = “your”).\n4. Verbs consist of a lexical root + a subject‑person suffix (‑mik, ‑kuit) + an object‑person suffix (‑ang, ‑anga, ‑ait).\n5. The object‑person suffix is attached directly to the verb; the object noun itself is omitted when the object is a pronoun.\n6. The verb “see” has root *‑jaat‑*; the verb “shoot” has root *‑q‑*.",
+          "metrics": {
+            "corpus_bleu": 2.02,
+            "corpus_chrfpp": 12.39,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              7.81,
+              4.77,
+              10.68,
+              7.81,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              15.87,
+              11.56,
+              11.87,
+              10.85,
+              19.96,
+              6.31
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog chased you.",
+              "The boy will see the doctor.",
+              "He/she will shoot him/her.",
+              "I will see them.",
+              "You (plural) will see.",
+              "He/she will see them."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 64.04,
+          "accumulated_dict": "qing‑ = your (2nd‑person possessive prefix)\n‑up = noun‑subject definite suffix (marks the noun as the grammatical subject)\n‑it = 2nd‑person object suffix (attached to verb when the object is “you”)\n‑anga = 3rd‑person object suffix (attached to noun when the object is a 3rd‑person noun)\n‑mik = 1st‑person subject verbal suffix\n‑kuit = 3rd‑person subject verbal suffix (used with non‑possessed subjects)\n‑t‑ = reflexive/self‑object marker (combines 2nd‑person subject with 2nd‑person object)\njaat‑ = “see” verb root\nq‑ = “shoot” verb root\naanniq‑ = “hurt” verb root\nqukiq = doctor (noun root)\nInuuhukt‑ = boy (noun root)\nQingmivit = your dog (possessed noun, already contains the possessive prefix)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Nouns take **‑up** when they function as the grammatical subject; otherwise they are bare or take an object suffix.\n3. Possessive pronouns are expressed as prefixes on the noun (e.g., *qing‑* “your”).\n4. Verbal morphology consists of a verb root + a subject‑person suffix (‑mik, ‑kuit, etc.).\n5. When the object is a 2nd‑person pronoun, the object suffix **‑it** attaches to the verb.\n6. When the object is a 3rd‑person noun, the object suffix **‑anga** attaches to that noun.\n7. A reflexive/self‑object is marked by the cluster **‑t‑** before the 2nd‑person object suffix **‑it**, yielding *‑t‑it* on the verb.",
+          "metrics": {
+            "corpus_bleu": 2.1,
+            "corpus_chrfpp": 12.97,
+            "corpus_ter": 96.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.51,
+              7.81,
+              6.57,
+              6.57,
+              8.12,
+              6.57
+            ],
+            "sentence_chrfpp": [
+              17.11,
+              11.43,
+              8.35,
+              21.23,
+              8.18,
+              9.38
+            ],
+            "sentence_ter": [
+              60.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog saw him.",
+              "The boy will shoot the doctor.",
+              "He/she will see it.",
+              "He/she will shoot them.",
+              "He/she will see.",
+              "He/she will hurt them."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 100.26,
+          "accumulated_dict": "qing‑ = your (2nd‑person possessive prefix)\n‑up = noun‑subject definite suffix (marks the noun as grammatical subject)\n‑it = 2nd‑person object suffix (attached to verb)\n‑t‑ = reflexive/self‑object marker (appears before ‑it)\n‑tanga = 3rd‑person object suffix (attached to noun)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nInuuhukt‑ = boy (noun root)\nIluaqhaij‑ = doctor (noun root)\nQingmivit = your dog (possessed noun)\n[DELETED: q‑ — no evidence for this root]\n[DELETED: jaat‑ — no evidence for this root]\n[DELETED: aanniq‑ (kept, but note its reflexive pattern)]\n[DELETED: qukiq — appears to be an alternate form of “doctor” not needed with current data]\n[DELETED: ‑mik — no 1st‑person verbal suffix observed]\n[DELETED: ‑kuit — no 3rd‑person verbal suffix observed]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. Nouns take **‑up** when they function as the grammatical subject; otherwise they are bare or take the object suffix **‑tanga** for 3rd‑person objects.\n3. Possessive pronouns are expressed as prefixes on the noun (e.g., *qing‑* “your”).\n4. Verbal morphology consists of a verb root plus, optionally, a reflexive/tense marker **‑t** and an object suffix.\n5. When the object is a 2nd‑person pronoun, the object suffix **‑it** attaches to the verb.\n6. A reflexive/self‑object is marked by the cluster **‑t‑it** on the verb.\n7. When the object is a 3rd‑person noun, the suffix **‑tanga** attaches to that noun.\n[DELETED: Rule 5 (‑kuit as 3rd‑person subject verbal suffix) — not supported]\n[DELETED: Rule 6 (‑t‑ as reflexive only) — now seen also before ‑it in non‑reflexive contexts]",
+          "metrics": {
+            "corpus_bleu": 10.44,
+            "corpus_chrfpp": 26.6,
+            "corpus_ter": 72.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.51,
+              15.85,
+              30.21,
+              8.12,
+              34.67,
+              12.44
+            ],
+            "sentence_chrfpp": [
+              17.76,
+              25.27,
+              55.23,
+              12.19,
+              24.03,
+              15.38
+            ],
+            "sentence_ter": [
+              60.0,
+              66.67,
+              50.0,
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The boy saw him.",
+              "You hurt the boy.",
+              "He/she cured himself.",
+              "He/she hurt you.",
+              "You see.",
+              "I cure you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 109.81,
+          "accumulated_dict": "qing‑ = 2nd‑person (possessive prefix or independent pronoun)\n‑up = noun‑subject definite suffix\n‑tanga = 3rd‑person object suffix on noun\n‑it = object suffix on verb (used for 2nd‑person objects; also appears with 3rd‑person objects when the noun is omitted)\n‑t‑ = object‑marker that precedes the object suffix on the verb\n‑ji = past‑tense suffix on verbs\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nmivit = “dog” (noun root)\n[DELETED: qukiq — not needed as separate entry]\n[DELETED: jaat‑ — no evidence]\n[DELETED: aanniq‑ (kept, but note its reflexive pattern)]",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. A noun takes **‑up** when it functions as the grammatical subject; otherwise it is bare or takes the 3rd‑person object suffix **‑tanga**.\n3. Possessive pronouns are expressed as prefixes (e.g., *qing‑* “your”). The same prefix *qing‑* can appear as an independent 2nd‑person pronoun when followed by a nominalizer *‑miq*.\n4. Verbal morphology: verb root + optional tense suffix (**‑ji** for past) + **‑t‑** (object‑marker) + object suffix (**‑it** for 2nd‑person objects; the same suffix can appear when the object noun is omitted).\n5. When the object is a 3rd‑person noun, the noun takes **‑tanga** and the verb does **not** take an object suffix.\n6. The sequence **‑t‑it** marks a transitive clause with a 2nd‑person object (including reflexive “yourself”).\n7. The suffix **‑ji** marks past tense on the verb.",
+          "metrics": {
+            "corpus_bleu": 5.49,
+            "corpus_chrfpp": 19.64,
+            "corpus_ter": 84.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              15.85,
+              12.44,
+              10.68,
+              19.0,
+              14.79
+            ],
+            "sentence_chrfpp": [
+              14.74,
+              21.31,
+              17.21,
+              11.82,
+              21.11,
+              34.19
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67,
+              100.0,
+              100.0,
+              100.0,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The man sees the child.",
+              "They hurt the boy.",
+              "You cure him.",
+              "The doctor saw you.",
+              "You speared it.",
+              "You cure them."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 105.78,
+          "accumulated_dict": "qing‑ = 2nd‑person possessor prefix / independent 2nd‑person pronoun (when followed by ‑miq)\n‑miq = nominalizer used with *qing* to form independent “you”\n‑up = subject‑definite suffix (optional for possessed nouns)\n‑tanga = 3rd‑person object suffix on nouns (used when the subject bears *‑up*)\n‑mik = 3rd‑person object suffix on nouns (used when the subject lacks *‑up*)\n‑t‑ = object‑marker that precedes the object suffix on the verb\n‑it = object suffix for 2nd‑person objects (also appears when the object noun is omitted)\n‑u‑ = marker on the verb indicating a 3rd‑person object when the noun is omitted\n‑ji = past‑tense suffix on verbs\n‑sij‑ = present‑tense suffix on verbs (alternative to zero‑tense)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nAngatkuq‑ = “shaman” (noun root)\nmivit = “dog” (noun root)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. A noun takes **‑up** when it functions as a definite subject; possessed nouns can be subjects without **‑up**.\n3. Possessive pronouns are expressed as prefixes (*qing‑* “your”). The same prefix can appear as an independent 2nd‑person pronoun when followed by **‑miq**.\n4. Verbal morphology: verb root + optional tense suffix (**‑ji** for past, **‑sij‑** for present) + **‑t‑** (object‑marker) + object suffix (**‑it** for 2nd‑person objects; **‑u‑** when the object is a 3rd‑person noun that is omitted).\n5. When the object is a 3rd‑person noun that is expressed, the noun takes **‑tanga** (if the subject bears **‑up**) or **‑mik** (if the subject lacks **‑up**); the verb does **not** take an object suffix.\n6. The sequence **‑t‑it** marks a transitive clause with a 2nd‑person object (including reflexive “yourself”).\n7. The sequence **‑t‑u‑** on a verb marks a transitive clause with a 3rd‑person object when the object noun is omitted.\n8. Reflexive “you yourself” is expressed by a 2nd‑person subject (independent *qingmiq* or possessed noun) together with **‑t‑it** on the verb, as in *aanniqtutit*.",
+          "metrics": {
+            "corpus_bleu": 6.54,
+            "corpus_chrfpp": 24.38,
+            "corpus_ter": 76.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.3,
+              15.21,
+              12.44,
+              10.68,
+              34.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              41.85,
+              21.4,
+              23.97,
+              12.42,
+              24.03,
+              16.81
+            ],
+            "sentence_ter": [
+              40.0,
+              66.67,
+              100.0,
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The woman saw the shaman.",
+              "The cat hurt the boy.",
+              "You cure yourself.",
+              "The doctor sees you.",
+              "You see.",
+              "The shaman cures you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 145.77,
+          "accumulated_dict": "qing‑ = 2nd‑person possessor prefix (also forms independent pronoun when followed by ‑miq)\n‑miq = nominalizer that creates the independent 2nd‑person pronoun “you” (qing‑ + ‑miq)\n‑up = subject‑definite suffix (optional for possessed nouns)\n‑tanga = 3rd‑person object suffix on nouns when the subject bears ‑up\n‑mik = 3rd‑person object suffix on nouns when the subject lacks ‑up\n‑t‑ = object‑marker that precedes the object suffix on the verb\n‑it = 2nd‑person object suffix on the verb (also used for reflexive “yourself”)\n‑u‑ = marker on the verb indicating a 3rd‑person object when the object noun is omitted\n‑ji = past‑tense suffix on transitive verbs\n‑uq = past‑tense suffix on intransitive verbs (e.g., “come”)\n‑sij‑ = present‑tense suffix on verbs (alternative to zero‑tense)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nqukiq‑ = “doctor” (alternative noun stem used in object position)\nAngatkuq‑ = “shaman” (noun root)\nmivit = “dog” (noun root)\nNanuq = “polar bear” (noun root)\nqaij‑ = “come” (verb root)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (SVO).\n2. A noun takes **‑up** when it functions as a definite subject; possessed nouns can be subjects without **‑up**.\n3. Possessive pronouns are expressed as prefixes (*qing‑* “your”). The same prefix forms an independent 2nd‑person pronoun when followed by **‑miq**.\n4. Verbal morphology (transitive): verb root + optional tense suffix (**‑ji** for past, **‑uq** for past intransitive, zero or **‑sij‑** for present) + **‑t‑** (object‑marker) + object suffix (**‑it** for 2nd‑person objects; **‑u‑** when the 3rd‑person object noun is omitted).\n5. When the object is a 3rd‑person noun that is expressed, the noun takes **‑tanga** (if the subject bears **‑up**) or **‑mik** (if the subject lacks **‑up**); the verb does **not** take an object suffix.\n6. The sequence **‑t‑it** marks a transitive clause with a 2nd‑person object (including reflexive “yourself”).\n7. The sequence **‑t‑u‑** on a verb marks a transitive clause with a 3rd‑person object when the object noun is omitted.\n8. Reflexive “you yourself” is expressed by a 2nd‑person subject together with **‑t‑it** on the verb (e.g., *aanniqtutit*).\n9. Intransitive verbs use **‑uq** for past tense; transitive verbs use **‑ji** for past tense.",
+          "metrics": {
+            "corpus_bleu": 8.15,
+            "corpus_chrfpp": 25.06,
+            "corpus_ter": 88.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              17.97,
+              15.21,
+              12.44,
+              8.12,
+              100.0,
+              3.39
+            ],
+            "sentence_chrfpp": [
+              32.13,
+              26.1,
+              12.85,
+              10.73,
+              100.0,
+              14.92
+            ],
+            "sentence_ter": [
+              60.0,
+              66.67,
+              100.0,
+              100.0,
+              0.0,
+              175.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The mother sees the shaman.",
+              "The bears hurt the boy.",
+              "The shaman cures.",
+              "He/she sees you.",
+              "You came.",
+              "The shaman cures you. === END ==="
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 179.82,
+          "accumulated_dict": "qing‑ = 2nd‑person possessor prefix (used before a noun)\n‑miq = nominalizer forming independent 2nd‑person pronoun (qing‑ + ‑miq = “you”)\n‑up = definite‑subject suffix (optional for possessed nouns)\n‑tanga = 3rd‑person object suffix attached to the object noun when the subject bears ‑up (object follows verb)\n‑mik = 3rd‑person object suffix attached to the object noun when the subject lacks ‑up (object precedes verb)\n‑vit / ‑uit = 2nd‑person possessor suffix attached to a noun (variant forms)\n‑t‑ = object‑marker on the verb (precedes object suffix)\n‑it = 2nd‑person object suffix on the verb (also marks reflexive “yourself”)\n‑u‑ = marker on the verb indicating a 3rd‑person object when the object noun is omitted (used after ‑t)\n‑ji = past‑tense suffix on transitive verbs (optional)\n‑juq = past‑tense suffix on transitive verbs (alternative form)\n‑nga = past‑tense suffix on transitive verbs (alternative form)\n‑sij‑ = present‑tense suffix on verbs (alternative to zero‑tense)\n‑uq = past‑tense suffix on intransitive verbs (e.g., “come”)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nqukiq‑ = “doctor” (alternative noun stem used in object position)\nAngatkuq‑ = “shaman” (noun root)\nmivit = “dog” (noun root)\nNanuq = “polar bear” (noun root)\nqaij‑ = “come” (verb root)",
+          "accumulated_rules": "1. Basic clause order is flexible:\na. Subject – Verb – Object when the subject bears ‑up (object noun takes ‑tanga and follows the verb).\nb. Subject – Object – Verb when the subject lacks ‑up (object noun takes ‑mik and precedes the verb).\n2. A noun takes **‑up** when it functions as a definite subject; possessed nouns can be subjects without **‑up**.\n3. 2nd‑person possession can be expressed either by the prefix **qing‑** before a noun or by the suffix **‑vit/‑uit** after a noun.\n4. The independent 2nd‑person pronoun is formed by **qing‑ + ‑miq**.\n5. Transitive verb morphology:\n- root + (optional past suffix ‑ji/‑juq/‑nga) + **‑t‑** + object suffix (**‑it** for 2nd‑person object, **‑u‑** when the 3rd‑person object noun is omitted).\n- When the object is a 3rd‑person noun that is expressed, the verb carries no object suffix; the object noun bears **‑tanga** (after‑verb) or **‑mik** (before‑verb) as described in Rule 1.\n6. The sequence **‑t‑it** on a verb marks a transitive clause with a 2nd‑person object (including reflexive “yourself”).\n7. The sequence **‑t‑u‑** on a verb marks a transitive clause with a 3rd‑person object when the object noun is omitted.\n8. Reflexive “you yourself” is expressed by a 2nd‑person subject (implicit or explicit) together with **‑t‑it** on the verb (e.g., *aanniqtutit*).\n9. Intransitive verbs form the past with the suffix **‑uq**; transitive past can be marked by **‑ji**, **‑juq**, or **‑nga**, but the marker is optional and context‑driven.",
+          "metrics": {
+            "corpus_bleu": 14.52,
+            "corpus_chrfpp": 37.14,
+            "corpus_ter": 64.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              11.48,
+              30.74,
+              12.7,
+              10.68,
+              100.0,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              31.66,
+              60.8,
+              28.62,
+              11.82,
+              100.0,
+              21.91
+            ],
+            "sentence_ter": [
+              60.0,
+              33.33,
+              75.0,
+              100.0,
+              0.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The shaman saw the boy.",
+              "The polar bear hurt the boy.",
+              "The shaman cured him.",
+              "The doctor saw you.",
+              "You came.",
+              "The shaman cured them."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 150.85,
+          "accumulated_dict": "qing‑ = 2nd‑person possessor prefix\n‑miq = independent 2nd‑person pronoun suffix (combined with qing‑)\n‑vit / ‑uit = 2nd‑person possessor suffix (variant)\n‑up = definite‑subject suffix (optional)\n‑tanga = 3rd‑person object suffix attached to the object noun when the subject has ‑up (object follows verb)\n‑mik = 3rd‑person object suffix attached to the object noun when the subject lacks ‑up (object precedes verb)\n‑t‑ = object‑marker on the verb (precedes object suffix)\n‑it = 2nd‑person object suffix on the verb (also marks reflexive “yourself”)\n‑u‑ = marker on the verb indicating a self‑reference (reflexive) or an omitted 3rd‑person object after ‑t‑\n‑ji, ‑juq, ‑nga, ‑ja = past‑tense suffixes on transitive verbs (‑ja newly observed)\n‑uq = past‑tense suffix on intransitive verbs\n‑sij‑ = present‑tense suffix (optional)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nqaij‑ = “come” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nqukiq‑ = “doctor” (alternative noun stem)\nAngatkuq‑ = “shaman” (noun root)\nmivit = “dog” (noun root)\nNanuq = “polar bear” (noun root)\namaruq = “wolf” (noun root)\nangunahukt‑ = “hunter” (noun root)",
+          "accumulated_rules": "1. Basic clause order depends on the presence of **‑up** on the subject:\na. **Subject‑up – Verb – Object** (object noun takes **‑tanga** and follows the verb).\nb. **Subject – Object – Verb** (object noun takes **‑mik** and precedes the verb) when the subject lacks **‑up**.\n2. A noun takes **‑up** when it functions as a definite subject; possessed nouns can be subjects without **‑up**.\n3. 2nd‑person possession may be expressed by the prefix **qing‑** before a noun, by the suffix **‑vit/‑uit** after a noun, or by a combination of both.\n4. The independent 2nd‑person pronoun is formed by **qing‑ + ‑miq**.\n5. Transitive verb morphology:\n- root + (optional past suffix **‑ji / ‑juq / ‑nga / ‑ja**) + **‑t‑** + object suffix.\n- Object suffix **‑it** marks a 2nd‑person object (including reflexive).\n- Object suffix **‑u‑** marks a self‑reference (reflexive) or an omitted 3rd‑person object; when combined with **‑it** it yields the reflexive pattern **‑t‑u‑it**.\n6. When the object is a 3rd‑person noun that is expressed, the verb carries no object suffix; the object noun bears **‑tanga** (after‑verb) or **‑mik** (before‑verb) as described in Rule 1.\n7. The sequence **‑t‑it** on a verb marks a transitive clause with a 2nd‑person object.\n8. The sequence **‑t‑u‑it** on a verb marks a reflexive clause (“you … yourself”).\n9. The sequence **‑t‑u‑** on a verb marks a transitive clause with an omitted 3rd‑person object.\n10. Intransitive verbs form the past with the suffix **‑uq**; transitive past can be marked by **‑ji**, **‑juq**, **‑nga**, or **‑ja**, the choice being optional and context‑driven.\n11. Present tense may be unmarked or may carry the suffix **‑sij‑**.",
+          "metrics": {
+            "corpus_bleu": 21.48,
+            "corpus_chrfpp": 43.58,
+            "corpus_ter": 60.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              19.3,
+              15.21,
+              66.87,
+              10.68,
+              100.0,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              37.52,
+              22.47,
+              80.24,
+              11.82,
+              100.0,
+              41.17
+            ],
+            "sentence_ter": [
+              40.0,
+              66.67,
+              25.0,
+              100.0,
+              0.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The hunter saw the shaman.",
+              "The wolf hurt the boy.",
+              "The hunter cured himself.",
+              "The doctor saw you.",
+              "You came.",
+              "The hunter cured you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 157.11,
+          "accumulated_dict": "qing‑ = 2nd‑person possessor prefix\n‑miq = independent 2nd‑person pronoun suffix (combined with qing‑)\n‑vit / ‑uit = 2nd‑person possessor suffix (variant)\n‑up = definite‑subject suffix (optional)\n‑tanga = 3rd‑person object suffix attached to the object noun when the verb does **not** contain ‑u‑ (object follows verb)\n‑mik = 3rd‑person object suffix attached to the object noun when the verb does **not** contain ‑u‑ (object precedes verb)\n‑t‑ = object‑marker on the verb (precedes object suffixes)\n‑it = 2nd‑person object suffix on the verb (also marks reflexive “yourself” when combined with ‑u‑)\n‑u‑ = marker on the verb indicating a self‑reference (reflexive) or an omitted 3rd‑person object; can co‑occur with ‑it\n‑ji, ‑juq, ‑nga, ‑ja = past‑tense suffixes on transitive verbs (choice is lexical/phonological)\n‑uq = past‑tense suffix on intransitive verbs\n‑sij‑ = present‑tense suffix (optional)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nqaij‑ = “come” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nqukiq‑ = “doctor” (alternative noun stem)\nAngatkuq‑ = “shaman” (noun root)\nmivit = “dog” (noun root)\nNanuq = “polar bear” (noun root)\namaruq = “wolf” (noun root)\nangunahukt‑ = “hunter” (noun root)",
+          "accumulated_rules": "1. Clause word order depends on whether the subject bears ‑up:\na. **Subject‑up – Verb – Object** (object noun takes ‑tanga and follows the verb).\nb. **Subject – Object – Verb** (object noun takes ‑mik and precedes the verb) when the subject lacks ‑up.\n2. A noun takes ‑up when it functions as a definite subject; possessed nouns can be subjects without ‑up.\n3. 2nd‑person possession can be expressed by the prefix qing‑, by the suffix ‑vit/‑uit, or by both.\n4. The independent 2nd‑person pronoun is formed by qing‑ + ‑miq.\n5. Transitive verb morphology (order of affixes):\nroot + (optional past suffix ‑ji/‑juq/‑nga/‑ja) + (‑t‑) + (‑u‑) + (‑it / ‑mik / ‑tanga as appropriate).\n- ‑t‑ marks a transitive clause.\n- ‑it marks a 2nd‑person object.\n- ‑u‑ marks a reflexive or an omitted 3rd‑person object; when combined with ‑it it yields the reflexive pattern ‑t‑u‑it.\n- If the object is a 3rd‑person noun, the verb carries no object suffix; the object noun bears ‑tanga (after‑verb) or ‑mik (before‑verb) unless the object is a possessed noun, which does not need ‑mik/‑tanga.\n6. The sequence ‑t‑it on a verb marks a transitive clause with a 2nd‑person object.\n7. The sequence ‑t‑u‑it on a verb marks a reflexive clause (“you … yourself”).\n8. The sequence ‑t‑u‑ on a verb marks a transitive clause with an omitted 3rd‑person object; the object may then be expressed as a noun with ‑tanga or ‑mik, or may be left implicit.\n9. Intransitive verbs form the past with the suffix ‑uq; transitive past can be marked by ‑ji, ‑juq, ‑nga, or ‑ja (choice is lexical/phonological).\n10. Present tense may be unmarked or may carry the suffix ‑sij‑.\n11. Possessed nouns used as objects do not take the regular object‑suffixes ‑mik/‑tanga; their possession is shown only by ‑vit/‑uit.",
+          "metrics": {
+            "corpus_bleu": 9.74,
+            "corpus_chrfpp": 41.92,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              22.96,
+              15.21,
+              27.53,
+              10.68,
+              100.0,
+              4.07
+            ],
+            "sentence_chrfpp": [
+              48.7,
+              21.26,
+              46.32,
+              43.0,
+              100.0,
+              32.41
+            ],
+            "sentence_ter": [
+              40.0,
+              66.67,
+              75.0,
+              100.0,
+              0.0,
+              175.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf healed the shaman.",
+              "The dogs hurt the boy.",
+              "The hunter cured.",
+              "The teacher saw the doctor.",
+              "You came.",
+              "The hunter cured the doctors. === END ==="
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 97.6,
+          "accumulated_dict": "qing‑ = 2nd‑person possessor prefix\n‑miq = independent 2nd‑person pronoun suffix (forms *qing‑miq*)\n‑vit / ‑uit = 2nd‑person possessor suffix (after consonant / after vowel)\n‑up = definite‑subject suffix (optional)\n‑t‑ = transitive‑clause marker (precedes object‑related suffixes)\n‑it = 2nd‑person object suffix (also part of reflexive)\n‑u‑ = reflexive/omitted‑3rd‑person marker (combines with *‑it* for reflexive)\n‑mik = 3rd‑person object suffix when object precedes verb\n‑tanga = 3rd‑person object suffix when object follows verb (used after verb)\n‑ji, ‑juq, ‑nga, ‑ja = past‑tense suffixes on transitive verbs (lexical choice)\n‑uq = past‑tense suffix on intransitive verbs\n‑sij‑ = present‑tense marker (optional)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nqaij‑ = “come” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nqukiq‑ = “doctor” (alternative noun stem)\nAngatkuq‑ = “shaman” (noun root)\nmiv‑ = “dog” (noun root)\nNanuq = “polar bear” (noun root)\namaruq = “wolf” (noun root)\nangunahukt‑ = “hunter” (noun root)\nilinniaq‑ = “teacher” (noun root)",
+          "accumulated_rules": "1. **Subject position**:\na. If the subject bears *‑up* (definite), order is **Subject‑up – Verb – Object**; the object noun takes *‑tanga* and follows the verb.\nb. If the subject lacks *‑up* (indefinite), order is **Subject – Object – Verb**; the object noun takes *‑mik* and precedes the verb.\n2. Possession (2 sg) can be expressed by the prefix *qing‑*, by the suffix *‑vit/‑uit*, or by both together.\n3. Independent 2 sg pronoun = *qing‑miq*.\n4. Verb morphology (transitive):\nroot + (optional past suffix *‑ji/‑juq/‑nga/‑ja*) + *‑t‑* + (optional *‑u‑*) + (object suffixes: *‑it* for 2 sg object, *‑u‑it* for reflexive, none for 3 sg object).\n5. Object marking:\n- 2 sg object: *‑it* on the verb.\n- Reflexive “yourself”: *‑t‑u‑it* on the verb.\n- Omitted 3 sg object: *‑t‑u‑* on the verb; the actual 3 sg noun appears with *‑tanga* (after verb) or *‑mik* (before verb).\n- Explicit 3 sg object: noun bears *‑tanga* (post‑verb) or *‑mik* (pre‑verb); no object suffix on the verb.\n6. Possessed nouns used as objects do **not** take *‑mik*/*‑tanga*; possession is shown only by *‑vit/‑uit*.\n7. Past tense on intransitive verbs: *‑uq*.\n8. Present tense may be unmarked or carry *‑sij‑*.\n9. Definite subjects obligatorily take *‑up*; indefinite subjects omit it.",
+          "metrics": {
+            "corpus_bleu": 19.99,
+            "corpus_chrfpp": 55.08,
+            "corpus_ter": 56.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              37.99,
+              30.74,
+              27.53,
+              12.7,
+              100.0,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              66.21,
+              60.8,
+              46.32,
+              39.87,
+              100.0,
+              41.17
+            ],
+            "sentence_ter": [
+              20.0,
+              33.33,
+              75.0,
+              100.0,
+              0.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw the shaman.",
+              "The polar bear hurt the boy.",
+              "The hunter cured.",
+              "The teacher saw you.",
+              "You came.",
+              "The hunter cured you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 174.91,
+          "accumulated_dict": "1. ‑up is a general definiteness marker applicable to any noun phrase.\n2. Definite subjects do not strictly require S‑V‑O order; S‑O‑V is also possible when the verb bears ‑t‑.\nqing‑ = 2nd‑person possessor prefix\n‑miq = independent 2nd‑person pronoun (forms *qing‑miq*)\n‑vit / ‑uit = 2nd‑person possessor suffix (after consonant / after vowel)\n‑up = definiteness marker (optional on any noun phrase)\n‑t‑ = transitive‑clause marker (precedes object‑related suffixes)\n‑it = 2nd‑person object suffix (also part of reflexive)\n‑u‑ = reflexive/omitted‑3rd‑person marker (combines with *‑it* for reflexive, or alone for omitted 3 sg object)\n‑mik = 3rd‑person object suffix when object precedes verb\n‑tanga = 3rd‑person object suffix when object follows verb\n‑ji, ‑juq, ‑nga, ‑ja = past‑tense suffixes on transitive verbs (lexical choice)\n‑uq = past‑tense suffix on intransitive verbs\n‑sij‑ = present‑tense marker (optional)\ntakujaa‑ = “see” (verb root)\najilaha‑ = “shoot” (verb root)\naanniq‑ = “hurt” (verb root)\naarqijaa‑ = “cure” (verb root)\nipu‑ = “spear” (verb root)\nqaij‑ = “come” (verb root)\nInuuhukt‑ = “boy” (noun root)\nIluaqhaij‑ = “doctor” (noun root)\nqukiq‑ = “doctor” (alternative noun stem)\nAngatkuq‑ = “shaman” (noun root)\nmiv‑ = “dog” (noun root)\nNanuq = “polar bear” (noun root)\namaruq = “wolf” (noun root)\nangunahukt‑ = “hunter” (noun root)\nilinniaq‑ = “teacher” (noun root)",
+          "accumulated_rules": "1. **Definiteness**: ‑up marks a noun phrase as definite; it may appear on subjects, objects, or possessors.\n2. **Word order**\na. If the subject is marked ‑up, the default order is **Subject ‑ Verb ‑ Object** (object takes ‑tanga).\nb. If the subject lacks ‑up, the default order is **Subject ‑ Object ‑ Verb** (object takes ‑mik).\nc. The presence of the transitive marker ‑t‑ allows the object to precede the verb even when the subject is definite (as in example 9).\n3. **Possession (2 sg)**: expressed by prefix qing‑, suffix ‑vit/‑uit, or both together.\n4. **Independent 2 sg pronoun**: *qing‑miq*.\n5. **Verb morphology (transitive)**:\nroot + (optional past suffix *‑ji/‑juq/‑nga/‑ja*) + *‑t‑* + (optional *‑u‑*) + (object suffixes: *‑it* for 2 sg object, *‑u‑it* for reflexive, none for explicit 3 sg object).\n6. **Object marking**\n- 2 sg object: *‑it* on the verb.\n- Reflexive “yourself”: *‑t‑u‑it* on the verb.\n- Omitted 3 sg object: *‑t‑u‑* on the verb; the actual 3 sg noun appears with *‑tanga* (post‑verb) or *‑mik* (pre‑verb).\n- Explicit 3 sg object: noun bears *‑tanga* (post‑verb) or *‑mik* (pre‑verb); no object suffix on the verb.\n7. **Possessed nouns used as objects** do not take *‑mik*/*‑tanga*; possession is shown only by *‑vit/‑uit*.\n8. **Intransitive past**: *‑uq* attached to the verb root.\n9. **Present tense** may be unmarked or carry *‑sij‑*.\n10. **Definite subjects** obligatorily take *‑up*; indefinite subjects omit it (but *‑up* can still appear on other noun phrases).",
+          "metrics": {
+            "corpus_bleu": 45.67,
+            "corpus_chrfpp": 65.94,
+            "corpus_ter": 48.0,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              100.0,
+              48.89,
+              27.53,
+              12.7,
+              100.0,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              100.0,
+              79.42,
+              46.32,
+              39.42,
+              100.0,
+              41.17
+            ],
+            "sentence_ter": [
+              0.0,
+              16.67,
+              75.0,
+              100.0,
+              0.0,
+              100.0
+            ],
+            "sentence_em": [
+              true,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt the boy.",
+              "The hunter cured.",
+              "The teacher sees you.",
+              "You came.",
+              "The hunter cured you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 45.67,
+        "corpus_chrfpp": 65.94,
+        "corpus_ter": 48.0,
+        "exact_match_corpus": 33.33,
+        "sentence_bleu": [
+          100.0,
+          48.89,
+          27.53,
+          12.7,
+          100.0,
+          14.06
+        ],
+        "sentence_chrfpp": [
+          100.0,
+          79.42,
+          46.32,
+          39.42,
+          100.0,
+          41.17
+        ],
+        "sentence_ter": [
+          0.0,
+          16.67,
+          75.0,
+          100.0,
+          0.0,
+          100.0
+        ],
+        "sentence_em": [
+          true,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "hypotheses": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt the boy.",
+          "The hunter cured.",
+          "The teacher sees you.",
+          "You came.",
+          "The hunter cured you."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 11
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 4,
+          "latency_s": 52.56,
+          "accumulated_dict": "Qingmivit – “your dog”\ntakuj‑aatit – “saw you” (verb ‘see’ + 2nd person object suffix)\nInuuhuktuup – “the boy”\nalaq‑haiji – “shot” (verb root ‘shoot’)\nqukiqtanga – “the doctor”\nAanniqtutit – “you hurt yourself” (verb ‘hurt’ + 2nd person + reflexive suffix)\nIluaq‑haijiup – “the doctor” (subject form)\naarqij‑aat – “cured you” (verb ‘cure’ + 2nd person object suffix)\n‑up – nominative/subject case marker\n‑aat – past‑tense verb suffix that also indexes a 2nd‑person object\n‑it – present‑tense verb suffix that indexes a 2nd‑person object\n‑ut‑it – reflexive/self‑object construction on a 2nd‑person verb",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb (S V). The object, when it is a pronoun, is incorporated into the verb via a suffix; no separate object noun appears.\n2. Nouns that function as the grammatical subject take the suffix **‑up** (nominative case). This suffix does not appear on objects or on nouns used in other roles.\n3. Verbs take a tense‑and‑object suffix:\n- **‑aat** marks past tense with a 2nd‑person singular object.\n- **‑it** marks present (or non‑past) tense with a 2nd‑person singular object.\n- **‑ut‑it** combines a reflexive marker **‑ut** with the 2nd‑person object suffix, yielding a meaning “you … yourself”.\n4. Possessive constructions are built into the noun phrase (e.g., “your dog” appears as a single lexical item rather than a separate possessor + noun).\n5. Definite articles (“the”) are not overtly marked; they are part of the lexical item (e.g., *Inuuhuktuup* = “the boy”).",
+          "metrics": {
+            "corpus_bleu": 2.71,
+            "corpus_chrfpp": 13.4,
+            "corpus_ter": 96.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              8.17,
+              12.44,
+              10.68,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              22.39,
+              11.32,
+              21.42,
+              10.92,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Your dog saw you.",
+              "The boy shot the doctor.",
+              "You hurt yourself.",
+              "The doctor cured you.",
+              "—",
+              "—"
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 23.33,
+          "accumulated_dict": "Qingmiq – “dog” (base noun)\n‑aat – past‑tense verb suffix with 2nd‑person object\n‑it – present‑tense verb suffix with 2nd‑person object\n‑ut‑it – reflexive suffix combined with 2nd‑person object\n‑up – nominative/subject case marker\niput – “spear” (verb root)\n‑uj‑ – 2nd‑person object marker that appears before tense suffix (as in *‑uj‑aat*, *‑uj‑it*)\n‑a‑ – verbalizer/infinitive marker (as in *‑a‑j* in *‑a‑jimik*)\n‑i‑ – nominalizer/agentive suffix (as in *‑i‑j* in *‑i‑j*)\n‑mik – third‑person singular object marker (used when the object is a noun rather than a pronoun)\n‑sij – past‑tense marker without 2nd‑person object (used for third‑person objects)\n‑sik – present‑tense marker without 2nd‑person object\n‑jaq – “shaman” (noun)\n‑haij – “cure” (verb root)\n‑haij‑a‑jimik – “cured” (verb root + infinitive/gerund + 3rd‑person object marker)\n‑aarq – “heal” (verb root)\n‑aarq‑isij‑uq – “cured” (verb root + past‑tense, third‑person object)",
+          "accumulated_rules": "1. Clause order is Subject – Verb (S V). Objects that are pronouns are incorporated into the verb via the suffixes **‑uj‑aat** (past) or **‑uj‑it** (present). When the object is a full noun, it follows the verb and takes the third‑person object marker **‑mik**.\n2. Nouns functioning as grammatical subjects receive the nominative suffix **‑up**. This suffix never appears on objects or on nouns in other roles.\n3. Verbal morphology consists of a root + optional derivational morphemes + tense/object suffixes:\n- **‑uj‑aat** = past tense with 2nd‑person singular object.\n- **‑uj‑it** = present (non‑past) tense with 2nd‑person singular object.\n- **‑ut‑it** = reflexive construction on a 2nd‑person verb (“you … yourself”).\n- **‑sij** = past tense with third‑person object (used when the object is a noun).\n- **‑sik** = present tense with third‑person object.\n4. When a verb takes a noun object, the noun appears after the verb and bears the object marker **‑mik**; the verb itself uses the third‑person tense suffix (**‑sij** / **‑sik**).\n5. Possessive constructions are lexicalized; “your X” appears as a single lexical item (e.g., *Qingmivit* = “your dog”). No separate possessive morpheme is observed.\n6. The language employs a reflexive morpheme **‑ut** that precedes the 2nd‑person object suffix, forming **‑ut‑it** for “you … yourself”.",
+          "metrics": {
+            "corpus_bleu": 3.99,
+            "corpus_chrfpp": 18.46,
+            "corpus_ter": 96.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.75,
+              8.17,
+              12.44,
+              17.97,
+              19.0,
+              4.03
+            ],
+            "sentence_chrfpp": [
+              9.03,
+              11.1,
+              18.05,
+              36.98,
+              19.07,
+              18.96
+            ],
+            "sentence_ter": [
+              100.0,
+              83.33,
+              100.0,
+              75.0,
+              100.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You speared the dog.",
+              "The shaman cured a doctor.",
+              "You saw yourself.",
+              "The boy shot the doctor.",
+              "You hurt yourself.",
+              "The doctor cured you.=== END ==="
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 28.01,
+          "accumulated_dict": "Qingmiq – “dog” (base noun)\n‑aat – past‑tense verb suffix with 2nd‑person object\n‑it – present‑tense verb suffix with 2nd‑person object\n‑ut‑it – reflexive suffix combined with 2nd‑person object\n‑up – nominative/subject case marker\niput – “spear” (verb root)\n‑uj‑ – 2nd‑person object marker that appears before tense suffix (as in *‑uj‑aat*, *‑uj‑it*)\n‑a‑ – verbalizer/infinitive marker (as in *‑a‑j* in *‑a‑jimik*)\n‑i‑ – nominalizer/agentive suffix (as in *‑i‑j* in *‑i‑j*)\n‑mik – third‑person singular object marker (used when the object is a noun rather than a pronoun)\n‑sij – past‑tense marker without 2nd‑person object (used for third‑person objects)\n‑sik – present‑tense marker without 2nd‑person object\n‑jaq – “shaman” (noun)\n‑haij – “cure” (verb root)\n‑haij‑a‑jimik – “cured” (verb root + infinitive/gerund + 3rd‑person object marker)\n‑aarq – “heal” (verb root)\n‑aarq‑isij‑uq – “cured” (verb root + past‑tense, third‑person object)",
+          "accumulated_rules": "1. Clause order is Subject – Verb (S V). Objects that are pronouns are incorporated into the verb via the suffixes **‑uj‑aat** (past) or **‑uj‑it** (present). When the object is a full noun, it follows the verb and takes the third‑person object marker **‑mik**.\n2. Nouns functioning as grammatical subjects receive the nominative suffix **‑up**. This suffix never appears on objects or on nouns in other roles.\n3. Verbal morphology consists of a root + optional derivational morphemes + tense/object suffixes:\n- **‑uj‑aat** = past tense with 2nd‑person singular object.\n- **‑uj‑it** = present tense with 2nd‑person singular object.\n- **‑ut‑it** = reflexive construction on a 2nd‑person verb (“you … yourself”).\n- **‑sij** = past tense with third‑person object (used when the object is a noun).\n- **‑sik** = present tense with third‑person object.\n4. When a verb takes a noun object, the noun appears after the verb and bears the object marker **‑mik**; the verb itself uses the third‑person tense suffix (**‑sij** / **‑sik**).\n5. Possessive constructions are lexicalized; “your X” appears as a single lexical item (e.g., *Qingmivit* = “your dog”). No separate possessive morpheme is observed.\n6. The reflexive morpheme **‑ut** precedes the 2nd‑person object suffix, forming **‑ut‑it** for “you … yourself”.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "—",
+              "—",
+              "—",
+              "—",
+              "—",
+              "—"
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 19.48,
+          "accumulated_dict": "Qingmiup – “dog” (subject, with nominative suffix ‑up)\nQingmivit – “your dog” (possessive lexicalized form)\nilinniaqtitsijiit – “hurt” (verb root ilinn‑ + past‑tense ‑sij‑ + 2nd‑person object ‑it)\naanniqtanga – “your teacher” (possessive lexicalized form)\nUkiakhaqtutit – “you fell” (verb root ukia‑ + reflexive ‑ut‑ + present ‑it)\nAngunahukti – “the hunter” (noun with subject suffix ‑up omitted in this context)\nnanurmik – “polar bear” (noun + third‑person object marker ‑mik)\nqukiqsijuq – “shot” (verb root qukiq‑ + past‑tense ‑sij‑ + third‑person object)",
+          "accumulated_rules": "1. Basic clause order is Subject – Verb – Object (S V O).\n2. Subjects take the nominative suffix **‑up**; objects that are nouns follow the verb and bear the object marker **‑mik**.\n3. When the object is a pronoun (2nd person), it is incorporated into the verb via the object marker **‑uj‑** placed before the tense suffix (‑uj‑aat for past, ‑uj‑it for present).\n4. Reflexive constructions use the morpheme **‑ut‑** directly before the present‑tense suffix **‑it** (‑ut‑it) and refer to the 2nd person acting on themselves.\n5. Past tense with a third‑person noun object uses the suffix **‑sij**; present tense with a third‑person noun object uses **‑sik**.\n6. Possessive phrases such as “your X” are lexicalized as a single word (e.g., **Qingmivit**, **aanniqtanga**) and do not show separate possessive morphology.\n7. Negation, interrogative particles and complex clause embedding follow the same verb‑final morphology; a negation particle (e.g., **‑na**) would appear after the verb but before the tense suffix, while a question particle (e.g., **‑ka**) would appear at the end of the clause.",
+          "metrics": {
+            "corpus_bleu": 1.97,
+            "corpus_chrfpp": 10.71,
+            "corpus_ter": 96.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              7.25,
+              7.81,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              18.47,
+              8.03,
+              21.78,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              60.0,
+              100.0,
+              125.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog hurt your teacher.",
+              "You fell.",
+              "The hunter shot a polar bear.",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 6,
+            "missing_indices": [
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.99,
+        "corpus_chrfpp": 18.46,
+        "corpus_ter": 96.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.75,
+          8.17,
+          12.44,
+          17.97,
+          19.0,
+          4.03
+        ],
+        "sentence_chrfpp": [
+          9.03,
+          11.1,
+          18.05,
+          36.98,
+          19.07,
+          18.96
+        ],
+        "sentence_ter": [
+          100.0,
+          83.33,
+          100.0,
+          75.0,
+          100.0,
+          125.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You speared the dog.",
+          "The shaman cured a doctor.",
+          "You saw yourself.",
+          "The boy shot the doctor.",
+          "You hurt yourself.",
+          "The doctor cured you.=== END ==="
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 12,
+          "latency_s": 49.28,
+          "metrics": {
+            "corpus_bleu": 8.27,
+            "corpus_chrfpp": 43.66,
+            "corpus_ter": 80.0,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              20.41,
+              8.64,
+              12.44,
+              14.06,
+              100.0,
+              4.03
+            ],
+            "sentence_chrfpp": [
+              62.61,
+              39.03,
+              24.49,
+              40.62,
+              100.0,
+              31.88
+            ],
+            "sentence_ter": [
+              60.0,
+              66.67,
+              100.0,
+              100.0,
+              0.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false
+            ],
+            "hypotheses": [
+              "The wolf shaman saw you.",
+              "The polar bears hurt the boys.",
+              "The hunters cure.",
+              "Your teacher shot you.",
+              "You came.",
+              "The hunters cured you.=== END ==="
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.27,
+        "corpus_chrfpp": 43.66,
+        "corpus_ter": 80.0,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          20.41,
+          8.64,
+          12.44,
+          14.06,
+          100.0,
+          4.03
+        ],
+        "sentence_chrfpp": [
+          62.61,
+          39.03,
+          24.49,
+          40.62,
+          100.0,
+          31.88
+        ],
+        "sentence_ter": [
+          60.0,
+          66.67,
+          100.0,
+          100.0,
+          0.0,
+          125.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "hypotheses": [
+          "The wolf shaman saw you.",
+          "The polar bears hurt the boys.",
+          "The hunters cure.",
+          "Your teacher shot you.",
+          "You came.",
+          "The hunters cured you.=== END ==="
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 56.54,
+          "metrics": {
+            "corpus_bleu": 11.56,
+            "corpus_chrfpp": 43.37,
+            "corpus_ter": 68.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              37.99,
+              15.62,
+              12.44,
+              12.7,
+              30.33,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              66.21,
+              45.07,
+              24.49,
+              43.54,
+              28.13,
+              41.17
+            ],
+            "sentence_ter": [
+              20.0,
+              50.0,
+              100.0,
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw the shaman.",
+              "The polar bears hurt the boy.",
+              "The hunters cure.",
+              "The teacher shoots you.",
+              "Came.",
+              "The hunter cured you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 74.55,
+          "metrics": {
+            "corpus_bleu": 11.56,
+            "corpus_chrfpp": 43.37,
+            "corpus_ter": 68.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              37.99,
+              15.62,
+              12.44,
+              12.7,
+              30.33,
+              14.06
+            ],
+            "sentence_chrfpp": [
+              66.21,
+              45.07,
+              24.49,
+              43.54,
+              28.13,
+              41.17
+            ],
+            "sentence_ter": [
+              20.0,
+              50.0,
+              100.0,
+              100.0,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The wolf saw the shaman.",
+              "The polar bears hurt the boy.",
+              "The hunters cure.",
+              "The teacher shoots you.",
+              "Came.",
+              "The hunter cured you."
+            ],
+            "references": [
+              "The wolf saw your shaman.",
+              "Your polar bear hurt a boy.",
+              "Your hunter cured himself.",
+              "You shot the teacher.",
+              "You came.",
+              "You cured a hunter."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 11.56,
+        "corpus_chrfpp": 43.37,
+        "corpus_ter": 68.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          37.99,
+          15.62,
+          12.44,
+          12.7,
+          30.33,
+          14.06
+        ],
+        "sentence_chrfpp": [
+          66.21,
+          45.07,
+          24.49,
+          43.54,
+          28.13,
+          41.17
+        ],
+        "sentence_ter": [
+          20.0,
+          50.0,
+          100.0,
+          100.0,
+          50.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The wolf saw the shaman.",
+          "The polar bears hurt the boy.",
+          "The hunters cure.",
+          "The teacher shoots you.",
+          "Came.",
+          "The hunter cured you."
+        ],
+        "references": [
+          "The wolf saw your shaman.",
+          "Your polar bear hurt a boy.",
+          "Your hunter cured himself.",
+          "You shot the teacher.",
+          "You came.",
+          "You cured a hunter."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.99,
+      "chrf": 8.77,
+      "ter": 620.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “We will meet again tomorrow.”  \n\n*Note: The source language is not identified, so this render",
+      "reference": "The wolf saw your shaman."
+    },
+    "baseline": {
+      "best_bleu": 5.79,
+      "best_chrf": 39.33,
+      "best_ter": 84.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The hunter saw the wolf.",
+        "The boy hurt the polar bear.",
+        "The hunter cured.",
+        "The teacher saw.",
+        "He/she came.",
+        "The hunter cured them.=== END ==="
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 45.67,
+      "best_chrf": 65.94,
+      "best_ter": 48.0,
+      "best_em": 33.33,
+      "num_steps": 11,
+      "best_hypotheses": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt the boy.",
+        "The hunter cured.",
+        "The teacher sees you.",
+        "You came.",
+        "The hunter cured you."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "best_step": 11
+    },
+    "step_by_step": {
+      "best_bleu": 3.99,
+      "best_chrf": 18.46,
+      "best_ter": 96.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "You speared the dog.",
+        "The shaman cured a doctor.",
+        "You saw yourself.",
+        "The boy shot the doctor.",
+        "You hurt yourself.",
+        "The doctor cured you.=== END ==="
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "best_stage": "phonology"
+    },
+    "human_inspiration": {
+      "best_bleu": 8.27,
+      "best_chrf": 43.66,
+      "best_ter": 80.0,
+      "best_em": 16.67,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The wolf shaman saw you.",
+        "The polar bears hurt the boys.",
+        "The hunters cure.",
+        "Your teacher shot you.",
+        "You came.",
+        "The hunters cured you.=== END ==="
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 11.56,
+      "best_chrf": 43.37,
+      "best_ter": 68.0,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "The wolf saw the shaman.",
+        "The polar bears hurt the boy.",
+        "The hunters cure.",
+        "The teacher shoots you.",
+        "Came.",
+        "The hunter cured you."
+      ],
+      "best_references": [
+        "The wolf saw your shaman.",
+        "Your polar bear hurt a boy.",
+        "Your hunter cured himself.",
+        "You shot the teacher.",
+        "You came.",
+        "You cured a hunter."
+      ],
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

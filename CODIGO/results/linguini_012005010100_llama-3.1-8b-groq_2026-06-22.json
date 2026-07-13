@@ -1,0 +1,1477 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T12:53:59.156765",
+    "puzzle_id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "language_family": "Mayan (México)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 15,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "language_family": "Mayan (México)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "'Oy 'ox 'ixim ta ana nax.",
+        "target": "You had corn at home today."
+      },
+      {
+        "source": "Bu 'oy 'ox li Romin e 'ok'ob?",
+        "target": "Where will Domingo be tomorrow?"
+      },
+      {
+        "source": "Ch'abal 'ox chenek' ta jp'in po'ot.",
+        "target": "Soon there will be no haricots in my pot."
+      },
+      {
+        "source": "Mi 'oy 'ox k'in ta Jobel 'ok'ob?",
+        "target": "Will there be a party in San Cristobal tomorrow?"
+      },
+      {
+        "source": "'Oy chan-vun ta batz'i k'op ta Jobel.",
+        "target": "There is a Tzotzil school in San Cristobal."
+      },
+      {
+        "source": "Mi 'oy sbatz'i chi'il li Xun e?",
+        "target": "Does Juan have a real friend?"
+      },
+      {
+        "source": "Muk' bu li Xunka e.",
+        "target": "Juana is nowhere."
+      },
+      {
+        "source": "\"Oy 'ox jlekil na po'ot.",
+        "target": "I will soon have a good house."
+      },
+      {
+        "source": "Mi 'oy 'ox chan-vun ta Jobel junabi?",
+        "target": "Was there a school in San Cristobal last year?"
+      },
+      {
+        "source": "Mi 'oy \"ixim ta p'in lavie?",
+        "target": "Is there corn in his pot?"
+      },
+      {
+        "source": "Ch'abal schenek' lavie.",
+        "target": "He has no haricots today."
+      },
+      {
+        "source": "'Oy 'ox lekil vob ta k'in lavie.",
+        "target": "There will be good music at the party today."
+      },
+      {
+        "source": "K'usi 'oy \"ox ta achan-vun volje?",
+        "target": "What did you have at school yesterday?"
+      },
+      {
+        "source": "Bu 'oy 'ox k'op nax?",
+        "target": "Where was the talk today?"
+      },
+      {
+        "source": "Ch'abal 'ox schi'il li Romin e junabi.",
+        "target": "Last year Domingo had no friend."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Ch'abal alekil 'ixim.",
+        "target": [
+          "You have no good corn."
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "Mi 'oy 'ox vob ta k'in?",
+        "target": [
+          "Was there music at the party?",
+          "Will there be music at the party?"
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "K'usi 'oy 'ox ta Mexico lavie?",
+        "target": [
+          "What will there be in Mexico today?"
+        ],
+        "direction": "lang2en"
+      },
+      {
+        "source": "\"Oy \"ox k'op ta batz'i k'op ta jna volje.",
+        "target": [
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Ch'abal alekil 'ixim.",
+      "reference": [
+        "You have no good corn."
+      ],
+      "hypothesis": "The sentence \"Ch'abal alekil 'ixim\" appears to be in the Yucatec Maya language, which is a Mayan language spoken in Mexico.\n\nMy best attempt at translating this sentence into English is:\n\n\"The cacao is ripe.\"\n\nHere's a breakdown of the words:\n\n- \"Ch'abal\" is the Yucatec Maya word for \"cacao\" or \"chocolate\".\n- \"Alekil\" is a verb that means \"to be ripe\" or \"to be ready\".\n- \"'Ixim\" is a noun that means \"corn\" or \"maize\", but in this context, it's likely being used as a metaphor for something that's ripe or ready, possibly referring to the cacao.\n\nPlease note that the translation may not be exact, and the meaning of the sentence could be open to interpretation.",
+      "latency_s": 30.54,
+      "metrics": {
+        "corpus_bleu": 0.28,
+        "corpus_chrfpp": 3.85,
+        "corpus_ter": 2360.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.28
+        ],
+        "sentence_chrfpp": [
+          3.85
+        ],
+        "sentence_ter": [
+          2360.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "The sentence \"Ch'abal alekil 'ixim\" appears to be in the Yucatec Maya language, which is a Mayan language spoken in Mexico.\n\nMy best attempt at translating this sentence into English is:\n\n\"The cacao is ripe.\"\n\nHere's a breakdown of the words:\n\n- \"Ch'abal\" is the Yucatec Maya word for \"cacao\" or \"chocolate\".\n- \"Alekil\" is a verb that means \"to be ripe\" or \"to be ready\".\n- \"'Ixim\" is a noun that means \"corn\" or \"maize\", but in this context, it's likely being used as a metaphor for something that's ripe or ready, possibly referring to the cacao.\n\nPlease note that the translation may not be exact, and the meaning of the sentence could be open to interpretation."
+        ],
+        "references": [
+          "You have no good corn."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 15,
+          "latency_s": 1.11,
+          "metrics": {
+            "corpus_bleu": 8.19,
+            "corpus_chrfpp": 33.62,
+            "corpus_ter": 171.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.5,
+              22.41,
+              3.01,
+              4.57
+            ],
+            "sentence_chrfpp": [
+              18.56,
+              59.49,
+              23.14,
+              32.3
+            ],
+            "sentence_ter": [
+              160.0,
+              166.67,
+              200.0,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. → Soon there will be corn.",
+              "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+              "K'usi 'oy 'ox ta Mexico lavie? → What did you have at Mexico's pot yesterday?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.19,
+        "corpus_chrfpp": 33.62,
+        "corpus_ter": 171.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.5,
+          22.41,
+          3.01,
+          4.57
+        ],
+        "sentence_chrfpp": [
+          18.56,
+          59.49,
+          23.14,
+          32.3
+        ],
+        "sentence_ter": [
+          160.0,
+          166.67,
+          200.0,
+          160.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Ch'abal alekil 'ixim. → Soon there will be corn.",
+          "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+          "K'usi 'oy 'ox ta Mexico lavie? → What did you have at Mexico's pot yesterday?",
+          "Oy \"ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 1.02,
+          "accumulated_dict": "1. 'oy = ? ( possibly a pronoun or a marker for a specific person)\n2. 'ox = ? ( possibly a marker for a specific location or time)\n3. ta = location/time marker\n4. ana = specific point in time (today)\n5. nax = ? ( possibly a noun or a verb related to 'home')\n6. li = future time/intention marker\n7. Romin = proper noun (name)\n8. e = location/destination marker\n9. 'ok'ob = ? ( possibly a verb or a noun related to 'be')\n10. Bu = ? ( possibly a question word or a marker for a specific location)",
+          "accumulated_rules": "1. Word order: SOV\n2. [DELETED: rule — reason: not enough evidence]\n3. 'ta' is a marker for location or time\n4. 'ana' is a marker for a specific point in time (today)\n5. 'li' is a marker for future time or intention\n6. [DELETED: rule — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 2.16,
+            "corpus_chrfpp": 20.08,
+            "corpus_ter": 178.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.49,
+              3.09,
+              3.46,
+              1.44
+            ],
+            "sentence_chrfpp": [
+              39.93,
+              8.38,
+              27.72,
+              12.8
+            ],
+            "sentence_ter": [
+              100.0,
+              183.33,
+              157.14,
+              230.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. You have eaten corn.",
+              "Mi 'oy 'ox vob ta k'in? What will you do tomorrow?",
+              "K'usi 'oy 'ox ta Mexico lavie? Where will you go to Mexico tomorrow?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. You will go to the market and then you will go to the store."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 91.77,
+          "accumulated_dict": "1. 'oy = subject marker (possibly a pronoun)\n2. 'ox = object marker (possibly a marker for a specific location)\n3. 'ta = location/time marker\n4. 'ana = specific point in time (today)\n5. 'ixim = noun (related to corn or food)\n6. 'li = future time marker (in relation to a specific person or location)\n7. Romin = proper noun (name)\n8. e = location/destination marker\n9. 'ok'ob = ? (possibly a verb or a noun related to 'be')\n10. Bu = question word (possibly a marker for a specific location)\n11. 'ch'abal = verb or adverb (possibly related to time or movement)",
+          "accumulated_rules": "1. Word order: SOV\n2. [DELETED: rule — reason: not enough evidence]\n3. 'ta' is a marker for location or time\n4. 'ana' is a marker for a specific point in time (today)\n5. 'li' is a future time marker (in relation to a specific person or location)\n6. [DELETED: rule — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 3.03,
+            "corpus_chrfpp": 19.2,
+            "corpus_ter": 189.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.84,
+              2.63,
+              10.34,
+              1.39
+            ],
+            "sentence_chrfpp": [
+              21.83,
+              10.72,
+              35.9,
+              11.57
+            ],
+            "sentence_ter": [
+              180.0,
+              200.0,
+              142.86,
+              220.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. -> Soon there will be no corn.",
+              "Mi 'oy 'ox vob ta k'in? -> Where will I be tomorrow?",
+              "K'usi 'oy 'ox ta Mexico lavie? -> When will you be in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. -> You had corn at home today, but you will have none tomorrow."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 1.34,
+          "accumulated_dict": "1. 'oy = subject marker (possibly a pronoun)\n2. 'ox = object marker (possibly a marker for a specific location)\n3. 'ta = location/time marker\n4. 'ana = specific point in time (possibly not limited to today)\n5. 'ixim = noun (related to corn or food)\n6. 'li = future time marker (in relation to a specific person or location)\n7. Romin = proper noun (name)\n8. e = location/destination marker\n9. 'ok'ob = verb or noun related to 'be' (possibly more general than initially thought)\n10. Bu = question word (possibly more general than initially thought)\n11. 'ch'abal = verb or adverb (possibly related to time or movement, possibly more general than initially thought)",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to today)\n4. 'li' is a future time marker (in relation to a specific person or location)\n5. [DELETED: rule — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 5.12,
+            "corpus_chrfpp": 23.35,
+            "corpus_ter": 114.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              5.52,
+              23.36,
+              2.29
+            ],
+            "sentence_chrfpp": [
+              9.03,
+              24.57,
+              48.32,
+              12.28
+            ],
+            "sentence_ter": [
+              100.0,
+              133.33,
+              42.86,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The party will be soon.",
+              "Will there be a party in San Cristobal tomorrow?",
+              "Where will I be in Mexico tomorrow?",
+              "You will be at the market at 8 o'clock and at the store at 9 o'clock."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 1.25,
+          "accumulated_dict": "1. 'oy = subject marker (possibly a marker for a noun phrase)\n2. 'ox = object marker (possibly a marker for a specific location)\n3. 'ta = location/time marker\n4. 'ana = specific point in time (possibly not limited to today)\n5. 'ixim = noun (related to corn or food)\n6. 'li = future time marker (in relation to a specific person or location)\n7. Romin = proper noun (name)\n8. e = location/destination marker\n9. 'ok'ob = verb (possibly more general than initially thought)\n10. Bu = question word (possibly more general than initially thought)\n11. 'ch'abal = verb or adverb (possibly related to time or movement, possibly more general than initially thought)\n12. chan-vun = noun (possibly related to a school)\n13. batz'i = noun (possibly related to a school)\n14. k'op = noun (possibly related to a party)\n15. k'in = noun (possibly related to a party)\n16. jp'in = noun (possibly related to a type of bean)\n17. po'ot = noun (possibly related to a pot)\n18. chenek = noun (possibly related to a lack or absence)",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to today)\n4. 'li' is a future time marker (in relation to a specific person or location)\n5. [DELETED: rule — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 4.32,
+            "corpus_chrfpp": 27.14,
+            "corpus_ter": 92.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              5.52,
+              13.83,
+              5.06
+            ],
+            "sentence_chrfpp": [
+              14.84,
+              24.57,
+              38.7,
+              26.31
+            ],
+            "sentence_ter": [
+              100.0,
+              133.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The corn will rot.",
+              "Will there be a party in San Cristobal tomorrow?",
+              "Are there beans in Mexico?",
+              "There is no party in the Tzotzil school in San Cristobal."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 1.41,
+          "accumulated_dict": "1. 'oy = subject marker (possibly a marker for a noun phrase)\n2. 'ox = object/location marker (possibly more complex than initially thought)\n3. 'ta = location/time marker\n4. 'ana = specific point in time marker (possibly not limited to today)\n5. 'li = future time marker (in relation to a specific person or location)\n6. 'ixim = noun (related to corn or food)\n7. 'li = future time marker (in relation to a specific person or location)\n8. e = location/destination marker (possibly more general than initially thought)\n9. 'ok'ob = verb (possibly more general than initially thought)\n10. Bu = question word (possibly more general than initially thought)\n11. 'ch'abal = verb or adverb (possibly related to time or movement, possibly more general than initially thought)\n12. chan-vun = noun (possibly related to a school)\n13. batz'i = noun (possibly related to a school)\n14. sbatz'i = noun (possibly related to a school, possibly a variant of 'batz'i')\n15. k'op = noun (possibly related to a party)\n16. k'in = noun (possibly related to a party)\n17. jp'in = noun (possibly related to a type of bean)\n18. po'ot = noun (possibly related to a pot)\n19. chenek = noun (possibly related to a lack or absence)\n20. chi'il = verb or adverb (possibly related to possession or existence, possibly more general than initially thought)",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to today)\n4. 'li' is a future time marker (in relation to a specific person or location)\n5. [DELETED: rule — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 1.01,
+            "corpus_chrfpp": 19.52,
+            "corpus_ter": 189.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.67,
+              3.22,
+              2.91,
+              2.13
+            ],
+            "sentence_chrfpp": [
+              13.46,
+              21.98,
+              21.58,
+              19.47
+            ],
+            "sentence_ter": [
+              200.0,
+              200.0,
+              171.43,
+              190.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. -> The corn will soon be ripe.",
+              "Mi 'oy 'ox vob ta k'in? -> Will there be a party tomorrow?",
+              "K'usi 'oy 'ox ta Mexico lavie? -> Are you going to Mexico tomorrow?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. -> There will be a party at the school in San Cristobal."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 1.59,
+          "accumulated_dict": "1. 'oy = subject marker (possibly a marker for a noun phrase)\n2. 'ox = location/destination marker (possibly more general than initially thought)\n3. 'ta = location/time marker\n4. 'ana = specific point in time marker (possibly not limited to today)\n5. 'li = future time marker (in relation to a specific person or location)\n6. 'ixim = noun (related to corn or food)\n7. e = location/destination marker (possibly more general than initially thought)\n8. 'ok'ob = verb (possibly more general than initially thought)\n9. Bu = question word (possibly more general than initially thought)\n10. 'ch'abal = verb or adverb (possibly related to time or movement, possibly more general than initially thought)\n11. muk' = negation marker\n12. chan-vun = noun (possibly related to a school)\n13. batz'i = noun (possibly related to a school)\n14. sbatz'i = noun (possibly related to a school, possibly a variant of 'batz'i')\n15. k'op = noun (possibly related to a party)\n16. k'in = noun (possibly related to a party)\n17. jp'in = noun (possibly related to a type of bean)\n18. po'ot = noun (possibly related to a pot)\n19. chenek = noun (possibly related to a lack or absence)\n20. chi'il = verb or adverb (possibly related to possession or existence, possibly more general than initially thought)",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to today)\n4. 'li' is a future time marker (in relation to a specific person or location)\n5. [DELETED: rule — reason: not enough evidence]\n6. 'ox' is a location/destination marker (possibly more general than initially thought)\n7. 'muk' is a negation marker",
+          "metrics": {
+            "corpus_bleu": 3.56,
+            "corpus_chrfpp": 23.09,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              8.64,
+              7.49,
+              3.04
+            ],
+            "sentence_chrfpp": [
+              25.1,
+              25.25,
+              28.29,
+              17.9
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              85.71,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "There will be no corn.",
+              "Will there be a party tomorrow?",
+              "Where will I go to Mexico?",
+              "You will have a party at the school of the school in the house of the woman."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 1.25,
+          "accumulated_dict": "1. 'oy = subject marker (possibly a marker for a noun phrase)\n2. 'ox = specific location marker (possibly more general than initially thought)\n3. 'ta = location/time marker\n4. 'ana = specific point in time marker (possibly not limited to today)\n5. 'li = future time marker (in relation to a specific person or location)\n6. 'ixim = noun (related to corn or food)\n7. e = location/destination marker (possibly more general than initially thought)\n8. 'ok'ob = verb (possibly more general than initially thought)\n9. Bu = question word (possibly more general than initially thought)\n10. 'ch'abal = verb or adverb (possibly related to time or movement)\n11. muk' = negation marker\n12. chan-vun = noun (possibly related to a school)\n13. batz'i = noun (possibly related to a school)\n14. sbatz'i = noun (possibly related to a school, possibly a variant of 'batz'i')\n15. k'op = noun (possibly related to a party)\n16. k'in = noun (possibly related to a party)\n17. jp'in = noun (possibly related to a type of bean)\n18. po'ot = noun (possibly related to a pot)\n19. chenek = noun (possibly related to a lack or absence)\n20. chi'il = verb or adverb (possibly related to possession or existence)",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to today)\n4. 'li' is a future time marker (in relation to a specific person or location)\n5. [DELETED: rule — reason: not enough evidence]\n6. 'ox' is a specific location marker (possibly more general than initially thought)\n7. 'muk' is a negation marker",
+          "metrics": {
+            "corpus_bleu": 3.78,
+            "corpus_chrfpp": 21.5,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              8.64,
+              7.49,
+              3.13
+            ],
+            "sentence_chrfpp": [
+              30.26,
+              25.25,
+              28.29,
+              11.41
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              85.71,
+              130.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will soon have corn.",
+              "Will there be a party tomorrow?",
+              "Where will I go to Mexico?",
+              "I will have a party at the school of the school of Juan tomorrow."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 31.86,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = location or place marker (possibly more general than a specific location marker)\n3. 'ta = location or time marker\n4. 'ana = specific point in time marker (possibly not limited to past or present)\n5. 'li = future time marker\n6. 'muk' = negation marker\n7. 'e = location/destination marker (possibly more general than initially thought)\n8. 'Bu = question word (possibly used to indicate a lack or absence of something)\n9. 'chabal' = verb or adverb (possibly related to time or movement)\n10. 'chi'il' = verb or adverb (possibly related to possession or existence)\n11. 'ixim = noun (related to corn or food)\n12. 'ok'ob = verb (possibly more general than initially thought)\n13. 'k'op' = noun (possibly related to a party)\n14. 'k'in = noun (possibly related to a party)\n15. 'jp'in = noun (possibly related to a type of bean)\n16. 'po'ot' = noun (possibly related to a pot)\n17. 'chan-vun' = noun (possibly related to a school)\n18. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n19. 'batz'i' = noun (possibly related to a school)\n20. [DELETED: entry 4 — reason: 'ana' is not limited to today]",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to past or present)\n4. 'li' is a future time marker\n5. [DELETED: rule 5 — reason: not enough evidence]\n6. 'ox' is a location or place marker (possibly more general than a specific location marker)\n7. 'muk' is a negation marker",
+          "metrics": {
+            "corpus_bleu": 7.6,
+            "corpus_chrfpp": 28.05,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              5.52,
+              13.54,
+              16.06
+            ],
+            "sentence_chrfpp": [
+              24.23,
+              24.57,
+              33.64,
+              28.32
+            ],
+            "sentence_ter": [
+              100.0,
+              133.33,
+              85.71,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will soon have a good house.",
+              "Will there be a party in San Cristobal tomorrow?",
+              "Is there a school in Mexico?",
+              "There was a party in San Cristobal last year."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 1.76,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = location or possession marker (possibly more general than a specific location marker)\n3. 'ta = location or time marker\n4. 'ana = specific point in time marker (possibly not limited to past or present)\n5. 'li = future time marker\n6. 'muk' = negation marker (possibly used to indicate absence or lack)\n7. 'e = location or destination marker (possibly more general than initially thought)\n8. 'Bu = question word (possibly used to indicate a lack or absence of something)\n9. [DELETED: entry 9 — reason: 'chabal' is not limited to time or movement]\n10. [DELETED: entry 10 — reason: 'chi'il' is not limited to possession or existence]\n11. 'ixim = noun (related to corn or food)\n12. 'ok'ob = verb (possibly more general than initially thought)\n13. 'k'op' = noun (possibly related to a party)\n14. 'k'in = noun (possibly related to a party)\n15. 'jp'in = noun (possibly related to a type of bean)\n16. 'po'ot' = noun (possibly related to a pot)\n17. 'chan-vun' = noun (possibly related to a school)\n18. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n19. 'batz'i' = noun (possibly related to a school)\n20. [DELETED: entry 20 — reason: 'ana' is not limited to today]",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to past or present)\n4. 'li' is a future time marker\n5. [DELETED: rule 5 — reason: not enough evidence]\n6. 'ox' is a location or possession marker (possibly more general than a specific location marker)\n7. 'muk' is a negation marker (possibly used to indicate absence or lack)\n8. [DELETED: rule 8 — reason: 'e' is not limited to location or destination]",
+          "metrics": {
+            "corpus_bleu": 2.3,
+            "corpus_chrfpp": 20.12,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              5.52,
+              7.49,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              27.82,
+              24.57,
+              17.67,
+              14.84
+            ],
+            "sentence_ter": [
+              80.0,
+              133.33,
+              71.43,
+              70.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You will soon have a good house.",
+              "Will there be a party in San Cristobal tomorrow?",
+              "Is there corn in his pot?",
+              "Was there a school in San Cristobal last year?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 31.97,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = location or possession marker (possibly more general than a specific location marker)\n3. 'ta = location or time marker\n4. 'ana = specific point in time marker (possibly not limited to past or present)\n5. 'li = future time marker\n6. 'muk' = negation marker (possibly used to indicate absence or lack)\n7. 'e = location or destination marker (possibly more general than initially thought)\n8. 'Bu = question word (possibly used to indicate a lack or absence of something)\n9. [DELETED: entry 9 — reason: 'chabal' is not limited to time or movement]\n10. [DELETED: entry 10 — reason: 'chi'il' is not limited to possession or existence]\n11. 'ixim = noun (related to corn or food)\n12. 'ok'ob = verb (possibly more general than initially thought)\n13. 'k'op' = noun (possibly related to a party)\n14. 'k'in = noun (possibly related to a party)\n15. 'jp'in = noun (possibly related to a type of bean)\n16. 'po'ot' = noun (possibly related to a pot)\n17. 'chan-vun' = noun (possibly related to a school)\n18. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n19. 'batz'i' = noun (possibly related to a school)\n20. [DELETED: entry 20 — reason: 'ana' is not limited to today]",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time\n3. 'ana' is a marker for a specific point in time (possibly not limited to past or present)\n4. 'li' is a future time marker\n5. [DELETED: rule 5 — reason: not enough evidence]\n6. 'ox' is a location or possession marker (possibly more general than a specific location marker)\n7. 'muk' is a negation marker (possibly used to indicate absence or lack)\n8. [DELETED: rule 8 — reason: 'e' is not limited to location or destination]",
+          "metrics": {
+            "corpus_bleu": 3.56,
+            "corpus_chrfpp": 24.79,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              7.27,
+              13.13,
+              3.74
+            ],
+            "sentence_chrfpp": [
+              24.04,
+              27.93,
+              33.3,
+              17.68
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              71.43,
+              110.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will soon have a good house.",
+              "Is there a party in your town?",
+              "Is there a school in Mexico now?",
+              "There will be a party at the school of the old man tomorrow."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 1.15,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = general marker (possibly used for location, possession, or other contexts)\n3. 'ta = location or time marker (possibly used to indicate a specific point in time)\n4. 'ana = specific point in time marker (possibly not limited to past or present)\n5. 'li = future time marker\n6. 'muk' = negation marker (possibly used to indicate absence or lack)\n7. 'e = destination or location marker (possibly more general than initially thought)\n8. 'Bu = question word\n9. [DELETED: entry 9 — reason: not enough evidence]\n10. [DELETED: entry 10 — reason: not enough evidence]\n11. 'ixim = noun (related to corn or food)\n12. 'ok'ob = verb (possibly more general than initially thought)\n13. 'k'op' = noun (possibly related to a party)\n14. 'k'in = noun (possibly related to a party)\n15. 'jp'in = noun (possibly related to a type of bean)\n16. 'po'ot' = noun (possibly related to a pot)\n17. 'chan-vun' = noun (possibly related to a school)\n18. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n19. 'batz'i' = noun (possibly related to a school)\n20. [DELETED: entry 20 — reason: not enough evidence]",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time (possibly used to indicate a specific point in time)\n3. 'ana' is a marker for a specific point in time (possibly not limited to past or present)\n4. 'li' is a future time marker\n5. [DELETED: rule 5 — reason: not enough evidence]\n6. 'ox' is a general marker (possibly used for location, possession, or other contexts)\n7. 'muk' is a negation marker (possibly used to indicate absence or lack)\n8. [DELETED: rule 8 — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 5.8,
+            "corpus_chrfpp": 27.48,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              15.21,
+              13.54,
+              4.07
+            ],
+            "sentence_chrfpp": [
+              30.01,
+              31.13,
+              36.4,
+              18.33
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67,
+              85.71,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will soon have corn.",
+              "Will there be a party?",
+              "Is there a house in Mexico?",
+              "There will be a party at the school of the old man."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 32.01,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = general marker (possibly used for location, possession, or other contexts)\n3. 'ta = location or time marker (possibly used to indicate a specific point in time)\n4. 'ana = specific point in time marker (possibly not limited to past or present)\n5. 'li = future time marker\n6. 'muk' = negation marker (possibly used to indicate absence or lack)\n7. 'e = destination or location marker (possibly more general than initially thought)\n8. [DELETED: entry 9 — reason: contradicted by new examples]\n9. [DELETED: entry 10 — reason: not enough evidence]\n10. 'ixim = noun (related to corn or food)\n11. 'ok'ob = verb (possibly more general than initially thought)\n12. 'k'op' = noun (possibly related to a party)\n13. 'k'in = noun (possibly related to a party)\n14. 'jp'in = noun (possibly related to a type of bean)\n15. 'po'ot' = noun (possibly related to a pot)\n16. 'chan-vun' = noun (possibly related to a school)\n17. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n18. 'batz'i' = noun (possibly related to a school)\n19. [DELETED: entry 20 — reason: not enough evidence]",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time (possibly used to indicate a specific point in time)\n3. 'ana' is a marker for a specific point in time (possibly not limited to past or present)\n4. 'li' is a future time marker\n5. [DELETED: rule 5 — reason: not enough evidence]\n6. 'ox' is a general marker (possibly used for location, possession, or other contexts)\n7. 'muk' is a negation marker (possibly used to indicate absence or lack)\n8. [DELETED: rule 8 — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 18.82,
+            "corpus_chrfpp": 35.32,
+            "corpus_ter": 71.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              54.11,
+              13.13,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              30.01,
+              75.62,
+              37.95,
+              11.15
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              57.14,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will soon have corn.",
+              "Will there be music at the party?",
+              "What did you have in Mexico yesterday?",
+              "I will have a party at the school tomorrow."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 13,
+          "combo_size": 14,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "latency_s": 35.51,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = general marker (possibly used for location, possession, or other contexts)\n3. 'ta = location or time marker (possibly used to indicate a specific point in time)\n4. 'ana = specific point in time marker (possibly not limited to past or present)\n5. 'li = future time marker\n6. 'muk' = negation marker (possibly used to indicate absence or lack)\n7. 'e = destination or location marker (possibly more general than initially thought)\n8. [DELETED: entry 9 — reason: contradicted by new examples]\n9. [DELETED: entry 10 — reason: not enough evidence]\n10. 'ixim = noun (related to corn or food)\n11. 'ok'ob = verb (possibly more general than initially thought)\n12. 'k'op' = noun (possibly related to a party)\n13. 'k'in = noun (possibly related to a party)\n14. 'jp'in = noun (possibly related to a type of bean)\n15. 'po'ot' = noun (possibly related to a pot)\n16. 'chan-vun' = noun (possibly related to a school)\n17. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n18. 'batz'i' = noun (possibly related to a school)\n19. [DELETED: entry 20 — reason: not enough evidence]",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time (possibly used to indicate a specific point in time)\n3. 'ana' is a marker for a specific point in time (possibly not limited to past or present)\n4. 'li' is a future time marker\n5. [DELETED: rule 5 — reason: not enough evidence]\n6. 'ox' is a general marker (possibly used for location, possession, or other contexts)\n7. 'muk' is a negation marker (possibly used to indicate absence or lack)\n8. [DELETED: rule 8 — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 4,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 14,
+          "combo_size": 15,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "latency_s": 91.63,
+          "accumulated_dict": "1. 'oy = subject marker\n2. 'ox = general marker (possibly used for location, possession, or other contexts)\n3. 'ta = location or time marker (possibly used to indicate a specific point in time)\n4. 'ana = specific point in time marker (possibly used to indicate past or completed action)\n5. 'li = future time marker\n6. 'muk' = negation marker (possibly used to indicate absence or lack)\n7. 'e = destination or location marker (possibly more general than initially thought)\n8. [DELETED: entry 9 — reason: not enough evidence]\n9. [DELETED: entry 10 — reason: not enough evidence]\n10. 'ixim = noun (related to corn or food)\n11. 'ok'ob = verb (possibly more general than initially thought)\n12. 'k'op' = noun (possibly related to a party)\n13. 'k'in = noun (possibly related to a party)\n14. 'jp'in = noun (possibly related to a type of bean)\n15. 'po'ot' = noun (possibly related to a pot)\n16. 'chan-vun' = noun (possibly related to a school)\n17. 'sbatz'i' = noun (possibly a variant of 'batz'i')\n18. 'batz'i' = noun (possibly related to a school)\n19. [DELETED: entry 20 — reason: not enough evidence]\n20. 'sch' = negation marker (variant of 'muk')\n21. 'alekil' = future time marker (variant of 'li')",
+          "accumulated_rules": "1. Word order: SOV\n2. 'ta' is a marker for location or time (possibly used to indicate a specific point in time)\n3. 'ana' is a marker for a specific point in time (possibly used to indicate past or completed action)\n4. 'li' is a future time marker\n5. 'muk' is a negation marker (possibly used to indicate absence or lack)\n6. 'ox' is a general marker (possibly used for location, possession, or other contexts)\n7. 'e' is a destination or location marker (possibly more general than initially thought)\n8. [DELETED: rule 8 — reason: not enough evidence]",
+          "metrics": {
+            "corpus_bleu": 19.88,
+            "corpus_chrfpp": 39.51,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              51.7,
+              13.13,
+              9.03
+            ],
+            "sentence_chrfpp": [
+              30.01,
+              67.76,
+              37.95,
+              27.8
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              57.14,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He will soon have corn.",
+              "Do you have music at the party?",
+              "What did you have in Mexico yesterday?",
+              "I will have a party at my school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 19.88,
+        "corpus_chrfpp": 39.51,
+        "corpus_ter": 67.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          17.97,
+          51.7,
+          13.13,
+          9.03
+        ],
+        "sentence_chrfpp": [
+          30.01,
+          67.76,
+          37.95,
+          27.8
+        ],
+        "sentence_ter": [
+          80.0,
+          50.0,
+          57.14,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "He will soon have corn.",
+          "Do you have music at the party?",
+          "What did you have in Mexico yesterday?",
+          "I will have a party at my school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 14
+    },
+    "step_by_step": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "human_inspiration": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 1.15,
+          "metrics": {
+            "corpus_bleu": 8.19,
+            "corpus_chrfpp": 33.62,
+            "corpus_ter": 171.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.5,
+              22.41,
+              3.01,
+              4.57
+            ],
+            "sentence_chrfpp": [
+              18.56,
+              59.49,
+              23.14,
+              32.3
+            ],
+            "sentence_ter": [
+              160.0,
+              166.67,
+              200.0,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. → Soon there will be corn.",
+              "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+              "K'usi 'oy 'ox ta Mexico lavie? → What did you have at Mexico's pot yesterday?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 31.36,
+          "metrics": {
+            "corpus_bleu": 8.06,
+            "corpus_chrfpp": 31.74,
+            "corpus_ter": 175.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.5,
+              22.41,
+              2.55,
+              4.81
+            ],
+            "sentence_chrfpp": [
+              19.04,
+              59.49,
+              15.74,
+              32.3
+            ],
+            "sentence_ter": [
+              160.0,
+              166.67,
+              214.29,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal mi 'ixim. → Soon there will be corn.",
+              "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+              "K'usi 'oy 'ox ta chan-vun ta jna volje? → What did you have at school yesterday?",
+              "Oy 'ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.19,
+        "corpus_chrfpp": 33.62,
+        "corpus_ter": 171.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.5,
+          22.41,
+          3.01,
+          4.57
+        ],
+        "sentence_chrfpp": [
+          18.56,
+          59.49,
+          23.14,
+          32.3
+        ],
+        "sentence_ter": [
+          160.0,
+          166.67,
+          200.0,
+          160.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Ch'abal alekil 'ixim. → Soon there will be corn.",
+          "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+          "K'usi 'oy 'ox ta Mexico lavie? → What did you have at Mexico's pot yesterday?",
+          "Oy \"ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": -0.13,
+        "chrf_delta": -1.88,
+        "ter_delta": 3.57,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.28,
+      "chrf": 3.85,
+      "ter": 2360.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "The sentence \"Ch'abal alekil 'ixim\" appears to be in the Yucatec Maya language, which is a Mayan language spoken in Mexi",
+      "reference": [
+        "You have no good corn."
+      ]
+    },
+    "baseline": {
+      "best_bleu": 8.19,
+      "best_chrf": 33.62,
+      "best_ter": 171.43,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Ch'abal alekil 'ixim. → Soon there will be corn.",
+        "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+        "K'usi 'oy 'ox ta Mexico lavie? → What did you have at Mexico's pot yesterday?",
+        "Oy \"ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 19.88,
+      "best_chrf": 39.51,
+      "best_ter": 67.86,
+      "best_em": 0.0,
+      "num_steps": 14,
+      "best_hypotheses": [
+        "He will soon have corn.",
+        "Do you have music at the party?",
+        "What did you have in Mexico yesterday?",
+        "I will have a party at my school yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "best_step": 14
+    },
+    "step_by_step": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "human_inspiration": {
+      "error": "No se pudo obtener respuesta válida tras 4 intentos"
+    },
+    "self_correction": {
+      "best_bleu": 8.19,
+      "best_chrf": 33.62,
+      "best_ter": 171.43,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Ch'abal alekil 'ixim. → Soon there will be corn.",
+        "Mi 'oy 'ox vob ta k'in? → Will there be good music at the party?",
+        "K'usi 'oy 'ox ta Mexico lavie? → What did you have at Mexico's pot yesterday?",
+        "Oy \"ox k'op ta batz'i k'op ta jna volje. → I had a Tzotzil talk at school yesterday."
+      ],
+      "best_references": [
+        "You have no good corn.",
+        "Was there music at the party?",
+        "What will there be in Mexico today?",
+        "There was a talk in Tzotzil in my house yesterday."
+      ],
+      "delta": {
+        "bleu_delta": -0.13,
+        "chrf_delta": -1.88,
+        "ter_delta": 3.57,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

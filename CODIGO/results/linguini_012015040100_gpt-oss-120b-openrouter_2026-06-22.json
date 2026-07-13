@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T08:08:48.786841",
+    "puzzle_id": "linguini_012015040100",
+    "language": "Warlpiri",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 17,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012015040100",
+    "language": "Warlpiri",
+    "language_family": "Pama-Nyungan (Australia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "Ngarlu nya.",
+        "target": "You (sg.) danced."
+      },
+      {
+        "source": "Gulugba ngu.",
+        "target": "I will sleep."
+      },
+      {
+        "source": "Bardbi ga bungmanya.",
+        "target": "The old woman ran (away)."
+      },
+      {
+        "source": "Ngunybulugi barrawunguji.",
+        "target": "The doctor has a house."
+      },
+      {
+        "source": "Ngajbi nginya.",
+        "target": "I saw you (sg.)."
+      },
+      {
+        "source": "Dagumajba nguyu ngunybulugi.",
+        "target": "She will strike the doctor."
+      },
+      {
+        "source": "Alanga gu ngarlujba janjingunya.",
+        "target": "The girl will dance with the dog."
+      },
+      {
+        "source": "Ngajba gununyu.",
+        "target": "He will see you (sg.)."
+      },
+      {
+        "source": "Ngirra nga gijilulu.",
+        "target": "I stole the money."
+      },
+      {
+        "source": "Yagujba nyu barrawuwaji.",
+        "target": "You (sg.) will leave him without a house."
+      },
+      {
+        "source": "Daguma ngiyinga bungmanyani.",
+        "target": "The old woman struck me."
+      },
+      {
+        "source": "Bardbi ga darranggunguji.",
+        "target": "He ran (away) with the stick."
+      },
+      {
+        "source": "Alayulu ngiya juwa.",
+        "target": "She found the man."
+      },
+      {
+        "source": "Juwani gina ngajbi gijilulungunya.",
+        "target": "The man saw her with the money."
+      },
+      {
+        "source": "Yagu gininga.",
+        "target": "He left me."
+      },
+      {
+        "source": "Bungmaji gina ngajbi balamurruwaji.",
+        "target": "He saw the old man without a spear."
+      },
+      {
+        "source": "Dirragba gu bungmaji.",
+        "target": "The old man will jump."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Alayulujba nguyunyu bungmanyani.",
+        "target": "The old woman will find you (sg.).",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Yagu gininya.",
+        "target": "He left you (sg.).",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Janji darrangguwaji.",
+        "target": "The dog doesn’t have a stick.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Ngirra nya alanga.",
+        "target": "You (sg.) stole the girl.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Daguma nyinga.",
+        "target": "You (sg.) struck me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "Dirragbi ga balamurrungunya.",
+        "target": "She jumped with the spear.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 331.36,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "The old woman will find you (sg.).",
+              "He left you (sg.).",
+              "The dog doesn’t have a stick.",
+              "You (sg.) stole the girl.",
+              "You (sg.) struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 59.95,
+          "metrics": {
+            "corpus_bleu": 13.76,
+            "corpus_chrfpp": 15.32,
+            "corpus_ter": 96.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.55,
+              5.88,
+              6.57,
+              4.92,
+              36.56,
+              4.07
+            ],
+            "sentence_chrfpp": [
+              19.57,
+              7.95,
+              10.72,
+              10.43,
+              27.54,
+              16.02
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              83.33,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (sg.) danced.",
+              "I will sleep.",
+              "The old woman ran (away).",
+              "The doctor has a house.",
+              "I saw you (sg.).",
+              "She will strike the doctor.=== END ==="
+            ],
+            "references": [
+              "The old woman will find you (sg.).",
+              "He left you (sg.).",
+              "The dog doesn’t have a stick.",
+              "You (sg.) stole the girl.",
+              "You (sg.) struck me.",
+              "She jumped with the spear."
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 13.76,
+        "corpus_chrfpp": 15.32,
+        "corpus_ter": 96.77,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          24.55,
+          5.88,
+          6.57,
+          4.92,
+          36.56,
+          4.07
+        ],
+        "sentence_chrfpp": [
+          19.57,
+          7.95,
+          10.72,
+          10.43,
+          27.54,
+          16.02
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          83.33,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You (sg.) danced.",
+          "I will sleep.",
+          "The old woman ran (away).",
+          "The doctor has a house.",
+          "I saw you (sg.).",
+          "She will strike the doctor.=== END ==="
+        ],
+        "references": [
+          "The old woman will find you (sg.).",
+          "He left you (sg.).",
+          "The dog doesn’t have a stick.",
+          "You (sg.) stole the girl.",
+          "You (sg.) struck me.",
+          "She jumped with the spear."
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 13.76,
+        "chrf_delta": 15.32,
+        "ter_delta": -3.23,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "self_correction": {
+      "best_bleu": 13.76,
+      "best_chrf": 15.32,
+      "best_ter": 96.77,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "You (sg.) danced.",
+        "I will sleep.",
+        "The old woman ran (away).",
+        "The doctor has a house.",
+        "I saw you (sg.).",
+        "She will strike the doctor.=== END ==="
+      ],
+      "best_references": [
+        "The old woman will find you (sg.).",
+        "He left you (sg.).",
+        "The dog doesn’t have a stick.",
+        "You (sg.) stole the girl.",
+        "You (sg.) struck me.",
+        "She jumped with the spear."
+      ],
+      "delta": {
+        "bleu_delta": 13.76,
+        "chrf_delta": 15.32,
+        "ter_delta": -3.23,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

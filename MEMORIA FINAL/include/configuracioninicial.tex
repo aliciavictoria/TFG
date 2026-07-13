@@ -172,6 +172,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 % Paquete para poder modificar las fuente de texto
 \usepackage{xltxtra}
+% Fuente para caracteres IPA y símbolos fonéticos
+\newfontfamily\ipafont{DejaVu Serif}
+\newcommand{\ipa}[1]{{\ipafont #1}}
+\newcommand{\ipainline}[1]{{\small\ipafont #1}}
 % Cualquier tamaño de texto. Uso: {\fontsize{100pt}{120pt}\selectfont tutexto}
 \usepackage{anyfontsize}
 % Para modificar parametros del texto.
@@ -203,6 +207,7 @@
 \usepackage{placeins}
 \usepackage{afterpage}
 \usepackage{verbatim}
+\usepackage{fancyvrb}
 % Paquete para condicionales avanzados
 \usepackage{xstring,xifthen}
 % Paquete para realizar calculos en el código
@@ -278,6 +283,38 @@
 %%%%%
 % Puedes editar los formatos para ajustarlos a tu gusto
 \input{include/estiloscodigoprogramacion.tex}
+
+\lstdefinestyle{PromptText}{
+	basicstyle=\small\normalfont,
+	breaklines=true,
+	breakatwhitespace=true,
+	frame=single,
+	backgroundcolor=\color{gray97},
+	rulecolor=\color{gray75},
+	showstringspaces=false,
+	columns=fullflexible,
+	keepspaces=true,
+	keywordstyle=\color{black},
+	commentstyle=\color{black},
+	stringstyle=\color{black},
+	identifierstyle=\color{black},
+	emphstyle=\color{black},
+	numbers=left,
+	numberstyle=\tiny\color{gray45},
+	xleftmargin=1.5em,
+	framexleftmargin=1.2em,
+	literate=
+	{ŋ}{{{\ipafont ŋ}}}1
+	{ɤ}{{{\ipafont ɤ}}}1
+	{ʒ}{{{\ipafont ʒ}}}1
+	{ʔ}{{{\ipafont ʔ}}}1
+	{ə}{{{\ipafont ə}}}1
+	{ɨ}{{{\ipafont ɨ}}}1
+	{ʰ}{{{\ipafont ʰ}}}1
+	{ǂ}{{{\ipafont ǂ}}}1
+	{ǁ}{{{\ipafont ǁ}}}1
+	{ǀ}{{{\ipafont ǀ}}}1
+}
 
 %%%%%
 % DEFINICION DE CONCEPTOS

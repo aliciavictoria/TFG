@@ -1,0 +1,1154 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-21T18:19:46.197590",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you(sg) sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you(pl)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you(sg)?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "nɤ ʒip ku ne",
+      "reference": "Do you(sg) sleep?",
+      "hypothesis": "**Possible translation:** “I’m not sure.”",
+      "latency_s": 3.64,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 6.51,
+        "corpus_ter": 166.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          6.51
+        ],
+        "sentence_ter": [
+          166.67
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “I’m not sure.”"
+        ],
+        "references": [
+          "Do you(sg) sleep?"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 63.0,
+          "accumulated_dict": "ŋa = I (1st person singular pronoun)\nnɤ = you (sg) (2nd person singular pronoun)\nka = go (verb)\nʒip = sleep (verb)\ntuʔ = past‑tense marker\nkɤ = non‑past / present marker (provisional)\nne = question particle (sentence‑final)",
+          "accumulated_rules": "1. A clause is ordered: **Subject – Verb – (Tense‑marker) – ne** for yes‑no questions.\n2. The particle **ne** obligatorily appears at the end of a question.\n3. Personal pronouns occupy the first position.\n4. Verbs appear directly after the subject; a tense‑marker (e.g., **tuʔ** for past, **kɤ** for present) may follow the verb.",
+          "metrics": {
+            "corpus_bleu": 3.89,
+            "corpus_chrfpp": 14.33,
+            "corpus_ter": 136.36,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              6.57,
+              5.69,
+              6.57,
+              6.77,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              8.74,
+              8.03,
+              8.98,
+              11.99,
+              15.55
+            ],
+            "sentence_ter": [
+              66.67,
+              150.0,
+              150.0,
+              150.0,
+              150.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Does ati kəmə nirum lapkʰi tʰi?",
+              "Does tarum kəmə nuʔrum cʰam ran?",
+              "Does nirum kəmə tarum lan ki?",
+              "Does nirum kəmə you cʰam tiʔ?",
+              "Does nirum go tiʔ?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 42.07,
+          "accumulated_dict": "ŋa = I (1st person singular pronoun)\nŋabə = I (1st person singular pronoun with emphatic/focus suffix ‑bə)\nnɤ = you (sg) (2nd person singular pronoun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nlapkʰi = him / her / it (third‑person object)\ntuʔ = past‑tense marker (allomorph)\ntɤʔ = past‑tense marker (allomorph)\nkɤ = non‑past / present marker\nne = question particle (sentence‑final)\nku = future‑tense marker (tentative)\nkəmə = and / also (conjunctive particle) – provisional\nnirum = dog (noun) – provisional\ntarum = cat (noun) – provisional\nnuʔrum = mouse (noun) – provisional\ncʰam = eat (verb) – provisional\nran = big (adjective) – provisional\nlan = small (adjective) – provisional\ntiʔ = past‑tense marker (another allomorph) – provisional\ntʰi = past‑tense marker (another allomorph) – provisional",
+          "accumulated_rules": "1. Basic clause order for yes‑no questions: **Subject – Verb – (Tense‑marker) – ne**.\n2. The particle **ne** obligatorily terminates a question.\n3. Personal pronouns occupy the first position; they may optionally take the suffix **‑bə** for focus/emphasis without altering word order.\n4. Verbs follow the subject directly; a tense‑marker (one of several allomorphs) may follow the verb.\n5. Objects (nouns or pronouns) appear after the verb and before the tense‑marker.\n6. The language permits multiple allomorphs for past tense (tuʔ, tɤʔ, tiʔ, tʰi) that are phonologically conditioned.\n7. **ku** functions as a future‑tense marker (inferred from its position parallel to other tense markers).",
+          "metrics": {
+            "corpus_bleu": 5.23,
+            "corpus_chrfpp": 19.97,
+            "corpus_ter": 95.45,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              10.68,
+              5.69,
+              10.68,
+              7.65,
+              31.95
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              26.99,
+              11.19,
+              12.3,
+              15.65,
+              22.32
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              150.0,
+              100.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did you see the dog?",
+              "Does the cat eat the mouse?",
+              "Is the dog small?",
+              "Did you eat the cat?",
+              "Will I go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 93.45,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\ncʰam = know (verb)\nlapkʰi = him / her / it (3rd sg object)\nkɤ = present / non‑past marker (allomorph)\nku = future marker\ntuʔ = past marker (allomorph)\ntɤʔ = past marker (allomorph)\ntiʔ = past marker (allomorph)\ntʰi = past marker (allomorph)\nki = present / non‑past marker (allomorph)\nne = question particle (sentence‑final)\nkəmə = particle of uncertain function (appears between subject and object) – provisional\nran = big (adjective) – provisional\nlan = small (adjective) – provisional",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Basic clause order in questions: **Subject – (optional particle) – Verb – Object – Tense‑marker – ne**.\n3. Personal pronouns occupy the first position; they may take the emphatic suffix **‑bə** without changing order.\n4. Verbs follow the subject (or any preceding particle) directly.\n5. Objects (nouns or pronouns) follow the verb and precede the tense‑marker.\n6. The language uses several allomorphs for past tense (tuʔ, tɤʔ, tiʔ, tʰi) and at least two allomorphs for present/non‑past (kɤ, ki), likely conditioned by phonology or discourse.\n7. **ku** functions as a future‑tense marker and appears after the verb, before **ne**.\n8. The particle **kəmə** occurs between subject and object; its exact grammatical role is still undetermined (possible focus or plural marker).",
+          "metrics": {
+            "corpus_bleu": 18.57,
+            "corpus_chrfpp": 27.83,
+            "corpus_ter": 95.45,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.7,
+              14.06,
+              39.28,
+              6.57,
+              7.65,
+              23.64
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              29.28,
+              37.69,
+              13.94,
+              17.14,
+              32.93
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              125.0,
+              150.0,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did we see him?",
+              "Does the big cat eat you(pl)?",
+              "Is the dog the small cat?",
+              "Did the dog eat you?",
+              "Did the dog go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 123.72,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnɤbə = you + ‑bə (emphatic)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\ntarum = they (3rd pl pronoun) – tentative\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nrɤ = see (verb, variant) – tentative\ncʰam = know (verb)\nlapkʰi = him/her/it (3rd sg object pronoun)\nkɤ = present / non‑past marker (allomorph)\nki = present / non‑past marker (allomorph)\nku = future marker\ntuʔ = past marker (allomorph)\ntɤʔ = past marker (allomorph)\ntiʔ = past marker (allomorph)\ntʰi = past marker (allomorph)\nne = yes‑no question particle (sentence‑final)\nkəmə = optional particle occurring between subject and object or after the verb; function uncertain (possible focus/object linker)",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Basic clause order in questions is flexible but generally: **Subject – (optional kəmə) – (optional Object) – Verb – Tense‑marker – ne**.\n3. Personal pronouns occupy the first position; they may take the emphatic suffix **‑bə** without changing order.\n4. Verbs follow the subject (or any preceding particle) directly, unless a **kəmə** particle intervenes.\n5. Objects (nouns or pronouns) follow the verb unless a **kəmə** particle separates subject and object; in that case the order is **Subject – kəmə – Object – Verb**.\n6. Present / non‑past is marked by **kɤ** or **ki** (allomorphy conditioned by phonology).\n7. Future is marked by **ku**, placed after the verb and before **ne**.\n8. Past is marked by one of **tuʔ, tɤʔ, tiʔ, tʰi**, placed after the verb and before **ne**.\n9. The particle **kəmə** is optional; its exact grammatical function remains undetermined.",
+          "metrics": {
+            "corpus_bleu": 24.45,
+            "corpus_chrfpp": 43.64,
+            "corpus_ter": 54.55,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              16.7,
+              14.06,
+              13.54,
+              14.79,
+              38.81,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              29.28,
+              35.79,
+              12.24,
+              68.86,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              100.0,
+              75.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did we see him?",
+              "Are they big who know you?",
+              "Are we small?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 142.25,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnɤbə = you + ‑bə (emphatic)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\ntarum = they (3rd pl pronoun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nrɤ = see (verb, variant)\ncʰam = know (verb)\nlan = beat (verb)\nlapkʰi = object marker; follows personal object pronoun (e.g., ŋa lapkʰi = “me”) and can stand alone for 3rd sg object (“him/her/it”)\nkɤ = present / non‑past marker (allomorph)\nki = present / non‑past marker (allomorph)\nku = future marker\ntuʔ = past marker (allomorph)\ntɤʔ = past marker (allomorph)\ntiʔ = past marker (allomorph)\ntʰi = past marker (allomorph)\ntʰu = past marker (allomorph)\nran = past marker (allomorph) – observed once\nne = yes‑no question particle (sentence‑final)\nkəmə = optional particle occurring between subject and object (possible focus/object linker)",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Basic clause order in questions is flexible but generally: **Subject – (optional kəmə) – (optional Object) – Verb – Tense‑marker – ne**.\n3. Personal pronouns occupy the first position; they may take the emphatic suffix **‑bə** without changing order.\n4. Verbs follow the subject (or any preceding particle) directly, unless a **kəmə** particle intervenes.\n5. Objects (personal pronouns) follow the verb unless a **kəmə** particle separates subject and object; in that case the order is **Subject – kəmə – Object – Verb**.\n6. When a personal object pronoun is used, it is optionally followed by the object marker **lapkʰi**; **lapkʰi** alone can serve as a 3rd sg object.\n7. Present / non‑past is marked by **kɤ** or **ki** (allomorphy conditioned by phonology).\n8. Future is marked by **ku**, placed after the verb and before **ne**.\n9. Past is marked by one of **tuʔ, tɤʔ, tiʔ, tʰi, tʰu, ran**, placed after the verb and before **ne**.\n10. The particle **kəmə** is optional; it links subject and object and may appear before the subject as well as between subject and object.",
+          "metrics": {
+            "corpus_bleu": 57.08,
+            "corpus_chrfpp": 67.07,
+            "corpus_ter": 36.36,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              16.7,
+              14.06,
+              84.09,
+              100.0,
+              38.81,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              29.28,
+              75.26,
+              100.0,
+              68.86,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              75.0,
+              0.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did we see him?",
+              "Did they know you (pl)?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 106.32,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnɤbə = you + ‑bə (emphatic)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\ntarum = they (3rd pl pronoun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nrɤ = see (verb, variant)\ncʰam = know (verb)\nlan = beat (verb)\nlapkʰi = object marker / case suffix (follows personal object pronoun; can stand alone for 3rd sg object)\nkɤ = present / non‑past marker (allomorph)\nki = present / non‑past marker (allomorph)\nku = future marker\ntuʔ, tɤʔ, tiʔ, tʰi, tʰu, ran = past markers (allomorphs)\nne = yes‑no question particle (sentence‑final)\nkəmə = optional linker particle (connects subject and object; can appear before subject or between subject and object)\nkan = him (3rd sg object noun)",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Basic clause order is flexible; the core elements are Subject, (optional **kəmə**), Object (pronoun + optional **lapkʰi** or bare **lapkʰi**), Verb, Tense‑marker, **ne**.\n3. Personal pronouns occupy the first position when they function as the subject; they may take the emphatic suffix **‑bə** without affecting order.\n4. The linker **kəmə** can appear:\na. before the subject (rare, not attested here),\nb. between subject and object, yielding **S kəmə O V T ne**,\nc. between verb and object (as in earlier data), yielding **S V O T ne**.\n5. Objects (personal pronouns) may appear:\na. after the verb, optionally followed by **lapkʰi** (e.g., **V O lapkʰi**),\nb. before the verb, directly after the subject (e.g., **S O lapkʰi V**),\nc. as a bare **lapkʰi** representing a 3rd sg object.\n6. The object marker **lapkʰi** attaches to a noun or pronoun to mark the object; when no lexical noun is present, **lapkʰi** alone functions as “him/her/it”.\n7. Present / non‑past is marked by **kɤ** or **ki** (allomorphy conditioned by phonology).\n8. Future is marked by **ku**, placed after the verb and before **ne**.\n9. Past is marked by one of **tuʔ, tɤʔ, tiʔ, tʰi, tʰu, ran**, placed after the verb and before **ne**.\n10. The particle **kəmə** is optional; its presence signals a tighter link between subject and object and can affect word order as described in rule 4.",
+          "metrics": {
+            "corpus_bleu": 54.02,
+            "corpus_chrfpp": 62.86,
+            "corpus_ter": 36.36,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              16.7,
+              42.73,
+              84.09,
+              100.0,
+              13.94,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              54.46,
+              75.26,
+              100.0,
+              30.11,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              25.0,
+              75.0,
+              0.0,
+              50.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did they see us?",
+              "Did they know you (pl)?",
+              "Do we beat them?",
+              "Did we see you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 147.88,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnɤbə = you sg + ‑bə (emphatic)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\ntarum = they (3rd pl pronoun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nrɤ = see (verb, variant)\ncʰam = know (verb)\nlan = beat (verb)\nlapkʰi = object marker; attaches to pronoun/noun or stands alone for 3rd sg object\nkɤ = present marker (allomorph)\nki = present marker (allomorph)\nku = future marker\ntuʔ = past marker (allomorph)\ntɤʔ = past marker (allomorph)\ntiʔ = past marker (allomorph)\ntʰu = past marker (allomorph)\nran = past marker (allomorph)\nne = yes‑no question particle (sentence‑final)\nkəmə = optional linker particle (connects subject and object)\nkan = him (3rd sg object noun)",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Core clause order is flexible; the required elements are Subject, optional **kəmə**, Object (pronoun + optional **lapkʰi** or bare **lapkʰi**), Verb, Tense‑marker (optional for present), **ne**.\n3. Personal pronouns occupy the first position when they function as the subject; they may take the emphatic suffix **‑bə** without affecting order.\n4. The linker **kəmə** can appear:\na. between subject and object (S kəmə O V T ne) – the only attested position in the data.\n5. Objects (personal pronouns or nouns) may appear:\na. after the verb, optionally preceded by **lapkʰi** (V lapkʰi N T ne).\nb. before the verb, directly after the subject, with **lapkʰi** following the pronoun (S O lapkʰi V T ne).\nc. as a bare **lapkʰi** representing a 3rd sg object (no lexical noun).\n6. The object marker **lapkʰi** can attach to a noun/pronoun (after or before it) or stand alone; its position is flexible relative to the verb.\n7. Present / non‑past is normally marked by **kɤ** or **ki**, but the marker may be omitted, yielding a zero‑present form (e.g., “rɤ”).\n8. Future is marked by **ku**, placed after the verb and before **ne**.\n9. Past is marked by one of **tuʔ, tɤʔ, tiʔ, tʰu, ran**, placed after the verb and before **ne**.\n10. The emphatic suffix **‑bə** can attach to any personal pronoun without altering syntactic position.",
+          "metrics": {
+            "corpus_bleu": 51.38,
+            "corpus_chrfpp": 65.03,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              16.7,
+              14.06,
+              84.09,
+              100.0,
+              38.81,
+              23.46
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              29.28,
+              84.44,
+              100.0,
+              68.86,
+              65.16
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              25.0,
+              0.0,
+              25.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did we see him?",
+              "Did they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?=== END ==="
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 160.56,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnɤbə = you sg + ‑bə (emphatic)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\ntarum = they (3rd pl pronoun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nrɤ = see (verb, variant)\nri = see (verb, variant)\ncʰam = know (verb)\nlan = beat (verb)\nlapkʰi = object marker; attaches to noun/pronoun or stands alone for 3rd sg object\nkɤ = present marker (allomorph)\nki = present marker (allomorph)\nku = future marker\ntuʔ = past marker (allomorph)\ntɤʔ = past marker (allomorph)\ntiʔ = past marker (allomorph)\ntʰu = past marker (allomorph)\nran = past marker (allomorph)\ntʰi = past marker (allomorph) – observed in new data\nne = yes‑no question particle (sentence‑final)\nkəmə = optional linker particle (connects subject and object)\nkan = him (3rd sg object noun)",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Core clause order is flexible; required elements are Subject, optional **kəmə**, Object (pronoun + optional **lapkʰi** or bare **lapkʰi**), Verb, Tense‑marker (optional for present), **ne**.\n3. Personal pronouns occupy the first position when they function as the subject; they may take the emphatic suffix **‑bə** without affecting order.\n4. The linker **kəmə** can appear:\na. between subject and object (S kəmə O V T ne) – the only attested position in the data.\n5. Objects (personal pronouns or nouns) may appear:\na. after the verb, optionally preceded by **lapkʰi** (V lapkʰi N T ne).\nb. before the verb, directly after the subject, with **lapkʰi** following the pronoun (S O lapkʰi V T ne).\nc. as a bare **lapkʰi** representing a 3rd sg object (no lexical noun).\n6. The object marker **lapkʰi** can attach to a noun/pronoun (before or after it) or stand alone; its position is flexible relative to the verb, including V lapkʰi N order.\n7. Present / non‑past is normally marked by **kɤ** or **ki**, but the marker may be omitted, yielding a zero‑present form (e.g., “rɤ”, “ri”).\n8. Future is marked by **ku**, placed after the verb and before **ne**.\n9. Past is marked by one of **tuʔ, tɤʔ, tiʔ, tʰu, ran, tʰi**, placed after the verb and before **ne**.\n10. The emphatic suffix **‑bə** can attach to any personal pronoun without altering syntactic position.",
+          "metrics": {
+            "corpus_bleu": 44.11,
+            "corpus_chrfpp": 68.45,
+            "corpus_ter": 27.27,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              16.7,
+              30.74,
+              23.45,
+              100.0,
+              38.81,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              74.82,
+              54.48,
+              100.0,
+              68.86,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              25.0,
+              50.0,
+              0.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did he/she see us?",
+              "Did they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 113.57,
+          "accumulated_dict": "ŋa = I (1st sg pronoun)\nŋabə = I + ‑bə (emphatic)\nnɤ = you (2nd sg pronoun)\nnɤbə = you sg + ‑bə (emphatic)\nnirum = we (1st pl pronoun)\nnuʔrum = you (2nd pl pronoun)\ntarum = they (3rd pl pronoun)\nkan = him (3rd sg object noun)\nka = go (verb)\nʒip = sleep (verb)\nati = see (verb)\nrɤ / ri = see (variant verb)\ncʰam = know (verb)\nlan = beat (verb)\nlapkʰi = object marker (can attach to noun/pronoun or stand alone for 3rd sg object)\nkɤ / ki = present marker (zero‑present also possible)\nku = future marker\ntuʔ / tɤʔ / tiʔ / tʰu / ran / tʰi / tʰɤ = past marker (allomorphs)\nne = yes‑no question particle (sentence‑final)\nkəmə = linker particle (connects subject‑object or verb‑object)",
+          "accumulated_rules": "1. Yes‑no questions end with the particle **ne**.\n2. Core clause elements (in any order) are: Subject (optional for 3rd sg), optional **kəmə**, Object (pronoun or noun, may be marked by **lapkʰi** or appear bare), Verb, optional Tense‑marker, **ne**.\n3. Personal pronouns occupy the first position when they function as the subject; they may take the emphatic suffix **‑bə** without affecting order.\n4. The linker **kəmə** can appear:\na. between Subject and Object (S kəmə O …);\nb. between Verb and Object (V kəmə O …);\nc. between Verb and Object when the object is introduced by **lapkʰi** (V kəmə lapkʰi N …).\n5. Objects may appear:\na. before the verb, directly after the subject, with optional **lapkʰi** after the pronoun (S O [lapkʰi] V …);\nb. after the verb, optionally preceded by **lapkʰi** (V [lapkʰi] N …);\nc. as a bare **lapkʰi**, representing a 3rd sg object (no lexical noun).\n6. The object marker **lapkʰi** can attach to a noun/pronoun (before or after it) or stand alone; its position is flexible relative to the verb.\n7. Present / non‑past is normally marked by **kɤ** or **ki**, but may be omitted (zero‑present).\n8. Future is marked by **ku**, placed after the verb and before **ne**.\n9. Past is marked by one of **tuʔ, tɤʔ, tiʔ, tʰu, ran, tʰi, tʰɤ**, placed after the verb and before **ne**.\n10. The emphatic suffix **‑bə** can attach to any personal pronoun without altering syntactic position.\n11. A third‑person singular subject may be omitted; in such cases the clause begins with the verb (or with **kəmə** if linking to an object).",
+          "metrics": {
+            "corpus_bleu": 68.49,
+            "corpus_chrfpp": 76.89,
+            "corpus_ter": 27.27,
+            "exact_match_corpus": 50.0,
+            "sentence_bleu": [
+              16.7,
+              100.0,
+              84.09,
+              100.0,
+              38.81,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              34.5,
+              100.0,
+              75.26,
+              100.0,
+              68.86,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              0.0,
+              75.0,
+              0.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Will you sleep?",
+              "Did he see us?",
+              "Did they know you (pl)?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 68.49,
+        "corpus_chrfpp": 76.89,
+        "corpus_ter": 27.27,
+        "exact_match_corpus": 50.0,
+        "sentence_bleu": [
+          16.7,
+          100.0,
+          84.09,
+          100.0,
+          38.81,
+          100.0
+        ],
+        "sentence_chrfpp": [
+          34.5,
+          100.0,
+          75.26,
+          100.0,
+          68.86,
+          100.0
+        ],
+        "sentence_ter": [
+          66.67,
+          0.0,
+          75.0,
+          0.0,
+          25.0,
+          0.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          true,
+          false,
+          true
+        ],
+        "hypotheses": [
+          "Will you sleep?",
+          "Did he see us?",
+          "Did they know you (pl)?",
+          "Do we beat them?",
+          "Did we know you?",
+          "Did we go?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "error": "M4 omitido: human_resolution vacío (evitar data leakage en este puzzle)"
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 61.28,
+          "metrics": {
+            "corpus_bleu": 50.27,
+            "corpus_chrfpp": 59.98,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              16.7,
+              100.0,
+              84.09,
+              30.21,
+              23.45,
+              59.46
+            ],
+            "sentence_chrfpp": [
+              35.78,
+              100.0,
+              75.26,
+              44.48,
+              47.87,
+              49.71
+            ],
+            "sentence_ter": [
+              66.67,
+              0.0,
+              75.0,
+              25.0,
+              50.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Did he see us?",
+              "Did they know you (pl)?",
+              "Do we see them?",
+              "Do we know you?",
+              "Do we go?"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 94.05,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 2.92,
+            "corpus_ter": 131.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              2.68,
+              2.08,
+              2.72,
+              3.47,
+              3.43,
+              2.91
+            ],
+            "sentence_ter": [
+              133.33,
+              125.0,
+              125.0,
+              125.0,
+              150.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "nɤ ʒip tuʔ ne",
+              "ati ri lapkʰi tɤʔ ne",
+              "tarum nuʔrum cʰam tuʔ ne",
+              "nirum tarum lapkʰi rɤ ne",
+              "nirum kəmə nuʔrum cʰam ki ne",
+              "nirum ka kɤ ne"
+            ],
+            "references": [
+              "Do you(sg) sleep?",
+              "Did he see us?",
+              "Do they know you(pl)?",
+              "Do we beat them?",
+              "Did we know you(sg)?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 50.27,
+        "corpus_chrfpp": 59.98,
+        "corpus_ter": 40.91,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          16.7,
+          100.0,
+          84.09,
+          30.21,
+          23.45,
+          59.46
+        ],
+        "sentence_chrfpp": [
+          35.78,
+          100.0,
+          75.26,
+          44.48,
+          47.87,
+          49.71
+        ],
+        "sentence_ter": [
+          66.67,
+          0.0,
+          75.0,
+          25.0,
+          50.0,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Did you sleep?",
+          "Did he see us?",
+          "Did they know you (pl)?",
+          "Do we see them?",
+          "Do we know you?",
+          "Do we go?"
+        ],
+        "references": [
+          "Do you(sg) sleep?",
+          "Did he see us?",
+          "Do they know you(pl)?",
+          "Do we beat them?",
+          "Did we know you(sg)?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": -50.27,
+        "chrf_delta": -57.06,
+        "ter_delta": 90.91,
+        "em_delta": -16.67
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 6.51,
+      "ter": 166.67,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “I’m not sure.”",
+      "reference": "Do you(sg) sleep?"
+    },
+    "baseline": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "incremental_combinations": {
+      "best_bleu": 68.49,
+      "best_chrf": 76.89,
+      "best_ter": 27.27,
+      "best_em": 50.0,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "Will you sleep?",
+        "Did he see us?",
+        "Did they know you (pl)?",
+        "Do we beat them?",
+        "Did we know you?",
+        "Did we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "human_inspiration": {
+      "error": "M4 omitido: human_resolution vacío (evitar data leakage en este puzzle)"
+    },
+    "self_correction": {
+      "best_bleu": 50.27,
+      "best_chrf": 59.98,
+      "best_ter": 40.91,
+      "best_em": 16.67,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Did you sleep?",
+        "Did he see us?",
+        "Did they know you (pl)?",
+        "Do we see them?",
+        "Do we know you?",
+        "Do we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ],
+      "delta": {
+        "bleu_delta": -50.27,
+        "chrf_delta": -57.06,
+        "ter_delta": 90.91,
+        "em_delta": -16.67
+      }
+    }
+  }
+}

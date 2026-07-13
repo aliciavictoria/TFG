@@ -1,0 +1,1088 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-07T22:50:11.546796",
+    "puzzle_id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 10,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "log_full_responses": false,
+    "sgpl_normalized": true
+  },
+  "puzzle": {
+    "id": "linguini_012018020100",
+    "language": "Hakhun",
+    "language_family": "Sino-Tibetan (Nagaland, India)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ŋa ka kɤ ne",
+        "target": "Do I go?"
+      },
+      {
+        "source": "nɤ ʒip tuʔ ne",
+        "target": "Did you(sg) sleep?"
+      },
+      {
+        "source": "ŋabə ati lapkʰi tɤʔ ne",
+        "target": "Did I see him?"
+      },
+      {
+        "source": "nirum kəmə nuʔrum cʰam ki ne",
+        "target": "Do we know you(pl)?"
+      },
+      {
+        "source": "nɤbə ŋa lapkʰi rɤ ne",
+        "target": "Do you(sg) see me?"
+      },
+      {
+        "source": "tarum kəmə nɤ lan tʰu ne",
+        "target": "Did they beat you(sg)?"
+      },
+      {
+        "source": "nuʔrum kəmə ati lapkʰi kan ne",
+        "target": "Do you(pl) see him?"
+      },
+      {
+        "source": "nɤbə ati cʰam tuʔ ne",
+        "target": "Did you(sg) know him?"
+      },
+      {
+        "source": "tarum kəmə nirum lapkʰi ri ne",
+        "target": "Do they see us?"
+      },
+      {
+        "source": "ati kəmə ŋa lapkʰi tʰɤ ne",
+        "target": "Did he see me?"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "nɤ ʒip ku ne",
+        "target": "Do you sleep?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ati kəmə nirum lapkʰi tʰi ne",
+        "target": "Did he see us?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tarum kəmə nuʔrum cʰam ran ne",
+        "target": "Do they know you?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə tarum lan ki ne",
+        "target": "Do we beat them?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum kəmə nɤ cʰam tiʔ ne",
+        "target": "Did we know you?",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nirum ka tiʔ ne",
+        "target": "Did we go?",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "nɤ ʒip ku ne",
+      "reference": "Do you sleep?",
+      "hypothesis": "**Possible translation:** “I don’t know.”  \n\n*Explanation:* The sequence “nɤ ʒip ku ne” resembles a short, declarative phrase that could be used to express uncertainty or lack of knowledge. In many languages, a simple construction of a pronoun plus a verb meaning “know” followed by a negation yields a meaning like “I don’t know.” This is the most plausible English rendering given the limited information.",
+      "latency_s": 4.9,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 2.45,
+        "corpus_ter": 2133.33,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          2.5
+        ],
+        "sentence_ter": [
+          2133.33
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation:** “I don’t know.”  \n\n*Explanation:* The sequence “nɤ ʒip ku ne” resembles a short, declarative phrase that could be used to express uncertainty or lack of knowledge. In many languages, a simple construction of a pronoun plus a verb meaning “know” followed by a negation yields a meaning like “I don’t know.” This is the most plausible English rendering given the limited information."
+        ],
+        "references": [
+          "Do you sleep?"
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 28.76,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (verbal suffix)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (verbal suffix)\n- ne = question particle (sentence‑final)\n*No entries have been deleted at this stage.*\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – (tense/aspect suffix) – Question particle**.\n2. The particle **ne** obligatorily follows a clause to form a question.\n3. Personal pronouns appear as the first constituent of the clause.\n4. Verbal roots may take a suffix: **kɤ** for non‑past/present, **tuʔ** for past.\n*No rules have been deleted at this stage.*\n---",
+          "metrics": {
+            "corpus_bleu": 9.65,
+            "corpus_chrfpp": 44.68,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65
+            ],
+            "sentence_chrfpp": [
+              44.68
+            ],
+            "sentence_ter": [
+              100.0
+            ],
+            "sentence_em": [
+              false
+            ],
+            "hypotheses": [
+              "You sleep ___?"
+            ],
+            "references": [
+              "Do you sleep?"
+            ],
+            "num_evaluated": 1
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 59.31,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject – Verb – (Object) – Tense/Aspect particle – Question particle**.\n2. The particle **ne** obligatorily follows a clause to form a question.\n3. Personal pronouns appear as the first constituent of the clause; a subject‑marker **‑bə** may attach to a 1st‑person pronoun before a transitive verb.\n4. Tense/aspect is expressed by clause‑final particles: **kɤ** for non‑past/present, **tuʔ / tɤʔ** for past.\n5. Verbal roots do not take suffixes; instead, tense particles follow the verb (and any object).\n*No rules have been deleted.*\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 73.52,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause order:** Subject – Verb – (Object) – Object‑case marker (optional) – Tense/Aspect particle – Question particle.\n2. **Pronouns** appear first; 1st sg subjects may take the suffix **‑bə** before a transitive verb.\n3. **Tense particles** are clause‑final and agree with the person of the subject:\n- *kɤ* – present for all subjects except 1st pl and 2nd sg.\n- *ku* – present for 2nd sg subjects.\n- *ki* – present for 1st pl subjects.\n- *tuʔ* – past for 2nd sg subjects.\n- *tɤʔ* – past for 1st sg subjects.\n- *tiʔ* – past for 1st pl subjects.\n4. The particle **ne** obligatorily follows a clause to form a question.\n5. **cʰam** is an object‑case particle that follows the object noun before the tense particle.\n---",
+          "metrics": {
+            "corpus_bleu": 38.25,
+            "corpus_chrfpp": 55.37,
+            "corpus_ter": 45.45,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              59.46,
+              8.64,
+              27.53,
+              24.88,
+              77.88,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              74.11,
+              26.17,
+              44.76,
+              21.93,
+              89.35,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              100.0,
+              50.0,
+              50.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              true
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Did we see him and know?",
+              "Do we know you",
+              "Do we know tarum",
+              "Did we know you",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 106.48,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause order:** Subject – Verb – (Object) – Object‑case particle (optional) – Tense/Aspect particle – Question particle.\n2. **Pronouns** may take the suffix **‑bə** as a subject‑marker before a transitive verb; the marker is not limited to 1st sg.\n3. **Tense‑aspect particles** are clause‑final and show agreement with the person of the subject:\n- *kɤ* – present for all subjects except 1st pl and 2nd sg.\n- *ku* – present for 2nd sg subjects.\n- *ki* – present for 1st pl subjects.\n- *tuʔ* – past for 2nd sg subjects.\n- *tɤʔ* – past for 1st sg subjects.\n- *tiʔ* – past for 1st pl subjects.\n4. The particle **ne** obligatorily follows a clause to form a question.\n5. **cʰam** is the object‑case particle that follows the object noun before the tense particle.\n*No rules deleted.*\n---",
+          "metrics": {
+            "corpus_bleu": 51.73,
+            "corpus_chrfpp": 61.31,
+            "corpus_ter": 36.36,
+            "exact_match_corpus": 50.0,
+            "sentence_bleu": [
+              100.0,
+              14.06,
+              24.88,
+              17.97,
+              100.0,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              100.0,
+              29.28,
+              40.45,
+              23.65,
+              100.0,
+              100.0
+            ],
+            "sentence_ter": [
+              33.33,
+              50.0,
+              75.0,
+              75.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              true,
+              false,
+              false,
+              false,
+              true,
+              true
+            ],
+            "hypotheses": [
+              "Do you sleep?",
+              "Did we see him?",
+              "Does tarum know you",
+              "Do we know tarum lan?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 97.72,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause structure**:\nSubject – (Subject‑marker **‑bə**) – Verb – Object – (Object‑case particle, optional) – Tense/Aspect particle – Question particle **ne**.\n2. **Subject‑marker** **‑bə** may attach to any personal pronoun when the following verb is transitive.\n3. **Present particles**:\n- **kɤ** follows clauses whose subject is 1st sg, 3rd sg, or 3rd pl.\n- **rɤ** follows clauses whose subject is 2nd sg.\n- **ki** follows clauses whose subject is 1st pl.\n4. **Past particles**:\n- **tuʔ** follows clauses with 2nd sg subjects.\n- **tɤʔ** follows clauses with 1st sg subjects.\n- **tʰu** follows clauses with 3rd pl subjects.\n- (A past particle for 1st pl, *tiʔ*, is hypothesised but not yet attested.)\n5. **Object‑case particles**:\n- **cʰam** is used when the object is 2nd pl.\n- **lan** is used when the object is 2nd sg.\n- The particle is optional; when omitted the noun/pronoun directly precedes the tense particle.\n6. **Verb polysemy**: A single verb root may have multiple meanings; context (including the nature of the object) disambiguates.\n7. **Question formation**: The particle **ne** obligatorily follows the clause‑final tense/aspect particle.\n---",
+          "metrics": {
+            "corpus_bleu": 50.84,
+            "corpus_chrfpp": 66.5,
+            "corpus_ter": 31.82,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              59.46,
+              14.06,
+              46.31,
+              100.0,
+              27.53,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              74.11,
+              29.28,
+              70.39,
+              100.0,
+              34.28,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              50.0,
+              0.0,
+              50.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Did we see him?",
+              "Did they know you",
+              "Do we beat them?",
+              "Did we see you",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 110.41,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause order:**\nSubject – (Subject‑marker **‑bə**) – Verb – Object – (Object‑case particle, optional) – Tense/Aspect particle – Question particle **ne**.\n2. **Subject‑marker **‑bə**** attaches to any personal pronoun when the following verb is transitive.\n3. **Present‑tense particles:**\n- **kɤ** follows clauses whose subject is 1st sg, 3rd sg, or 3rd pl.\n- **rɤ** follows clauses whose subject is 2nd sg.\n- **ki** follows clauses whose subject is 1st pl.\n- **kan** follows clauses whose subject is 2nd pl.\n4. **Past‑tense particles:**\n- **tuʔ** follows clauses with 2nd sg subjects.\n- **tɤʔ** follows clauses with 1st sg subjects.\n- **tʰu** follows clauses with 3rd pl subjects.\n- **tiʔ** is hypothesised for 1st pl subjects (not yet attested).\n5. **Object‑case particles:**\n- **cʰam** marks a 2nd pl object.\n- **lan** marks a 2nd sg object.\n- The particle is optional; when omitted the object directly precedes the tense particle.\n6. **Verb polysemy:** A single verb root may have multiple related meanings; context (including the nature of the object) disambiguates.\n7. **Question formation:** The particle **ne** obligatorily follows the clause‑final tense/aspect particle.\n---",
+          "metrics": {
+            "corpus_bleu": 50.84,
+            "corpus_chrfpp": 66.5,
+            "corpus_ter": 31.82,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              59.46,
+              14.06,
+              46.31,
+              100.0,
+              27.53,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              74.11,
+              29.28,
+              70.39,
+              100.0,
+              34.28,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              50.0,
+              50.0,
+              0.0,
+              50.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Did we see him?",
+              "Did they know you",
+              "Do we beat them?",
+              "Did we see you",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 90.14,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause order:**\nSubject – (optional subject‑marker ‑bə) – Verb – Object – (optional object‑case particle) – Tense/Aspect particle – Question particle **ne**.\n2. **Subject‑marker ‑bə:** attaches to any personal pronoun when the following verb is transitive.\n3. **Present‑tense particles:**\n- **kɤ** follows clauses whose subject is 1st sg, 3rd sg, or 3rd pl.\n- **rɤ** follows clauses whose subject is 2nd sg.\n- **ki** follows clauses whose subject is 1st pl.\n- **kan** follows clauses whose subject is 2nd pl.\n4. **Past‑tense particles:**\n- **tuʔ** follows clauses with 2nd sg subjects.\n- **tɤʔ** follows clauses with 1st sg subjects.\n- **tʰu** follows clauses with 3rd pl subjects.\n- **tiʔ** is hypothesised for 1st pl subjects (not yet attested).\n5. **Object‑case particles:**\n- **lan** marks a 2nd sg object.\n- **cʰam** marks a 2nd pl object but can also appear with other objects; its use is optional.\n6. **Verb polysemy:** A single verb root may have several related meanings (e.g., *ati* = “see/know”, *kəmə* = “beat/know”). Context, including the nature of the object, disambiguates.\n7. **Question formation:** The particle **ne** obligatorily follows the clause‑final tense/aspect particle.\n---",
+          "metrics": {
+            "corpus_bleu": 43.72,
+            "corpus_chrfpp": 55.17,
+            "corpus_ter": 40.91,
+            "exact_match_corpus": 33.33,
+            "sentence_bleu": [
+              59.46,
+              8.64,
+              14.79,
+              100.0,
+              27.53,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              74.11,
+              25.01,
+              21.45,
+              100.0,
+              33.9,
+              100.0
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              75.0,
+              0.0,
+              50.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              true,
+              false,
+              true
+            ],
+            "hypotheses": [
+              "Did you sleep?",
+              "Did we see/know him?",
+              "Did they beat you",
+              "Do we beat them?",
+              "Did we beat you",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 145.76,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause order:**\nSubject – (optional subject‑marker ‑bə) – Verb – Object – (optional object‑case particle) – Tense/Aspect particle – Question particle *ne*.\n2. **Subject‑marker ‑bə:** attaches to any personal pronoun when the following verb is transitive.\n3. **Present‑tense particles:**\n- *kɤ* follows clauses with 1 sg, 3 sg, or 3 pl subjects.\n- *rɤ* follows clauses with 2 sg subjects.\n- *ki* follows clauses with 1 pl subjects.\n- *kan* follows clauses with 2 pl subjects.\n4. **Past‑tense particles:**\n- *tuʔ* follows clauses with 2 sg subjects.\n- *tɤʔ* follows clauses with 1 sg subjects.\n- *tʰu* follows clauses with 3 pl subjects.\n- *tiʔ* is hypothesised for 1 pl subjects (not yet attested).\n5. **Object‑case particles:**\n- *lan* marks a 2 sg object.\n- *cʰam* marks a 2 pl object; its use is optional and it may appear with other objects.\n- *ri* marks a 1 pl object.\n- *lapkʰi* functions as a neutral third‑person object pronoun (and can stand for 1 sg object when context makes the reference clear).\n6. **Verb polysemy:** The roots *ati* and *kəmə* can each mean “see” or “know”; context (especially the nature of the object) determines the intended sense.\n7. **Question formation:** The particle *ne* obligatorily follows the clause‑final tense/aspect particle.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 129.82,
+          "accumulated_dict": "- ŋa = I (1st‑person singular pronoun)\n- ŋabə = I (1st‑person singular) with subject‑marker (used before a transitive verb)\n- nɤ = you (sg) (2nd‑person singular pronoun)\n- ka = go (verb root)\n- kɤ = non‑past / present marker (clause‑final particle)\n- ʒip = sleep (verb root)\n- tuʔ = past marker (clause‑final particle)\n- tɤʔ = past marker (variant/allomorph of *tuʔ*)\n- ati = see (verb root)\n- lapkʰi = him (3rd‑person masculine object)\n- ne = question particle (sentence‑final)\n*No entries have been deleted.*\n---",
+          "accumulated_rules": "1. **Clause order:**\nSubject – (optional subject‑marker ‑bə) – Verb – Object – (optional object‑case particle) – Tense/Aspect particle – Question particle *ne*.\n2. **Subject‑marker ‑bə:** attaches to any personal pronoun when the following verb is transitive (e.g., *ŋabə*, *nɤbə*).\n3. **Present‑tense particles:**\n- *kɤ* follows clauses with 1 sg, 3 sg, or 3 pl subjects.\n- *rɤ* follows clauses with 2 sg subjects.\n- *ki* follows clauses with 1 pl subjects.\n- *kan* follows clauses with 2 pl subjects.\n4. **Past‑tense particles:**\n- *tuʔ* follows clauses with 2 sg subjects.\n- *tɤʔ* follows clauses with 1 sg subjects.\n- *tʰu* follows clauses with 3 pl subjects.\n- *tʰɤ* follows clauses with 3 sg subjects.\n- *tʰu* (already listed) – keep.\n- *tiʔ* is hypothesised for 1 pl subjects (not yet attested).\n5. **Object‑case particles:**\n- *lan* marks a 2 sg object.\n- *cʰam* is a general optional object‑case particle (used with animate objects, not limited to 2 pl).\n- *ri* marks a 1 pl object.\n- *lapkʰi* functions as a neutral third‑person object pronoun and can substitute for a 1 sg object when context makes the reference clear.\n6. **Verb polysemy:** The roots *ati* and *kəmə* can each mean “see” or “know”; *kəmə* can also mean “beat”. Context (especially the nature of the object) determines the intended sense.\n7. **Question formation:** The particle *ne* obligatorily follows the clause‑final tense/aspect particle.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 50.84,
+        "corpus_chrfpp": 66.5,
+        "corpus_ter": 31.82,
+        "exact_match_corpus": 33.33,
+        "sentence_bleu": [
+          59.46,
+          14.06,
+          46.31,
+          100.0,
+          27.53,
+          100.0
+        ],
+        "sentence_chrfpp": [
+          74.11,
+          29.28,
+          70.39,
+          100.0,
+          34.28,
+          100.0
+        ],
+        "sentence_ter": [
+          66.67,
+          50.0,
+          50.0,
+          0.0,
+          50.0,
+          0.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        "hypotheses": [
+          "Did you sleep?",
+          "Did we see him?",
+          "Did they know you",
+          "Do we beat them?",
+          "Did we see you",
+          "Did we go?"
+        ],
+        "references": [
+          "Do you sleep?",
+          "Did he see us?",
+          "Do they know you?",
+          "Do we beat them?",
+          "Did we know you?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6
+      },
+      "best_step": 5
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 39.47,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Basic clause order**: **Subject – Auxiliary – Verb – (Object) – Question‑particle**\n- The subject (personal pronoun) is always first.\n- The tense‑aspect auxiliary follows the subject.\n- The lexical verb follows the auxiliary.\n- If the verb is transitive, the object follows the verb.\n- The particle *ne* appears at the very end of the clause to signal a yes‑no question.\n2. **Pronoun allomorphy**:\n- The 1st‑person singular pronoun surfaces as *ŋa* in simple clauses, but may take the suffix *‑bə* (*ŋabə*) when the clause contains a transitive verb and an object. This suggests a possible “subject‑object” or “focus” variant, but the function is not yet certain.\n3. **Tense‑aspect auxiliaries**:\n- *ka* = present‑tense auxiliary (roughly “do/does”).\n- *ʒip* = past‑tense auxiliary (roughly “did”).\n- Both auxiliaries occupy the same syntactic slot (immediately after the subject) and agree with the subject only in person/number (no overt agreement morphology observed yet).\n4. **Question formation**:\n- The particle *ne* is obligatorily clause‑final in the data provided, marking the entire utterance as a polar (yes/no) question. No inversion or fronting of the auxiliary is observed.\n5. **Verb transitivity**:\n- Verbs such as *kɤ* “go” and *tuʔ* “sleep” are intransitive and appear without a following noun phrase.\n- Verbs such as *lapkʰi* “see” are transitive and are followed by an object noun phrase (*tɤʔ* “him”).\n---",
+          "metrics": {
+            "corpus_bleu": 6.32,
+            "corpus_chrfpp": 9.93,
+            "corpus_ter": 81.82,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.0,
+              11.16,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              12.8,
+              12.2,
+              6.24
+            ],
+            "sentence_ter": [
+              66.67,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do I go?",
+              "Did you",
+              "Did I see him?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?"
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 60.35,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Clause structure** (as already known):\n`Subject – Auxiliary – Verb – (Object) – Question‑particle – ne`\n2. **Auxiliary allomorphy (present tense)**\n- The underlying present‑tense auxiliary is */ka/*.\n- When the auxiliary is immediately followed by a consonant‑initial verb that begins with a **labial** (/p, b, m, w/) the /k/ surfaces as a **voiceless velar stop** and the vowel is reduced to a schwa: **kə‑** (e.g., *kəmə* before *nuʔrum*).\n- When the following verb begins with a **coronal lateral** (/l/) the /k/ undergoes **nasalisation** to /ŋ/ and the vowel lowers to /a/: **ŋa‑** (e.g., *ŋa lapkʰi*).\n- No other environments have been observed yet; the rule is provisional.\n3. **Pronoun object forms**\n- The 1 sg pronoun *ŋa* appears in subject position (as in the earlier “simple clause” rule).\n- When the same person is the **object** of a transitive verb, a reduced form *rɤ* is used. This reduction may involve rhotic deletion and vowel centralisation (from /a/ → /ɤ/).\n4. **Question particles**\n- The particle *ki* obligatorily precedes the final interrogative particle *ne*.\n- Both together mark a polar (yes/no) question; *ki* may be a focus or polarity marker, while *ne* is the clause‑final interrogative.\n5. **Vowel alternations in verbs**\n- The verb *nuʔrum* shows a **vowel‑glottal‑vowel** pattern (/u‑ʔu/). This may be a lexical property rather than a productive phonological rule, but it suggests that some verbs contain an internal glottal stop that separates two identical vowels.\n6. **Consonant clusters**\n- The language tolerates clusters of a stop followed by a glottal stop (*nuʔrum*) and of an aspirated stop followed by a vowel (*lapkʰi*). No evidence of epenthetic vowels inside clusters other than the auxiliary‑verb interface described in rule 2.\n---",
+          "metrics": {
+            "corpus_bleu": 9.69,
+            "corpus_chrfpp": 10.52,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              19.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              18.21,
+              2.92
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Do we know you",
+              "Do you"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 65.87,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Clause order** (confirmed):\n`Subject – Auxiliary – Verb – (Object) – (ki) – ne`\n2. **Auxiliary allomorphy (present tense)** – underlying form */ka/*:\n- Before a **labial‑initial** verb ( /p, b, m, w/ ) → **kə‑** (voiceless velar + reduced vowel).\n- Before a **coronal lateral** verb ( /l/ ) → **ŋa‑** (nasalised velar, vowel /a/).\n- In all other environments the auxiliary surfaces as **ka‑** (not yet attested).\n3. **Past‑tense auxiliary**:\n- The form **ati** functions as a past‑tense (or perfect‑aspect) auxiliary.\n- It follows the same positional slot as the present‑tense auxiliary, i.e. immediately after the subject.\n4. **Pronoun distribution**:\n- **Subject pronouns** appear in the clause‑initial position.\n- **Object pronouns** follow the verb.\n- The 1 sg pronoun *ŋa* reduces to *rɤ* when used as a direct object (loss of the rhotic and centralisation of the vowel).\n5. **Agreement**:\n- No overt agreement morphology is observed on the verb; the auxiliary does not inflect for person or number.\n- Person/number is expressed solely by the independent pronouns in subject and object slots.\n6. **Question formation**:\n- A polar (yes/no) question is marked by the particle **ki** placed immediately before the final particle **ne**.\n- When **ki** is absent, the clause is still interrogative if it ends in **ne** (as in the data), suggesting that *ki* is optional or marks a higher‑focus/contrastive polarity.\n7. **Verb‑internal glottal stop**:\n- Some lexical verbs contain an internal glottal stop separating two identical vowels (e.g., *nuʔrum*). This appears to be lexical rather than a productive phonological process.\n8. **Object‑pronoun form *kan***:\n- Functions as the 3 sg masculine object pronoun “him”.\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 52.45,
+          "accumulated_dict": "",
+          "accumulated_rules": "1. **Clause structure**\n```\nSubject – Auxiliary – Verb – Object – (ki) – ne\n```\n- The subject pronoun is obligatorily clause‑initial.\n- The auxiliary (present *kə‑* / *ka‑* / *ŋa‑* or past *ati*) follows the subject.\n- The lexical verb follows the auxiliary.\n- An object pronoun (if present) follows the verb.\n- The optional interrogative particle *ki* (or its variant *ri*) appears immediately before the final particle *ne*.\n2. **Present‑tense auxiliary allomorphy** (underlying */ka/*)\n- Before a **labial‑initial** verb (initial /p, b, m, w/): surface **kə‑**.\n- Before a **coronal lateral** verb (initial /l/): surface **ŋa‑**.\n- In all other environments: surface **ka‑** (not yet attested).\n3. **Past‑tense auxiliary**\n- The form **ati** marks past tense / perfect aspect.\n- It occupies the same slot as the present auxiliary (directly after the subject).\n4. **Pronoun distribution**\n- **Subject pronouns** appear in the first position of the clause.\n- **Object pronouns** appear immediately after the verb.\n- The 1 sg subject pronoun *ŋa* reduces to *rɤ* when used as a direct object (loss of rhotic, centralisation).\n5. **Agreement**\n- No overt agreement morphology on the verb or auxiliary; person/number are expressed only by the independent pronouns.\n6. **Question formation**\n- A polar (yes/no) question is marked by the particle **ki** (or the variant **ri**) placed directly before the final particle **ne**.\n- The particle *ki*/*ri* is optional; a clause ending in *ne* can still be interrogative, with *ki*/*ri* adding a higher‑focus or contrastive nuance.\n7. **Object‑pronoun *kan***\n- Functions as the 3 sg masculine object pronoun “him”. (Retained from earlier stage.)\n---",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 9.69,
+        "corpus_chrfpp": 10.52,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          19.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          18.21,
+          2.92
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Do we know you",
+          "Do you"
+        ],
+        "references": [
+          "Do you sleep?",
+          "Did he see us?"
+        ],
+        "num_evaluated": 2
+      },
+      "best_stage": "lexical"
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 98.64,
+          "metrics": {
+            "corpus_bleu": 64.67,
+            "corpus_chrfpp": 71.21,
+            "corpus_ter": 22.73,
+            "exact_match_corpus": 50.0,
+            "sentence_bleu": [
+              19.0,
+              100.0,
+              46.31,
+              30.21,
+              100.0,
+              100.0
+            ],
+            "sentence_chrfpp": [
+              18.09,
+              100.0,
+              70.39,
+              44.48,
+              100.0,
+              100.0
+            ],
+            "sentence_ter": [
+              100.0,
+              0.0,
+              50.0,
+              25.0,
+              25.0,
+              0.0
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              true,
+              true
+            ],
+            "hypotheses": [
+              "Did you come?",
+              "Did he see us?",
+              "Did they know you",
+              "Do we see them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "references": [
+              "Do you sleep?",
+              "Did he see us?",
+              "Do they know you?",
+              "Do we beat them?",
+              "Did we know you?",
+              "Did we go?"
+            ],
+            "num_evaluated": 6
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 93.72,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 64.67,
+        "corpus_chrfpp": 71.21,
+        "corpus_ter": 22.73,
+        "exact_match_corpus": 50.0,
+        "sentence_bleu": [
+          19.0,
+          100.0,
+          46.31,
+          30.21,
+          100.0,
+          100.0
+        ],
+        "sentence_chrfpp": [
+          18.09,
+          100.0,
+          70.39,
+          44.48,
+          100.0,
+          100.0
+        ],
+        "sentence_ter": [
+          100.0,
+          0.0,
+          50.0,
+          25.0,
+          25.0,
+          0.0
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        "hypotheses": [
+          "Did you come?",
+          "Did he see us?",
+          "Did they know you",
+          "Do we see them?",
+          "Did we know you?",
+          "Did we go?"
+        ],
+        "references": [
+          "Do you sleep?",
+          "Did he see us?",
+          "Do they know you?",
+          "Do we beat them?",
+          "Did we know you?",
+          "Did we go?"
+        ],
+        "num_evaluated": 6
+      },
+      "delta": {
+        "bleu_delta": -41.82,
+        "chrf_delta": -58.82,
+        "ter_delta": 68.18,
+        "em_delta": -33.33
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 2.45,
+      "ter": 2133.33,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Possible translation:** “I don’t know.”  \n\n*Explanation:* The sequence “nɤ ʒip ku ne” resembles a short, declarative p",
+      "reference": "Do you(sg) sleep?"
+    },
+    "baseline": {
+      "error": "HTTPSConnectionPool(host='openrouter.ai', port=443): Read timed out."
+    },
+    "incremental_combinations": {
+      "best_bleu": 50.84,
+      "best_chrf": 66.5,
+      "best_ter": 31.82,
+      "best_em": 33.33,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "Did you sleep?",
+        "Did we see him?",
+        "Did they know you",
+        "Do we beat them?",
+        "Did we see you",
+        "Did we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ],
+      "best_step": 5
+    },
+    "step_by_step": {
+      "best_bleu": 9.69,
+      "best_chrf": 10.52,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "Do I go?",
+        "Did you",
+        "Did I see him?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?"
+      ],
+      "best_stage": "lexical"
+    },
+    "self_correction": {
+      "best_bleu": 64.67,
+      "best_chrf": 71.21,
+      "best_ter": 22.73,
+      "best_em": 50.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Did you come?",
+        "Did he see us?",
+        "Did they know you",
+        "Do we see them?",
+        "Did we know you?",
+        "Did we go?"
+      ],
+      "best_references": [
+        "Do you(sg) sleep?",
+        "Did he see us?",
+        "Do they know you(pl)?",
+        "Do we beat them?",
+        "Did we know you(sg)?",
+        "Did we go?"
+      ],
+      "delta": {
+        "bleu_delta": -41.82,
+        "chrf_delta": -71.21,
+        "ter_delta": 68.18,
+        "em_delta": -33.33
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T23:05:43.617780",
+    "puzzle_id": "linguini_012023050200",
+    "language": "Supyire",
+    "task_type": "num_to_text",
+    "model_key": "llama-3.1-8b-groq"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 1.32,
+        "corpus_ter": 3666.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          1.32
+        ],
+        "sentence_ter": [
+          3666.67
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'm not familiar with the Supyire language, but I can try to provide an answer based on my knowledge of African languages. \n\nIn many African languages, numbers are written using a combination of digits and words. However, without specific information on the Supyire language, I'll make an educated guess.\n\nAssuming Supyire is a Mande language, which is a language family spoken in West Africa, I'll try to provide a possible answer.\n\nIn some Mande languages, the number 15 is written as \"kɔrɔ\" or \"kɔrɔn\". However, this is just a guess, and I may be incorrect.\n\nSo, my best guess for writing the number 15 in Supyire is: \"kɔrɔ\" or \"kɔrɔn\"."
+        ],
+        "references": [
+          "kɛ na kaŋkuro"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.71,
+        "corpus_ter": 166.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          2.71,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sentence_ter": [
+          700.0,
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Observation**: The examples show a combination of morphemes to represent numbers. The morphemes seem to be combined using a specific rule.",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "references": [
+          "kɛ na kaŋkuro",
+          "ŋkuu na beɲjaaga na baaricyɛɛre",
+          "ŋkuu na beetaanre na kɛ na shuunni",
+          "kampwoo na taanre",
+          "kampwɔhii taanre na ŋkwuu sicyɛɛre na kɛ na sicyɛɛre"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 5,
+        "missing_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "complete": false,
+        "exact_match_strict": 0.0
+      },
+      "hypotheses": [
+        "Observation**: The examples show a combination of morphemes to represent numbers. The morphemes seem to be combined using a specific rule.",
+        null,
+        null,
+        null,
+        null
+      ],
+      "references": [
+        "kɛ na kaŋkuro",
+        "ŋkuu na beɲjaaga na baaricyɛɛre",
+        "ŋkuu na beetaanre na kɛ na shuunni",
+        "kampwoo na taanre",
+        "kampwɔhii taanre na ŋkwuu sicyɛɛre na kɛ na sicyɛɛre"
+      ],
+      "latency_s": 1.79
+    }
+  }
+}

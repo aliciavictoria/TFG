@@ -1,0 +1,1450 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-13T09:05:47.725453",
+    "puzzle_id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "model_key": "llama-3.3-70b-sambanova",
+    "model_tier": "medium",
+    "num_train_pairs": 11,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "We will go away and they will come.",
+        "target": "Wananuuwa mananiib.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I take the pig and he takes the fish.",
+        "target": "Awon biina oon been",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He saw the water and the house and heard the dog.",
+        "target": "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "You(sg) eat the bread and sing.",
+        "target": "Om aneneb wingkeeb.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "We will go away and they will come.",
+      "reference": "Wananuuwa mananiib.",
+      "hypothesis": "I'll do my best to translate the sentence into Yonggom, a language spoken in Papua New Guinea. Please note that my translation may not be perfect, as Yonggom is a lesser-documented language.\n\nBased on my research, here's my attempt at translating the sentence:\n\n\"Yimi emi go apura, ol i kam bek.\"\n\nBreakdown:\n- \"Yimi\" means \"we\" or \"us\"\n- \"emi\" is a verb suffix indicating future tense\n- \"go\" means \"go\" or \"leave\"\n- \"apura\" means \"away\" or \"far\"\n- \"ol\" means \"they\"\n- \"i\" is a verb suffix indicating future tense\n- \"kam\" means \"come\"\n- \"bek\" means \"back\" or \"again\"\n\nSo, the translation \"Yimi emi go apura, ol i kam bek\" roughly means \"We will go away, and they will come back.\"",
+      "latency_s": 7.81,
+      "metrics": {
+        "corpus_bleu": 0.2,
+        "corpus_chrfpp": 2.99,
+        "corpus_ter": 6200.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.2
+        ],
+        "sentence_chrfpp": [
+          2.99
+        ],
+        "sentence_ter": [
+          6200.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'll do my best to translate the sentence into Yonggom, a language spoken in Papua New Guinea. Please note that my translation may not be perfect, as Yonggom is a lesser-documented language.\n\nBased on my research, here's my attempt at translating the sentence:\n\n\"Yimi emi go apura, ol i kam bek.\"\n\nBreakdown:\n- \"Yimi\" means \"we\" or \"us\"\n- \"emi\" is a verb suffix indicating future tense\n- \"go\" means \"go\" or \"leave\"\n- \"apura\" means \"away\" or \"far\"\n- \"ol\" means \"they\"\n- \"i\" is a verb suffix indicating future tense\n- \"kam\" means \"come\"\n- \"bek\" means \"back\" or \"again\"\n\nSo, the translation \"Yimi emi go apura, ol i kam bek\" roughly means \"We will go away, and they will come back.\""
+        ],
+        "references": [
+          "Wananuuwa mananiib."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 8.36,
+          "metrics": {
+            "corpus_bleu": 4.14,
+            "corpus_chrfpp": 20.79,
+            "corpus_ter": 87.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              15.97,
+              6.92,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              11.61,
+              25.7,
+              23.07,
+              20.83
+            ],
+            "sentence_ter": [
+              150.0,
+              75.0,
+              71.43,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub miniib Yeederenib",
+              "Awon baan bene wedmeen",
+              "Oka aniib anona wedmoona Anon weng",
+              "Oka om Wingkeewa yeediriin"
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.14,
+        "corpus_chrfpp": 20.79,
+        "corpus_ter": 87.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          15.97,
+          6.92,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          11.61,
+          25.7,
+          23.07,
+          20.83
+        ],
+        "sentence_ter": [
+          150.0,
+          75.0,
+          71.43,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub miniib Yeederenib",
+          "Awon baan bene wedmeen",
+          "Oka aniib anona wedmoona Anon weng",
+          "Oka om Wingkeewa yeediriin"
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 3.11,
+          "accumulated_dict": "Meneni = possibly first person or subject marker (notes: appears at the start of the sentence)\nkaruwa = possibly \"came\" (notes: positioned after Meneni, could be a verb)\nanona = possibly \"saw\" (notes: appears in a sentence with \"and,\" could be a verb)\nwedmaan = possibly \"man\" and/or \"dog\" (notes: appears at the end of the sentence, could be an object or a noun)\nWingkeewa = possibly second person singular (notes: appears at the start of the sentence)\nyeediriin = possibly \"sing\" or \"get up\" (notes: appears at the end of the sentence, could be a verb)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this is speculative.\n2. Verbs might agree with the subject in person and number, but there's not enough evidence to confirm this.\n3. The language could use a specific morpheme or word to indicate conjunction (\"and\").",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 3.88,
+          "accumulated_dict": "Meneni = first person or subject marker (notes: appears at the start of the sentence, potentially indicating the speaker)\nkaruwa = possibly \"came\" (notes: positioned after Meneni, could be a verb related to movement)\nanona = possibly \"saw\" (notes: appears in a sentence with \"and,\" could be a verb related to seeing)\nwedmaan = possibly \"man\" and/or \"dog\" (notes: appears at the end of the sentence, could be an object or a noun, potentially related to animals or people)\nWingkeewa = second person singular (notes: appears at the start of the sentence, indicating the addressee)\nyeediriin = possibly \"sing\" or \"get up\" (notes: appears at the end of the sentence, could be a verb related to actions)\nAmbib = possibly third person singular (notes: introduced as a potential subject marker for \"he\")\nwedmoona = possibly \"saw\" (notes: related to the action of seeing, potentially similar to \"anona\")\nawon = possibly \"house\" (notes: introduced as a noun related to buildings)\nbaan = possibly \"pig\" (notes: introduced as a noun related to animals)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this is speculative and requires further confirmation.\n2. Verbs might agree with the subject in person and number, but there's not enough evidence to confirm this, and the introduction of new subject markers complicates this hypothesis.",
+          "metrics": {
+            "corpus_bleu": 1.75,
+            "corpus_chrfpp": 19.25,
+            "corpus_ter": 162.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              5.52,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              18.29,
+              16.5,
+              19.03,
+              23.62
+            ],
+            "sentence_ter": [
+              350.0,
+              150.0,
+              100.0,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Meneni karuwa awon anona, Ambib baan yeediriin.",
+              "Meneni baan awon, Ambib wedmoona awon.",
+              "Ambib awon anona, wedmoona baan yeediriin.",
+              "Wingkeewa awon yeediriin, Meneni baan karuwa."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 3.61,
+          "accumulated_dict": "Meneni = first person or subject marker (notes: appears at the start of the sentence, potentially indicating the speaker)\nkaruwa = possibly \"came\" (notes: positioned after Meneni, could be a verb related to movement)\nanona = possibly \"saw\" (notes: appears in a sentence with \"and,\" could be a verb related to seeing)\nwedmaan = possibly \"man\" and/or \"dog\" (notes: appears at the end of the sentence, could be an object or a noun, potentially related to animals or people)\nWingkeewa = second person singular (notes: appears at the start of the sentence, indicating the addressee)\nyeediriin = possibly \"sing\" or \"get up\" (notes: appears at the end of the sentence, could be a verb related to actions)\nAmbib = possibly third person singular (notes: introduced as a potential subject marker for \"he\")\nwedmoona = possibly \"saw\" (notes: related to the action of seeing, potentially similar to \"anona\")\nawon = possibly \"house\" (notes: introduced as a noun related to buildings)\nbaan = possibly \"pig\" (notes: introduced as a noun related to animals)\nYeederenu = possibly \"she\" or feminine marker (notes: introduced in a sentence implying an action of getting up or taking)\nom = possibly future tense or auxiliary verb (notes: new introduction, unclear meaning)\nbanuun = possibly \"bread\" (notes: introduced as a noun related to food)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this is speculative and requires further confirmation.\n2. Verbs might agree with the subject in person and number, but there's not enough evidence to confirm this, and the introduction of new subject markers complicates this hypothesis.",
+          "metrics": {
+            "corpus_bleu": 1.82,
+            "corpus_chrfpp": 18.7,
+            "corpus_ter": 150.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              0.0,
+              4.2,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              15.56,
+              14.64,
+              19.91,
+              23.22
+            ],
+            "sentence_ter": [
+              250.0,
+              125.0,
+              114.29,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Meneni karuwa awon, Ambib yeediriin.",
+              "Meneni baan om, Ambib awon.",
+              "Ambib wedmoona awon baan om, Meneni yeediriin wedmaan.",
+              "Wingkeewa yeediriin banuun, Meneni karuwa awon."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 3.4,
+          "accumulated_dict": "Meneni = first person or subject marker (notes: appears at the start of the sentence, potentially indicating the speaker)\nkaruwa = possibly \"came\" (notes: positioned after Meneni, could be a verb related to movement)\nanona = possibly \"saw\" (notes: appears in a sentence with \"and,\" could be a verb related to seeing)\nwedmaan = possibly \"man\" and/or \"dog\" (notes: appears at the end of the sentence, could be an object or a noun, potentially related to animals or people)\nWingkeewa = second person singular (notes: appears at the start of the sentence, indicating the addressee)\nyeediriin = possibly \"sing\" or \"get up\" (notes: appears at the end of the sentence, could be a verb related to actions)\nAmbib = possibly third person singular (notes: introduced as a potential subject marker for \"he\")\nwedmoona = possibly \"saw\" (notes: related to the action of seeing, potentially similar to \"anona\")\nawon = possibly \"house\" (notes: introduced as a noun related to buildings)\nbaan = possibly \"pig\" (notes: introduced as a noun related to animals)\nYeederenu = possibly \"she\" or feminine marker (notes: introduced in a sentence implying an action of getting up or taking)\nom = possibly future tense or auxiliary verb (notes: new introduction, unclear meaning)\nbanuun = possibly \"bread\" (notes: introduced as a noun related to food)\nWenenub = possibly \"we\" or first-person plural (notes: new introduction, related to future actions)\nwingkanuub = possibly \"go away\" and \"sing\" (notes: new introduction, related to actions)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this is highly speculative and requires further confirmation.\n2. Verbs might agree with the subject in person and number, but there's not enough evidence to confirm this, and the introduction of new subject markers complicates this hypothesis.",
+          "metrics": {
+            "corpus_bleu": 1.47,
+            "corpus_chrfpp": 17.8,
+            "corpus_ter": 156.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              15.97,
+              0.0,
+              2.45,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              20.09,
+              11.2,
+              17.43,
+              24.49
+            ],
+            "sentence_ter": [
+              150.0,
+              200.0,
+              142.86,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub karuwa wingkanuub.",
+              "Meneni baan om, Ambib [unknown for fish] om.",
+              "Ambib wedmoona [unknown for water] awon, [unknown for heard] wedmaan.",
+              "Wingkeewa banuun om, yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 3.73,
+          "accumulated_dict": "Meneni = first person marker (notes: appears at the start of sentences)\nkaruwa = movement-related verb (notes: follows the first-person marker)\nanona = seeing-related verb (notes: appears in sentences involving observation)\nwedmaan = man and/or dog (notes: appears at the end of sentences, potentially an object)\nWingkeewa = second person singular marker (notes: starts sentences addressed to the listener)\nyeediriin = action verb (notes: involves singing or getting up, possibly complex actions)\nAmbib = third person singular marker (notes: introduced as a subject marker for \"he\")\nwedmoona = seeing-related verb (notes: similar to \"anona,\" potentially with different subjects or aspects)\nawon = house (notes: noun related to buildings)\nbaan = pig (notes: noun related to animals)\nYeederenu = she or feminine marker (notes: introduced in sentences implying future actions)\nom = future tense or auxiliary verb (notes: precedes verbs in sentences involving future actions)\nbanuun = bread (notes: noun related to food)\nWenenub = we or first-person plural (notes: related to future actions involving the speaker and others)\nwingkanuub = go away and sing (notes: involves actions of leaving and vocal performance)\nOma = they (notes: subject marker for plural third person)\noka = eat (notes: verb related to consumption)\naniib = drink (notes: verb related to liquid consumption)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this requires further confirmation, especially with complex sentences.\n2. Verbs might agree with the subject in person and number, but the introduction of new subject markers and the complexity of actions described complicate this hypothesis.",
+          "metrics": {
+            "corpus_bleu": 1.75,
+            "corpus_chrfpp": 17.86,
+            "corpus_ter": 156.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              0.0,
+              3.75,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              20.09,
+              11.09,
+              17.7,
+              24.02
+            ],
+            "sentence_ter": [
+              250.0,
+              200.0,
+              114.29,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub om wingkanuub Oma karuwa.",
+              "Meneni baan oka Ambib [unknown for fish] oka.",
+              "Ambib wedmoona awon aniib wedmaan [unknown for heard].",
+              "Wingkeewa banuun oka yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 9.17,
+          "accumulated_dict": "Meneni = first person marker (notes: appears at the start of sentences)\nkaruwa = movement-related verb (notes: follows the first-person marker)\nanona = seeing-related verb (notes: appears in sentences involving observation)\nwedmaan = man and/or dog (notes: appears at the end of sentences, potentially an object)\nWingkeewa = second person singular marker (notes: starts sentences addressed to the listener)\nyeediriin = action verb (notes: involves singing or getting up, possibly complex actions)\nAmbib = third person singular marker (notes: introduced as a subject marker for \"he\")\nwedmoona = seeing-related verb (notes: similar to \"anona,\" potentially with different subjects or aspects)\nawon = house (notes: noun related to buildings)\nbaan = pig (notes: noun related to animals)\nYeederenu = she or feminine marker (notes: introduced in sentences implying future actions)\nom = future tense or auxiliary verb (notes: precedes verbs in sentences involving future actions)\nbanuun = bread (notes: noun related to food)\nWenenub = we or first-person plural (notes: related to future actions involving the speaker and others)\nwingkanuub = go away and sing (notes: involves actions of leaving and vocal performance)\nOma = they (notes: subject marker for plural third person)\noka = eat (notes: verb related to consumption)\naniib = drink (notes: verb related to liquid consumption)\nAnon = hear (notes: introduced in a complex sentence involving perception)\nye = pronoun or marker (notes: appears in complex sentences, potentially indicating subjects or objects)\nweng = noun or marker (notes: appears in complex sentences, potentially related to animals or actions)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this requires further confirmation, especially with complex sentences.\n2. Verbs might agree with the subject in person and number, but the introduction of new subject markers and the complexity of actions described complicate this hypothesis.\n3. The language allows for multiple verbs in a sentence without explicit conjunctions, potentially indicating a serial verb construction.",
+          "metrics": {
+            "corpus_bleu": 2.52,
+            "corpus_chrfpp": 16.82,
+            "corpus_ter": 137.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              0.0,
+              5.69,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              17.34,
+              10.38,
+              16.38,
+              24.02
+            ],
+            "sentence_ter": [
+              250.0,
+              150.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub wingkanuub Oma om wingkee.",
+              "Meneni baan oka Ambib oka kaala.",
+              "Ambib awon oka aniib Anon wedmaan.",
+              "Wingkeewa banuun oka yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 4.31,
+          "accumulated_dict": "Meneni = first person marker (notes: appears at the start of sentences)\nkaruwa = movement-related verb (notes: follows the first-person marker)\nanona = seeing-related verb (notes: appears in sentences involving observation)\nwedmaan = man and/or dog (notes: appears at the end of sentences, potentially an object)\nWingkeewa = second person singular marker (notes: starts sentences addressed to the listener)\nyeediriin = action verb (notes: involves singing or getting up, possibly complex actions)\nAmbib = third person singular marker (notes: introduced as a subject marker for \"he\")\nwedmoona = seeing-related verb (notes: similar to \"anona,\" potentially with different subjects or aspects)\nawon = house (notes: noun related to buildings)\nbaan = pig (notes: noun related to animals)\nYeederenu = she or feminine marker (notes: introduced in sentences implying future actions)\nom = future tense or auxiliary verb (notes: precedes verbs in sentences involving future actions)\nbanuun = bread (notes: noun related to food)\nWenenub = we or first-person plural (notes: related to future actions involving the speaker and others)\nwingkanuub = go away and sing (notes: involves actions of leaving and vocal performance)\nOma = they (notes: subject marker for plural third person)\noka = eat (notes: verb related to consumption)\naniib = drink (notes: verb related to liquid consumption)\nAnon = hear (notes: introduced in a complex sentence involving perception)\nye = pronoun or marker (notes: appears in complex sentences, potentially indicating subjects or objects)\nweng = noun or marker (notes: appears in complex sentences, potentially related to animals or actions)\nok = drink (notes: introduced as a verb related to consuming water)\nanaana = drink (notes: potentially related to \"ok,\" with \"anaana\" being a more specific form)\noon = water (notes: noun related to liquids)\nwedmeen = fish (notes: potentially related to \"wedmaan,\" with \"wedmeen\" being specific to fish)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this requires further confirmation, especially with complex sentences.\n2. Verbs might agree with the subject in person and number, but the introduction of new subject markers and the complexity of actions described complicate this hypothesis.\n3. The language allows for multiple verbs in a sentence without explicit conjunctions, potentially indicating a serial verb construction.\n[DELETED: None — The current rules are provisional and subject to refinement based on new examples.]",
+          "metrics": {
+            "corpus_bleu": 3.47,
+            "corpus_chrfpp": 27.05,
+            "corpus_ter": 137.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              0.0,
+              10.55,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              22.29,
+              12.83,
+              37.84,
+              23.61
+            ],
+            "sentence_ter": [
+              350.0,
+              150.0,
+              71.43,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub om wingkanuub, Oma om anaana weng.",
+              "Meneni baan oka, Ambib wedmeen oka.",
+              "Ambib awon oon Anon, ye weng wengambaranuuwa.",
+              "Wingkeewa banuun oka, yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 3.95,
+          "accumulated_dict": "Meneni = first person marker (notes: appears at the start of sentences)\nkaruwa = movement-related verb (notes: follows the first-person marker)\nanona = seeing-related verb (notes: appears in sentences involving observation)\nwedmaan = man and/or dog (notes: appears at the end of sentences, potentially an object)\nWingkeewa = second person singular marker (notes: starts sentences addressed to the listener)\nyeediriin = action verb (notes: involves singing or getting up, possibly complex actions)\nAmbib = third person singular marker (notes: introduced as a subject marker for \"he\")\nwedmoona = seeing-related verb (notes: similar to \"anona,\" potentially with different subjects or aspects)\nawon = house (notes: noun related to buildings)\nbaan = pig (notes: noun related to animals)\nYeederenu = she or feminine marker (notes: introduced in sentences implying future actions)\nom = future tense or auxiliary verb (notes: precedes verbs in sentences involving future actions)\nbanuun = bread (notes: noun related to food)\nWenenub = we or first-person plural (notes: related to future actions involving the speaker and others)\nwingkanuub = go away and sing (notes: involves actions of leaving and vocal performance)\nOma = they (notes: subject marker for plural third person)\noka = eat (notes: verb related to consumption)\naniib = drink (notes: verb related to liquid consumption)\nAnon = hear (notes: introduced in a complex sentence involving perception)\nye = pronoun or marker (notes: appears in complex sentences, potentially indicating subjects or objects)\nweng = noun or marker (notes: appears in complex sentences, potentially related to animals or actions)\nok = drink (notes: introduced as a verb related to consuming water)\nanaana = drink (notes: potentially related to \"ok,\" with \"anaana\" being a more specific form)\noon = water (notes: noun related to liquids)\nwedmeen = fish (notes: potentially related to \"wedmaan,\" with \"wedmeen\" being specific to fish)\nYeederenib = they (notes: involves plural actions)\nminiib = come (notes: introduced in a sentence involving movement towards the speaker)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this requires further confirmation, especially with complex sentences.\n2. Verbs might agree with the subject in person and number, but the introduction of new subject markers and the complexity of actions described complicate this hypothesis.\n3. The language allows for multiple verbs in a sentence without explicit conjunctions, potentially indicating a serial verb construction.\n4. Complex sentences can involve multiple clauses with different subjects and actions, potentially using markers like \"ye\" and \"weng\" to indicate relationships between clauses.",
+          "metrics": {
+            "corpus_bleu": 5.1,
+            "corpus_chrfpp": 23.85,
+            "corpus_ter": 118.75,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              12.6,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              25.67,
+              12.97,
+              28.32,
+              24.02
+            ],
+            "sentence_ter": [
+              200.0,
+              150.0,
+              71.43,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub wingkanuub Oma miniib.",
+              "Meneni baan oka Ambib wedmeen oka.",
+              "Ambib oon awon Anon ye weng.",
+              "Wingkeewa oka banuun yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 8.51,
+          "accumulated_dict": "Meneni = first person marker (notes: appears at the start of sentences, involves the speaker in actions)\nkaruwa = movement-related verb (notes: follows the first-person marker, involves coming)\nanona = seeing-related verb (notes: appears in sentences involving observation, potentially by the speaker)\nwedmaan = man and/or dog (notes: appears at the end of sentences, potentially an object of actions)\nWingkeewa = second person singular marker (notes: starts sentences addressed to the listener, involves singular actions)\nyeediriin = action verb (notes: involves singing or getting up, possibly complex actions with subject involvement)\nAmbib = third person singular marker (notes: introduced as a subject marker for \"he,\" involves singular actions)\nwedmoona = seeing-related verb (notes: similar to \"anona,\" potentially with different subjects or aspects, involves observation)\nawon = house (notes: noun related to buildings, can be involved in complex actions)\nbaan = pig (notes: noun related to animals, can be an object of actions)\nYeederenu = she or feminine marker (notes: introduced in sentences implying future actions, involves \"she\" as a subject)\nom = future tense or auxiliary verb (notes: precedes verbs in sentences involving future actions, indicates future tense)\nbanuun = bread (notes: noun related to food, can be an object of actions)\nWenenub = we or first-person plural (notes: related to future actions involving the speaker and others, involves plural subjects)\nwingkanuub = go away and sing (notes: involves actions of leaving and vocal performance, potentially in the future)\nOma = they (notes: subject marker for plural third person, involves plural actions)\noka = eat (notes: verb related to consumption, can involve different subjects)\naniib = drink (notes: verb related to liquid consumption, can involve different subjects)\nAnon = hear (notes: introduced in a complex sentence involving perception, involves hearing)\nye = pronoun or marker (notes: appears in complex sentences, potentially indicating subjects or objects, involves relationships between clauses)\nweng = noun or marker (notes: appears in complex sentences, potentially related to animals or actions, involves complex relationships)\nok = drink (notes: introduced as a verb related to consuming water, can be specific to water)\nanaana = drink (notes: potentially related to \"ok,\" with \"anaana\" being a more specific form, involves drinking)\noon = water (notes: noun related to liquids, can be involved in actions of drinking)\nwedmeen = fish (notes: potentially related to \"wedmaan,\" with \"wedmeen\" being specific to fish, can be an object of actions)\nYeederenib = they (notes: involves plural actions, similar to \"Oma\" but potentially with different aspects)\nminiib = come (notes: introduced in a sentence involving movement towards the speaker, involves coming)\n[DELETED: wingkanuub — reason: potentially redundant with wingkanuub's components being understood through other entries]\n[DELETED: wengambaranuuwa and wengambaraneen — reason: not clearly defined and potentially part of a complex sentence structure rather than distinct morphemes]",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this requires further confirmation, especially with complex sentences.\n2. Verbs might agree with the subject in person and number, but the introduction of new subject markers and the complexity of actions described complicate this hypothesis.\n3. The language allows for multiple verbs in a sentence without explicit conjunctions, potentially indicating a serial verb construction.\n4. Complex sentences can involve multiple clauses with different subjects and actions, potentially using markers like \"ye\" and \"weng\" to indicate relationships between clauses.\n[DELETED: None — reason: all rules still hold as provisional and subject to refinement based on new examples]",
+          "metrics": {
+            "corpus_bleu": 5.79,
+            "corpus_chrfpp": 23.94,
+            "corpus_ter": 106.25,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              12.6,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              25.67,
+              12.44,
+              28.32,
+              24.02
+            ],
+            "sentence_ter": [
+              200.0,
+              100.0,
+              71.43,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub wingkanuub Oma miniib.",
+              "Meneni baan Ambib wedmeen.",
+              "Ambib oon awon Anon ye weng.",
+              "Wingkeewa oka banuun yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 5.76,
+          "accumulated_dict": "Meneni = first person marker (notes: involves the speaker in actions)\nkaruwa = movement-related verb (notes: involves coming)\nanona = seeing-related verb (notes: involves observation, potentially by the speaker)\nwedmaan = man and/or dog (notes: object of actions)\nWingkeewa = second person singular marker (notes: involves singular actions addressed to the listener)\nyeediriin = action verb (notes: involves singing or getting up)\nAmbib = third person singular marker (notes: involves singular actions)\nwedmoona = seeing-related verb (notes: similar to \"anona,\" potentially with different subjects or aspects)\nawon = house (notes: noun related to buildings)\nbaan = pig (notes: noun related to animals)\nYeederenu = she or feminine marker (notes: involves \"she\" as a subject in future actions)\nom = future tense or auxiliary verb (notes: indicates future actions)\nbanuun = bread (notes: noun related to food)\nWenenub = we or first-person plural (notes: involves plural subjects in future actions)\n[DELETED: wingkanuub — reason: understood through components]\nOma = they (notes: subject marker for plural third person)\noka = eat (notes: verb related to consumption)\naniib = drink (notes: verb related to liquid consumption)\nAnon = hear (notes: involves perception)\nye = pronoun or marker (notes: relates clauses or subjects)\nweng = noun or marker (notes: involves complex relationships between clauses or subjects)\nok = drink (notes: specific to water consumption)\nanaana = drink (notes: potentially more specific form of \"ok\")\noon = water (notes: noun related to liquids)\nwedmeen = fish (notes: specific to fish, object of actions)\nYeederenib = they (notes: involves plural actions, potentially different aspect)\nminiib = come (notes: involves movement towards the speaker)\nWingkenu = she sings (notes: introduced as an action related to the listener, potentially a specific form)\nwunuun = go away (notes: involves leaving)\nbene = take (notes: introduced as an action of taking something)\naneen = eat (notes: involves consuming something)",
+          "accumulated_rules": "1. The language might use a subject-verb-object (SVO) word order, but this requires further confirmation, especially with complex sentences.\n2. Verbs might agree with the subject in person and number, but the introduction of new subject markers and the complexity of actions described complicate this hypothesis.\n3. The language allows for multiple verbs in a sentence without explicit conjunctions, potentially indicating a serial verb construction.\n4. Complex sentences can involve multiple clauses with different subjects and actions, potentially using markers like \"ye\" and \"weng\" to indicate relationships between clauses.",
+          "metrics": {
+            "corpus_bleu": 2.67,
+            "corpus_chrfpp": 18.39,
+            "corpus_ter": 137.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              0.0,
+              5.82,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              20.52,
+              14.19,
+              16.88,
+              24.02
+            ],
+            "sentence_ter": [
+              250.0,
+              150.0,
+              100.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub om miniib Oma miniib.",
+              "Meneni baan bene Ambib wedmeen bene.",
+              "Ambib oon awon wedmaan Anon.",
+              "Wingkeewa banuun oka yeediriin."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.47,
+        "corpus_chrfpp": 27.05,
+        "corpus_ter": 137.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.77,
+          0.0,
+          10.55,
+          8.12
+        ],
+        "sentence_chrfpp": [
+          22.29,
+          12.83,
+          37.84,
+          23.61
+        ],
+        "sentence_ter": [
+          350.0,
+          150.0,
+          71.43,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub om wingkanuub, Oma om anaana weng.",
+          "Meneni baan oka, Ambib wedmeen oka.",
+          "Ambib awon oon Anon, ye weng wengambaranuuwa.",
+          "Wingkeewa banuun oka, yeediriin."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 7
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 1.91,
+          "accumulated_dict": "- Meneni: I\n- karuwa: came\n- anona: saw\n- wedmaan: man, the man\n- Wingkeewa: You(sg)\n- yeediriin: sing and I get up\n- Ambib: He\n- wedmoona: the house\n- awon: I\n- baan: took, the pig",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order, as seen in \"Meneni karuwa anona wedmaan\" where 'Meneni' (I) is the subject, 'karuwa' (came) and 'anona' (saw) are verbs, and 'wedmaan' (the man) is the object.\n- There might be a pattern of using 'wa' or 'na' suffixes or prefixes for certain grammatical functions, but it's too early to determine their exact roles.\n- The word 'weed' seems to be associated with nouns (wedmaan - the man, wedmoona - the house), possibly indicating a definite article or a marker for specific nouns.",
+          "metrics": {
+            "corpus_bleu": 1.89,
+            "corpus_chrfpp": 13.31,
+            "corpus_ter": 138.46,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              0.0,
+              3.39
+            ],
+            "sentence_chrfpp": [
+              13.83,
+              12.61,
+              13.6
+            ],
+            "sentence_ter": [
+              200.0,
+              150.0,
+              114.29
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Meneni anona wed... (assuming",
+              "Wingkeewa baan wedmoona (using the subject",
+              "I saw the dog. → Meneni anona wed..."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 5.91,
+          "accumulated_dict": "- Meneni: I\n- karuwa: came\n- anona: saw\n- wedmaan: man, the man\n- Wingkeewa: You(sg)\n- yeediriin: sing and I get up\n- Ambib: He\n- wedmoona: the house\n- awon: I\n- baan: took, the pig\n- Yeederenu: She\n- om: will (future tense marker)\n- banuun: the bread\n- Wenenub: We\n- wingkanuub: will go away and will sing\n- Yeeden: get up\n- nuub: bread",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order, as seen in \"Meneni karuwa anona wedmaan\" where 'Meneni' (I) is the subject, 'karuwa' (came) and 'anona' (saw) are verbs, and 'wedmaan' (the man) is the object.\n- There might be a pattern of using 'wa' or 'na' suffixes or prefixes for certain grammatical functions, but it's too early to determine their exact roles.\n- The word 'weed' seems to be associated with nouns (wedmaan - the man, wedmoona - the house), possibly indicating a definite article or a marker for specific nouns.\n- The prefix 'yeede-' might be associated with the verb 'to get up', as seen in 'yeediriin' (sing and I get up) and 'Yeederenu' (She will get up).\n- The suffix '-nuub' might be associated with the verb 'to take' or 'to go away', as seen in 'Wenenub wingkanuub' (We will go away and will sing).\n- The word 'om' appears to be a future tense marker, as seen in 'Yeederenu om banuun' (She will get up and will take the bread).\n- The language might have a pattern of using suffixes or prefixes to indicate grammatical functions such as tense, aspect, or mood.",
+          "metrics": {
+            "corpus_bleu": 4.06,
+            "corpus_chrfpp": 15.93,
+            "corpus_ter": 166.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              17.71,
+              14.54
+            ],
+            "sentence_ter": [
+              250.0,
+              125.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Meneni om karuwa anona wedmaan.",
+              "Wingkeewa yeediriin om baan wedmoona."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been"
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 5.8,
+          "accumulated_dict": "- Meneni: I\n- karuwa: came\n- anona: saw\n- wedmaan: man, the man\n- Wingkeewa: You(sg)\n- yeediriin: sing and I get up\n- Ambib: He\n- wedmoona: the house\n- awon: I\n- baan: took, the pig\n- Yeederenu: She\n- om: will (future tense marker)\n- banuun: the bread\n- Wenenub: We\n- wingkanuub: will go away and will sing\n- Yeeden: get up\n- nuub: bread\n- Oma: They\n- oka: eat\n- aniib: drink the water\n- anon: will hear\n- ye: the dog\n- weng: the\n- wengambaranuuwa: the dog (accusative or specific form)\n- wengambaraneen: the pig (accusative or specific form)\n- ok: drank\n- anaana: the water\n- oon: saw\n- wedmeen: the fish",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order, as seen in \"Meneni karuwa anona wedmaan\" where 'Meneni' (I) is the subject, 'karuwa' (came) and 'anona' (saw) are verbs, and 'wedmaan' (the man) is the object.\n- There might be a pattern of using 'wa' or 'na' suffixes or prefixes for certain grammatical functions, but it's too early to determine their exact roles.\n- The word 'weed' seems to be associated with nouns (wedmaan - the man, wedmoona - the house), possibly indicating a definite article or a marker for specific nouns.\n- The prefix 'yeede-' might be associated with the verb 'to get up', as seen in 'yeediriin' (sing and I get up) and 'Yeederenu' (She will get up).\n- The suffix '-nuub' might be associated with the verb 'to take' or 'to go away', as seen in 'Wenenub wingkanuub' (We will go away and will sing).\n- The word 'om' appears to be a future tense marker, as seen in 'Yeederenu om banuun' (She will get up and will take the bread).\n- The language might have a pattern of using suffixes or prefixes to indicate grammatical functions such as tense, aspect, or mood.\n- The word 'weng' might be a definite article or a marker for specific nouns, as seen in 'wengambaranuuwa' (the dog) and 'wengambaraneen' (the pig).\n- The verb 'oka' (eat) and 'ok' (drank) might be related, with 'ok' being a past tense form of 'oka'.\n- The word 'aniib' (drink the water) might be a verb phrase or a single verb, indicating the action of drinking water.",
+          "metrics": {
+            "corpus_bleu": 1.65,
+            "corpus_chrfpp": 20.19,
+            "corpus_ter": 325.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.39,
+              0.0,
+              3.82,
+              2.45
+            ],
+            "sentence_chrfpp": [
+              8.62,
+              4.61,
+              35.25,
+              10.98
+            ],
+            "sentence_ter": [
+              550.0,
+              225.0,
+              257.14,
+              466.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We will hear the dog and he will hear the pig.",
+              "I drank the water and she saw the fish.",
+              "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen. → We will hear the dog and he will hear the pig.",
+              "Ok anaana oon wedmeen. → I drank the water and she saw the fish."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 2.94,
+          "accumulated_dict": "- Meneni: I\n- karuwa: came\n- anona: saw\n- wedmaan: man, the man\n- Wingkeewa: You(sg)\n- yeediriin: sing and I get up\n- Ambib: He\n- wedmoona: the house\n- awon: I\n- baan: took, the pig\n- Yeederenu: She\n- om: will (future tense marker)\n- banuun: the bread\n- Wenenub: We\n- wingkanuub: will go away and will sing\n- Yeeden: get up\n- nuub: bread\n- Oma: They\n- oka: eat\n- aniib: drink the water\n- anon: will hear\n- ye: the dog\n- weng: the\n- wengambaranuuwa: the dog (accusative or specific form)\n- wengambaraneen: the pig (accusative or specific form)\n- ok: drank\n- anaana: the water\n- oon: saw\n- wedmeen: the fish\n- Yeederenib: They get up\n- miniib: come\n- Wingkenu: She sings\n- wunuun: goes away\n- bene: takes\n- aneen: eats it",
+          "accumulated_rules": "- The language appears to have a subject-verb-object (SVO) word order, as seen in \"Meneni karuwa anona wedmaan\" where 'Meneni' (I) is the subject, 'karuwa' (came) and 'anona' (saw) are verbs, and 'wedmaan' (the man) is the object.\n- There might be a pattern of using 'wa' or 'na' suffixes or prefixes for certain grammatical functions, but it's too early to determine their exact roles.\n- The word 'weed' seems to be associated with nouns (wedmaan - the man, wedmoona - the house), possibly indicating a definite article or a marker for specific nouns.\n- The prefix 'yeede-' might be associated with the verb 'to get up', as seen in 'yeediriin' (sing and I get up), 'Yeederenu' (She will get up), and 'Yeederenib' (They get up).\n- The suffix '-nuub' might be associated with the verb 'to take' or 'to go away', as seen in 'Wenenub wingkanuub' (We will go away and will sing) and 'bene' (takes) in 'Om bene aneen' (He takes the bread and eats it).\n- The word 'om' appears to be a future tense marker, as seen in 'Yeederenu om banuun' (She will get up and will take the bread) and 'Om bene aneen' (He takes the bread and eats it), suggesting it might also be used for present or imperative actions when combined with other verbs.\n- The language might have a pattern of using suffixes or prefixes to indicate grammatical functions such as tense, aspect, or mood.\n- The word 'weng' might be a definite article or a marker for specific nouns, as seen in 'wengambaranuuwa' (the dog) and 'wengambaraneen' (the pig).\n- The verb 'oka' (eat) and 'ok' (drank) might be related, with 'ok' being a past tense form of 'oka', and 'aneen' could be a form of 'oka' used in specific contexts like 'Om bene aneen' (He takes the bread and eats it).\n- The word 'aniib' (drink the water) might be a verb phrase or a single verb, indicating the action of drinking water, similar to how 'aneen' seems to indicate eating in a specific context.\n- The language seems to use a combination of verbs to express complex actions or sequences of events, as seen in 'Yeederenib miniib' (They get up and come), 'Wingkenu wunuun' (She sings and goes away), and 'Om bene aneen' (He takes the bread and eats it).",
+          "metrics": {
+            "corpus_bleu": 1.23,
+            "corpus_chrfpp": 15.62,
+            "corpus_ter": 237.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              0.0,
+              2.63,
+              3.09
+            ],
+            "sentence_chrfpp": [
+              11.57,
+              6.59,
+              19.29,
+              19.02
+            ],
+            "sentence_ter": [
+              350.0,
+              175.0,
+              185.71,
+              366.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will come and see the man.",
+              "You sing and get up the dog.",
+              "Om Meneni karuwa anona wedmaan. → I will come and see the man.",
+              "Wingkeewa yeediriin wengambaranuuwa. → You sing and get up the dog."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.65,
+        "corpus_chrfpp": 20.19,
+        "corpus_ter": 325.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          3.39,
+          0.0,
+          3.82,
+          2.45
+        ],
+        "sentence_chrfpp": [
+          8.62,
+          4.61,
+          35.25,
+          10.98
+        ],
+        "sentence_ter": [
+          550.0,
+          225.0,
+          257.14,
+          466.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "We will hear the dog and he will hear the pig.",
+          "I drank the water and she saw the fish.",
+          "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen. → We will hear the dog and he will hear the pig.",
+          "Ok anaana oon wedmeen. → I drank the water and she saw the fish."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 2.44,
+          "metrics": {
+            "corpus_bleu": 2.84,
+            "corpus_chrfpp": 23.82,
+            "corpus_ter": 118.75,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.68,
+              0.0,
+              5.82,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              23.82,
+              18.49,
+              22.21,
+              33.2
+            ],
+            "sentence_ter": [
+              200.0,
+              125.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub wunuun Oma miniib.",
+              "Meneni awon baan Ambib wedmeen bene.",
+              "Ambib oon aniib awon wengambaraneen.",
+              "Wingkeewa om aneen wingkenu."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 2.84,
+        "corpus_chrfpp": 23.82,
+        "corpus_ter": 118.75,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          10.68,
+          0.0,
+          5.82,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          23.82,
+          18.49,
+          22.21,
+          33.2
+        ],
+        "sentence_ter": [
+          200.0,
+          125.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub wunuun Oma miniib.",
+          "Meneni awon baan Ambib wedmeen bene.",
+          "Ambib oon aniib awon wengambaraneen.",
+          "Wingkeewa om aneen wingkenu."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 2.8,
+          "metrics": {
+            "corpus_bleu": 4.14,
+            "corpus_chrfpp": 20.79,
+            "corpus_ter": 87.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              15.97,
+              6.92,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              11.61,
+              25.7,
+              23.07,
+              20.83
+            ],
+            "sentence_ter": [
+              150.0,
+              75.0,
+              71.43,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub miniib Yeederenib",
+              "Awon baan bene wedmeen",
+              "Oka aniib anona wedmoona Anon weng",
+              "Oka om Wingkeewa yeediriin"
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 10.17,
+          "metrics": {
+            "corpus_bleu": 3.02,
+            "corpus_chrfpp": 17.97,
+            "corpus_ter": 112.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              5.82,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              9.71,
+              19.61,
+              20.36,
+              20.14
+            ],
+            "sentence_ter": [
+              150.0,
+              125.0,
+              85.71,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Meneni miniib yeederenib",
+              "Wingkeewa baan awon bene om",
+              "Meneni oka om ye anona wedmoona",
+              "Wingkeewa yeediriin oka om"
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.14,
+        "corpus_chrfpp": 20.79,
+        "corpus_ter": 87.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          15.97,
+          6.92,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          11.61,
+          25.7,
+          23.07,
+          20.83
+        ],
+        "sentence_ter": [
+          150.0,
+          75.0,
+          71.43,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub miniib Yeederenib",
+          "Awon baan bene wedmeen",
+          "Oka aniib anona wedmoona Anon weng",
+          "Oka om Wingkeewa yeediriin"
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4
+      },
+      "delta": {
+        "bleu_delta": -1.12,
+        "chrf_delta": -2.82,
+        "ter_delta": 25.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.2,
+      "chrf": 2.99,
+      "ter": 6200.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'll do my best to translate the sentence into Yonggom, a language spoken in Papua New Guinea. Please note that my trans",
+      "reference": "Wananuuwa mananiib."
+    },
+    "baseline": {
+      "best_bleu": 4.14,
+      "best_chrf": 20.79,
+      "best_ter": 87.5,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Wenenub miniib Yeederenib",
+        "Awon baan bene wedmeen",
+        "Oka aniib anona wedmoona Anon weng",
+        "Oka om Wingkeewa yeediriin"
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 3.47,
+      "best_chrf": 27.05,
+      "best_ter": 137.5,
+      "best_em": 0.0,
+      "num_steps": 10,
+      "best_hypotheses": [
+        "Wenenub om wingkanuub, Oma om anaana weng.",
+        "Meneni baan oka, Ambib wedmeen oka.",
+        "Ambib awon oon Anon, ye weng wengambaranuuwa.",
+        "Wingkeewa banuun oka, yeediriin."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "best_step": 7
+    },
+    "step_by_step": {
+      "best_bleu": 1.65,
+      "best_chrf": 20.19,
+      "best_ter": 325.0,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "We will hear the dog and he will hear the pig.",
+        "I drank the water and she saw the fish.",
+        "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen. → We will hear the dog and he will hear the pig.",
+        "Ok anaana oon wedmeen. → I drank the water and she saw the fish."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "best_stage": "morphosyntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 2.84,
+      "best_chrf": 23.82,
+      "best_ter": 118.75,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Wenenub wunuun Oma miniib.",
+        "Meneni awon baan Ambib wedmeen bene.",
+        "Ambib oon aniib awon wengambaraneen.",
+        "Wingkeewa om aneen wingkenu."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 4.14,
+      "best_chrf": 20.79,
+      "best_ter": 87.5,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "Wenenub miniib Yeederenib",
+        "Awon baan bene wedmeen",
+        "Oka aniib anona wedmoona Anon weng",
+        "Oka om Wingkeewa yeediriin"
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ],
+      "delta": {
+        "bleu_delta": -1.12,
+        "chrf_delta": -2.82,
+        "ter_delta": 25.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1077 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-15T22:45:04.473981",
+    "puzzle_id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-sambanova",
+    "model_tier": "medium",
+    "num_train_pairs": 13,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "lakhota ki wičhakte",
+        "target": "The Indian killed them."
+      },
+      {
+        "source": "matho ki wakte",
+        "target": "I killed the bear."
+      },
+      {
+        "source": "lakhota ki mačho",
+        "target": "The Indian called me."
+      },
+      {
+        "source": "tuwa ničho",
+        "target": "Who called you?"
+      },
+      {
+        "source": "wičhaša ki tuwa kte",
+        "target": "The person killed someone."
+      },
+      {
+        "source": "tuwa hi he",
+        "target": "Who came?"
+      },
+      {
+        "source": "matho ki wičhačho",
+        "target": "He called the bears."
+      },
+      {
+        "source": "yahi čha hi",
+        "target": "You came, and he came."
+      },
+      {
+        "source": "matho ki hipi ną lakhota ki čhopi",
+        "target": "The bears came and called the Indian."
+      },
+      {
+        "source": "yahi čha hokšila ki nikte",
+        "target": "You came, and the boy killed you."
+      },
+      {
+        "source": "lakhota ki wačho ną hokšila ki wakte",
+        "target": "I called the Indian and killed the boy."
+      },
+      {
+        "source": "hokšila ki wakte čha tuwa lakhota ki wičhačho",
+        "target": "I killed the boy, and someone called the Indians."
+      },
+      {
+        "source": "lakhota ki hipi čha mayačho",
+        "target": "The Indians came, and you called me."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "wahi čha lakhota ki matho ki wičhačhopi",
+        "target": "I came and the Indians called the bears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte ną mačho",
+        "target": "The man killed you and called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte čha mačho",
+        "target": "The man killed you and he called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nikte",
+        "target": "He killed you.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "wahi čha lakhota ki matho ki wičhačhopi",
+      "reference": "I came and the Indians called the bears.",
+      "hypothesis": "A challenging sentence!\n\nBased on my research, it appears to be in the Lakota language, which is a Native American language spoken by the Lakota people.\n\nHere's my attempt at translating the sentence:\n\n\"Wahi čha lakhota ki matho ki wičhačhopi\"\n\n* \"Wahi\" might mean \"he\" or \"that one\"\n* \"čha\" could be a verb or a particle, possibly indicating a relationship or possession\n* \"lakhota\" refers to the Lakota people or language\n* \"ki\" is a preposition meaning \"of\" or \"belonging to\"\n* \"matho\" might mean \"bear\" (as in the animal)\n* \"ki\" (again) is a preposition meaning \"of\" or \"belonging to\"\n* \"wičhačhopi\" could be a verb or a noun, possibly related to \"to speak\" or \"language\"\n\nTaking a stab at it, a possible translation could be:\n\n\"He is a speaker of the Lakota language of the bear\" or \"That one belongs to the Lakota bear language\"\n\nPlease keep in mind that this is a very rough translation, and I may be entirely off the mark. Lakota is a complex language with its own grammar and syntax, and without more context or a fluent speaker's guidance, it's difficult to provide an accurate translation.",
+      "latency_s": 2.96,
+      "metrics": {
+        "corpus_bleu": 0.21,
+        "corpus_chrfpp": 6.51,
+        "corpus_ter": 2400.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.21
+        ],
+        "sentence_chrfpp": [
+          6.51
+        ],
+        "sentence_ter": [
+          2400.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "A challenging sentence!\n\nBased on my research, it appears to be in the Lakota language, which is a Native American language spoken by the Lakota people.\n\nHere's my attempt at translating the sentence:\n\n\"Wahi čha lakhota ki matho ki wičhačhopi\"\n\n* \"Wahi\" might mean \"he\" or \"that one\"\n* \"čha\" could be a verb or a particle, possibly indicating a relationship or possession\n* \"lakhota\" refers to the Lakota people or language\n* \"ki\" is a preposition meaning \"of\" or \"belonging to\"\n* \"matho\" might mean \"bear\" (as in the animal)\n* \"ki\" (again) is a preposition meaning \"of\" or \"belonging to\"\n* \"wičhačhopi\" could be a verb or a noun, possibly related to \"to speak\" or \"language\"\n\nTaking a stab at it, a possible translation could be:\n\n\"He is a speaker of the Lakota language of the bear\" or \"That one belongs to the Lakota bear language\"\n\nPlease keep in mind that this is a very rough translation, and I may be entirely off the mark. Lakota is a complex language with its own grammar and syntax, and without more context or a fluent speaker's guidance, it's difficult to provide an accurate translation."
+        ],
+        "references": [
+          "I came and the Indians called the bears."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 13,
+          "latency_s": 5.5,
+          "metrics": {
+            "corpus_bleu": 19.69,
+            "corpus_chrfpp": 63.24,
+            "corpus_ter": 38.46,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              32.47,
+              17.24,
+              21.36,
+              39.43
+            ],
+            "sentence_chrfpp": [
+              72.58,
+              59.04,
+              57.37,
+              63.84
+            ],
+            "sentence_ter": [
+              37.5,
+              42.86,
+              37.5,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You came, and the Indian called the bears.",
+              "The person killed you, and (someone) called me.",
+              "The person killed you, and you called me.",
+              "Killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 19.69,
+        "corpus_chrfpp": 63.24,
+        "corpus_ter": 38.46,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          32.47,
+          17.24,
+          21.36,
+          39.43
+        ],
+        "sentence_chrfpp": [
+          72.58,
+          59.04,
+          57.37,
+          63.84
+        ],
+        "sentence_ter": [
+          37.5,
+          42.86,
+          37.5,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You came, and the Indian called the bears.",
+          "The person killed you, and (someone) called me.",
+          "The person killed you, and you called me.",
+          "Killed you."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 2.66,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject (needs more context)\nki = possibly a subject or topic marker\nwičha- = possibly a root related to killing or action\n-kte = possibly a suffix indicating action or subject-object relationship\nmatho = possibly 'I' or 'me'\nwakte = possibly 'killed' or related to the action of killing",
+          "accumulated_rules": "1. The language might use a subject-marker (possibly \"ki\") to indicate the topic of the sentence.\n2. Verbs could be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.",
+          "metrics": {
+            "corpus_bleu": 2.71,
+            "corpus_chrfpp": 26.46,
+            "corpus_ter": 82.61,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.85,
+              6.92,
+              5.71
+            ],
+            "sentence_chrfpp": [
+              39.34,
+              16.55,
+              21.03
+            ],
+            "sentence_ter": [
+              75.0,
+              85.71,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bear killed the Indian.",
+              "The Indian is killing them.",
+              "The Indian kills them."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 3.19,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = possibly a subject or topic marker\nwičha- = possibly a root related to killing or action\n-kte = possibly a suffix indicating action or subject-object relationship\nmatho = possibly 'I' or 'me'\nwakte = possibly 'killed' or related to the action of killing, possibly a verb form\nmačho = possibly 'called me' or related to the action of calling",
+          "accumulated_rules": "1. The language might use a subject-marker (possibly \"ki\") to indicate the topic of the sentence.\n2. Verbs could be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There might be irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.",
+          "metrics": {
+            "corpus_bleu": 11.27,
+            "corpus_chrfpp": 46.64,
+            "corpus_ter": 69.23,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.55,
+              27.05,
+              14.26,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              46.72,
+              57.09,
+              39.52,
+              38.12
+            ],
+            "sentence_ter": [
+              87.5,
+              42.86,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bear called the Indian to kill me.",
+              "The bear that killed you called me.",
+              "The bear that killed you is calling me.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 2.9,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = possibly a subject or topic marker\nwičha- = possibly a root related to killing or action\n-kte = possibly a suffix indicating action or subject-object relationship\nmatho = possibly 'I' or 'me'\nwakte = possibly 'killed' or related to the action of killing, possibly a verb form\nmačho = possibly 'called me' or related to the action of calling\ntuwa = possibly 'who'\nničho = possibly related to the action of calling you",
+          "accumulated_rules": "1. The language might use a subject-marker (possibly \"ki\") to indicate the topic of the sentence.\n2. Verbs could be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There might be irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".",
+          "metrics": {
+            "corpus_bleu": 8.53,
+            "corpus_chrfpp": 35.24,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.5,
+              8.29,
+              19.2,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              33.72,
+              38.48,
+              39.63,
+              19.61
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian and I killed them.",
+              "The killer called you.",
+              "The killer called me.",
+              "You called."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 4.11,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship, possibly versatile\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = possibly 'person'\n[DELETED: None — All current entries are either confirmed, refined, or remain provisional without contradiction.]",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".\n[DELETED: None — The rules are either supported or remain provisional without contradiction.]",
+          "metrics": {
+            "corpus_bleu": 13.99,
+            "corpus_chrfpp": 42.21,
+            "corpus_ter": 65.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.87,
+              39.44,
+              7.72,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              17.47,
+              68.92,
+              45.31,
+              38.12
+            ],
+            "sentence_ter": [
+              87.5,
+              42.86,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The person called me to kill.",
+              "The person killed you and called.",
+              "The person killed and called you.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 3.4,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship, possibly versatile\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = possibly 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".\n5. Question formation may involve specific morphemes or word order, as seen in \"tuwa ničho\" and \"tuwa hi he\".",
+          "metrics": {
+            "corpus_bleu": 29.25,
+            "corpus_chrfpp": 49.22,
+            "corpus_ter": 53.85,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.5,
+              70.71,
+              21.85,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              24.61,
+              80.88,
+              49.4,
+              38.12
+            ],
+            "sentence_ter": [
+              87.5,
+              14.29,
+              37.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian and I are killing.",
+              "The person killed you and called me.",
+              "The person killed and called me.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 3.53,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = possibly 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\n[DELETED: wičhaša = possibly 'person' — reason: more accurately, wičhaša seems to be a noun for 'person']\n[DELETED: he = possibly a verb or action suffix — reason: insufficient evidence to support this as a distinct entry]",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".\n5. Question formation may involve specific morphemes or word order, as seen in \"tuwa ničho\" and \"tuwa hi he\".\n[DELETED: rule 5 — reason: question formation seems more complex and not fully captured by this rule]",
+          "metrics": {
+            "corpus_bleu": 29.01,
+            "corpus_chrfpp": 53.33,
+            "corpus_ter": 53.85,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.41,
+              70.71,
+              21.85,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              37.84,
+              80.88,
+              49.4,
+              38.12
+            ],
+            "sentence_ter": [
+              87.5,
+              14.29,
+              37.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "They killed the Indian who called me.",
+              "The person killed you and called me.",
+              "The person killed and called me.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 3.48,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = noun for 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\nyahi = possibly 'you'\nčha = possibly a conjunction or suffix indicating action or relationship",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".\n5. [DELETED: Question formation may involve specific morphemes or word order — reason: This rule was too broad and not fully accurate based on new examples.]",
+          "metrics": {
+            "corpus_bleu": 10.04,
+            "corpus_chrfpp": 44.66,
+            "corpus_ter": 65.38,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.61,
+              14.98,
+              7.36,
+              19.72
+            ],
+            "sentence_chrfpp": [
+              53.41,
+              53.94,
+              37.06,
+              12.89
+            ],
+            "sentence_ter": [
+              62.5,
+              57.14,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian and I killed the bears.",
+              "The person killed me and called.",
+              "The person killed and called.",
+              "Kill me."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 4.63,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = noun for 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\nyahi = 'you'\nčha = possibly a conjunction or suffix indicating action or relationship\n[DELETED: None — All current entries still hold with the new examples.]",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".\n5. The language uses a conjunction \"čha\" to connect clauses or actions, as seen in \"yahi čha hi\".",
+          "metrics": {
+            "corpus_bleu": 10.71,
+            "corpus_chrfpp": 48.3,
+            "corpus_ter": 69.23,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.59,
+              14.63,
+              21.57,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              47.83,
+              48.12,
+              52.3,
+              38.12
+            ],
+            "sentence_ter": [
+              75.0,
+              57.14,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bears and the Indian killed me.",
+              "The person killed and called.",
+              "The person killed, and he called.",
+              "You killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 6.26,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = noun for 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\nyahi = 'you'\nčha = conjunction or suffix indicating action or relationship\nhokšila = possibly 'boy'\nhipi = possibly related to the action of coming\nčhopi = possibly related to the action of calling\nną = possibly a conjunction or sequence indicator",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\" and \"mačho\", which do not follow the \"wičha-\" + \"-kte\" pattern.\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\".\n5. The language uses a conjunction \"čha\" to connect clauses or actions.\n[DELETED: None — All current entries still hold with the new examples, but refinements are needed for clarity on the roles of certain morphemes.]",
+          "metrics": {
+            "corpus_bleu": 36.96,
+            "corpus_chrfpp": 61.84,
+            "corpus_ter": 42.31,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              36.28,
+              70.71,
+              11.04,
+              39.43
+            ],
+            "sentence_chrfpp": [
+              69.81,
+              80.88,
+              45.84,
+              30.61
+            ],
+            "sentence_ter": [
+              37.5,
+              14.29,
+              62.5,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You and the Indian called the bears.",
+              "The person killed you and called me.",
+              "The person killed you, and I was called.",
+              "Kill you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 4.43,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = noun for 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\nyahi = 'you'\nčha = conjunction or suffix indicating action or relationship\nhokšila = possibly 'boy'\nhipi = possibly related to the action of coming\nčhopi = possibly related to the action of calling\nną = possibly a conjunction or sequence indicator\nwačho = possibly a verb form related to calling\nnikte = possibly a verb form indicating an action done to the subject 'you'",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\", \"mačho\", and potentially \"wačho\" and \"nikte\".\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\" and \"nikte\".\n5. The language uses a conjunction \"čha\" to connect clauses or actions.\n6. [New] The language might use \"ną\" as a conjunction or sequence indicator to connect actions or clauses.",
+          "metrics": {
+            "corpus_bleu": 31.78,
+            "corpus_chrfpp": 62.22,
+            "corpus_ter": 46.15,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              14.26,
+              70.71,
+              24.27,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              56.25,
+              80.88,
+              58.65,
+              43.22
+            ],
+            "sentence_ter": [
+              62.5,
+              14.29,
+              37.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian called and the bears called me.",
+              "The person killed you and called me.",
+              "The person killed you, and called me.",
+              "You were killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 3.48,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = noun for 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\nyahi = 'you'\nčha = conjunction or suffix indicating action or relationship\nhokšila = possibly 'boy'\nhipi = possibly related to the action of coming\nčhopi = possibly related to the action of calling\nną = possibly a conjunction or sequence indicator\nwačho = possibly a verb form related to calling\nnikte = possibly a verb form indicating an action done to the subject 'you'",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\", \"mačho\", and potentially \"wačho\" and \"nikte\".\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\" and \"nikte\".\n5. The language uses a conjunction \"čha\" to connect clauses or actions.\n6. The language might use \"ną\" as a conjunction or sequence indicator to connect actions or clauses.",
+          "metrics": {
+            "corpus_bleu": 27.07,
+            "corpus_chrfpp": 54.17,
+            "corpus_ter": 53.85,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.74,
+              70.71,
+              11.04,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              42.64,
+              80.88,
+              45.84,
+              43.22
+            ],
+            "sentence_ter": [
+              62.5,
+              14.29,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You and the Indian called me.",
+              "The person killed you and called me.",
+              "The person killed you, and I was called.",
+              "You were killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 4.44,
+          "accumulated_dict": "lakhota = possibly 'Indian' or related to the subject\nki = subject or topic marker\nwičha- = root related to killing or action\n-kte = suffix indicating action or subject-object relationship\nmatho = 'I' or 'me'\nwakte = 'killed' or related to the action of killing, possibly a verb form\nmačho = 'called me' or related to the action of calling\ntuwa = 'who'\nničho = related to the action of calling you, possibly including a morpheme for 'you'\nwičhaša = noun for 'person'\nhi = possibly related to the action of coming or a verb suffix\nhe = possibly a verb or action suffix\nyahi = 'you'\nčha = conjunction or suffix indicating action or relationship\nhokšila = possibly 'boy'\nhipi = possibly related to the action of coming\nčhopi = possibly related to the action of calling\nną = possibly a conjunction or sequence indicator\nwačho = possibly a verb form related to calling\nnikte = possibly a verb form indicating an action done to the subject 'you'\n[DELETED: None — No direct contradictions found]",
+          "accumulated_rules": "1. The language uses a subject-marker (\"ki\") to indicate the topic of the sentence.\n2. Verbs can be formed with a root (like \"wičha-\") followed by a suffix (like \"-kte\") to indicate the action or the relationship between the subject and object.\n3. There are irregular or diverse verb formation patterns, as suggested by \"wakte\", \"mačho\", and potentially \"wačho\" and \"nikte\".\n4. The language may use prefixes or additional morphemes to indicate the object of the action, as potentially seen in \"ničho\" and \"nikte\".\n5. The language uses a conjunction \"čha\" to connect clauses or actions.\n6. The language might use \"ną\" as a conjunction or sequence indicator to connect actions or clauses.\n[DELETED: None — No direct contradictions found]",
+          "metrics": {
+            "corpus_bleu": 19.48,
+            "corpus_chrfpp": 53.75,
+            "corpus_ter": 61.54,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.98,
+              11.04,
+              46.71,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              43.65,
+              48.98,
+              72.88,
+              43.22
+            ],
+            "sentence_ter": [
+              75.0,
+              71.43,
+              25.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You called the Indian, and he called me.",
+              "The person killed you, and I was called.",
+              "The person killed you, and he called me.",
+              "You were killed."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 31.78,
+        "corpus_chrfpp": 62.22,
+        "corpus_ter": 46.15,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          14.26,
+          70.71,
+          24.27,
+          19.0
+        ],
+        "sentence_chrfpp": [
+          56.25,
+          80.88,
+          58.65,
+          43.22
+        ],
+        "sentence_ter": [
+          62.5,
+          14.29,
+          37.5,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The Indian called and the bears called me.",
+          "The person killed you and called me.",
+          "The person killed you, and called me.",
+          "You were killed."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 10
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.21,
+      "chrf": 6.51,
+      "ter": 2400.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "A challenging sentence!\n\nBased on my research, it appears to be in the Lakota language, which is a Native American langu",
+      "reference": "I came and the Indians called the bears."
+    },
+    "baseline": {
+      "best_bleu": 19.69,
+      "best_chrf": 63.24,
+      "best_ter": 38.46,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "You came, and the Indian called the bears.",
+        "The person killed you, and (someone) called me.",
+        "The person killed you, and you called me.",
+        "Killed you."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 31.78,
+      "best_chrf": 62.22,
+      "best_ter": 46.15,
+      "best_em": 0.0,
+      "num_steps": 12,
+      "best_hypotheses": [
+        "The Indian called and the bears called me.",
+        "The person killed you and called me.",
+        "The person killed you, and called me.",
+        "You were killed."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ],
+      "best_step": 10
+    },
+    "step_by_step": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "human_inspiration": {
+      "error": "Rate limit persistente tras 3 intentos"
+    },
+    "self_correction": {
+      "error": "Rate limit persistente tras 3 intentos"
+    }
+  }
+}

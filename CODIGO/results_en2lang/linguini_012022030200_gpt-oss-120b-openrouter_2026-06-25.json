@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T22:19:43.242748",
+    "puzzle_id": "linguini_012022030200",
+    "language": "N|uuki",
+    "language_family": "Tuu (Sudáfrica)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 16,
+    "num_test_pairs": 6,
+    "strategies_run": [
+      0,
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012022030200",
+    "language": "N|uuki",
+    "language_family": "Tuu (Sudáfrica)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "ǂoo ŋǀii ŋ",
+        "target": "Does the man see me?"
+      },
+      {
+        "source": "ɡǀa ǃaukea ŋ ŋǀŋ",
+        "target": "Are you_{sg} afraid of me?"
+      },
+      {
+        "source": "cuu xae a ǂʔii ŋǁa",
+        "target": "Whom do you_{sg} think about?"
+      },
+      {
+        "source": "u ǁãu ke ǁu ǀqhõʕo",
+        "target": "Your_{pl} brother does not dance."
+      },
+      {
+        "source": "ɟanasa xae ǂqheeke",
+        "target": "Is it the thief who sings?"
+      },
+      {
+        "source": "ŋǀŋ si sĩisen ŋ ǃhaeke",
+        "target": "Will I work tomorrow?"
+      },
+      {
+        "source": "ǂhun ke ǃaukea ŋ ɡǀi",
+        "target": "The dog is afraid of us."
+      },
+      {
+        "source": "na ǁu ǂʔii ŋ ɡǀa xaŋki",
+        "target": "I do not think about your_{sg} mother."
+      },
+      {
+        "source": "ɡǀi aŋki si ǀqhõʕo ŋ ɡǃari",
+        "target": "Will our father dance in Upington?"
+      },
+      {
+        "source": "kiɟa xae ǂoo sĩisen ŋǁa",
+        "target": "Where does the man work?"
+      },
+      {
+        "source": "ɡǀa ŋǀii a ŋǁŋ",
+        "target": "Do you_{sg} see your_{sg} house?"
+      },
+      {
+        "source": "ŋǀŋ xae a ǃʔai",
+        "target": "Is it me whom you_{sg} call?"
+      },
+      {
+        "source": "u kee ǀeeki ǂʔii ŋǁa",
+        "target": "It is you_{pl} whom the woman thinks about."
+      },
+      {
+        "source": "a xaŋki ke kacuuʔi ŋ ɡǀa ts’aaʔa ŋ",
+        "target": "Your_{sg} mother asks if you_{sg} like me."
+      },
+      {
+        "source": "kama ɟa xae ŋ si ŋǀii u ŋǁa",
+        "target": "When will I see you_{pl}?"
+      },
+      {
+        "source": "ŋ ǃuu ke kacuuʔi ŋ ŋǀŋ si ǂqheeke ŋ ǃhaeke",
+        "target": "My grandfather asks if I will sing tomorrow."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "Our mother will not call your_{sg} brother.",
+        "target": "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "direction": "en2lang"
+      },
+      {
+        "source": "It is you_{sg} whom my dog is afraid of.",
+        "target": "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Where will you_{pl} sing?",
+        "target": "kiɟa xae u si ǂqheeke ŋǁa",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I ask if it is our grandfather whom you_{sg} think",
+        "target": "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Who will dance tomorrow?",
+        "target": "cuu xae si ǀqhõʕo ŋ !haeke",
+        "direction": "en2lang"
+      },
+      {
+        "source": "Do you_{pl} see us?",
+        "target": "gǀu ŋǀii i",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "Our mother will not call your_{sg} brother.",
+      "reference": "i xaŋki ke ǁu si !ʔai a ǁãu",
+      "hypothesis": "**N|uuki:**  \n*Mā‑tá kʰá nǝ sá‑kʰá tí kʰá yá‑tá bʰá‑r‑i‑nǝ.*  \n\n*(Word‑by‑word gloss: mother‑GEN will‑NEG call‑you‑SG brother‑ACC)*",
+      "latency_s": 5.24,
+      "metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 3.59,
+        "corpus_ter": 187.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0
+        ],
+        "sentence_chrfpp": [
+          3.59
+        ],
+        "sentence_ter": [
+          187.5
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**N|uuki:**  \n*Mā‑tá kʰá nǝ sá‑kʰá tí kʰá yá‑tá bʰá‑r‑i‑nǝ.*  \n\n*(Word‑by‑word gloss: mother‑GEN will‑NEG call‑you‑SG brother‑ACC)*"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu"
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 16,
+          "latency_s": 127.05,
+          "metrics": {
+            "corpus_bleu": 5.25,
+            "corpus_chrfpp": 34.17,
+            "corpus_ter": 71.05,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.38,
+              11.48,
+              11.52,
+              12.83,
+              15.09,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              29.84,
+              39.65,
+              29.3,
+              37.32,
+              34.28,
+              32.76
+            ],
+            "sentence_ter": [
+              62.5,
+              83.33,
+              83.33,
+              55.56,
+              66.67,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "na xaŋki si ǁu ǃʔai ǁãu a",
+              "ǂhun ke ǃaukea ŋ a ǂʔii",
+              "ǁa si ǃuu ǂqheeke",
+              "na ǃuu ke kacuuʔi ŋ ǂhun ǂʔii a",
+              "ǂoo si ǀqhõʕo ŋǁŋ",
+              "ɡǀa ǁu ŋǀii ɡǀi"
+            ],
+            "references": [
+              "i xaŋki ke ǁu si !ʔai a ǁãu",
+              "a kee ŋ ǂhun ǃaukea ŋǁa",
+              "kiɟa xae u si ǂqheeke ŋǁa",
+              "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+              "cuu xae si ǀqhõʕo ŋ !haeke",
+              "gǀu ŋǀii i"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.25,
+        "corpus_chrfpp": 34.17,
+        "corpus_ter": 71.05,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.38,
+          11.48,
+          11.52,
+          12.83,
+          15.09,
+          15.97
+        ],
+        "sentence_chrfpp": [
+          29.84,
+          39.65,
+          29.3,
+          37.32,
+          34.28,
+          32.76
+        ],
+        "sentence_ter": [
+          62.5,
+          83.33,
+          83.33,
+          55.56,
+          66.67,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "na xaŋki si ǁu ǃʔai ǁãu a",
+          "ǂhun ke ǃaukea ŋ a ǂʔii",
+          "ǁa si ǃuu ǂqheeke",
+          "na ǃuu ke kacuuʔi ŋ ǂhun ǂʔii a",
+          "ǂoo si ǀqhõʕo ŋǁŋ",
+          "ɡǀa ǁu ŋǀii ɡǀi"
+        ],
+        "references": [
+          "i xaŋki ke ǁu si !ʔai a ǁãu",
+          "a kee ŋ ǂhun ǃaukea ŋǁa",
+          "kiɟa xae u si ǂqheeke ŋǁa",
+          "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+          "cuu xae si ǀqhõʕo ŋ !haeke",
+          "gǀu ŋǀii i"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.0,
+      "chrf": 3.59,
+      "ter": 187.5,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**N|uuki:**  \n*Mā‑tá kʰá nǝ sá‑kʰá tí kʰá yá‑tá bʰá‑r‑i‑nǝ.*  \n\n*(Word‑by‑word gloss: mother‑GEN will‑NEG call‑you‑SG br",
+      "reference": "i xaŋki ke ǁu si !ʔai a ǁãu"
+    },
+    "baseline": {
+      "best_bleu": 5.25,
+      "best_chrf": 34.17,
+      "best_ter": 71.05,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "na xaŋki si ǁu ǃʔai ǁãu a",
+        "ǂhun ke ǃaukea ŋ a ǂʔii",
+        "ǁa si ǃuu ǂqheeke",
+        "na ǃuu ke kacuuʔi ŋ ǂhun ǂʔii a",
+        "ǂoo si ǀqhõʕo ŋǁŋ",
+        "ɡǀa ǁu ŋǀii ɡǀi"
+      ],
+      "best_references": [
+        "i xaŋki ke ǁu si !ʔai a ǁãu",
+        "a kee ŋ ǂhun ǃaukea ŋǁa",
+        "kiɟa xae u si ǂqheeke ŋǁa",
+        "na kacuuʔi ŋ ɡǀi ǃuu xae a ǂʔii ŋǁa",
+        "cuu xae si ǀqhõʕo ŋ !haeke",
+        "gǀu ŋǀii i"
+      ]
+    }
+  }
+}

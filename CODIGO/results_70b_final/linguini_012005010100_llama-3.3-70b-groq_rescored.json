@@ -1,0 +1,1659 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-29T22:14:38.505212",
+    "puzzle_id": "linguini_012005010100",
+    "language": "Tzeltal",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.3-70b-groq",
+    "num_test_pairs": 4,
+    "source_raw_log": "raw_logs/linguini_012005010100_llama-3.3-70b-groq.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": [
+        "You have no good corn."
+      ],
+      "hypothesis": "A attempt at translation. The sentence appears to be in a Mayan language, possibly K'iche' or a similar dialect. Here's my attempt at translation:\n\nCh'abal = cornfield or corn\nalekil = possibly related to the word for \"owner\" or \"one who has\"\n'ixim = corn\n\nSo, a possible translation of the sentence \"Ch'abal alekil 'ixim\" could be \"The owner of the cornfield\" or \"The one who has the corn\". However, please note that this is a rough attempt and the actual meaning may vary depending on the context and the specific dialect being used.",
+      "metrics": {
+        "corpus_bleu": 0.38,
+        "corpus_chrfpp": 4.74,
+        "corpus_ter": 1880.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.38
+        ],
+        "sentence_chrfpp": [
+          4.74
+        ],
+        "sentence_ter": [
+          1880.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "A attempt at translation. The sentence appears to be in a Mayan language, possibly K'iche' or a similar dialect. Here's my attempt at translation:\n\nCh'abal = cornfield or corn\nalekil = possibly related to the word for \"owner\" or \"one who has\"\n'ixim = corn\n\nSo, a possible translation of the sentence \"Ch'abal alekil 'ixim\" could be \"The owner of the cornfield\" or \"The one who has the corn\". However, please note that this is a rough attempt and the actual meaning may vary depending on the context and the specific dialect being used."
+        ],
+        "references": [
+          "You have no good corn."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 24.84,
+            "corpus_chrfpp": 48.7,
+            "corpus_ter": 64.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              41.11,
+              54.11,
+              13.54,
+              7.77
+            ],
+            "sentence_chrfpp": [
+              59.32,
+              75.62,
+              35.33,
+              37.52
+            ],
+            "sentence_ter": [
+              60.0,
+              33.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "There will be no good corn.",
+              "Will there be music at the party?",
+              "What did he have in Mexico?",
+              "I will have talk at the Tzotzil school of my mother yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 24.84,
+        "corpus_chrfpp": 48.7,
+        "corpus_ter": 64.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          41.11,
+          54.11,
+          13.54,
+          7.77
+        ],
+        "sentence_chrfpp": [
+          59.32,
+          75.62,
+          35.33,
+          37.52
+        ],
+        "sentence_ter": [
+          60.0,
+          33.33,
+          71.43,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "There will be no good corn.",
+          "Will there be music at the party?",
+          "What did he have in Mexico?",
+          "I will have talk at the Tzotzil school of my mother yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 24.84,
+        "corpus_chrfpp": 48.7,
+        "corpus_ter": 64.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          41.11,
+          54.11,
+          13.54,
+          7.77
+        ],
+        "sentence_chrfpp": [
+          59.32,
+          75.62,
+          35.33,
+          37.52
+        ],
+        "sentence_ter": [
+          60.0,
+          33.33,
+          71.43,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "There will be no good corn.",
+          "Will there be music at the party?",
+          "What did he have in Mexico?",
+          "I will have talk at the Tzotzil school of my mother yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 3.78,
+            "corpus_chrfpp": 15.47,
+            "corpus_ter": 103.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.4,
+              6.87,
+              12.6,
+              2.84
+            ],
+            "sentence_chrfpp": [
+              15.3,
+              12.06,
+              25.85,
+              10.37
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              71.43,
+              130.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The corn is spoiled.",
+              "Where will you be tomorrow?",
+              "Is Domingo happy in Mexico now?",
+              "The book is on the table and the dog is on the bed."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 4.13,
+            "corpus_chrfpp": 18.84,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              17.97,
+              9.29,
+              5.69,
+              3.67
+            ],
+            "sentence_chrfpp": [
+              30.26,
+              24.88,
+              17.46,
+              10.84
+            ],
+            "sentence_ter": [
+              80.0,
+              116.67,
+              85.71,
+              110.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon I will have corn.",
+              "Where did you have a snake at the sun?",
+              "Happy you had at Mexico life.",
+              "You had a head at the thread head at the rope head."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 3.32,
+            "corpus_chrfpp": 22.22,
+            "corpus_ter": 128.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              6.74,
+              13.13,
+              1.73
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              28.61,
+              32.82,
+              12.89
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              210.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Will there be a party in the town?",
+              "Is there happiness in Mexico in life?",
+              "The action or state is finished at the place of our ancestors at the place of the hill of our ancestors."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 5.96,
+            "corpus_chrfpp": 27.63,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              15.21,
+              12.6,
+              5.3
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              34.48,
+              26.35,
+              27.34
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              70.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Where will the party be?",
+              "Is it good in Mexico now?",
+              "There is a school in the Tzotzil school in the town."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 5.58,
+            "corpus_chrfpp": 26.58,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              15.85,
+              11.39,
+              4.11
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              34.5,
+              23.65,
+              26.59
+            ],
+            "sentence_ter": [
+              80.0,
+              66.67,
+              85.71,
+              90.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Is there a party?",
+              "Happiness was in Mexico in life.",
+              "There is a Tzotzil school in the Tzotzil school in the place I want."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 4.08,
+            "corpus_chrfpp": 26.08,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              6.74,
+              7.49,
+              4.83
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              28.7,
+              26.16,
+              26.22
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Will there be a party in the gathering?",
+              "Is there pleasure at Mexico City?",
+              "There is a Tzotzil school in the Tzotzil school in the town."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 9.32,
+            "corpus_chrfpp": 30.49,
+            "corpus_ter": 78.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              8.52,
+              13.83,
+              16.81
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              22.98,
+              33.95,
+              36.17
+            ],
+            "sentence_ter": [
+              80.0,
+              83.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Is there a gathering?",
+              "Is there happiness in Mexico?",
+              "I will have a Tzotzil school in my house."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 2.02,
+            "corpus_chrfpp": 17.59,
+            "corpus_ter": 192.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.39,
+              6.84,
+              2.41,
+              1.65
+            ],
+            "sentence_chrfpp": [
+              18.89,
+              27.13,
+              16.9,
+              12.56
+            ],
+            "sentence_ter": [
+              140.0,
+              166.67,
+              242.86,
+              200.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. Soon there will be corn.",
+              "Mi 'oy 'ox vob ta k'in? Will there be a party?",
+              "K'usi 'oy 'ox ta Mexico lavie? This translation is uncertain due to unknown morphemes 'K'usi' and 'lavie'.",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. This translation is uncertain due to unknown morphemes 'jna' and 'volje'."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 4.6,
+            "corpus_chrfpp": 28.37,
+            "corpus_ter": 150.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.95,
+              6.15,
+              7.35,
+              4.24
+            ],
+            "sentence_chrfpp": [
+              36.39,
+              30.32,
+              30.11,
+              22.03
+            ],
+            "sentence_ter": [
+              140.0,
+              183.33,
+              128.57,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. Soon there will be good corn.",
+              "Mi 'oy 'ox vob ta k'in? Will there be a party at the gathering?",
+              "K'usi 'oy 'ox ta Mexico lavie? Is there happiness in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. I will speak Tzotzil in the Tzotzil school."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 9.9,
+            "corpus_chrfpp": 34.05,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              15.21,
+              13.83,
+              14.21
+            ],
+            "sentence_chrfpp": [
+              21.84,
+              34.48,
+              35.73,
+              38.01
+            ],
+            "sentence_ter": [
+              80.0,
+              100.0,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be corn.",
+              "Where will the party be?",
+              "Is there pleasure in Mexico?",
+              "I will have a book in the Tzotzil school in my house."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 7.01,
+            "corpus_chrfpp": 31.55,
+            "corpus_ter": 232.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              13.95,
+              25.75,
+              3.44,
+              2.44
+            ],
+            "sentence_chrfpp": [
+              36.39,
+              64.37,
+              23.75,
+              20.67
+            ],
+            "sentence_ter": [
+              140.0,
+              133.33,
+              285.71,
+              300.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim. Soon there will be good corn.",
+              "Mi 'oy 'ox vob ta k'in? Will there be music at the party?",
+              "K'usi 'oy 'ox ta Mexico lavie? This translation is challenging without knowing 'K'usi', but it might mean \"Is there something in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje. This translation is highly speculative due to unknown morphemes 'jna' and 'volje', but it might relate to \"Having Tzotzil in a place."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 12,
+          "metrics": {
+            "corpus_bleu": 20.78,
+            "corpus_chrfpp": 43.81,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              11.34,
+              9.03
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              31.59,
+              33.9
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What did you have at school in Mexico?",
+              "I had a book at the Tzotzil school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 13,
+          "metrics": {
+            "corpus_bleu": 21.54,
+            "corpus_chrfpp": 41.97,
+            "corpus_ter": 67.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              13.54,
+              5.02
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              35.09,
+              25.73
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What did you have in Mexico?",
+              "What was the talk at the school yesterday?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 14,
+          "metrics": {
+            "corpus_bleu": 22.09,
+            "corpus_chrfpp": 41.87,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              24.45,
+              54.11,
+              11.34,
+              8.4
+            ],
+            "sentence_chrfpp": [
+              42.86,
+              75.62,
+              31.59,
+              27.95
+            ],
+            "sentence_ter": [
+              80.0,
+              33.33,
+              100.0,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be good corn.",
+              "Will there be music at the party?",
+              "What did you have at school in Mexico?",
+              "I had talk at the school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 22.09,
+        "corpus_chrfpp": 41.87,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          24.45,
+          54.11,
+          11.34,
+          8.4
+        ],
+        "sentence_chrfpp": [
+          42.86,
+          75.62,
+          31.59,
+          27.95
+        ],
+        "sentence_ter": [
+          80.0,
+          33.33,
+          100.0,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Soon there will be good corn.",
+          "Will there be music at the party?",
+          "What did you have at school in Mexico?",
+          "I had talk at the school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 14,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 20.78,
+        "corpus_chrfpp": 43.81,
+        "corpus_ter": 75.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          24.45,
+          54.11,
+          11.34,
+          9.03
+        ],
+        "sentence_chrfpp": [
+          42.86,
+          75.62,
+          31.59,
+          33.9
+        ],
+        "sentence_ter": [
+          80.0,
+          33.33,
+          100.0,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Soon there will be good corn.",
+          "Will there be music at the party?",
+          "What did you have at school in Mexico?",
+          "I had a book at the Tzotzil school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 12,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 2.36,
+            "corpus_chrfpp": 19.14,
+            "corpus_ter": 89.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.64,
+              6.87,
+              5.93,
+              4.52
+            ],
+            "sentence_chrfpp": [
+              31.0,
+              10.72,
+              26.33,
+              13.46
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              85.71,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You had corn at home today.",
+              "Where will Domingo be tomorrow?",
+              "Soon there will be no haricots in my pot.",
+              "Will there be a party in San Cristobal tomorrow?"
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 0.88,
+            "corpus_chrfpp": 10.75,
+            "corpus_ter": 167.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              3.38
+            ],
+            "sentence_chrfpp": [
+              6.22,
+              9.26,
+              12.9,
+              12.93
+            ],
+            "sentence_ter": [
+              300.0,
+              166.67,
+              128.57,
+              130.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Mi 'oy sbatz'i chi'il li Xun e? → Is Juan a true friend to Xun?",
+              "Muk' bu li Xunka e. → Xunka is not anywhere.",
+              "'oy 'ixim ta ana → There is corn at home.",
+              "'ox 'oy nax li Romin → Romin was or will be on today."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 4.16,
+            "corpus_chrfpp": 19.47,
+            "corpus_ter": 96.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.27,
+              9.29,
+              7.49,
+              3.53
+            ],
+            "sentence_chrfpp": [
+              24.23,
+              30.1,
+              17.67,
+              10.5
+            ],
+            "sentence_ter": [
+              100.0,
+              116.67,
+              71.43,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will soon have a good house.",
+              "Was there a school in San Cristobal last year?",
+              "Is there corn in his pot?",
+              "He has no haricots today."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 1.12,
+            "corpus_chrfpp": 10.89,
+            "corpus_ter": 164.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.29,
+              3.67,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              16.8,
+              19.87,
+              9.65,
+              0.0
+            ],
+            "sentence_ter": [
+              240.0,
+              166.67,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "K'usi 'oy \"ox ta achan-vun volje? → What did you have at school yesterday?",
+              "Bu 'oy 'ox k'op nax? → Where was the talk today?",
+              "Ch'abal 'ox schi'il li Romin e junabi. → Last year Domingo had no friend.",
+              ""
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 4,
+            "missing_indices": [
+              3
+            ],
+            "complete": false
+          },
+          "complete": false
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 1.12,
+        "corpus_chrfpp": 10.89,
+        "corpus_ter": 164.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.29,
+          3.67,
+          0.0,
+          0.0
+        ],
+        "sentence_chrfpp": [
+          16.8,
+          19.87,
+          9.65,
+          0.0
+        ],
+        "sentence_ter": [
+          240.0,
+          166.67,
+          200.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "K'usi 'oy \"ox ta achan-vun volje? → What did you have at school yesterday?",
+          "Bu 'oy 'ox k'op nax? → Where was the talk today?",
+          "Ch'abal 'ox schi'il li Romin e junabi. → Last year Domingo had no friend.",
+          ""
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 3,
+        "num_expected": 4,
+        "missing_indices": [
+          3
+        ],
+        "complete": false
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 4.16,
+        "corpus_chrfpp": 19.47,
+        "corpus_ter": 96.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          7.27,
+          9.29,
+          7.49,
+          3.53
+        ],
+        "sentence_chrfpp": [
+          24.23,
+          30.1,
+          17.67,
+          10.5
+        ],
+        "sentence_ter": [
+          100.0,
+          116.67,
+          71.43,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I will soon have a good house.",
+          "Was there a school in San Cristobal last year?",
+          "Is there corn in his pot?",
+          "He has no haricots today."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "morphosyntax",
+      "all_steps_complete": false
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 31.92,
+            "corpus_chrfpp": 50.99,
+            "corpus_ter": 64.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              34.57,
+              80.91,
+              13.54,
+              9.08
+            ],
+            "sentence_chrfpp": [
+              57.4,
+              89.76,
+              35.09,
+              36.12
+            ],
+            "sentence_ter": [
+              80.0,
+              16.67,
+              71.43,
+              80.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Soon there will be no good corn.",
+              "Is there music at the party?",
+              "What did you have in Mexico?",
+              "I had talk at the Tzotzil school yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 31.92,
+        "corpus_chrfpp": 50.99,
+        "corpus_ter": 64.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          34.57,
+          80.91,
+          13.54,
+          9.08
+        ],
+        "sentence_chrfpp": [
+          57.4,
+          89.76,
+          35.09,
+          36.12
+        ],
+        "sentence_ter": [
+          80.0,
+          16.67,
+          71.43,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Soon there will be no good corn.",
+          "Is there music at the party?",
+          "What did you have in Mexico?",
+          "I had talk at the Tzotzil school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 31.92,
+        "corpus_chrfpp": 50.99,
+        "corpus_ter": 64.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          34.57,
+          80.91,
+          13.54,
+          9.08
+        ],
+        "sentence_chrfpp": [
+          57.4,
+          89.76,
+          35.09,
+          36.12
+        ],
+        "sentence_ter": [
+          80.0,
+          16.67,
+          71.43,
+          80.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Soon there will be no good corn.",
+          "Is there music at the party?",
+          "What did you have in Mexico?",
+          "I had talk at the Tzotzil school yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 11.84,
+            "corpus_chrfpp": 42.69,
+            "corpus_ter": 153.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.5,
+              32.38,
+              6.25,
+              5.62
+            ],
+            "sentence_chrfpp": [
+              18.58,
+              75.11,
+              31.01,
+              43.39
+            ],
+            "sentence_ter": [
+              180.0,
+              133.33,
+              157.14,
+              150.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Ch'abal alekil 'ixim - Soon there will be much corn.",
+              "Mi 'oy 'ox vob ta k'in? - Is there music at the party?",
+              "K'usi 'oy 'ox ta Mexico lavie? - What did he have in Mexico?",
+              "Oy \"ox k'op ta batz'i k'op ta jna volje - There was talk about Tzotzil language at my place yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 23.42,
+            "corpus_chrfpp": 45.48,
+            "corpus_ter": 60.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              80.91,
+              6.27,
+              12.19
+            ],
+            "sentence_chrfpp": [
+              16.89,
+              89.76,
+              21.72,
+              50.07
+            ],
+            "sentence_ter": [
+              100.0,
+              16.67,
+              85.71,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "There will be corn soon.",
+              "Is there music at the party?",
+              "What did he have in San Cristobal yesterday?",
+              "There was talk about Tzotzil language at my place yesterday."
+            ],
+            "references": [
+              "You have no good corn.",
+              "Was there music at the party?",
+              "What will there be in Mexico today?",
+              "There was a talk in Tzotzil in my house yesterday."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 23.42,
+        "corpus_chrfpp": 45.48,
+        "corpus_ter": 60.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          9.65,
+          80.91,
+          6.27,
+          12.19
+        ],
+        "sentence_chrfpp": [
+          16.89,
+          89.76,
+          21.72,
+          50.07
+        ],
+        "sentence_ter": [
+          100.0,
+          16.67,
+          85.71,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "There will be corn soon.",
+          "Is there music at the party?",
+          "What did he have in San Cristobal yesterday?",
+          "There was talk about Tzotzil language at my place yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 23.42,
+        "corpus_chrfpp": 45.48,
+        "corpus_ter": 60.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          9.65,
+          80.91,
+          6.27,
+          12.19
+        ],
+        "sentence_chrfpp": [
+          16.89,
+          89.76,
+          21.72,
+          50.07
+        ],
+        "sentence_ter": [
+          100.0,
+          16.67,
+          85.71,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "There will be corn soon.",
+          "Is there music at the party?",
+          "What did he have in San Cristobal yesterday?",
+          "There was talk about Tzotzil language at my place yesterday."
+        ],
+        "references": [
+          "You have no good corn.",
+          "Was there music at the party?",
+          "What will there be in Mexico today?",
+          "There was a talk in Tzotzil in my house yesterday."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "self_correction",
+      "all_steps_complete": true
+    }
+  }
+}

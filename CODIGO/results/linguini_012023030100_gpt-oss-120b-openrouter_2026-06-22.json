@@ -1,0 +1,397 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T08:06:38.757412",
+    "puzzle_id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 17,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      1,
+      4
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012023030100",
+    "language": "Coastal Marind",
+    "language_family": "Trans-New Guinea (Papua, Indonesia)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ob-dahetok",
+        "target": "You_{sg} really returned."
+      },
+      {
+        "source": "nake-dahetok",
+        "target": "We returned."
+      },
+      {
+        "source": "nambat-ihwin",
+        "target": "Aw, I cried."
+      },
+      {
+        "source": "nambe-otab",
+        "target": "We really chased you_{pl} away."
+      },
+      {
+        "source": "um-kulaɣawn",
+        "target": "He laughed at you_{sg} in vain."
+      },
+      {
+        "source": "e-keseh",
+        "target": "You_{pl} spat on him."
+      },
+      {
+        "source": "ubate-huɣanab",
+        "target": "Aw, you_{sg} silenced us."
+      },
+      {
+        "source": "nakum-hoɣab",
+        "target": "I silenced you_{pl} in vain."
+      },
+      {
+        "source": "nambame-ɣadaɣawn",
+        "target": "Oh, we left you_{sg} behind!"
+      },
+      {
+        "source": "ebe-ɣadanawn",
+        "target": "You_{pl} really left us behind."
+      },
+      {
+        "source": "ibatum-ɣadewn",
+        "target": "Aw, you_{pl} left him behind in vain."
+      },
+      {
+        "source": "a-isanab",
+        "target": "He cut me in half."
+      },
+      {
+        "source": "obam-eseb",
+        "target": "Oh, you_{sg} cut him in half!"
+      },
+      {
+        "source": "bate-tamanab",
+        "target": "Aw, we floated to the surface."
+      },
+      {
+        "source": "ba-tamab",
+        "target": "You_{pl} really floated to the surface."
+      },
+      {
+        "source": "a-ɣuyaɣah",
+        "target": "You_{sg} shuddered."
+      },
+      {
+        "source": "bam-ɣuyanah",
+        "target": "Oh, I shuddered!"
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "e-ɣuyanah",
+        "target": "We shuddered.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ba-ihwin",
+        "target": "He really cried.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nambum-kisaɣah",
+        "target": "I really spat on you_{sg} in vain.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "bat-ɣadawn",
+        "target": "Aw, he left you_{pl} behind.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ubamum-kolewn",
+        "target": "Oh, you_{sg} laughed at him in vain!",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 53.11,
+          "metrics": {
+            "corpus_bleu": 3.29,
+            "corpus_chrfpp": 28.02,
+            "corpus_ter": 116.67,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              16.23,
+              4.11,
+              8.91,
+              5.41
+            ],
+            "sentence_chrfpp": [
+              65.66,
+              32.89,
+              17.68,
+              29.47,
+              23.96
+            ],
+            "sentence_ter": [
+              100.0,
+              66.67,
+              185.71,
+              80.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) shuddered.",
+              "You (pl) cried.",
+              "We (in vain) ___ (the verb “kisaɣah” is not attested; best guess: “laughed”).",
+              "You (pl) really left (someone) behind.",
+              "You (sg) really laughed at us. === END ==="
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 3.29,
+        "corpus_chrfpp": 28.02,
+        "corpus_ter": 116.67,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          16.23,
+          16.23,
+          4.11,
+          8.91,
+          5.41
+        ],
+        "sentence_chrfpp": [
+          65.66,
+          32.89,
+          17.68,
+          29.47,
+          23.96
+        ],
+        "sentence_ter": [
+          100.0,
+          66.67,
+          185.71,
+          80.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You (pl) shuddered.",
+          "You (pl) cried.",
+          "We (in vain) ___ (the verb “kisaɣah” is not attested; best guess: “laughed”).",
+          "You (pl) really left (someone) behind.",
+          "You (sg) really laughed at us. === END ==="
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 17,
+          "latency_s": 76.91,
+          "metrics": {
+            "corpus_bleu": 4.56,
+            "corpus_chrfpp": 25.81,
+            "corpus_ter": 87.5,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.23,
+              16.23,
+              3.55,
+              7.12,
+              5.41
+            ],
+            "sentence_chrfpp": [
+              65.66,
+              32.89,
+              8.44,
+              31.99,
+              18.96
+            ],
+            "sentence_ter": [
+              100.0,
+              66.67,
+              85.71,
+              60.0,
+              114.29
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "You (pl) shuddered.",
+              "You (pl) cried.",
+              "We cut him in half.",
+              "They left us behind.",
+              "You (sg) silenced them in vain.=== END ==="
+            ],
+            "references": [
+              "We shuddered.",
+              "He really cried.",
+              "I really spat on you_{sg} in vain.",
+              "Aw, he left you_{pl} behind.",
+              "Oh, you_{sg} laughed at him in vain!"
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.56,
+        "corpus_chrfpp": 25.81,
+        "corpus_ter": 87.5,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          16.23,
+          16.23,
+          3.55,
+          7.12,
+          5.41
+        ],
+        "sentence_chrfpp": [
+          65.66,
+          32.89,
+          8.44,
+          31.99,
+          18.96
+        ],
+        "sentence_ter": [
+          100.0,
+          66.67,
+          85.71,
+          60.0,
+          114.29
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "You (pl) shuddered.",
+          "You (pl) cried.",
+          "We cut him in half.",
+          "They left us behind.",
+          "You (sg) silenced them in vain.=== END ==="
+        ],
+        "references": [
+          "We shuddered.",
+          "He really cried.",
+          "I really spat on you_{sg} in vain.",
+          "Aw, he left you_{pl} behind.",
+          "Oh, you_{sg} laughed at him in vain!"
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "baseline": {
+      "best_bleu": 3.29,
+      "best_chrf": 28.02,
+      "best_ter": 116.67,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "You (pl) shuddered.",
+        "You (pl) cried.",
+        "We (in vain) ___ (the verb “kisaɣah” is not attested; best guess: “laughed”).",
+        "You (pl) really left (someone) behind.",
+        "You (sg) really laughed at us. === END ==="
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ]
+    },
+    "human_inspiration": {
+      "best_bleu": 4.56,
+      "best_chrf": 25.81,
+      "best_ter": 87.5,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "You (pl) shuddered.",
+        "You (pl) cried.",
+        "We cut him in half.",
+        "They left us behind.",
+        "You (sg) silenced them in vain.=== END ==="
+      ],
+      "best_references": [
+        "We shuddered.",
+        "He really cried.",
+        "I really spat on you_{sg} in vain.",
+        "Aw, he left you_{pl} behind.",
+        "Oh, you_{sg} laughed at him in vain!"
+      ]
+    }
+  }
+}

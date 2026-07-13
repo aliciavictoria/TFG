@@ -1,0 +1,1649 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-22T11:49:24.502588",
+    "puzzle_id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "model_key": "llama-3.1-8b-groq",
+    "model_tier": "weak",
+    "num_train_pairs": 10,
+    "num_test_pairs": 5,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012016030100",
+    "language": "Kunuz Nubian",
+    "language_family": "Nilo-Saharan (Egipto/Sudán)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "ar kanarriːcciːg kamiːg jaːnticcirsu.",
+        "target": "We bought the camels for the neighbours."
+      },
+      {
+        "source": "tirt kadeːg allesu.",
+        "target": "The owner repaired the dress."
+      },
+      {
+        "source": "jahali waliːg darbadki biticcirra.",
+        "target": "The young men will give the chicken to the dogs."
+      },
+      {
+        "source": "man jahalgi kadeːcciːg maːgtirsu.",
+        "target": "He stole the dresses for the young man."
+      },
+      {
+        "source": "ay beyyeːcciːg ajaːnirri.",
+        "target": "I am buying the necklaces."
+      },
+      {
+        "source": "wal aygi baːbiːg eldeːnsu.",
+        "target": "The dog found the doors for me."
+      },
+      {
+        "source": "magas ikki waliːg ticcirsu.",
+        "target": "The thief gave you (pl.) the dogs."
+      },
+      {
+        "source": "iːdi magaski kamiːg tirsa.",
+        "target": "The men gave the camels to the thief."
+      },
+      {
+        "source": "ay hanuːg bijomri.",
+        "target": "I will strike the donkey."
+      },
+      {
+        "source": "sarkaːyi aygi beyyeːcciːg adeːnda.",
+        "target": "The cowards are giving me the necklaces."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "magasi argi ajomirra.",
+        "target": "The thieves are striking us.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay kanarriːg baːbki alletirsi.",
+        "target": "I repaired the door for the neighbour.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "hanu tirtiːg elirsu.",
+        "target": "The donkey found the owners.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "tirti argi kamgi deːccirsa.",
+        "target": "The owners gave us the camel.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "ay darbadki bijaːndi.",
+        "target": "I will buy the chicken.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "magasi argi ajomirra.",
+      "reference": "The thieves are striking us.",
+      "hypothesis": "I'm not aware of any language that matches the given sentence. It's possible that it's a made-up or fictional language. However, I can try to break down the sentence into individual words and provide a possible interpretation.\n\nHere's my attempt:\n\n- \"magasi\" might be similar to the word \"magazi\" which is a Swahili word for \"storehouse\" or \"warehouse\".\n- \"argi\" could be related to the word \"argi\" in the Basque language, which means \"dark\" or \"black\".\n- \"ajomirra\" is not recognizable in any language I'm familiar with.\n\nConsidering the possible meanings of the individual words, a rough translation of the sentence could be:\n\n\"The dark storehouse\" or \"The black warehouse\".\n\nPlease note that this is a highly speculative translation, and I'm not confident in its accuracy. If you could provide more context or information about the language, I'd be happy to try and help further.",
+      "latency_s": 90.82,
+      "metrics": {
+        "corpus_bleu": 0.23,
+        "corpus_chrfpp": 4.5,
+        "corpus_ter": 2880.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.23
+        ],
+        "sentence_chrfpp": [
+          4.5
+        ],
+        "sentence_ter": [
+          2880.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "I'm not aware of any language that matches the given sentence. It's possible that it's a made-up or fictional language. However, I can try to break down the sentence into individual words and provide a possible interpretation.\n\nHere's my attempt:\n\n- \"magasi\" might be similar to the word \"magazi\" which is a Swahili word for \"storehouse\" or \"warehouse\".\n- \"argi\" could be related to the word \"argi\" in the Basque language, which means \"dark\" or \"black\".\n- \"ajomirra\" is not recognizable in any language I'm familiar with.\n\nConsidering the possible meanings of the individual words, a rough translation of the sentence could be:\n\n\"The dark storehouse\" or \"The black warehouse\".\n\nPlease note that this is a highly speculative translation, and I'm not confident in its accuracy. If you could provide more context or information about the language, I'd be happy to try and help further."
+        ],
+        "references": [
+          "The thieves are striking us."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 1.11,
+          "metrics": {
+            "corpus_bleu": 8.05,
+            "corpus_chrfpp": 47.35,
+            "corpus_ter": 139.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.03,
+              7.14,
+              24.81,
+              3.22,
+              17.54
+            ],
+            "sentence_chrfpp": [
+              27.25,
+              47.06,
+              74.77,
+              36.44,
+              54.76
+            ],
+            "sentence_ter": [
+              180.0,
+              114.29,
+              100.0,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. → The thief will strike the donkey.",
+              "ay kanarriːg baːbki alletirsi. → I bought the doors for the neighbours.",
+              "hanu tirtiːg elirsu. → The donkey found the owner.",
+              "tirti argi kamgi deːccirsa. → The owner will give the camels to the thief.",
+              "ay darbadki bijaːndi. → I will strike the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.05,
+        "corpus_chrfpp": 47.35,
+        "corpus_ter": 139.29,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.03,
+          7.14,
+          24.81,
+          3.22,
+          17.54
+        ],
+        "sentence_chrfpp": [
+          27.25,
+          47.06,
+          74.77,
+          36.44,
+          54.76
+        ],
+        "sentence_ter": [
+          180.0,
+          114.29,
+          100.0,
+          200.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "magasi argi ajomirra. → The thief will strike the donkey.",
+          "ay kanarriːg baːbki alletirsi. → I bought the doors for the neighbours.",
+          "hanu tirtiːg elirsu. → The donkey found the owner.",
+          "tirti argi kamgi deːccirsa. → The owner will give the camels to the thief.",
+          "ay darbadki bijaːndi. → I will strike the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 31.13,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating repair)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. Possessive marker/genitive: attached to noun\n4. Determiner/article: precedes noun\n5. [DELETED: rule — reason]",
+          "metrics": {
+            "corpus_bleu": 2.29,
+            "corpus_chrfpp": 26.24,
+            "corpus_ter": 139.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.2,
+              7.77,
+              5.52,
+              3.74,
+              4.46
+            ],
+            "sentence_chrfpp": [
+              11.44,
+              40.85,
+              29.24,
+              26.12,
+              16.68
+            ],
+            "sentence_ter": [
+              160.0,
+              100.0,
+              120.0,
+              166.67,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. We have a big house.",
+              "ay kanarriːg baːbki alletirsi. I bought the camels for the neighbours.",
+              "hanu tirtiːg elirsu. The owner repaired the dress.",
+              "tirti argi kamgi deːccirsa. The owner repaired the house for the neighbours.",
+              "ay darbadki bijaːndi. I bought the clothes for the neighbours."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 1.14,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to verb)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating repair)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]\n9. jahali = determiner/article (meaning unclear)\n10. waliːg = possessive marker/genitive (attached to noun)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. Possessive marker/genitive: attached to verb (not noun)\n4. [DELETED: rule — reason]",
+          "metrics": {
+            "corpus_bleu": 1.7,
+            "corpus_chrfpp": 21.89,
+            "corpus_ter": 182.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.63,
+              3.22,
+              4.46,
+              3.22,
+              5.82
+            ],
+            "sentence_chrfpp": [
+              12.24,
+              14.31,
+              28.09,
+              25.45,
+              33.0
+            ],
+            "sentence_ter": [
+              220.0,
+              157.14,
+              140.0,
+              183.33,
+              220.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. -> We bought the house for the young men.",
+              "ay kanarriːg baːbki alletirsi. -> The owner gave the camels to the baby.",
+              "hanu tirtiːg elirsu. -> The owner repaired the house.",
+              "tirti argi kamgi deːccirsa. -> The owner bought the dress for the neighbours.",
+              "ay darbadki bijaːndi. -> The owner gave the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 1.56,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to noun)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating completion or specific action)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]\n9. jahali = determiner/article (indicating specific type of noun or relationship)\n10. waliːg = possessive marker/genitive (attached to noun)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. [DELETED: rule — reason]\n4. Possessive marker/genitive: attached to noun",
+          "metrics": {
+            "corpus_bleu": 1.66,
+            "corpus_chrfpp": 23.58,
+            "corpus_ter": 189.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.91,
+              3.38,
+              4.07,
+              3.01,
+              5.44
+            ],
+            "sentence_chrfpp": [
+              18.48,
+              11.36,
+              28.25,
+              26.7,
+              37.05
+            ],
+            "sentence_ter": [
+              240.0,
+              128.57,
+              160.0,
+              200.0,
+              240.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. -> The owner will give the house to the guests.",
+              "ay kanarriːg baːbki alletirsi. -> The camels will eat the grass.",
+              "hanu tirtiːg elirsu. -> The owner will repair the door.",
+              "tirti argi kamgi deːccirsa. -> The owner will buy the dress for the guest.",
+              "ay darbadki bijaːndi. -> The young men will give the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 1.45,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to noun)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating completion or specific action, or present tense)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]\n9. jahali = determiner/article (indicating specific type of noun or relationship)\n10. waliːg = possessive marker/genitive (attached to noun)\n11. man = pronoun (he)\n12. jahalgi = determiner/article (indicating specific type of noun or relationship)\n13. beyyeːcciːg = noun/pronoun (necklaces)\n14. ajaːnirri = verb phrase (buying)\n15. darbadki = noun (young men)\n16. biticcirra = verb phrase (give)\n17. maːgtirsu = verb phrase (steal)\n18. ay = pronoun (I)",
+          "accumulated_rules": "In the first example, \"ar kanarriːcciːg kamiːg jaːnticcirsu\", I see that \"ar\" is still a determiner/article, and \"kamiːg\" is still a possessive marker/genitive. However, I notice that \"jaːnticcirsu\" is a noun, and it seems to be in a different position than expected. I will need to revise my hypothesis about the word order of possessive phrases.\nIn the third example, \"jahali waliːg darbadki biticcirra\", I see that \"jahali\" is a determiner/article, and \"waliːg\" is a possessive marker/genitive. However, I notice that \"darbadki\" is a noun, and it seems to be in a different position than expected. I will need to revise my hypothesis about the word order of possessive phrases.\nIn the fifth example, \"ay beyyeːcciːg ajaːnirri\", I see that \"ay\" is a pronoun, and \"beyyeːcciːg\" is a noun/pronoun. However, I notice that \"ajaːnirri\" is a verb phrase, and it seems to be in the present tense. This suggests that the suffix \"kadeːg\" may not be limited to indicating completion or specific action, but may also be used to indicate the present tense.\n1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. [DELETED: rule — reason]\n4. Possessive marker/genitive: attached to noun\n5. Possessive phrases: may have a different word order than expected",
+          "metrics": {
+            "corpus_bleu": 2.1,
+            "corpus_chrfpp": 25.12,
+            "corpus_ter": 178.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.38,
+              6.15,
+              4.07,
+              3.01,
+              5.82
+            ],
+            "sentence_chrfpp": [
+              18.56,
+              22.48,
+              25.6,
+              25.21,
+              35.66
+            ],
+            "sentence_ter": [
+              200.0,
+              128.57,
+              160.0,
+              200.0,
+              220.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. -> The owner is looking for the house.",
+              "ay kanarriːg baːbki alletirsi. -> I am buying the camels for the baby.",
+              "hanu tirtiːg elirsu. -> The owner is repairing the house.",
+              "tirti argi kamgi deːccirsa. -> The owner is repairing the house for the neighbour.",
+              "ay darbadki bijaːndi. -> I am giving the chicken to the young men."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 31.56,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to noun)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating present tense)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]\n9. jahali = determiner/article (indicating specific type of noun or relationship)\n10. waliːg = possessive marker/genitive (attached to noun)\n11. man = pronoun (he)\n12. jahalgi = determiner/article (indicating specific type of noun or relationship)\n13. beyyeːcciːg = noun/pronoun (necklaces)\n14. ajaːnirri = verb phrase (buying)\n15. darbadki = noun (young men)\n16. biticcirra = verb phrase (give)\n17. maːgtirsu = verb phrase (steal)\n18. ay = pronoun (I)\n19. baːbiːg = noun (doors)\n20. eldeːnsu = verb phrase (find)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. Possessive marker/genitive: attached to noun\n4. Possessive phrases: may have a different word order than expected\n5. Determiner/article: used to indicate a specific type of noun or relationship",
+          "metrics": {
+            "corpus_bleu": 1.95,
+            "corpus_chrfpp": 19.03,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              6.77,
+              4.93,
+              5.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              21.91,
+              23.4,
+              15.22,
+              21.96
+            ],
+            "sentence_ter": [
+              120.0,
+              85.71,
+              160.0,
+              116.67,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner is repairing the dress.",
+              "The young men will give the chicken to the dogs.",
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 1.56,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to noun)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating present tense)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]\n9. jahali = determiner/article (indicating specific type of noun or relationship)\n10. waliːg = possessive marker/genitive (attached to noun)\n11. man = pronoun (he)\n12. jahalgi = determiner/article (indicating specific type of noun or relationship)\n13. beyyeːcciːg = noun/pronoun (necklaces)\n14. ajaːnirri = verb phrase (buying)\n15. darbadki = noun (young men)\n16. biticcirra = verb phrase (give)\n17. maːgtirsu = verb phrase (steal)\n18. ay = pronoun (I)\n19. baːbiːg = noun (doors)\n20. eldeːnsu = verb phrase (find)\n21. magas = noun/pronoun (thief)\n22. ikki = pronoun (you)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. Possessive marker/genitive: attached to noun\n4. Possessive phrases: may have a different word order than expected\n5. Determiner/article: used to indicate a specific type of noun or relationship\n6. Pronouns: man (he), ay (I), ikki (you)",
+          "metrics": {
+            "corpus_bleu": 4.19,
+            "corpus_chrfpp": 29.26,
+            "corpus_ter": 75.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              13.89,
+              10.68,
+              5.67,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              25.34,
+              45.34,
+              32.16,
+              15.22,
+              21.96
+            ],
+            "sentence_ter": [
+              100.0,
+              42.86,
+              60.0,
+              116.67,
+              60.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief gave you the dogs.",
+              "I bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 31.97,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to noun)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating present tense)\n7. allesu = noun/pronoun (dress/owner)\n8. [DELETED: entry — reason]\n9. jahali = determiner/article (indicating specific type of noun or relationship)\n10. waliːg = possessive marker/genitive (attached to noun)\n11. man = pronoun (he)\n12. jahalgi = determiner/article (indicating specific type of noun or relationship)\n13. beyyeːcciːg = noun/pronoun (necklaces)\n14. ajaːnirri = verb phrase (buying)\n15. darbadki = noun (young men)\n16. biticcirra = verb phrase (give)\n17. maːgtirsu = verb phrase (steal)\n18. ay = pronoun (I)\n19. baːbiːg = noun (doors)\n20. eldeːnsu = verb phrase (find)\n21. magas = noun/pronoun (thief)\n22. ikki = pronoun (you)\n23. aygi = possessive marker/genitive (attached to noun)\n24. magaski = possessive marker/genitive (attached to noun)\n25. tirsa = verb phrase (gave)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. Possessive marker/genitive: attached to noun\n4. Possessive phrases: may have a different word order than expected\n5. Determiner/article: used to indicate a specific type of noun or relationship\n6. Pronouns: man (he), ay (I), ikki (you)\n7. Possessive marker/genitive: may be used with pronouns (new information)",
+          "metrics": {
+            "corpus_bleu": 2.01,
+            "corpus_chrfpp": 24.52,
+            "corpus_ter": 150.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.03,
+              4.46,
+              8.05,
+              3.01,
+              4.07
+            ],
+            "sentence_chrfpp": [
+              23.63,
+              22.25,
+              33.86,
+              25.33,
+              17.01
+            ],
+            "sentence_ter": [
+              160.0,
+              114.29,
+              120.0,
+              200.0,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. -> The thief stole the camels.",
+              "ay kanarriːg baːbki alletirsi. -> I bought the doors.",
+              "hanu tirtiːg elirsu. -> The men found the dress.",
+              "tirti argi kamgi deːccirsa. -> The owner repaired the doors for the young man.",
+              "ay darbadki bijaːndi. -> I am buying the young men."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 32.67,
+          "accumulated_dict": "1. ar = determiner/article\n2. kanarriːcciːg = noun (camels)\n3. kamiːg = possessive marker/genitive (attached to noun)\n4. jaːnticcirsu = noun (neighbours)\n5. tirt = verb root (repair)\n6. kadeːg = suffix (indicating present tense)\n7. allesu = noun/pronoun (dress/owner)\n8. jahali = determiner/article (indicating specific type of noun or relationship)\n9. waliːg = possessive marker/genitive (attached to noun)\n10. man = pronoun (he)\n11. jahalgi = determiner/article (indicating specific type of noun or relationship)\n12. beyyeːcciːg = noun/pronoun (necklaces)\n13. ajaːnirri = verb phrase (buying)\n14. darbadki = noun (young men)\n15. biticcirra = verb phrase (give)\n16. maːgtirsu = verb phrase (steal)\n17. ay = pronoun (I)\n18. baːbiːg = noun (doors)\n19. eldeːnsu = verb phrase (find)\n20. magas = noun/pronoun (thief)\n21. ikki = pronoun (you)\n22. aygi = possessive marker/genitive (attached to noun)\n23. magaski = possessive marker/genitive (attached to noun)\n24. tirsa = verb phrase (gave)\n25. hanuːg = noun (donkey)\n26. bijomri = verb phrase (strike)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV)\n2. Verb phrase: composed of verb root and suffix\n3. Possessive marker/genitive: attached to noun\n4. Possessive phrases: may have a different word order than expected\n5. Determiner/article: used to indicate a specific type of noun or relationship\n6. Pronouns: man (he), ay (I), ikki (you)\n7. Possessive marker/genitive: may be used with pronouns\n8. Determiner/article jahali: used to indicate a specific type of noun or relationship\n9. Determiner/article jahalgi: used to indicate a specific type of noun or relationship",
+          "metrics": {
+            "corpus_bleu": 4.88,
+            "corpus_chrfpp": 28.84,
+            "corpus_ter": 82.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              7.81,
+              11.99,
+              13.13,
+              4.93,
+              19.3
+            ],
+            "sentence_chrfpp": [
+              29.35,
+              27.14,
+              40.22,
+              19.46,
+              29.83
+            ],
+            "sentence_ter": [
+              100.0,
+              57.14,
+              80.0,
+              133.33,
+              40.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will strike the donkey.",
+              "I bought the camels for the old man.",
+              "The dog found the doors for me.",
+              "The young men will give the chicken to the dogs.",
+              "I will strike the donkey."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 32.8,
+          "accumulated_dict": "1. ar = determiner/article (matches current hypothesis)\n2. kanarriːcciːg = noun (camels) (matches current hypothesis)\n3. kamiːg = possessive marker/genitive (attached to noun) (matches current hypothesis)\n4. jaːnticcirsu = noun (neighbours) (matches current hypothesis)\n5. tirt = verb root (repair) (matches current hypothesis)\n6. kadeːg = suffix (indicating present tense) (matches current hypothesis)\n7. allesu = noun/pronoun (dress/owner) (matches current hypothesis)\n8. jahali = determiner/article (indicating specific type of noun or relationship) (matches current hypothesis)\n9. waliːg = possessive marker/genitive (attached to noun) (matches current hypothesis)\n10. man = pronoun (he) (matches current hypothesis)\n11. jahalgi = determiner/article (indicating specific type of noun or relationship) (matches current hypothesis)\n12. beyyeːcciːg = noun/pronoun (necklaces) (matches current hypothesis)\n13. ajaːnirri = verb phrase (buying) (matches current hypothesis)\n14. darbadki = noun (young men) (matches current hypothesis)\n15. biticcirra = verb phrase (give) (matches current hypothesis)\n16. maːgtirsu = verb phrase (steal) (matches current hypothesis)\n17. ay = pronoun (I) (matches current hypothesis)\n18. baːbiːg = noun (doors) (matches current hypothesis)\n19. eldeːnsu = verb phrase (find) (matches current hypothesis)\n20. magas = noun/pronoun (thief) (matches current hypothesis)\n21. ikki = pronoun (you) (matches current hypothesis)\n22. aygi = possessive marker/genitive (attached to noun) (matches current hypothesis)\n23. magaski = possessive marker/genitive (attached to noun) (matches current hypothesis)\n24. tirsa = verb phrase (gave) (matches current hypothesis)\n25. hanuːg = noun (donkey) (matches current hypothesis)\n26. bijomri = verb phrase (strike) (matches current hypothesis)\n27. sarkaːyi = determiner/article (new information)\n28. adeːnda = verb phrase (giving) (new information)",
+          "accumulated_rules": "1. Word order: Subject-Object-Verb (SOV) (matches current hypothesis)\n2. Verb phrase: composed of verb root and suffix (matches current hypothesis)\n3. Possessive marker/genitive: attached to noun (matches current hypothesis)\n4. Possessive phrases: may have a different word order than expected (matches current hypothesis)\n5. Determiner/article: used to indicate a specific type of noun or relationship (matches current hypothesis)\n6. Pronouns: man (he), ay (I), ikki (you) (matches current hypothesis)\n7. Possessive marker/genitive: may be used with pronouns (matches current hypothesis)\n8. Determiner/article jahali: used to indicate a specific type of noun or relationship (matches current hypothesis)\n9. Determiner/article jahalgi: used to indicate a specific type of noun or relationship (matches current hypothesis)\n10. Determiner/article sarkaːyi: used to indicate a specific type of noun or relationship (new information)",
+          "metrics": {
+            "corpus_bleu": 5.69,
+            "corpus_chrfpp": 33.37,
+            "corpus_ter": 146.43,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.72,
+              6.61,
+              22.42,
+              3.22,
+              7.35
+            ],
+            "sentence_chrfpp": [
+              23.08,
+              32.36,
+              60.79,
+              25.46,
+              26.61
+            ],
+            "sentence_ter": [
+              200.0,
+              114.29,
+              100.0,
+              183.33,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. -> The thief gave you (pl.) the dogs.",
+              "ay kanarriːg baːbki alletirsi. -> I bought the camels for the doors.",
+              "hanu tirtiːg elirsu. -> The donkey found the dress.",
+              "tirti argi kamgi deːccirsa. -> The owner repaired the doors for the thief.",
+              "ay darbadki bijaːndi. -> I will strike the young men."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 5.69,
+        "corpus_chrfpp": 33.37,
+        "corpus_ter": 146.43,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.72,
+          6.61,
+          22.42,
+          3.22,
+          7.35
+        ],
+        "sentence_chrfpp": [
+          23.08,
+          32.36,
+          60.79,
+          25.46,
+          26.61
+        ],
+        "sentence_ter": [
+          200.0,
+          114.29,
+          100.0,
+          183.33,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "magasi argi ajomirra. -> The thief gave you (pl.) the dogs.",
+          "ay kanarriːg baːbki alletirsi. -> I bought the camels for the doors.",
+          "hanu tirtiːg elirsu. -> The donkey found the dress.",
+          "tirti argi kamgi deːccirsa. -> The owner repaired the doors for the thief.",
+          "ay darbadki bijaːndi. -> I will strike the young men."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 9
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 3,
+          "latency_s": 0.63,
+          "accumulated_dict": "- ar: we\n- kanarriːcciːg: camels\n- kamiːg: neighbours\n- jaːnticcirsu: for\n- tirt: the\n- kadeːg: owner\n- allesu: dress\n- jahali: young men\n- waliːg: will give\n- darbadki: chicken\n- biticcirra: to the dogs\n- su: (suffix, possibly indicating possession or direction)",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- Possessive or directional suffixes are indicated by the suffix 'su' in the examples.\n- The word order for possessive or directional phrases seems to be Object-Suffix (OS) in the examples.",
+          "metrics": {
+            "corpus_bleu": 3.47,
+            "corpus_chrfpp": 17.33,
+            "corpus_ter": 107.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.52,
+              12.87,
+              4.93,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.11,
+              36.11,
+              23.4,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              120.0,
+              71.43,
+              160.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "We bought the camels for the neighbours.",
+              "The owner repaired the dress.",
+              "The young men will give the chicken to the dogs.",
+              "",
+              ""
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 3,
+            "num_expected": 5,
+            "missing_indices": [
+              3,
+              4
+            ],
+            "complete": false
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 30.84,
+          "accumulated_dict": "- ar: we\n- kanarriːcciːg: camels\n- kamiːg: neighbours\n- jaːnticcirsu: for\n- tirt: the\n- kadeːg: owner\n- allesu: dress\n- jahali: young men\n- waliːg: will give\n- darbadki: chicken\n- biticcirra: to the dogs\n- su: (suffix, possibly indicating possession or direction)\n- man: he\n- ay: I\n- beyyeːcciːg: necklaces\n- maːgtirsu: for the young man\n- ajaːnirri: am buying",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- Possessive or directional suffixes are indicated by the suffix 'su' in the examples.\n- The word order for possessive or directional phrases seems to be Object-Suffix (OS) in the examples.\n- The suffix 'su' may indicate a specific type of possession or direction, possibly indicating a location or a person.\n- The word 'maːgtirsu' suggests that the suffix 'su' can be used to indicate a specific person or location, possibly a young man.",
+          "metrics": {
+            "corpus_bleu": 1.74,
+            "corpus_chrfpp": 19.01,
+            "corpus_ter": 125.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.77,
+              7.65,
+              5.52,
+              4.99,
+              4.99
+            ],
+            "sentence_chrfpp": [
+              16.34,
+              14.83,
+              29.8,
+              17.4,
+              17.34
+            ],
+            "sentence_ter": [
+              140.0,
+              71.43,
+              140.0,
+              133.33,
+              160.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He stole the dresses for the young man.",
+              "I am buying the necklaces.",
+              "The owner will give the camels to the dogs.",
+              "We will give the chickens to the young men.",
+              "The neighbours are buying the necklaces for the owner."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 3,
+          "latency_s": 0.81,
+          "accumulated_dict": "- ar: we\n- kanarriːcciːg: camels\n- kamiːg: neighbours\n- jaːnticcirsu: for\n- tirt: the\n- kadeːg: owner\n- allesu: dress\n- jahali: young men\n- waliːg: will give\n- darbadki: chicken\n- biticcirra: to the dogs\n- su: (suffix, possibly indicating possession or direction)\n- man: he\n- ay: I\n- beyyeːcciːg: necklaces\n- maːgtirsu: for the young man\n- ajaːnirri: am buying\n- baːbiːg: doors\n- eldeːn: found\n- ikki: thief\n- magas: you (pl.)\n- tirsa: to\n- iːdi: men",
+          "accumulated_rules": "- Word order appears to be Subject-Object-Verb (SOV) in the given examples.\n- Possessive or directional suffixes are indicated by the suffix 'su' in the examples.\n- The word order for possessive or directional phrases seems to be Object-Suffix (OS) in the examples.\n- The suffix 'su' may indicate a specific type of possession or direction, possibly indicating a location or a person.\n- The word 'maːgtirsu' suggests that the suffix 'su' can be used to indicate a specific person or location, possibly a young man.\n- The suffix 'su' may also indicate a specific action or event, possibly a future or completed action.\n- The word order for possessive or directional phrases with the suffix 'su' seems to be Object-Suffix-Verb (OSV) in the examples.\n- The word 'magas' appears to be a second-person plural pronoun.\n- The word 'ikki' appears to be a noun indicating a thief.",
+          "metrics": {
+            "corpus_bleu": 1.72,
+            "corpus_chrfpp": 19.45,
+            "corpus_ter": 110.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.57,
+              4.46,
+              6.27,
+              4.93,
+              7.27
+            ],
+            "sentence_chrfpp": [
+              13.35,
+              16.21,
+              15.3,
+              30.47,
+              21.93
+            ],
+            "sentence_ter": [
+              120.0,
+              85.71,
+              120.0,
+              133.33,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The dog found the doors for me.",
+              "The thief gave you (pl.) the dogs.",
+              "The men gave the camels to the thief.",
+              "The owner will give the dress to the young man.",
+              "I am buying necklaces for the men."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 2,
+          "latency_s": 0.77,
+          "accumulated_dict": "- bijomri: donkey\n- adeːnda: necklaces (plural)\n- sarkaːyi: cowards\n- aygi: me (dative or accusative form of 'ay')\n- hanuːg: will strike (verb form of 'waliːg' with a different suffix)",
+          "accumulated_rules": "- The word order for possessive or directional phrases with the suffix 'su' seems to be Object-Suffix-Verb (OSV) in the examples.\n- The suffix 'su' may indicate a specific type of possession or direction, possibly indicating a location or a person.\n- The suffix 'su' may also indicate a specific action or event, possibly a future or completed action.\n- The word order for possessive or directional phrases without the suffix 'su' seems to be Object-Suffix (OS) in the examples.\n- The word order for sentences with a verb in the form of 'waliːg' or 'hanuːg' appears to be Subject-Object-Verb (SOV) in the given examples.\n- The word 'magas' appears to be a second-person plural pronoun.\n- The word 'ikki' appears to be a noun indicating a thief.\n- The word 'aygi' appears to be a dative or accusative form of the first-person singular pronoun 'ay'.\n- The word 'sarkaːyi' appears to be a noun indicating cowards.",
+          "metrics": {
+            "corpus_bleu": 1.77,
+            "corpus_chrfpp": 20.73,
+            "corpus_ter": 117.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              8.12,
+              6.57,
+              5.52,
+              4.93,
+              5.52
+            ],
+            "sentence_chrfpp": [
+              17.15,
+              14.98,
+              30.49,
+              19.46,
+              22.69
+            ],
+            "sentence_ter": [
+              100.0,
+              85.71,
+              140.0,
+              133.33,
+              140.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will strike the donkey.",
+              "The cowards are giving me the necklaces.",
+              "The owner will give the dress to the dogs.",
+              "The young men will give the chicken to the dogs.",
+              "The thief will give the necklaces to the men."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 1.77,
+        "corpus_chrfpp": 20.73,
+        "corpus_ter": 117.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          8.12,
+          6.57,
+          5.52,
+          4.93,
+          5.52
+        ],
+        "sentence_chrfpp": [
+          17.15,
+          14.98,
+          30.49,
+          19.46,
+          22.69
+        ],
+        "sentence_ter": [
+          100.0,
+          85.71,
+          140.0,
+          133.33,
+          140.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I will strike the donkey.",
+          "The cowards are giving me the necklaces.",
+          "The owner will give the dress to the dogs.",
+          "The young men will give the chicken to the dogs.",
+          "The thief will give the necklaces to the men."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 10,
+          "latency_s": 1.15,
+          "metrics": {
+            "corpus_bleu": 4.86,
+            "corpus_chrfpp": 46.66,
+            "corpus_ter": 85.71,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              9.65,
+              11.99,
+              7.81,
+              5.93,
+              14.26
+            ],
+            "sentence_chrfpp": [
+              30.59,
+              53.2,
+              45.63,
+              46.87,
+              54.14
+            ],
+            "sentence_ter": [
+              80.0,
+              57.14,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The thief will strike me.",
+              "I am buying the doors for the neighbours.",
+              "The owner gave the donkey to me.",
+              "The owner gave the camels for the young man.",
+              "I will give the chicken to the dogs."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.86,
+        "corpus_chrfpp": 46.66,
+        "corpus_ter": 85.71,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          9.65,
+          11.99,
+          7.81,
+          5.93,
+          14.26
+        ],
+        "sentence_chrfpp": [
+          30.59,
+          53.2,
+          45.63,
+          46.87,
+          54.14
+        ],
+        "sentence_ter": [
+          80.0,
+          57.14,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The thief will strike me.",
+          "I am buying the doors for the neighbours.",
+          "The owner gave the donkey to me.",
+          "The owner gave the camels for the young man.",
+          "I will give the chicken to the dogs."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 2650.53,
+          "metrics": {
+            "corpus_bleu": 8.05,
+            "corpus_chrfpp": 47.35,
+            "corpus_ter": 139.29,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.03,
+              7.14,
+              24.81,
+              3.22,
+              17.54
+            ],
+            "sentence_chrfpp": [
+              27.25,
+              47.06,
+              74.77,
+              36.44,
+              54.76
+            ],
+            "sentence_ter": [
+              180.0,
+              114.29,
+              100.0,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magasi argi ajomirra. → The thief will strike the donkey.",
+              "ay kanarriːg baːbki alletirsi. → I bought the doors for the neighbours.",
+              "hanu tirtiːg elirsu. → The donkey found the owner.",
+              "tirti argi kamgi deːccirsa. → The owner will give the camels to the thief.",
+              "ay darbadki bijaːndi. → I will strike the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 31.39,
+          "metrics": {
+            "corpus_bleu": 8.51,
+            "corpus_chrfpp": 47.92,
+            "corpus_ter": 132.14,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.67,
+              7.14,
+              24.81,
+              3.22,
+              17.54
+            ],
+            "sentence_chrfpp": [
+              29.03,
+              46.48,
+              73.83,
+              36.87,
+              54.76
+            ],
+            "sentence_ter": [
+              140.0,
+              114.29,
+              100.0,
+              200.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "magas bijomri. → The thief will strike.",
+              "ay kanarriːg elːdeːnsu jaːnticcirsu. → I bought the doors for the neighbours.",
+              "hanuːg elirsu tirtiːg. → The donkey found the owner.",
+              "tirt kadeːg kamiːg tirsa. → The owner will give the camels to the thief.",
+              "ay darbadki bijaːndi. → I will strike the chicken."
+            ],
+            "references": [
+              "The thieves are striking us.",
+              "I repaired the door for the neighbour.",
+              "The donkey found the owners.",
+              "The owners gave us the camel.",
+              "I will buy the chicken."
+            ],
+            "num_evaluated": 5,
+            "num_expected": 5,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.51,
+        "corpus_chrfpp": 47.92,
+        "corpus_ter": 132.14,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          5.67,
+          7.14,
+          24.81,
+          3.22,
+          17.54
+        ],
+        "sentence_chrfpp": [
+          29.03,
+          46.48,
+          73.83,
+          36.87,
+          54.76
+        ],
+        "sentence_ter": [
+          140.0,
+          114.29,
+          100.0,
+          200.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "magas bijomri. → The thief will strike.",
+          "ay kanarriːg elːdeːnsu jaːnticcirsu. → I bought the doors for the neighbours.",
+          "hanuːg elirsu tirtiːg. → The donkey found the owner.",
+          "tirt kadeːg kamiːg tirsa. → The owner will give the camels to the thief.",
+          "ay darbadki bijaːndi. → I will strike the chicken."
+        ],
+        "references": [
+          "The thieves are striking us.",
+          "I repaired the door for the neighbour.",
+          "The donkey found the owners.",
+          "The owners gave us the camel.",
+          "I will buy the chicken."
+        ],
+        "num_evaluated": 5,
+        "num_expected": 5,
+        "missing_indices": [],
+        "complete": true
+      },
+      "delta": {
+        "bleu_delta": 0.46,
+        "chrf_delta": 0.57,
+        "ter_delta": -7.15,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.23,
+      "chrf": 4.5,
+      "ter": 2880.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "I'm not aware of any language that matches the given sentence. It's possible that it's a made-up or fictional language. ",
+      "reference": "The thieves are striking us."
+    },
+    "baseline": {
+      "best_bleu": 8.05,
+      "best_chrf": 47.35,
+      "best_ter": 139.29,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "magasi argi ajomirra. → The thief will strike the donkey.",
+        "ay kanarriːg baːbki alletirsi. → I bought the doors for the neighbours.",
+        "hanu tirtiːg elirsu. → The donkey found the owner.",
+        "tirti argi kamgi deːccirsa. → The owner will give the camels to the thief.",
+        "ay darbadki bijaːndi. → I will strike the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 5.69,
+      "best_chrf": 33.37,
+      "best_ter": 146.43,
+      "best_em": 0.0,
+      "num_steps": 9,
+      "best_hypotheses": [
+        "magasi argi ajomirra. -> The thief gave you (pl.) the dogs.",
+        "ay kanarriːg baːbki alletirsi. -> I bought the camels for the doors.",
+        "hanu tirtiːg elirsu. -> The donkey found the dress.",
+        "tirti argi kamgi deːccirsa. -> The owner repaired the doors for the thief.",
+        "ay darbadki bijaːndi. -> I will strike the young men."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "best_step": 9
+    },
+    "step_by_step": {
+      "best_bleu": 1.77,
+      "best_chrf": 20.73,
+      "best_ter": 117.86,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "I will strike the donkey.",
+        "The cowards are giving me the necklaces.",
+        "The owner will give the dress to the dogs.",
+        "The young men will give the chicken to the dogs.",
+        "The thief will give the necklaces to the men."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 4.86,
+      "best_chrf": 46.66,
+      "best_ter": 85.71,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The thief will strike me.",
+        "I am buying the doors for the neighbours.",
+        "The owner gave the donkey to me.",
+        "The owner gave the camels for the young man.",
+        "I will give the chicken to the dogs."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ]
+    },
+    "self_correction": {
+      "best_bleu": 8.51,
+      "best_chrf": 47.92,
+      "best_ter": 132.14,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "magas bijomri. → The thief will strike.",
+        "ay kanarriːg elːdeːnsu jaːnticcirsu. → I bought the doors for the neighbours.",
+        "hanuːg elirsu tirtiːg. → The donkey found the owner.",
+        "tirt kadeːg kamiːg tirsa. → The owner will give the camels to the thief.",
+        "ay darbadki bijaːndi. → I will strike the chicken."
+      ],
+      "best_references": [
+        "The thieves are striking us.",
+        "I repaired the door for the neighbour.",
+        "The donkey found the owners.",
+        "The owners gave us the camel.",
+        "I will buy the chicken."
+      ],
+      "delta": {
+        "bleu_delta": 0.46,
+        "chrf_delta": 0.57,
+        "ter_delta": -7.15,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

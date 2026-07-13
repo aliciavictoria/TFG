@@ -1,0 +1,1448 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-08T16:54:04.931199",
+    "puzzle_id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 13,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "log_full_responses": false,
+    "sgpl_normalized": true
+  },
+  "puzzle": {
+    "id": "linguini_012006010100",
+    "language": "Lakota",
+    "language_family": "Siouan (EEUU)",
+    "translation_direction": "lang2en",
+    "train_pairs": [
+      {
+        "source": "lakhota ki wičhakte",
+        "target": "The Indian killed them."
+      },
+      {
+        "source": "matho ki wakte",
+        "target": "I killed the bear."
+      },
+      {
+        "source": "lakhota ki mačho",
+        "target": "The Indian called me."
+      },
+      {
+        "source": "tuwa ničho",
+        "target": "Who called you?"
+      },
+      {
+        "source": "wičhaša ki tuwa kte",
+        "target": "The person killed someone."
+      },
+      {
+        "source": "tuwa hi he",
+        "target": "Who came?"
+      },
+      {
+        "source": "matho ki wičhačho",
+        "target": "He called the bears."
+      },
+      {
+        "source": "yahi čha hi",
+        "target": "You came, and he came."
+      },
+      {
+        "source": "matho ki hipi ną lakhota ki čhopi",
+        "target": "The bears came and called the Indian."
+      },
+      {
+        "source": "yahi čha hokšila ki nikte",
+        "target": "You came, and the boy killed you."
+      },
+      {
+        "source": "lakhota ki wačho ną hokšila ki wakte",
+        "target": "I called the Indian and killed the boy."
+      },
+      {
+        "source": "hokšila ki wakte čha tuwa lakhota ki wičhačho",
+        "target": "I killed the boy, and someone called the Indians."
+      },
+      {
+        "source": "lakhota ki hipi čha mayačho",
+        "target": "The Indians came, and you called me."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "wahi čha lakhota ki matho ki wičhačhopi",
+        "target": "I came and the Indians called the bears.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte ną mačho",
+        "target": "The man killed you and called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "wičhaša ki nikte čha mačho",
+        "target": "The man killed you and he called me.",
+        "direction": "lang2en"
+      },
+      {
+        "source": "nikte",
+        "target": "He killed you.",
+        "direction": "lang2en"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "wahi čha lakhota ki matho ki wičhačhopi",
+      "reference": "I came and the Indians called the bears.",
+      "hypothesis": "**Translation (best guess):**  \n*“That one with the big head is thinking.”*",
+      "latency_s": 4.51,
+      "metrics": {
+        "corpus_bleu": 2.05,
+        "corpus_chrfpp": 13.55,
+        "corpus_ter": 125.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.05
+        ],
+        "sentence_chrfpp": [
+          13.55
+        ],
+        "sentence_ter": [
+          125.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Translation (best guess):**  \n*“That one with the big head is thinking.”*"
+        ],
+        "references": [
+          "I came and the Indians called the bears."
+        ],
+        "num_evaluated": 1
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 13,
+          "latency_s": 56.57,
+          "metrics": {
+            "corpus_bleu": 30.19,
+            "corpus_chrfpp": 59.31,
+            "corpus_ter": 39.13,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              11.59,
+              70.71,
+              17.24
+            ],
+            "sentence_chrfpp": [
+              44.17,
+              80.88,
+              55.71
+            ],
+            "sentence_ter": [
+              62.5,
+              14.29,
+              37.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The boy and the Indian called me.",
+              "The person killed you and called me.",
+              "The person killed you, and (someone) called me."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 30.19,
+        "corpus_chrfpp": 59.31,
+        "corpus_ter": 39.13,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          11.59,
+          70.71,
+          17.24
+        ],
+        "sentence_chrfpp": [
+          44.17,
+          80.88,
+          55.71
+        ],
+        "sentence_ter": [
+          62.5,
+          14.29,
+          37.5
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The boy and the Indian called me.",
+          "The person killed you and called me.",
+          "The person killed you, and (someone) called me."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me."
+        ],
+        "num_evaluated": 3
+      }
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "strategy_id": 2,
+      "combo_sizes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "combo_size": 2,
+          "combo_indices": [
+            0,
+            1
+          ],
+          "latency_s": 42.87,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (marks the subject of a clause)\nwičha‑ = kill (verb root)\nwa‑ = kill (verb root, variant)\n‑te = past / perfective suffix",
+          "accumulated_rules": "1. A clause is formed as **Subject + ki + Verb‑te**.\n2. The verb consists of a root (e.g., wičha‑, wa‑) followed by the past suffix **‑te**.\n3. The particle **ki** appears immediately after the subject noun or pronoun and before the verb complex.",
+          "metrics": {
+            "corpus_bleu": 2.8,
+            "corpus_chrfpp": 25.33,
+            "corpus_ter": 84.62,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.89,
+              6.97,
+              6.32,
+              18.39
+            ],
+            "sentence_chrfpp": [
+              37.02,
+              20.12,
+              22.67,
+              8.02
+            ],
+            "sentence_ter": [
+              87.5,
+              85.71,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "But the Indian and I killed them.",
+              "They killed the bear.",
+              "They killed and bear.",
+              "They."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "combo_size": 3,
+          "combo_indices": [
+            0,
+            1,
+            2
+          ],
+          "latency_s": 70.53,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (marks the subject of a clause)\nwičha‑ = kill (verb root)\nwa‑ = kill (variant verb root)\n‑te = past / perfective suffix\n‑k‑ = object marker for a definite third‑person object (accusative)\nmačho = call (present‑time verb)\n---",
+          "accumulated_rules": "1. A clause is formed as **Subject + ki + Verb**.\n2. The verb consists of a root, optionally an object‑marker **‑k‑**, and optionally the past suffix **‑te**.\n3. **‑te** marks past (perfective); its absence marks non‑past.\n4. **‑k‑** appears when the verb takes a definite third‑person object; it is omitted with first‑person objects or when no object is expressed.\n---",
+          "metrics": {
+            "corpus_bleu": 6.0,
+            "corpus_chrfpp": 30.98,
+            "corpus_ter": 78.26,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.5,
+              12.98,
+              10.62
+            ],
+            "sentence_chrfpp": [
+              23.26,
+              36.93,
+              34.3
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian and I will kill.",
+              "They killed you call.",
+              "They killed you call."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 3,
+          "combo_size": 4,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "latency_s": 64.13,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (marks the subject of a clause)\nwičha‑ = kill (verb root)\nwa‑ = kill (variant verb root)\n‑te = past / perfective suffix (used with some verbs)\n‑k‑ = object marker for a definite third‑person object (accusative)\nma‑ = first‑person object marker (accusative)\nni‑ = past marker (alternative to ‑te, used with the verb “call”)\nmačho = call (present, with first‑person object)\ntuwa = who",
+          "accumulated_rules": "1. A clause is formed as **Subject + ki + Verb**.\n2. The verb consists of a root, optionally a first‑person object prefix **ma‑**, optionally the third‑person object marker **‑k‑**, and a past marker which may be either the suffix **‑te** or the prefix **ni‑** (verb‑specific).\n3. **‑te** marks past for verbs that use the suffix strategy (e.g., “kill”); its absence marks non‑past.\n4. **ni‑** marks past for verbs that use the prefix strategy (e.g., “call”); its absence marks non‑past.\n5. **‑k‑** appears only when the verb takes a definite third‑person object; it is omitted with first‑person or second‑person objects.\n6. **ma‑** appears only when the verb’s object is first‑person; it is omitted otherwise.",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        },
+        {
+          "step": 4,
+          "combo_size": 5,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "latency_s": 128.08,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in some contexts, e.g., questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant verb root)\nk‑ = kill (reduced root used before pronoun objects)\n‑te = past / perfective suffix (used with kill verbs)\n‑k‑ = object marker for a definite third‑person object (accusative)\nma‑ = first‑person object prefix (accusative)\nni‑ = past prefix (used with the verb “call”)\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)",
+          "accumulated_rules": "1. A clause is normally **Subject + ki + Verb**, though **ki** may be omitted in short questions.\n2. The verb consists of a root, optionally a first‑person object prefix **ma‑**, optionally the definite third‑person object marker **‑k‑**, and a past marker which is either the suffix **‑te** (for “kill” verbs) or the prefix **ni‑** (for “call”).\n3. **‑te** marks past for verbs that use the suffix strategy (e.g., “kill”); its absence marks non‑past.\n4. **ni‑** marks past for verbs that use the prefix strategy (e.g., “call”); its absence marks non‑past.\n5. **‑k‑** appears only when the verb’s object is a definite third‑person; it is omitted with first‑person, second‑person, or indefinite objects.\n6. **ma‑** appears only when the verb’s object is first‑person; it is omitted otherwise.\n7. When the object is an indefinite pronoun (e.g., “who/someone”), the verb may use the reduced root **k‑** before the past suffix **‑te**, and the object marker **‑k‑** is not used.",
+          "metrics": {
+            "corpus_bleu": 2.63,
+            "corpus_chrfpp": 24.98,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.48,
+              6.77,
+              5.44,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              31.58,
+              26.46,
+              24.72,
+              2.19
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "the Indian who I killed called",
+              "the person called you in the past",
+              "the person called you",
+              "in the past"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 5,
+          "combo_size": 6,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "latency_s": 59.98,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = past prefix for “call” verb class\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)",
+          "accumulated_rules": "1. A clause is normally **Subject + ki + Verb**; **ki** may be omitted in short questions.\n2. The verb consists of a root, optionally a first‑person object prefix **ma‑**, optionally the definite third‑person object marker **‑k‑** (only with the wičha‑ root), and a past marker which is either the suffix **‑te** (kill‑class), the prefix **ni‑** (call‑class), or a verb‑specific particle (e.g., **he** with **hi**).\n3. **‑te** marks past for kill‑class verbs; its absence marks non‑past.\n4. **ni‑** marks past for call‑class verbs; its absence marks non‑past.\n5. **‑k‑** appears only with the **wičha‑** root when the object is a definite third‑person; it is omitted with other roots or with indefinite objects.\n6. **ma‑** appears only when the verb’s object is first‑person; it is omitted otherwise.\n7. With an indefinite object, the reduced root **k‑** is used before **‑te**, and **‑k‑** is not used.\n8. Some intransitive verbs (e.g., **hi**) form the past with a separate particle (**he**) placed after the verb.",
+          "metrics": {
+            "corpus_bleu": 2.81,
+            "corpus_chrfpp": 25.69,
+            "corpus_ter": 82.61,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.87,
+              7.49,
+              5.87
+            ],
+            "sentence_chrfpp": [
+              27.32,
+              29.51,
+              20.22
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian who I killed called him",
+              "The person called you in the past",
+              "The person called him in the past"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 6,
+          "combo_size": 7,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "latency_s": 57.57,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. A clause is normally **Subject + ki + Verb**; **ki** may be omitted in short questions.\n2. The verb consists of a root, optionally a first‑person object prefix **ma‑**, optionally the definite object marker **‑k‑** (only with **wičha‑**), and a past marker which is either the suffix **‑te** (kill‑class), the optional prefix **ni‑** (call‑class), or a verb‑specific particle (e.g., **he** with **hi**).\n3. **‑te** marks past for kill‑class verbs; its absence marks non‑past.\n4. **ni‑** *optionally* marks past for call‑class verbs; past can also be expressed with zero marking.\n5. **‑k‑** appears only with the **wičha‑** root when the object is a definite third‑person; it is omitted with other roots or with indefinite objects.\n6. **ma‑** appears only when the verb’s object is first‑person; it is omitted otherwise.\n7. With an indefinite object, the reduced root **k‑** is used before **‑te**, and **‑k‑** is not used.\n8. Some intransitive verbs (e.g., **hi**) form the past with a separate particle (**he**) placed after the verb.\n[DELETED: none – all rules retained]\n---",
+          "metrics": {
+            "corpus_bleu": 2.92,
+            "corpus_chrfpp": 30.57,
+            "corpus_ter": 78.26,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.87,
+              7.49,
+              6.02
+            ],
+            "sentence_chrfpp": [
+              33.73,
+              29.51,
+              27.75
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bear that the Indian I killed",
+              "The person called you in the past",
+              "The person called you"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 7,
+          "combo_size": 8,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "latency_s": 106.19,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. A clause is normally **Subject + ki + Verb**; **ki** may be omitted in short questions.\n2. Verb morphology = [optional **ma‑**] + **root** + [optional **‑k‑** (only with **wičha‑**)] + **‑te** (past) *or* optional **ni‑** (past for call‑class) *or* verb‑specific particle (e.g., **he** with **hi**).\n3. **‑te** marks past for kill‑class verbs; its absence marks non‑past.\n4. Call‑class verbs can mark past with **ni‑** or with zero marking; both are grammatical.\n5. **‑k‑** appears only with the **wičha‑** root when the object is a definite third‑person; it is omitted with other roots or with indefinite objects.\n6. **ma‑** appears only when the verb’s object is first‑person; it is omitted otherwise.\n7. With an indefinite object, the reduced root **k‑** is used before **‑te**, and **‑k‑** is never used.\n8. Intransitive verb **hi** forms the past with the particle **he** placed after the verb; **he** is obligatory in short‑question clauses but may be omitted in narrative clauses.\n9. **čha** functions as a coordinating conjunction meaning “and”.\n---",
+          "metrics": {
+            "corpus_bleu": 4.93,
+            "corpus_chrfpp": 26.41,
+            "corpus_ter": 82.61,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              5.87,
+              12.6,
+              5.93
+            ],
+            "sentence_chrfpp": [
+              32.06,
+              21.45,
+              24.42
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              87.5
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian and he killed them.",
+              "The person did not call me.",
+              "The person did not call, and I called."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 8,
+          "combo_size": 9,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "latency_s": 98.95,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. Basic clause order: **Subject + ki + Verb**; **ki** may be omitted in short questions.\n2. Verb morphology = [optional **ma‑**] + **root** + [optional **‑k‑** (only with **wičha‑**)] + **‑te** (past) *or* optional **ni‑** (past for call‑class) *or* verb‑specific particle (**he** with **hi**).\n3. **‑te** marks past for kill‑class verbs; its absence marks non‑past.\n4. Call‑class verbs can mark past with **ni‑** or with zero marking; both are grammatical.\n5. **‑k‑** appears only with **wičha‑** when the object is a definite third‑person; it is omitted with other roots or with indefinite objects.\n6. **ma‑** appears only when the verb’s object is first‑person; it is omitted otherwise.\n7. With an indefinite object, the reduced root **k‑** is used before **‑te**, and **‑k‑** is never used.\n8. Intransitive verb **hi** forms the past with the particle **he** placed after the verb; **he** is obligatory in short‑question clauses but may be omitted in narrative clauses.\n9. **čha** functions as a coordinating conjunction meaning “and”.\n10. Verbs taking a plural subject add the suffix **‑i** (after *hi*) or **‑pi** (after *čho*).\n11. **ną** is a clause‑linker that can appear between two coordinated predicates when the first predicate already contains *čha*; it carries no semantic content.\n---",
+          "metrics": {
+            "corpus_bleu": 5.08,
+            "corpus_chrfpp": 36.73,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              10.13,
+              5.52,
+              7.13,
+              18.39
+            ],
+            "sentence_chrfpp": [
+              54.52,
+              24.5,
+              38.03,
+              5.32
+            ],
+            "sentence_ter": [
+              87.5,
+              71.43,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "He and the Indian and the bears killed (them).",
+              "The person killed (them) in the past.",
+              "The person killed (them) and called.",
+              "Past."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 9,
+          "combo_size": 10,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "latency_s": 115.73,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject + ki + Verb**; the linker **ki** may be omitted in short questions.\n2. Kill‑class verbs are built as **[k‑] + wičha‑ / wa‑ + [‑k‑] + ‑te** for past, or without **‑te** for non‑past. The optional prefix **k‑** appears before **‑te** when an object follows the verb.\n3. The segment **‑k‑** is inserted between the kill stem and **‑te** whenever the verb takes a third‑person object (definite or indefinite). It is never used with *wa‑*.\n4. The past for kill‑class verbs is obligatorily marked by **‑te**; its absence marks non‑past.\n5. Call‑class verbs take the form **[ma‑] + čho** for present, **ni‑ + čho** for past, or simply **čho** (zero past) in narrative. The first‑person object prefix **ma‑** can co‑occur with either past form.\n6. The intransitive verb *hi* forms past either by the optional particle **he** placed after the verb (common in questions) or by the verb alone in narrative clauses.\n7. Plural subjects are indicated by suffixes: **‑i** after *hi* (e.g. *hipi*), **‑pi** after *čho* (e.g. *čhopi*).\n8. **čha** is a coordinating conjunction “and”. When a clause already contains **čha**, an additional clause‑linker **ną** may be inserted before the second predicate; it carries no meaning.\n9. **tuwa** functions as an indefinite pronoun and can serve as subject or object without additional case marking.\n10. **ma‑** is the only object prefix; it marks a first‑person accusative object. No other person/object prefixes are attested.\n[DELETED: Rule 5 (‑te marks past for kill‑class verbs; its absence marks non‑past) – retained but merged into Rule 2]\n[DELETED: Rule 10 (verbs taking a plural subject add ‑i after hi or ‑pi after čho) – merged into Rule 7]\n---",
+          "metrics": {
+            "corpus_bleu": 15.81,
+            "corpus_chrfpp": 48.03,
+            "corpus_ter": 53.85,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.61,
+              13.13,
+              31.71,
+              18.39
+            ],
+            "sentence_chrfpp": [
+              53.41,
+              35.9,
+              66.79,
+              5.32
+            ],
+            "sentence_ter": [
+              62.5,
+              57.14,
+              25.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian and I killed the bears.",
+              "The person killed you (past).",
+              "The person killed you and called me.",
+              "Past."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 10,
+          "combo_size": 11,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "latency_s": 146.63,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. Basic clause order is **Subject + ki + Verb**; the linker *ki* may be omitted in short questions.\n2. Kill‑class verbs are built as **[k‑] + (wičha‑ | wa‑) + [‑k‑] + ‑te** for past, or without *‑te* for non‑past. The object‑marker *‑k‑* appears whenever the verb takes a definite third‑person object, regardless of which kill stem is used.\n3. When the object is a free pronoun (e.g., *tuwa*), an alternative order **Subject + ki + Object + Verb** is possible; the verb then appears as *‑k‑te* (object‑marker + past) with the stem omitted.\n4. Past for kill‑class verbs is obligatorily marked by *‑te*; its absence marks non‑past.\n5. Call‑class verbs are formed as **[ma‑] + čho** (present), **ni‑ + čho** (past), or simply **čho** (zero‑past narrative). The derivational suffix *‑čho* can attach to a kill‑class stem (e.g., *wičhačho*, *wačho*) to create a “call” verb.\n6. The intransitive verb *hi* forms past either by the optional particle *he* placed after the verb (common in questions) or by the verb alone in narrative clauses.\n7. Plural subjects are indicated by suffixes: **‑i** after *hi* (e.g., *hipi*), **‑pi** after *čho* (e.g., *čhopi*).\n8. *čha* is a coordinating conjunction “and”. When a clause already contains *čha*, an additional clause‑linker *ną* may be inserted before the second predicate; it carries no meaning.\n9. *tuwa* functions as an indefinite pronoun and can serve as subject or object without additional case marking.\n10. *ma‑* is the only object prefix; it marks a first‑person accusative object. No other person/object prefixes are attested.\n**[DELETED: Rule 5 (‑te marks past for kill‑class verbs…) – merged into Rule 2]**\n**[DELETED: Rule 10 (verbs taking a plural subject add ‑i after hi or ‑pi after čho) – merged into Rule 7]**\n---",
+          "metrics": {
+            "corpus_bleu": 16.48,
+            "corpus_chrfpp": 54.06,
+            "corpus_ter": 57.69,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              20.5,
+              13.94,
+              31.71,
+              7.81
+            ],
+            "sentence_chrfpp": [
+              67.17,
+              37.02,
+              66.79,
+              18.69
+            ],
+            "sentence_ter": [
+              62.5,
+              71.43,
+              25.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I called the Indian and the person killed the bears.",
+              "The person killed you.",
+              "The person killed you and called me.",
+              "He/she/they called."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 11,
+          "combo_size": 12,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "latency_s": 146.31,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. **Basic clause order** is *Subject + ki + Verb*. The linker *ki* may be omitted in short questions.\n2. **Kill‑class verb formation**:\na. Full form: *[kill‑stem] + ‑k‑ + ‑te* (past) or *[kill‑stem] + ‑k‑* (non‑past).\nb. Variant stem *wa‑* behaves like *wičha‑*.\nc. When the object is a definite third‑person noun, the object‑marker *‑k‑* is obligatory.\n3. **Kill‑verb with indefinite pronoun object** (free pronoun such as *tuva*): the verb appears only as *‑k‑te* (or *ni‑‑k‑te* for past) with the stem omitted; order can be *Subject ki Object Verb* or *Subject ki Verb* (object understood).\n4. **Past marking**:\na. For kill‑verbs, past can be expressed either by the suffix *‑te* alone or by the prefix *ni‑* together with *‑k‑* and *‑te* (both are acceptable).\nb. For call‑verbs, past is marked by the prefix *ni‑* (e.g., *ni‑čho*, *ni‑‑k‑te*).\n5. **Call‑class verbs**: base *čho* (call). They can be:\na. Simple *čho* (zero‑past / present).\nb. *ma‑čho* (first‑person object).\nc. *ni‑čho* (past).\nd. Derived from a kill‑stem: *[kill‑stem] + ‑čho* (e.g., *wičha‑čho*, *wa‑čho*).\n6. **Intransitive verb *hi***: past is expressed by the particle *he* placed after the verb (common in questions) or by the verb alone in narrative clauses.\n7. **Plural marking on verbs**: add **‑pi** (or **‑i** after *hi*) to indicate a plural subject (e.g., *hipi*, *čhopi*).\n8. **Coordination**: *čha* links two clauses. An optional linker *ną* may be inserted between coordinated clauses; it carries no semantic weight.\n9. **Indefinite pronoun *tuva*** functions as subject or object without additional case marking.\n10. **Subject omission**: the subject can be left implicit when it is clear from context (e.g., first‑person ‘I’ in sentences 11‑12).\n[DELETED: Rule 5 (‑te marks past for kill‑class verbs…) – merged into Rule 2]\n[DELETED: Rule 10 (verbs taking a plural subject add ‑i after hi or ‑pi after čho) – merged into Rule 7]\n---",
+          "metrics": {
+            "corpus_bleu": 13.84,
+            "corpus_chrfpp": 47.03,
+            "corpus_ter": 76.92,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              18.36,
+              13.94,
+              21.85,
+              18.39
+            ],
+            "sentence_chrfpp": [
+              58.8,
+              37.02,
+              55.07,
+              5.32
+            ],
+            "sentence_ter": [
+              100.0,
+              71.43,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian called the bears and the person killed them.",
+              "The person killed you.",
+              "The person killed you and called.",
+              "Past."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 12,
+          "combo_size": 13,
+          "combo_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "latency_s": 152.75,
+          "accumulated_dict": "lakhota = Indian (definite)\nmatho = I\nki = subject‑verb linker (optional in short questions)\nwičha‑ = kill (verb root, full form)\nwa‑ = kill (variant root, does not take ‑k‑)\nk‑ = reduced kill root used before indefinite objects\n‑te = past / perfective suffix for kill‑class verbs\n‑k‑ = object marker for a definite third‑person object (used only with wičha‑)\nma‑ = first‑person object prefix (accusative)\nni‑ = optional past prefix for “call”‑class verbs\nčho = call (verb root)\ntuwa = who / someone (interrogative/indefinite pronoun)\nhi = come (verb root, intransitive)\nhe = past particle used with hi (verb‑specific past marker)\n[DELETED: none – all entries retained]\n---",
+          "accumulated_rules": "1. **Basic clause order**: *Subject + ki + Verb*. The linker *ki* may be omitted in short questions.\n2. **Kill‑class verb formation**\na. Full form with definite object: *[kill‑stem] + –k‑ + –te* (past) or *[kill‑stem] + –k‑* (non‑past).\nb. Variant stem *wa‑* behaves like *wičha‑*.\nc. When the object is indefinite (e.g., *tuwa*) or second‑person, the kill‑stem is omitted, leaving *‑k‑te* (past) or *‑k‑* (non‑past); a past prefix *ni‑* may optionally precede it (*ni‑‑k‑te*).\n3. **Call‑class verbs**\na. Simple *čho* (present).\nb. *ma‑čho* = “call me” (first‑person object prefix).\nc. *ni‑čho* = past call.\nd. Derived calls: *[kill‑stem] + čho* (e.g., *wičhačho*, *wačho*). These do **not** take the object marker *‑k‑*.\n4. **Intransitive verb *hi***: past is expressed by the particle *he* placed after the verb (common in questions) or by the verb alone in narrative clauses.\n5. **Plural marking on verbs**: add **‑pi** (or **‑i** after *hi*) to indicate a plural subject (e.g., *hipi*, *čhopi*).\n6. **Subject pronouns**: *yahi* = you (explicit); *tuwa* can serve as interrogative subject; otherwise the subject is inferred from verb morphology.\n7. **Second‑person subject marker**: *ya* attaches to a verb when the subject is second‑person but not expressed as a separate pronoun (e.g., *mayačho* = “you called me”).\n8. **Coordination**: *čha* links two clauses; optional *ną* may be inserted between coordinated clauses.\n9. **Indefinite pronoun *tuwa*** functions as subject or object without additional case marking.\n10. **Subject omission**: the subject can be left implicit when clear from context (e.g., narrative clauses).",
+          "metrics": {
+            "corpus_bleu": 17.21,
+            "corpus_chrfpp": 53.62,
+            "corpus_ter": 52.17,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              18.58,
+              13.13,
+              31.71
+            ],
+            "sentence_chrfpp": [
+              56.3,
+              35.69,
+              66.79
+            ],
+            "sentence_ter": [
+              75.0,
+              57.14,
+              25.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indians called the Indian and I killed them.",
+              "The person killed you in the past.",
+              "The person killed you and called me."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 16.48,
+        "corpus_chrfpp": 54.06,
+        "corpus_ter": 57.69,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          20.5,
+          13.94,
+          31.71,
+          7.81
+        ],
+        "sentence_chrfpp": [
+          67.17,
+          37.02,
+          66.79,
+          18.69
+        ],
+        "sentence_ter": [
+          62.5,
+          71.43,
+          25.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I called the Indian and the person killed the bears.",
+          "The person killed you.",
+          "The person killed you and called me.",
+          "He/she/they called."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me.",
+          "He killed you."
+        ],
+        "num_evaluated": 4
+      },
+      "best_step": 10
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "strategy_id": 3,
+      "stage_order": [
+        "lexical",
+        "phonology",
+        "morphosyntax",
+        "syntax"
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "stage": "lexical",
+          "num_stage_pairs": 4,
+          "latency_s": 23.18,
+          "accumulated_dict": "- lakhota = “Indian”\n- matho = “I”\n- tuwa = “who”\n- wičhakte = “killed‑them”\n- wakte = “killed‑bear”\n- mačho = “called‑me”\n- ničho = “called‑you”",
+          "accumulated_rules": "1. Basic clause order is **Subject – Tense‑Marker – VerbComplex** (S‑T‑V).\n2. The particle **ki** follows the subject and functions as a past‑tense marker.\n3. The verb complex consists of a verb root plus an object suffix that encodes the direct object (e.g., ‑te = “them”, ‑ke = “bear”, ‑ho = “me”, ‑cho = “you”).\n4. Interrogative pronouns (e.g., **tuwa** “who”) occupy the subject position; the rest of the clause follows the same S‑ki‑V order.\n5. No overt copula is used; nouns appear alone as subjects or objects within the verb suffix.",
+          "metrics": {
+            "corpus_bleu": 7.74,
+            "corpus_chrfpp": 28.88,
+            "corpus_ter": 80.77,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.8,
+              6.97,
+              19.2,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              28.77,
+              17.96,
+              35.55,
+              36.61
+            ],
+            "sentence_ter": [
+              87.5,
+              85.71,
+              62.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The Indian killed them.",
+              "I killed the bear.",
+              "The Indian called me.",
+              "Who called you?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 2,
+          "stage": "phonology",
+          "num_stage_pairs": 2,
+          "latency_s": 40.88,
+          "accumulated_dict": "- lakhota = “Indian”\n- matho = “I”\n- tuwa = “who”\n- wičhakte = “killed‑them”\n- wakte = “killed‑bear”\n- mačho = “called‑me”\n- ničho = “called‑you”",
+          "accumulated_rules": "1. **Past‑tense particle allomorphy** – The past marker appears as **ki** after a subject when the following verb root begins with a velar or alveolar consonant (e.g., *k‑*).\n- If the verb root begins with a glottal or pharyngeal fricative (*h*), the particle surfaces as **hi**.\n- Thus the form of the particle is conditioned by the initial consonant of the verb root (phonological assimilation).\n2. **Verb‑object suffix harmony** – Object suffixes attach directly to the verb root without an intervening vowel. The suffixes are:\n- **‑te** “them / someone”\n- **‑ke** “bear”\n- **‑ho** “me”\n- **‑cho** “you”\n3. **Consonant‑final noun stems** – Nouns ending in a vowel may take a final **‑ša** to form a definite or generic noun phrase (e.g., *wičha* “person” → *wičhaša* “the person”). This is a nominalizer/definiteness suffix.\n4. **No overt copula** – As previously noted, nouns can appear as subjects or objects without a linking verb; the verb complex carries all necessary argument marking.\n---",
+          "metrics": {
+            "corpus_bleu": 2.59,
+            "corpus_chrfpp": 8.8,
+            "corpus_ter": 93.33,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.8,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              12.2,
+              4.36
+            ],
+            "sentence_ter": [
+              87.5,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The person killed someone.",
+              "Who came?"
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me."
+            ],
+            "num_evaluated": 2
+          }
+        },
+        {
+          "step": 3,
+          "stage": "morphosyntax",
+          "num_stage_pairs": 4,
+          "latency_s": 50.1,
+          "accumulated_dict": "- lakhota = “Indian”\n- matho = “I”\n- tuwa = “who”\n- wičhakte = “killed‑them”\n- wakte = “killed‑bear”\n- mačho = “called‑me”\n- ničho = “called‑you”",
+          "accumulated_rules": "1. **Past‑tense particle** – The particle *ki* precedes a verb whose root begins with a velar or alveolar consonant (e.g., *k, g, t, d, s, z*).\n- If the verb root begins with a glottal or pharyngeal fricative (*h, ʔ*), the particle surfaces as *hi*.\n- The particle is placed **immediately before** the verb root; no vowel is inserted.\n2. **Verb‑object suffixes** – Direct‑object pronouns are expressed as suffixes attached to the verb root without an intervening vowel.\n- **‑te** = 2nd‑person singular object (“you”)\n- **‑ke** = “bear” (singular)\n- **‑ho** = 1st‑person singular object (“me”)\n- **‑cho** = 3rd‑person plural object (“them”)\n3. **Noun‑definiteness suffix** – A noun ending in a vowel may take the suffix **‑ša** to form a definite or generic noun phrase (e.g., *wičha → wičhaša* “the person”). This suffix does not affect case or agreement.\n4. **Subject marking** – The subject is a bare noun or pronoun placed before the past‑tense particle (if any). No overt copula is used; the verb complex carries all argument information.\n5. **Coordination** – The conjunction **ną** links two clauses; each clause follows the same word order (Subject – (Past‑particle) – Verb – Object‑suffix).",
+          "metrics": {
+            "corpus_bleu": 7.97,
+            "corpus_chrfpp": 31.39,
+            "corpus_ter": 88.46,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.32,
+              6.77,
+              6.89,
+              17.75
+            ],
+            "sentence_chrfpp": [
+              37.04,
+              15.36,
+              26.0,
+              59.17
+            ],
+            "sentence_ter": [
+              75.0,
+              85.71,
+              75.0,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The bears called them.",
+              "You came, and he came.",
+              "The bears came and called the Indian.",
+              "You came, and the boy killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me.",
+              "He killed you."
+            ],
+            "num_evaluated": 4
+          }
+        },
+        {
+          "step": 4,
+          "stage": "syntax",
+          "num_stage_pairs": 3,
+          "latency_s": 34.42,
+          "accumulated_dict": "- lakhota = “Indian”\n- matho = “I”\n- tuwa = “who”\n- wičhakte = “killed‑them”\n- wakte = “killed‑bear”\n- mačho = “called‑me”\n- ničho = “called‑you”",
+          "accumulated_rules": "1. **Word order** – Simple clause: **Subject – (Past‑tense particle) – Verb‑root – Object‑suffix**.\n- The past‑tense particle (*ki* or *hi*) is placed **immediately before** the verb root, regardless of whether the verb carries an object suffix.\n2. **Past‑tense particle selection** –\n- *ki* before verb roots beginning with a velar or alveolar consonant (k, g, t, d, s, z, etc.).\n- *hi* before verb roots beginning with a glottal or pharyngeal fricative (h, ʔ).\n3. **Object suffixes** – Direct‑object pronouns are fused to the verb root with no intervening vowel:\n- *‑te* = 2nd sg object (“you”)\n- *‑ke* = “bear” (singular)\n- *‑ho* = 1st sg object (“me”)\n- *‑cho* = 3rd pl object (“them”)\n4. **Definiteness suffix on nouns** – A noun ending in a vowel may take *‑ša* to mark a definite or generic NP; it does **not** affect case or agreement.\n5. **Subject marking** – The subject is a bare noun or pronoun placed **before** any past‑tense particle. No copula is used.\n6. **Coordination** – The conjunction **nų** (spelled *ną* in the data) links two clauses; each clause retains the same internal order.\n7. **Negation (inferred)** – Negation is expressed by prefixing the particle **ma‑** to the verb root **before** the past‑tense particle (e.g., *ma‑ki‑verb*). This hypothesis remains provisional pending further data.\n8. **Interrogatives / relative clauses** – The interrogative/relative pronoun *tuwa* appears in clause‑initial position, functioning like a wh‑word. Its clause follows the same S‑(P)‑V‑O pattern.\n---",
+          "metrics": {
+            "corpus_bleu": 9.12,
+            "corpus_chrfpp": 41.88,
+            "corpus_ter": 65.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              12.55,
+              5.3,
+              21.11
+            ],
+            "sentence_chrfpp": [
+              50.56,
+              32.2,
+              41.77
+            ],
+            "sentence_ter": [
+              62.5,
+              85.71,
+              50.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I called the Indian and killed the boy.",
+              "I killed the boy, and someone called the Indians.",
+              "The Indians came, and you called me."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 9.12,
+        "corpus_chrfpp": 41.88,
+        "corpus_ter": 65.22,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          12.55,
+          5.3,
+          21.11
+        ],
+        "sentence_chrfpp": [
+          50.56,
+          32.2,
+          41.77
+        ],
+        "sentence_ter": [
+          62.5,
+          85.71,
+          50.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I called the Indian and killed the boy.",
+          "I killed the boy, and someone called the Indians.",
+          "The Indians came, and you called me."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me."
+        ],
+        "num_evaluated": 3
+      },
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "strategy_id": 4,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 13,
+          "latency_s": 383.23,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [],
+            "sentence_chrfpp": [],
+            "sentence_ter": [],
+            "sentence_em": [],
+            "hypotheses": [],
+            "references": [],
+            "num_evaluated": 0
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 0.0,
+        "corpus_chrfpp": 0.0,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [],
+        "sentence_chrfpp": [],
+        "sentence_ter": [],
+        "sentence_em": [],
+        "hypotheses": [],
+        "references": [],
+        "num_evaluated": 0
+      }
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "strategy_id": 5,
+      "steps": [
+        {
+          "step": 1,
+          "role": "initial_draft",
+          "latency_s": 72.34,
+          "metrics": {
+            "corpus_bleu": 8.44,
+            "corpus_chrfpp": 43.94,
+            "corpus_ter": 65.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.52,
+              13.94,
+              11.42
+            ],
+            "sentence_chrfpp": [
+              57.0,
+              37.02,
+              34.34
+            ],
+            "sentence_ter": [
+              50.0,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The boy and the Indian called the Indians.",
+              "The person killed you.",
+              "The person killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        },
+        {
+          "step": 2,
+          "role": "self_correction",
+          "latency_s": 40.53,
+          "metrics": {
+            "corpus_bleu": 8.44,
+            "corpus_chrfpp": 43.94,
+            "corpus_ter": 65.22,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              16.52,
+              13.94,
+              11.42
+            ],
+            "sentence_chrfpp": [
+              57.0,
+              37.02,
+              34.34
+            ],
+            "sentence_ter": [
+              50.0,
+              71.43,
+              75.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "The boy and the Indian called the Indians.",
+              "The person killed you.",
+              "The person killed you."
+            ],
+            "references": [
+              "I came and the Indians called the bears.",
+              "The man killed you and called me.",
+              "The man killed you and he called me."
+            ],
+            "num_evaluated": 3
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 8.44,
+        "corpus_chrfpp": 43.94,
+        "corpus_ter": 65.22,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          16.52,
+          13.94,
+          11.42
+        ],
+        "sentence_chrfpp": [
+          57.0,
+          37.02,
+          34.34
+        ],
+        "sentence_ter": [
+          50.0,
+          71.43,
+          75.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "The boy and the Indian called the Indians.",
+          "The person killed you.",
+          "The person killed you."
+        ],
+        "references": [
+          "I came and the Indians called the bears.",
+          "The man killed you and called me.",
+          "The man killed you and he called me."
+        ],
+        "num_evaluated": 3
+      },
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 2.05,
+      "chrf": 13.55,
+      "ter": 125.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Translation (best guess):**  \n*“That one with the big head is thinking.”*",
+      "reference": "I came and the Indians called the bears."
+    },
+    "baseline": {
+      "best_bleu": 30.19,
+      "best_chrf": 59.31,
+      "best_ter": 39.13,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "The boy and the Indian called me.",
+        "The person killed you and called me.",
+        "The person killed you, and (someone) called me."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me."
+      ]
+    },
+    "incremental_combinations": {
+      "best_bleu": 16.48,
+      "best_chrf": 54.06,
+      "best_ter": 57.69,
+      "best_em": 0.0,
+      "num_steps": 12,
+      "best_hypotheses": [
+        "I called the Indian and the person killed the bears.",
+        "The person killed you.",
+        "The person killed you and called me.",
+        "He/she/they called."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me.",
+        "He killed you."
+      ],
+      "best_step": 10
+    },
+    "step_by_step": {
+      "best_bleu": 9.12,
+      "best_chrf": 41.88,
+      "best_ter": 65.22,
+      "best_em": 0.0,
+      "num_steps": 4,
+      "best_hypotheses": [
+        "I called the Indian and killed the boy.",
+        "I killed the boy, and someone called the Indians.",
+        "The Indians came, and you called me."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me."
+      ],
+      "best_stage": "syntax"
+    },
+    "human_inspiration": {
+      "best_bleu": 0.0,
+      "best_chrf": 0.0,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [],
+      "best_references": []
+    },
+    "self_correction": {
+      "best_bleu": 8.44,
+      "best_chrf": 43.94,
+      "best_ter": 65.22,
+      "best_em": 0.0,
+      "num_steps": 2,
+      "best_hypotheses": [
+        "The boy and the Indian called the Indians.",
+        "The person killed you.",
+        "The person killed you."
+      ],
+      "best_references": [
+        "I came and the Indians called the bears.",
+        "The man killed you and called me.",
+        "The man killed you and he called me."
+      ],
+      "delta": {
+        "bleu_delta": 0.0,
+        "chrf_delta": 0.0,
+        "ter_delta": 0.0,
+        "em_delta": 0.0
+      }
+    }
+  }
+}

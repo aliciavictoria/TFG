@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-25T22:17:56.840145",
+    "puzzle_id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "model_key": "gpt-oss-120b-openrouter",
+    "model_tier": "strong",
+    "num_train_pairs": 11,
+    "num_test_pairs": 4,
+    "strategies_run": [
+      0,
+      1
+    ],
+    "log_full_responses": false
+  },
+  "puzzle": {
+    "id": "linguini_012019010200",
+    "language": "Yonggom",
+    "language_family": "Trans-New Guinea (Papua-NG)",
+    "translation_direction": "en2lang",
+    "train_pairs": [
+      {
+        "source": "Meneni karuwa anona wedmaan.",
+        "target": "I came and saw the man and the dog."
+      },
+      {
+        "source": "Wingkeewa yeediriin.",
+        "target": "You(sg) sing and I get up."
+      },
+      {
+        "source": "Ambib wedmoona awon baan.",
+        "target": "He saw the house and I took the pig."
+      },
+      {
+        "source": "Yeederenu om banuun.",
+        "target": "She will get up and will take the bread."
+      },
+      {
+        "source": "Wenenub wingkanuub.",
+        "target": "We will go away and will sing."
+      },
+      {
+        "source": "Oma oka aniib.",
+        "target": "They eat the bread and drink the water."
+      },
+      {
+        "source": "Anon ye weng wengambaranuuwa awon ye weng wengambaraneen.",
+        "target": "We will hear the dog and he will hear the pig."
+      },
+      {
+        "source": "Ok anaana oon wedmeen.",
+        "target": "I drank the water and she saw the fish."
+      },
+      {
+        "source": "Yeederenib miniib.",
+        "target": "They get up and come."
+      },
+      {
+        "source": "Wingkenu wunuun.",
+        "target": "She sings and goes away."
+      },
+      {
+        "source": "Om bene aneen.",
+        "target": "He takes the bread and eats it."
+      }
+    ],
+    "test_pairs": [
+      {
+        "source": "We will go away and they will come.",
+        "target": "Wananuuwa mananiib.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "I take the pig and he takes the fish.",
+        "target": "Awon biina oon been",
+        "direction": "en2lang"
+      },
+      {
+        "source": "He saw the water and the house and heard the dog.",
+        "target": "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "direction": "en2lang"
+      },
+      {
+        "source": "You(sg) eat the bread and sing.",
+        "target": "Om aneneb wingkeeb.",
+        "direction": "en2lang"
+      }
+    ]
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "sentence_tested": "We will go away and they will come.",
+      "reference": "Wananuuwa mananiib.",
+      "hypothesis": "**Yonggom (best‑effort translation)**  \n\n*“Mik‑aŋa ɨnɨk, a‑pɨrɨk ɨnɨk.”*  \n\n*Explanation*  \n- **Mik‑aŋa** – “we (inclusive) will go / move away”  \n- **ɨnɨk** – future/irrealis marker (used for actions that will happen)  \n- **a‑pɨrɨk** – “they will come” (a‑ = third‑person plural subject, *pɨrɨk* = “come”)  \n- The second **ɨnɨk** repeats the future marker for the second clause.\n\n*Note:* This is a tentative reconstruction based on the limited publicly available data on Yonggom grammar and vocabulary. The actual forms may differ, especially in the exact verb stems and the placement of tense/aspect markers.",
+      "latency_s": 40.66,
+      "metrics": {
+        "corpus_bleu": 0.26,
+        "corpus_chrfpp": 3.32,
+        "corpus_ter": 4500.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.26
+        ],
+        "sentence_chrfpp": [
+          3.32
+        ],
+        "sentence_ter": [
+          4500.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Yonggom (best‑effort translation)**  \n\n*“Mik‑aŋa ɨnɨk, a‑pɨrɨk ɨnɨk.”*  \n\n*Explanation*  \n- **Mik‑aŋa** – “we (inclusive) will go / move away”  \n- **ɨnɨk** – future/irrealis marker (used for actions that will happen)  \n- **a‑pɨrɨk** – “they will come” (a‑ = third‑person plural subject, *pɨrɨk* = “come”)  \n- The second **ɨnɨk** repeats the future marker for the second clause.\n\n*Note:* This is a tentative reconstruction based on the limited publicly available data on Yonggom grammar and vocabulary. The actual forms may differ, especially in the exact verb stems and the placement of tense/aspect markers."
+        ],
+        "references": [
+          "Wananuuwa mananiib."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "strategy_id": 1,
+      "steps": [
+        {
+          "step": 1,
+          "num_train_pairs": 11,
+          "latency_s": 50.62,
+          "metrics": {
+            "corpus_bleu": 4.14,
+            "corpus_chrfpp": 18.09,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              27.52,
+              0.0,
+              5.82,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              20.5,
+              9.34,
+              17.77,
+              25.05
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Wenenub miniib.",
+              "Om bene aneen.",
+              "Om wedmaan anoon awan yeederenib.",
+              "Wingkeewa oka banuun."
+            ],
+            "references": [
+              "Wananuuwa mananiib.",
+              "Awon biina oon been",
+              "Oka ambiwa wedmene anon ye weng wengamboroon.",
+              "Om aneneb wingkeeb."
+            ],
+            "num_evaluated": 4,
+            "num_expected": 4,
+            "missing_indices": [],
+            "complete": true
+          }
+        }
+      ],
+      "best_metrics": {
+        "corpus_bleu": 4.14,
+        "corpus_chrfpp": 18.09,
+        "corpus_ter": 100.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          27.52,
+          0.0,
+          5.82,
+          15.97
+        ],
+        "sentence_chrfpp": [
+          20.5,
+          9.34,
+          17.77,
+          25.05
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Wenenub miniib.",
+          "Om bene aneen.",
+          "Om wedmaan anoon awan yeederenib.",
+          "Wingkeewa oka banuun."
+        ],
+        "references": [
+          "Wananuuwa mananiib.",
+          "Awon biina oon been",
+          "Oka ambiwa wedmene anon ye weng wengamboroon.",
+          "Om aneneb wingkeeb."
+        ],
+        "num_evaluated": 4,
+        "num_expected": 4,
+        "missing_indices": [],
+        "complete": true
+      }
+    }
+  },
+  "summary": {
+    "verification": {
+      "bleu": 0.26,
+      "chrf": 3.32,
+      "ter": 4500.0,
+      "em": 0.0,
+      "known_language": false,
+      "hypothesis": "**Yonggom (best‑effort translation)**  \n\n*“Mik‑aŋa ɨnɨk, a‑pɨrɨk ɨnɨk.”*  \n\n*Explanation*  \n- **Mik‑aŋa** – “we (inclusi",
+      "reference": "Wananuuwa mananiib."
+    },
+    "baseline": {
+      "best_bleu": 4.14,
+      "best_chrf": 18.09,
+      "best_ter": 100.0,
+      "best_em": 0.0,
+      "num_steps": 1,
+      "best_hypotheses": [
+        "Wenenub miniib.",
+        "Om bene aneen.",
+        "Om wedmaan anoon awan yeederenib.",
+        "Wingkeewa oka banuun."
+      ],
+      "best_references": [
+        "Wananuuwa mananiib.",
+        "Awon biina oon been",
+        "Oka ambiwa wedmene anon ye weng wengamboroon.",
+        "Om aneneb wingkeeb."
+      ]
+    }
+  }
+}

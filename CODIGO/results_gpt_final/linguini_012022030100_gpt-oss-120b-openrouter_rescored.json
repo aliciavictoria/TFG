@@ -1,0 +1,2175 @@
+{
+  "metadata": {
+    "rescored_at": "2026-06-29T22:13:12.281763",
+    "puzzle_id": "linguini_012022030100",
+    "language": "Ngemba",
+    "translation_direction": "lang2en",
+    "model_key": "gpt-oss-120b-openrouter",
+    "num_test_pairs": 6,
+    "source_raw_log": "raw_logs/linguini_012022030100_gpt-oss-120b-openrouter.jsonl"
+  },
+  "results": {
+    "verification": {
+      "strategy": "verification",
+      "strategy_id": 0,
+      "reference": "I ask if it is you_{pl} whom my grandfather calls.",
+      "hypothesis": "**Possible translation (with a high degree of uncertainty):**  \n\n*“I will go to the place where the water is and drink it.”*  \n\n*Note: The source sentence appears to be in a Khoisan language that uses click consonants (ǀ, ǃ, ʔ). Because the exact lexical items and grammar are not well‑documented here, the translation is only a best‑guess approximation.*",
+      "metrics": {
+        "corpus_bleu": 0.61,
+        "corpus_chrfpp": 9.89,
+        "corpus_ter": 560.0,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.61
+        ],
+        "sentence_chrfpp": [
+          9.89
+        ],
+        "sentence_ter": [
+          560.0
+        ],
+        "sentence_em": [
+          false
+        ],
+        "hypotheses": [
+          "**Possible translation (with a high degree of uncertainty):**  \n\n*“I will go to the place where the water is and drink it.”*  \n\n*Note: The source sentence appears to be in a Khoisan language that uses click consonants (ǀ, ǃ, ʔ). Because the exact lexical items and grammar are not well‑documented here, the translation is only a best‑guess approximation.*"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls."
+        ],
+        "num_evaluated": 1,
+        "num_expected": 1,
+        "missing_indices": [],
+        "complete": true
+      },
+      "known_language": false
+    },
+    "baseline": {
+      "strategy": "baseline",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 13.29,
+            "corpus_chrfpp": 41.52,
+            "corpus_ter": 64.86,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              4.13,
+              50.0,
+              11.87,
+              7.1,
+              23.88,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              29.47,
+              82.89,
+              36.24,
+              23.4,
+              53.89,
+              25.11
+            ],
+            "sentence_ter": [
+              80.0,
+              16.67,
+              57.14,
+              71.43,
+              50.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I wonder if you (pl) will call your grandfather.",
+              "I will not work tomorrow in Upington.",
+              "You (pl) are afraid of the dog.",
+              "I do not call you.",
+              "Whom do you (pl) see?",
+              "Whom do you like?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 13.29,
+        "corpus_chrfpp": 41.52,
+        "corpus_ter": 64.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.13,
+          50.0,
+          11.87,
+          7.1,
+          23.88,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          29.47,
+          82.89,
+          36.24,
+          23.4,
+          53.89,
+          25.11
+        ],
+        "sentence_ter": [
+          80.0,
+          16.67,
+          57.14,
+          71.43,
+          50.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I wonder if you (pl) will call your grandfather.",
+          "I will not work tomorrow in Upington.",
+          "You (pl) are afraid of the dog.",
+          "I do not call you.",
+          "Whom do you (pl) see?",
+          "Whom do you like?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 13.29,
+        "corpus_chrfpp": 41.52,
+        "corpus_ter": 64.86,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          4.13,
+          50.0,
+          11.87,
+          7.1,
+          23.88,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          29.47,
+          82.89,
+          36.24,
+          23.4,
+          53.89,
+          25.11
+        ],
+        "sentence_ter": [
+          80.0,
+          16.67,
+          57.14,
+          71.43,
+          50.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I wonder if you (pl) will call your grandfather.",
+          "I will not work tomorrow in Upington.",
+          "You (pl) are afraid of the dog.",
+          "I do not call you.",
+          "Whom do you (pl) see?",
+          "Whom do you like?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": false
+    },
+    "incremental_combinations": {
+      "strategy": "incremental_combinations",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 6.15,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.58,
+              8.58,
+              6.08,
+              5.87,
+              3.47,
+              5.04
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "translation unknown",
+              "translation unknown",
+              "translation unknown",
+              "translation unknown",
+              "translation unknown",
+              "translation unknown"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 2,
+          "metrics": {
+            "corpus_bleu": 6.2,
+            "corpus_chrfpp": 21.24,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.76,
+              15.21,
+              26.65,
+              3.55,
+              13.58,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              7.16,
+              21.68,
+              48.0,
+              9.64,
+              33.94,
+              15.91
+            ],
+            "sentence_ter": [
+              90.0,
+              66.67,
+              42.86,
+              85.71,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I do not know you now.",
+              "I will see you tomorrow.",
+              "He is afraid of the dog.",
+              "I am thinking about it.",
+              "Who do you see?",
+              "Who did you think?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 3,
+          "metrics": {
+            "corpus_bleu": 5.88,
+            "corpus_chrfpp": 21.26,
+            "corpus_ter": 83.78,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.35,
+              12.22,
+              16.78,
+              3.13,
+              13.58,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              10.29,
+              22.61,
+              40.6,
+              10.04,
+              33.94,
+              15.17
+            ],
+            "sentence_ter": [
+              90.0,
+              83.33,
+              85.71,
+              85.71,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you both and you love me today.",
+              "I will give you a gift tomorrow.",
+              "He is afraid of me because of the storm.",
+              "I think about it.",
+              "Who do you see?",
+              "Who do you hear?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 4,
+          "metrics": {
+            "corpus_bleu": 5.56,
+            "corpus_chrfpp": 21.45,
+            "corpus_ter": 81.08,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.35,
+              14.54,
+              13.13,
+              3.47,
+              19.2,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              10.48,
+              20.85,
+              36.39,
+              10.71,
+              44.62,
+              16.68
+            ],
+            "sentence_ter": [
+              90.0,
+              66.67,
+              71.43,
+              85.71,
+              50.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I do not understand you and me today now.",
+              "I will give you the book.",
+              "He is not afraid of me today.",
+              "I think you are.",
+              "Whom do you love?",
+              "Whom do you see?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 5,
+          "metrics": {
+            "corpus_bleu": 5.93,
+            "corpus_chrfpp": 21.51,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.35,
+              17.03,
+              23.26,
+              3.13,
+              13.58,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              11.69,
+              27.76,
+              40.55,
+              7.34,
+              33.94,
+              15.17
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              57.14,
+              85.71,
+              50.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I will give you something you do not want.",
+              "I will work tomorrow.",
+              "He is afraid of you.",
+              "I am not sure.",
+              "Who do you see?",
+              "Who do you hear?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 6,
+          "metrics": {
+            "corpus_bleu": 8.94,
+            "corpus_chrfpp": 26.16,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.03,
+              45.48,
+              12.55,
+              3.93,
+              9.6,
+              12.7
+            ],
+            "sentence_chrfpp": [
+              10.36,
+              53.06,
+              42.58,
+              13.85,
+              23.98,
+              18.12
+            ],
+            "sentence_ter": [
+              90.0,
+              33.33,
+              57.14,
+              85.71,
+              75.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I think that you are me now.",
+              "I will not work tomorrow.",
+              "He is not afraid of me, the dog.",
+              "I will not be there.",
+              "Who is your see?",
+              "Who is ts’aaʔa me."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 7,
+          "metrics": {
+            "corpus_bleu": 5.53,
+            "corpus_chrfpp": 24.04,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.22,
+              27.48,
+              14.54,
+              2.63,
+              4.58,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              10.58,
+              37.32,
+              43.68,
+              8.01,
+              16.77,
+              45.94
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              57.14,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I told you that I am not happy.",
+              "I will not go tomorrow.",
+              "The dog is not afraid of me.",
+              "Will I not go?",
+              "Who sees yours?",
+              "Who loves me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 8,
+          "metrics": {
+            "corpus_bleu": 8.29,
+            "corpus_chrfpp": 24.76,
+            "corpus_ter": 75.68,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.38,
+              45.48,
+              11.87,
+              3.93,
+              4.8,
+              19.0
+            ],
+            "sentence_chrfpp": [
+              7.99,
+              53.06,
+              37.06,
+              14.69,
+              14.58,
+              31.52
+            ],
+            "sentence_ter": [
+              90.0,
+              33.33,
+              71.43,
+              85.71,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I do not like you.",
+              "I will not work tomorrow.",
+              "Still, I am not afraid of the dog.",
+              "I will not do it.",
+              "Who is your mother?",
+              "Who loves me."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 9,
+          "metrics": {
+            "corpus_bleu": 3.71,
+            "corpus_chrfpp": 23.19,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.81,
+              16.52,
+              16.1,
+              3.93,
+              4.94,
+              15.97
+            ],
+            "sentence_chrfpp": [
+              11.62,
+              46.72,
+              39.72,
+              15.02,
+              9.94,
+              15.2
+            ],
+            "sentence_ter": [
+              80.0,
+              50.0,
+              57.14,
+              71.43,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I like you (pl) is about today.",
+              "I do not will tomorrow Upington.",
+              "Still be afraid of me dog.",
+              "He is will today a.",
+              "Who is you (sg).",
+              "Who is love."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 10,
+          "metrics": {
+            "corpus_bleu": 7.93,
+            "corpus_chrfpp": 30.09,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              1.9,
+              27.05,
+              22.32,
+              3.47,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              7.67,
+              63.37,
+              49.8,
+              14.78,
+              17.14,
+              35.75
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              57.14,
+              71.43,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you today.",
+              "I will not be in Upington tomorrow.",
+              "ǀeeki is afraid of me and the dog.",
+              "I will be today.",
+              "Who sees you?",
+              "Who helps me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 11,
+          "metrics": {
+            "corpus_bleu": 7.9,
+            "corpus_chrfpp": 28.19,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.16,
+              23.36,
+              22.32,
+              2.63,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              14.39,
+              52.66,
+              50.83,
+              7.88,
+              17.14,
+              29.63
+            ],
+            "sentence_ter": [
+              70.0,
+              66.67,
+              57.14,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you, it is about today.",
+              "I will not go to Upington tomorrow.",
+              "He is afraid of me and the dog.",
+              "Will I be today?",
+              "Who sees you?",
+              "Who … me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 12,
+          "metrics": {
+            "corpus_bleu": 7.91,
+            "corpus_chrfpp": 30.22,
+            "corpus_ter": 67.57,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.16,
+              27.05,
+              17.54,
+              3.55,
+              4.8,
+              24.84
+            ],
+            "sentence_chrfpp": [
+              17.66,
+              63.37,
+              48.57,
+              14.76,
+              13.92,
+              17.94
+            ],
+            "sentence_ter": [
+              70.0,
+              50.0,
+              42.86,
+              85.71,
+              100.0,
+              66.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you, it is about calling.",
+              "I will not be in Upington tomorrow.",
+              "He/she is afraid of me, the dog.",
+              "Will I call the woman?",
+              "Who sees the woman?",
+              "Who eats?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 13,
+          "metrics": {
+            "corpus_bleu": 7.61,
+            "corpus_chrfpp": 28.49,
+            "corpus_ter": 72.97,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.73,
+              23.36,
+              26.65,
+              3.55,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              13.17,
+              52.66,
+              48.0,
+              14.76,
+              17.14,
+              35.06
+            ],
+            "sentence_ter": [
+              90.0,
+              66.67,
+              42.86,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I like you (pl) that you call about me.",
+              "I will not go to Upington tomorrow.",
+              "He is afraid of the dog.",
+              "Will I call the woman?",
+              "Who sees you?",
+              "Who eats me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 14,
+          "metrics": {
+            "corpus_bleu": 7.91,
+            "corpus_chrfpp": 30.45,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              3.73,
+              27.05,
+              22.32,
+              2.63,
+              5.44,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              13.57,
+              63.37,
+              49.97,
+              11.38,
+              17.14,
+              35.06
+            ],
+            "sentence_ter": [
+              90.0,
+              50.0,
+              42.86,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I like you (pl) and you call about me.",
+              "I will not be in Upington tomorrow.",
+              "He is afraid of me, the dog.",
+              "Will I be called?",
+              "Who sees you?",
+              "Who eats me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": 15,
+          "metrics": {
+            "corpus_bleu": 20.27,
+            "corpus_chrfpp": 42.33,
+            "corpus_ter": 59.46,
+            "exact_match_corpus": 16.67,
+            "sentence_bleu": [
+              6.86,
+              100.0,
+              22.32,
+              3.55,
+              4.58,
+              35.36
+            ],
+            "sentence_chrfpp": [
+              34.14,
+              100.0,
+              49.97,
+              14.76,
+              12.56,
+              35.06
+            ],
+            "sentence_ter": [
+              80.0,
+              0.0,
+              42.86,
+              85.71,
+              100.0,
+              33.33
+            ],
+            "sentence_em": [
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I love you (pl) and call my grandfather.",
+              "I will not work in Upington.",
+              "He is afraid of me, the dog.",
+              "Will I call the woman?",
+              "Who sees it?",
+              "Who eats me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 20.27,
+        "corpus_chrfpp": 42.33,
+        "corpus_ter": 59.46,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          6.86,
+          100.0,
+          22.32,
+          3.55,
+          4.58,
+          35.36
+        ],
+        "sentence_chrfpp": [
+          34.14,
+          100.0,
+          49.97,
+          14.76,
+          12.56,
+          35.06
+        ],
+        "sentence_ter": [
+          80.0,
+          0.0,
+          42.86,
+          85.71,
+          100.0,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I love you (pl) and call my grandfather.",
+          "I will not work in Upington.",
+          "He is afraid of me, the dog.",
+          "Will I call the woman?",
+          "Who sees it?",
+          "Who eats me?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 15,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 20.27,
+        "corpus_chrfpp": 42.33,
+        "corpus_ter": 59.46,
+        "exact_match_corpus": 16.67,
+        "sentence_bleu": [
+          6.86,
+          100.0,
+          22.32,
+          3.55,
+          4.58,
+          35.36
+        ],
+        "sentence_chrfpp": [
+          34.14,
+          100.0,
+          49.97,
+          14.76,
+          12.56,
+          35.06
+        ],
+        "sentence_ter": [
+          80.0,
+          0.0,
+          42.86,
+          85.71,
+          100.0,
+          33.33
+        ],
+        "sentence_em": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I love you (pl) and call my grandfather.",
+          "I will not work in Upington.",
+          "He is afraid of me, the dog.",
+          "Will I call the woman?",
+          "Who sees it?",
+          "Who eats me?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 15,
+      "all_steps_complete": true
+    },
+    "step_by_step": {
+      "strategy": "step_by_step",
+      "steps": [
+        {
+          "step": "lexical",
+          "metrics": {
+            "corpus_bleu": 1.9,
+            "corpus_chrfpp": 6.86,
+            "corpus_ter": 108.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              2.99,
+              4.94,
+              16.23
+            ],
+            "sentence_chrfpp": [
+              4.91,
+              2.29,
+              6.51,
+              6.72,
+              6.76,
+              21.32
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Does the man see me?",
+              "Are you afraid of me?",
+              "Whom do you think about?",
+              "Your brother does not dance.",
+              "Is it the thief who sings?",
+              "Does the man see me?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "phonology",
+          "metrics": {
+            "corpus_bleu": 1.12,
+            "corpus_chrfpp": 6.31,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              1.45,
+              6.57,
+              5.52,
+              2.63,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              6.01,
+              5.73,
+              9.23,
+              5.71,
+              5.01,
+              5.58
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              85.71,
+              125.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will I work tomorrow?",
+              "The dog is afraid of us.",
+              "I do not think about your mother.",
+              "Who do you see?",
+              "You are not a thief.",
+              "The man sings."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "morphosyntax",
+          "metrics": {
+            "corpus_bleu": 1.13,
+            "corpus_chrfpp": 10.35,
+            "corpus_ter": 105.41,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              6.87,
+              0.0,
+              4.52,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              13.3,
+              9.37,
+              4.77,
+              16.82,
+              6.65,
+              5.86
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              85.71,
+              125.0,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Will our father dance in Upington?",
+              "Where does the man work?",
+              "Do you (sg) see your house?",
+              "Is it me whom you (sg) call?",
+              "The dog will work tomorrow.",
+              "I think about my mother."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        },
+        {
+          "step": "syntax",
+          "metrics": {
+            "corpus_bleu": 1.89,
+            "corpus_chrfpp": 13.18,
+            "corpus_ter": 127.03,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              6.66,
+              3.39,
+              4.2,
+              4.5,
+              3.67,
+              3.39
+            ],
+            "sentence_chrfpp": [
+              19.23,
+              7.76,
+              5.37,
+              16.24,
+              10.68,
+              16.47
+            ],
+            "sentence_ter": [
+              90.0,
+              133.33,
+              100.0,
+              100.0,
+              200.0,
+              266.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "It is you (pl.) whom the woman thinks about.",
+              "Your mother asks if you (sg.) like me.",
+              "When will I see you (pl.)?",
+              "My grandfather asks if I will sing tomorrow.",
+              "It is you (pl.) whom the woman thinks about.",
+              "Your mother asks if you (sg.) like me."
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 1.89,
+        "corpus_chrfpp": 13.18,
+        "corpus_ter": 127.03,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.66,
+          3.39,
+          4.2,
+          4.5,
+          3.67,
+          3.39
+        ],
+        "sentence_chrfpp": [
+          19.23,
+          7.76,
+          5.37,
+          16.24,
+          10.68,
+          16.47
+        ],
+        "sentence_ter": [
+          90.0,
+          133.33,
+          100.0,
+          100.0,
+          200.0,
+          266.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "It is you (pl.) whom the woman thinks about.",
+          "Your mother asks if you (sg.) like me.",
+          "When will I see you (pl.)?",
+          "My grandfather asks if I will sing tomorrow.",
+          "It is you (pl.) whom the woman thinks about.",
+          "Your mother asks if you (sg.) like me."
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "syntax",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 1.89,
+        "corpus_chrfpp": 13.18,
+        "corpus_ter": 127.03,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          6.66,
+          3.39,
+          4.2,
+          4.5,
+          3.67,
+          3.39
+        ],
+        "sentence_chrfpp": [
+          19.23,
+          7.76,
+          5.37,
+          16.24,
+          10.68,
+          16.47
+        ],
+        "sentence_ter": [
+          90.0,
+          133.33,
+          100.0,
+          100.0,
+          200.0,
+          266.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "It is you (pl.) whom the woman thinks about.",
+          "Your mother asks if you (sg.) like me.",
+          "When will I see you (pl.)?",
+          "My grandfather asks if I will sing tomorrow.",
+          "It is you (pl.) whom the woman thinks about.",
+          "Your mother asks if you (sg.) like me."
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "syntax",
+      "all_steps_complete": true
+    },
+    "human_inspiration": {
+      "strategy": "human_inspiration",
+      "steps": [
+        {
+          "step": 1,
+          "metrics": {
+            "corpus_bleu": 18.65,
+            "corpus_chrfpp": 40.43,
+            "corpus_ter": 70.27,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              2.91,
+              45.48,
+              55.78,
+              6.27,
+              23.04,
+              8.12
+            ],
+            "sentence_chrfpp": [
+              16.24,
+              53.06,
+              76.61,
+              30.86,
+              53.2,
+              25.22
+            ],
+            "sentence_ter": [
+              90.0,
+              33.33,
+              28.57,
+              85.71,
+              50.0,
+              166.67
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "I think that our father will not dance.",
+              "I will not work tomorrow.",
+              "The woman is afraid of me.",
+              "You sg will call.",
+              "Whom do you sg see?",
+              "Whom do you sg like?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 18.65,
+        "corpus_chrfpp": 40.43,
+        "corpus_ter": 70.27,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.91,
+          45.48,
+          55.78,
+          6.27,
+          23.04,
+          8.12
+        ],
+        "sentence_chrfpp": [
+          16.24,
+          53.06,
+          76.61,
+          30.86,
+          53.2,
+          25.22
+        ],
+        "sentence_ter": [
+          90.0,
+          33.33,
+          28.57,
+          85.71,
+          50.0,
+          166.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I think that our father will not dance.",
+          "I will not work tomorrow.",
+          "The woman is afraid of me.",
+          "You sg will call.",
+          "Whom do you sg see?",
+          "Whom do you sg like?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": 1,
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 18.65,
+        "corpus_chrfpp": 40.43,
+        "corpus_ter": 70.27,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          2.91,
+          45.48,
+          55.78,
+          6.27,
+          23.04,
+          8.12
+        ],
+        "sentence_chrfpp": [
+          16.24,
+          53.06,
+          76.61,
+          30.86,
+          53.2,
+          25.22
+        ],
+        "sentence_ter": [
+          90.0,
+          33.33,
+          28.57,
+          85.71,
+          50.0,
+          166.67
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "I think that our father will not dance.",
+          "I will not work tomorrow.",
+          "The woman is afraid of me.",
+          "You sg will call.",
+          "Whom do you sg see?",
+          "Whom do you sg like?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": 1,
+      "all_steps_complete": true
+    },
+    "self_correction": {
+      "strategy": "self_correction",
+      "steps": [
+        {
+          "step": "initial_draft",
+          "metrics": {
+            "corpus_bleu": 0.0,
+            "corpus_chrfpp": 0.0,
+            "corpus_ter": 100.0,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_chrfpp": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 0,
+            "num_expected": 6,
+            "missing_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "complete": false
+          },
+          "complete": false
+        },
+        {
+          "step": "self_correction",
+          "metrics": {
+            "corpus_bleu": 1.05,
+            "corpus_chrfpp": 5.84,
+            "corpus_ter": 108.11,
+            "exact_match_corpus": 0.0,
+            "sentence_bleu": [
+              0.0,
+              0.0,
+              0.0,
+              2.99,
+              4.94,
+              10.68
+            ],
+            "sentence_chrfpp": [
+              4.91,
+              2.29,
+              6.51,
+              6.72,
+              6.76,
+              10.06
+            ],
+            "sentence_ter": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              150.0,
+              133.33
+            ],
+            "sentence_em": [
+              false,
+              false,
+              false,
+              false,
+              false,
+              false
+            ],
+            "hypotheses": [
+              "Does the man see me?",
+              "Are you afraid of me?",
+              "Whom do you think about?",
+              "Your brother does not dance.",
+              "Is it the thief who sings?",
+              "Will I work tomorrow?"
+            ],
+            "references": [
+              "I ask if it is you_{pl} whom my grandfather calls.",
+              "I will not work in Upington.",
+              "The woman is afraid of my dog.",
+              "It is I who will call you_{sg}.",
+              "Whom do you_{pl} see?",
+              "Who likes me?"
+            ],
+            "num_evaluated": 6,
+            "num_expected": 6,
+            "missing_indices": [],
+            "complete": true
+          },
+          "complete": true
+        }
+      ],
+      "primary_metrics": {
+        "corpus_bleu": 1.05,
+        "corpus_chrfpp": 5.84,
+        "corpus_ter": 108.11,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          2.99,
+          4.94,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          4.91,
+          2.29,
+          6.51,
+          6.72,
+          6.76,
+          10.06
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          150.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Does the man see me?",
+          "Are you afraid of me?",
+          "Whom do you think about?",
+          "Your brother does not dance.",
+          "Is it the thief who sings?",
+          "Will I work tomorrow?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "primary_step": "self_correction",
+      "primary_rule": "last",
+      "best_metrics": {
+        "corpus_bleu": 1.05,
+        "corpus_chrfpp": 5.84,
+        "corpus_ter": 108.11,
+        "exact_match_corpus": 0.0,
+        "sentence_bleu": [
+          0.0,
+          0.0,
+          0.0,
+          2.99,
+          4.94,
+          10.68
+        ],
+        "sentence_chrfpp": [
+          4.91,
+          2.29,
+          6.51,
+          6.72,
+          6.76,
+          10.06
+        ],
+        "sentence_ter": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          150.0,
+          133.33
+        ],
+        "sentence_em": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "hypotheses": [
+          "Does the man see me?",
+          "Are you afraid of me?",
+          "Whom do you think about?",
+          "Your brother does not dance.",
+          "Is it the thief who sings?",
+          "Will I work tomorrow?"
+        ],
+        "references": [
+          "I ask if it is you_{pl} whom my grandfather calls.",
+          "I will not work in Upington.",
+          "The woman is afraid of my dog.",
+          "It is I who will call you_{sg}.",
+          "Whom do you_{pl} see?",
+          "Who likes me?"
+        ],
+        "num_evaluated": 6,
+        "num_expected": 6,
+        "missing_indices": [],
+        "complete": true
+      },
+      "best_step": "self_correction",
+      "all_steps_complete": false
+    }
+  }
+}
